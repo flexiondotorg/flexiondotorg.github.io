@@ -1,0 +1,186 @@
+<!doctype html><html lang=en-gb><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>BIP IRC proxy</title><link rel=stylesheet href=/css/style.css></head><body><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=description content><meta name=author content><title>Martin Wimpress</title><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#00aba9"><meta name=theme-color content="#ffffff"><script src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin=anonymous referrerpolicy=no-referrer></script> <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel=stylesheet type=text/css><link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel=stylesheet type=text/css><link href=/css/style.css rel=stylesheet><link href=/css/syntax.css rel=stylesheet></head><body id=page-top><nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id=mainNav><div class=container><a class=navbar-brand href=/>Martin Wimpress</a>
+<button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type=button data-bs-toggle=collapse data-bs-target=#navbarResponsive aria-controls=navbarResponsive aria-expanded=false aria-label="Toggle navigation">
+Menu
+<em class="fas fa-bars"></em></button><div class="collapse navbar-collapse" id=navbarResponsive><ul class="navbar-nav ms-auto"><li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://flexiondotorg.github.io/posts/>Posts</a></li><li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://flexiondotorg.github.io/projects/>Projects</a></li></ul></div></div></nav><header class="masthead2 text-white text-center"></header><div class="container pb-5"><div class=row><section class="page-section portfolio col-12 col-lg-10"><img class=card-img-top src=https://flexiondotorg.github.io/posts/bip-irc-proxy/hero.png alt="Installing BIP IRC Proxy on Debian Wheezy & Arch Linux"><h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">BIP IRC proxy</h2><div class="divider-custom m-0"><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><div class="row mb-3"><div class="col text-center text-nowrap"><a class=h4 href=/tags/arch-linux/ title="Arch Linux"><span class="badge bg-primary p-2 m-1">Arch Linux</span></a>
+<a class=h4 href=/tags/debian/ title=Debian><span class="badge bg-primary p-2 m-1">Debian</span></a>
+<a class=h4 href=/tags/irc/ title=IRC><span class="badge bg-primary p-2 m-1">IRC</span></a>
+<a class=h4 href=/tags/irc-bouncer/ title="IRC Bouncer"><span class="badge bg-primary p-2 m-1">IRC Bouncer</span></a>
+<a class=h4 href=/tags/linux/ title=Linux><span class="badge bg-primary p-2 m-1">Linux</span></a></div></div><div class="row justify-content-left"><p><strong>I switched from BIP to <a href=http://wiki.znc.in/ZNC>ZNC</a>, and <a href=/posts/znc-irc-proxy/>recommend you use ZNC instead</a>!</strong></p><p><a href=http://bip.milkypond.org/>BIP</a> is an IRC proxy that maintains a persistent
+connection(s) to a list of IRC channels. You can then point your IRC client to
+BIP each time you log in and playback the conversations that took place while
+you were away.</p><p>I&rsquo;ve found bBIP to be so useful that I now <a href=https://www.archlinux.org/packages/community/x86_64/bip/>maintain BIP for Arch Linux</a>,
+although I now run my BIP proxy on Debian because my new VPS provider doesn&rsquo;t
+offer Arch Linux as an option.</p><h2 id=installing-bip>Installing BIP</h2><p>Installing BIP is simple for both Arch Linux and Debian.</p><h3 id=debian>Debian</h3><p>I run BIP on Debian Wheezy with the backport repository enabled.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo apt-get -t wheezy-backports install bip
+</span></span><span style=display:flex><span>sudo sed -i <span style=color:#87ceeb>&#39;s/ENABLED=0/ENABLED=1/&#39;</span> /etc/default/bip
+</span></span></code></pre></div><h3 id=arch-linux>Arch Linux</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>pacman -S bip
+</span></span><span style=display:flex><span>systemctl enable bip
+</span></span></code></pre></div><h2 id=create-a-user>Create a user</h2><p>The next thing to do is create a username and password and BIP provides it&rsquo;s
+own utility for doing this called <code>bipmkpw</code>. Replace &lsquo;username&rsquo; with whatever
+you want your BIP &lsquo;username&rsquo; to be. This name has no relation to any IRC
+usernames so it can be anything.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>bipmkpw username
+</span></span></code></pre></div><p>Enter a password when prompted. The password will then be output as a hash.
+Make a note of both the hashed and un-hashed values somewhere, you will need
+them later.</p><h2 id=create-a-certificate>Create a certificate</h2><p>We don&rsquo;t want the username and password being sent as clear-text, so we will
+create an SSL certificate for BIP to use.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>openssl req -new -newkey rsa:4096 -nodes -x509 -keyout bip.pem -out bip.pem
+</span></span></code></pre></div><p>Move the certificate to <code>/var/lib/bip</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo mv bip.pem /var/lib/bip
+</span></span></code></pre></div><p>Change ownership and permissions of the certificate to the user <code>bip</code> which was
+created automatically when the package was installed.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo chown bip:bip /var/lib/bip/bip.pem
+</span></span><span style=display:flex><span>sudo chmod <span style=color:#f60>600</span> /var/lib/bip/bip.pem
+</span></span></code></pre></div><h2 id=configure-bip>Configure BIP</h2><p>Here is example configuration for BIP. Copy it to <code>/etc/bip.conf</code>, modify it
+accordingly and then change the ownership and permissions.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo chown bip:bip /etc/bip.conf
+</span></span><span style=display:flex><span>sudo chmod <span style=color:#f60>640</span> /etc/bip.conf
+</span></span></code></pre></div><h3 id=example-configuration>Example configuration</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span># bip default config file.
+</span></span><span style=display:flex><span># Thou shoult change thy password
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>ip = &#34;0.0.0.0&#34;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># To connect a client to bip, try the port below, and
+</span></span><span style=display:flex><span># be sure to set the password to the value
+</span></span><span style=display:flex><span># specified in the network you want to connect to.
+</span></span><span style=display:flex><span>port = 7778;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># If you set this to true, you&#39;ll only be able to connect to bip
+</span></span><span style=display:flex><span># with a SSL capable IRC client. Be sure to generate a certificate
+</span></span><span style=display:flex><span># for bip with &#39;make cert&#39;
+</span></span><span style=display:flex><span>client_side_ssl = true;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>log_level = 3;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>pid_file=&#34;/var/run/bip/bip.pid&#34;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># This is where logs go. Channel and private messages will use that
+</span></span><span style=display:flex><span># configuration value as a prefix, and then log_format to determine
+</span></span><span style=display:flex><span># full log filename.
+</span></span><span style=display:flex><span>log_root = &#34;/var/log/bip/&#34;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Log format allows you to make log filenames depend on the log line&#39;s
+</span></span><span style=display:flex><span># attributes. Here&#39;s a list :
+</span></span><span style=display:flex><span># %u -&gt; user name
+</span></span><span style=display:flex><span># %n -&gt; network name
+</span></span><span style=display:flex><span># %Y -&gt; 4 digit year
+</span></span><span style=display:flex><span># %m -&gt; 2 digit month
+</span></span><span style=display:flex><span># %d -&gt; 2 digit day
+</span></span><span style=display:flex><span># %c -&gt; destination (#chan, privates, ...)
+</span></span><span style=display:flex><span>#log_format = &#34;%n/%Y-%m/%c.%d.log&#34;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Sets the frequency (in seconds) of log syncing (real write to kernel)
+</span></span><span style=display:flex><span>#log_sync_interval = 5;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Makes bip send the log of each channel and privates while
+</span></span><span style=display:flex><span># you were not connected to the proxy upon connection.
+</span></span><span style=display:flex><span>backlog = true;         # enable backlog
+</span></span><span style=display:flex><span>backlog_lines = 0;      # number of lines in backlog, 0 means no limit
+</span></span><span style=display:flex><span>backlog_always = false; # backlog even lines already backlogged
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># If blreset_on_talk talking on an irc network has the same effect of issuing
+</span></span><span style=display:flex><span># /bip blreset, meaning that stuffed logged before the command won&#39;t be read
+</span></span><span style=display:flex><span># back on backlog
+</span></span><span style=display:flex><span>blreset_on_talk = true;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Network definition, a name and server info
+</span></span><span style=display:flex><span>network {
+</span></span><span style=display:flex><span>    name = &#34;freenode&#34;;
+</span></span><span style=display:flex><span>    server { host = &#34;chat.freenode.net&#34;; port = 6667; };
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>network {
+</span></span><span style=display:flex><span>    name = &#34;blitzed&#34;;
+</span></span><span style=display:flex><span>    server { host = &#34;irc.blitzed.org&#34;; port = 6667; };
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Configuration example with one user who connects to two irc networks
+</span></span><span style=display:flex><span># To use the multi-server feature:
+</span></span><span style=display:flex><span>#  - define the connections
+</span></span><span style=display:flex><span>#  - chose and setup a different login for each connection
+</span></span><span style=display:flex><span># on your irc client:
+</span></span><span style=display:flex><span>#  - Use the multi server feature of your client, the server being each time
+</span></span><span style=display:flex><span>#    the server where bip is running. In your client setup server password to:
+</span></span><span style=display:flex><span>#      username:password:connectionname
+</span></span><span style=display:flex><span>#  - do not store the password in clear here, use the bipmkpw util to generate
+</span></span><span style=display:flex><span># a hash
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># User structure is grouping information for a given user
+</span></span><span style=display:flex><span>user {
+</span></span><span style=display:flex><span>    # The name in bip of the user
+</span></span><span style=display:flex><span>    # This is used by bip only
+</span></span><span style=display:flex><span>    name = &#34;USERNAME;   #BIP User account created with bipmkpw
+</span></span><span style=display:flex><span>    password = &#34;00000000000000000000000000000000000000&#34;;  # the hash bipmkpw created
+</span></span><span style=display:flex><span>    ssl_check_mode = &#34;none&#34;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    # These will be the default for each connections
+</span></span><span style=display:flex><span>    default_nick = &#34;NICKNAME&#34;;        #IRC Nick
+</span></span><span style=display:flex><span>    default_user = &#34;IRCUSERNAME&#34;;     #IRC User
+</span></span><span style=display:flex><span>    default_realname = &#34;REALNAME&#34;;    #IRC Real Name
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    admin = true;
+</span></span><span style=display:flex><span>    backlog_msg_only = true;    # When true,
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    # A user can have mutiple connections to irc networks.
+</span></span><span style=display:flex><span>    # define a connection:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    connection {
+</span></span><span style=display:flex><span>        name = &#34;freenode&#34;;      # used by bip only
+</span></span><span style=display:flex><span>        network = &#34;freenode&#34;;   # which ircnet to connect to
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        # these will be sent to the real IRC server
+</span></span><span style=display:flex><span>        user = &#34;IRCUSERNAME&#34;;
+</span></span><span style=display:flex><span>        realname = &#34;IRCREALNAME&#34;;
+</span></span><span style=display:flex><span>        password = &#34;serverpassword&#34;;  #can be commented out if not needed
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        # Some options:
+</span></span><span style=display:flex><span>        follow_nick = true;
+</span></span><span style=display:flex><span>        ignore_first_nick = false;
+</span></span><span style=display:flex><span>        #on_connect_send = &#34;PRIVMSG NickServ :IDENTIFY nspassword&#34;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        # Autojoined channels:
+</span></span><span style=display:flex><span>        channel { name = &#34;#cat&#34;; };                   # Join #cat
+</span></span><span style=display:flex><span>        channel { name = &#34;#dog&#34;; backlog = false; };  # Join #dog but don&#39;t backlog it.
+</span></span><span style=display:flex><span>        channel { name = &#34;#pig&#34;; key = &#34;01nk01nk&#34;; }; # Join #pig that has a password.
+</span></span><span style=display:flex><span>    };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    connection {
+</span></span><span style=display:flex><span>        name = &#34;blitzed&#34;;       # used by bip only
+</span></span><span style=display:flex><span>        network = &#34;blitzed&#34;;    # which ircnet to connect to
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        # these will be sent to the real IRC server
+</span></span><span style=display:flex><span>        user = &#34;IRCUSERNAME&#34;;
+</span></span><span style=display:flex><span>        realname = &#34;IRCREALNAME&#34;;
+</span></span><span style=display:flex><span>        password = &#34;serverpassword&#34;;  #can be commented out if not needed
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        # Some options:
+</span></span><span style=display:flex><span>        follow_nick = true;
+</span></span><span style=display:flex><span>        ignore_first_nick = false;
+</span></span><span style=display:flex><span>        #on_connect_send = &#34;PRIVMSG NickServ :IDENTIFY nspassword&#34;;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        # Autojoined channels:
+</span></span><span style=display:flex><span>        channel { name = &#34;#bar&#34;; };
+</span></span><span style=display:flex><span>        channel { name = &#34;#foo&#34;; };
+</span></span><span style=display:flex><span>    };
+</span></span><span style=display:flex><span>};
+</span></span></code></pre></div><p>If you require any clarification about what the configuration options do then
+<code>man bip.conf</code> is your friend.</p><h2 id=start-bip>Start BIP</h2><p>Now that BIP is configured, it can be started.</p><h3 id=debian-1>Debian</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo /etc/init.d/bip start
+</span></span></code></pre></div><h3 id=arch-linux-1>Arch Linux</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo systemctl start bip
+</span></span></code></pre></div><h2 id=client-configuration>Client configuration</h2><p>I use <a href=http://hexchat.github.io/>HexChat</a>, but other IRC clients are available.
+I add a new Network to HexChat for each of the IRC networks I defined in
+<code>/etc/bip.conf</code>. The screen shot below shows how I configure a BIP network in
+HexChat.</p><p><img src=/assets/img/screenshots/BIP-freenode.png alt="HexChat BIP Configuration" title="Example HexChat Network Configuration to a BIP proxy"></p><h3 id=password-format>Password format</h3><p>The Password is the most important and confusing item. <strong>This is for BIP,
+not for any IRC network</strong>. Remember the unhashed password? That goes here but
+with a twist. The format for the password is:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>bipusername:unhashedbippassword:bipnetwork
+</span></span></code></pre></div><p>Bipnetwork? What is that? It is from the following section of <code>/etc/bip.conf</code>
+on the server?</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>network {
+</span></span><span style=display:flex><span>    name = &#34;freenode&#34;;
+</span></span><span style=display:flex><span>    server { host = &#34;chat.freenode.net&#34;; port = 6667; };
+</span></span><span style=display:flex><span>};
+</span></span></code></pre></div><p>A more practical example:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>myuser:S3cr3tP@$$w0rd:freenode
+</span></span></code></pre></div><h2 id=conclusion>Conclusion</h2><p>And that&rsquo;s it! We are now perpetually connected to IRC, can connect to BIP
+proxy from multiple devices in a completely transparent and seamless manner.
+Moreover, the logs for all channels are saved and automatically rotated on the
+server.</p><p>If you looking for an alternative to BIP, then try <a href=http://wiki.znc.in/ZNC>ZNC</a>.</p><p><strong>References</strong></p><ul><li><a href=https://wiki.linaro.org/Resources/HowTo/BIP>https://wiki.linaro.org/Resources/HowTo/BIP</a></li><li><a href=http://nerderati.com/2010/11/perpetual-irc-the-proxy-edition/>http://nerderati.com/2010/11/perpetual-irc-the-proxy-edition/</a></li><li><a href=http://stevengorrell.com/bip-irc-proxy/>http://stevengorrell.com/bip-irc-proxy/</a></li></ul><div class="row mt-5 mb-3"><div class="col-6 text-left"><a class="btn btn-primary btn-lg col-12" href=https://flexiondotorg.github.io/posts/mate-desktop-on-debian-wheezy/><span class=h1>&#8592;</span></a></div><div class="col-6 text-right"><a class="btn btn-primary btn-lg col-12" href=https://flexiondotorg.github.io/posts/lxc-on-arch-linux/><span class=h1>&#8594;</span></a></div></div></div></section><section class="page-section portfolio col-12 col-lg-2 my-3"><div id=sidebar class=fixed><div class="widget pt-3"><h4 class="mb-3 widget-title">Latest Posts</h4><ul class=list-unstyled><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/diy-snes-classic/><h5>DIY SNES Classic</h5></a></li><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/raspberry-pi-3-nextcloud-box-running-on-ubuntu-core/><h5>Raspberry Pi 3 Nextcloud Box running on Ubuntu Core</h5></a></li><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/hp-microserver-n54l-power-saving-and-performance-tuning-using-debian/><h5>HP Microserver N54L power saving and performance tuning using Debian</h5></a></li></ul></div><div class="widget pt-3"><h4 class="mb-3 widget-title">Related Posts</h4><ul class=list-unstyled><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/znc-irc-proxy/><h5>ZNC IRC proxy</h5></a></li><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/mate-desktop-on-debian-wheezy/><h5>MATE Desktop on Debian Wheezy</h5></a></li><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/lxc-on-arch-linux/><h5>LXC on Arch Linux</h5></a></li></ul></div></div></section></div></div><footer class="footer text-center"><div class=container><div class=row><div class="col-lg-4 mb-5 mb-lg-0"><h4 class="text-uppercase mb-4">Social</h4><a class="btn btn-outline-light btn-social mx-1" href=https://wimpysworld.io/discord target=_blank><em class="fab fa-fw fa-discord"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://fosstodon.org/@wimpy target=_blank><em class="fab fa-fw fa-mastodon"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://twitter.com/m_wimpress target=_blank><em class="fab fa-fw fa-twitter"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://linkedin.com/in/martinwimpress target=_blank><em class="fab fa-fw fa-linkedin"></em></a></div><div class="col-lg-4 mb-5 mb-lg-0"><h4 class="text-uppercase mb-4">Code</h4><a class="btn btn-outline-light btn-social mx-1" href=https://github.com/flexiondotorg target=_blank><em class="fab fa-fw fa-github"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://launchpad.net/~flexiondotorg target=_blank><em class="fab fa-fw fa-ubuntu"></em></a></div><div class=col-lg-4><h4 class="text-uppercase mb-4">Content</h4><a class="btn btn-outline-light btn-social mx-1" href=https://instagram.com/WimpysWorld target=_blank><em class="fab fa-fw fa-instagram"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://twitch.tv/WimpysWorld target=_blank><em class="fab fa-fw fa-twitch"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://youtube.com/WimpysWorld target=_blank><em class="fab fa-fw fa-youtube"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://linuxdowntime.com target=_blank><em class="fas fa-fw fa-podcast"></em></a></div></div></div></footer><div class="copyright py-4 text-center text-white"><div class=container><small>Copyright &copy; Martin Wimpress 2022</small></div></div><script src=https://cdn.startbootstrap.com/sb-forms-latest.js></script></body><div class="portfolio-modal modal fade" id=modal1 tabindex=-1 aria-labelledby=modal1 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ubuntu Podcast</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/ubuntu-podcast/hero.png alt=...><p class=mb-4>A weekly family-friendly audio magazine for the Ubuntu community</p><a href=https://flexiondotorg.github.io/projects/ubuntu-podcast/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal2 tabindex=-1 aria-labelledby=modal2 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Debian</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/debian/hero.png alt=...><p class=mb-4>Package maintainer for (mostly) MATE Desktop in Debian and Ubuntu</p><a href=https://flexiondotorg.github.io/projects/debian/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal3 tabindex=-1 aria-labelledby=modal3 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ubuntu MATE</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/ubuntu-mate/hero.png alt=...><p class=mb-4>Ubuntu MATE is a Linux distribution I made for my friends and family</p><a href=https://flexiondotorg.github.io/projects/ubuntu-mate/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal4 tabindex=-1 aria-labelledby=modal4 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">openSUSE</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/opensuse/hero.png alt=...><p class=mb-4>Student mentor for Google Summer of Code 2014</p><a href=https://flexiondotorg.github.io/projects/opensuse/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal5 tabindex=-1 aria-labelledby=modal5 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">LINUX Unplugged</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/linux-unplugged/hero.png alt=...><p class=mb-4>Weekly Linux talk show with no script, no limits and tons of opinion</p><a href=https://flexiondotorg.github.io/projects/linux-unplugged/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal6 tabindex=-1 aria-labelledby=modal6 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Arch Linux</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/arch-linux/hero.png alt=...><p class=mb-4>Arch Linux Trusted User & Package maintainer</p><a href=https://flexiondotorg.github.io/projects/arch-linux/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal7 tabindex=-1 aria-labelledby=modal7 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">MATE Desktop</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/mate-desktop/hero.png alt=...><p class=mb-4>Preserving a traditional desktop metaphor</p><a href=https://flexiondotorg.github.io/projects/mate-desktop/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal8 tabindex=-1 aria-labelledby=modal8 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">POLARIS</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/polaris/hero.png alt=...><p class=mb-4>Disrupting incumbent flight data analysis solutions with Open Source</p><a href=https://flexiondotorg.github.io/projects/polaris/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal9 tabindex=-1 aria-labelledby=modal9 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ubuntu</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/ubuntu/hero.png alt=...><p class=mb-4>From community contributor to director of engineering and back again</p><a href=https://flexiondotorg.github.io/projects/ubuntu/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div></html><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js integrity=sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa crossorigin=anonymous></script>
+<script src=/js/scripts.js></script></body></html>

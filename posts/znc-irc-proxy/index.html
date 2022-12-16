@@ -1,0 +1,260 @@
+<!doctype html><html lang=en-gb><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>ZNC IRC proxy</title><link rel=stylesheet href=/css/style.css></head><body><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=description content><meta name=author content><title>Martin Wimpress</title><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#00aba9"><meta name=theme-color content="#ffffff"><script src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin=anonymous referrerpolicy=no-referrer></script> <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel=stylesheet type=text/css><link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel=stylesheet type=text/css><link href=/css/style.css rel=stylesheet><link href=/css/syntax.css rel=stylesheet></head><body id=page-top><nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id=mainNav><div class=container><a class=navbar-brand href=/>Martin Wimpress</a>
+<button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type=button data-bs-toggle=collapse data-bs-target=#navbarResponsive aria-controls=navbarResponsive aria-expanded=false aria-label="Toggle navigation">
+Menu
+<em class="fas fa-bars"></em></button><div class="collapse navbar-collapse" id=navbarResponsive><ul class="navbar-nav ms-auto"><li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://flexiondotorg.github.io/posts/>Posts</a></li><li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href=https://flexiondotorg.github.io/projects/>Projects</a></li></ul></div></div></nav><header class="masthead2 text-white text-center"></header><div class="container pb-5"><div class=row><section class="page-section portfolio col-12 col-lg-10"><img class=card-img-top src=https://flexiondotorg.github.io/posts/znc-irc-proxy/hero.png alt="How I install the ZNC IRC bouncer on Debian Wheezy"><h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">ZNC IRC proxy</h2><div class="divider-custom m-0"><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><div class="row mb-3"><div class="col text-center text-nowrap"><a class=h4 href=/tags/debian/ title=Debian><span class="badge bg-primary p-2 m-1">Debian</span></a>
+<a class=h4 href=/tags/irc/ title=IRC><span class="badge bg-primary p-2 m-1">IRC</span></a>
+<a class=h4 href=/tags/irc-bouncer/ title="IRC Bouncer"><span class="badge bg-primary p-2 m-1">IRC Bouncer</span></a>
+<a class=h4 href=/tags/linux/ title=Linux><span class="badge bg-primary p-2 m-1">Linux</span></a></div></div><div class="row justify-content-left"><p>I have been using the <a href=/posts/bip-irc-proxy/>BIP</a> IRC proxy that maintains a
+persistent connection to a list of IRC channels. However, I&rsquo;ve heard good things
+about <a href=http://znc.in>ZNC</a> and decided to give it a try.</p><p>The purpose of an IRC proxy, or bouncer, is that you can then point your IRC
+clients to them to maintain a transparent connection from multiple clients
+and playback the conversations that took place while you were away.</p><h2 id=installing-znc>Installing ZNC</h2><p>The ZNC package for Debian Wheezy are very old, so I decide to install
+from source.</p><h3 id=install-required-packages>Install required packages</h3><p>We first need to make sure we have all the packages required to build ZNC.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo apt-get install build-essential libssl-dev libperl-dev pkg-config
+</span></span></code></pre></div><h3 id=compile-znc>Compile ZNC</h3><p>Now download and compile ZNC.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cd
+</span></span><span style=display:flex><span>wget http://znc.in/releases/znc-1.4.tar.gz
+</span></span><span style=display:flex><span>tar zxvf znc-1.4.tar.gz
+</span></span><span style=display:flex><span>cd znc-1.4
+</span></span><span style=display:flex><span>./configure --with-openssl
+</span></span><span style=display:flex><span>make
+</span></span><span style=display:flex><span>sudo make install
+</span></span></code></pre></div><h3 id=create-a-user>Create a user</h3><p>Create a separate ZNC user so that ZNC does not need to run as root:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo groupadd znc
+</span></span><span style=display:flex><span>sudo adduser --system --home /var/lib/znc --group znc
+</span></span></code></pre></div><h3 id=configuring-znc>Configuring ZNC</h3><p>You can use the interactive wizard to configure ZNC which really
+help create the initial configuration.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo -u znc /usr/local/bin/znc --datadir=/var/lib/znc --makeconf
+</span></span></code></pre></div><p>Here is a transcript of how I answered the initial configuration questions.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>[ .. ] Checking for list of available modules...
+</span></span><span style=display:flex><span>[ &gt;&gt; ] ok
+</span></span><span style=display:flex><span>[ ** ] Building new config
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ** ] First let&#39;s start with some global settings...
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ?? ] What port would you like ZNC to listen on? (1025 to 65535): 7778
+</span></span><span style=display:flex><span>[ ?? ] Would you like ZNC to listen using SSL? (yes/no) [no]: yes
+</span></span><span style=display:flex><span>[ ?? ] Would you like ZNC to listen using both IPv4 and IPv6? (yes/no) [yes]:
+</span></span><span style=display:flex><span>[ .. ] Verifying the listener...
+</span></span><span style=display:flex><span>[ &gt;&gt; ] ok
+</span></span><span style=display:flex><span>[ ** ] Unable to locate pem file: [/var/lib/znc/znc.pem], creating it
+</span></span><span style=display:flex><span>[ .. ] Writing Pem file [/var/lib/znc/znc.pem]...
+</span></span><span style=display:flex><span>[ &gt;&gt; ] ok
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ** ] -- Global Modules --
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ** ] +-----------+----------------------------------------------------------+
+</span></span><span style=display:flex><span>[ ** ] | Name      | Description                                              |
+</span></span><span style=display:flex><span>[ ** ] +-----------+----------------------------------------------------------+
+</span></span><span style=display:flex><span>[ ** ] | partyline | Internal channels and queries for users connected to znc |
+</span></span><span style=display:flex><span>[ ** ] | webadmin  | Web based administration module                          |
+</span></span><span style=display:flex><span>[ ** ] +-----------+----------------------------------------------------------+
+</span></span><span style=display:flex><span>[ ** ] And 10 other (uncommon) modules. You can enable those later.
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ?? ] Load global module &lt;partyline&gt;? (yes/no) [no]: yes
+</span></span><span style=display:flex><span>[ ?? ] Load global module &lt;webadmin&gt;? (yes/no) [no]: yes
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ** ] Now we need to set up a user...
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ?? ] Username (AlphaNumeric): yournick
+</span></span><span style=display:flex><span>[ ?? ] Enter Password:
+</span></span><span style=display:flex><span>[ ?? ] Confirm Password:
+</span></span><span style=display:flex><span>[ ?? ] Would you like this user to be an admin? (yes/no) [yes]:
+</span></span><span style=display:flex><span>[ ?? ] Nick [yournick]:
+</span></span><span style=display:flex><span>[ ?? ] Alt Nick [yournick_]:
+</span></span><span style=display:flex><span>[ ?? ] Ident [yournick]:
+</span></span><span style=display:flex><span>[ ?? ] Real Name [Got ZNC?]: Your Name
+</span></span><span style=display:flex><span>[ ?? ] Bind Host (optional):
+</span></span><span style=display:flex><span>[ ?? ] Number of lines to buffer per channel [50]: 1024
+</span></span><span style=display:flex><span>[ ?? ] Would you like to clear channel buffers after replay? (yes/no) [yes]:
+</span></span><span style=display:flex><span>[ ?? ] Default channel modes [+stn]:
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ** ] -- User Modules --
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ** ] +--------------+------------------------------------------------------------------------------------------+
+</span></span><span style=display:flex><span>[ ** ] | Name         | Description                                                                              |
+</span></span><span style=display:flex><span>[ ** ] +--------------+------------------------------------------------------------------------------------------+
+</span></span><span style=display:flex><span>[ ** ] | chansaver    | Keep config up-to-date when user joins/parts                                             |
+</span></span><span style=display:flex><span>[ ** ] | controlpanel | Dynamic configuration through IRC. Allows editing only yourself if you&#39;re not ZNC admin. |
+</span></span><span style=display:flex><span>[ ** ] | perform      | Keeps a list of commands to be executed when ZNC connects to IRC.                        |
+</span></span><span style=display:flex><span>[ ** ] | webadmin     | Web based administration module                                                          |
+</span></span><span style=display:flex><span>[ ** ] +--------------+------------------------------------------------------------------------------------------+
+</span></span><span style=display:flex><span>[ ** ] And 21 other (uncommon) modules. You can enable those later.
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ?? ] Load module &lt;chansaver&gt;? (yes/no) [no]: yes
+</span></span><span style=display:flex><span>[ ?? ] Load module &lt;controlpanel&gt;? (yes/no) [no]: tes
+</span></span><span style=display:flex><span>[ ?? ] Load module &lt;controlpanel&gt;? (yes/no) [no]: yes
+</span></span><span style=display:flex><span>[ ?? ] Load module &lt;perform&gt;? (yes/no) [no]: yes
+</span></span><span style=display:flex><span>[ ?? ] Load module &lt;webadmin&gt;? (yes/no) [no]: yes
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ?? ] Would you like to set up a network? (yes/no) [no]:
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ?? ] Would you like to set up another user? (yes/no) [no]:
+</span></span><span style=display:flex><span>[ .. ] Writing config [/var/lib/znc/configs/znc.conf]...
+</span></span><span style=display:flex><span>[ &gt;&gt; ] ok
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ** ]To connect to this ZNC you need to connect to it as your IRC server
+</span></span><span style=display:flex><span>[ ** ]using the port that you supplied.  You have to supply your login info
+</span></span><span style=display:flex><span>[ ** ]as the IRC server password like this: user/network:pass.
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ** ]Try something like this in your IRC client...
+</span></span><span style=display:flex><span>[ ** ]/server &lt;znc_server_ip&gt; +7778 flexiondotorg:&lt;pass&gt;
+</span></span><span style=display:flex><span>[ ** ]And this in your browser...
+</span></span><span style=display:flex><span>[ ** ]https://&lt;znc_server_ip&gt;:7778/
+</span></span><span style=display:flex><span>[ ** ]
+</span></span><span style=display:flex><span>[ ?? ] Launch ZNC now? (yes/no) [yes]: no
+</span></span></code></pre></div><h3 id=running-znv-as-a-daemon>Running ZNV as a daemon</h3><p>Here is a <code>/etc/init.d/znc</code> for Debian based on this installation method:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#e5e5e5>#! /bin/sh
+</span></span></span><span style=display:flex><span><span style=color:#e5e5e5></span><span style=color:#0f0>### BEGIN INIT INFO</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Provides:          znc</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Required-Start:    $remote_fs $syslog</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Required-Stop:     $remote_fs $syslog</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Default-Start:     2 3 4 5</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Default-Stop:      0 1 6</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Short-Description: ZNC IRC bouncer</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Description:       ZNC is an IRC bouncer</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>### END INIT INFO</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#eedd82>PATH</span>=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+</span></span><span style=display:flex><span><span style=color:#eedd82>DESC</span>=<span style=color:#87ceeb>&#34;ZNC daemon&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#eedd82>NAME</span>=znc
+</span></span><span style=display:flex><span><span style=color:#eedd82>DAEMON</span>=/usr/local/bin/<span style=color:#eedd82>$NAME</span>
+</span></span><span style=display:flex><span><span style=color:#eedd82>DATADIR</span>=/var/lib/znc
+</span></span><span style=display:flex><span><span style=color:#eedd82>DAEMON_ARGS</span>=<span style=color:#87ceeb>&#34;--datadir=</span><span style=color:#eedd82>$DATADIR</span><span style=color:#87ceeb>&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#eedd82>PIDDIR</span>=<span style=color:#eedd82>$DATADIR</span>/run
+</span></span><span style=display:flex><span><span style=color:#eedd82>PIDFILE</span>=<span style=color:#eedd82>$PIDDIR</span>/<span style=color:#eedd82>$NAME</span>.pid
+</span></span><span style=display:flex><span><span style=color:#eedd82>SCRIPTNAME</span>=/etc/init.d/<span style=color:#eedd82>$NAME</span>
+</span></span><span style=display:flex><span><span style=color:#eedd82>USER</span>=znc
+</span></span><span style=display:flex><span><span style=color:#eedd82>GROUP</span>=znc
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Exit if the package is not installed</span>
+</span></span><span style=display:flex><span>[ -x <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$DAEMON</span><span style=color:#87ceeb>&#34;</span> ] || exit <span style=color:#f60>0</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Read configuration variable file if it is present</span>
+</span></span><span style=display:flex><span>[ -r /etc/default/<span style=color:#eedd82>$NAME</span> ] &amp;&amp; . /etc/default/<span style=color:#eedd82>$NAME</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Load the VERBOSE setting and other rcS variables</span>
+</span></span><span style=display:flex><span>. /lib/init/vars.sh
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Define LSB log_* functions.</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Depend on lsb-base (&gt;= 3.2-14) to ensure that this file is present</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># and status_of_proc is working.</span>
+</span></span><span style=display:flex><span>. /lib/lsb/init-functions
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>#</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Function that starts the daemon/service</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>#</span>
+</span></span><span style=display:flex><span>do_start()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#0f0># Return</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>#   0 if daemon has been started</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>#   1 if daemon was already running</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>#   2 if daemon could not be started</span>
+</span></span><span style=display:flex><span>    <span style=color:red>if</span> [ ! -d <span style=color:#eedd82>$PIDDIR</span> ]
+</span></span><span style=display:flex><span>    <span style=color:red>then</span>
+</span></span><span style=display:flex><span>        mkdir <span style=color:#eedd82>$PIDDIR</span>
+</span></span><span style=display:flex><span>    <span style=color:red>fi</span>
+</span></span><span style=display:flex><span>    chown <span style=color:#eedd82>$USER</span>:<span style=color:#eedd82>$GROUP</span> <span style=color:#eedd82>$PIDDIR</span>
+</span></span><span style=display:flex><span>    start-stop-daemon --start --quiet --pidfile <span style=color:#eedd82>$PIDFILE</span> --exec <span style=color:#eedd82>$DAEMON</span> --test --chuid <span style=color:#eedd82>$USER</span> &gt; /dev/null || <span style=color:red>return</span> <span style=color:#f60>1</span>
+</span></span><span style=display:flex><span>    start-stop-daemon --start --quiet --pidfile <span style=color:#eedd82>$PIDFILE</span> --exec <span style=color:#eedd82>$DAEMON</span> --chuid <span style=color:#eedd82>$USER</span> -- <span style=color:#eedd82>$DAEMON_ARGS</span> &gt; /dev/null || <span style=color:red>return</span> <span style=color:#f60>2</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>#</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Function that stops the daemon/service</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>#</span>
+</span></span><span style=display:flex><span>do_stop()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#0f0># Return</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>#   0 if daemon has been stopped</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>#   1 if daemon was already stopped</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>#   2 if daemon could not be stopped</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0>#   other if a failure occurred</span>
+</span></span><span style=display:flex><span>    start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --pidfile <span style=color:#eedd82>$PIDFILE</span> --name <span style=color:#eedd82>$NAME</span> --chuid <span style=color:#eedd82>$USER</span>
+</span></span><span style=display:flex><span>    <span style=color:#eedd82>RETVAL</span>=<span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$?</span><span style=color:#87ceeb>&#34;</span>
+</span></span><span style=display:flex><span>    [ <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$RETVAL</span><span style=color:#87ceeb>&#34;</span> = <span style=color:#f60>2</span> ] &amp;&amp; <span style=color:red>return</span> <span style=color:#f60>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0># Wait for children to finish too if this is a daemon that forks</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0># and if the daemon is only ever run from this initscript.</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0># If the above conditions are not satisfied then add some other code</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0># that waits for the process to drop all resources that could be</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0># needed by services started subsequently.  A last resort is to</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0># sleep for some time.</span>
+</span></span><span style=display:flex><span>    start-stop-daemon --stop --quiet --oknodo --retry=0/30/KILL/5 --exec <span style=color:#eedd82>$DAEMON</span> --chuid <span style=color:#eedd82>$USER</span>
+</span></span><span style=display:flex><span>    [ <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$?</span><span style=color:#87ceeb>&#34;</span> = <span style=color:#f60>2</span> ] &amp;&amp; <span style=color:red>return</span> <span style=color:#f60>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#0f0># Many daemons don&#39;t delete their pidfiles when they exit.</span>
+</span></span><span style=display:flex><span>    rm -f <span style=color:#eedd82>$PIDFILE</span>
+</span></span><span style=display:flex><span>    <span style=color:red>return</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$RETVAL</span><span style=color:#87ceeb>&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0f0>#</span>
+</span></span><span style=display:flex><span><span style=color:#0f0># Function that sends a SIGHUP to the daemon/service</span>
+</span></span><span style=display:flex><span><span style=color:#0f0>#</span>
+</span></span><span style=display:flex><span>do_reload() {
+</span></span><span style=display:flex><span>    start-stop-daemon --stop --signal <span style=color:#f60>1</span> --quiet --pidfile <span style=color:#eedd82>$PIDFILE</span> --name <span style=color:#eedd82>$NAME</span> --chuid <span style=color:#eedd82>$USER</span>
+</span></span><span style=display:flex><span>    <span style=color:red>return</span> <span style=color:#f60>0</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:red>case</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$1</span><span style=color:#87ceeb>&#34;</span> in
+</span></span><span style=display:flex><span>  start)
+</span></span><span style=display:flex><span>    [ <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$VERBOSE</span><span style=color:#87ceeb>&#34;</span> != no ] &amp;&amp; log_daemon_msg <span style=color:#87ceeb>&#34;Starting </span><span style=color:#eedd82>$DESC</span><span style=color:#87ceeb>&#34;</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$NAME</span><span style=color:#87ceeb>&#34;</span>
+</span></span><span style=display:flex><span>    do_start
+</span></span><span style=display:flex><span>    <span style=color:red>case</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$?</span><span style=color:#87ceeb>&#34;</span> in
+</span></span><span style=display:flex><span>        0|1) [ <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$VERBOSE</span><span style=color:#87ceeb>&#34;</span> != no ] &amp;&amp; log_end_msg <span style=color:#f60>0</span> ;;
+</span></span><span style=display:flex><span>        2) [ <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$VERBOSE</span><span style=color:#87ceeb>&#34;</span> != no ] &amp;&amp; log_end_msg <span style=color:#f60>1</span> ;;
+</span></span><span style=display:flex><span>    <span style=color:red>esac</span>
+</span></span><span style=display:flex><span>    ;;
+</span></span><span style=display:flex><span>  stop)
+</span></span><span style=display:flex><span>    [ <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$VERBOSE</span><span style=color:#87ceeb>&#34;</span> != no ] &amp;&amp; log_daemon_msg <span style=color:#87ceeb>&#34;Stopping </span><span style=color:#eedd82>$DESC</span><span style=color:#87ceeb>&#34;</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$NAME</span><span style=color:#87ceeb>&#34;</span>
+</span></span><span style=display:flex><span>    do_stop
+</span></span><span style=display:flex><span>    <span style=color:red>case</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$?</span><span style=color:#87ceeb>&#34;</span> in
+</span></span><span style=display:flex><span>        0|1) [ <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$VERBOSE</span><span style=color:#87ceeb>&#34;</span> != no ] &amp;&amp; log_end_msg <span style=color:#f60>0</span> ;;
+</span></span><span style=display:flex><span>        2) [ <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$VERBOSE</span><span style=color:#87ceeb>&#34;</span> != no ] &amp;&amp; log_end_msg <span style=color:#f60>1</span> ;;
+</span></span><span style=display:flex><span>    <span style=color:red>esac</span>
+</span></span><span style=display:flex><span>    ;;
+</span></span><span style=display:flex><span>  status)
+</span></span><span style=display:flex><span>    status_of_proc -p <span style=color:#eedd82>$PIDFILE</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$DAEMON</span><span style=color:#87ceeb>&#34;</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$NAME</span><span style=color:#87ceeb>&#34;</span> &amp;&amp; exit <span style=color:#f60>0</span> || exit <span style=color:#eedd82>$?</span>
+</span></span><span style=display:flex><span>    ;;
+</span></span><span style=display:flex><span>  reload)
+</span></span><span style=display:flex><span>    log_daemon_msg <span style=color:#87ceeb>&#34;Reloading </span><span style=color:#eedd82>$DESC</span><span style=color:#87ceeb>&#34;</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$NAME</span><span style=color:#87ceeb>&#34;</span>
+</span></span><span style=display:flex><span>    do_reload
+</span></span><span style=display:flex><span>    log_end_msg <span style=color:#eedd82>$?</span>
+</span></span><span style=display:flex><span>    ;;
+</span></span><span style=display:flex><span>  restart)
+</span></span><span style=display:flex><span>    log_daemon_msg <span style=color:#87ceeb>&#34;Restarting </span><span style=color:#eedd82>$DESC</span><span style=color:#87ceeb>&#34;</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$NAME</span><span style=color:#87ceeb>&#34;</span>
+</span></span><span style=display:flex><span>    do_stop
+</span></span><span style=display:flex><span>    <span style=color:red>case</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$?</span><span style=color:#87ceeb>&#34;</span> in
+</span></span><span style=display:flex><span>      0|1)
+</span></span><span style=display:flex><span>        do_start
+</span></span><span style=display:flex><span>        <span style=color:red>case</span> <span style=color:#87ceeb>&#34;</span><span style=color:#eedd82>$?</span><span style=color:#87ceeb>&#34;</span> in
+</span></span><span style=display:flex><span>            0) log_end_msg <span style=color:#f60>0</span> ;;
+</span></span><span style=display:flex><span>            1) log_end_msg <span style=color:#f60>1</span> ;; <span style=color:#0f0># Old process is still running</span>
+</span></span><span style=display:flex><span>            *) log_end_msg <span style=color:#f60>1</span> ;; <span style=color:#0f0># Failed to start</span>
+</span></span><span style=display:flex><span>        <span style=color:red>esac</span>
+</span></span><span style=display:flex><span>        ;;
+</span></span><span style=display:flex><span>      *)
+</span></span><span style=display:flex><span>        <span style=color:#0f0># Failed to stop</span>
+</span></span><span style=display:flex><span>        log_end_msg <span style=color:#f60>1</span>
+</span></span><span style=display:flex><span>        ;;
+</span></span><span style=display:flex><span>    <span style=color:red>esac</span>
+</span></span><span style=display:flex><span>    ;;
+</span></span><span style=display:flex><span>  *)
+</span></span><span style=display:flex><span>    echo <span style=color:#87ceeb>&#34;Usage: </span><span style=color:#eedd82>$SCRIPTNAME</span><span style=color:#87ceeb> {status|start|stop|reload|restart}&#34;</span> &gt;&amp;<span style=color:#f60>2</span>
+</span></span><span style=display:flex><span>    exit <span style=color:#f60>3</span>
+</span></span><span style=display:flex><span>    ;;
+</span></span><span style=display:flex><span><span style=color:red>esac</span>
+</span></span></code></pre></div><p>After you&rsquo;ve created the script, you must give it the proper permissions to run
+and add the script to the startup/shutdown sequence.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo chmod <span style=color:#f60>755</span> /etc/init.d/znc
+</span></span><span style=display:flex><span>sudo update-rc.d znc defaults
+</span></span></code></pre></div><p>Start the service:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo service znc start
+</span></span></code></pre></div><p>Stop the service:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo service znc stop
+</span></span></code></pre></div><h3 id=web-configuration>Web configuration</h3><p>I love that ZNC comes bundled with a web based configuration tool. Just
+login to <a href=https://znc.example.org:7778>https://znc.example.org:7778</a> to add users, add networks to
+users and to add channels to networks. Really simple stuff.</p><h3 id=irc-client-configuration>IRC client configuration</h3><p>I use <a href=http://hexchat.github.io/>HexChat</a>, but other IRC clients are available.
+Just add a new Network to HexChat for your ZNC server, use the username,
+suffixed with the network name you configured in ZNC, and your ZNC password.</p><h2 id=conclusion>Conclusion</h2><p>I much prefer ZNC to BIP.</p><ul><li>I really like the web and IRC configuration but I still have the option to
+configure the config files directly.</li><li>ZNC is far less cryptic with regard to setting up IRC client connections and
+user management is much better implemented.</li><li>When I add a new channel to an existing network in ZNC it automatically appears
+in my connected clients without the need to restart anything.</li><li>ZNC&rsquo;s IRC backlogs don&rsquo;t have the confusing double time stamps present in BIP
+and ZNC is much faster re-establishing connections to my multiple IRC network and
+channels.</li><li>Most importantly, ZNC has been far more stable than BIP.</li></ul><p><strong>References</strong></p><ul><li><a href=http://wiki.znc.in/Installation>http://wiki.znc.in/Installation</a></li><li><a href=http://wiki.znc.in/Running_ZNC_as_a_system_daemon>http://wiki.znc.in/Running_ZNC_as_a_system_daemon</a></li><li><a href=https://www.digitalocean.com/community/tutorials/how-to-install-znc-an-irc-bouncer-on-an-ubuntu-vps>https://www.digitalocean.com/community/tutorials/how-to-install-znc-an-irc-bouncer-on-an-ubuntu-vps</a></li><li><a href=https://raymii.org/s/tutorials/Install_the_Lastest_ZNC_from_Source_in_Ubuntu.html>https://raymii.org/s/tutorials/Install_the_Lastest_ZNC_from_Source_in_Ubuntu.html</a></li><li><a href=https://shellfish.io/tutorial/1/how-to-install-znc-on-debian-7/>https://shellfish.io/tutorial/1/how-to-install-znc-on-debian-7/</a></li></ul><div class="row mt-5 mb-3"><div class="col-6 text-left"><a class="btn btn-primary btn-lg col-12" href=https://flexiondotorg.github.io/posts/installing-willie-irc-bot-on-debian/><span class=h1>&#8592;</span></a></div><div class="col-6 text-right"><a class="btn btn-primary btn-lg col-12" href=https://flexiondotorg.github.io/posts/monitorix-on-debian/><span class=h1>&#8594;</span></a></div></div></div></section><section class="page-section portfolio col-12 col-lg-2 my-3"><div id=sidebar class=fixed><div class="widget pt-3"><h4 class="mb-3 widget-title">Latest Posts</h4><ul class=list-unstyled><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/diy-snes-classic/><h5>DIY SNES Classic</h5></a></li><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/raspberry-pi-3-nextcloud-box-running-on-ubuntu-core/><h5>Raspberry Pi 3 Nextcloud Box running on Ubuntu Core</h5></a></li><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/hp-microserver-n54l-power-saving-and-performance-tuning-using-debian/><h5>HP Microserver N54L power saving and performance tuning using Debian</h5></a></li></ul></div><div class="widget pt-3"><h4 class="mb-3 widget-title">Related Posts</h4><ul class=list-unstyled><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/bip-irc-proxy/><h5>BIP IRC proxy</h5></a></li><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/posts/ravencore-0.1.4-on-debian/><h5>RavenCore 0.1.4 on Debian</h5></a></li><li class="d-flex my-1"><a href=https://flexiondotorg.github.io/projects/debian/><h5>Debian</h5></a></li></ul></div></div></section></div></div><footer class="footer text-center"><div class=container><div class=row><div class="col-lg-4 mb-5 mb-lg-0"><h4 class="text-uppercase mb-4">Social</h4><a class="btn btn-outline-light btn-social mx-1" href=https://wimpysworld.io/discord target=_blank><em class="fab fa-fw fa-discord"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://fosstodon.org/@wimpy target=_blank><em class="fab fa-fw fa-mastodon"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://twitter.com/m_wimpress target=_blank><em class="fab fa-fw fa-twitter"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://linkedin.com/in/martinwimpress target=_blank><em class="fab fa-fw fa-linkedin"></em></a></div><div class="col-lg-4 mb-5 mb-lg-0"><h4 class="text-uppercase mb-4">Code</h4><a class="btn btn-outline-light btn-social mx-1" href=https://github.com/flexiondotorg target=_blank><em class="fab fa-fw fa-github"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://launchpad.net/~flexiondotorg target=_blank><em class="fab fa-fw fa-ubuntu"></em></a></div><div class=col-lg-4><h4 class="text-uppercase mb-4">Content</h4><a class="btn btn-outline-light btn-social mx-1" href=https://instagram.com/WimpysWorld target=_blank><em class="fab fa-fw fa-instagram"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://twitch.tv/WimpysWorld target=_blank><em class="fab fa-fw fa-twitch"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://youtube.com/WimpysWorld target=_blank><em class="fab fa-fw fa-youtube"></em></a>
+<a class="btn btn-outline-light btn-social mx-1" href=https://linuxdowntime.com target=_blank><em class="fas fa-fw fa-podcast"></em></a></div></div></div></footer><div class="copyright py-4 text-center text-white"><div class=container><small>Copyright &copy; Martin Wimpress 2022</small></div></div><script src=https://cdn.startbootstrap.com/sb-forms-latest.js></script></body><div class="portfolio-modal modal fade" id=modal1 tabindex=-1 aria-labelledby=modal1 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ubuntu Podcast</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/ubuntu-podcast/hero.png alt=...><p class=mb-4>A weekly family-friendly audio magazine for the Ubuntu community</p><a href=https://flexiondotorg.github.io/projects/ubuntu-podcast/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal2 tabindex=-1 aria-labelledby=modal2 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Debian</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/debian/hero.png alt=...><p class=mb-4>Package maintainer for (mostly) MATE Desktop in Debian and Ubuntu</p><a href=https://flexiondotorg.github.io/projects/debian/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal3 tabindex=-1 aria-labelledby=modal3 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ubuntu MATE</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/ubuntu-mate/hero.png alt=...><p class=mb-4>Ubuntu MATE is a Linux distribution I made for my friends and family</p><a href=https://flexiondotorg.github.io/projects/ubuntu-mate/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal4 tabindex=-1 aria-labelledby=modal4 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">openSUSE</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/opensuse/hero.png alt=...><p class=mb-4>Student mentor for Google Summer of Code 2014</p><a href=https://flexiondotorg.github.io/projects/opensuse/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal5 tabindex=-1 aria-labelledby=modal5 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">LINUX Unplugged</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/linux-unplugged/hero.png alt=...><p class=mb-4>Weekly Linux talk show with no script, no limits and tons of opinion</p><a href=https://flexiondotorg.github.io/projects/linux-unplugged/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal6 tabindex=-1 aria-labelledby=modal6 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Arch Linux</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/arch-linux/hero.png alt=...><p class=mb-4>Arch Linux Trusted User & Package maintainer</p><a href=https://flexiondotorg.github.io/projects/arch-linux/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal7 tabindex=-1 aria-labelledby=modal7 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">MATE Desktop</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/mate-desktop/hero.png alt=...><p class=mb-4>Preserving a traditional desktop metaphor</p><a href=https://flexiondotorg.github.io/projects/mate-desktop/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal8 tabindex=-1 aria-labelledby=modal8 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">POLARIS</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/polaris/hero.png alt=...><p class=mb-4>Disrupting incumbent flight data analysis solutions with Open Source</p><a href=https://flexiondotorg.github.io/projects/polaris/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div><div class="portfolio-modal modal fade" id=modal9 tabindex=-1 aria-labelledby=modal9 aria-hidden=true><div class="modal-dialog modal-xl"><div class=modal-content><div class="modal-header border-0"><button class=btn-close type=button data-bs-dismiss=modal aria-label=Close></button></div><div class="modal-body text-center pb-5"><div class=container><div class="row justify-content-center"><div class=col-lg-8><h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ubuntu</h2><div class=divider-custom><div class=divider-custom-line></div><div class=divider-custom-icon><em class="fas fa-star"></em></div><div class=divider-custom-line></div></div><img class="img-fluid rounded mb-5" src=/projects/ubuntu/hero.png alt=...><p class=mb-4>From community contributor to director of engineering and back again</p><a href=https://flexiondotorg.github.io/projects/ubuntu/ class="btn btn-primary btn-lg col-12">Read More</a></div></div></div></div></div></div></div></html><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js integrity=sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa crossorigin=anonymous></script>
+<script src=/js/scripts.js></script></body></html>
