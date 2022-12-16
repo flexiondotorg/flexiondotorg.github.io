@@ -1,0 +1,35 @@
+
+{{ $element  :=  first .Site.Params.HomeProjects (where .Site.RegularPages.ByDate.Reverse "Section" "projects") }}
+
+
+{{ if $element }}
+
+<section class="page-section portfolio pb-5" id="portfolio">
+	<div class="container">
+		<!-- Portfolio Section Heading-->
+		<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Recent Projects</h2>
+		<!-- Icon Divider-->
+		<div class="divider-custom">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon"><em class="fas fa-star"></em></div>
+			<div class="divider-custom-line"></div>
+		</div>
+		<!-- Portfolio Grid Items-->
+		<div class="row justify-content-center">
+			<!-- Portfolio Item 1-->
+			{{ $counter := 0 }}
+			{{  range $element }}
+			{{ $counter = add $counter 1 }}
+			<div class="col-md-6 col-lg-4 mb-5">
+				<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#modal{{$counter}}">
+					<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+						<div class="portfolio-item-caption-content text-center text-white"><em class="fas fa-plus fa-3x"></em></div>
+					</div>
+					<img class="img-fluid" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="..." />
+				</div>
+			</div>    
+			{{ end }}
+		</div>
+	</div>
+</section>
+{{ end }}

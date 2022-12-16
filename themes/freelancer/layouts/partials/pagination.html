@@ -1,0 +1,24 @@
+<nav aria-label="Page navigation example ">
+	<ul class="pagination justify-content-center pagination-lg">
+{{ if .Paginator.HasPrev }}
+	<li class="page-item">
+		<a class="page-link bg-primary text-white" href="{{ .Paginator.Prev.URL }}" tabindex="-1"><span class="h2">&#8592;</span></a>
+	  </li>
+{{ else }}
+<li class="page-item disabled ">
+	<a class="page-link bg-light" href="#" tabindex="-1"><span class="h2">&#8592;</span></a>
+  </li>
+{{ end }}
+
+{{ if .Paginator.HasNext }}
+	<li class="page-item">
+		<a class="page-link bg-primary text-white" href="{{ .Paginator.Next.URL }}"><span class="h2">&#8594;</span></a>
+	  </li>
+{{ else }}
+<li class="page-item disabled">
+	<a class="page-link bg-light" href="#"><span class="h2">&#8594;</span></a>
+  </li>
+{{ end }}
+</ul>
+</nav>
+

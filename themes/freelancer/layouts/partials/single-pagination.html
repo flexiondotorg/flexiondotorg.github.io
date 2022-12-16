@@ -1,0 +1,15 @@
+<div class="row  mt-5 mb-3">
+    <div class="col-6 text-left">
+        {{ if .NextInSection }}
+        <a class="btn btn-primary btn-lg col-12" href="{{ .NextInSection.Permalink }}"><span class="h1">&#8592;</span></a>
+        {{ else }}
+        <a class="btn btn-light btn-lg col-12 disabled" href="#"><span class="h1">&#8592;</span></a>
+        {{ end }}
+    </div>
+    <div class="col-6 text-right">
+        {{ if .PrevInSection }}
+        <a class="btn btn-primary btn-lg col-12" href="{{ .PrevInSection.Permalink }}"><span class="h1">&#8594;</span></a>
+        {{ else }}
+        <a class="btn btn-light disabled btn-lg col-12" href="#"><span class="h1">&#8594;</span></a>
+        {{ end }}
+    </div>

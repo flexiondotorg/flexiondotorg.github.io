@@ -1,0 +1,37 @@
+<section class="page-section portfolio col-12 col-lg-2 my-3">
+	<div id="sidebar" class="fixed">
+	<div class="widget pt-3">
+		{{ $latest := first 3 (where (where .Site.RegularPages.ByDate.Reverse "Section" "posts") "Title" "!=" .Title) }}
+		{{if  $latest }}
+		<h4 class="mb-3 widget-title">Latest Posts</h4>
+		<ul class="list-unstyled">
+			{{ range $latest }}
+		  <li class="d-flex my-1">
+			  <a href="{{ .Permalink }}">
+				<h5>{{ .Title }}</h5>
+			  </a>
+			
+		  </li>
+		  {{ end }}
+		</ul>
+		{{ end }}
+	  </div>
+
+	  {{$related := .Site.RegularPages.Related . | first 3 }}
+	{{ if $related}}
+
+	<div class="widget pt-3">
+		<h4 class="mb-3 widget-title">Related Posts</h4>
+		<ul class="list-unstyled">
+		  
+		  {{ range first 3  $related }}
+		  <li class="d-flex my-1">
+			  <a href="{{ .Permalink }}">
+				<h5>{{ .Title }}</h5>
+			  </a>
+		  </li>{{ end }}
+		</ul>
+	  </div>
+</div>
+{{ end }}
+</section>

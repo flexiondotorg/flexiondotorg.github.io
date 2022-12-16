@@ -1,0 +1,107 @@
+baseURL = 'https://flexiondotorg.github.io/'
+languageCode = 'en-gb'
+title = 'Martin Wimpress'
+theme = 'freelancer'
+summaryLength=40
+paginate=9
+enableRobotsTXT = true
+
+[params]
+  tagLine = "INNOVATION - OPEN SOURCE - LEADERSHIP"
+  aboutLeft = "Respected leader and innovator with a considerable breadth of IT competency, particularly Linux and Open Source. A proven track record of translating business requirements into IT solutions and well practised with contemporary IT development and management methodologies. Logical approach to problem-solving, demonstrable record of creating novel and unique solutions."
+  aboutRight = "Passionate Open Source advocate and enthusiast. Proficient software developer using several languages. Contributor to many Open Source projects to retain and develop technical skill as an accomplished systems integrator and architect."
+  homePosts = 6
+  homeProjects = 9
+
+[params.sbform]
+  token = "72ea1ec7-2670-4a14-a16a-155ce22f82e3"
+
+[params.homebutton]
+  text = "Wimpy's World"
+  link = "https://wimpysworld.com"
+  icon = "fa-globe"
+
+# icon name without the 'fa-'
+[[params.social]]
+  icon      = "discord"
+  icon_pack = "fab"
+  url       = "https://wimpysworld.io/discord"
+[[params.social]]
+  icon      = "mastodon"
+  icon_pack = "fab"
+  url       = "https://fosstodon.org/@wimpy"
+[[params.social]]
+  icon      = "twitter"
+  icon_pack = "fab"
+  url       = "https://twitter.com/m_wimpress"
+[[params.social]]
+  icon      = "linkedin"
+  icon_pack = "fab"
+  url       = "https://linkedin.com/in/martinwimpress"
+
+[[params.code]]
+  icon      = "github"
+  icon_pack = "fab"
+  url       = "https://github.com/flexiondotorg"
+[[params.code]]
+  icon      = "ubuntu"
+  icon_pack = "fab"
+  url       = "https://launchpad.net/~flexiondotorg"
+
+[[params.content]]
+  icon      = "instagram"
+  icon_pack = "fab"
+  url       = "https://instagram.com/WimpysWorld"
+[[params.content]]
+  icon      = "twitch"
+  icon_pack = "fab"
+  url       = "https://twitch.tv/WimpysWorld"
+[[params.content]]
+  icon      = "youtube"
+  icon_pack = "fab"
+  url       = "https://youtube.com/WimpysWorld"
+[[params.content]]
+  icon      = "podcast"
+  icon_pack = "fas"
+  url       = "https://linuxdowntime.com"
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+[[related.indices]]
+  name = 'tags'
+  weight = 100
+[[related.indices]]
+  name = 'date'
+  weight = 10
+
+[permalinks]
+  posts = 'posts/:title/'
+  projects = 'projects/:title/'
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+[markup.goldmark]
+  [markup.goldmark.renderer]
+      unsafe = false
+  [markup.goldmark.parser]
+    autoHeadingID = true
+    autoHeadingIDType = 'github'
+    [markup.goldmark.parser.attribute]
+      block = true
+[markup.highlight]
+  style = 'rrt'
+[markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "rss"
+
+[sitemap]
+  changefreq = 'weekly'
+  priority = 0.8

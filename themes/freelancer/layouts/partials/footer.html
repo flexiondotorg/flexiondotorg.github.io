@@ -1,0 +1,43 @@
+<footer class="footer text-center">
+	<div class="container">
+		<div class="row">
+			<!-- Footer Social Icons-->
+			<div class="col-lg-4 mb-5 mb-lg-0">
+				<h4 class="text-uppercase mb-4">Social</h4>
+				{{ range .Site.Params.Social }}
+				<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}"
+				target="_blank"><em class="{{.icon_pack}} fa-fw fa-{{.icon}}"></em></a>
+			  	{{end}}
+			</div>
+			<!-- Footer Code Icons-->
+			<div class="col-lg-4 mb-5 mb-lg-0">
+				<h4 class="text-uppercase mb-4">Code</h4>
+				{{ range .Site.Params.Code }}
+				<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}"
+				target="_blank"><em class="{{.icon_pack}} fa-fw fa-{{.icon}}"></em></a>
+			  	{{end}}
+			</div>
+			<!-- Footer Content Icons-->
+			<div class="col-lg-4">
+				<h4 class="text-uppercase mb-4">Content</h4>
+				{{ range .Site.Params.Content }}
+				<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}"
+				target="_blank"><em class="{{.icon_pack}} fa-fw fa-{{.icon}}"></em></a>
+			  	{{end}}
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="copyright py-4 text-center text-white">
+	<div class="container"><small>Copyright &copy; {{ .Site.Title }} {{ now.Format "2006" }}</small></div>
+</div>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+</body>
+{{ partial "project-modal.html" . }}
+
+</html>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<!-- Core theme JS-->
+<script src="/js/scripts.js"></script>

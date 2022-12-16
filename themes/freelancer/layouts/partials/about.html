@@ -1,0 +1,26 @@
+<section class="page-section bg-primary text-white mt-5 py-5" id="about">
+	<div class="container">
+		<!-- About Section Heading-->
+		<h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+		<!-- Icon Divider-->
+		<div class="divider-custom divider-light">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon"><em class="fas fa-star"></em></div>
+			<div class="divider-custom-line"></div>
+		</div>
+		<!-- About Section Content-->
+		<div class="row">
+			<div class="col-lg-4 ms-auto"><p class="lead">{{.Site.Params.AboutLeft}}</p></div>
+			<div class="col-lg-4 me-auto"><p class="lead">{{.Site.Params.AboutRight}}</p></div>
+		</div>
+
+		{{ if .Site.Params.homebutton }}
+		<div class="text-center mt-4">
+			<a class="btn btn-xl btn-outline-light" href="{{.Site.Params.homebutton.link}}">
+				<em class="fas {{.Site.Params.Homebutton.icon}} me-2"></em>
+				{{ .Site.Params.Homebutton.text }}
+			</a>
+		</div>
+		{{ end }}
+	</div>
+</section>
