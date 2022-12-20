@@ -5,8 +5,8 @@ date: 2014-07-19 12:00:00
 tags: [ Linux,Debian,Monitorix,System Monitoring ]
 summary: Setting up Monitorix on Debian Squeeze & Wheezy
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have a few Debian servers that run at home and on VPSs. I wanted to add some

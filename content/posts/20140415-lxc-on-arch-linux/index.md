@@ -5,8 +5,8 @@ date: 2014-04-15 02:44:11
 tags: [ Linux,Arch Linux,Containers,LXC,Debian ]
 summary: A rough guide to running Debian containers on Arch Linux with LXC
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 At some point last year I was experimenting with Linux Containers (LXC) on

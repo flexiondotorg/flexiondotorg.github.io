@@ -5,8 +5,8 @@ date: 2020-06-27 00:00:00
 tags: ["Linux", "Bash", "Ubuntu"]
 summary: Convert Ubuntu into a rolling release
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Simple shell script to convert Ubuntu into a *"rolling release"* that tracks the

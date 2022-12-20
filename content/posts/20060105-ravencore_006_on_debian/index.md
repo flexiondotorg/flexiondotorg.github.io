@@ -5,8 +5,8 @@ date: 2006-01-05 11:24:41
 tags: [ Linux,Debian,RavenCore,Virtual Hosting ]
 summary: Virtual hosting on Debian with RavenCore
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have been testing a few virtual hosting control panels the last couple of

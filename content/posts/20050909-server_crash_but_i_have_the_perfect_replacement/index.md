@@ -5,8 +5,8 @@ date: 2005-09-09 10:18:22
 tags: [ Libretto CT100,Linux ]
 summary: Running a Linux server on a Libretto CT100
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 The CPU fan on my home server stopped spinning, which has rendered the computer

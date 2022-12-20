@@ -5,8 +5,8 @@ date: 2006-02-10 13:00:10
 tags: [Gadgets,MP3 ]
 summary: Cheap as chips MP3 player upgrade
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 My six year old MP3 player just isn't up to the job anymore and I have been

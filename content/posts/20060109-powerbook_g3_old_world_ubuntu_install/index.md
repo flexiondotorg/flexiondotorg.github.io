@@ -5,8 +5,8 @@ date: 2006-01-09 11:28:54
 tags: [ Linux,Ubuntu,PowerBook G3,Mac ]
 summary: Installing UBuntu on a PowerBook G3 for hack value
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 James bought a PowerBook G3 to the January 2006 [HantsLUG](http://www.hants.lug.org.uk/)

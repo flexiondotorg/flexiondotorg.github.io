@@ -5,8 +5,8 @@ date: 2008-01-10 15:41:24
 tags: [Zimbra,Zindus,Thunderbird,Lightning,Messaging,Linux]
 summary: Zimbra contact syncing for Thunderbird on Linux
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 When I setup the mail server at work I picked [Zimbra](http://www.zimbra.com/).

@@ -5,8 +5,8 @@ date: 2009-12-03 11:59:30
 tags: [Linux,Hex Editor ]
 summary: Five GUI hex editors for Linux to take a look at
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 We use hex editors daily at work, we are regularly cutting up data from flight

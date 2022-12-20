@@ -5,8 +5,8 @@ date: 2014-01-01 00:00:00
 tags: ["Podcast","Linux","Open Source","Broadcasting","Live Performance"]
 summary: Weekly Linux talk show with no script, no limits and tons of opinion
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [LINUX Unplugged](https://linuxunplugged.com/) is

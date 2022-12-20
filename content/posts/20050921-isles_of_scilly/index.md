@@ -5,8 +5,8 @@ date: 2005-09-21 10:31:09
 tags: [ Isles of Scilly,Travel ]
 summary: A surprise holiday in the Isles of Scilly
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I arranged a surprise holiday to the [Isles of Scilly](http://www.scillyonline.co.uk/index.php)

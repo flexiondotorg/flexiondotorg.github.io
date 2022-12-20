@@ -5,8 +5,8 @@ date: 2015-11-05 11:00:00
 tags: [ Nikola,Python,Content Management,Ubuntu,Static Site Generator,virtualenv ]
 summary: How to install Nikola on Ubuntu 14.04 or newer
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Nikola is a static site and blog generator written in [Python](http://www.python.org)

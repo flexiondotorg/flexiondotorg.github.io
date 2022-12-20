@@ -5,8 +5,8 @@ date: 2005-08-22 09:36:08
 tags: [ PocketPC,iPAQ 4150,Emulation,ScummVM,Gadgets,MP3 ]
 summary: Using an iPAQ 4150 PocketPC for games & music
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I recently discovered [ScummVM](http://www.scummvm.org/) and have started playing

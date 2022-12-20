@@ -6,8 +6,8 @@ lastmod: 2014-06-03
 tags: [ Linux,Arch Linux,MATE Desktop,Xfce,GNOME,KDE,Enlightment,LXDE,LXQt,Unity,ps_mem ]
 summary: Comparing desktop environment memory usage with ps_mem
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 **Updated on June 3rd 2014 and now includes LXQt and Unity.**

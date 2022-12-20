@@ -5,8 +5,8 @@ date: 2012-01-16 13:20:05
 tags: [Linux,Ubuntu,Debian,Java,JDK,JRE,Bash ]
 summary: An alternative approach to install Sun Java 6 on Ubuntu
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Canonical disabled my Java PPA at the end of last week. So I've developed

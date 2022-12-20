@@ -5,8 +5,8 @@ date: 2014-08-02 10:10:10
 tags: [ Linux,Debian,IRC,IRC Bouncer ]
 summary: How I install the ZNC IRC bouncer on Debian Wheezy
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have been using the [BIP](/posts/bip-irc-proxy/) IRC proxy that maintains a

@@ -5,8 +5,8 @@ date: 2013-03-14 18:09:21
 tags: [ Linux,Debian,nginx ]
 summary: Installing nginx on a Debian (Squeeze) 6.0 and (wheezy) 7.0
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 My webserver of choice is [nginx](http://nginx.org/), it's resource friendly,

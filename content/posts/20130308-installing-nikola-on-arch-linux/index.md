@@ -5,8 +5,8 @@ date: 2013-03-08 17:13:43
 tags: [ Nikola,Python,Content Management,Arch Linux,Static Site Generator,virtualenv ]
 summary: Install Nikola static site generator in a virtualenv on Arch Linux
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've decided to migrate one of my servers to [Arch Linux](https://www.archlinux.org/).

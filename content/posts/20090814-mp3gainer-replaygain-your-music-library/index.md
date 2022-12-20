@@ -5,8 +5,8 @@ date: 2009-08-14 15:25:45
 tags: [Linux,MP3,ReplayGain,Bash,Ubuntu ]
 summary: Volume normalise an entire MP3 library the right way
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Work has been crazy. We're moving house. Hence, not much time for geeky stuff

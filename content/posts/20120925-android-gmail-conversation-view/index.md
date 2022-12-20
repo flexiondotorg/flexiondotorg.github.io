@@ -5,8 +5,8 @@ date: 2012-09-25 19:38:34
 tags: [ Android,Messaging,Gmail ]
 summary: List view email clients for Android that support Gmail
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I recently migrated several domains I manage for family and friends

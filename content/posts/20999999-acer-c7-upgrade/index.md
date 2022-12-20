@@ -6,8 +6,8 @@ tags: [ ChromeOS,Acer C7 ]
 #link:
 summary: How to upgrade the Acer C7 Chromebook
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 draft: true
 ---
 

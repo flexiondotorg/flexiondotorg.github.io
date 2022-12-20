@@ -5,8 +5,8 @@ date: 2012-12-11 20:38:50
 tags: [ Python,Arch Linux,Ubuntu,virtualenv ]
 summary: Installing Python and virtualenv on Arch Linux and Ubuntu
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 We use [Python](http://www.python.org) for pretty much all our software

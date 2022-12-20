@@ -5,8 +5,8 @@ date: 2009-01-22 23:46:26
 tags: [DVB-T,PVR,Linux,MPEG-2,Project-X,DVD,Freeview,PlayStation 3,PlayTV ]
 summary: Export PlayTV recorded video from PlayStation 3
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I am just about to clean up and convert another batch of programmes I have

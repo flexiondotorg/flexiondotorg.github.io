@@ -5,8 +5,8 @@ date: 2014-06-19 22:00:00
 tags: [ Linux,Debian,MATE Desktop,Arch Linux]
 summary: Setting up MATE Desktop on Debian Wheezy
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I'm a member of the [MATE Desktop](http://mate-desktop.org) team and until

@@ -5,8 +5,8 @@ date: 2009-01-26 15:37:55
 tags: [Content Management,SEO,Wordpress ]
 summary: Wordpress plugins that help automate SEO
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I manage several websites at work and have therefore learned something about

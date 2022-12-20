@@ -5,8 +5,8 @@ date: 2009-09-26 11:02:52
 tags: [Home Cinema,Mediatomb,PlayStation 3,UPnP ]
 summary: Multi Zone music streaming with the PlayStation 3
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 PlayStation 3 firmware 3.00 added a new feature I was very excited about,

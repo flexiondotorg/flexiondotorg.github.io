@@ -5,8 +5,8 @@ date: 2010-03-20 15:39:17
 tags: [Linux,GNOME,Shotwell,F-Spot,Ubuntu,Photo Organiser ]
 summary: F-Spot you serve me well, but here comes Shotwell
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've finally found a photo organiser for Linux I can live with,

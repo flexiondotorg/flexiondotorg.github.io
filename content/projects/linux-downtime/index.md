@@ -5,8 +5,8 @@ date: 2022-04-24 00:00:00
 tags: ["FOSS", "Podcast","Linux","Open Source","Broadcasting", "Career", "Community"]
 summary: Open source professionals having relaxed discussions in their downtime
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Open source professionals [Martin Wimpress](https://wimpress.com),

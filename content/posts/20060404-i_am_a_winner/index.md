@@ -5,8 +5,8 @@ date: 2006-04-04 16:00:00
 tags: [Linux,RavenCore,Virtual Hosting ]
 summary: Winner winner chicken dinner!
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Yah for me! I have won the [RavenCore](http://sourceforge.net/projects/ravencore/)

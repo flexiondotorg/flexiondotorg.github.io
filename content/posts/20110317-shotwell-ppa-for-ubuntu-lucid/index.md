@@ -5,8 +5,8 @@ date: 2011-03-17 17:04:42
 tags: [Linux,Ubuntu,GNOME,Shotwell,PPA ]
 summary: Get the latest Shotwell 0.8.1 via a PP for Ubuntu 10.04
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Like many others I wanted [Shotwell](http://yorba.org/shotwell/) for Lucid

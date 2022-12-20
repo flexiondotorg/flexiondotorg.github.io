@@ -5,8 +5,8 @@ date: 2015-12-16 12:00:00
 tags: [ Linux,Debian,HP MicroServer,N54L ]
 summary: Configure HP Microserver N54L Power Saving on Debian
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've installed [Open Media Vault](http://www.openmediavault.org/)

@@ -5,8 +5,8 @@ date: 2005-08-05 09:10:10
 tags: [ Content Management,Jaws ]
 summary: Rebooting Flexion.Org using Jaws
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Well, I have decided to get Flexion.Org on-line again and picked [Jaws](http://jaws-project.com/)

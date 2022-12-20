@@ -6,8 +6,8 @@ tags: [ Linux,Firefox,Google Chrome,iPlayer,ITV Player,4 on Demand,Demand 5,Amaz
 #link:
 summary: How to access UK video streaming services using Ubuntu 14.04 and 14.10.
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 draft: true
 ---
 

@@ -5,8 +5,8 @@ date: 2006-02-10 02:48:54
 tags: [Home Cinema,Panasonic TH42-PHD8 ]
 summary: Using service menus to fix the Panasonic TH42-PHD8
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've noticed that the contrast levels on my Panasonic TH42-PHD8 plasma will

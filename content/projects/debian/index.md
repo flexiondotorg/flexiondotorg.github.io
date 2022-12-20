@@ -5,8 +5,8 @@ date: 2014-10-01 00:00:00
 tags: ["Debian","Ubuntu","MATE Desktop","Linux","dpkg","apt"]
 summary: Package maintainer for (mostly) MATE Desktop in Debian and Ubuntu
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Debian is a Unix-like computer operating system and a Linux distribution that is

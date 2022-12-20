@@ -5,8 +5,8 @@ date: 2013-08-15 15:42:47
 tags: [ Linux,Wine,SketchUp,Arch Linux ]
 summary: Install SketchUp Make 2013 on Arch Linux with Wine 1.7
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I use [SketchUp](http://www.sketchup.com) at work to manipulate models for use

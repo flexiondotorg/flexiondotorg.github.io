@@ -5,8 +5,8 @@ date: 2011-03-16 13:44:54
 tags: [Linux,Ubuntu,Bash ]
 summary: Get a list of Ubuntu codename and version with wget
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I'm working a script to automatically backport [Debian](http://www.debian.org)

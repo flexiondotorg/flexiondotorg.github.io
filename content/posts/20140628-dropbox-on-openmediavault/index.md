@@ -6,8 +6,8 @@ lastmod: 2016-08-22
 tags: [ Linux,Dropbox,Open Media Vault,Plex,Debian ]
 summary: Integrating Dropbox on a headless Open Media Vault server.
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 **This how-to was updated for Open Media Vault 2.x and 3.x on 22nd August 2016.**

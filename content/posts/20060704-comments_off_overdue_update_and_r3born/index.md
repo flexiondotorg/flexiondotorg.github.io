@@ -5,8 +5,8 @@ date: 2006-07-04 13:14:55
 tags: [Content Management,Jaws,PHP,R3-born ]
 summary: Jaws spam counter measures suck
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 First of all, I have disabled comments on my blog. [Jaws](http://jaws-project.com/)

@@ -6,8 +6,8 @@ lastmod: 2012-01-16
 tags: [Linux,Ubuntu,Debian,Java,JDK,JRE,PPA ]
 summary: Get Sun Java 1.6.0 packages from a PPA
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 ## Update Friday 13th January 2012

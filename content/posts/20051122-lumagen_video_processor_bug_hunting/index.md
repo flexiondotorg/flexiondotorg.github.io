@@ -5,8 +5,8 @@ date: 2005-11-22 12:02:37
 tags: [ Home Cinema,Lumagen ]
 summary: Hunting for bugs in an FPGA video processor
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have spent the last few weeks tweaking and improving my home cinema setup,

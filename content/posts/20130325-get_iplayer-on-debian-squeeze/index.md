@@ -5,8 +5,8 @@ date: 2013-03-25 18:09:21
 tags: [ Linux,Debian,iPlayer ]
 summary: Installing get-iplayer on a Debian (Squeeze) 6.0
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I use [get-iplayer](http://www.infradead.org/get_iplayer/html/get_iplayer.html)

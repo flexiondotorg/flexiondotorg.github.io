@@ -5,8 +5,8 @@ date: 2009-12-18 15:34:12
 tags: [Linux,DLNA,UPnP,Mediatomb,MiniDLNA,PlayStation 3 ]
 summary: Comparing Mediatomb and MiniDLNA streaming servers
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've been using [Mediatomb](http://mediatomb.cc/) for nearly two years now but

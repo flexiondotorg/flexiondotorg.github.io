@@ -5,8 +5,8 @@ date: 2012-05-15 11:12:13
 tags: [ Arch Linux,GNOME,Linux,Bash ]
 summary: Automated scripted installs of Arch Linux
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've been working a shell script for Arch Linux that automatically configures

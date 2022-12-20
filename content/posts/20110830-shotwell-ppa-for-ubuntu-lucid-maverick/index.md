@@ -5,8 +5,8 @@ date: 2011-08-30 11:05:50
 tags: [Linux,Ubuntu,Shotwell,GNOME,PPA ]
 summary: Showell 0.11 is available in a PPA for Ubuntu 10.04 & 10.10
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Like many others I wanted [Shotwell](http://yorba.org/shotwell/) 0.11

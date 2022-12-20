@@ -5,8 +5,8 @@ date: 2016-12-13 17:17:00
 tags: [ Ubuntu,Raspberry Pi,Nextcloud,Ubuntu Core,snap ]
 summary: Creating a Pi 3 powered Nextcloud Box with Ubuntu Core
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 include_toc: true
 ---
 

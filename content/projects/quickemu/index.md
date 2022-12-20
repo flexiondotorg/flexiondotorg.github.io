@@ -5,8 +5,8 @@ date: 2020-03-15 00:00:00
 tags: ["Linux", "Bash", "QEMU", "Windows", "macOS", "Virtualisation", "SPICE", "VirtIO", "VirGL"]
 summary: Quickly create and run optimised Windows, macOS and Linux virtual machines
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Quickly create and run highly optimised desktop virtual machines for Linux,

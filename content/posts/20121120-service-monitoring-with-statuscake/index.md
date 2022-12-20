@@ -5,8 +5,8 @@ date: 2012-11-20 17:14:47
 tags: [ Server Monitoring ]
 summary: Service availability monitoring using StatusCake
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 We use two server monitoring services at work, one that does external

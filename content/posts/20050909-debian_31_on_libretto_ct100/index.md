@@ -5,8 +5,8 @@ date: 2005-09-09 10:26:14
 tags: [ Libretto CT100,ThinkPad,Debian,Linux,Xfce ]
 summary: Running Xfce & Firefox on the Toshiba Libretto CT100
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I decided to stick with the 2.1GB hard disk in the end, but in order to

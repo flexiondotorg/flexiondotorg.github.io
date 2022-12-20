@@ -5,8 +5,8 @@ date: 2009-01-17 10:45:12
 tags: [Content Management,Wordpress,Twitter,PHP ]
 summary: Send new Wordpress blog notifications to Twitter
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've just installed [WordTwit](http://www.bravenewcode.com/wordtwit/) on my

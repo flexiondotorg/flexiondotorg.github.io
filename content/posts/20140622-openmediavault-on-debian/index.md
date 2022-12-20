@@ -5,8 +5,8 @@ date: 2014-06-22 12:00:00
 tags: [ Linux,Debian,OpenMediaVault,OMV ]
 summary: Manually installing OpenMediaVault on Debian Wheezy
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 At the time of writing [OpenMediaVault](http://www.openmediavault.org/) 0.6 is

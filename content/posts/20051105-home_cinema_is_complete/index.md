@@ -5,8 +5,8 @@ date: 2005-11-05 11:52:46
 tags: [ Home Cinema ]
 summary: After 2 years of planning a home cinema appears
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Tonight was a landmark occasion. After nearly two years of planning I finally

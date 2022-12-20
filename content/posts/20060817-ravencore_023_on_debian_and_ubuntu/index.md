@@ -5,8 +5,8 @@ date: 2006-08-17 10:53:53
 tags: [Linux,Debian,RavenCore,Virtual Hosting ]
 summary: Updated Debian & Ubuntu documentation for RavenCore
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have updated my HOW-TO for installing [RavenCore](http://sourceforge.net/projects/ravencore/)

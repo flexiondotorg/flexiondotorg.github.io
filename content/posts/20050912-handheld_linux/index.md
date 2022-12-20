@@ -5,8 +5,8 @@ date: 2005-09-12 10:27:05
 tags: [ Libretto CT100,PocketPC,iPAQ 3970,Familiar Linux,Linux,Debian ]
 summary: Craving a handheld Linux device
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have replaced the disk in my Libretto CT100 with a 20GB disk I had going

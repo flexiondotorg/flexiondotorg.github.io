@@ -5,8 +5,8 @@ date: 2006-02-03 11:43:06
 tags: [Fedora,Linux,Ubuntu ]
 summary: Ditching Fedora and sticking with Ubuntu
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Despite my glowing comments about [Fedora](http://fedoraproject.org/) a couple

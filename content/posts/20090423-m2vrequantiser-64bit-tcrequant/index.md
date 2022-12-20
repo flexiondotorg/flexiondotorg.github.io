@@ -5,8 +5,8 @@ date: 2009-04-23 16:47:20
 tags: [Linux,M2VRequantiser,tcrequant,MPEG-2,C ]
 summary: Finding a MPEG-2 video requantising solution for Linux
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I recently discovered that `tcrequant` (part of the

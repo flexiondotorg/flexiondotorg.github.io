@@ -5,8 +5,8 @@ date: 2009-01-21 13:41:51
 tags: [Zimbra,iPod,Linux ]
 summary: Push Zimbra contacts, calendars & tasks to your iPod using Linux
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 We use [Zimbra](http://www.zimbra.com/) at work for email, contacts,

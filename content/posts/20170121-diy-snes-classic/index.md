@@ -5,8 +5,8 @@ date: 2017-01-24 12:00:00
 tags: [ Retropie,SNES,Raspberry Pi,8Bitdo ]
 summary: I made my own "SNES Classic" with a Raspberry Pi
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Inspired by the recent [NES Classic](http://www.nintendo.com/nes-classic/) I

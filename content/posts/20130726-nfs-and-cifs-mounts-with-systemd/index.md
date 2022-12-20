@@ -5,8 +5,8 @@ date: 2013-07-26 12:00:00
 tags: [ Linux,systemd,CIFS,NFS ]
 summary: Wait for network when mounting NFS and CIFS volumes
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have an NFS server at home and at work we have Windows (not Samba) servers.

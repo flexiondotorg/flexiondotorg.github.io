@@ -5,8 +5,8 @@ date: 2014-07-05 12:00:00
 tags: [ Linux,Cloudprint,Debian,MFC-7360N,Android,Chrome ]
 summary: Create a headless Cloudprint server on Debian for MFC-7360N
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have a Brother MFC-7360N printer at home and there is also one at work.

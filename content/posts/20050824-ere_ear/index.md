@@ -5,8 +5,8 @@ date: 2005-08-24 09:46:37
 tags: [ Gadgets,Music,Headphones ]
 summary: Sony MDR-EX71SL earbuds bring music to my ears
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I picked up a pair of new earbuds yesterday. I decided on the

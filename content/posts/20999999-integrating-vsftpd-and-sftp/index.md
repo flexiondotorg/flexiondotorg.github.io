@@ -6,8 +6,8 @@ tags: [ Linux,Ubuntu,ssh,sftp,ftp,vsftpd ]
 #link:
 summary: Setting up vsftpd and sftp to share directory
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 draft: true
 ---
 

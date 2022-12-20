@@ -5,8 +5,8 @@ date: 2009-01-18 23:19:12
 tags: [Content Management,SEO,Sitemap,Wordpress ]
 summary: Verify websites with search engines and submit sitemaps for indexing
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I finally got around to verifying my websites with the Google, Yahoo! and MSN

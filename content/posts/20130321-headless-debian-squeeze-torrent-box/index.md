@@ -5,8 +5,8 @@ date: 2013-03-21 17:35:22
 tags: [ Linux,Debian,Torrent,Transmission,Server,Headless ]
 summary: Installing Transmission daemon on headless Debian (Squeeze) 6.0
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I recently switched ISPs at home and now have unlimited high speed broadband.

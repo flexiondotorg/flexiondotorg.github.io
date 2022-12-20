@@ -5,8 +5,8 @@ date: 2015-02-01 00:00:00
 tags: ["Ubuntu","Podcast","Linux","Open Source","Broadcasting","Live Performance","Streaming","Audio Production","OggCamp","FOSS Talk Live"]
 summary: A weekly family-friendly audio magazine for the Ubuntu community
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [Ubuntu Podcast](https://ubuntupodcast.org) was a weekly podcast that discussd

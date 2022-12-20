@@ -5,8 +5,8 @@ date: 2006-04-04 15:20:29
 tags: [Linux,VPS,Debian ]
 summary: After 7 shared on a shared host it's time for a VPS
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Today Flexion.Org was successfully migrated to a new server. I've been using

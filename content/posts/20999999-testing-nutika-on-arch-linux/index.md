@@ -4,8 +4,8 @@ date: 2013-03-12 17:13:43
 tags: [ Nuitka,Python,Arch Linux,virtualenv ]
 summary: Using Nuitka on Arch Linux to transform Python apps into C++
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 draft: true
 ---
 

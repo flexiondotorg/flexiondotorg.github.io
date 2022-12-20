@@ -5,8 +5,8 @@ date: 2022-04-18 00:00:00
 tags: ["Linux", "Bash", "Ubuntu", "Debian", "GitHub", "dpkg", "apt"]
 summary: apt-get functionality for .debs published in GitHub release or 3rd party repositories
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [deb-get](https://github.com/wimpysworld/deb-get) makes it easy to install and

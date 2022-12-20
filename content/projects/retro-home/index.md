@@ -5,8 +5,8 @@ date: 2020-07-21 00:00:00
 tags: ["Linux", "Raspberry Pi", "GPIO", "Retro", "Gaming", "Ludo", "Ubuntu", "Bash", "Python", "GNOME", "libretro"]
 summary: A retro-gaming operating system for Raspberry Pi built with Ubuntu and Ludo
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [Retro Home](https://github.com/wimpysworld/retro-home) is custom Raspberry Pi

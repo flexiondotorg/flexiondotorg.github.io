@@ -5,8 +5,8 @@ date: 2008-01-11 13:44:07
 tags: [Content Management,Wordpress,GNOME,xmlrpc,BloGTK,Debian,Ubuntu ]
 summary: Graphical blogging client for GNOME
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have been meaning to setup a weblog client for a while now. I have tested a

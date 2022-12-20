@@ -6,8 +6,8 @@ tags: [ Social Media,Linux,Marketing,draft ]
 #link:
 summary: Using social media to effectively promote a Linux distribution
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 draft: true
 ---
 

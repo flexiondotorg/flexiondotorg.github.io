@@ -5,8 +5,8 @@ date: 2006-03-09 05:40:07
 tags: [Windows ]
 summary: Working around corporate Windows policies with Portable Apps
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I started a new job last week, I am contracting for the first time. I needed

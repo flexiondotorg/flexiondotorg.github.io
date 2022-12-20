@@ -5,8 +5,8 @@ date: 2006-02-14 12:49:30
 tags: [Gadgets,Bike ]
 summary: A new bike to tackle those mountains
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I finally convinced my wife that I need (really wanted) a new mountain

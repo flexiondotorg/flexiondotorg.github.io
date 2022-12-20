@@ -5,8 +5,8 @@ date: 2009-08-27 20:48:58
 tags: [Linux,Matroska,MPEG-4,Bash,AAC 5.1,AC3,DTS,PlayStation 3,Xbox 360 ]
 summary: Creating PlayStation 3 and Xbox 360 compatible MPEG-4 videos
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 The PlayStation 3 can't play MKV files. Therefore I've written a script that

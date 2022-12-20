@@ -5,8 +5,8 @@ date: 2009-04-23 17:00:58
 tags: [Linux,Matroska,M2TS,Bash,AC3,DTS,PlayStation 3 ]
 summary: Convert Matroska file to MPEG2-TS for PlayStation 3 compatibility
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 The PlayStation 3 can't play MKV files. Therefore I've written a

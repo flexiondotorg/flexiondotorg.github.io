@@ -5,8 +5,8 @@ date: 2009-04-23 16:50:31
 tags: [Linux,MPEG2-PS,DVD,Ripper,M2VRequantiser,Bash]
 summary: Ripping DVDs to MPEG2-PS for streaming via UPnP
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Every so often I find myself in looking through the ex-rental DVD _"bargain

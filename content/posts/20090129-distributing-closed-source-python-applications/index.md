@@ -5,8 +5,8 @@ date: 2009-01-29 13:04:03
 tags: [Python,Freeze,Linux,Windows ]
 summary: Freezing proprietary Python applications for distribution to clients
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Last November we switched to [Python](http://www.python.org/) as the principal

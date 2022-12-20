@@ -5,8 +5,8 @@ date: 2005-08-08 09:27:44
 tags: [ Content Management,Jaws ]
 summary: Website look and feel with Jaws
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 After fiddling around with the [Jaws](http://jaws-project.com/) setup for a while

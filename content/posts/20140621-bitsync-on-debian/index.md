@@ -5,8 +5,8 @@ date: 2014-06-21 12:00:00
 tags: [ Linux,Debian,BitTorrent Sync,btsync,Torrent,syncthing,Dropbox ]
 summary: Setting up BitTorrent Sync on Debian
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've replaced Dropbox with [BitTorrent Sync](http://www.bittorrent.com/sync).

@@ -5,8 +5,8 @@ date: 2012-10-26 16:39:00
 tags: [ Git,GitHub ]
 summary: How to add Google Analytics to GitHub projects.
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 As I mentioned in a previous post we are prepairing to [migrate our Bazaar

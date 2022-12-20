@@ -5,8 +5,8 @@ date: 2008-01-30 11:45:57
 tags: [Linux,GNOME,Ubuntu,Label Printing ]
 summary: Accurate label printing for Linux is restored
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [gLabels](http://glabels.sourceforge.net/), as packaged in the Ubuntu

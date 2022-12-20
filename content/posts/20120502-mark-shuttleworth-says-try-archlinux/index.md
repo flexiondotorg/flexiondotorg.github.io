@@ -1,12 +1,14 @@
 ---
 title: Take Mark Shuttleworth's advice, try Arch Linux
-aliases: /posts/2012-05-mark-shuttleworth-says-try-archlinux
+aliases:
+ - /posts/2012-05-mark-shuttleworth-says-try-archlinux
+ - /posts/mark-shuttleworth-says-try-archlinux
 date: 2012-05-02 19:00:19
 tags: [Ubuntu,Arch Linux,Linux ]
 summary: My experiences switching from Ubuntu to Arch Linux
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 In a recent [Ubuntu community feedback session run on IRC](http://irclogs.ubuntu.com/2012/05/01/%23ubuntu-classroom.html)

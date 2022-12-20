@@ -5,8 +5,8 @@ date: 2012-11-22 22:14:47
 tags: [ Arch Linux,Netflix ]
 summary: Netflix is available for ArchLinux
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Something wonderful has happened! [Jesus Alvarez](http://demizerone.com/) has

@@ -5,8 +5,8 @@ date: 2014-04-16 07:07:09
 tags: [ Linux,Arch Linux,Debian,IRC,IRC Bouncer ]
 summary: Installing BIP IRC Proxy on Debian Wheezy & Arch Linux
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 **I switched from BIP to [ZNC](http://wiki.znc.in/ZNC), and [recommend you use ZNC instead](/posts/znc-irc-proxy/)!**

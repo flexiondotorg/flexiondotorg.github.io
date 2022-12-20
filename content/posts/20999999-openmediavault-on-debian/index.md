@@ -6,8 +6,8 @@ tags: [ Linux,Debian,OpenMediaVault,OMV ]
 #link:
 summary: Setting up OpenMediaVault on Debian
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 draft: true
 ---
 

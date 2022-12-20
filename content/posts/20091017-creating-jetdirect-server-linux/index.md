@@ -5,8 +5,8 @@ date: 2009-10-17 11:41:21
 tags: [Linux,Ubuntu,NSLU2,JetDirect,Printing ]
 summary: Using the NSLU2 as a JetDirect print server
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I created JetDirect compatible server on my NSLU2 running Ubuntu Jaunty 9.04

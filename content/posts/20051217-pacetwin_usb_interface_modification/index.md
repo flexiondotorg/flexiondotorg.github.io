@@ -5,8 +5,8 @@ date: 2005-12-17 11:17:14
 tags: [ DVB-T,PVR,Home Cinema,PaceTwin,Freeview ]
 summary: USB interface modification for the PaceTwin PVR
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I had previously read on Yahoo Groups that a project was under way to retro

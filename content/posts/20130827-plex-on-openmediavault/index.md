@@ -5,8 +5,8 @@ date: 2013-08-27 21:11:43
 tags: [ Linux,Debian,Plex Media Server,Open Media Vault,OMV,Plex ]
 summary: Installing Plex Media Server on Open Media Vault (Squeeze) 6.0
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've recently started using [Plex Media Server](http://www.plexapp.com) to

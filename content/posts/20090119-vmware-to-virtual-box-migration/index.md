@@ -5,8 +5,8 @@ date: 2009-01-19 17:52:49
 tags: [Linux,VirtualBox,VMware,Virtualisation ]
 summary: I switched from VMWare to VirtualBox
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Last week I switched from [VMware](http://www.vmware.com/) to

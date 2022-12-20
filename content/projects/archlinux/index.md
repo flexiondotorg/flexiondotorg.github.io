@@ -5,8 +5,8 @@ date: 2013-12-01 00:00:00
 tags: ["Arch Linux","MATE Desktop","Linux","PKGBUILD","pacman","systemd"]
 summary: Arch Linux Trusted User & Package maintainer
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [Arch Linux ](https://archlinux.org) is a Linux distribution that uses a rolling

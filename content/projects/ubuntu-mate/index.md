@@ -5,8 +5,8 @@ date: 2014-06-01 00:00:00
 tags: ["Ubuntu MATE","Ubuntu","Debian","MATE Desktop","C","GTK","Python","Linux","Raspberry Pi","GPD"]
 summary: Ubuntu MATE is a Linux distribution I made for my friends and family
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 A community developed Ubuntu based operating system that beautifully integrates

@@ -5,8 +5,8 @@ date: 2006-04-07 17:00:00
 tags: [Linux,Server Monitoring ]
 summary: Munin offers simple system monitoring graphs
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Here's the blurb from the authors... [Munin](http://munin.projects.linpro.no/)

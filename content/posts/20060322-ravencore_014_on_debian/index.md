@@ -5,8 +5,8 @@ date: 2006-03-22 18:02:05
 tags: [Linux,Debian,RavenCore,Virtual Hosting,CentOS,Debian ]
 summary: Managing virtual hosting on Debian with RavenCore
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I set up my new server to use [RavenCore](http://sourceforge.net/projects/ravencore/)

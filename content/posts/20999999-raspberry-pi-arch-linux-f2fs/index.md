@@ -5,8 +5,8 @@ date: 2013-11-15 23:19:09
 tags: [ Arch Linux,Raspberry Pi,F2FS ]
 summary: Convert Arch Linux ARM for Raspberry Pi from Ext4 to F2FS
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 draft: true
 ---
 

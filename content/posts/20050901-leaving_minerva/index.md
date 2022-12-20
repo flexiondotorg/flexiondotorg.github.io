@@ -5,8 +5,8 @@ date: 2005-09-01 09:47:16
 tags: [ Minerva,PHP,Content Management ]
 summary: Standing down from the Minerva project
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Yesterday was a sad day. I finally notified the core [Minerva](http://sourceforge.net/projects/minerva/)

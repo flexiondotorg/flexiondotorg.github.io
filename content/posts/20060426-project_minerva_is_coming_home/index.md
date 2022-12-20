@@ -5,8 +5,8 @@ date: 2006-04-26 17:42:11
 tags: [General,Minerva,PHP ]
 summary: It's coming home. Minerva is coming home.
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Despite a generous offer from a Minerva enthusiast a year or so ago to freely

@@ -5,8 +5,8 @@ date: 2013-03-06 19:01:21
 tags: [ Nikola,Python,Dropbox,Content Management,Static Site Generator ]
 summary: Publishing a Nikola blog via Dropbox on a headless Linux server
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 When I [migrated my site to Nikola](/posts/migrating-wordpress-to-nikola/)

@@ -5,8 +5,8 @@ date: 2013-08-06 20:07:09
 tags: [ Linux,Debian,LXC,QEMU,KVM,Open Media Vault,OMV ]
 summary: Consistent server configuration for Debian Squeeze & Wheezy
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Recently I've been deploying [Debian](http://www.debian.org) 6.0 (Squeeze) and

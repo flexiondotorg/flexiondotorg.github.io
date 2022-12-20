@@ -5,8 +5,8 @@ date: 2014-06-29 12:00:00
 tags: [ Humax Foxsat HDR,Linux,Firmware,Hacking ]
 summary: Hard disk upgrades and custom firmware on the Humx Foxsat HDR
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've had these notes kicking around for absolutely ages. I haven't checked to

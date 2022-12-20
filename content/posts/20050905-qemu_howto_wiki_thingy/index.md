@@ -5,8 +5,8 @@ date: 2005-09-05 10:07:34
 tags: [ Linux,Virtualisation,QEMU,HantsLUG ]
 summary: Sharing knowledge about QEMU via a Wiki
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [Adam Tricket](http://use.perl.org/~ajt/journal/) got a few people interested

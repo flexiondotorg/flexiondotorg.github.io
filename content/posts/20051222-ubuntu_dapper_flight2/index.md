@@ -5,8 +5,8 @@ date: 2005-12-22 11:23:01
 tags: [ Linux,Ubuntu ]
 summary: Ubuntu Dapper Drake is showing some performance improvements
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I decided to install Ubuntu Dapper Flight-2 on a spare computer I had available.

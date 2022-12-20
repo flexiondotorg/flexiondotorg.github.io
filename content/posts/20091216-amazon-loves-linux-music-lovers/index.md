@@ -5,8 +5,8 @@ date: 2009-12-16 22:30:48
 tags: [Amazon,Linux,MP3,Ubuntu ]
 summary: Amazon treats Linux users like 1st class citizens
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've no idea when Amazon.co.uk launched their MP3 store and I've no idea when

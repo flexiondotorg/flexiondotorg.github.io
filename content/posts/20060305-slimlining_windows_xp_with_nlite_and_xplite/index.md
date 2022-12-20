@@ -5,8 +5,8 @@ date: 2006-03-05 06:41:38
 tags: [Windows,nLite,XPLite,98Lite ]
 summary: Trimming the Windows fat with nLite
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 A shocking truth is that despite my preference for Linux I do still have to

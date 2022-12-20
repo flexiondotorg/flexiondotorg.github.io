@@ -5,8 +5,8 @@ date: 2012-06-01 00:00:00
 tags: ["MATE Desktop","C","GTK","Python","Linux","make"]
 summary: Preserving a traditional desktop metaphor
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 The [MATE Desktop Environment](https://mate-desktop.org) is the continuation of

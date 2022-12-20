@@ -5,8 +5,8 @@ date: 2006-01-14 11:32:31
 tags: [Debian,Fedora,Linux,Ubuntu,Slackware,Crux ]
 summary: Taking a look at Fedora Core 4
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Having spent all of 2005 using [Ubuntu](http://www.ubuntu.com) I have learnt a

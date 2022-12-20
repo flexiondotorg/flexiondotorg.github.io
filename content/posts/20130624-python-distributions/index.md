@@ -5,8 +5,8 @@ date: 2013-06-24 13:11:43
 tags: [ Python,Numpy,Scipy,h5py ]
 summary: A selection of Python distributions for data analysis
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 At [work](http://www.flightdataservices.com) I maintain the

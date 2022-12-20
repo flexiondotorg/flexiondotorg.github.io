@@ -5,8 +5,8 @@ date: 2007-09-22 11:22:43
 tags: [ Wordpress,Jaws,Content Management ]
 summary: Jaws dropped in a move to Wordpress
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have finally got around to re-activating this website after many months of

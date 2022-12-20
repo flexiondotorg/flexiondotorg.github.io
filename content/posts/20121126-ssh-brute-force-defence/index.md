@@ -5,8 +5,8 @@ date: 2012-11-26 13:14:09
 tags: [ Arch Linux,Ubuntu,SSH ]
 summary: Deploy DenyHosts or Fail2Ban to better prevent SSH brute force attacks.
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have several VPS hosts with different providers using different

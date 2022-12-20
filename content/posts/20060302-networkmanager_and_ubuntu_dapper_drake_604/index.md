@@ -5,8 +5,8 @@ date: 2006-03-02 11:26:39
 tags: [Linux,Ubuntu ]
 summary: Fixing NetworkManager applet on Ubuntu 6.04
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 A week or so ago the

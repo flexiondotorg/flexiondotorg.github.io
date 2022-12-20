@@ -6,8 +6,8 @@ tags: [ Linux,Wine,Microsoft Office,Arch Linux,Ubuntu ]
 #link:
 summary: Install Microsoft Office 2010 on Arch Linux and Ubuntu
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 We have a mix of Linux and Windows users at work. My department use Linux

@@ -5,8 +5,8 @@ date: 2009-01-23 18:24:20
 tags: [Content Management,Wordpress,identi.ca,PHP ]
 summary: Automatically post Wordpress blog notification to Identi.ca
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have quickly forked [WordTwit](https://wordpress.org/plugins/wordtwit/) into

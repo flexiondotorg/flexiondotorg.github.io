@@ -5,8 +5,8 @@ date: 2009-09-20 08:48:36
 tags: [ IMDB,MPEG,PHP ]
 summary: Improvements to film summaries embedded in videos
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 **UPDATE! I no longer use or maintain the script below. I suggest the vastly

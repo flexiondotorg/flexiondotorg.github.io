@@ -5,8 +5,8 @@ date: 2007-03-09 21:59:45
 tags: [R3-born,Content Management,PHP ]
 summary: R3-born is good enough to run a website
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [R3-born](http://www.sourceforge.net/projects/r3-born/) 0.1.1 is released :-)

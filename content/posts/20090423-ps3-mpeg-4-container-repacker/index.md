@@ -5,8 +5,8 @@ date: 2009-04-23 17:09:11
 tags: [Linux,MPEG-4,iPlayer,PlayStation 3,Bash ]
 summary: Automatically repack MPEG-4 video files for PlayStation 3 compatibility
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Some of my mobile phones have been able to record video clips in MPEG-4

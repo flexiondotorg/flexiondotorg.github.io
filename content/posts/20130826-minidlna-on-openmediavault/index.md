@@ -5,8 +5,8 @@ date: 2013-08-26 21:49:09
 tags: [ Linux,Debian,Open Media Vault,OMV,MiniDLNA,DLNA ]
 summary: Music streaming with MiniDLNA on Open Media Vault
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have [Open Media Vault](http://www.openmediavault.org/) running on a

@@ -5,8 +5,8 @@ date: 2013-03-09 08:37:43
 tags: [ Arch Linux,Firewall,VPS,UFW,Uncomplicated Firewall ]
 summary: Configuring Uncomplicated Firewall (UFW) on Arch Linux.
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 While migrating one of my VPS servers to [Arch Linux](http://www.archlinux.org)

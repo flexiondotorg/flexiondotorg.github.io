@@ -5,8 +5,8 @@ date: 2005-10-05 11:02:43
 tags: [ PVR,DVB-T,Home Cinema,MythTV,Linux,Freeview ]
 summary: Combining my interests in Home Cinema & Linux
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have started working on a new project at home, it is one I know I am going

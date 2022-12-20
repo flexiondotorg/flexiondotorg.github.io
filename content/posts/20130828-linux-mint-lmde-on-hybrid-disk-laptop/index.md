@@ -5,8 +5,8 @@ date: 2013-08-28 20:10:09
 tags: [ Linux,Linux Mint,Debian,LMDE,MATE Desktop,SSD,Python,btrfs ]
 summary: Installing Linux Mint Debian Edition (LMDE) on a Laptop with Hybrid Disk
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have an old Thinkpad T43p that I am trying to extend the life of. So I  recently

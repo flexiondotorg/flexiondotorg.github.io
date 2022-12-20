@@ -5,8 +5,8 @@ date: 2008-02-26 13:21:28
 tags: [GNOME,Linux,Ubuntu,SSH ]
 summary: Managing SSH connections from a GNOME panel applet
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 We have a reasonable number of Debian servers at work and as a result I `ssh`

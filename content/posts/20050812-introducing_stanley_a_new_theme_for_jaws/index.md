@@ -5,8 +5,8 @@ date: 2005-08-12 09:29:53
 tags: [ Content Management,Jaws ]
 summary: A new theme for Jaws called Stanley
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've finished hacking together a new theme for [Jaws](http://jaws-project.com/)

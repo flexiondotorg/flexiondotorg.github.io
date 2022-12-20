@@ -6,8 +6,8 @@ lastmod: 2012-10-01
 tags: [Linux,XFS,Ext3,Ext4,JFS ]
 summary: In which I dispel some myths about XFS and fanboi a little
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 **This post was updated in October 2012**

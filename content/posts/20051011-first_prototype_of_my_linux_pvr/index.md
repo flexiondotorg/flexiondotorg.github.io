@@ -5,8 +5,8 @@ date: 2005-10-11 11:05:06
 tags: [ PVR,DVB-T,Home Cinema,MythTV,Linux,Freeview ]
 summary: Building a prototype Linux PVR with KnoppMyth
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have built an initial prototype of a Linux based PVR using some (very) old

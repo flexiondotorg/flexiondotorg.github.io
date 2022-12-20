@@ -5,8 +5,8 @@ date: 2006-09-08 17:48:47
 tags: [R3-born,Content Management,PHP ]
 summary: Minerva is r3-born
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I suppose it is a bit silly to announce this just before I go on holiday but

@@ -5,8 +5,8 @@ date: 2005-09-04 10:04:52
 tags: [ Food,Herbs ]
 summary: Planting out a herb garden
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I finally got around to planting a small herb garden today, something I have

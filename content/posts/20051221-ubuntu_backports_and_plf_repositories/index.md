@@ -5,8 +5,8 @@ date: 2005-12-21 11:19:04
 tags: [ Linux,Ubuntu ]
 summary: The Penguin Libration Front provide patent encumbered packages for Ubuntu
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I haven't been focusing on Linux during that last couple of months, I was a

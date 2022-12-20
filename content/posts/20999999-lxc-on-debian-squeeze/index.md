@@ -6,8 +6,8 @@ tags: [ Linux,Debian,LXC ]
 #link:
 summary: Installing LXC on a Debian (Squeeze) 6.0
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 draft: true
 ---
 

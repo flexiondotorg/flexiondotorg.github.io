@@ -5,8 +5,8 @@ date: 2012-09-27 20:14:43
 tags: [ Android,Tablet,Ployer Momo8 IPS,RK3066 ]
 summary: My experiences with a budget Android tablet
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've recently taken delivery of my first Android tablet, the Ployer Momo8 IPS.

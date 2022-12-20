@@ -5,8 +5,8 @@ date: 2009-04-22 18:00:07
 tags: [ IMDB,MPEG,PHP,PlayStation 3 ]
 summary: Create film preview information for your UPnP server
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 **UPDATE! I no longer use or maintain the script below. I suggest the vastly

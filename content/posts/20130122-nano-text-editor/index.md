@@ -5,8 +5,8 @@ date: 2013-01-22 15:25:47
 tags: [ Linux ]
 summary: Some quality of life improvements for nano text editor
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I use the [nano](http://www.nano-editor.org/) text editor in preference to

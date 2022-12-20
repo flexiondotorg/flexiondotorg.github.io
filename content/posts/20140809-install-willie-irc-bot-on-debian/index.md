@@ -5,8 +5,8 @@ date: 2014-08-09 11:11:11
 tags: [ Python,IRC Bot,Debian ]
 summary: How I Installed Willie IRC Bot on Debian Wheezy
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [Willie](http://willie.dftba.net/) is an IRC bot written in [Python](http://www.python.org)

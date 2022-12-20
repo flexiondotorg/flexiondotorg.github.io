@@ -5,8 +5,8 @@ date: 2013-08-07 21:21:09
 tags: [ Linux,Debian,Open Media Vault,OMV,HP MicroServer,N54L,BIOS,Transmission,Plex Media Server ]
 summary: Open Media Vault on the HP ProLiant MicroServer G7 N54L
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I've installed [Open Media Vault](http://www.openmediavault.org/) (OMV)

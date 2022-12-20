@@ -5,8 +5,8 @@ date: 2005-12-12 12:10:33
 tags: [ Home Cinema,Lumagen ]
 summary: FPGA video processor bugs have been squashed
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I have been exchanging e-mails with the [UK distributor](http://www.convergent-av.co.uk)

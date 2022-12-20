@@ -5,8 +5,8 @@ date: 2012-10-22 17:13:43
 tags: [ Nikola,Python,Wordpress,Content Management,Static Site Generator ]
 summary: From a dynamic Wordpress site to static Nikola site
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I recently migrated three sites from a self hosted [Wordpress](http://www.wordpress.org)

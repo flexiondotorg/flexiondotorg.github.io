@@ -5,8 +5,8 @@ date: 2014-03-31 16:19:43
 tags: [Nikola,Python,Content Management,Debian,Static Site Generator,virtualenv]
 summary: How to install Nikola static site generator on Debian
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Nikola is a static site and blog generator written in [Python](http://www.python.org)

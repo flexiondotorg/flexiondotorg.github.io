@@ -5,8 +5,8 @@ date: 2007-01-30 11:52:55
 tags: [R3-born,Content Management,PHP ]
 summary: After 10 months work R3-born 0.1.0 is ready
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Finally, R3-born 0.1.0 is released. [R3-born](http://www.sourceforge.net/projects/r3-born/)

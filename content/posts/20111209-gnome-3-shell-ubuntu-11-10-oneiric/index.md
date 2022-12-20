@@ -5,8 +5,8 @@ date: 2011-12-09 16:21:03
 tags: [GNOME,Linux,Ubuntu,Unity ]
 summary: Creating a pure GNOME 3 experience on Ubuntu 11.10
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 I tried [Unity](http://unity.ubuntu.com/) in Ubuntu Natty 11.04 and Ubuntu

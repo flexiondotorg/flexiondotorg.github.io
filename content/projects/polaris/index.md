@@ -5,8 +5,8 @@ date: 2007-05-01 00:00:00
 tags: ["Python","Django","Numpy","Scipy","Linux","FDM","FOQA","Flight Data","Open Source","OpenVZ","Analysis","Flight Recorder","Blackbox"]
 summary: Disrupting incumbent flight data analysis solutions with Open Source
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Led the design, development and operation of the POLARIS project at

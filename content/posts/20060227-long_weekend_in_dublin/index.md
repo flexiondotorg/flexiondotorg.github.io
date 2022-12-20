@@ -5,8 +5,8 @@ date: 2006-02-27 09:57:32
 tags: [Travel,Dublin,Ireland ]
 summary: Flying to Dublin for 10p to drink Guinness & Jameson Whiskey
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 We just got back from an enjoyable trip to Dublin, highlights for me were

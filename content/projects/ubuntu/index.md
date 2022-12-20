@@ -5,8 +5,8 @@ date: 2006-01-01 00:00:00
 tags: ["Ubuntu","Debian","GNOME","C","GTK","Python","Linux","Snapcraft","systemd","Raspberry Pi"]
 summary: From community contributor to director of engineering and back again
 sidebar: false
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Ubuntu comes with everything you need to run your organisation, school, home or

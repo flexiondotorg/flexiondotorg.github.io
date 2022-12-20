@@ -5,8 +5,8 @@ date: 2008-02-12 12:53:03
 tags: [Linux,dd,GUI,Ubuntu ]
 summary: A graphical frontend for dd
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [AIR (Automated Image and Restore)](http://air-imager.sourceforge.net/) is a

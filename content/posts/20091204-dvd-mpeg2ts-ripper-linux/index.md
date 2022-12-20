@@ -5,8 +5,8 @@ date: 2009-12-04 07:53:58
 tags: [Linux,MPEG2-PS,MPEG2-TS,DVD,H.264,Ripper,M2VRequantiser,Bash,PlayStation 3]
 summary: Ripping DVDs to MPEG-2 Transport Streams for DLNA streaming
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 A while back I released a script that rips a DVD to MPEG-2 PS allowing the

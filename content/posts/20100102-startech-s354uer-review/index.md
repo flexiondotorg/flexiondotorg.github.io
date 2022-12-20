@@ -5,8 +5,8 @@ date: 2010-01-02 16:00:25
 tags: [Linux,StarTech S354UER ]
 summary: Creating a 4x 1.5TB storage array with the StarTech S354UER
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 *** UPDATE: The StarTech S354UER completely died after less than one year. Not recommended! ***

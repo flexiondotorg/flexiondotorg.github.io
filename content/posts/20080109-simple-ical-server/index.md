@@ -5,8 +5,8 @@ date: 2008-01-09 23:20:28
 tags: [iCal,Lighttpd,Thunderbird,PHP ]
 summary: Creating a self-hosted shared calendar
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 For the longest time I have been meaning to setup a shared calendar for my

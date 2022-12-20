@@ -5,8 +5,8 @@ date: 2012-10-23 11:50:00
 tags: [ Bazaar,Git,GitHub ]
 summary: A rough guide to migrating Bazaar repositories to GitHub
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 We have been using [Bazaar](http://bazaar.canonical.com) for source

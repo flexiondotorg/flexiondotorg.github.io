@@ -5,8 +5,8 @@ date: 2013-05-07 18:09:21
 tags: [ Arch Linux,pacman,packer ]
 summary: How to clean up installed packages on Arch Linux.
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 About a year ago I migrated all my workstations, laptops and netbooks to

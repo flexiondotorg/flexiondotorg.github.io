@@ -5,8 +5,8 @@ date: 2010-01-07 20:42:04
 tags: [Linux,Ext3,Ext4,Reserved space ]
 summary: Reclaim the 5% of disk space Ext4 reserves by default
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 The Ext4 file system, like Ext3, reserves 5% of the blocks on the file system

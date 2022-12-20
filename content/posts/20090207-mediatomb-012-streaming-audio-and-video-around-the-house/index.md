@@ -5,8 +5,8 @@ date: 2009-02-07 16:23:39
 tags: [Linux,Mediatomb,MP3,MP4,DLNA,uPNP ]
 summary: In home streaming via UPnP with Mediatomb
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 [Mediatomb](http://mediatomb.cc/) is an open source (GPL) UPnP MediaServer

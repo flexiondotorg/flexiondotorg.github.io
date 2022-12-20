@@ -5,8 +5,8 @@ date: 2014-07-12 12:00:00
 tags: [ Linux,Debian,subSonic,Android,UltraSonic,Clementine,Tomcat ]
 summary: Setting up subSonic music streaming on Debian
 sidebar: true
-images: hero.png
-hero: hero.png
+images: hero.webp
+hero: hero.webp
 ---
 
 Last year I removed all my music from Google Play Music and created my own
