@@ -1,40 +1,40 @@
 {{ define "main" }}
-	<section class="page-section portfolio" id="portfolio">
-		<div class="container">
-			<!-- Portfolio Section Heading-->
-			<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{ .Title }}</h2>
-			<!-- Icon Divider-->
-			<div class="divider-custom">
-				<div class="divider-custom-line"></div>
-				<div class="divider-custom-icon"><em class="fas fa-star"></em></div>
-				<div class="divider-custom-line"></div>
-			</div>
-			<!-- Portfolio Grid Items-->
-			<div class="row justify-content-left">
-				<!-- Portfolio Item 1-->
-				{{ range .Paginator.Pages }}
-				<div class="col-md-4">
-					<div class="card mb-4 ">
-						<a href="{{.Permalink}}"><img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="{{ .Summary }}"></a>
-						<div class="card-body">
-							<h5 class="card-title">{{ .Title }}</h5>
-							<p class="card-text text-center">{{ .Summary }}</p>
-						</div>
-						<div class="card-footer">
-							<div class="d-flex justify-content-between align-items-center">
-								<small class="text-muted">{{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</small>
-								<div class="btn-group">
-									<a href="{{.Permalink}}" class="btn  btn-lg btn-primary ">Read More</a>
+		<section class="page-section portfolio" id="portfolio">
+			<div class="container">
+				<!-- Portfolio Section Heading-->
+				<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{ .Title }}</h2>
+				<!-- Icon Divider-->
+				<div class="divider-custom">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-icon"><em class="fas fa-star"></em></div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<!-- Portfolio Grid Items-->
+				<div class="row justify-content-left">
+					<!-- Portfolio Item 1-->
+					{{ range .Paginator.Pages }}
+					<div class="col-md-4">
+						<div class="card mb-4 ">
+							<a href="{{.Permalink}}"><img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="{{ .Summary }}"></a>
+							<div class="card-body">
+								<h5 class="card-title">{{ .Title }}</h5>
+								<p class="card-text text-center">{{ .Summary }}</p>
+							</div>
+							<div class="card-footer">
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">{{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</small>
+									<div class="btn-group">
+										<a href="{{.Permalink}}" class="btn  btn-lg btn-primary ">Read More</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				{{ end }}
-				<div class="col-12 p-3">
-					<div class="d-flex justify-content-center">{{ partial "pagination.html" . }}</div>
+					{{ end }}
+					<div class="col-12 p-3">
+						<div class="d-flex justify-content-center">{{ partial "pagination.html" . }}</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 {{ end }}
