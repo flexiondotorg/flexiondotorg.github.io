@@ -11,8 +11,14 @@ if [ -n "${1}" ]; then
         echo " - ${TITLE} in ${DIR} (${TYPE})"
 
         # Do not reprocess if the hero image already exists
-        if [ -e "${DIR}/hero.png" ]; then
-            echo " - Hero image already exists"
+        if [ -e "${DIR}/hero.webp" ]; then
+            echo " - Found hero.webp image already exists"
+            exit 0
+        fi
+
+        if [ -e "${DIR}/hero.png" ] && [ ! -e "${DIR}/hero.webp" ]; then
+            echo " - Found hero.png. Creating hero.webp image"
+            convert "${DIR}/hero.png" "${DIR}/hero.webp"
             exit 0
         fi
     fi
@@ -33,22 +39,22 @@ case "${TYPE}" in
         if [ -f "${DIR}/icon.png" ]; then
             convert -resize 720x720^ -background "${COLOR}" -blur 0x8 "${DIR}/icon.png" "/tmp/icon.png"
             composite -gravity center "/tmp/icon.png" "/tmp/background.png" "/tmp/background-icon.png"
-            composite -gravity center "/tmp/text.png" "/tmp/background-icon.png" "${DIR}/hero.png"
+            composite -gravity center "/tmp/text.png" "/tmp/background-icon.png" "${DIR}/hero.webp"
         else
             convert -size 1800x1000 -background transparent -pointsize 180 -gravity center -fill white -stroke black -strokewidth 8 -font /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf caption:"${TITLE}" -trim -blur 0x8 "/tmp/text-blur.png"
             composite -gravity center "/tmp/text-blur.png" "/tmp/background.png" "/tmp/background-text.png"
-            composite -gravity center "/tmp/text.png" "/tmp/background-text.png" "${DIR}/hero.png"
+            composite -gravity center "/tmp/text.png" "/tmp/background-text.png" "${DIR}/hero.webp"
         fi
         ;;
     projects)
         if [ -f "${DIR}/icon.png" ]; then
             convert -resize 720x720^ -background "${COLOR}" "${DIR}/icon.png" "/tmp/icon.png"
-            composite -gravity center "/tmp/icon.png" "/tmp/background.png" "${DIR}/hero.png"
+            composite -gravity center "/tmp/icon.png" "/tmp/background.png" "${DIR}/hero.webp"
         else
             convert -size 1800x1000 -background transparent -pointsize 180 -gravity center -fill white -stroke black -strokewidth 8 -font /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf caption:"${TITLE}" -trim "/tmp/text.png"
             convert -size 1800x1000 -background transparent -pointsize 180 -gravity center -fill white -stroke black -strokewidth 8 -font /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf caption:"${TITLE}" -trim -blur 0x8 "/tmp/text-blur.png"
             composite -gravity center "/tmp/text-blur.png" "/tmp/background.png" "/tmp/background-text.png"
-            composite -gravity center "/tmp/text.png" "/tmp/background-text.png" "${DIR}/hero.png"
+            composite -gravity center "/tmp/text.png" "/tmp/background-text.png" "${DIR}/hero.webp"
         fi
         ;;
     *)
@@ -60,4 +66,3 @@ esac
 rm "/tmp/background*.png" 2>/dev/null
 rm "/tmp/text*.png"  2>/dev/null
 rm "/tmp/icon.png"  2>/dev/null
-optipng -strip all -o7 "${DIR}/hero.png"
