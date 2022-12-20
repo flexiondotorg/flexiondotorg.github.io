@@ -41,8 +41,15 @@ case "${TYPE}" in
         fi
         ;;
     projects)
-        convert -resize 720x720^ -background "${COLOR}" "${DIR}/icon.png" "/tmp/icon.png"
-        composite -gravity center "/tmp/icon.png" "/tmp/background.png" "${DIR}/hero.png"
+        if [ -f "${DIR}/icon.png" ]; then
+            convert -resize 720x720^ -background "${COLOR}" "${DIR}/icon.png" "/tmp/icon.png"
+            composite -gravity center "/tmp/icon.png" "/tmp/background.png" "${DIR}/hero.png"
+        else
+            convert -size 1800x1000 -background transparent -pointsize 180 -gravity center -fill white -stroke black -strokewidth 8 -font /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf caption:"${TITLE}" -trim "/tmp/text.png"
+            convert -size 1800x1000 -background transparent -pointsize 180 -gravity center -fill white -stroke black -strokewidth 8 -font /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf caption:"${TITLE}" -trim -blur 0x8 "/tmp/text-blur.png"
+            composite -gravity center "/tmp/text-blur.png" "/tmp/background.png" "/tmp/background-text.png"
+            composite -gravity center "/tmp/text.png" "/tmp/background-text.png" "${DIR}/hero.png"
+        fi
         ;;
     *)
         echo "Unknown type: ${TYPE}"
