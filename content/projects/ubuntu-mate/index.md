@@ -2,7 +2,7 @@
 title: "Ubuntu MATE"
 slug: ubuntu-mate
 date: 2014-06-01 00:00:00
-tags: ["Ubuntu MATE","Ubuntu","Debian","MATE Desktop","C","GTK","Python","Linux"]
+tags: ["Ubuntu MATE","Ubuntu","Debian","MATE Desktop","C","GTK","Python","Linux","Raspberry Pi","GPD"]
 summary: Ubuntu MATE is a Linux distribution I made for my friends and family
 sidebar: false
 images: hero.png
