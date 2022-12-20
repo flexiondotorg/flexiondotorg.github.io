@@ -7,6 +7,8 @@ paginate=9
 enableRobotsTXT = true
 
 [params]
+  author = 'Martin Wimpress'
+  description = 'My description'
   tagLine = "INNOVATION - OPEN SOURCE - LEADERSHIP"
   aboutLeft = "Respected leader and innovator with a considerable breadth of IT competency, particularly Linux and Open Source. A proven track record of translating business requirements into IT solutions and well practised with contemporary IT development and management methodologies. Logical approach to problem-solving, demonstrable record of creating novel and unique solutions."
   aboutRight = "Passionate Open Source advocate and enthusiast. Proficient software developer using several languages. Contributor to many Open Source projects to retain and develop technical skill as an accomplished systems integrator and architect."
