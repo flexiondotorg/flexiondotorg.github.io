@@ -27,7 +27,20 @@ else
     exit 1
 fi
 
-COLORS=("#F95935" "#FFC300" "#6BB345" "#7FCAB6" "#297FB8" "#333B48" "#5A3992" "#571845" "#930A3E" "#C70039")
+#blue: #0d6efd;
+#indigo: #6610f2;
+#purple: #6f42c1;
+#pink: #d63384;
+#red: #dc3545;
+#orange: #fd7e14;
+#yellow: #ffc107;
+#green: #198754;
+#teal: #1abc9c;
+#cyan: #0dcaf0;
+#gray: #6c757d;
+#gray-dark: #343a40;
+
+COLORS=("#0d6efd" "#6610f2" "#6f42c1" "#d63384" "#dc3545" "#fd7e14" "#ffc107" "#198754" "#1abc9c" "#0dcaf0" "#6c757d" "#343a40")
 COLOR=${COLORS[ ${RANDOM} % ${#COLORS[@]} ]}
 
 convert -size 1920x1080 xc:"${COLOR}" "/tmp/background.png"
