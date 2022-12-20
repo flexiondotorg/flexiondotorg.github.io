@@ -43,29 +43,37 @@ fi
 COLORS=("#0d6efd" "#6610f2" "#6f42c1" "#d63384" "#dc3545" "#fd7e14" "#ffc107" "#198754" "#1abc9c" "#0dcaf0" "#6c757d" "#343a40")
 COLOR=${COLORS[ ${RANDOM} % ${#COLORS[@]} ]}
 
-convert -size 1920x1080 xc:"${COLOR}" "/tmp/background.png"
+SIZE_X=1080
+SIZE_Y=580
+FRAME_X=1040
+FRAME_Y=540
+ICON_SIZE=400
+POINT_SIZE=100
+STROKE_WIDTH=4
+FONT="Lato-Black"
+
+convert -size ${SIZE_X}x${SIZE_Y} xc:"${COLOR}" "/tmp/background.png"
 
 case "${TYPE}" in
     posts)
-        convert -size 1800x1000 -background transparent -pointsize 180 -gravity center -fill white -stroke black -strokewidth 8 -font /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf caption:"${TITLE}" -trim "/tmp/text.png"
-
+        convert -size ${FRAME_X}x${FRAME_Y} -background transparent -pointsize ${POINT_SIZE} -gravity center -fill white -stroke black -strokewidth ${STROKE_WIDTH} -font "${FONT}" caption:"${TITLE}" -trim "/tmp/text.png"
         if [ -f "${DIR}/icon.png" ]; then
-            convert -resize 720x720^ -background "${COLOR}" -blur 0x8 "${DIR}/icon.png" "/tmp/icon.png"
+            convert -resize ${ICON_SIZE}x${ICON_SIZE}^ -background "${COLOR}" -blur 0x8 "${DIR}/icon.png" "/tmp/icon.png"
             composite -gravity center "/tmp/icon.png" "/tmp/background.png" "/tmp/background-icon.png"
             composite -gravity center "/tmp/text.png" "/tmp/background-icon.png" "${DIR}/hero.webp"
         else
-            convert -size 1800x1000 -background transparent -pointsize 180 -gravity center -fill white -stroke black -strokewidth 8 -font /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf caption:"${TITLE}" -trim -blur 0x8 "/tmp/text-blur.png"
+            convert -size ${FRAME_X}x${FRAME_Y} -background transparent -pointsize ${POINT_SIZE} -gravity center -fill white -stroke black -strokewidth ${STROKE_WIDTH} -font "${FONT}" caption:"${TITLE}" -trim -blur 0x8 "/tmp/text-blur.png"
             composite -gravity center "/tmp/text-blur.png" "/tmp/background.png" "/tmp/background-text.png"
             composite -gravity center "/tmp/text.png" "/tmp/background-text.png" "${DIR}/hero.webp"
         fi
         ;;
     projects)
         if [ -f "${DIR}/icon.png" ]; then
-            convert -resize 720x720^ -background "${COLOR}" "${DIR}/icon.png" "/tmp/icon.png"
+            convert -resize ${ICON_SIZE}x${ICON_SIZE}^ -background "${COLOR}" "${DIR}/icon.png" "/tmp/icon.png"
             composite -gravity center "/tmp/icon.png" "/tmp/background.png" "${DIR}/hero.webp"
         else
-            convert -size 1800x1000 -background transparent -pointsize 180 -gravity center -fill white -stroke black -strokewidth 8 -font /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf caption:"${TITLE}" -trim "/tmp/text.png"
-            convert -size 1800x1000 -background transparent -pointsize 180 -gravity center -fill white -stroke black -strokewidth 8 -font /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf caption:"${TITLE}" -trim -blur 0x8 "/tmp/text-blur.png"
+            convert -size ${FRAME_X}x${FRAME_Y} -background transparent -pointsize ${POINT_SIZE} -gravity center -fill white -stroke black -strokewidth ${STROKE_WIDTH} -font "${FONT}" caption:"${TITLE}" -trim "/tmp/text.png"
+            convert -size ${FRAME_X}x${FRAME_Y} -background transparent -pointsize ${POINT_SIZE} -gravity center -fill white -stroke black -strokewidth ${STROKE_WIDTH} -font "${FONT}" caption:"${TITLE}" -trim -blur 0x8 "/tmp/text-blur.png"
             composite -gravity center "/tmp/text-blur.png" "/tmp/background.png" "/tmp/background-text.png"
             composite -gravity center "/tmp/text.png" "/tmp/background-text.png" "${DIR}/hero.webp"
         fi
