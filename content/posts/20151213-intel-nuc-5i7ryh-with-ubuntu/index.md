@@ -6,6 +6,7 @@ tags: [ Intel,NUC,NUC5i7RYH,Samsung SM951,M.2,NVME,Ubuntu,Linux ]
 summary: My Intel NUC5i7RYH part list and build
 sidebar: true
 images: hero.webp
+videos: https://www.youtube.com/embed/qBoxqO1zFgI?start=5996&amp;html5=1&amp;rel=0&amp;showinfo=0
 hero: hero.webp
 ---
 

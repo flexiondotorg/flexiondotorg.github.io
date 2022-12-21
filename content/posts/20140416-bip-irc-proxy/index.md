@@ -247,7 +247,7 @@ I add a new Network to HexChat for each of the IRC networks I defined in
 `/etc/bip.conf`. The screen shot below shows how I configure a BIP network in
 HexChat.
 
-![HexChat BIP Configuration](/assets/img/screenshots/BIP-freenode.png "Example HexChat Network Configuration to a BIP proxy")
+![HexChat BIP Configuration](BIP-freenode.png "Example HexChat Network Configuration to a BIP proxy")
 
 ### Password format
 

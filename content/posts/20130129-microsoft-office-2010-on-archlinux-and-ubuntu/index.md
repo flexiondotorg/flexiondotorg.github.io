@@ -3,7 +3,6 @@ title: Microsoft Office 2010 on Arch Linux and Ubuntu
 aliases: /posts/2013-01-microsoft-office-on-arch-linux-and-ubuntu
 date: 2013-01-29 16:16:47
 tags: [ Linux,Wine,Microsoft Office,Arch Linux,Ubuntu ]
-#link:
 summary: Install Microsoft Office 2010 on Arch Linux and Ubuntu
 sidebar: true
 images: hero.webp
@@ -29,13 +28,17 @@ on Arch Linux and Ubuntu. Most of this information was sourced from the Wine App
 
 Install Wine on Ubuntu as follows.
 
-    sudo apt-add-repository ppa:ubuntu-wine/ppa
-    sudo apt-get update
-    sudo apt-get install ttf-mscorefonts-installer samba wine1.5 wine-gecko1.8 wine-mono
+```bash
+sudo apt-add-repository ppa:ubuntu-wine/ppa
+sudo apt-get update
+sudo apt-get install ttf-mscorefonts-installer samba wine1.5 wine-gecko1.8 wine-mono
+```
 
 For 64-bit also install the following.
 
-    sudo apt-get install ia32-libs
+```bash
+sudo apt-get install ia32-libs
+```
 
 # Wine for Arch Linux
 
@@ -43,12 +46,16 @@ For 64-bit also install the following.
 
 Install Wine on Arch Linux as follows.
 
-    sudo pacman -S --needed icoutils libwbclient libxslt lib32-mpg123 p11-kit lib32-p11-kit samba wine winetricks wine-mono wine_gecko
-    sudo packer -S --noedit --noconfirm ttf-ms-fonts
+```bash
+sudo pacman -S --needed icoutils libwbclient libxslt lib32-mpg123 p11-kit lib32-p11-kit samba wine winetricks wine-mono wine_gecko
+sudo packer -S --noedit --noconfirm ttf-ms-fonts
+```
 
 For 64-bit also install the following.
 
-    sudo packer -S --noedit --noconfirm lib32-libwbclient lib32-libxslt
+```bash
+sudo packer -S --noedit --noconfirm lib32-libwbclient lib32-libxslt
+```
 
 # Installing Office 2010
 
@@ -56,7 +63,7 @@ Once Wine is installed, installing Office 2010 is the same for Arch Linux and Ub
 
 Create a clean wine prefix.
 
-``` shell
+```bash
 export WINEPREFIX="${HOME}/.msoffice2010"
 export WINEARCH="win32"
 winecfg
@@ -68,12 +75,16 @@ ensure that PowerPoint starts and selection boxes display correctly.
 
 Install `libxml6` and `corefonts` with `winetricks`
 
-    winetricks msxml6 corefonts
+```text
+winetricks msxml6 corefonts
+```
 
 Start the Office 2010 setup. In the example below `X17-75058.exe` is the name of the
 60 day trial version of Office Home and Business 2010 that I downloaded.
 
-    wine X17-75058.exe
+```bash
+wine X17-75058.exe
+```
 
 Follow the installation wizard, we are only interested in running the essentials,
 Word, Excel and PowerPoint. This is what I selected during the install.
@@ -114,7 +125,7 @@ Here are some of the issues we noticed running Office 2010 under Wine.
 
 Should you ever need to, you can uninstall Office 2010 as follows.
 
-``` shell
+```bash
 rm -rfv ${HOME}/.msoffice2010/
 rm -rfv ~/.local/share/applications/wine-extension-*
 rm -rfv ~/.local/share/applications/wine/Programs/Microsoft\ Office/

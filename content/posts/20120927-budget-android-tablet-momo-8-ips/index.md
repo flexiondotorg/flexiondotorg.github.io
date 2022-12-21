@@ -26,9 +26,10 @@ useful references for the rooting.
   * <http://www.pandawillforum.com/showthread.php?13111-How-to-Root-UG802-Rockchip-RK3066-mini-PC>
 
 -------------------------------------------------------------------------------
-***UPDATE! Since writing this blog post I've made a pre-rooted custom firmware
-for the Ployer Momo 8 IPS. Installing it may be easier than following the
-instructions below.**
+<div class="alert alert-info">
+<strong>Update</strong> Since writing this blog
+post I&#8217;ve made a pre-rooted custom firmware for the Ployer Momo 8 IPS.
+Installing it may be easier than following the instructions below.</div>
 
   * [Ployer Momo8 IPS Custom Firmware](/posts/2013-03-ployer-momo8-ips-custom-firmware/)
 

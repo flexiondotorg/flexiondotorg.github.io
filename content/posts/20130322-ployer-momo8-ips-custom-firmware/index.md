@@ -6,6 +6,7 @@ tags: [ Android,Tablet,Ployer Momo8 IPS,RK3066,Firmware,ClockWorkMod ]
 summary: Ployer Momo8 IPS Custom Firmware with ClockWorkMod
 sidebar: true
 images: hero.webp
+videos: https://youtu.be/Itcy13bYJfU
 hero: hero.webp
 ---
 
@@ -328,7 +329,7 @@ archives once they are downloaded.
 
 # How to Flash
 
-<div class="alert alert-block"><strong>Warning</strong> Always (<u>I can't
+<div class="alert alert-warning"><strong>Warning</strong> Always (<u>I can't
 stress this enough</u>) flash the STOCK RECOVERY version of my custom ROM.
 <strong>Never</strong> flash the CWM RECOVERY version without first having
 flashed the STOCK RECOVERY version. If you are upgrading from another ROM

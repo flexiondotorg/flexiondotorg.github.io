@@ -10,7 +10,9 @@ images: hero.webp
 hero: hero.webp
 ---
 
-**Updated on June 3rd 2014 and now includes LXQt and Unity.**
+<div class="alert alert-info">
+  <strong>Note</strong> Updated on June 3rd 2014 and now includes LXQt and Unity.
+</div>
 
 For the last 9 months or so I've spent my spare time working with the
 [MATE Desktop Team](http://mate-desktop.org). Every so often, via the various

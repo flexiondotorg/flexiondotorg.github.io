@@ -74,8 +74,7 @@ Silverlight. To do this head to the Amazon Instant Video landing page, click
 
 ### Google Chrome
 
-
-
+```text
 Stream				Firefox		Chrome		Firefox (HAL)	Chrome (HAL)
 
 iPlayer				Yes			Yes			Yes				Yes
@@ -86,6 +85,7 @@ Netflix				No [4]		Yes			No [4]			Yes
 Amazon Instant Video UK		No [2]		No [3]		Yes				No [3]
 TVCatchup       	Yes			Yes			Yes				Yes
 Plex				Yes			Yes			Yes				Yes
+```
 
 [1] Perpetual spinner, no content ever streamed.
 [2] Claim the player needs updating.

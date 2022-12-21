@@ -26,10 +26,12 @@ Java 6 from your local repository. Packages are compatible with "official"
 Ubuntu ones and pre-existing Java 6 packages will upgrade cleanly. You can
 find the script and full usage instructions on github.
 
+<div align="center">
 <iframe src="http://ghbtns.com/github-btn.html?user=flexiondotorg&repo=oab-java6&type=watch&count=true&size=large"
 allowtransparency="true" frameborder="0" scrolling="0" width="260px" height="30px"></iframe>
 <iframe src="http://ghbtns.com/github-btn.html?user=flexiondotorg&repo=oab-java6&type=fork&count=true&size=large"
 allowtransparency="true" frameborder="0" scrolling="0" width="260px" height="30px"></iframe>
+</div>
 
 Please read the [README](https://github.com/flexiondotorg/oab-java6/blob/master/README.rst)
 file for a more detailed explanation of how the script works and how to use it.

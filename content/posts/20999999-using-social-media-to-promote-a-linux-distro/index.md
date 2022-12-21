@@ -13,11 +13,11 @@ draft: true
 
 During [Ubuntu Online Summit 15.11](http://summit.ubuntu.com/uos-1511/)
 the [Community Round Table II](http://summit.ubuntu.com/uos-1511/meeting/22620/community-roundtable-ii/)
-discussed the Ubuntu community flavours promiting their distributions
+discussed the Ubuntu community flavours promoting their distributions
 and Ubuntu MATE (a project that I run) was used as an example of a
 project that was attempting to maximise the promotion of the
 distribution. I was contacted after the fact and volunteered to write a
-blog artcile to outline how Ubuntu MATE manages it's marketing, and this
+blog article to outline how Ubuntu MATE manages it's marketing, and this
 is it.
 
 ## TL;DR

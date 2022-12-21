@@ -25,7 +25,9 @@ for. Do the following as `root` or adapt with `sudo`.
 
 ## Install MySQL
 
-    apt-get install mysql-server
+```bash
+apt-get install mysql-server
+```
 
 The install will prompt for a MySQL `root` password.
 
@@ -33,7 +35,9 @@ The install will prompt for a MySQL `root` password.
 
 Secure the MySQL database a little.
 
-    sudo mysql_secure_installation
+```bash
+sudo mysql_secure_installation
+```
 
   * It will prompt you for your MySQL root password. Enter the password you entered upon installation of LAMP stack.
   * It will ask you to change root password, type "n" for no.
@@ -46,59 +50,75 @@ Secure the MySQL database a little.
 
 Log in to MySQL with the following command:
 
-    mysql -u root -p
+```bash
+mysql -u root -p
+```
 
 It will prompt you for root password, enter the one you entered upon installing LAMP stack.
 
 Next, create a new database with the following command:
 
-    CREATE DATABASE owncloud;
+```bash
+CREATE DATABASE owncloud;
+```
 
 Then assign a new user with proper privileges to the new database:
 
-    GRANT ALL ON owncloud.* TO 'owncloud'@'localhost' IDENTIFIED BY 'some_password';
+```bash
+GRANT ALL ON owncloud.* TO 'owncloud'@'localhost' IDENTIFIED BY 'some_password';
+```
 
-Be sure to replace "some_password" with the actual password you desire for 
+Be sure to replace "some_password" with the actual password you desire for
 your MySQL database. Type "quit" to exit MySQL interface.
 
 ## Install Apache and PHP5
 
-    apt-get install apache2 apache2-utils curl libcurl3 php5 php5-curl php5-gd php5-mysql php5-intl php-xml-parser
+```bash
+apt-get install apache2 apache2-utils curl libcurl3 php5 php5-curl php5-gd php5-mysql php5-intl php-xml-parser
+```
 
 Now we need to enable mod_rewrite and mod_headers, the Apache2 modules that are needed for
 ownCloud to function normally.
 
 To enable mod_rewrite and mod_headers, type the following:
 
-    a2enmod rewrite
-    a2enmod headers
+```bash
+a2enmod rewrite
+a2enmod headers
+```
 
 Additionally, we have to change Apache2 config file in order for ownCloud rewrite rules to
 work properly. Execute the following:
 
-    nano /etc/apache2/sites-available/default
+```bash
+nano /etc/apache2/sites-available/default
+```
 
 There, find `<Directory /var/www/>` section and change `AllowOverride None` to
 `AllowOverride All` and save the changes. Restart Apache2 for changes to take effect.
 
-    service apache2 restart
+```bash
+service apache2 restart
+```
 
 ## Install ownCloud
 
-    wget http://download.opensuse.org/repositories/isv:ownCloud:community/Debian_6.0/Release.key
-    apt-key add - < Release.key
-    echo 'deb http://download.opensuse.org/repositories/isv:ownCloud:community/Debian_6.0/ /' > /etc/apt/sources.list.d/owncloud.list
-    apt-get update
-    apt-get install owncloud
+```bash
+wget http://download.opensuse.org/repositories/isv:ownCloud:community/Debian_6.0/Release.key
+apt-key add - < Release.key
+echo 'deb http://download.opensuse.org/repositories/isv:ownCloud:community/Debian_6.0/ /' > /etc/apt/sources.list.d/owncloud.list
+apt-get update
+apt-get install owncloud
+```
 
-Point your browser to http://fqdn-of-your-droplet.tld/owncloud to access 
+Point your browser to http://fqdn-of-your-droplet.tld/owncloud to access
 ownCloud 5 installation.
 
-Be sure to replace "fqdn-of-your-droplet.tld" with the actual FQDN of your 
+Be sure to replace "fqdn-of-your-droplet.tld" with the actual FQDN of your
 droplet.
 
-Then, after the installation dialog opens, fill in the details for the admin 
-account. Next, enter the MySQL database details as you set them up in the 
+Then, after the installation dialog opens, fill in the details for the admin
+account. Next, enter the MySQL database details as you set them up in the
 previous step and click Finish Setup.
 
 #### References

@@ -28,7 +28,7 @@ can be thought of as really sexy `chroot`s.
 Linux Containers run under the same kernel as the host operating system. LXC is just
 one implementation, similar container-like implementations are [OpenVZ](http://openvz.org),
 [BSD jails](http://en.wikipedia.org/wiki/FreeBSD_jail) and
-[Solaris Zones](http://en.wikipedia.org/wiki/Solaris_Containers). 
+[Solaris Zones](http://en.wikipedia.org/wiki/Solaris_Containers).
 
 Some pros and cons of LXC are:
 
@@ -52,30 +52,39 @@ has a fairly current version, 0.8.0 at the time of writing.
 To enable the backports repository add the following line to
 `/etc/apt/sources.list.d/backports.list`.
 
-    deb http://backports.debian.org/debian-backports squeeze-backports main contrib non-free
-
+```sourceslist
+deb http://backports.debian.org/debian-backports squeeze-backports main contrib non-free
+```
 Update the repositories.
 
-    sudo apt-get update
+```bash
+sudo apt-get update
+```
 
 # Kernel
 
 LXC 0.8.0 requires newer kernel, so install it from the backports.
 
-    sudo apt-get install -t squeeze-backports \
-    linux-image-$(dpkg --print-architecture) \
-    linux-headers-$(dpkg --print-architecture) \
-    firmware-linux-free firmware-linux-nonfree
+```bash
+sudo apt-get install -t squeeze-backports \
+linux-image-$(dpkg --print-architecture) \
+linux-headers-$(dpkg --print-architecture) \
+firmware-linux-free firmware-linux-nonfree
+```
 
 Reboot.
 
-    sudo reboot
+```bash
+sudo reboot
+```
 
 ## LXC
 
 Install LXC from the backports.
 
-    sudo apt-get -t squeeze-backports install lxc
+```bash
+sudo apt-get -t squeeze-backports install lxc
+```
 
 ## Control Groups
 
@@ -85,19 +94,27 @@ aggregating/partitioning sets of tasks, and all their future children, into
 hierarchical groups with specialized behaviour. This is the base of the container
 implementation used by LXC.
 
-    sudo nano /etc/fstab
+```bash
+sudo nano /etc/fstab
+```
 
 Add the following.
 
-    cgroup        /sys/fs/cgroup        cgroup        defaults    0    0
+```bash
+cgroup        /sys/fs/cgroup        cgroup        defaults    0    0
+```
 
 Now make the `/sys/fs/cgroup` directory and mount it.
 
-    sudo mount cgroup
+```bash
+sudo mount cgroup
+```
 
 Check if your kernel has everything that LXC requires.
 
-    lxc-checkconfig
+```bash
+lxc-checkconfig
+```
 
 Everything should check out correctly.
 
@@ -105,28 +122,36 @@ Everything should check out correctly.
 
 A network bridge is used to connect the guest containers to the host.
 
-    sudo apt-get install bridge-utils
+```bash
+sudo apt-get install bridge-utils
+```
 
 Add the bridge is `/etc/network/interfaces` to declare your bridge interface `br0`
 and comment out your ethernet card `eth0`.
 
-    sudo nano /etc/network/interfaces
+```bash
+sudo nano /etc/network/interfaces
+```
 
 It should look something like this.
 
-    # The primary network interface
-    ##allow-hotplug eth0
-    ##iface eth0 inet dhcp
+```text
+# The primary network interface
+##allow-hotplug eth0
+##iface eth0 inet dhcp
 
-    # Setup bridge
-    auto br0
-    iface br0 inet dhcp
-      bridge_ports eth0
-      bridge_fd 0
+# Setup bridge
+auto br0
+iface br0 inet dhcp
+    bridge_ports eth0
+    bridge_fd 0
+```
 
 Restart networking.
 
-    sudo /etc/init.d/networking restart
+```bash
+sudo /etc/init.d/networking restart
+```
 
 # Using LXC on Debian 6.0
 
@@ -138,60 +163,78 @@ some basic management.
 I am only interested in deploying Debian distrobution into my containers, so
 `debootstrap` is required.
 
-    sudo apt-get install -t squeeze-backports debootstrap
+```bash
+sudo apt-get install -t squeeze-backports debootstrap
+```
 
 ## Debian containers
 
-    wget http://freedomboxblog.nl/wp-content/uploads/lxc-debian-wheezy.gz
-    gunzip lxc-debian-wheezy.gz
+```bash
+wget http://freedomboxblog.nl/wp-content/uploads/lxc-debian-wheezy.gz
+gunzip lxc-debian-wheezy.gz
+```
 
-In the `download_debian()` function I change the `pacakges` as follow:
+In the `download_debian()` function I change the `packages` as follow:
 
-        packages=\
-    ifupdown,\
-    locales,\
-    libui-dialog-perl,\
-    dialog,\
-    isc-dhcp-client,\
-    netbase,\
-    net-tools,\
-    iproute,\
-    nano,\
-    wget,\
-    tree,\
-    iputils-ping,\
-    openssh-server
+```text
+packages=\
+ifupdown,\
+locales,\
+libui-dialog-perl,\
+dialog,\
+isc-dhcp-client,\
+netbase,\
+net-tools,\
+iproute,\
+nano,\
+wget,\
+tree,\
+iputils-ping,\
+openssh-server
+```
 
 Copy the template and set the permissions.
 
-    sudo cp lxc-debian-wheezy /usr/share/lxc/templates/
-    sudo chown root:root /usr/share/lxc/templates/lxc-debian-wheezy
-    sudo chmod 755 /usr/share/lxc/templates/lxc-debian-wheezy
+```bash
+sudo cp lxc-debian-wheezy /usr/share/lxc/templates/
+sudo chown root:root /usr/share/lxc/templates/lxc-debian-wheezy
+sudo chmod 755 /usr/share/lxc/templates/lxc-debian-wheezy
+```
 
 Create a Wheezy container.
 
-    sudo lxc-create -n vm01 -t debian-wheezy
+```bash
+sudo lxc-create -n vm01 -t debian-wheezy
+```
 
 Start the container.
 
-    sudo lxc-start -n vm01 -d
+```bash
+sudo lxc-start -n vm01 -d
+```
 
 Connect to the console.
 
-    sudo lxc-console -n vm01
+```bash
+sudo lxc-console -n vm01
+```
 
 Network.
 
+```text
 auto eth0
 iface eth0 inet static
   address 192.168.64.253
     netmask 255.255.255.0
       gateway 192.168.64.1
         dns-nameservers 192.168.64.10
+```
 
 Stop the container.
 
-    sudo lxc-stop -n vm01
+```bash
+sudo lxc-stop -n vm01
+```
 
 #### References
 

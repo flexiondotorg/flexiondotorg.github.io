@@ -107,7 +107,7 @@ mkdir ~/Snakepit
 
 Add the following your `~/.bashrc` to enable `virtualenvwrapper`.
 
-``` shell
+```bash
 export WORKON_HOME=${HOME}/Snakepit
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
