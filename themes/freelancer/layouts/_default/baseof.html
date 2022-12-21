@@ -28,9 +28,9 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" type="text/css" media="print" onload="this.media='all'" crossorigin="anonymous" referrerpolicy="no-referrer" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" />
 		<noscript>
 			<link rel="stylesheet" href="/css/style.css" type="text/css" />
+			<link rel="stylesheet" href="/css/fonts.css" type="text/css" />
 			<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" type="text/css" crossorigin="anonymous" referrerpolicy="no-referrer" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" />
-			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,700,400italic,700italic&display=swap" type="text/css" />
 		</noscript>
 		{{ with .OutputFormats.Get "RSS" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
