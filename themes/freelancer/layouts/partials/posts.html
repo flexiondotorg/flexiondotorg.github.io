@@ -17,7 +17,7 @@
 					<div class="col-md-4">
 						<div class="card mb-4">
 							{{ if .Page.Params.Hero }}
-							<a href="{{.Permalink}}"><img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="{{.Page.Params.Title}}"></a>
+							<a href="{{.Permalink}}"><img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="{{.Page.Params.Title}}" loading="lazy"></a>
 							{{ else }}
 							<h5 class="card-title"><a href="{{.Permalink}}">{{.Page.Params.Title}}</a></h5>
 							{{ end }}
