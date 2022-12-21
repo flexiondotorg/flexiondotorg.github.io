@@ -10,10 +10,12 @@ hero: hero.webp
 ---
 
 Inspired by the recent [NES Classic](http://www.nintendo.com/nes-classic/) I
-made a **DIY SNES Classic** just in time for the Christmas holidays and it's very portable!
+made a **DIY SNES Classic** just in time for the Christmas holidays and it's
+very portable!
 
-![](https://s3-us-west-2.amazonaws.com/bold-inc/bold/ugc/cebq/894df40d-0009-4950-a90c-dd886a88d97e/da00b0660172ba192771d998418427bd.jpg
-"")
+<div class="text-center">
+  <img src="diy-homemade-snes-classic-raspberrypi.webp" class="img-fluid" alt="Raspberry Pi 3 in a 3D printed SNES case with 8Bitdo SNES30 controllers"/>
+</div>
 
 To make one yourself you'll need:
 
