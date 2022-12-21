@@ -1,27 +1,26 @@
 {{ $element :=  first .Site.Params.HomePosts (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
-
 {{ if $element }}
 		<section class="page-section portfolio pb-5" id="posts">
 			<div class="container">
-				<!-- Portfolio Section Heading-->
-				<h2 class="page-section-heading text-center text-uppercase text-secondary">Recent Posts</h2>
+				<!-- Post Section Heading-->
+				<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Recent Posts</h2>
 				<!-- Icon Divider-->
 				<div class="divider-custom">
 					<div class="divider-custom-line"></div>
 					<div class="divider-custom-icon"><em class="fas fa-star"></em></div>
 					<div class="divider-custom-line"></div>
 				</div>
-				<div class="row justify-content-left">
-					<!-- Portfolio Item 1-->
+				<!-- Post Grid Items-->
+				<div class="row justify-content-center">
+					<!-- Post Item 1-->
 					{{ range $index, $element }}
-					<div class="col-md-4">
-						<div class="card mb-4">
-							{{ if .Page.Params.Hero }}
-							<a href="{{.Permalink}}"><img class="img-fluid" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{.Page.Params.Title}}" loading="lazy" /></a>
-							{{ else }}
-							<h5 class="card-title"><a href="{{.Permalink}}">{{.Page.Params.Title}}</a></h5>
-							{{ end }}
-						</div>
+					<div class="col-md-6 col-lg-4 mb-5">
+						<div class="portfolio-item mx-auto"><a href="{{.Permalink}}">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white"><em class="fas fa-eye fa-3x"></em></div>
+							</div>
+							<img class="img-fluid" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{.Page.Params.Title}}" loading="lazy" />
+						</a></div>
 					</div>
 					{{ end }}
 				</div>
