@@ -16,6 +16,8 @@ enableRobotsTXT = true
   homeProjects = 9
   heroWidth = 1080
   heroHeight = 580
+  profileWidth = 528
+  profileHeight = 560
 
 [params.sbform]
   token = "72ea1ec7-2670-4a14-a16a-155ce22f82e3"
