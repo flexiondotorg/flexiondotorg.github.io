@@ -6,6 +6,9 @@ summaryLength=40
 paginate=9
 enableRobotsTXT = true
 
+[social]
+  twitter = 'm_wimpress'
+
 [params]
   author = 'Martin Wimpress'
   description = 'Blog, Podcasts, Live Streams and Videos about Linux and Open Source with a focus on Ubuntu, Debian and NixOS.'
