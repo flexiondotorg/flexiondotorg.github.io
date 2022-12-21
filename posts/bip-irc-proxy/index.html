@@ -163,7 +163,7 @@ accordingly and then change the ownership and permissions.</p><div class=highlig
 </span></span></code></pre></div><h2 id=client-configuration>Client configuration</h2><p>I use <a href=http://hexchat.github.io/>HexChat</a>, but other IRC clients are available.
 I add a new Network to HexChat for each of the IRC networks I defined in
 <code>/etc/bip.conf</code>. The screen shot below shows how I configure a BIP network in
-HexChat.</p><p><img src=/assets/img/screenshots/BIP-freenode.png alt="HexChat BIP Configuration" title="Example HexChat Network Configuration to a BIP proxy"></p><h3 id=password-format>Password format</h3><p>The Password is the most important and confusing item. <strong>This is for BIP,
+HexChat.</p><p><img src=BIP-freenode.png alt="HexChat BIP Configuration" title="Example HexChat Network Configuration to a BIP proxy"></p><h3 id=password-format>Password format</h3><p>The Password is the most important and confusing item. <strong>This is for BIP,
 not for any IRC network</strong>. Remember the unhashed password? That goes here but
 with a twist. The format for the password is:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>bipusername:unhashedbippassword:bipnetwork
 </span></span></code></pre></div><p>Bipnetwork? What is that? It is from the following section of <code>/etc/bip.conf</code>
