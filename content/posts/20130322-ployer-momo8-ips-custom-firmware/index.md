@@ -6,7 +6,7 @@ tags: [ Android,Tablet,Ployer Momo8 IPS,RK3066,Firmware,ClockWorkMod ]
 summary: Ployer Momo8 IPS Custom Firmware with ClockWorkMod
 sidebar: true
 images: hero.webp
-videos: https://youtu.be/Itcy13bYJfU
+videos: ["https://youtu.be/Itcy13bYJfU"]
 hero: hero.webp
 ---
 
