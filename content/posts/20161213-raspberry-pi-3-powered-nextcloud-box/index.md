@@ -56,7 +56,7 @@ Here's how to create an Ubuntu Core microSDHC card for the Raspberry Pi
     * Making sure the SD card is still selected, click the Power icon on the right.
   * Eject the SD card physically from your PC.
 
-<div align="center"><img src="/assets/img/screenshots/GNOME-Disks-Restore-Disk-Image.png" alt="GNOME Disks - Restore Disk Image" /></div>
+<div class="text-center"><img src="GNOME-Disks-Restore-Disk-Image.png" class="img-fluid" alt="GNOME Disks - Restore Disk Image" /></div>
 
 ## Ubuntu Core first boot
 

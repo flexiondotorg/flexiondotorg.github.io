@@ -6,7 +6,7 @@ tags: [ Intel,NUC,NUC5i7RYH,Samsung SM951,M.2,NVME,Ubuntu,Linux ]
 summary: My Intel NUC5i7RYH part list and build
 sidebar: true
 images: hero.webp
-videos: https://www.youtube.com/embed/qBoxqO1zFgI?start=5996&amp;html5=1&amp;rel=0&amp;showinfo=0
+videos: https://youtu.be/qBoxqO1zFgI?t=5996
 hero: hero.webp
 ---
 
@@ -21,7 +21,7 @@ I spoke about this new system on [LINUX Unplugged Episode 122](http://www.jupite
 wanting more details. Hopefully this blog post will answer any outstanding
 questions. Press play below to hear to what I said on the podcast.
 
-<div align="center">
+<div class="text-center">
 <iframe id="ytplayer" type="text/html" width="853" height="480" src="https://www.youtube.com/embed/qBoxqO1zFgI?start=5996&amp;html5=1&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 </div>
 

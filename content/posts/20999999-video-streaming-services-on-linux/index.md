@@ -66,7 +66,7 @@ Flash rather than with Silverlight. You will need to opt in to using Flash over
 Silverlight. To do this head to the Amazon Instant Video landing page, click
 `Settings > Player Preferences > Adobe Flash Player`.
 
-![Amazon Instant Video Flash Playback](/assets/img/screenshots/amazon-instant-video-flash.png "Enable Flash Playback on Amazon Instant Video")
+![Amazon Instant Video Flash Playback](amazon-instant-video-flash.png "Enable Flash Playback on Amazon Instant Video")
 
 ## Installing the browsers
 
