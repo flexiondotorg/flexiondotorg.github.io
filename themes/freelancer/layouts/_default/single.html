@@ -3,7 +3,7 @@
 		<div class="row">
 		<section class="page-section portfolio {{ if .Page.Params.sidebar }} col-12 col-lg-10 {{ end }} ">
 			{{if (ne .Page.Params.Hero "") }}
-			<img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="{{ .Summary }}">
+			<img class="img-fluid rounded mb-5" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{ .Summary }}" loading="lazy" />
 			{{ end }}
 			<!-- Portfolio Section Heading-->
 			<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{ .Title }}</h2>

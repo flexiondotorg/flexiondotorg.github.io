@@ -14,6 +14,8 @@ enableRobotsTXT = true
   aboutRight = "Passionate Open Source advocate and enthusiast. Proficient software developer using several languages. Contributor to many Open Source projects to retain and develop technical skill as an accomplished systems integrator and architect."
   homePosts = 6
   homeProjects = 9
+  heroWidth = 1080
+  heroHeight = 580
 
 [params.sbform]
   token = "72ea1ec7-2670-4a14-a16a-155ce22f82e3"
@@ -86,7 +88,7 @@ enableRobotsTXT = true
   defaultMarkdownHandler = 'goldmark'
 [markup.goldmark]
   [markup.goldmark.renderer]
-      unsafe = false
+      unsafe = true
   [markup.goldmark.parser]
     autoHeadingID = true
     autoHeadingIDType = 'github'
