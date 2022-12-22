@@ -8,7 +8,7 @@
 		<section class="page-section portfolio" id="portfolio">
 			<div class="container">
 				<!-- Portfolio Section Heading-->
-				<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{ .Title }}</h2>
+				<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{.Title}}</h2>
 				<!-- Icon Divider-->
 				<div class="divider-custom">
 					<div class="divider-custom-line"></div>
@@ -20,7 +20,7 @@
 					<!-- Portfolio Item 1-->
 					{{ range .Paginator.Pages }}
 					<div class="col-md-4">
-						<div class="card mb-4 ">
+						<div class="card mb-4">
 							<a href="{{.Permalink}}"><img class="img-fluid rounded-top" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{ .Summary }}" loading="lazy" /></a>
 							<div class="card-body">
 								<h5 class="card-title text-center text-uppercase">{{.Title}}</h5>
@@ -28,7 +28,7 @@
 							</div>
 							<div class="card-footer">
 								<div class="d-flex justify-content-between align-items-center">
-									<small class="text-muted">{{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</small>
+									<small class="text-muted">{{.ReadingTime}} minute{{ if (ne .ReadingTime 1) }}s{{end}}</small>
 									<div class="btn-group">
 										<a href="{{.Permalink}}" class="btn btn-lg btn-primary">{{$action}}</a>
 									</div>
