@@ -18,8 +18,8 @@
 						<div class="divider-custom-line"></div>
 					</div>
 					{{ if isset .Params "tags" -}}
-					<div class="row  mb-3">
-						<div class="col text-center text-nowrap ">
+					<div class="row mb-3">
+						<div class="col text-center text-nowrap">
 						{{ range $index, $name := sort .Params.tags -}}
 							<a class="h4" href={{ (printf "/tags/%s/" $name) | urlize }} title="{{$name | markdownify }}"><span class="badge bg-primary p-2 m-1 ">{{$name | markdownify}}</span></a>
 						{{end}}
