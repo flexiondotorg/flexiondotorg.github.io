@@ -1,4 +1,10 @@
 {{ define "main" }}
+		{{$action := "Read"}}
+		{{$icon := "fa-file-text"}}
+		{{if eq .Section "projects"}}
+			{{$action = "View"}}
+			{{$icon = "fa-code"}}
+		{{end}}
 		<section class="page-section portfolio" id="portfolio">
 			<div class="container">
 				<!-- Portfolio Section Heading-->
@@ -6,7 +12,7 @@
 				<!-- Icon Divider-->
 				<div class="divider-custom">
 					<div class="divider-custom-line"></div>
-					<div class="divider-custom-icon"><em class="fas fa-star"></em></div>
+					<div class="divider-custom-icon"><em class="fas {{$icon}}"></em></div>
 					<div class="divider-custom-line"></div>
 				</div>
 				<!-- Portfolio Grid Items-->
@@ -17,14 +23,14 @@
 						<div class="card mb-4 ">
 							<a href="{{.Permalink}}"><img class="img-fluid" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{ .Summary }}" loading="lazy" /></a>
 							<div class="card-body">
-								<h5 class="card-title text-center text-uppercase">{{ .Title }}</h5>
-								<p class="card-text text-center">{{ .Summary }}</p>
+								<h5 class="card-title text-center text-uppercase">{{.Title}}</h5>
+								<small class="card-text text-center">{{.Summary}}</small>
 							</div>
 							<div class="card-footer">
 								<div class="d-flex justify-content-between align-items-center">
 									<small class="text-muted">{{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</small>
 									<div class="btn-group">
-										<a href="{{.Permalink}}" class="btn  btn-lg btn-primary">Read</a>
+										<a href="{{.Permalink}}" class="btn btn-lg btn-primary">{{$action}}</a>
 									</div>
 								</div>
 							</div>
