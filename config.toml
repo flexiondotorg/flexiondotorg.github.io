@@ -1,6 +1,9 @@
 baseURL = 'https://wimpress.com/'
-languageCode = 'en-gb'
 title = 'Martin Wimpress'
+
+languageCode = 'en-gb'
+DefaultContentLanguage = "en"
+
 theme = 'freelancer'
 summaryLength=40
 paginate=9
