@@ -1,67 +1,69 @@
 {{ define "main" }}
-	<div class="container pb-5">
-		<div class="row">
-		<section class="page-section portfolio {{ if .Page.Params.sidebar }} col-12 col-lg-10 {{ end }} ">
-			{{if (ne .Page.Params.Hero "") }}
-			<img class="img-fluid rounded mb-5" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{ .Summary }}" loading="lazy" />
-			{{ end }}
-			<!-- Portfolio Section Heading-->
-			<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{ .Title }}</h2>
-			<!-- Icon Divider-->
-			<div class="divider-custom m-0">
-				<div class="divider-custom-line"></div>
-				<div class="divider-custom-icon"><em class="fas fa-star"></em></div>
-				<div class="divider-custom-line"></div>
-			</div>
-			{{ if isset .Params "tags" -}}
-			<div class="row  mb-3">
-				<div class="col text-center text-nowrap ">
-				{{ range $index, $name := sort .Params.tags -}}
-					<a class="h4" href={{ (printf "/tags/%s/" $name) | urlize }} title="{{$name | markdownify }}"><span class="badge bg-primary p-2 m-1 ">{{$name | markdownify}}</span></a>
-				{{end}}
-				</div>
-			</div>
-			{{ end }}
-			<div class="row justify-content-left">
-				<!-- Old content warning and last update notification -->
-				{{if eq .Section "posts"}}
-					{{$years := 3}}
-					{{$shelfLife := mul 365 $years}}
-					{{$published := .Page.Params.Date}}
-					{{$daysOld := div (sub now.Unix .Date.Unix) 86400}}
-					{{$yearsOld := div $daysOld 365}}
-					{{if isset .Params "lastmod"}}
-						{{$published = .Page.Params.Lastmod}}
-						{{$daysOld = div (sub now.Unix .Lastmod.Unix) 86400}}
-					{{end}}
-
-					{{if gt $daysOld $shelfLife}}
-					<div class="col-12">
-						<div class="alert alert-warning" role="alert">
-							<h4 class="alert-heading">Old post detected! <em class="fa-solid fa-person-cane"></em></h4>
-							<p>This post was last updated on {{$published.Format "2006-01-02"}} which was about {{$daysOld}} days ago! The information presented here may be out of date and inaccurate.</p>
-							<hr />
-							<small class="mb-0">Please read this page keeping its age in mind.</small>
+		{{$icon := "fa-file-text"}}
+		{{if eq .Section "projects"}}
+			{{$icon = "fa-code"}}
+		{{end}}
+		<div class="container pb-5">
+			<div class="row">
+				<section class="page-section portfolio {{ if .Page.Params.sidebar }} col-12 col-lg-10 {{ end }} ">
+					{{if (ne .Page.Params.Hero "") }}
+					<img class="img-fluid rounded mb-5" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{ .Summary }}" loading="lazy" />
+					{{ end }}
+					<!-- Portfolio Section Heading-->
+					<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{ .Title }}</h2>
+					<!-- Icon Divider-->
+					<div class="divider-custom m-0">
+						<div class="divider-custom-line"></div>
+						<div class="divider-custom-icon"><em class="fas {{$icon}}"></em></div>
+						<div class="divider-custom-line"></div>
+					</div>
+					{{ if isset .Params "tags" -}}
+					<div class="row  mb-3">
+						<div class="col text-center text-nowrap ">
+						{{ range $index, $name := sort .Params.tags -}}
+							<a class="h4" href={{ (printf "/tags/%s/" $name) | urlize }} title="{{$name | markdownify }}"><span class="badge bg-primary p-2 m-1 ">{{$name | markdownify}}</span></a>
+						{{end}}
 						</div>
 					</div>
-					{{else if isset .Params "lastmod"}}
-						<div class="col-12">
-							<div class="alert alert-info" role="alert">
-								<h4 class="alert-heading">Update detected! <em class="fa-solid fa-spray-can-sparkles"></em></h4>
-								<p>This post was originally published on {{.Date.Format "2006-01-02"}} and the last updated was made on {{$published.Format "2006-01-02"}}.</p>
-							</div>
-						</div>
-					{{end}}
-				{{end}}
+					{{ end }}
+					<div class="row justify-content-left">
+						<!-- Old content warning and last update notification -->
+						{{if eq .Section "posts"}}
+							{{$years := 3}}
+							{{$shelfLife := mul 365 $years}}
+							{{$published := .Page.Params.Date}}
+							{{$daysOld := div (sub now.Unix .Date.Unix) 86400}}
+							{{$yearsOld := div $daysOld 365}}
+							{{if isset .Params "lastmod"}}
+								{{$published = .Page.Params.Lastmod}}
+								{{$daysOld = div (sub now.Unix .Lastmod.Unix) 86400}}
+							{{end}}
 
-				{{ .Content }}
-				{{ partial "single-pagination.html" . }}
+							{{if gt $daysOld $shelfLife}}
+							<div class="col-12">
+								<div class="alert alert-warning" role="alert">
+									<h4 class="alert-heading">Old post detected! <em class="fa-solid fa-person-cane"></em></h4>
+									<p>This post was last updated on {{$published.Format "2006-01-02"}} which was about {{$daysOld}} days ago! The information presented here may be out of date and inaccurate.</p>
+									<hr />
+									<small class="mb-0">Please read this page keeping its age in mind.</small>
+								</div>
+							</div>
+							{{else if isset .Params "lastmod"}}
+								<div class="col-12">
+									<div class="alert alert-info" role="alert">
+										<h4 class="alert-heading">Update detected! <em class="fa-solid fa-spray-can-sparkles"></em></h4>
+										<p>This post was originally published on {{.Date.Format "2006-01-02"}} and the last updated was made on {{$published.Format "2006-01-02"}}.</p>
+									</div>
+								</div>
+							{{end}}
+						{{end}}
+						{{ .Content }}
+						{{ partial "single-pagination.html" . }}
+					</div>
+				</section>
+				{{ if .Page.Params.sidebar }}
+					{{ partial "sidebar.html" . }}
+				{{ end }}
 			</div>
 		</div>
-		</section>
-		{{ if .Page.Params.sidebar }}
-			{{ partial "sidebar.html" . }}
-		{{ end }}
-	</div>
-</div>
 {{ end }}
