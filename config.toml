@@ -4,6 +4,8 @@ title = 'Martin Wimpress'
 theme = 'freelancer'
 summaryLength=40
 paginate=9
+
+enableEmoji = true
 enableRobotsTXT = true
 
 [social]
