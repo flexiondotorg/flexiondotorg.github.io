@@ -21,9 +21,13 @@ I spoke about this new system on [LINUX Unplugged Episode 122](http://www.jupite
 wanting more details. Hopefully this blog post will answer any outstanding
 questions. Press play below to hear to what I said on the podcast.
 
-<div class="text-center">
-<iframe id="ytplayer" type="text/html" width="853" height="480" src="https://www.youtube.com/embed/qBoxqO1zFgI?start=5996&amp;html5=1&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-</div>
+<!--
+Add start when it becomes a feature
+https://github.com/gohugoio/hugo/pull/10521
+start="5996"
+-->
+
+{{< youtube qBoxqO1zFgI >}}
 
 ## The NUC
 

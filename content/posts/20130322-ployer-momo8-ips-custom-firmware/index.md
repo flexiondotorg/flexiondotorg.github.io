@@ -369,7 +369,7 @@ prompt for which Wifi network to associate with.
 I've also made a video showing how to flash the firmware. Frankly, the
 hardest part is getting the Rockchip drivers installed.
 
-<iframe width="640" height="360" src="http://www.youtube.com/embed/Itcy13bYJfU?rel=0" frameborder="0" allowfullscreen></iframe>
+{{< youtube Itcy13bYJfU >}}
 
 # How to Flash the CWM version
 
