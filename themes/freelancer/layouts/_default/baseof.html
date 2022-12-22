@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-		{{ with .Site.Params.description }}<meta name="description" content="{{ . }}"/>{{ end }}
+		{{ with .Site.Params.description }}<meta name="description" content="{{ . }}"/>{{- end }}
 		{{ with .Site.Params.author }}<meta name="author" content="{{ . }}"/>{{ end }}
-{{ template "_internal/twitter_cards.html" . }}
+		{{ template "_internal/twitter_cards.html" . -}}
 		<!-- Favicon-->
 		<meta name="msapplication-TileColor" content="#00aba9"/>
 		<meta name="theme-color" content="#ffffff"/>
@@ -37,7 +37,6 @@
 		{{- end }}
 		<title>{{ .Title }}</title>
 	</head>
-
 {{ partial "header" . }}
 {{ block "main" . }}{{ end }}
 {{ partial "footer" . }}

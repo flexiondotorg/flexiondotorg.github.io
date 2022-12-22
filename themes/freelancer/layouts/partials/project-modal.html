@@ -1,9 +1,8 @@
-{{ $element :=  first .Site.Params.HomeProjects (where .Site.RegularPages.ByDate.Reverse "Section" "projects") }}
-
-{{ if $element }}
-	{{ $counter := 0 }}
-	{{ range $element }}
-	{{ $counter = add $counter 1 }}
+{{- $element :=  first .Site.Params.HomeProjects (where .Site.RegularPages.ByDate.Reverse "Section" "projects") -}}
+{{- if $element -}}
+	{{- $counter := 0 -}}
+	{{- range $element -}}
+	{{- $counter = add $counter 1 }}
 		<div class="portfolio-modal modal fade" id="modal{{$counter}}" tabindex="-1" aria-labelledby="modal{{$counter}}" aria-hidden="true">
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content">
@@ -12,17 +11,13 @@
 						<div class="container">
 							<div class="row justify-content-center">
 								<div class="col-lg-8">
-									<!-- Portfolio Modal - Title-->
 									<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">{{.Title}}</h2>
-									<!-- Icon Divider-->
 									<div class="divider-custom">
 										<div class="divider-custom-line"></div>
 										<div class="divider-custom-icon"><em class="fas fa-code"></em></div>
 										<div class="divider-custom-line"></div>
 									</div>
-									<!-- Portfolio Modal - Image-->
 									<img class="img-fluid rounded mb-5" src="{{.RelPermalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{.Title}}" loading="lazy" />
-									<!-- Portfolio Modal - Text-->
 									<p class="mb-4">{{.Summary}}</p>
 									<a href="{{.Permalink}}" class="btn btn-primary btn-lg col-12">View</a>
 								</div>
@@ -33,4 +28,4 @@
 			</div>
 		</div>
 	{{ end }}
-{{ end }}
+{{- end -}}
