@@ -21,7 +21,7 @@
 					{{ range .Paginator.Pages }}
 					<div class="col-md-4">
 						<div class="card mb-4 ">
-							<a href="{{.Permalink}}"><img class="img-fluid" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{ .Summary }}" loading="lazy" /></a>
+							<a href="{{.Permalink}}"><img class="img-fluid rounded-top" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{ .Summary }}" loading="lazy" /></a>
 							<div class="card-body">
 								<h5 class="card-title text-center text-uppercase">{{.Title}}</h5>
 								<small class="card-text text-center">{{.Summary}}</small>
