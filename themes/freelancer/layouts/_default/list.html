@@ -1,5 +1,5 @@
 {{ define "main" }}
-		{{- $action := "Read" -}}
+		{{- $action := "read" -}}
 		{{- $icon := "fa-file-text" -}}
 		{{- if eq .Section "projects" -}}
 			{{- $action = "View" -}}
@@ -23,12 +23,21 @@
 								<small class="card-text text-center">{{.Summary}}</small>
 							</div>
 							<div class="card-footer">
+								{{- if eq .Section "posts" -}}
 								<div class="d-flex justify-content-between align-items-center">
-									<small class="text-muted">{{.ReadingTime}} minute{{ if (ne .ReadingTime 1) }}s{{end}}</small>
+									<small class="text-muted">{{ .Date.Format "2006-01-02" }}</small>
 									<div class="btn-group">
-										<a href="{{.Permalink}}" class="btn btn-lg btn-primary">{{$action}}</a>
+										<a href="{{ .Permalink }}" class="btn btn-lg btn-primary">{{ .ReadingTime }} minute {{ $action }}</a>
 									</div>
 								</div>
+								{{- else -}}
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted"></small>
+									<div class="btn-group">
+										<a href="{{ .Permalink }}" class="btn btn-lg btn-primary">{{ $action }}</a>
+									</div>
+								</div>
+								{{- end }}
 							</div>
 						</div>
 					</div>
