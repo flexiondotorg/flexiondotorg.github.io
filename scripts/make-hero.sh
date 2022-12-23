@@ -43,16 +43,18 @@ fi
 COLORS=("#0d6efd" "#6610f2" "#6f42c1" "#d63384" "#dc3545" "#fd7e14" "#ffc107" "#198754" "#1abc9c" "#0dcaf0" "#6c757d" "#343a40")
 COLOR=${COLORS[ ${RANDOM} % ${#COLORS[@]} ]}
 
-SIZE_X=1080
-SIZE_Y=580
-FRAME_X=1040
-FRAME_Y=540
-ICON_SIZE=400
-POINT_SIZE=100
+LARGE_X=1280
+LARGE_Y=720
+FRAME_X=$(( LARGE_X - (LARGE_X / 16) ))
+FRAME_Y=$(( LARGE_Y - (LARGE_Y / 16) ))
+SMALL_X=$((LARGE_X / 3)) #426
+SMALL_Y=$((LARGE_Y / 3)) #240
+ICON_SIZE=$(( LARGE_Y - (LARGE_Y / 3) ))
+POINT_SIZE=$((LARGE_X / 12))
 STROKE_WIDTH=4
 FONT="Lato-Black"
 
-convert -size ${SIZE_X}x${SIZE_Y} xc:"${COLOR}" "/tmp/background.png"
+convert -size ${LARGE_X}x${LARGE_Y} xc:"${COLOR}" "/tmp/background.png"
 
 case "${TYPE}" in
     posts)
@@ -66,6 +68,7 @@ case "${TYPE}" in
             composite -gravity center "/tmp/text-blur.png" "/tmp/background.png" "/tmp/background-text.png"
             composite -gravity center "/tmp/text.png" "/tmp/background-text.png" "${DIR}/hero.webp"
         fi
+        convert -resize ${SMALL_X}x${SMALL_Y} "${DIR}/hero.webp" "${DIR}/small-hero.webp"
         ;;
     projects)
         if [ -f "${DIR}/icon.png" ]; then
@@ -77,6 +80,7 @@ case "${TYPE}" in
             composite -gravity center "/tmp/text-blur.png" "/tmp/background.png" "/tmp/background-text.png"
             composite -gravity center "/tmp/text.png" "/tmp/background-text.png" "${DIR}/hero.webp"
         fi
+        convert -resize ${SMALL_X}x${SMALL_Y} "${DIR}/hero.webp" "${DIR}/small-hero.webp"
         ;;
     *)
         echo "Unknown type: ${TYPE}"

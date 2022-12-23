@@ -23,8 +23,10 @@ enableRobotsTXT = true
   aboutRight = "Passionate Open Source advocate and Linux enthusiast. Proficient software developer using several languages. Contributor to many Open Source projects to retain and develop technical skill as an accomplished systems integrator and architect. Podcaster, Live Streamer and Community builder. Leads Ubuntu MATE, Ubuntu Member and Debian Maintainer."
   homePosts = 6
   homeProjects = 9
-  heroWidth = 1080
-  heroHeight = 580
+  heroWidth = 1280
+  heroHeight = 720
+  heroWidthSmall = 426
+  heroHeightSmall = 240
   profileWidth = 528
   profileHeight = 560
 
