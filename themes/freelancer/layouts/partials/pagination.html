@@ -1,23 +1,15 @@
-
-							<nav aria-label="Page Navigation">
-								<ul class="pagination justify-content-center pagination-lg">
-									{{- if .Paginator.HasPrev }}
-									<li class="page-item">
-										<a class="page-link bg-primary text-white" href="{{ .Paginator.Prev.URL }}" tabindex="-1"><span class="h2"><em class="fa fa-chevron-circle-left" aria-hidden="true"></em></span></a>
-									</li>
-									{{- else }}
-									<li class="page-item disabled ">
-										<a class="page-link bg-light" href="#" tabindex="-1"><span class="h2"><em class="fa fa-chevron-circle-left" aria-hidden="true"></em></span></a>
-									</li>
-									{{- end -}}
-									{{- if .Paginator.HasNext }}
-									<li class="page-item">
-										<a class="page-link bg-primary text-white" href="{{ .Paginator.Next.URL }}"><span class="h2"><em class="fa fa-chevron-circle-right" aria-hidden="true"></em></span></a>
-									</li>
-									{{- else }}
-									<li class="page-item disabled">
-										<a class="page-link bg-light" href="#"><span class="h2"><em class="fa fa-chevron-circle-right" aria-hidden="true"></em></span></a>
-									</li>
-									{{- end }}
-								</ul>
-							</nav>
+							<div class="col-5 text-left mb-4">
+								{{- if .Paginator.HasPrev -}}
+								<a class="btn btn-primary btn-lg col-12" href="{{ .Paginator.Prev.URL }}"><span class="h2"><em class="fa fa-chevron-circle-left" aria-hidden="true"></em></span></a>
+								{{- else -}}
+								<a class="btn btn-light disabled btn-lg col-12" href="#"><span class="h2"><em class="fa fa-chevron-circle-left" aria-hidden="true"></em></span></a>
+								{{- end -}}
+							</div>
+							<div class="col-2 text-center"></div>
+							<div class="col-5 text-right mb-4">
+								{{- if .Paginator.HasNext -}}
+								<a class="btn btn-primary btn-lg col-12" href="{{ .Paginator.Next.URL }}"><span class="h2"><em class="fa fa-chevron-circle-right" aria-hidden="true"></em></span></a>
+								{{- else -}}
+								<a class="btn btn-light btn-lg col-12 disabled" href="#"><span class="h2"><em class="fa fa-chevron-circle-right" aria-hidden="true"></em></span></a>
+								{{- end -}}
+							</div>
