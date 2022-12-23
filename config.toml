@@ -92,8 +92,8 @@ enableRobotsTXT = true
   weight = 10
 
 [permalinks]
-  posts = 'posts/:title/'
-  projects = 'projects/:title/'
+  posts = 'posts/:slug/'
+  projects = 'projects/:slug/'
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
