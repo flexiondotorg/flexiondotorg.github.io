@@ -4,6 +4,12 @@
 		{{- if eq .Section "projects" -}}
 			{{- $action = "View" -}}
 			{{- $icon = "fa-code" -}}
+		{{- else if eq .Section "tags" -}}
+			{{- $action = "View" -}}
+			{{- $icon = "fa-tags" -}}
+		{{- else if eq .Section "categories" -}}
+			{{- $action = "View" -}}
+			{{- $icon = "fa-list" -}}
 		{{- end}}
 		<section class="page-section portfolio" id="portfolio">
 			<div class="container">
