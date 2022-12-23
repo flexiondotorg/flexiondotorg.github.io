@@ -42,17 +42,17 @@
 							{{- if gt $daysOld $shelfLife -}}
 							<div class="col-12">
 								<div class="alert alert-warning" role="alert">
-									<h4 class="alert-heading">Old post detected! <em class="fa-solid fa-person-cane"></em></h4>
-									<p>This post was last updated on {{$published.Format "2006-01-02"}} which was about {{$daysOld}} days ago! The information presented here may be out of date and inaccurate.</p>
+									<h4 class="alert-heading">Old post detected! <em class="fa-solid fa-book-skull"></em></h4>
+									<p>This post was last updated on {{$published.Format "January 2, 2006"}} which was {{$daysOld}} days ago! The information presented here may be out of date and inaccurate.</p>
 									<hr />
-									<small class="mb-0">Please read this page keeping its age in mind.</small>
+									<em class="mb-0">Please read this page but do keep its age in mind.</em>
 								</div>
 							</div>
 							{{- else if isset .Params "lastmod" -}}
 								<div class="col-12">
 									<div class="alert alert-info" role="alert">
 										<h4 class="alert-heading">Update detected! <em class="fa-solid fa-spray-can-sparkles"></em></h4>
-										<p>This post was originally published on {{.Date.Format "2006-01-02"}} and last updated on {{$published.Format "2006-01-02"}}.</p>
+										<p>This post was originally published on {{.Date.Format "January 2, 2006"}} and last updated on {{$published.Format "January 2, 2006"}}.</p>
 									</div>
 								</div>
 							{{- end -}}
