@@ -120,3 +120,7 @@ enableRobotsTXT = true
 [sitemap]
   changefreq = 'weekly'
   priority = 0.8
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
