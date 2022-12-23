@@ -28,6 +28,22 @@ enableRobotsTXT = true
   profileWidth = 528
   profileHeight = 560
 
+[params.features]
+  [params.features.comment]
+    enable = true
+    [params.features.comment.giscus]
+      repo = "flexiondotorg/flexiondotorg.github.io"
+      repoID = "R_kgDOIoJw9g"
+      category = "Blog Comments"
+      categoryID = "DIC_kwDOIoJw9s4CTG_3"
+      theme = "light"
+      map = "pathname"
+      strict = 0
+      reaction = 1
+      metadata = 0
+      inputPosition = "bottom"
+      crossOrigin = "anonymous"
+
 [params.sbform]
   token = "72ea1ec7-2670-4a14-a16a-155ce22f82e3"
 
