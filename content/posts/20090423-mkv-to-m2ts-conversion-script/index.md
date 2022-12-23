@@ -2,7 +2,8 @@
 title: MKV to M2TS conversion script
 aliases: /posts/2009-04-mkv-to-m2ts-conversion-script
 date: 2009-04-23 17:00:58
-tags: [Linux,Matroska,M2TS,Bash,AC3,DTS,PlayStation 3 ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Gadgets" ]
+tags: [ "Matroska", "M2TS", "Bash", "AC3", "DTS", "PlayStation 3" ]
 summary: Convert Matroska file to MPEG2-TS for PlayStation 3 compatibility
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: Setting up MiniDLNA on Open Media Vault
 aliases: /posts/2013-08-minidlna-on-open-media-vault
 date: 2013-08-26 21:49:09
-tags: [ Linux,Debian,Open Media Vault,OMV,MiniDLNA,DLNA ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting", "Home Cinema" ]
+tags: [ "Debian", "Open Media Vault", "MiniDLNA", "DLNA" ]
 summary: Music streaming with MiniDLNA on Open Media Vault
 sidebar: true
 images: hero.webp

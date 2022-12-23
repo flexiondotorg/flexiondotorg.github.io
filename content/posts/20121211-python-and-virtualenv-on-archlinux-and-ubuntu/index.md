@@ -2,7 +2,8 @@
 title: Python and virtualenv on Arch Linux and Ubuntu
 aliases: /posts/2012-12-python-and-virtualenv-on-archlinux-and-ubuntu
 date: 2012-12-11 20:38:50
-tags: [ Python,Arch Linux,Ubuntu,virtualenv ]
+categories: [ "Linux", "Open Source", "Tutorial", "Development" ]
+tags: [ "Python", "Arch Linux", "Ubuntu", "virtualenv" ]
 summary: Installing Python and virtualenv on Arch Linux and Ubuntu
 sidebar: true
 images: hero.webp

@@ -3,7 +3,8 @@ title: Integrating Dropbox photo syncing with Open Media Vault and Plex
 aliases: /posts/2014-06-integrating-dropbox-photo-syncing-with-open-media-vault-and-plex
 date: 2014-06-28 12:00:00
 lastmod: 2016-08-22
-tags: [ Linux,Dropbox,Open Media Vault,Plex,Debian ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting" ]
+tags: [ "Dropbox", "Open Media Vault", "Plex", "Debian" ]
 summary: Integrating Dropbox on a headless Open Media Vault server.
 sidebar: true
 images: hero.webp

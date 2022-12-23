@@ -2,7 +2,8 @@
 title: SSH brute force defense
 aliases: /posts/2012-11-ssh-brute-force-defence
 date: 2012-11-26 13:14:09
-tags: [ Arch Linux,Ubuntu,SSH ]
+categories: [ "Linux", "Open Source", "Tutorial", "Security" ]
+tags: [ "Arch Linux", "Ubuntu", "OpenSSH", "DenyHosts", "Fail2Ban" ]
 summary: Deploy DenyHosts or Fail2Ban to better prevent SSH brute force attacks.
 sidebar: true
 images: hero.webp
@@ -13,7 +14,7 @@ I have several VPS hosts with different providers using different
 virtualisation platforms. Naturally I have [OpenSSH](http://www.openssh.org/)
 running on these VPS hosts and deploy either [DenyHosts](http://denyhosts.sourceforge.net/)
 or [Fail2Ban](http://www.fail2ban.org/) to add an extra security layer to
-thwarte SSH brute force attacks and other abuse.
+thwart SSH brute force attacks and other abuse.
 
 DenyHosts blocks brute force attacks by adding offending IP addresses to
 `/etc/hosts.deny`. It therefore requires the SSH server is configured with

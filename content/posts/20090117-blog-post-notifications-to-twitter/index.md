@@ -2,7 +2,8 @@
 title: Blog post notifications to Twitter
 aliases: /posts/2009-01-blog-post-notifications-to-twitter
 date: 2009-01-17 10:45:12
-tags: [Content Management,Wordpress,Twitter,PHP ]
+categories: [ "Linux", "Open Source", "Content Creation" ]
+tags: [ "Content Management", "Wordpress", "Twitter", "PHP" ]
 summary: Send new Wordpress blog notifications to Twitter
 sidebar: true
 images: hero.webp

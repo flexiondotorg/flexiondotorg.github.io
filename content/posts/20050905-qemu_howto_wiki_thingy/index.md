@@ -2,7 +2,8 @@
 title: QEMU How-To Wiki Thingy
 aliases: /posts/2005-09-qemu_howto_wiki_thingy/
 date: 2005-09-05 10:07:34
-tags: [ Linux,Virtualisation,QEMU,HantsLUG ]
+categories: [ "Linux", "Open Source" ]
+tags: [ "Virtualisation", "QEMU" ]
 summary: Sharing knowledge about QEMU via a Wiki
 sidebar: true
 images: hero.webp

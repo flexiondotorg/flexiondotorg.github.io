@@ -2,8 +2,9 @@
 title: Powerbook G3 (Old World) Ubuntu Install
 aliases: /posts/2006-01-powerbook_g3_old_world_ubuntu_install
 date: 2006-01-09 11:28:54
-tags: [ Linux,Ubuntu,PowerBook G3,Mac ]
-summary: Installing UBuntu on a PowerBook G3 for hack value
+categories: [ "Linux", "Open Source", "Tutorial" ]
+tags: [ "Ubuntu", "PowerBook G3", "Mac" ]
+summary: Installing Ubuntu on a PowerBook G3 for hack value
 sidebar: true
 images: hero.webp
 hero: hero.webp

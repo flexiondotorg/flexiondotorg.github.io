@@ -2,7 +2,8 @@
 title: LXC on Arch Linux
 aliases: /posts/2014-04-lxc-on-arch-linux
 date: 2014-04-15 02:44:11
-tags: [ Linux,Arch Linux,Containers,LXC,Debian ]
+categories: [ "Linux", "Open Source", "Tutorial" ]
+tags: [ "Arch Linux", "Containers", "LXC", "Debian" ]
 summary: A rough guide to running Debian containers on Arch Linux with LXC
 sidebar: true
 images: hero.webp

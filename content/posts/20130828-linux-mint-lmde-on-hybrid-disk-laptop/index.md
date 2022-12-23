@@ -2,7 +2,8 @@
 title: Linux Mint LMDE on Hybrid Disk Laptop
 aliases: /posts/2013-08-linux-mint-lmde-on-hybrid-disk-laptop
 date: 2013-08-28 20:10:09
-tags: [ Linux,Linux Mint,Debian,LMDE,MATE Desktop,SSD,Python,btrfs ]
+categories: [ "Linux", "Open Source", "Tutorial", "Computer Hardware" ]
+tags: [ "Linux Mint", "Debian", "LMDE", "MATE Desktop", "Python", "btrfs", "F2FS", "ThinkPad T43p" ]
 summary: Installing Linux Mint Debian Edition (LMDE) on a Laptop with Hybrid Disk
 sidebar: true
 images: hero.webp

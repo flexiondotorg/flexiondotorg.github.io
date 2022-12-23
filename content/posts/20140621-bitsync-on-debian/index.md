@@ -2,7 +2,8 @@
 title: Setting up BitSync on Debian
 aliases: /posts/2014-06-bitsync-on-debian
 date: 2014-06-21 12:00:00
-tags: [ Linux,Debian,BitTorrent Sync,btsync,Torrent,syncthing,Dropbox ]
+categories: [ "Linux", "Tutorial", "Self Hosting" ]
+tags: [ "Debian", "BitTorrent Sync", "btsync", "BitSync", "Torrent", "syncthing", "Dropbox" ]
 summary: Setting up BitTorrent Sync on Debian
 sidebar: true
 images: hero.webp

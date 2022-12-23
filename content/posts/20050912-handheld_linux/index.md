@@ -2,7 +2,8 @@
 title: Handheld Linux
 aliases: /posts/2005-09-handheld_linux/
 date: 2005-09-12 10:27:05
-tags: [ Libretto CT100,PocketPC,iPAQ 3970,Familiar Linux,Linux,Debian ]
+categories: [ "Linux", "Open Source", "Gadgets", "Computer Hardware" ]
+tags: [ "Libretto CT100", "PocketPC", "iPAQ 3970", "Familiar Linux", "Debian" ]
 summary: Craving a handheld Linux device
 sidebar: true
 images: hero.webp

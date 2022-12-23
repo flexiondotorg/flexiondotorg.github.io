@@ -2,7 +2,8 @@
 title: openSUSE
 slug: opensuse
 date: 2014-02-01 00:00:00
-tags: ["openSUSE","MATE Desktop","C","GTK","Python","Linux","Google Summer of Code","Mentor"]
+categories: ["Linux", "Development", "Open Source"]
+tags: ["openSUSE", "MATE Desktop", "C", "GTK", "Python", "Google Summer of Code", "Mentor"]
 summary: Student mentor for Google Summer of Code 2014
 sidebar: false
 images: hero.webp

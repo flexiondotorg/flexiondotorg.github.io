@@ -2,7 +2,8 @@
 title: PlayStation 3 compatible MPEG-4 container repacker
 aliases: /posts/2009-04-ps3-mpeg-4-container-repacker
 date: 2009-04-23 17:09:11
-tags: [Linux,MPEG-4,iPlayer,PlayStation 3,Bash ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Gadgets", "Entertainment" ]
+tags: [ "MPEG-4", "iPlayer", "PlayStation 3", "Bash", "BBC" ]
 summary: Automatically repack MPEG-4 video files for PlayStation 3 compatibility
 sidebar: true
 images: hero.webp

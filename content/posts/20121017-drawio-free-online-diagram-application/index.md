@@ -1,8 +1,10 @@
 ---
 title: draw.io - Draw diagrams online, free
+slug: drawio-draw-diagrams-online-free
 aliases: /posts/2012-10-draw-io-diagrams-online-free
 date: 2012-10-17 13:11:56
-tags: [ Web Applications ]
+categories: [ "Content Creation" ]
+tags: [ "Web Applications" ]
 summary: A web based data flow diagram application
 sidebar: true
 images: hero.webp

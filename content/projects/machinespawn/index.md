@@ -2,7 +2,8 @@
 title: "machinespawn"
 slug: machinespawn
 date: 2022-10-19 00:00:00
-tags: ["Linux", "Bash", "systemd", "Container", "Ubuntu", "Debian"]
+categories: ["Linux", "Development", "Open Source"]
+tags: ["Bash", "systemd", "Containers", "Virtualization", "Ubuntu", "Debian", "CI", "CD"]
 summary: Quickly stand up systemd-nspawn containers for development or CI/CD
 sidebar: false
 images: hero.webp

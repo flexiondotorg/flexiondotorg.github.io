@@ -2,7 +2,8 @@
 title: Install nginx on Debian
 aliases: /posts/2013-03-nginx-on-debian-squeeze-and-wheezy
 date: 2013-03-14 18:09:21
-tags: [ Linux,Debian,nginx ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting" ]
+tags: [ "Debian", "nginx", "ufw" ]
 summary: Installing nginx on a Debian (Squeeze) 6.0 and (wheezy) 7.0
 sidebar: true
 images: hero.webp

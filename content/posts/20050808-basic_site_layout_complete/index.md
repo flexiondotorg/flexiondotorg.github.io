@@ -2,7 +2,8 @@
 title: Basic site layout complete
 aliases: /posts/2005-08-basic_site_layout_complete/
 date: 2005-08-08 09:27:44
-tags: [ Content Management,Jaws ]
+categories: [ "Open Source", "Content Creation" ]
+tags: [ "Content Management", "Jaws", "PHP" ]
 summary: Website look and feel with Jaws
 sidebar: true
 images: hero.webp

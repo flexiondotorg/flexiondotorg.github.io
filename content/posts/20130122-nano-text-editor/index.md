@@ -2,7 +2,8 @@
 title: The nano text editor
 aliases: /posts/2013-01-nano-text-editor
 date: 2013-01-22 15:25:47
-tags: [ Linux ]
+categories: [ "Linux", "Open Source", "Tutorial", "Content Creation", "Self Hosting" ]
+tags: [ "nano", "pico", "Nikola" ]
 summary: Some quality of life improvements for nano text editor
 sidebar: true
 images: hero.webp

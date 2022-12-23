@@ -2,7 +2,8 @@
 title: Home Cinema is complete!
 aliases: /posts/2005-11-home_cinema_is_complete/
 date: 2005-11-05 11:52:46
-tags: [ Home Cinema ]
+categories: [ "Home Cinema" ]
+#tags: [ ]
 summary: After 2 years of planning a home cinema appears
 sidebar: true
 images: hero.webp

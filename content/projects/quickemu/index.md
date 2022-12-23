@@ -2,7 +2,8 @@
 title: "Quickemu"
 slug: quickemu
 date: 2020-03-15 00:00:00
-tags: ["Linux", "Bash", "QEMU", "Windows", "macOS", "Virtualisation", "SPICE", "VirtIO", "VirGL"]
+categories: ["Linux", "Development", "Open Source"]
+tags: ["Bash", "QEMU", "Windows", "macOS", "Virtualisation", "SPICE", "VirtIO", "VirGL", "Hyper-V", "KVM"]
 summary: Quickly create and run optimised Windows, macOS and Linux virtual machines
 sidebar: false
 images: hero.webp

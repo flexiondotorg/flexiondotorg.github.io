@@ -2,7 +2,8 @@
 title: Installing GNOME 3 on Ubuntu 11.10
 aliases: /posts/2011-12-gnome-3-shell-ubuntu-11-10-oneiric
 date: 2011-12-09 16:21:03
-tags: [GNOME,Linux,Ubuntu,Unity ]
+categories: [ "Linux", "Open Source", "Tutorial" ]
+tags: [ "GNOME", "Ubuntu", "Unity" ]
 summary: Creating a pure GNOME 3 experience on Ubuntu 11.10
 sidebar: true
 images: hero.webp

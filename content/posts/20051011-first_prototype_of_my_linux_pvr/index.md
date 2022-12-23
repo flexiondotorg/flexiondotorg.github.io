@@ -2,7 +2,8 @@
 title: First Prototype of my Linux PVR
 aliases: /posts/2005-10-first_prototype_of_my_linux_pvr/
 date: 2005-10-11 11:05:06
-tags: [ PVR,DVB-T,Home Cinema,MythTV,Linux,Freeview ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Entertainment" ]
+tags: [ "PVR", "DVB-T", "MythTV", "Freeview" ]
 summary: Building a prototype Linux PVR with KnoppMyth
 sidebar: true
 images: hero.webp

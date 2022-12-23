@@ -2,7 +2,8 @@
 title: Shotwell 0.11 PPA available for Ubuntu Lucid and Maverick
 aliases: /posts/2011-08-shotwell-ppa-for-ubuntu-lucid-maverick
 date: 2011-08-30 11:05:50
-tags: [Linux,Ubuntu,Shotwell,GNOME,PPA ]
+categories: [ "Linux", "Open Source", "Development" ]
+tags: [ "Ubuntu", "Shotwell", "GNOME", "PPA" ]
 summary: Showell 0.11 is available in a PPA for Ubuntu 10.04 & 10.10
 sidebar: true
 images: hero.webp

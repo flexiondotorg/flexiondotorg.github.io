@@ -2,7 +2,8 @@
 title: Zindus contact sync for Thunderbird and Zimbra
 aliases: /posts/2008-01-zindus-contact-sync-for-thunderbird-and-zimbra
 date: 2008-01-10 15:41:24
-tags: [Zimbra,Zindus,Thunderbird,Lightning,Messaging,Linux]
+categories: [ "Linux", "Open Source" ]
+tags: [ "Zimbra", "Zindus", "Thunderbird", "Lightning", "Messaging" ]
 summary: Zimbra contact syncing for Thunderbird on Linux
 sidebar: true
 images: hero.webp

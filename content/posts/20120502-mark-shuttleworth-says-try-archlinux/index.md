@@ -4,7 +4,8 @@ aliases:
  - /posts/2012-05-mark-shuttleworth-says-try-archlinux
  - /posts/mark-shuttleworth-says-try-archlinux
 date: 2012-05-02 19:00:19
-tags: [Ubuntu,Arch Linux,Linux ]
+categories: [ "Linux", "Open Source" ]
+tags: [ "Ubuntu", "Arch Linux" ]
 summary: My experiences switching from Ubuntu to Arch Linux
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: Hacking WordTwit into WordDent
 aliases: /posts/2009-01-hacking-wordtwit-worddent
 date: 2009-01-23 18:24:20
-tags: [Content Management,Wordpress,identi.ca,PHP ]
+categories: [ "Linux", "Open Source", "Development" ]
+tags: [ "Content Management", "Wordpress", "identi.ca", "PHP" ]
 summary: Automatically post Wordpress blog notification to Identi.ca
 sidebar: true
 images: hero.webp

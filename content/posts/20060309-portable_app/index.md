@@ -2,7 +2,8 @@
 title: Portable app
 aliases: /posts/2006-03-portable_app
 date: 2006-03-09 05:40:07
-tags: [Windows ]
+categories: [ "Development" ]
+tags: [ "Windows" ]
 summary: Working around corporate Windows policies with Portable Apps
 sidebar: true
 images: hero.webp

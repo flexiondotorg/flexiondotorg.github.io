@@ -2,7 +2,8 @@
 title: Spring cleaning Arch Linux
 aliases: /posts/2013-05-spring-cleaning-arch-linux
 date: 2013-05-07 18:09:21
-tags: [ Arch Linux,pacman,packer ]
+categories: [ "Linux", "Open Source", "Tutorial" ]
+tags: [ "Arch Linux", "pacman", "packer" ]
 summary: How to clean up installed packages on Arch Linux.
 sidebar: true
 images: hero.webp

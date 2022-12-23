@@ -2,7 +2,8 @@
 title: Get some AIR
 aliases: /posts/2008-02-get-some-air
 date: 2008-02-12 12:53:03
-tags: [Linux,dd,GUI,Ubuntu ]
+categories: [ "Linux" ]
+tags: [ "dd", "dcfldd", "Ubuntu" ]
 summary: A graphical frontend for dd
 sidebar: true
 images: hero.webp

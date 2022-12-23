@@ -2,7 +2,8 @@
 title: gLabels 2.2.1
 aliases: /posts/2008-01-glabels-221
 date: 2008-01-30 11:45:57
-tags: [Linux,GNOME,Ubuntu,Label Printing ]
+categories: [ "Linux", "Open Source" ]
+tags: [ "GNOME", "Ubuntu", "Label Printing", "Printing" ]
 summary: Accurate label printing for Linux is restored
 sidebar: true
 images: hero.webp

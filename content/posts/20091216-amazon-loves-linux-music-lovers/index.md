@@ -2,7 +2,8 @@
 title: Amazon Loves Linux Music Lovers
 aliases: /posts/2009-12-amazon-loves-linux-music-lovers
 date: 2009-12-16 22:30:48
-tags: [Amazon,Linux,MP3,Ubuntu ]
+categories: [ "Linux", "Entertainment" ]
+tags: [ "Amazon", "MP3", "Ubuntu" ]
 summary: Amazon treats Linux users like 1st class citizens
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: Project Minerva is coming home
 aliases: /posts/2006-04-project_minerva_is_coming_home
 date: 2006-04-26 17:42:11
-tags: [General,Minerva,PHP ]
+categories: [ "Open Source", "Development" ]
+tags: [ "Minerva", "PHP", "Content Management" ]
 summary: It's coming home. Minerva is coming home.
 sidebar: true
 images: hero.webp

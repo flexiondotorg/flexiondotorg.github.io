@@ -2,7 +2,8 @@
 title: Introducing Stanley, a new theme for Jaws
 aliases: /posts/2005-08-introducing_stanley_a_new_theme_for_jaws/
 date: 2005-08-12 09:29:53
-tags: [ Content Management,Jaws ]
+categories: [ "Open Source", "Development" ]
+tags: [ "Content Management", "Jaws", "PHP" ]
 summary: A new theme for Jaws called Stanley
 sidebar: true
 images: hero.webp

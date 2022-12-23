@@ -2,7 +2,8 @@
 title: "Ubuntu Podcast"
 slug: ubuntu-podcast
 date: 2015-02-01 00:00:00
-tags: ["Ubuntu","Podcast","Linux","Open Source","Broadcasting","Live Performance","Streaming","Audio Production","OggCamp","FOSS Talk Live"]
+categories: ["Linux", "Broadcasting", "Open Source"]
+tags: ["Ubuntu", "Podcast", "Live Show", "Live Streaming", "Audio Production", "OggCamp", "FOSS Talk Live"]
 summary: A weekly family-friendly audio magazine for the Ubuntu community
 sidebar: false
 images: hero.webp

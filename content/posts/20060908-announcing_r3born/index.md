@@ -2,7 +2,8 @@
 title: Announcing R3-born
 aliases: /posts/2006-09-announcing_r3born
 date: 2006-09-08 17:48:47
-tags: [R3-born,Content Management,PHP ]
+categories: [ "Open Source", "Development" ]
+tags: [ "R3-born", "Content Management", "PHP" ]
 summary: Minerva is r3-born
 sidebar: true
 images: hero.webp

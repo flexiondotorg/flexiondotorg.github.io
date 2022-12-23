@@ -1,19 +1,21 @@
 ---
 title: Install Sun Java 6 JRE and JDK from .deb packages
+slug: install-sun-java-6-jre-and-jdk-from-deb-packages
 aliases: /posts/2012-01-install-sun-java-6-jre-jdk-from-deb-packages
 date: 2012-01-16 13:20:05
-tags: [Linux,Ubuntu,Debian,Java,JDK,JRE,Bash ]
+categories: [ "Linux", "Open Source", "Development" ]
+tags: [ "Ubuntu", "Debian", "Java", "JDK", "JRE", "Bash" ]
 summary: An alternative approach to install Sun Java 6 on Ubuntu
 sidebar: true
 images: hero.webp
 hero: hero.webp
 ---
 
-Canonical disabled my Java PPA at the end of last week. So I've developed
-another solution for installing Java on Ubuntu which doesn't infringe any
-copyrights, licenses, terms of use or CoC's. However, by running this script
-to download Java you acknowledge that you have read and accepted the terms of
-the Oracle end user license agreement.
+[Canonical](https://canonical.com) disabled my Java PPA at the end of last week.
+So I've developed another solution for installing Java on Ubuntu which doesn't
+infringe any copyrights, licenses, terms of use or CoC's. However, by running
+this script to download Java you acknowledge that you have read and accepted the
+terms of the Oracle end user license agreement.
 
   * <http://www.oracle.com/technetwork/java/javase/terms/license/>
 

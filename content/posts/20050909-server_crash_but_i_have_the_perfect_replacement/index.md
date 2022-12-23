@@ -1,8 +1,10 @@
 ---
-title: Server crash! But I have the perfect replacement.
+title: Server crash! But I have the perfect replacement
+slug: server-crash-but-i-have-the-perfect-replacement
 aliases: /posts/2005-09-server_crash_but_i_have_the_perfect_replacement/
 date: 2005-09-09 10:18:22
-tags: [ Libretto CT100,Linux ]
+categories: [ "Linux", "Computer Hardware" ]
+tags: [ "Libretto CT100", "Debian" ]
 summary: Running a Linux server on a Libretto CT100
 sidebar: true
 images: hero.webp

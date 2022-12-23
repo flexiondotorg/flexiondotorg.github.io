@@ -2,7 +2,8 @@
 title: Simple iCal Server
 aliases: /posts/2008-01-simple-ical-server
 date: 2008-01-09 23:20:28
-tags: [iCal,Lighttpd,Thunderbird,PHP ]
+categories: [ "Linux", "Open Source", "Self Hosting" ]
+tags: [ "iCal", "Lighttpd", "Thunderbird", "PHP", "Calendar" ]
 summary: Creating a self-hosted shared calendar
 sidebar: true
 images: hero.webp

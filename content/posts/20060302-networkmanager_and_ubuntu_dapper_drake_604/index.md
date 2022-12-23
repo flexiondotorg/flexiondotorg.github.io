@@ -2,7 +2,8 @@
 title: NetworkManager and Ubuntu Dapper Drake 6.04
 aliases: /posts/2006-03-networkmanager_and_ubuntu_dapper_drake_604
 date: 2006-03-02 11:26:39
-tags: [Linux,Ubuntu ]
+categories: [ "Linux", "Open Source" ]
+tags: [ "Ubuntu", "NetworkManager" ]
 summary: Fixing NetworkManager applet on Ubuntu 6.04
 sidebar: true
 images: hero.webp

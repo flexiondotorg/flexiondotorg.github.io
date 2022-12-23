@@ -2,7 +2,8 @@
 title: Converting Matroska to M2TS for PS3 and Mediatomb
 aliases: /posts/2009-04-converting-matroska-mkv-m2ts-ps3-mediatomb
 date: 2009-04-15 16:19:24
-tags: [Linux,Matroska,MP4,M2TS,PlayStation 3,DLNA,UPnP,Bash ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Self Hosting", "Gadgets", "Development" ]
+tags: [ "Matroska", "MP4", "M2TS", "PlayStation 3", "DLNA", "UPnP", "Bash" ]
 summary: Fast conversion of Matroska video to MPEG2-TS
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: "Retro Home"
 slug: retro-home
 date: 2020-07-21 00:00:00
-tags: ["Linux", "Raspberry Pi", "GPIO", "Retro", "Gaming", "Ludo", "Ubuntu", "Bash", "Python", "GNOME", "libretro"]
+categories: ["Linux", "Development", "Open Source", "Retro", "Entertainment"]
+tags: ["Raspberry Pi", "GPIO", "Gaming", "Ludo", "Ubuntu", "Bash", "Python", "GNOME", "libretro", "debootstrap", "Emulation"]
 summary: A retro-gaming operating system for Raspberry Pi built with Ubuntu and Ludo
 sidebar: false
 images: hero.webp

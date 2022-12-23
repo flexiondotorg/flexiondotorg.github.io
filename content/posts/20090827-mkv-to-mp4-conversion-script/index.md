@@ -2,7 +2,8 @@
 title: MKV to MPEG-4 conversion script
 aliases: /posts/2009-08-mkv-to-mp4-conversion-script
 date: 2009-08-27 20:48:58
-tags: [Linux,Matroska,MPEG-4,Bash,AAC 5.1,AC3,DTS,PlayStation 3,Xbox 360 ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Self Hosting", "Gadgets" ]
+tags: [ "Matroska", "H.264", "Bash", "AAC 5.1", "AC3", "DTS", "PlayStation 3", "Xbox 360", "faac", "neroAacEnc", "MP4Box" ]
 summary: Creating PlayStation 3 and Xbox 360 compatible MPEG-4 videos
 sidebar: true
 images: hero.webp

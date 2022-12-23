@@ -2,7 +2,8 @@
 title: Flexion.Org Server Migrated
 aliases: /posts/2006-04-flexionorg_server_migrated
 date: 2006-04-04 15:20:29
-tags: [Linux,VPS,Debian ]
+categories: [ "Linux", "Open Source", "Self Hosting" ]
+tags: [ "VPS", "Debian" ]
 summary: After 7 shared on a shared host it's time for a VPS
 sidebar: true
 images: hero.webp

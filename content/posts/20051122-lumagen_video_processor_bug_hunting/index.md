@@ -2,7 +2,8 @@
 title: Lumagen Video Processor Bug Hunting
 aliases: /posts/2005-11-lumagen_video_processor_bug_hunting/
 date: 2005-11-22 12:02:37
-tags: [ Home Cinema,Lumagen ]
+categories: [ "Home Cinema", "Entertainment" ]
+tags: [ "Lumagen", "VisionDVI", "FPGA", "Scaler", "Freeview" ]
 summary: Hunting for bugs in an FPGA video processor
 sidebar: true
 images: hero.webp

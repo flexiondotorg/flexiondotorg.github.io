@@ -2,7 +2,8 @@
 title: Ubuntu Backports and PLF Repositories
 aliases: /posts/2005-12-ubuntu_backports_and_plf_repositories/
 date: 2005-12-21 11:19:04
-tags: [ Linux,Ubuntu ]
+categories: [ "Open Source", "Linux" ]
+tags: [ "Ubuntu" ]
 summary: The Penguin Libration Front provide patent encumbered packages for Ubuntu
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: Headless cloudprint server on Debian for MFC-7360N
 aliases: /posts/2014-07-headless-cloudprint-server-for-mfc-7360n-on-debian
 date: 2014-07-05 12:00:00
-tags: [ Linux,Cloudprint,Debian,MFC-7360N,Android,Chrome ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting" ]
+tags: [ "Cloudprint", "Debian", "MFC-7360N", "Android", "Chrome", "CUPS", "Apache", "Printing" ]
 summary: Create a headless Cloudprint server on Debian for MFC-7360N
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: Debian 3.1 on Libretto CT100
 aliases: /posts/2005-09-debian_31_on_libretto_ct100/
 date: 2005-09-09 10:26:14
-tags: [ Libretto CT100,ThinkPad,Debian,Linux,Xfce ]
+categories: [ "Linux", "Open Source", "Computer Hardware" ]
+tags: [ "Libretto CT100", "ThinkPad 600X", "Debian", "Xfce" ]
 summary: Running Xfce & Firefox on the Toshiba Libretto CT100
 sidebar: true
 images: hero.webp

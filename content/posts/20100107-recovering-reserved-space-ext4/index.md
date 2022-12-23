@@ -2,7 +2,8 @@
 title: Recovering reserved space from ext4
 aliases: /posts/2010-01-recovering-reserved-space-ext4
 date: 2010-01-07 20:42:04
-tags: [Linux,Ext3,Ext4,Reserved space ]
+categories: [ "Linux", "Open Source", "Self Hosting" ]
+tags: [ "Ext3", "Ext4", "Reserved space" ]
 summary: Reclaim the 5% of disk space Ext4 reserves by default
 sidebar: true
 images: hero.webp

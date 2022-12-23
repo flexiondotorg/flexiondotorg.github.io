@@ -2,7 +2,8 @@
 title: get-iplayer on Debian 6.0
 aliases: /posts/2013-03-get-iplayer-on-debian-squeeze
 date: 2013-03-25 18:09:21
-tags: [ Linux,Debian,iPlayer ]
+categories: [ "Linux", "Open Source", "Tutorial", "Entertainment" ]
+tags: [ "Debian", "iPlayer", "get-iplayer", "BBC" ]
 summary: Installing get-iplayer on a Debian (Squeeze) 6.0
 sidebar: true
 images: hero.webp

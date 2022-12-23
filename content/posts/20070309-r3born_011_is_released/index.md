@@ -2,7 +2,8 @@
 title: R3-born 0.1.1 is released!
 aliases: /posts/2007-03-r3born_011_is_released
 date: 2007-03-09 21:59:45
-tags: [R3-born,Content Management,PHP ]
+categories: [ "Open Source", "Development" ]
+tags: [ "R3-born", "Content Management", "PHP" ]
 summary: R3-born is good enough to run a website
 sidebar: true
 images: hero.webp

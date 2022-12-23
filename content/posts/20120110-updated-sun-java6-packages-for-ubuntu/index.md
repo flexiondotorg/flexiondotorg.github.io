@@ -3,7 +3,8 @@ title: Sun Java 1.6.0.30 packages for Ubuntu
 aliases: /posts/2012-01-updated-sun-java6-packages-for-ubuntu
 date: 2012-01-10 10:53:50
 lastmod: 2012-01-16
-tags: [Linux,Ubuntu,Debian,Java,JDK,JRE,PPA ]
+categories: [ "Linux", "Open Source", "Development" ]
+tags: ["Ubuntu", "Debian", "Java", "JDK", "JRE", "PPA" ]
 summary: Get Sun Java 1.6.0 packages from a PPA
 sidebar: true
 images: hero.webp

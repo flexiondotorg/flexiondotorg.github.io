@@ -2,7 +2,8 @@
 title: Basic Debian Setup for Squeeze and Wheezy
 aliases: /posts/2013-08-basic-debian-setup-for-squeeze-and-wheezy
 date: 2013-08-06 20:07:09
-tags: [ Linux,Debian,LXC,QEMU,KVM,Open Media Vault,OMV ]
+categories: [ "Linux", "Open Source", "Tutorial", "Security" ]
+tags: [ "Debian", "LXC", "QEMU", "KVM", "Open Media Vault" ]
 summary: Consistent server configuration for Debian Squeeze & Wheezy
 sidebar: true
 images: hero.webp

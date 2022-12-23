@@ -2,7 +2,8 @@
 title: "deb-get"
 slug: deb-get
 date: 2022-04-18 00:00:00
-tags: ["Linux", "Bash", "Ubuntu", "Debian", "GitHub", "dpkg", "apt"]
+categories: ["Linux", "Development", "Open Source"]
+tags: ["Bash", "Ubuntu", "Debian", "GitHub", "dpkg", "apt"]
 summary: apt-get functionality for .debs published in GitHub release or 3rd party repositories
 sidebar: false
 images: hero.webp

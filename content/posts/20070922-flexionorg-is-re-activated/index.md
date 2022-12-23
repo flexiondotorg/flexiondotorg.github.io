@@ -2,7 +2,8 @@
 title: Flexion.Org is re-activated!
 aliases: /posts/2007-09-flexionorg-is-re-activated
 date: 2007-09-22 11:22:43
-tags: [ Wordpress,Jaws,Content Management ]
+categories: [ "OPen Source", "Content Creation" ]
+tags: [ "Wordpress", "Jaws", "Content Management", "PHP" ]
 summary: Jaws dropped in a move to Wordpress
 sidebar: true
 images: hero.webp

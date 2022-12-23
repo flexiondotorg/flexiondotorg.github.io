@@ -2,7 +2,8 @@
 title: StarTech S354UER Review
 aliases: /posts/2010-01-startech-s354uer-review
 date: 2010-01-02 16:00:25
-tags: [Linux,StarTech S354UER ]
+categories: [ "Linux", "Computer Hardware", "Self Hosting" ]
+tags: [ "StarTech S354UER", "RAID", "Ext4" ]
 summary: Creating a 4x 1.5TB storage array with the StarTech S354UER
 sidebar: true
 images: hero.webp

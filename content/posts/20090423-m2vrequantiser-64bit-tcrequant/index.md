@@ -2,7 +2,8 @@
 title: M2VRequantiser for 32-bit and 64-bit Linux
 aliases: /posts/2009-04-m2vrequantiser-64bit-tcrequant
 date: 2009-04-23 16:47:20
-tags: [Linux,M2VRequantiser,tcrequant,MPEG-2,C ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Development" ]
+tags: [ "M2VRequantiser", "tcrequant", "MPEG-2", "C" ]
 summary: Finding a MPEG-2 video requantising solution for Linux
 sidebar: true
 images: hero.webp

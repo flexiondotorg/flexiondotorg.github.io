@@ -2,7 +2,8 @@
 title: Headless Debian 6.0 Torrent Server
 aliases: /posts/2013-03-transmission-on-headless-debian-squeeze
 date: 2013-03-21 17:35:22
-tags: [ Linux,Debian,Torrent,Transmission,Server,Headless ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting" ]
+tags: [ "Debian", "Torrent", "Transmission", "Headless", "Android" ]
 summary: Installing Transmission daemon on headless Debian (Squeeze) 6.0
 sidebar: true
 images: hero.webp

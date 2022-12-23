@@ -2,7 +2,8 @@
 title: NFS and CIFS mounts with systemd
 aliases: /posts/2014-07-nfs-and-cifs-mounts-with-systemd
 date: 2013-07-26 12:00:00
-tags: [ Linux,systemd,CIFS,NFS ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting" ]
+tags: [ "systemd", "CIFS", "NFS" ]
 summary: Wait for network when mounting NFS and CIFS volumes
 sidebar: true
 images: hero.webp

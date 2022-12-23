@@ -2,7 +2,8 @@
 title: New Mountain Bike
 aliases: /posts/2006-02-new_mountain_bike
 date: 2006-02-14 12:49:30
-tags: [Gadgets,Bike ]
+categories: [ "Gadgets", "Health & Fitness" ]
+tags: [ "Trek 4300 Disc 2006", "Mountain Bike" ]
 summary: A new bike to tackle those mountains
 sidebar: true
 images: hero.webp

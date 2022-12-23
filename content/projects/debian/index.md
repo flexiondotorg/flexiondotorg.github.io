@@ -2,7 +2,8 @@
 title: Debian
 slug: debian
 date: 2014-10-01 00:00:00
-tags: ["Debian","Ubuntu","MATE Desktop","Linux","dpkg","apt"]
+categories: ["Linux", "Development", "Open Source"]
+tags: ["Debian", "Ubuntu", "MATE Desktop", "dpkg", "apt"]
 summary: Package maintainer for (mostly) MATE Desktop in Debian and Ubuntu
 sidebar: false
 images: hero.webp

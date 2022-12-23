@@ -2,7 +2,8 @@
 title: Today I have been mostly lovin' Munin
 aliases: /posts/2006-04-today_i_have_been_mostly_lovin_munin
 date: 2006-04-07 17:00:00
-tags: [Linux,Server Monitoring ]
+categories: [ "Linux", "Open Source", "Self Hosting" ]
+tags: [ "Server Monitoring", "Munin" ]
 summary: Munin offers simple system monitoring graphs
 sidebar: true
 images: hero.webp

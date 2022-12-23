@@ -2,7 +2,8 @@
 title: Long weekend in Dublin
 aliases: /posts/2006-02-long_weekend_in_dublin
 date: 2006-02-27 09:57:32
-tags: [Travel,Dublin,Ireland ]
+categories: [ "Travel" ]
+tags: [ "Dublin", "Ireland" ]
 summary: Flying to Dublin for 10p to drink Guinness & Jameson Whiskey
 sidebar: true
 images: hero.webp

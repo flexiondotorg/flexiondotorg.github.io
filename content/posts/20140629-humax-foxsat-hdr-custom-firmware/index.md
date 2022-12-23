@@ -2,7 +2,8 @@
 title: Humax Foxsat HDR Custom Firmware
 aliases: /posts/2014-06-humax-foxsat-hdr-custom-firmware
 date: 2014-06-29 12:00:00
-tags: [ Humax Foxsat HDR,Linux,Firmware,Hacking ]
+categories: [ "Linux", "Home Cinema", "Gadgets" ]
+tags: [ "Humax Foxsat HDR", "Firmware", "Hacking" ]
 summary: Hard disk upgrades and custom firmware on the Humx Foxsat HDR
 sidebar: true
 images: hero.webp

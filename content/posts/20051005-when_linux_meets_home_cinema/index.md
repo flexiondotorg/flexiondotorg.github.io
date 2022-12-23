@@ -2,7 +2,8 @@
 title: When Linux meets Home Cinema
 aliases: /posts/2005-10-when_linux_meets_home_cinema/
 date: 2005-10-05 11:02:43
-tags: [ PVR,DVB-T,Home Cinema,MythTV,Linux,Freeview ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Entertainment" ]
+tags: [ "PVR", "DVB-T", "MythTV", "Freeview" ]
 summary: Combining my interests in Home Cinema & Linux
 sidebar: true
 images: hero.webp

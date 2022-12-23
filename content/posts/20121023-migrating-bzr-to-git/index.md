@@ -2,7 +2,8 @@
 title: Migrating Bazaar to Git
 aliases: /posts/2012-10-migrating-bzr-to-git
 date: 2012-10-23 11:50:00
-tags: [ Bazaar,Git,GitHub ]
+categories: [ "Linux", "Open Source", "Development", "Tutorial" ]
+tags: [ "Bazaar", "Git", "GitHub" ]
 summary: A rough guide to migrating Bazaar repositories to GitHub
 sidebar: true
 images: hero.webp

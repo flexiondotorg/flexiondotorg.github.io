@@ -2,7 +2,8 @@
 title: OpenMediaVault on Debian
 aliases: /posts/2014-06-openmediavault-on-debian
 date: 2014-06-22 12:00:00
-tags: [ Linux,Debian,OpenMediaVault,OMV ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting" ]
+tags: [ "Debian", "Open Media Vault" ]
 summary: Manually installing OpenMediaVault on Debian Wheezy
 sidebar: true
 images: hero.webp

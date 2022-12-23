@@ -2,7 +2,8 @@
 title: Leaving Minerva
 aliases: /posts/2005-09-leaving_minerva/
 date: 2005-09-01 09:47:16
-tags: [ Minerva,PHP,Content Management ]
+categories: [ "Open Source", "Content Creation", "Development" ]
+tags: [ "Minerva", "PHP", "Content Management" ]
 summary: Standing down from the Minerva project
 sidebar: true
 images: hero.webp

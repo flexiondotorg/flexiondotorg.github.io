@@ -2,7 +2,8 @@
 title: SSHMenu - SSH Connection Management
 aliases: /posts/2008-02-sshmenu-ssh-connection-management
 date: 2008-02-26 13:21:28
-tags: [GNOME,Linux,Ubuntu,SSH ]
+categories: [ "Linux", "Open Source", "Security" ]
+tags: [ "GNOME", "Ubuntu", "OpenSSH", "SSHMenu" ]
 summary: Managing SSH connections from a GNOME panel applet
 sidebar: true
 images: hero.webp

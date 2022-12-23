@@ -1,8 +1,10 @@
 ---
 title: Raspberry Pi 3 Nextcloud Box running on Ubuntu Core
+slug: raspberry-pi-3-nextcloud-box-running-on-ubuntu-core
 aliases: /posts/2016-12-raspberry-pi-3-powered-nextcloud-box-on-ubuntu-core
 date: 2016-12-13 17:17:00
-tags: [ Ubuntu,Raspberry Pi,Nextcloud,Ubuntu Core,snap ]
+categories: [ "Linux", "Open Source", "Self Hosting", "Tutorial" ]
+tags: [ "Ubuntu", "Raspberry Pi", "Nextcloud", "Ubuntu Core" ]
 summary: Creating a Pi 3 powered Nextcloud Box with Ubuntu Core
 sidebar: true
 images: hero.webp

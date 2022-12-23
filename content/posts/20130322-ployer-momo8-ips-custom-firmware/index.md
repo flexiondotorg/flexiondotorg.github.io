@@ -2,7 +2,8 @@
 title: Ployer Momo8 IPS Custom Firmware
 aliases: /posts/2013-03-ployer-momo8-ips-custom-firmware
 date: 2013-03-22 13:35:34
-tags: [ Android,Tablet,Ployer Momo8 IPS,RK3066,Firmware,ClockWorkMod ]
+categories: [ "Linux", "Open Source", "Computer Hardware", "Gadgets" ]
+tags: [ "Android", "Tablet", "Ployer Momo8 IPS", "RK3066", "Firmware", "Hacking", "ClockWorkMod", "KANG", "ROM" ]
 summary: Ployer Momo8 IPS Custom Firmware with ClockWorkMod
 sidebar: true
 images: hero.webp
@@ -303,17 +304,10 @@ This version includes everything from the previous release plus the changes belo
 
 # Donate
 
-Please consider donating to this project. It is nice to have the effort I've
+~~Please consider donating to this project. It is nice to have the effort I've
 put into this custom firmware recognized. I don't ask for much, it is at your
-discretion, but just think how happy I'll look when I am sipping the beer you bought
-me `:-D`
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="hosted_button_id" value="P6QSGCZG9YNBQ">
-    <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-    <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-</form>
+discretion, but just think how happy I'll look when I am sipping the beer you
+bought me :smile:~~
 
 # Downloads
 

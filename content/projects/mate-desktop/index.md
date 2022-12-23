@@ -2,7 +2,8 @@
 title: "MATE Desktop"
 slug: mate-desktop
 date: 2012-06-01 00:00:00
-tags: ["MATE Desktop","C","GTK","Python","Linux","make"]
+categories: ["Linux", "Development", "Open Source"]
+tags: ["MATE Desktop", "C", "GTK", "Python", "make", "Community"]
 summary: Preserving a traditional desktop metaphor
 sidebar: false
 images: hero.webp

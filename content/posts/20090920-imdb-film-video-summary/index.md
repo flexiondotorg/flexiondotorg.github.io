@@ -2,7 +2,8 @@
 title: IMDB Film Summary as a MPEG-2 video, Part 2
 aliases: /posts/2009-09-imdb-film-video-summary
 date: 2009-09-20 08:48:36
-tags: [ IMDB,MPEG,PHP ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Self Hosting", "Gadgets" ]
+tags: [ "IMDB", "MPEG-2", "PHP" ]
 summary: Improvements to film summaries embedded in videos
 sidebar: true
 images: hero.webp

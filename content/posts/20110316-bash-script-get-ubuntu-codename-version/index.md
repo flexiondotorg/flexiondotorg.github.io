@@ -2,7 +2,8 @@
 title: Bash script to retrieve Ubuntu codenames and versions
 aliases: /posts/2011-03-bash-script-get-ubuntu-codename-version
 date: 2011-03-16 13:44:54
-tags: [Linux,Ubuntu,Bash ]
+categories: [ "Linux", "Open Source", "Development" ]
+tags: [ "Ubuntu", "Bash", "wget" ]
 summary: Get a list of Ubuntu codename and version with wget
 sidebar: true
 images: hero.webp

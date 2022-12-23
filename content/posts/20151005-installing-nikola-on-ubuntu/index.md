@@ -2,7 +2,8 @@
 title: Installing Nikola on Ubuntu
 aliases: /posts/2015-11-installing-nikola-on-ubuntu
 date: 2015-11-05 11:00:00
-tags: [ Nikola,Python,Content Management,Ubuntu,Static Site Generator,virtualenv ]
+categories: [ "Linux", "Open Source", "Content Creation"]
+tags: [ "Nikola", "Python", "Content Management", "Ubuntu", "Static Site Generator", "virtualenv" ]
 summary: How to install Nikola on Ubuntu 14.04 or newer
 sidebar: true
 images: hero.webp

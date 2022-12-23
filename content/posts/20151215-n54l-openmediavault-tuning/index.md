@@ -1,8 +1,10 @@
 ---
 title: HP Microserver N54L power saving and performance tuning using Debian
+slug: hp-microserver-n54l-power-saving-and-performance-tuning-using-debian
 aliases: /posts/2015-12-hp-microserver-n45l-power-saving
 date: 2015-12-16 12:00:00
-tags: [ Linux,Debian,HP MicroServer,N54L ]
+categories: [Linux, "Open Source", "Self Hosting"]
+tags: [ "Linux", "Debian", "HP MicroServer", "N54L", "powertop", "udev", "ethtool", "AMD Turion II Neo" ]
 summary: Configure HP Microserver N54L Power Saving on Debian
 sidebar: true
 images: hero.webp
@@ -140,7 +142,7 @@ More importantly, with four 4TB drives in a RAID-5 configuration
 formatted with XFS and dual bonded gigabit ethernet, I am able to backup
 data to the server at a sustained rate of 105MB/s, which is 0.85 Gbit.
 
-Not too shabby for an AMD Turion II Neo N54L (2.2GHz) `:-D`
+Not too shabby for an AMD Turion II Neo N54L (2.2GHz) :slight_smile:
 
 #### References
 

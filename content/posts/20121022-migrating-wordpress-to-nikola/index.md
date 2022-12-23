@@ -2,7 +2,8 @@
 title: Migrating Wordpress to Nikola
 aliases: /posts/2012-10-migrating-wordpress-to-nikola
 date: 2012-10-22 17:13:43
-tags: [ Nikola,Python,Wordpress,Content Management,Static Site Generator ]
+categories: [ "Linux", "Open Source", "Content Creation", "Tutorial" ]
+tags: [ "Nikola", "Python", "Wordpress", "Content Management", "Static Site Generator" ]
 summary: From a dynamic Wordpress site to static Nikola site
 sidebar: true
 images: hero.webp

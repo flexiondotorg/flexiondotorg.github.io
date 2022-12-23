@@ -2,7 +2,8 @@
 title: "'ere ear!"
 aliases: /posts/2005-08-ere_ear/
 date: 2005-08-24 09:46:37
-tags: [ Gadgets,Music,Headphones ]
+categories: [ "Gadgets" ]
+tags: [ "Sony MDR-EX71SL", "Earbuds" ]
 summary: Sony MDR-EX71SL earbuds bring music to my ears
 sidebar: true
 images: hero.webp

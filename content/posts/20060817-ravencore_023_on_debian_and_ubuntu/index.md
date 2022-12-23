@@ -2,7 +2,8 @@
 title: RavenCore 0.2.3 on Debian and Ubuntu
 aliases: /posts/2006-08-ravencore_023_on_debian_and_ubuntu
 date: 2006-08-17 10:53:53
-tags: [Linux,Debian,RavenCore,Virtual Hosting ]
+categories: [ "Linux", "Open Source", "Self Hosting" ]
+tags: [ "Debian", "RavenCore", "Virtual Hosting", "Ubuntu" ]
 summary: Updated Debian & Ubuntu documentation for RavenCore
 sidebar: true
 images: hero.webp

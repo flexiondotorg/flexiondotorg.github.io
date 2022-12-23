@@ -2,7 +2,8 @@
 title: Python Distributions
 aliases: /posts/2013-06-python-distributions
 date: 2013-06-24 13:11:43
-tags: [ Python,Numpy,Scipy,h5py ]
+categories: [ "Linux", "Open Source", "Development" ]
+tags: [ "Python", "Numpy", "Scipy", "h5py", "Flight Data" ]
 summary: A selection of Python distributions for data analysis
 sidebar: true
 images: hero.webp

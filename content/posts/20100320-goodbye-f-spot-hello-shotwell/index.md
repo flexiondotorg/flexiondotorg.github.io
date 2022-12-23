@@ -1,8 +1,10 @@
 ---
 title: Goodbye F-Spot. Hello Shotwell
+slug: goodbye-f-spot-hello-shotwell
 aliases: /posts/2010-03-goodbye-f-spot-hello-shotwell
 date: 2010-03-20 15:39:17
-tags: [Linux,GNOME,Shotwell,F-Spot,Ubuntu,Photo Organiser ]
+categories: [ "Linux", "Open Source", "Development" ]
+tags: [ "GNOME", "Shotwell", "F-Spot", "Ubuntu", "Photo Organiser" ]
 summary: F-Spot you serve me well, but here comes Shotwell
 sidebar: true
 images: hero.webp

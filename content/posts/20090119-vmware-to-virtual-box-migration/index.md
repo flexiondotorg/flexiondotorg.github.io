@@ -2,7 +2,8 @@
 title: VMWare to VirtualBox Migration
 aliases: /posts/2009-01-vmware-to-virtual-box-migration
 date: 2009-01-19 17:52:49
-tags: [Linux,VirtualBox,VMware,Virtualisation ]
+categories: [ "Linux", "Open Source" ]
+tags: [ "VirtualBox", "VMware", "Virtualisation" ]
 summary: I switched from VMWare to VirtualBox
 sidebar: true
 images: hero.webp

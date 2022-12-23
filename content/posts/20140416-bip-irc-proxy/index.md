@@ -2,7 +2,8 @@
 title: BIP IRC proxy
 aliases: /posts/2014-04-bip-irc-proxy
 date: 2014-04-16 07:07:09
-tags: [ Linux,Arch Linux,Debian,IRC,IRC Bouncer ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting" ]
+tags: [ "Arch Linux", "Debian", "IRC", "Bouncer", "Proxy" ]
 summary: Installing BIP IRC Proxy on Debian Wheezy & Arch Linux
 sidebar: true
 images: hero.webp

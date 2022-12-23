@@ -1,16 +1,16 @@
 ---
 title: Give XFS a chance. Don't believe the FUD.
+slug: give-xfs-a-chance-dont-believe-the-fud
 aliases: /posts/2010-02-give-xfs-a-chance-dont-believe-the-fud
 date: 2010-02-12 13:14:44
 lastmod: 2012-10-01
-tags: [Linux,XFS,Ext3,Ext4,JFS ]
+categories: [ "Linux", "Open Source", "Self Hosting" ]
+tags: [ "XFS", "Ext3", "Ext4", "JFS" ]
 summary: In which I dispel some myths about XFS and fanboi a little
 sidebar: true
 images: hero.webp
 hero: hero.webp
 ---
-
-**This post was updated in October 2012**
 
 After tinkering with Ext4 I did some research and tested other file systems on
 my new disk arrays. I've concluded that [XFS](http://oss.sgi.com/projects/xfs/),

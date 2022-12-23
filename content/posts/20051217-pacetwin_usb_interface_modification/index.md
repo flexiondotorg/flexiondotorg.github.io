@@ -2,7 +2,8 @@
 title: PaceTwin USB Interface Modification
 aliases: /posts/2005-12-pacetwin_usb_interface_modification/
 date: 2005-12-17 11:17:14
-tags: [ DVB-T,PVR,Home Cinema,PaceTwin,Freeview ]
+categories: [ "Home Cinema", "Entertainment" ]
+tags: [ "DVB-T", "PVR", "PaceTwin", "Freeview" ]
 summary: USB interface modification for the PaceTwin PVR
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: "LINUX Unplugged"
 slug: linux-unplugged
 date: 2014-01-01 00:00:00
-tags: ["Podcast","Linux","Open Source","Broadcasting","Live Performance"]
+categories: ["Linux", "Broadcasting", "Open Source", "Content Creation"]
+tags: ["Podcast", "Live Show"]
 summary: Weekly Linux talk show with no script, no limits and tons of opinion
 sidebar: false
 images: hero.webp

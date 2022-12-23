@@ -2,7 +2,8 @@
 title: Mediatomb 0.12 - Streaming audio and video around the house
 aliases: /posts/2009-02-mediatomb-012-streaming-audio-and-video-around-the-house
 date: 2009-02-07 16:23:39
-tags: [Linux,Mediatomb,MP3,MP4,DLNA,uPNP ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Self Hosting", "Gadgets" ]
+tags: [ "Mediatomb", "MP3", "MP4", "DLNA", "UPnP" ]
 summary: In home streaming via UPnP with Mediatomb
 sidebar: true
 images: hero.webp
@@ -26,7 +27,7 @@ music/videos we might import are immediately reflected in Mediatomb.
 
 Our entire CD library is now available at the click of a button, automatically
 organised by genre, artist and date. We have also created some playlists
-in .m3u or .pls format.
+in `.m3u` or `.pls` format.
 
 New to Mediatomb 0.12 is the ability to scrobble your music to
 [Last.fm](http://www.last.fm), this a killer feature for me and why I chose to

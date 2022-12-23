@@ -2,7 +2,8 @@
 title: nullmailer on Arch Linux
 aliases: /posts/2013-03-nullmailer-on-arch-linux
 date: 2013-03-09 23:27:43
-tags: [ Arch Linux,nullmailer,MTA,MSA,SMTP,SMTPS,Gmail ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting" ]
+tags: [ "Arch Linux", "nullmailer", "MTA", "MSA", "SMTP", "SMTPS", "Gmail" ]
 summary: Configuring nullmailer on Arch Linux to relay email via Gmail
 sidebar: true
 images: hero.webp

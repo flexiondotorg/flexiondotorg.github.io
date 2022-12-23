@@ -2,7 +2,8 @@
 title: Comments off, Overdue update and R3-born
 aliases: /posts/2006-07-comments_off_overdue_update_and_r3born
 date: 2006-07-04 13:14:55
-tags: [Content Management,Jaws,PHP,R3-born ]
+categories: [ "Open Source", "Development" ]
+tags: [ "Content Management", "Jaws", "PHP", "R3-born" ]
 summary: Jaws spam counter measures suck
 sidebar: true
 images: hero.webp

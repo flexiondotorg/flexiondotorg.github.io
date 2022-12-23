@@ -2,7 +2,8 @@
 title: Dropbox is my Nikola publish button
 aliases: /posts/2013-03-dropbox-is-my-nikola-publish-button
 date: 2013-03-06 19:01:21
-tags: [ Nikola,Python,Dropbox,Content Management,Static Site Generator ]
+categories: [ "Linux", "Open Source", "Tutorial", "Content Creation" ]
+tags: [ "Nikola", "Python", "Dropbox", "Content Management", "Static Site Generator" ]
 summary: Publishing a Nikola blog via Dropbox on a headless Linux server
 sidebar: true
 images: hero.webp

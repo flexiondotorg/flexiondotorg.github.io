@@ -2,7 +2,8 @@
 title: Shotwell 0.8.1 PPA available for Ubuntu Lucid
 aliases: /posts/2011-03-shotwell-ppa-for-ubuntu-lucid
 date: 2011-03-17 17:04:42
-tags: [Linux,Ubuntu,GNOME,Shotwell,PPA ]
+categories: [ "Linux", "Open Source", "Development" ]
+tags: [ "Ubuntu", "GNOME", "Shotwell", "PPA" ]
 summary: Get the latest Shotwell 0.8.1 via a PP for Ubuntu 10.04
 sidebar: true
 images: hero.webp

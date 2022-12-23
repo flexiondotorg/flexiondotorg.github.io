@@ -2,7 +2,8 @@
 title: IMDB Film Summary as a MPEG-2 video
 aliases: /posts/2009-04-imdb-film-summary-mpeg2-video
 date: 2009-04-22 18:00:07
-tags: [ IMDB,MPEG,PHP,PlayStation 3 ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Self Hosting", "Gadgets" ]
+tags: [ "IMDB", "MPEG", "PHP", "PlayStation 3" ]
 summary: Create film preview information for your UPnP server
 sidebar: true
 images: hero.webp

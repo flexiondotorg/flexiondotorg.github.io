@@ -1,8 +1,10 @@
 ---
 title: DIY SNES Classic
+slug: diy-snes-classic
 aliases: /posts/2017-01-diy-snes-classic
 date: 2017-01-24 12:00:00
-tags: [ Retropie,SNES,Raspberry Pi,8Bitdo ]
+categories: [ "Linux", "Retro", "Entertainment", "Computer Hardware" ]
+tags: [ "Retropie", "SNES", "Raspberry Pi" ,"8Bitdo", "Nintendo" ]
 summary: I made my own "SNES Classic" with a Raspberry Pi
 sidebar: true
 images: hero.webp
@@ -13,9 +15,11 @@ Inspired by the recent [NES Classic](http://www.nintendo.com/nes-classic/) I
 made a **DIY SNES Classic** just in time for the Christmas holidays and it's
 very portable!
 
-<div class="text-center">
+<p class="text-center">
   <img src="diy-homemade-snes-classic-raspberrypi.webp" class="img-fluid" alt="Raspberry Pi 3 in a 3D printed SNES case with 8Bitdo SNES30 controllers"/>
-</div>
+  <br />
+  <em>Raspberry Pi 3 in a 3D printed SNES case with 8Bitdo SNES30 controllers</em>
+</p>
 
 To make one yourself you'll need:
 

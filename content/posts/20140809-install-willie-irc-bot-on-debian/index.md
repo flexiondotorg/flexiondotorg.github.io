@@ -2,7 +2,8 @@
 title: Installing Willie IRC Bot on Debian
 aliases: /posts/2014-08-installing-willie-irc-bot-on-debian
 date: 2014-08-09 11:11:11
-tags: [ Python,IRC Bot,Debian ]
+categories: [ "Linux", "Open Source"]
+tags: [ "Python", "IRC", "Debian", "Bot", "virtualenv" ]
 summary: How I Installed Willie IRC Bot on Debian Wheezy
 sidebar: true
 images: hero.webp

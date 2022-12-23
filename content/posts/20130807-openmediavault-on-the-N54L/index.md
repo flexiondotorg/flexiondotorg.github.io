@@ -2,7 +2,8 @@
 title: Setting up Open Media Vault on the HP MicroServer N54L
 aliases: /posts/2013-08-setting-up-open-media-vault-on-the-N54L
 date: 2013-08-07 21:21:09
-tags: [ Linux,Debian,Open Media Vault,OMV,HP MicroServer,N54L,BIOS,Transmission,Plex Media Server ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting" ]
+tags: [ "Debian", "Open Media Vault", "HP MicroServer", "N54L", "BIOS", "Transmission", "Plex", "Hacking" ]
 summary: Open Media Vault on the HP ProLiant MicroServer G7 N54L
 sidebar: true
 images: hero.webp

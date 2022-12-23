@@ -2,7 +2,8 @@
 title: "Linux Downtime"
 slug: linux-downtime
 date: 2022-04-24 00:00:00
-tags: ["FOSS", "Podcast","Linux","Open Source","Broadcasting", "Career", "Community"]
+categories: ["Linux", "Broadcasting", "Open Source", "Content Creation"]
+tags: ["Podcast", "Community"]
 summary: Open source professionals having relaxed discussions in their downtime
 sidebar: false
 images: hero.webp

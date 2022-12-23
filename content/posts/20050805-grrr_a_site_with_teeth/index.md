@@ -2,7 +2,8 @@
 title: Grrr, a site with teeth
 aliases: /posts/2005-08-grrr_a_site_with_teeth/
 date: 2005-08-05 09:10:10
-tags: [ Content Management,Jaws ]
+categories: [ "Open Source", "Content Creation" ]
+tags: [ "Content Management", "Jaws", "PHP" ]
 summary: Rebooting Flexion.Org using Jaws
 sidebar: true
 images: hero.webp

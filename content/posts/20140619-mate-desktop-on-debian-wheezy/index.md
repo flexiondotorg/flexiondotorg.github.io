@@ -2,7 +2,8 @@
 title: MATE Desktop on Debian Wheezy
 aliases: /posts/2014-06-mate-desktop-on-debian-wheezy
 date: 2014-06-19 22:00:00
-tags: [ Linux,Debian,MATE Desktop,Arch Linux]
+categories: [ "Linux", "Open Source", "Tutorial" ]
+tags: [ "Debian", "MATE Desktop", "Backports" ]
 summary: Setting up MATE Desktop on Debian Wheezy
 sidebar: true
 images: hero.webp

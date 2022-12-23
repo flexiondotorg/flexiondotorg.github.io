@@ -2,7 +2,8 @@
 title: Microsoft Office 2010 on Arch Linux and Ubuntu
 aliases: /posts/2013-01-microsoft-office-on-arch-linux-and-ubuntu
 date: 2013-01-29 16:16:47
-tags: [ Linux,Wine,Microsoft Office,Arch Linux,Ubuntu ]
+categories: [ "Linux", "Open Source", "Tutorial" ]
+tags: [ "wine", "Microsoft Office", "Arch Linux", "Ubuntu", "winetricks" ]
 summary: Install Microsoft Office 2010 on Arch Linux and Ubuntu
 sidebar: true
 images: hero.webp

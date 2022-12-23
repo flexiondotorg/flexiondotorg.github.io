@@ -2,7 +2,8 @@
 title: "Rolling Rhino"
 slug: rolling-rhino
 date: 2020-06-27 00:00:00
-tags: ["Linux", "Bash", "Ubuntu"]
+categories: ["Linux", "Development", "Open Source"]
+tags: ["Bash", "Ubuntu", "apt"]
 summary: Convert Ubuntu into a rolling release
 sidebar: false
 images: hero.webp

@@ -2,7 +2,8 @@
 title: Android Gmail Conversation View
 aliases: /posts/2012-09-android-gmail-conversation-view
 date: 2012-09-25 19:38:34
-tags: [ Android,Messaging,Gmail ]
+categories: [ "Gadgets" ]
+tags: [ "Android", "Messaging", "Gmail" ]
 summary: List view email clients for Android that support Gmail
 sidebar: true
 images: hero.webp

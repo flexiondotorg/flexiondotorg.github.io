@@ -2,7 +2,8 @@
 title: Lumagen Video Processor Bug Fixed
 aliases: /posts/2005-12-lumagen_video_processor_bug_fixed/
 date: 2005-12-12 12:10:33
-tags: [ Home Cinema,Lumagen ]
+categories: [ "Home Cinema", "Entertainment" ]
+tags: [ "Lumagen", "VisionDVI", "FPGA", "Scaler" ]
 summary: FPGA video processor bugs have been squashed
 sidebar: true
 images: hero.webp

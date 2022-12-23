@@ -2,7 +2,8 @@
 title: Plex Media Server on Open Media Vault
 aliases: /posts/2013-08-plex-media-server-on-open-media-vault
 date: 2013-08-27 21:11:43
-tags: [ Linux,Debian,Plex Media Server,Open Media Vault,OMV,Plex ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting", "Home Cinema" ]
+tags: [ "Debian", "Plex", "Open Media Vault" ]
 summary: Installing Plex Media Server on Open Media Vault (Squeeze) 6.0
 sidebar: true
 images: hero.webp
@@ -45,7 +46,7 @@ and download and install the latest `.deb`.
 I use the Plex Client for Android on phone and tablet, a Roku 2 XS in the lounge
 and Roku 2 LT in the bedroom.
 
-I've suxcessfully tested Plex Home Theatre on Ubuntu 12.04 and Raspbmc with
+I've successfully tested Plex Home Theatre on Ubuntu 12.04 and Raspbmc with
 the PleXBMC plug-in on Raspberry Pi.
 
 ### References

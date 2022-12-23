@@ -2,7 +2,8 @@
 title: Ubuntu Dapper Flight-2
 aliases: /posts/2005-12-ubuntu_dapper_flight2/
 date: 2005-12-22 11:23:01
-tags: [ Linux,Ubuntu ]
+categories: [ "Linux", "Open Source" ]
+tags: [ "Ubuntu" ]
 summary: Ubuntu Dapper Drake is showing some performance improvements
 sidebar: true
 images: hero.webp

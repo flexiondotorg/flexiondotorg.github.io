@@ -2,7 +2,8 @@
 title: Monitorix on Debian
 aliases: /posts/2014-07-monitorix-on-debian
 date: 2014-07-19 12:00:00
-tags: [ Linux,Debian,Monitorix,System Monitoring ]
+categories: [ "Linux", "Open Source", "Tutorial"]
+tags: [ "Debian", "Monitorix", "System Monitoring", "nginx" ]
 summary: Setting up Monitorix on Debian Squeeze & Wheezy
 sidebar: true
 images: hero.webp

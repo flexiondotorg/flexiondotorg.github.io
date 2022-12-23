@@ -2,7 +2,8 @@
 title: Converting DVB-T to DVD Compliant MPEG-2
 aliases: /posts/2009-01-converting-dvb-t-to-dvd-compliant-mpeg-2
 date: 2009-01-22 23:46:26
-tags: [DVB-T,PVR,Linux,MPEG-2,Project-X,DVD,Freeview,PlayStation 3,PlayTV ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Entertainment", "Gadgets" ]
+tags: [ "DVB-T", "PVR", "MPEG-2", "Project-X", "DVD", "Freeview", "PlayStation 3", "PlayTV", "MythTV" ]
 summary: Export PlayTV recorded video from PlayStation 3
 sidebar: true
 images: hero.webp

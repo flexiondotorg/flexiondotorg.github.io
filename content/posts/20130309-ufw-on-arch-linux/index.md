@@ -2,7 +2,8 @@
 title: Uncomplicated Firewall (UFW) on Arch Linux
 aliases: /posts/2013-03-ufw-on-arch-linux
 date: 2013-03-09 08:37:43
-tags: [ Arch Linux,Firewall,VPS,UFW,Uncomplicated Firewall ]
+categories: [ "Linux", "Open Source", "Tutorial", "Security" ]
+tags: [ "Arch Linux", "Firewall", "ufw", ]
 summary: Configuring Uncomplicated Firewall (UFW) on Arch Linux.
 sidebar: true
 images: hero.webp

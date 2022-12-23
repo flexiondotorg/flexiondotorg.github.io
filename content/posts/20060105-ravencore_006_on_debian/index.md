@@ -2,7 +2,8 @@
 title: RavenCore 0.0.6 on Debian
 aliases: /posts/2006-01-ravencore_006_on_debian
 date: 2006-01-05 11:24:41
-tags: [ Linux,Debian,RavenCore,Virtual Hosting ]
+categories: [ "Linux", "Open Source", "Self Hosting" ]
+tags: [ "Debian", "RavenCore", "Virtual Hosting" ]
 summary: Virtual hosting on Debian with RavenCore
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: Arch Linux Angel
 aliases: /posts/2012-05-arch-linux-angel
 date: 2012-05-15 11:12:13
-tags: [ Arch Linux,GNOME,Linux,Bash ]
+categories: [ "Linux", "Open Source" ]
+tags: [ "Arch Linux", "GNOME", "Bash", "Installer" ]
 summary: Automated scripted installs of Arch Linux
 sidebar: true
 images: hero.webp
@@ -28,7 +29,9 @@ at work. I suppose the real reason for this post is that I've been wanting to
 take [Shelr](http://shelr.tv/) for a test drive, so click the Play button
 below to see an example run of Arch Angel.
 
+<!--
 <iframe border='0' height='684'
 id='shelr_record_4fb2223c96608047be00010e' scrolling='no'
 src='http://shelr.tv/records/4fb2223c96608047be00010e/embed' style='border: 0'
 width='634' />
+-->

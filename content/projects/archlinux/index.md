@@ -1,8 +1,9 @@
 ---
 title: "Arch Linux"
-slug: archlinux
+slug: arch-linux
 date: 2013-12-01 00:00:00
-tags: ["Arch Linux","MATE Desktop","Linux","PKGBUILD","pacman","systemd"]
+categories: ["Linux", "Development", "Open Source"]
+tags: ["Arch Linux", "MATE Desktop", "PKGBUILD", "pacman", "systemd", "AUR"]
 summary: Arch Linux Trusted User & Package maintainer
 sidebar: false
 images: hero.webp

@@ -2,7 +2,8 @@
 title: Distributing closed source Python applications
 aliases: /posts/2009-01-distributing-closed-source-python-applications
 date: 2009-01-29 13:04:03
-tags: [Python,Freeze,Linux,Windows ]
+categories: [ "Development" ]
+tags: [ "Python", "Freeze", "Windows", "py2exe", "bbfreeze", "InnoSetup" ]
 summary: Freezing proprietary Python applications for distribution to clients
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: GitHub Analytics
 aliases: /posts/2012-10-github-analytics
 date: 2012-10-26 16:39:00
-tags: [ Git,GitHub ]
+categories: [ "Development", "Tutorial" ]
+tags: [ "Git", "GitHub", "Markdown", "reStructuredText" ]
 summary: How to add Google Analytics to GitHub projects.
 sidebar: true
 images: hero.webp

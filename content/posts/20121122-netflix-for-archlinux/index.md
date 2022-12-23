@@ -2,7 +2,8 @@
 title: Netflix for ArchLinux
 aliases: /posts/2012-11-netflix-for-archlinux
 date: 2012-11-22 22:14:47
-tags: [ Arch Linux,Netflix ]
+categories: [ "Linux", "Entertainment" ]
+tags: [ "Arch Linux", "Netflix", "wine" ]
 summary: Netflix is available for ArchLinux
 sidebar: true
 images: hero.webp

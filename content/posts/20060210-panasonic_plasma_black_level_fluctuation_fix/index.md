@@ -2,7 +2,8 @@
 title: Panasonic Plasma Black Level Fluctuation Fix
 aliases: /posts/2006-02-panasonic_plasma_black_level_fluctuation_fix
 date: 2006-02-10 02:48:54
-tags: [Home Cinema,Panasonic TH42-PHD8 ]
+categories: [ "Home Cinema" ]
+tags: [ "Panasonic TH42-PHD8", "Plasma TV" ]
 summary: Using service menus to fix the Panasonic TH42-PHD8
 sidebar: true
 images: hero.webp

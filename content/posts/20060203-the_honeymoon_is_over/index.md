@@ -2,7 +2,8 @@
 title: The honeymoon is over
 aliases: /posts/2006-02-the_honeymoon_is_over
 date: 2006-02-03 11:43:06
-tags: [Fedora,Linux,Ubuntu ]
+categories: [ "Linux", "Open Source" ]
+tags: [ "Fedora", "Ubuntu" ]
 summary: Ditching Fedora and sticking with Ubuntu
 sidebar: true
 images: hero.webp

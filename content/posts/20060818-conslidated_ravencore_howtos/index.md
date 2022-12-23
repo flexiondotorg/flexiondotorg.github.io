@@ -2,7 +2,8 @@
 title: Conslidated RavenCore HOW-TOs
 aliases: /posts/2006-08-conslidated_ravencore_howtos
 date: 2006-08-18 12:37:07
-tags: [Linux,Debian,RavenCore,Virtual Hosting ]
+categories: [ "Linux", "Open Source", "Self Hosting" ]
+tags: [ "Debian", "RavenCore", "Virtual Hosting", "Ubuntu" ]
 summary: RavenCore documentation for Debian & Ubuntu
 sidebar: true
 images: hero.webp

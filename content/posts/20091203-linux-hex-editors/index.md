@@ -2,7 +2,8 @@
 title: Linux Hex Editors
 aliases: /posts/2009-12-linux-hex-editors
 date: 2009-12-03 11:59:30
-tags: [Linux,Hex Editor ]
+categories: [ "Linux", "Open Source", "Development" ]
+tags: [ "Hex Editor", "Ubuntu" ]
 summary: Five GUI hex editors for Linux to take a look at
 sidebar: true
 images: hero.webp

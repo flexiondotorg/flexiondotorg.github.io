@@ -2,7 +2,8 @@
 title: Cheap and Cheerful MP3 Player
 aliases: /posts/2006-02-cheap_and_cheerful_mp3_player
 date: 2006-02-10 13:00:10
-tags: [Gadgets,MP3 ]
+categories: [ "Gadgets", "Entertainment"]
+tags: [ "MP3", "Sumvision XT105" ]
 summary: Cheap as chips MP3 player upgrade
 sidebar: true
 images: hero.webp

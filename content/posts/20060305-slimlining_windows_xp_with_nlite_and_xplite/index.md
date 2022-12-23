@@ -2,6 +2,7 @@
 title: Slimlining Windows XP with nLite and XPLite
 aliases: /posts/2006-03-slimlining_windows_xp_with_nlite_and_xplite
 date: 2006-03-05 06:41:38
+#categories: []
 tags: [Windows,nLite,XPLite,98Lite ]
 summary: Trimming the Windows fat with nLite
 sidebar: true

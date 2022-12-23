@@ -2,7 +2,8 @@
 title: Quality Android tablet on a budget - Ployer Momo8 IPS
 aliases: /posts/2012-09-quality-android-tablet-on-a-budget-ployer-momo8-ips
 date: 2012-09-27 20:14:43
-tags: [ Android,Tablet,Ployer Momo8 IPS,RK3066 ]
+categories: [ "Linux", "Computer Hardware", "Gadgets" ]
+tags: [ "Android", "Tablet", "Ployer Momo8 IPS", "RK3066" ]
 summary: My experiences with a budget Android tablet
 sidebar: true
 images: hero.webp

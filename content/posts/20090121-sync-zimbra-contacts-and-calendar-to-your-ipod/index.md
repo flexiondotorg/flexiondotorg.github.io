@@ -2,7 +2,8 @@
 title: Sync Zimbra Contacts, Calendar and Tasks to your iPod
 aliases: /posts/2009-01-sync-zimbra-contacts-and-calendar-to-your-ipod
 date: 2009-01-21 13:41:51
-tags: [Zimbra,iPod,Linux ]
+categories: [ "Linux", "Open Source", "Gadgets", "Tutorial" ]
+tags: [ "Zimbra", "iPod", "Linux" ]
 summary: Push Zimbra contacts, calendars & tasks to your iPod using Linux
 sidebar: true
 images: hero.webp

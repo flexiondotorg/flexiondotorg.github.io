@@ -2,7 +2,8 @@
 title: Installing Nikola on Debian
 aliases: /posts/2014-03-installing-nikola-on-debian
 date: 2014-03-31 16:19:43
-tags: [Nikola,Python,Content Management,Debian,Static Site Generator,virtualenv]
+categories: [ "Linux", "Open Source", "Tutorial" ]
+tags: [ "Nikola", "Python", "Content Management", "Debian", "Static Site Generator", "virtualenv"]
 summary: How to install Nikola static site generator on Debian
 sidebar: true
 images: hero.webp

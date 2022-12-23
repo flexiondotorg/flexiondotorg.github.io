@@ -2,7 +2,8 @@
 title: Wordpress Search Engine Optimisation
 aliases: /posts/2009-01-wordpress-search-engine-optimisation
 date: 2009-01-26 15:37:55
-tags: [Content Management,SEO,Wordpress ]
+categories: [ "Open Source", "Content Creation" ]
+tags: [ "Content Management", "SEO", "Wordpress" ]
 summary: Wordpress plugins that help automate SEO
 sidebar: true
 images: hero.webp

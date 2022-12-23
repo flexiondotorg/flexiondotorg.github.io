@@ -2,6 +2,7 @@
 title: Isles of Scilly
 aliases: /posts/2005-09-isles_of_scilly/
 date: 2005-09-21 10:31:09
+categories: [ "Travel" ]
 tags: [ Isles of Scilly,Travel ]
 summary: A surprise holiday in the Isles of Scilly
 sidebar: true

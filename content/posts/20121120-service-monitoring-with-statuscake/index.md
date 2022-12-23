@@ -2,6 +2,7 @@
 title: Service Monitoring with StatusCake
 aliases: /posts/2012-11-service-monitoring-with-statuscake
 date: 2012-11-20 17:14:47
+categories: [ "Linux", "Security" ]
 tags: [ Server Monitoring ]
 summary: Service availability monitoring using StatusCake
 sidebar: true

@@ -2,7 +2,8 @@
 title: Leading edge Fedora Core 4
 aliases: /posts/2006-01-leading_edge_fedora_core_4
 date: 2006-01-14 11:32:31
-tags: [Debian,Fedora,Linux,Ubuntu,Slackware,Crux ]
+categories: [ "Linux", "Open Source" ]
+tags: [ "Debian", "Fedora", "Ubuntu", "Slackware", "Crux" ]
 summary: Taking a look at Fedora Core 4
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: Ubuntu
 slug: ubuntu
 date: 2006-01-01 00:00:00
-tags: ["Ubuntu","Debian","GNOME","C","GTK","Python","Linux","Snapcraft","systemd","Raspberry Pi"]
+categories: ["Linux", "Development", "Open Source"]
+tags: ["Ubuntu", "Debian", "GNOME", "C", "GTK", "Python", "Snapcraft", "systemd", "Raspberry Pi", "Community", "Robotics", "IoT"]
 summary: From community contributor to director of engineering and back again
 sidebar: false
 images: hero.webp

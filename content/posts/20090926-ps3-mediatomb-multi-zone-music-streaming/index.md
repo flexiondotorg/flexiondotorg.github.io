@@ -2,7 +2,8 @@
 title: PS3, Mediatomb, Multi Zone Music streaming
 aliases: /posts/2009-09-ps3-mediatomb-multi-zone-music-streaming
 date: 2009-09-26 11:02:52
-tags: [Home Cinema,Mediatomb,PlayStation 3,UPnP ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Self Hosting", "Gadgets" ]
+tags: [ "Mediatomb", "PlayStation 3", "UPnP" ]
 summary: Multi Zone music streaming with the PlayStation 3
 sidebar: true
 images: hero.webp

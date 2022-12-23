@@ -1,8 +1,10 @@
 ---
 title: Mediatomb vs. MiniDLNA
+slug: mediatomb-vs-minidlna
 aliases: /posts/2009-12-mediatomb-minidlna
 date: 2009-12-18 15:34:12
-tags: [Linux,DLNA,UPnP,Mediatomb,MiniDLNA,PlayStation 3 ]
+categories: [ "Linux", "Open Source", "Self Hosting" ]
+tags: [ "DLNA", "UPnP", "Mediatomb", "MiniDLNA", "PlayStation 3" ]
 summary: Comparing Mediatomb and MiniDLNA streaming servers
 sidebar: true
 images: hero.webp
@@ -22,7 +24,7 @@ compare to Mediatomb?
    to add Last.fm scrobbling.
  * MiniDLNA doesn't support dynamic video thumbnail creation, which would be
    nice to have but is not essential, cover images are supported. Mediatomb
-   supports video thumbnailing via `ffmpegthumbnailer`.
+   supports video thumbnails via `ffmpegthumbnailer`.
  * MiniDLNA doesn't currently have any transcoding support. This is of little
    consequence for me since I import video content into my library in a format
    natively supported by the PS3, either MP3, MPEG-2 TS or MPEG-4. Mediatomb

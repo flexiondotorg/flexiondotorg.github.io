@@ -3,7 +3,8 @@ title: Memory consumption of Linux desktop environments
 aliases: /posts/2014-03-memory-consumption-of-linux-desktop-environments
 date: 2014-03-23 13:30:27
 lastmod: 2014-06-03
-tags: [ Linux,Arch Linux,MATE Desktop,Xfce,GNOME,KDE,Enlightment,LXDE,LXQt,Unity,ps_mem ]
+categories: [ "Linux", "Open Source", "Computer Hardware"]
+tags: [ "Arch Linux", "MATE Desktop", "Xfce", "GNOME", "KDE", "Enlightment", "LXDE", "LXQt", "Unity", "ps_mem" ]
 summary: Comparing desktop environment memory usage with ps_mem
 sidebar: true
 images: hero.webp

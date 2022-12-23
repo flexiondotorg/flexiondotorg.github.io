@@ -2,7 +2,8 @@
 title: DVD to MPEG2-PS Ripper for Linux
 aliases: /posts/2009-04-dvd-mpeg2ps-ripper-linux
 date: 2009-04-23 16:50:31
-tags: [Linux,MPEG2-PS,DVD,Ripper,M2VRequantiser,Bash]
+categories: [ "Linux", "Open Source", "Home Cinema", "Self Hosting", "Gadgets" ]
+tags: [ "MPEG2-PS", "DVD", "Ripper", "M2VRequantiser", "Bash", "DLNA", "PlayStation 3"]
 summary: Ripping DVDs to MPEG2-PS for streaming via UPnP
 sidebar: true
 images: hero.webp

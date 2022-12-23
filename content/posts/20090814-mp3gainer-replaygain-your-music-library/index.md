@@ -2,7 +2,8 @@
 title: MP3Gainer - Apply ReplayGain to your entire music library
 aliases: /posts/2009-08-mp3gainer-replaygain-your-music-library
 date: 2009-08-14 15:25:45
-tags: [Linux,MP3,ReplayGain,Bash,Ubuntu ]
+categories: [ "Linux", "Open Source", "Home Cinema", "Self Hosting", "Gadgets" ]
+tags: [ "MP3", "ReplayGain", "Bash", "Ubuntu" ]
 summary: Volume normalise an entire MP3 library the right way
 sidebar: true
 images: hero.webp

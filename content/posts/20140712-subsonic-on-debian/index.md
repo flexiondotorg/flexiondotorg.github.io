@@ -2,7 +2,8 @@
 title: subSonic on Debian
 aliases: /posts/2014-07-subsonic-on-debian
 date: 2014-07-12 12:00:00
-tags: [ Linux,Debian,subSonic,Android,UltraSonic,Clementine,Tomcat ]
+categories: [ "Linux", "Open Source", "Tutorial", "Self Hosting" ]
+tags: [ "Debian", "subSonic", "Android", "UltraSonic", "Clementine", "Tomcat" ]
 summary: Setting up subSonic music streaming on Debian
 sidebar: true
 images: hero.webp

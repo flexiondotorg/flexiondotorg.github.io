@@ -1,8 +1,10 @@
 ---
 title: Intel NUC5i7RYH with Ubuntu
+slug: intel-nuc5i7ryh-with-ubuntu
 aliases: /posts/2015-12-intel-nuc5i7ryh-with-ubuntu
 date: 2015-12-13 13:18:00
-tags: [ Intel,NUC,NUC5i7RYH,Samsung SM951,M.2,NVME,Ubuntu,Linux ]
+categories: [ "Linux", "Open Source", "Computer Hardware"]
+tags: [ "Intel", "NUC", "NUC5i7RYH", "Samsung SM951", "NVME", "Ubuntu", "Ubuntu MATE", "Core i7 5557U"]
 summary: My Intel NUC5i7RYH part list and build
 sidebar: true
 images: hero.webp

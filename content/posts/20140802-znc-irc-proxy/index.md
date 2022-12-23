@@ -2,7 +2,8 @@
 title: ZNC IRC proxy
 aliases: /posts/2014-08-znc-irc-proxy
 date: 2014-08-02 10:10:10
-tags: [ Linux,Debian,IRC,IRC Bouncer ]
+categories: [ "Linux", "Open Source", "Tutorial" ]
+tags: [ "Debian", "IRC", "Proxy", "Bouncer" ]
 summary: How I install the ZNC IRC bouncer on Debian Wheezy
 sidebar: true
 images: hero.webp

@@ -2,7 +2,8 @@
 title: SketchUp Make on Arch Linux
 aliases: /posts/2013-08-sketchUp-make-on-arch-linux
 date: 2013-08-15 15:42:47
-tags: [ Linux,Wine,SketchUp,Arch Linux ]
+categories: [ "Linux", "Open Source", "Tutorial" ]
+tags: [ "wine", "SketchUp", "Arch Linux" ]
 summary: Install SketchUp Make 2013 on Arch Linux with Wine 1.7
 sidebar: true
 images: hero.webp
