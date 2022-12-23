@@ -19,19 +19,23 @@
 					<div class="divider-custom-icon"><em class="fas {{$icon}}"></em></div>
 					<div class="divider-custom-line"></div>
 				</div>
-				<div class="row justify-content-left">
+				<div class="row justify-content-center">
 					{{- range .Paginator.Pages }}
-					<div class="col-md-4">
-						<div class="card mb-4">
-							<a href="{{.Permalink}}"><img class="img-fluid rounded-top" src="{{.Permalink}}small-{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidthSmall}}" height="{{.Site.Params.HeroHeightSmall}}" alt="{{ .Summary }}" loading="lazy" /></a>
+					<div class="col-md-4 col-lg-4 mb-4">
+						<div class="card h-100">
+							<div class="card-image">
+								<a href="{{.Permalink}}">
+									<img class="card-img-top" src="{{.Permalink}}small-{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidthSmall}}" height="{{.Site.Params.HeroHeightSmall}}" alt="{{.Page.Params.Title}}" loading="lazy"/>
+								</a>
+							</div>
 							<div class="card-body">
-								<h5 class="card-title text-center text-uppercase">{{.Title}}</h5>
-								<small class="card-text text-center">{{.Summary}}</small>
+								<h5 class="card-title fs-6 fw-bold lh-1 text-center text-uppercase">{{.Title}}</h5>
+								<p class="card-text fs-5 lh-sm text-center">{{.Summary}}</p>
 							</div>
 							<div class="card-footer">
 								{{- if eq .Section "posts" -}}
 								<div class="d-flex justify-content-between align-items-center">
-									<small class="text-muted">{{ .Date.Format "January 2, 2006" }}</small>
+									<p class="fs-5 text-muted">{{ .Date.Format "January 2, 2006" }}</p>
 									<div class="btn-group">
 										<a href="{{ .Permalink }}" class="btn btn-lg btn-primary">{{ .ReadingTime }} minute {{ $action }}</a>
 									</div>
@@ -48,10 +52,10 @@
 						</div>
 					</div>
 					{{- end }}
-					<div class="col-12 p-3">
-						<div class="d-flex justify-content-center">
-							{{- partial "pagination.html" . }}
-						</div>
+				</div>
+				<div class="col-12">
+					<div class="d-flex justify-content-center">
+						{{- partial "pagination.html" . }}
 					</div>
 				</div>
 			</div>
