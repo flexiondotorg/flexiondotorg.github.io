@@ -20,14 +20,16 @@
 					<div class="divider-custom-line"></div>
 				</div>
 				<div class="row justify-content-center">
-					{{- range .Paginator.Pages }}
+					{{- range .Paginator.Pages -}}
 					<div class="col-md-4 col-lg-4 mb-4">
 						<div class="card h-100">
+							{{- if .Page.Params.Hero }}
 							<div class="card-image">
 								<a href="{{.Permalink}}">
 									<img class="card-img-top" src="{{.Permalink}}small-{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidthSmall}}" height="{{.Site.Params.HeroHeightSmall}}" alt="{{.Page.Params.Title}}" loading="lazy"/>
 								</a>
 							</div>
+							{{- end }}
 							<div class="card-body">
 								<h5 class="card-title fs-6 fw-bold lh-1 text-center text-uppercase">{{.Title}}</h5>
 								<p class="card-text fs-5 lh-sm text-center">{{.Summary}}</p>
