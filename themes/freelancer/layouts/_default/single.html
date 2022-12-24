@@ -3,22 +3,22 @@
 		{{- if eq .Section "projects" -}}
 			{{- $icon = "fa-code" -}}
 		{{- end }}
-		<div class="container pb-5">
+		<div class="container pb-1">
 			<div class="row">
 				<section class="page-section portfolio {{ if .Page.Params.sidebar }} col-12 col-lg-10 {{ end }} ">
 					{{- if (ne .Page.Params.Hero "") -}}
-					<img class="card-img-top img-fluid rounded" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{.Summary}}" loading="lazy"/>
+					<img class="card-img-top img-fluid rounded mt-4" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{.Summary}}" loading="lazy"/>
 					{{- end -}}
 					<!-- Portfolio Section Heading-->
-					<h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{.Title}}</h2>
+					<h2 class="page-section-heading text-center text-uppercase text-secondary mt-3">{{.Title}}</h2>
 					<!-- Icon Divider-->
-					<div class="divider-custom m-0">
+					<div class="divider-custom m-1">
 						<div class="divider-custom-line"></div>
-						<div class="divider-custom-icon"><em class="fas {{$icon}}"></em></div>
+						<div class="divider-custom-icon text-secondary"><em class="fas {{$icon}}"></em></div>
 						<div class="divider-custom-line"></div>
 					</div>
 					{{ if isset .Params "tags" -}}
-					<div class="row mb-3">
+					<div class="row mb-2">
 						<div class="col text-center text-nowrap">
 						{{ range $index, $name := sort .Params.tags -}}
 							<a class="h4" href={{ (printf "/tags/%s/" $name) | urlize }} title="{{$name | markdownify }}"><span class="badge bg-primary p-2 m-1 ">{{$name | markdownify}}</span></a>

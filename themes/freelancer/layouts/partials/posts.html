@@ -1,11 +1,11 @@
 {{- $element :=  first .Site.Params.HomePosts (where .Site.RegularPages.ByDate.Reverse "Section" "posts") -}}
 {{- if $element }}
-		<section class="page-section portfolio pb-5" id="posts">
+		<section class="page-section portfolio pb-3" id="posts">
 			<div class="container">
 				<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Recent Posts</h2>
 				<div class="divider-custom">
 					<div class="divider-custom-line"></div>
-					<div class="divider-custom-icon"><em class="fas fa-file-text"></em></div>
+					<div class="divider-custom-icon text-secondary"><em class="fas fa-file-text"></em></div>
 					<div class="divider-custom-line"></div>
 				</div>
 				<div class="row justify-content-center">

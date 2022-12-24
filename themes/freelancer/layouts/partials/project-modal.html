@@ -7,18 +7,18 @@
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content">
 					<div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-						<div class="modal-body text-center pb-5">
+						<div class="modal-body text-center pb-4">
 						<div class="container">
 							<div class="row justify-content-center">
 								<div class="col-lg-8">
 									<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">{{.Title}}</h2>
 									<div class="divider-custom">
 										<div class="divider-custom-line"></div>
-										<div class="divider-custom-icon"><em class="fas fa-code"></em></div>
+										<div class="divider-custom-icon text-secondary"><em class="fas fa-code"></em></div>
 										<div class="divider-custom-line"></div>
 									</div>
-									<img class="img-fluid rounded mb-5" src="{{.RelPermalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{.Title}}" loading="lazy" />
-									<p class="mb-4">{{.Summary}}</p>
+									<img class="img-fluid rounded mb-4" src="{{.RelPermalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{.Title}}" loading="lazy" />
+									<p class="mb-3">{{.Summary}}</p>
 									<a href="{{.Permalink}}" class="btn btn-primary btn-lg col-12">View</a>
 								</div>
 							</div>
