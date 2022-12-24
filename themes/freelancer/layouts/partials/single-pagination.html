@@ -1,17 +1,17 @@
 
-                            <div class="row mt-5 mb-3">
-                                <div class="col-6 text-left">
+                                <div class="col-5 mt-2 mb-2 text-left">
                                     {{- if .NextInSection -}}
-                                    <a class="btn btn-primary btn-lg col-12" href="{{ .NextInSection.Permalink }}"><span class="h2"><em class="fa fa-chevron-circle-left" aria-hidden="true"></em></span></a>
+                                    <a class="btn btn-primary btn-lg col-12" href="{{ .NextInSection.Permalink }}"><span class="h2"><em class="fa fa-chevron-circle-left" aria="{{ .NextInSection.Title }}"></em></span></a>
                                     {{- else -}}
                                     <a class="btn btn-light btn-lg col-12 disabled" href="#"><span class="h2"><em class="fa fa-chevron-circle-left" aria-hidden="true"></em></span></a>
                                     {{- end -}}
                                 </div>
-                                <div class="col-6 text-right">
+                                <div class="col-2 text-center"></div>
+                                <div class="col-5 mt-2 mb-2 text-right">
                                     {{- if .PrevInSection -}}
-                                    <a class="btn btn-primary btn-lg col-12" href="{{ .PrevInSection.Permalink }}"><span class="h2"><em class="fa fa-chevron-circle-right" aria-hidden="true"></em></span></a>
+                                    <a class="btn btn-primary btn-lg col-12" href="{{ .PrevInSection.Permalink }}"><span class="h2"><em class="fa fa-chevron-circle-right" aria="{{ .PrevInSection.Title }}"></em></span></a>
                                     {{- else -}}
                                     <a class="btn btn-light disabled btn-lg col-12" href="#"><span class="h2"><em class="fa fa-chevron-circle-right" aria-hidden="true"></em></span></a>
                                     {{- end -}}
                                 </div>
-                            </div>
+
