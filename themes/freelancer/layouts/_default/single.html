@@ -59,11 +59,10 @@
 						{{- end }}
 
 						{{ .Content -}}
-
+						{{ partial "single-pagination.html" . }}
 						{{- if and (site.Params.features.comment.enable) (eq .Section "posts") -}}
 							{{ partial "comments.html" site.Params.features.comment }}
 						{{- end -}}
-						{{ partial "single-pagination.html" . }}
 					</div>
 				</section>
 				{{- if .Page.Params.sidebar -}}
