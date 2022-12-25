@@ -10,45 +10,40 @@
 				<div class="row justify-content-center">
 					<div class="col-lg-8 col-xl-7">
 						<form id="contactForm" data-sb-form-api-token="{{.Site.Params.sbform.token}}">
-							<!-- Name input -->
 							<div class="form-floating mb-3">
-								<input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-								<label for="name">Full name</label>
-								<div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+								<input class="form-control" id="name" type="text" placeholder="Your Name" data-sb-validations="required" />
+								<label class="form-label" for="name">Name</label>
+								<div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
 							</div>
-							<!-- Email address input -->
 							<div class="form-floating mb-3">
-								<input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-								<label for="email">Email address</label>
-								<div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-								<div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+								<input class="form-control" id="emailAddress" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+								<label class="form-label" for="emailAddress">Email Address</label>
+								<div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+								<div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address is not a valid.</div>
 							</div>
-							<!-- Phone number input -->
 							<div class="form-floating mb-3">
-								<input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-								<label for="phone">Phone number</label>
-								<div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+								<input class="form-control" id="phoneNumber" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+								<label class="form-label" for="phoneNumber">Phone Number</label>
+								<div class="invalid-feedback" data-sb-feedback="phone:required">Phone Number is required.</div>
 							</div>
-							<!-- Message input -->
 							<div class="form-floating mb-3">
-								<textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-								<label for="message">Message</label>
-								<div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+								<textarea class="form-control" id="message" placeholder="Your message." style="height: 10rem" data-sb-validations="required"></textarea>
+								<label class="form-label" for="message">Message</label>
+								<div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
 							</div>
-							<!-- Submit success message -->
 							<div class="d-none" id="submitSuccessMessage">
 								<div class="text-center mb-3">
-									<div class="fw-bolder text-success">Form submission successful!</div>
+									<div class="fw-bolder text-success">Message sent!</div>
 								</div>
 							</div>
-							<!-- Submit error message -->
-							<div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-							<!-- Submit Button -->
-							<button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+							<div class="d-none" id="submitErrorMessage">
+								<div class="text-center text-danger mb-3">Error sending message!</div>
+							</div>
+							<button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Send</button>
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
-		<script defer src="https://cdn.startbootstrap.com/sb-forms-0.4.1.js" type="text/javascript"></script>
+		<script defer src="https://cdn.startbootstrap.com/sb-forms-0.4.1.js"></script>
 {{- end -}}
