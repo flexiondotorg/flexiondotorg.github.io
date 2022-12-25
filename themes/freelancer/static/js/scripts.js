@@ -3,12 +3,11 @@
 * Copyright 2013-2021 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
 */
+
 //
 // Scripts
 //
-
 window.addEventListener('DOMContentLoaded', event => {
-
     // Navbar shrink function
     let navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
@@ -20,7 +19,6 @@ window.addEventListener('DOMContentLoaded', event => {
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
-
     };
 
     // Shrink the navbar
@@ -41,5 +39,4 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
 });
