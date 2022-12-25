@@ -626,6 +626,13 @@ progress {
   text-transform: uppercase;
 }
 
+blockquote:not([class]) {
+  margin: 1em 40px;
+  border-left: 4px solid #6c757d;
+  padding: 8px 32px;
+  font-style: italic;
+}
+
 .blockquote {
   margin-bottom: 1rem;
   font-size: 1.25rem;
