@@ -53,10 +53,10 @@ var fuseOptions = {
     shouldSort: true,
     includeMatches: true,
     includeScore: true,
-    tokenize: true,
+    threshold: 0.2,
     location: 0.0,
     distance: 100,
-    minMatchCharLength: 1,
+    minMatchCharLength: 2,
     keys: [
         {name: "title", weight: 0.45},
         {name: "contents", weight: 0.4},
