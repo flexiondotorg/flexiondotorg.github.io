@@ -7,18 +7,15 @@
 					<div class="divider-custom-icon text-secondary"><em class="fas fa-magnifying-glass"></em></div>
 					<div class="divider-custom-line"></div>
 				</div>
-				<div class="row justify-content-center">
+				<div class="row justify-content-left">
 					<div id="search-results" class="col-12 mb-4">
                         <div class="search-loading">Loading...</div>
                         <script id="search-result-template" type="text/x-js-template">
                             <div id="summary-${key}">
-                                <h3><a href="${link}">${title}</a></h3>
-                                <p>${snippet}</p>
-                                <p>
-                                    <small>
-                                        ${ isset tags }Tags: ${tags}<br />${ end }
-                                    </small>
-                                </p>
+                                <h2><a href="${link}">${title}</a></h2>
+                                <p class="card-text fs-5 lh-sm">${snippet}</p>
+                                <p>${ isset taxonomies }<span class="fs-5 text-muted">Taxonomies:</span> ${taxonomies}${ end }</p>
+                                <br />
                             </div>
                         </script>
 					</div>

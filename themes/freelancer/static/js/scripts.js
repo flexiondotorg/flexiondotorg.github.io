@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', event => {
 // Search
 // =============================
 
-var summaryInclude = 180;
+var summaryInclude = 256;
 var fuseOptions = {
     shouldSort: true,
     includeMatches: true,
@@ -120,10 +120,16 @@ function populateResults(results) {
         snippet = contents.substring(0, summaryInclude * 2) + '&hellip;';
 
         //replace values
-        var tags = ""
+        var taxonomies = ""
         if (value.item.tags) {
             value.item.tags.forEach(function (element) {
-                tags = tags + "<a href='/tags/" + element + "'>" + "#" + element + "</a> "
+                taxonomies = taxonomies + "<a href='/tags/" + element.toLowerCase() + "'><span class='badge bg-primary p-2 m-1'>" + element + "</span></a>"
+            });
+        }
+
+        if (value.item.categories) {
+            value.item.categories.forEach(function (element) {
+                taxonomies = taxonomies + "<a href='/categories/" + element.toLowerCase() + "'><span class='badge bg-primary p-2 m-1'>" + element + "</span></a>"
             });
         }
 
@@ -131,8 +137,7 @@ function populateResults(results) {
             key: key,
             title: value.item.title,
             link: value.item.permalink,
-            tags: tags,
-            categories: value.item.categories,
+            taxonomies: taxonomies,
             snippet: snippet
         });
         searchResults.innerHTML += output;
