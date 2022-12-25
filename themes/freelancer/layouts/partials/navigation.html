@@ -9,12 +9,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        {{- range .Site.Sections.ByTitle }}
-                        <li class="nav-item mx-0 mx-lg-1">
+                    {{- range .Site.Sections.ByTitle }}
+                        {{ if not (in .Section "search" ) }}
+                        <li class="nav-item mx-0 mx-lg-1"></li>
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ .Permalink }}">{{ .Title }}</a>
                         </li>
                         {{- end }}
+                    {{- end }}
                     </ul>
+                    <form action="/search" method="GET">
+                        <div class="input-group">
+                            <input class="form-control" type="search" name="q" id="search-query" placeholder="Search...." />
+                            <button class="btn btn-primary btn-sm" id="searchButton" type="submit"><span class="fas fa-search"></span></button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </nav>

@@ -130,6 +130,9 @@ enableRobotsTXT = true
     endLevel = 3
     ordered = false
 
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+
 [outputFormats]
   [outputFormats.RSS]
     mediaType = "application/rss+xml"
