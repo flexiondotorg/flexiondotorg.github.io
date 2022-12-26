@@ -77,13 +77,15 @@ function populateResults(results) {
         var taxonomies = ""
         if (value.item.tags) {
             value.item.tags.forEach(function (element) {
-                taxonomies = taxonomies + "<a href='/tags/" + element.toLowerCase() + "'><span class='badge bg-primary p-2 m-1'>" + element + "</span></a>"
+                taxonomies = taxonomies + "<a href='/tags/" + element.replace(/\s+/g, '-').toLowerCase()
+ + "'><span class='badge bg-primary p-2 m-1'>" + element + "</span></a>"
             });
         }
 
         if (value.item.categories) {
             value.item.categories.forEach(function (element) {
-                taxonomies = taxonomies + "<a href='/categories/" + element.toLowerCase() + "'><span class='badge bg-primary p-2 m-1'>" + element + "</span></a>"
+                taxonomies = taxonomies + "<a href='/categories/" + element.replace(/\s+/g, '-').toLowerCase()
+ + "'><span class='badge bg-primary p-2 m-1'>" + element + "</span></a>"
             });
         }
 
