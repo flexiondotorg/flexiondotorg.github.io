@@ -3,11 +3,6 @@
 		<div class="container pb-1">
 			<div class="row">
 				<section class="page-section portfolio {{ if .Page.Params.sidebar }} col-12 col-lg-10 {{ end }} ">
-					<!--
-						{{- if (ne .Page.Params.Hero "") -}}
-					<img class="card-img-top img-fluid rounded mt-4" src="{{.Permalink}}{{.Page.Params.Hero}}" width="{{.Site.Params.HeroWidth}}" height="{{.Site.Params.HeroHeight}}" alt="{{.Summary}}" loading="lazy"/>
-					{{- end -}}
-					-->
 					<!-- Portfolio Section Heading-->
 					<h2 class="page-section-heading text-center text-uppercase text-secondary mt-3">{{.Title}}</h2>
 					<!-- Icon Divider-->
@@ -29,9 +24,6 @@
 						<iframe src="https://livepush.io/embed/emFuH1zzXs0jHL8_" width="640" height="480" allowFullScreen="1" frameBorder="0"></iframe>
 					</div>
 				</section>
-				{{- if .Page.Params.sidebar -}}
-					{{ partial "sidebar.html" . }}
-				{{- end }}
 			</div>
 		</div>
 {{- end -}}
