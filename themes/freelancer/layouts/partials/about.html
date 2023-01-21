@@ -1,22 +1,13 @@
 		<section class="page-section mt-5 py-4" id="about">
 			<div class="container">
-				<h2 class="page-section-heading text-center text-uppercase text-secondary">About</h2>
+				<h2 class="page-section-heading text-center text-uppercase text-secondary">{{.Title}}</h2>
 				<div class="divider-custom">
 					<div class="divider-custom-line"></div>
 					<div class="divider-custom-icon"><em class="fas fa-user"></em></div>
 					<div class="divider-custom-line"></div>
 				</div>
-				<div class="row">
-					<div class="col-lg-4 ms-auto"><p class="lead">{{.Site.Params.AboutLeft}}</p></div>
-					<div class="col-lg-4 me-auto"><p class="lead">{{.Site.Params.AboutRight}}</p></div>
-				</div>
-				{{ if .Site.Params.homebutton -}}
-				<div class="text-center mt-4">
-					<a class="btn btn-xl btn-outline-dark" href="{{.Site.Params.homebutton.link}}">
-						<em class="fab {{.Site.Params.Homebutton.icon}} me-2"></em>
-						{{ .Site.Params.Homebutton.text }}
-					</a>
-				</div>
-				{{- end }}
+
+				{{ .Content -}}
+
 			</div>
 		</section>
