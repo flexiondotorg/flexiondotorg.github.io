@@ -1,7 +1,7 @@
 {{- if or (.IsHome) (eq .Section "about") -}}
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <img class="mb-5" src="/profile.webp" width="{{div .Site.Params.ProfileWidth 2}}" height="{{div .Site.Params.ProfileHeight 2}}" alt="{{ .Site.Title }} Avatar" />
+                <img class="mb-5" src="/profile.webp" width="{{div .Site.Params.ProfileWidth 2}}" height="{{div .Site.Params.ProfileHeight 2}}" alt="{{ .Site.Params.Author }} Avatar" />
                 <h1 class="masthead-heading text-uppercase">{{ .Site.Params.Author }}</h1>
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -10,7 +10,13 @@
                 </div>
                 <h2 class="masthead-subheading">{{ .Site.Params.TagLine }}</h2>
             </div>
+            <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="https://wimpysworld.io/discord" target="_blank" rel="noopener noreferrer">
+                  <em class="fab fa-discord me-2"></em>Discord
+                </a>
+            </div>
         </header>
+
 {{- else -}}
         <header class="masthead2 text-white text-center"></header>
 {{- end -}}
