@@ -17,10 +17,8 @@ enableRobotsTXT = true
 [params]
   author = 'Martin Wimpress'
   description = 'Blog, Podcasts, Live Streams and Videos about Linux and Open Source with a focus on Ubuntu, Debian and NixOS.'
-  tags = 'Linux, Open Source, Ubuntu, Debian, NixOS, nix, Desktop Linux, systemd, Containers, Virtualisation, OBS Studio, Live Stream, Twitch, YouTube, Podcast'
+  tags = 'Linux, Open Source, Ubuntu, Debian, NixOS, nix, Desktop Linux, systemd, Containers, Virtualisation, OBS Studio, Live Stream, Twitch, YouTube, Podcast, MATE Desktop'
   tagLine = "INNOVATION - OPEN SOURCE - LEADERSHIP"
-  aboutLeft = ""
-  aboutRight = ""
   homePosts = 6
   homeProjects = 9
   heroWidth = 1280
