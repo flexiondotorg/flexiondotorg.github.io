@@ -1,5 +1,5 @@
 baseURL = 'https://wimpress.com/'
-title = 'Martin Wimpress'
+title = "Wimpy's World"
 
 languageCode = 'en-gb'
 DefaultContentLanguage = "en"
