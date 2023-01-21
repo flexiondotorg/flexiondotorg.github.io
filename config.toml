@@ -50,9 +50,9 @@ enableRobotsTXT = true
   token = "72ea1ec7-2670-4a14-a16a-155ce22f82e3"
 
 [params.homebutton]
-  text = "Wimpy's World"
-  link = "https://wimpysworld.com"
-  icon = "fa-globe"
+  text = "LinkedIn"
+  link = "https://linkedin.com/in/martinwimpress"
+  icon = "fa-linkedin"
 
 # icon name without the 'fa-'
 [[params.social]]
