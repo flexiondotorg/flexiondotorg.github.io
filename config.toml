@@ -49,53 +49,57 @@ enableRobotsTXT = true
 [params.sbform]
   token = "72ea1ec7-2670-4a14-a16a-155ce22f82e3"
 
-[params.homebutton]
-  text = "LinkedIn"
-  link = "https://linkedin.com/in/martinwimpress"
-  icon = "fa-linkedin"
-
-# icon name without the 'fa-'
 [[params.social]]
-  icon      = "discord"
+  icon      = "fa-discord"
   icon_pack = "fab"
+  label     = "Discord"
   url       = "https://wimpysworld.io/discord"
 [[params.social]]
-  icon      = "mastodon"
+  icon      = "fa-mastodon"
   icon_pack = "fab"
+  label     = "Mastodon"
   url       = "https://fosstodon.org/@wimpy"
 [[params.social]]
-  icon      = "twitter"
+  icon      = "fa-twitter"
   icon_pack = "fab"
+  label     = "Twitter"
   url       = "https://twitter.com/m_wimpress"
 [[params.social]]
-  icon      = "linkedin"
+  icon      = "fa-linkedin"
   icon_pack = "fab"
+  label     = "LinkedIn"
   url       = "https://linkedin.com/in/martinwimpress"
 
 [[params.code]]
-  icon      = "github"
+  icon      = "fa-github"
   icon_pack = "fab"
+  label     = "GitHub"
   url       = "https://github.com/flexiondotorg"
 [[params.code]]
-  icon      = "ubuntu"
+  icon      = "fa-ubuntu"
   icon_pack = "fab"
+  label     = "Launchpad"
   url       = "https://launchpad.net/~flexiondotorg"
 
 [[params.content]]
-  icon      = "instagram"
+  icon      = "fa-instagram"
   icon_pack = "fab"
+  label     = "Instagram"
   url       = "https://instagram.com/WimpysWorld"
 [[params.content]]
-  icon      = "twitch"
+  icon      = "fa-twitch"
   icon_pack = "fab"
+  label     = "Twitch"
   url       = "https://twitch.tv/WimpysWorld"
 [[params.content]]
-  icon      = "youtube"
+  icon      = "fa-youtube"
   icon_pack = "fab"
+  label     = "YouTube"
   url       = "https://youtube.com/WimpysWorld"
 [[params.content]]
-  icon      = "podcast"
+  icon      = "fa-podcast"
   icon_pack = "fas"
+  label     = "Linux Downtime Podcast"
   url       = "https://linuxdowntime.com"
 
 [related]

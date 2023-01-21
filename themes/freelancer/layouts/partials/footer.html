@@ -4,19 +4,19 @@
 					<div class="col-lg-4 mb-5 mb-lg-0">
 						<h3 class="text-uppercase mb-2">Social</h3>
 						{{ range .Site.Params.Social -}}
-						<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}" aria-label="{{.icon}}" target="_blank" rel="noopener noreferrer"><em class="{{.icon_pack}} fa-fw fa-{{.icon}}"></em></a>
+						<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}" aria-label="{{.label}}" target="_blank" rel="noopener noreferrer"><em class="{{.icon_pack}} fa-fw {{.icon}}"></em></a>
 						{{ end }}
 					</div>
 					<div class="col-lg-4 mb-5 mb-lg-0">
 						<h3 class="text-uppercase mb-2">Code</h3>
 						{{ range .Site.Params.Code -}}
-						<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}" aria-label="{{.icon}}" target="_blank" rel="noopener noreferrer"><em class="{{.icon_pack}} fa-fw fa-{{.icon}}"></em></a>
+						<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}" aria-label="{{.label}}" target="_blank" rel="noopener noreferrer"><em class="{{.icon_pack}} fa-fw {{.icon}}"></em></a>
 						{{ end }}
 					</div>
 					<div class="col-lg-4">
 						<h3 class="text-uppercase mb-2">Content</h3>
 						{{ range .Site.Params.Content -}}
-						<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}" aria-label="{{.icon}}" target="_blank" rel="noopener noreferrer"><em class="{{.icon_pack}} fa-fw fa-{{.icon}}"></em></a>
+						<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}" aria-label="{{.label}}" target="_blank" rel="noopener noreferrer"><em class="{{.icon_pack}} fa-fw {{.icon}}"></em></a>
 						{{ end }}
 					</div>
 				</div>
