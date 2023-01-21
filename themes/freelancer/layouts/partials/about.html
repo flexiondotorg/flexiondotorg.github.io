@@ -6,8 +6,14 @@
 					<div class="divider-custom-icon"><em class="fas fa-user"></em></div>
 					<div class="divider-custom-line"></div>
 				</div>
-
-				{{ .Content -}}
-
+				<div class="row">
+					<div class="col-lg-4 ms-auto"><p class="lead">{{ .Params.about_left }}</p></div>
+					<div class="col-lg-4 me-auto"><p class="lead">{{ .Params.about_right }}</p></div>
+				</div>
+				<div class="text-center mt-4">
+					<a class="btn btn-xl btn-outline-dark" href="{{ .Params.resume_url }}" target="_blank" rel="noopener noreferrer">
+					  <em class="{{ .Params.resume_icon_pack }} {{ .Params.resume_icon }} me-2"></em>{{ .Params.resume_label }}
+					</a>
+				  </div>
 			</div>
 		</section>
