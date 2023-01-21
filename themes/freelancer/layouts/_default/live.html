@@ -1,14 +1,15 @@
 {{- define "main" -}}
-		{{- $icon := "fa-solid fa-satellite-dish" -}}
 		<div class="container pb-1">
 			<div class="row">
-				<section class="page-section portfolio {{ if .Page.Params.sidebar }} col-12 col-lg-10 {{ end }} ">
+				<section class="page-section portfolio">
+					<iframe class="card-img-top rounded mt-4" src="https://livepush.io/embed/emFuH1zzXs0jHL8_" width="960" height="540" allowFullScreen="1" frameBorder="0"></iframe>
+
 					<!-- Portfolio Section Heading-->
 					<h2 class="page-section-heading text-center text-uppercase text-secondary mt-3">{{.Title}}</h2>
 					<!-- Icon Divider-->
 					<div class="divider-custom m-1">
 						<div class="divider-custom-line"></div>
-						<div class="divider-custom-icon text-secondary"><em class="fas {{$icon}}"></em></div>
+						<div class="divider-custom-icon text-secondary"><em class="fas fa-satellite-dish"></em></div>
 						<div class="divider-custom-line"></div>
 					</div>
 					{{ if isset .Params "tags" -}}
@@ -21,9 +22,27 @@
 					</div>
 					{{ end }}
 					<div class="row justify-content-left">
-						<iframe src="https://livepush.io/embed/emFuH1zzXs0jHL8_" width="960" height="540" allowFullScreen="1" frameBorder="0"></iframe>
+						<p>My Twitch and YouTube channels are a celebration of Desktop Linux 🐧 and
+						include live coding on various projects such as Debian, Ubuntu, MATE Desktop 🧉,
+						Nix ❄ and making Raspberry Pi devices. I'm an OBS Studio nerd 🤓 and love to
+						tinker with effects and interactive features. If you stream using Linux and
+						have questions, please do ask 👍</p>
+						<p>Although the channels were started by me, it has become a place for our
+						community to create new projects, collaborate, learn and succeed together.
+						You're invited to join us 🎟</p>
+						<div class="text-center m-4">
+							<a class="btn btn-xl btn-outline-dark" href="https://twitch.tv/WimpysWorld">
+								<em class="fab fa-twitch me-2"></em>Twitch
+							</a>
+							<a class="btn btn-xl btn-outline-dark" href="https://youtube.com/WimpysWorld">
+								<em class="fab fa-youtube me-2"></em>YouTube
+							</a>
+						</div>
 					</div>
 				</section>
+				{{- if .Page.Params.sidebar -}}
+					{{ partial "sidebar.html" . }}
+				{{- end }}
 			</div>
 		</div>
 {{- end -}}

@@ -4,6 +4,6 @@ slug: live
 sitemap:
   priority : 0.1
 layout: "live"
-categories: ["Broadcasting"]
+categories: [ "Broadcasting" ]
 tags: ["Twitch","YouTube"]
 ---
