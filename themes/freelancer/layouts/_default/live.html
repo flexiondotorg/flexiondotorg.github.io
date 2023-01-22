@@ -31,11 +31,13 @@
 					<div class="row justify-content-left">
 						{{ .Content }}
 						<div class="text-center m-4">
-							{{ range .Site.Params.Content -}}
+						{{ range .Site.Params.Content -}}
+							{{ if or (in (.icon | string) "youtube") (in (.icon | string) "twitch") -}}
 							<a class="btn btn-xl btn-outline-dark mx-1" href="{{.url}}" aria-label="{{.label}}" target="_blank" rel="noopener noreferrer">
 								<em class="{{.icon_pack}} {{.icon}} me-2"></em>{{.label}}
 							</a>
 							{{ end -}}
+						{{ end -}}
 						</div>
 					</div>
 				</section>
