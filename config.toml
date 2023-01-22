@@ -97,7 +97,7 @@ enableRobotsTXT = true
 [[params.content]]
   icon      = "fa-podcast"
   icon_pack = "fas"
-  label     = "Linux Downtime Podcast"
+  label     = "Podcast"
   url       = "https://linuxdowntime.com"
 
 [related]

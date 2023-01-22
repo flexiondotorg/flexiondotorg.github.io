@@ -11,10 +11,12 @@
 						<div class="divider-custom-line"></div>
 					</div>
 					<div class="d-flex justify-content-center">
-						<!-- Livepush.io -->
-						<!-- <iframe class="rounded mb-4" src="https://livepush.io/embed/emFuH1zzXs0jHL8_" title="Wimpy's World Live" width="960" height="540" allowfullscreen="true" referrerpolicy="origin-when-cross-origin" sandbox="allow-same-origin allow-scripts"></iframe> -->
 						<!-- Twitch -->
-						<iframe class="rounded mb-4" src="https://player.twitch.tv/?channel=wimpysworld&parent=wimpysworld.com&parent=localhost" title="Wimpy's World Live" width="960" height="540" allowfullscreen="true"></iframe>
+						{{- if in (.Site.BaseURL | string) "localhost" -}}
+							<iframe class="rounded mb-4" src="https://player.twitch.tv/?channel={{ .Page.Params.channel }}&parent=localhost" title="{{ .Site.Title }} Live" width="960" height="540" allowfullscreen="true"></iframe>
+						{{- else -}}
+							<iframe class="rounded mb-4" src="https://player.twitch.tv/?channel={{ .Page.Params.channel }}&parent={{ .Page.Params.parent }}" title="{{ .Site.Title }} Live" width="960" height="540" allowfullscreen="true"></iframe>
+						{{- end -}}
 					</div>
 
 					{{ if isset .Params "tags" -}}
@@ -27,7 +29,14 @@
 					</div>
 					{{ end }}
 					<div class="row justify-content-left">
-						{{ .Content -}}
+						{{ .Content }}
+						<div class="text-center m-4">
+							{{ range .Site.Params.Content -}}
+							<a class="btn btn-xl btn-outline-dark mx-1" href="{{.url}}" aria-label="{{.label}}" target="_blank" rel="noopener noreferrer">
+								<em class="{{.icon_pack}} {{.icon}} me-2"></em>{{.label}}
+							</a>
+							{{ end -}}
+						</div>
 					</div>
 				</section>
 			</div>
