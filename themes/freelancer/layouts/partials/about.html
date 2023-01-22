@@ -11,9 +11,13 @@
 					<div class="col-lg-4 me-auto"><p class="lead">{{ .Params.about_right }}</p></div>
 				</div>
 				<div class="text-center mt-4">
-					<a class="btn btn-xl btn-outline-dark" href="{{ .Params.resume_url }}" target="_blank" rel="noopener noreferrer">
-					  <em class="{{ .Params.resume_icon_pack }} {{ .Params.resume_icon }} me-2"></em>{{ .Params.resume_label }}
+				{{ range .Site.Params.Social -}}
+					{{ if (in (.icon | string) "linkedin") -}}
+					<a class="btn btn-xl btn-outline-dark mx-1" href="{{.url}}" aria-label="{{.label}}" target="_blank" rel="noopener noreferrer">
+						<em class="{{.icon_pack}} {{.icon}} me-2"></em>{{.label}}
 					</a>
-				  </div>
+					{{ end -}}
+				{{ end -}}
+				</div>
 			</div>
 		</section>
