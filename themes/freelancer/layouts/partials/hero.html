@@ -11,9 +11,13 @@
                 <h2 class="masthead-subheading">{{ .Site.Params.TagLine }}</h2>
             </div>
             <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="https://wimpysworld.io/discord" target="_blank" rel="noopener noreferrer">
-                  <em class="fab fa-discord me-2"></em>Discord
+            {{ range .Site.Params.Social -}}
+                {{ if not (in (.icon | string) "linkedin") -}}
+                <a class="btn btn-xl btn-outline-light mx-1" href="{{.url}}" aria-label="{{.label}}" target="_blank" rel="noopener noreferrer">
+                    <em class="{{.icon_pack}} {{.icon}} me-2"></em>{{.label}}
                 </a>
+                {{ end -}}
+            {{ end -}}
             </div>
         </header>
 
