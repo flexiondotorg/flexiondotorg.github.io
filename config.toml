@@ -11,6 +11,10 @@ paginate=9
 enableEmoji = true
 enableRobotsTXT = true
 
+[Author]
+  name = "Martin Wimpress"
+  email = "martin@wimpress.com"
+
 [social]
   twitter = 'm_wimpress'
 
