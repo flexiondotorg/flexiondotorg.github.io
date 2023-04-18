@@ -1,1 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>reStructuredText on Wimpy's World</title><link>https://wimpysworld.com/tags/restructuredtext/</link><description>Recent content in reStructuredText on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Fri, 26 Oct 2012 16:39:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/restructuredtext/rss.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Analytics</title><link>https://wimpysworld.com/posts/github-analytics/</link><pubDate>Fri, 26 Oct 2012 16:39:00 +0000</pubDate><guid>https://wimpysworld.com/posts/github-analytics/</guid><description>How to add Google Analytics to GitHub projects.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>reStructuredText on Wimpy's World</title><link>https://wimpysworld.com/tags/restructuredtext/</link><description>Recent content in reStructuredText on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Fri, 26 Oct 2012 16:39:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/restructuredtext/rss.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Analytics</title><link>https://wimpysworld.com/posts/github-analytics/</link><pubDate>Fri, 26 Oct 2012 16:39:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/github-analytics/</guid><description>&lt;p>As I mentioned in a previous post we are prepairing to &lt;a href="2012-10-migrating-bzr-to-git.html">migrate our Bazaar
+repositories to Git&lt;/a>, or more
+precisely to &lt;a href="https://github.com">GitHub&lt;/a>. This migration also heralds the
+Open Source releases of many of the core technologies we&amp;rsquo;ve been developing at
+&lt;a href="http://www.flightdataservices.com">Flight Data Services&lt;/a> for the last few years.&lt;/p>
+&lt;p>I want to track visits for our GitHub projects. A bit of Googling turned up
+&lt;a href="http://githalytics.com/">githalytics&lt;/a> which enables you to track visits and
+page views for your GitHub projects using
+[http://www.google.com/analytics/](Google Analytics).&lt;/p>
+&lt;p>To use it, create a new Google Analytics property ID for your GitHub project,
+head over to &lt;a href="http://githalytics.com/">http://githalytics.com/&lt;/a> and complete the web form. You&amp;rsquo;ll be
+provided a &lt;a href="http://daringfireball.net/projects/markdown/">Markdown&lt;/a> snippet to
+insert in your projects &lt;code>README.md&lt;/code>. It will look something like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f &amp;#34;githalytics.com&amp;#34;)](http://githalytics.com/YourGitHubName/YourGitHubProject)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the snippet to &lt;code>README.md&lt;/code> and push the changes. When someone visits your
+GitHub project page, the visit will be tracked. Great!&lt;/p>
+&lt;p>However, we write all our documentation using
+&lt;a href="http://docutils.sourceforge.net/rst.html">reStructuredText&lt;/a>. But after a
+quick Twitter and email exchange with Dimitrios from githalytics and I had
+a reStructuredText snippet. It looks something like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rest" data-lang="rest">&lt;span style="display:flex;">&lt;span>image:: https://cruel-carlota.pagodabox.com/0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :alt: githalytics.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :target: http://githalytics.com/YourGitHubName/YourGitHubProject
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Same drill, except add this snippet to &lt;code>README.rst&lt;/code> and push the changes.&lt;/p>
+&lt;p>So there you have it, Google Analytics tracking of your GitHub project landing
+page. If you have more than one project, create a Google Analytics property ID
+and githalytics tracking snippet for each project.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://githalytics.com/">http://githalytics.com/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://githalytics.tumblr.com/">http://githalytics.tumblr.com/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://coderwall.com/team/githalytics">http://coderwall.com/team/githalytics&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://stackoverflow.com/questions/4376560/add-google-analytics-to-github-wiki-pages">http://stackoverflow.com/questions/4376560/add-google-analytics-to-github-wiki-pages&lt;/a>&lt;/li>
+&lt;/ul></description><summary>How to add Google Analytics to GitHub projects.</summary></item></channel></rss>

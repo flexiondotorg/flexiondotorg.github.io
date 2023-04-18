@@ -1,1 +1,246 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>QEMU on Wimpy's World</title><link>https://wimpysworld.com/tags/qemu/</link><description>Recent content in QEMU on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/qemu/rss.xml" rel="self" type="application/rss+xml"/><item><title>Quickemu</title><link>https://wimpysworld.com/projects/quickemu/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/quickemu/</guid><description>Quickly create and run optimised Windows, macOS and Linux virtual machines</description></item><item><title>Basic Debian Setup for Squeeze and Wheezy</title><link>https://wimpysworld.com/posts/basic-debian-setup-for-squeeze-and-wheezy/</link><pubDate>Tue, 06 Aug 2013 20:07:09 +0000</pubDate><guid>https://wimpysworld.com/posts/basic-debian-setup-for-squeeze-and-wheezy/</guid><description>Consistent server configuration for Debian Squeeze &amp;amp; Wheezy</description></item><item><title>QEMU How-To Wiki Thingy</title><link>https://wimpysworld.com/posts/qemu-how-to-wiki-thingy/</link><pubDate>Mon, 05 Sep 2005 10:07:34 +0000</pubDate><guid>https://wimpysworld.com/posts/qemu-how-to-wiki-thingy/</guid><description>Sharing knowledge about QEMU via a Wiki</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>QEMU on Wimpy's World</title><link>https://wimpysworld.com/tags/qemu/</link><description>Recent content in QEMU on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/qemu/rss.xml" rel="self" type="application/rss+xml"/><item><title>Quickemu</title><link>https://wimpysworld.com/projects/quickemu/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/quickemu/</guid><description>&lt;p>Quickly create and run highly optimised desktop virtual machines for Linux,
+macOS and Windows; with just two commands. You decide what operating system you
+want to run and &lt;a href="https://github.com/quickemu-project/quickemu">Quickemu&lt;/a> will figure out the best way to do it for you&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://github.com/quickemu-project">Quickemu Project&lt;/a>&lt;/li>
+&lt;li>Date: March 2020 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>Quickly create and run optimised Windows, macOS and Linux virtual machines</summary></item><item><title>Basic Debian Setup for Squeeze and Wheezy</title><link>https://wimpysworld.com/posts/basic-debian-setup-for-squeeze-and-wheezy/</link><pubDate>Tue, 06 Aug 2013 20:07:09 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/basic-debian-setup-for-squeeze-and-wheezy/</guid><description>&lt;p>Recently I&amp;rsquo;ve been deploying &lt;a href="http://www.debian.org">Debian&lt;/a> 6.0 (Squeeze) and
+7.0 (Wheezy) servers for some personal projects. These servers are provisioned
+in different ways:&lt;/p>
+&lt;ul>
+&lt;li>Open Media Vault using a Squeeze pre-seed&lt;/li>
+&lt;li>VPS powered by &lt;a href="http://http://lxc.sourceforge.net/">LXC&lt;/a> deployed via &lt;code>debootstrap&lt;/code>&lt;/li>
+&lt;li>VPS powered by &lt;a href="http://www.linux-kvm.org">KVM&lt;/a> using the hosting providers Wheezy pre-seed&lt;/li>
+&lt;/ul>
+&lt;p>Consequently the basic install differs on each instance and requires a little
+bit of post install tweaking to get them all consistent. This blog post is a
+quick reference for the post install steps I complete on Debian servers.&lt;/p>
+&lt;h1 id="timezone--locale">Timezone &amp;amp; Locale&lt;/h1>
+&lt;p>Select your timezone.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dpkg-reconfigure tzdata
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Select your locale(s).&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dpkg-reconfigure locales
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Make sure the locales are correctly generated. Replace &lt;code>en_GB.UTF-8&lt;/code> with your
+default locale.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>update-locale &lt;span style="color:#eedd82">LANG&lt;/span>=en_GB.UTF-8 &lt;span style="color:#eedd82">LANGUAGE&lt;/span>=en_GB.UTF-8 &lt;span style="color:#eedd82">LC_ALL&lt;/span>=en_GB.UTF-8 &lt;span style="color:#eedd82">LC_TIME&lt;/span>=en_GB.UTF-8 &lt;span style="color:#eedd82">LC_CTYPE&lt;/span>=en_GB.UTF-8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>locale -a
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>locale-gen
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="hostname">Hostname&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo box.example.org &amp;gt; /etc/hostname
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>/bin/hostname -F /etc/hostname
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Update &lt;code>/etc/hosts&lt;/code> accordingly.&lt;/p>
+&lt;h1 id="time">Time&lt;/h1>
+&lt;p>Keeping time is essential.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install ntp ntpdate
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Force a clock sync.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>service ntp stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ntpdate -s pool.ntp.org
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service ntp start
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If your VPS is a Xen DomU then checkout the following.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://jinntech.blogspot.co.uk/2009/03/xen-and-keeping-time.html">http://jinntech.blogspot.co.uk/2009/03/xen-and-keeping-time.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="essentials">Essentials&lt;/h1>
+&lt;p>These are the essential tools I require.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install build-essential curl git htop less lsb-release nano &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>rsync screen sudo tree whois
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="users">Users&lt;/h1>
+&lt;p>The following will create a user with &lt;code>sudo&lt;/code> capabilities.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>useradd user_a --create-home --shell /bin/bash --user-group &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>--groups adm,dialout,cdrom,plugdev,sudo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will create a regular user.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>useradd user_b --create-home --shell /bin/bash --user-group --groups adm,dialout,cdrom,plugdev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Assign a password.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo user_a:mypassword | chpasswd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>An existing user can be made a sudoer by simply adding them to the &lt;code>sudo&lt;/code> group.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>adduser user_b sudo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="firewall">Firewall&lt;/h1>
+&lt;p>I use firewall my VPS server with &lt;code>ufw&lt;/code>. This is my initial configuration that
+allow access via SSH only.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install ufw
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Configuring &lt;code>ufw&lt;/code> is simple but make sure you have console access to the host
+you are configuring just in case you lock yourself out.&lt;/p>
+&lt;p>&lt;strong>NOTE!&lt;/strong> When enabling &lt;code>ufw&lt;/code> the chains are flushed and connections may be
+dropped. You can add rules to the firewall before enabling it however, so if you
+are testing &lt;code>ufw&lt;/code> on a remote machine it is recommended you perform&amp;hellip;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ufw allow ssh/tcp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&amp;hellip;before running &lt;code>sudo ufw enable&lt;/code>. Once the firewall is enabled, adding and
+removing rules will not flush the firewall, although modifying an existing rule
+will.&lt;/p>
+&lt;p>Set the default behaviour to deny all incoming connections.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw default deny
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open up TCP port 22 but with rate limiting enabled which will deny connections
+from an IP address that has attempted to initiate 6 or more connections in the
+last 30 seconds. Ideal for protecting &lt;code>sshd&lt;/code> but you should conisder other
+&lt;a href="https://wimpysworld.com/posts/ssh-brute-force-defense/">SSH brute force defense&lt;/a>
+techniques as well.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw limit ssh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>To enable the firewall you also have to do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw enable
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>On low-end servers it might be beneficial to disable logging.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw logging off
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can see the status of the firewall using &lt;code>sudo ufw status&lt;/code>.&lt;/p>
+&lt;h1 id="intrusion-prevention">Intrusion prevention&lt;/h1>
+&lt;p>I use either &lt;code>denyhosts&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install denyhosts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Purge entries older than 5 days, denied hosts will only be purged twice and
+disable email alerts.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo sed -i &lt;span style="color:#87ceeb">&amp;#39;s/#PURGE_DENY = 5d/PURGE_DENY = 5d/&amp;#39;&lt;/span> /etc/denyhosts.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo sed -i &lt;span style="color:#87ceeb">&amp;#39;s/#PURGE_THRESHOLD = 2/PURGE_THRESHOLD = 2/&amp;#39;&lt;/span> /etc/denyhosts.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo sed -i &lt;span style="color:#87ceeb">&amp;#39;s/root@localhost//&amp;#39;&lt;/span> /etc/denyhosts.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Restart &lt;code>denyhosts&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service denyhosts restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Also see &lt;a href="http://flexion.org/posts/2012-11-ssh-brute-force-defence.html">SSH brute force defence&lt;/a>.&lt;/p>
+&lt;h1 id="boot-options">Boot options&lt;/h1>
+&lt;p>These servers are headless and often remote, therefore I enable &lt;code>fsck&lt;/code> auto repair.&lt;/p>
+&lt;h2 id="squeeze">Squeeze&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#87ceeb">&amp;#39;s/FSCKFIX=no/FSCKFIX=yes/&amp;#39;&lt;/span> /etc/default/rcS
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="wheezy">Wheezy&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#87ceeb">&amp;#39;s/#FSCKFIX=no/FSCKFIX=yes/&amp;#39;&lt;/span> /etc/default/rcS
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="repositories">Repositories&lt;/h1>
+&lt;p>&lt;code>lsb-release&lt;/code> was installed earlier. This is what I put in &lt;code>/etc/apt/sources.list&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat &amp;gt;/etc/apt/sources.list&lt;span style="color:#87ceeb">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb http://ftp.uk.debian.org/debian/ $(lsb_release -cs) main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb-src http://ftp.uk.debian.org/debian/ $(lsb_release -cs) main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb http://security.debian.org/ $(lsb_release -cs)/updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb-src http://security.debian.org/ $(lsb_release -cs)/updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb"># $(lsb_release -cs)-updates, previously known as &amp;#39;volatile&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb http://ftp.uk.debian.org/debian/ $(lsb_release -cs)-updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb-src http://ftp.uk.debian.org/debian/ $(lsb_release -cs)-updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I replace &lt;code>ftp.uk&lt;/code> with &lt;code>ftp.us&lt;/code> for servers located in the United States.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#87ceeb">&amp;#39;s/ftp\.uk/ftp\.us/g&amp;#39;&lt;/span> /etc/apt/sources.list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="backports">Backports&lt;/h2>
+&lt;p>I add the Backports repository in order to access some updated packages.&lt;/p>
+&lt;h3 id="squeeze-1">Squeeze&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat &amp;gt;/etc/apt/sources.list.d/backports.list &lt;span style="color:#87ceeb">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb http://ftp.uk.debian.org/debian-backports $(lsb_release -cs)-backports main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb-src http://ftp.uk.debian.org/debian-backports $(lsb_release -cs)-backports main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="wheezy-1">Wheezy&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat &amp;gt;/etc/apt/sources.list.d/backports.list &lt;span style="color:#87ceeb">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb http://ftp.uk.debian.org/debian $(lsb_release -cs)-backports main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb-src http://ftp.uk.debian.org/debian $(lsb_release -cs)-backports main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Update.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>All backports are deactivated by default (i.e. the packages are pinned to
+100 by using ButAutomaticUpgrades: yes in the Release files. If you want to
+install something from backports run:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get -t wheezy-backports install &lt;span style="color:#87ceeb">&amp;#34;package&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="mta">MTA&lt;/h1>
+&lt;p>sSMTP is a simple MTA to deliver mail from a computer to a mail hub. sSMTP is
+simple and lightweight.&lt;/p>
+&lt;h2 id="remove-exim4">Remove exim4&lt;/h2>
+&lt;p>Some VPS Debian templates from VPS providers have exim4 installed and running
+by default. Remove it.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service exim4 stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get purge exim4 exim4-base exim4-config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-ssmtp">Install sSMTP&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install ssmtp bsd-mailx
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ssmtp-gmail-configuration">sSMTP Gmail Configuration&lt;/h2>
+&lt;p>I use Gmail as my smart host, here is an example configuration for
+&lt;code>/etc/ssmtp/ssmtp.conf&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Config file for sSMTP sendmail&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># The person who gets all mail for userids &amp;lt; 1000&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Make this empty to disable rewriting.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">root&lt;/span>=root@example.org
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># The place where the mail goes. The actual machine name is required no&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># MX records are consulted. Commonly mailhosts are named mail.domain.com&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">mailhub&lt;/span>=smtp.gmail.com:587
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Where will the mail seem to come from?&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">rewriteDomain&lt;/span>=
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># The full hostname&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">hostname&lt;/span>=box.example.org
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Are users allowed to set their own From: address?&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># YES - Allow the user to specify their own From: address&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># NO - Use the system generated From: address&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">FromLineOverride&lt;/span>=YES
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Gmail requires TLS&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">UseTLS&lt;/span>=YES
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">UseSTARTTLS&lt;/span>=YES
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Username and password for Gmail servers&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">AuthUser&lt;/span>=yourgmailname@gmail.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">AuthPass&lt;/span>=youpassword
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">AuthMethod&lt;/span>=LOGIN
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then add each account that you want to be able to send mail from by editing
+&lt;code>/etc/ssmtp/revaliases&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>root:username@gmail.com:smtp.gmail.com:587
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user_a:username@gmail.com:smtp.gmail.com:587
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user_b:username@gmail.com:smtp.gmail.com:587
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;a href="https://wiki.debian.org/sSMTP">https://wiki.debian.org/sSMTP&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="log-and-package-monitoring">Log and package monitoring&lt;/h1>
+&lt;p>My personal VPS server are dotted about the place but I like to keep an eye on
+them and I find &lt;code>apticron&lt;/code> and &lt;code>logwatch&lt;/code> are very useful for that.&lt;/p>
+&lt;h2 id="apticron">apticron&lt;/h2>
+&lt;p>apticron is a simple tool to mail about pending package updates.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install apticron
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="logwatch">logwatch&lt;/h2>
+&lt;p>Logwatch is a modular log analyser that runs every night and mails you the results.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install logwatch
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="lighter">Lighter&lt;/h1>
+&lt;p>Some of my servers have fairly low resources, these are some simple changes that
+can save a bit of RAM or disk space.&lt;/p>
+&lt;h2 id="aptitude">aptitude&lt;/h2>
+&lt;p>I don&amp;rsquo;t use it.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge aptitude
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="d-bus">D-Bus&lt;/h2>
+&lt;p>D-Bus is a message bus, used for sending messages between applications.
+Some VPS provider Debian templates have D-Bus and avahi installed. I don&amp;rsquo;t
+require these on Internet facing servers so I remove them. If an application
+pull in D-Bus as a requirement that is fine, but for this initial server
+state I remove it.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge dbus
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="at">at&lt;/h2>
+&lt;p>&lt;code>at&lt;/code> provides delayed job execution and batch processing. I don&amp;rsquo;t use it.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service atd stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get purge at
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ngetty">ngetty&lt;/h2>
+&lt;p>Ngetty is a single-process &lt;code>getty&lt;/code> replacement, so instead of running 6 &lt;code>getty&lt;/code>
+processes consuming up to 3MB of RAM each, you can use a single &lt;code>ngetty&lt;/code> process
+using less than 1MB of RAM total.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install ngetty
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Edit &lt;code>/etc/inittab&lt;/code>, comment out &lt;code>getty&lt;/code> and add &lt;code>ngetty&lt;/code> like so.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>#1:2345:respawn:/sbin/getty 38400 tty1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#2:23:respawn:/sbin/getty 38400 tty2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#3:23:respawn:/sbin/getty 38400 tty3
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#4:23:respawn:/sbin/getty 38400 tty4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#5:23:respawn:/sbin/getty 38400 tty5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#6:23:respawn:/sbin/getty 38400 tty6
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ng:2345:respawn:/sbin/ngetty 1 2 3 4 5 6
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Restart inittab&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>telinit q
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;a href="http://haydenjames.io/replacing-getty-ngetty-debian/">http://haydenjames.io/replacing-getty-ngetty-debian/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>That about covers the general post installation step I complete on my Debian
+servers.&lt;/p>
+&lt;h2 id="clean-up">Clean up.&lt;/h2>
+&lt;p>Remove any packages that are no longer required and clean up
+the package cache.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get autoremove
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get autoclean
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get clean
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description><summary>Consistent server configuration for Debian Squeeze &amp;amp; Wheezy</summary></item><item><title>QEMU How-To Wiki Thingy</title><link>https://wimpysworld.com/posts/qemu-how-to-wiki-thingy/</link><pubDate>Mon, 05 Sep 2005 10:07:34 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/qemu-how-to-wiki-thingy/</guid><description>&lt;p>&lt;a href="http://use.perl.org/~ajt/journal/">Adam Tricket&lt;/a> got a few people interested
+in &lt;a href="http://fabrice.bellard.free.fr/qemu/index.html">QEMU&lt;/a> at the HantsLUG
+meeting on Saturday 3rd September 2005. Having recently discovered the wonders
+of QEMU myself I couldn&amp;rsquo;t help but get involved in the conversation. Me and my
+big mouth! I somehow managed to lumber myself with the job of writing a Wiki
+page about QEMU for the HantsLUG website. The page is more or less useful
+now and you can read it here&amp;hellip;&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.hants.lug.org.uk/cgi-bin/wiki.pl?LinuxHints/QemuEmulation">LinuxHints/QemuEmulation&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Sharing knowledge about QEMU via a Wiki</summary></item></channel></rss>

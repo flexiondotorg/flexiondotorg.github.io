@@ -1,1 +1,351 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dropbox on Wimpy's World</title><link>https://wimpysworld.com/tags/dropbox/</link><description>Recent content in Dropbox on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 28 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/dropbox/rss.xml" rel="self" type="application/rss+xml"/><item><title>Integrating Dropbox photo syncing with Open Media Vault and Plex</title><link>https://wimpysworld.com/posts/integrating-dropbox-photo-syncing-with-open-media-vault-and-plex/</link><pubDate>Sat, 28 Jun 2014 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/integrating-dropbox-photo-syncing-with-open-media-vault-and-plex/</guid><description>Integrating Dropbox on a headless Open Media Vault server.</description></item><item><title>Setting up BitSync on Debian</title><link>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</link><pubDate>Sat, 21 Jun 2014 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</guid><description>Setting up BitTorrent Sync on Debian</description></item><item><title>Dropbox is my Nikola publish button</title><link>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</link><pubDate>Wed, 06 Mar 2013 19:01:21 +0000</pubDate><guid>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</guid><description>Publishing a Nikola blog via Dropbox on a headless Linux server</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dropbox on Wimpy's World</title><link>https://wimpysworld.com/tags/dropbox/</link><description>Recent content in Dropbox on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 28 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/dropbox/rss.xml" rel="self" type="application/rss+xml"/><item><title>Integrating Dropbox photo syncing with Open Media Vault and Plex</title><link>https://wimpysworld.com/posts/integrating-dropbox-photo-syncing-with-open-media-vault-and-plex/</link><pubDate>Sat, 28 Jun 2014 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/integrating-dropbox-photo-syncing-with-open-media-vault-and-plex/</guid><description>&lt;p>&lt;strong>This how-to was updated for Open Media Vault 2.x and 3.x on 22nd August 2016.&lt;/strong>&lt;/p>
+&lt;p>I&amp;rsquo;ve installed &lt;a href="http://www.openmediavault.org/">Open Media Vault&lt;/a>
+on a &lt;a href="http://www8.hp.com/uk/en/products/proliant-servers/product-detail.html?oid=5336624">HP ProLiant MicroServer G7 N54L&lt;/a>
+and use it as media server for the house. OpenMediaVault (OMV) is a network
+attached storage (NAS) solution based on &lt;a href="http://www.debian.org">Debian&lt;/a> Linux.&lt;/p>
+&lt;p>I use a free Dropbox account to sync photos from mine and my wife&amp;rsquo;s Android
+phones and wanted to automate to import of these photo upload into Plex, which
+is also running on Open Media Vault.&lt;/p>
+&lt;h1 id="installing-dropbox-on-open-media-vault">Installing Dropbox on Open Media Vault&lt;/h1>
+&lt;p>I looked for a Dropbox Plugin for Open Media Vault and found this:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/lordldx/openmediavault-dropbox">https://github.com/lordldx/openmediavault-dropbox&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Sadly, at the time of writing, it is unfinished and I didn&amp;rsquo;t have the time to
+go and learn the Open Media Vault plugin API.&lt;/p>
+&lt;p>The Open Media Vault forum does include a &lt;a href="http://forums.openmediavault.org/viewtopic.php?f=13&amp;amp;t=70">Dropbox HOW-TO&lt;/a>
+which is very similar to how &lt;a href="https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/">I&amp;rsquo;ve run Dropbox on headless Linux servers&lt;/a>
+in the past. So, I decided to adapt my existing notes to Open Media Vault.&lt;/p>
+&lt;h2 id="create-a-dropbox-share">Create a Dropbox Share&lt;/h2>
+&lt;p>Create a Dropbox share via the OMV WebUI.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Access Right Management -&amp;gt; Shared Folders&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>I gave my the name &amp;ldquo;Dropbox&amp;rdquo;. I know, very original.&lt;/p>
+&lt;h2 id="installing-dropbox-on-a-headless-server">Installing Dropbox on a headless server&lt;/h2>
+&lt;p>Download and extract the latest Dropbox stable release.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd ~ &amp;amp;&amp;amp; wget -O - &lt;span style="color:#87ceeb">&amp;#34;https://www.dropbox.com/download?plat=lnx.x86_64&amp;#34;&lt;/span> | tar xzf -
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chown -Rv &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">USER&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>: ~/.dropbox-dist
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s ~/.dropbox-dist/dropboxd /usr/local/bin/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run &lt;code>dropboxd&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>~/.dropbox-dist/dropboxd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You should see output like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>This client is not linked to any account... Please visit https://www.dropbox.com/cli_link?host_id=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx to link this machine.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Visit the URL, login with your Dropbox account and link the account. You
+should see the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Client successfully linked, Welcome Web!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>dropboxd&lt;/code> will now create a &lt;code>~/Dropbox&lt;/code> folder and start synchronizing. Stop
+&lt;code>dropboxd&lt;/code> with CTRL+C.&lt;/p>
+&lt;h2 id="symlink-the-dropbox-share">Symlink the Dropbox share&lt;/h2>
+&lt;p>Login to the OMV server as &lt;code>root&lt;/code> and sym-link the Dropbox share you created
+earlier to the Dropbox directory in the root home directory.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mv ~/Dropbox ~/Dropbox-old
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -s /media/&amp;lt;UUID&amp;gt;/Dropbox ~/Dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rsync -a -W --progress ~/Dropbox-old/ ~/Dropbox/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="initd---open-media-vault-2x">init.d - Open Media Vault 2.x&lt;/h3>
+&lt;p>If you are using Open Media Vault 2.x (based on Debian wheezy) the
+you&amp;rsquo;ll need to create an init script.&lt;/p>
+&lt;p>To run Dropbox as daemon with init.d. Create &lt;code>/etc/init.d/dropbox&lt;/code> with the
+following content.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>&lt;span style="color:#0f0">### BEGIN INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Provides: dropbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Start: $local_fs $remote_fs $network $syslog $named&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Stop: $local_fs $remote_fs $network $syslog $named&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Start: 2 3 4 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Stop: 0 1 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># X-Interactive: false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Short-Description: dropbox service&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">### END INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DROPBOX_USERS&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;user_a&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DAEMON&lt;/span>=.dropbox-dist/dropboxd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>start() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Starting dropbox...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>getent passwd &lt;span style="color:#eedd82">$dbuser&lt;/span> | cut -d: -f6&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -x &lt;span style="color:#eedd82">$DAEMON&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOME&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> start-stop-daemon -b -o -c &lt;span style="color:#eedd82">$dbuser&lt;/span> -S -u &lt;span style="color:#eedd82">$dbuser&lt;/span> -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>stop() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Stopping dropbox...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>getent passwd &lt;span style="color:#eedd82">$dbuser&lt;/span> | cut -d: -f6&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon -o -c &lt;span style="color:#eedd82">$dbuser&lt;/span> -K -u &lt;span style="color:#eedd82">$dbuser&lt;/span> -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>status() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">dbpid&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>pgrep -u &lt;span style="color:#eedd82">$dbuser&lt;/span> dropbox&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#eedd82">$dbpid&lt;/span> ] ; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;dropboxd for USER &lt;/span>&lt;span style="color:#eedd82">$dbuser&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;dropboxd for USER &lt;/span>&lt;span style="color:#eedd82">$dbuser&lt;/span>&lt;span style="color:#87ceeb">: running (pid &lt;/span>&lt;span style="color:#eedd82">$dbpid&lt;/span>&lt;span style="color:#87ceeb">)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$1&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart|reload|force-reload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Usage: /etc/init.d/dropbox {start|stop|reload|force-reload|restart|status}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>exit &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the init.d script.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chmod +x /etc/init.d/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo update-rc.d dropbox defaults
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="starting-and-stopping-the-dropbox-daemon">Starting and Stopping the Dropbox daemon&lt;/h2>
+&lt;p>Use &lt;code>/etc/init.d/dropbox start&lt;/code> to start and &lt;code>/etc/init.d/dropbox stop&lt;/code> to stop.&lt;/p>
+&lt;h3 id="systemd---openmediavault-3x">systemd - OpenMediaVault 3.x&lt;/h3>
+&lt;p>If you are using Open Media Vault 3.x (based on Debian jessie) then
+you&amp;rsquo;ll need to create a systemd unit. Create the systemd service file.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /lib/systemd/system/dropbox.service
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-systemd" data-lang="systemd">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Unit]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Description=&lt;span style="color:#87ceeb">Dropbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>After=&lt;span style="color:#87ceeb">local-fs.target network.target&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Service]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Type=&lt;span style="color:#87ceeb">simple&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>WorkingDirectory=&lt;span style="color:#87ceeb">%h/.dropbox-dist&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ExecStart=&lt;span style="color:#87ceeb">/usr/local/bin/dropboxd&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ExecReload=&lt;span style="color:#87ceeb">/bin/kill -HUP $MAINPID&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>KillMode=&lt;span style="color:#87ceeb">process&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Restart=&lt;span style="color:#87ceeb">on-failure&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User=&lt;span style="color:#87ceeb">%I&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Install]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>WantedBy=&lt;span style="color:#87ceeb">multi-user.target&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the dropbox service for a given user.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable dropbox@user_a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the service.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl start dropbox@user_a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dropbox-client">Dropbox client&lt;/h2>
+&lt;p>It is recommended to download the official Dropbox client to configure
+Dropbox and get its status.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download?dl=packages/dropbox.py&amp;#34;&lt;/span> -O dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">755&lt;/span> dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv dropbox /usr/local/bin/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can check on Dropbox status by running the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dropbox status
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For usage instructions run &lt;code>dropbox help&lt;/code>.&lt;/p>
+&lt;h1 id="photo-importing">Photo importing&lt;/h1>
+&lt;p>So, the reason for doing all this is that I now have a Dropbox instance
+running on my home file server and everyday it runs a script, that I wrote,
+to automatically import new photos into a directory that Plex monitors.
+I&amp;rsquo;ll post details about my photo sorting script, &lt;a href="https://github.com/flexiondotorg/Phort">Phort&lt;/a>,
+at a later date.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.dropboxwiki.com/Text_Based_Linux_Install">http://www.dropboxwiki.com/Text_Based_Linux_Install&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Integrating Dropbox on a headless Open Media Vault server.</summary></item><item><title>Setting up BitSync on Debian</title><link>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</link><pubDate>Sat, 21 Jun 2014 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</guid><description>&lt;p>I&amp;rsquo;ve replaced Dropbox with &lt;a href="http://www.bittorrent.com/sync">BitTorrent Sync&lt;/a>.
+In order to do this I&amp;rsquo;ve have &lt;code>btsync&lt;/code> running on a VPS (2CPU, 2GB, 400GB), my
+home server and assorted Arch Linux workstations.&lt;/p>
+&lt;p>I had a couple of reasons for migrating away from Dropbox.&lt;/p>
+&lt;ul>
+&lt;li>Dropbox was costing $100 per year.&lt;/li>
+&lt;li>Dropbox encryption model is weak and I have data security/privacy.&lt;/li>
+&lt;/ul>
+&lt;p>The VPS I am running BitTorrent Sync on costs $50 per year and provides four
+times the storage. I run &lt;code>btsync&lt;/code> on a VPS so that there is always a server
+&lt;em>&amp;ldquo;in the cloud&amp;rdquo;&lt;/em> that is available to sync with so that my setup emulates what
+Dropbox used to do.&lt;/p>
+&lt;p>All my servers are running Debian and this is how I install &lt;code>btsync&lt;/code> on
+Debian.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sh -c &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#f00">$(&lt;/span>curl -fsSL http://debian.yeasoft.net/add-btsync-repository.sh&lt;span style="color:#f00">)&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install btsync
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is how I respond to the prompts:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>* Do you want to define a default BitTorrent Sync instance? : YES
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* BitTorrent Sync Daemon Credentials: yourusername
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* BitTorrent Sync Daemon Group: yourusername
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Niceness of the BitTorrent Sync Daemon: 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* On which portnumber should BitTorrent Sync listen? 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* BitTorrent Sync Listen Port: 12345
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Do you want BitTorrent Sync to request port mapping via UPNP? NO
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Download Bandwith Limit: 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Upload Bandwith Limit: 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Web Interface Bind IP Address: 0.0.0.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Web Interface Listen Port: 8888
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* The username for accessing the web interface: yourusername
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* The password for accessing the web interface: yourpassword
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>As you&amp;rsquo;ll see, I don&amp;rsquo;t use UPNP on my VPS. I elect a specific port (not
+actually 12345 by the way) and open that port up with &lt;code>ufw&lt;/code>. I also only
+allow access to the WebUI port from another server I own which reverse
+proxies via &lt;code>nginx&lt;/code>.&lt;/p>
+&lt;p>&lt;code>btsync&lt;/code> works really well, I have it syncing hundreds of thousands of
+files that amount to several hundred gigabytes of data. On my Arch Linux
+workstations I use the brilliant &lt;a href="http://www.yeasoft.com/site/projects:btsync-deb:btsync-gui">btsync-gui&lt;/a>
+and &lt;a href="https://play.google.com/store/apps/details?id=com.bittorrent.sync">BitTorrent Sync is also available for Android&lt;/a>.&lt;/p>
+&lt;p>That said, I still use a free Dropbox account to sync photos from mine and my
+wife&amp;rsquo;s Android phones. I have a Dropbox instance running on my home file server
+and everyday it runs a script to automatically import these photos into Plex.&lt;/p>
+&lt;p>Such a shame, that at the time of writing, &lt;code>btsync&lt;/code> is closed source :-(
+Maybe that will change but if it doesn&amp;rsquo;t &lt;a href="http://syncthing.net/">syncthing&lt;/a>
+may well be the answer when it has matured a little.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.yeasoft.com/site/projects:btsync-deb:btsync-server">http://www.yeasoft.com/site/projects:btsync-deb:btsync-server&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://forum.bittorrent.com/topic/18974-debian-and-ubuntu-server-packages-for-bittorrent-sync/">http://forum.bittorrent.com/topic/18974-debian-and-ubuntu-server-packages-for-bittorrent-sync/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Setting up BitTorrent Sync on Debian</summary></item><item><title>Dropbox is my Nikola publish button</title><link>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</link><pubDate>Wed, 06 Mar 2013 19:01:21 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</guid><description>&lt;p>When I &lt;a href="https://wimpysworld.com/posts/migrating-wordpress-to-nikola/">migrated my site to Nikola&lt;/a>
+I wanted to ensure I could manage my blog from the shell, the web, Android
+smartphone or Android tablet. I took some inspiration from &lt;a href="http://joehewitt.com">Joe Hewitt&amp;rsquo;s&lt;/a>
+article &lt;a href="http://joehewitt.com/2011/10/03/dropbox-is-my-publish-button">Dropbox is my publish button&lt;/a>
+and created a free Dropbox account which links to a shared folder on my Dropbox
+Pro account. I created a simple shell script (invoked via &lt;code>cron&lt;/code> every minute)
+that looks for a trigger file, if the trigger file exists Nikola publishes and
+deploys the site.&lt;/p>
+&lt;p>I am able to edit content from anywhere, on any device, and trigger publishing.
+Very happy.&lt;/p>
+&lt;p>What follows is how I install Dropbox on headless servers running Arch Linux
+and Debian/Ubuntu.&lt;/p>
+&lt;h2 id="installing-dropbox-daemon---all-distros">Installing Dropbox daemon - all distros&lt;/h2>
+&lt;p>Download the latest Dropbox stable release for 32-bit or 64-bit.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O dropbox.tar.gz &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download/?plat=lnx.x86&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -O dropbox.tar.gz &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download/?plat=lnx.x86_64&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Extract the archive and install Dropbox in &lt;code>/opt&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -xvzf dropbox.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv ~/.dropbox-dist /opt/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo find /opt/dropbox/ -type f -exec chmod &lt;span style="color:#f60">644&lt;/span> {} &lt;span style="color:#87ceeb">\;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">755&lt;/span> /opt/dropbox/dropboxd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">755&lt;/span> /opt/dropbox/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s /opt/dropbox/dropboxd /usr/local/bin/dropboxd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run &lt;code>dropboxd&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/usr/local/bin/dropboxd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You should see output like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>This client is not linked to any account... Please visit https://www.dropbox.com/cli_link?host_id=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx to link this machine.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Visit the URL, login with your Dropbox account and link the account. You should see the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Client successfully linked, Welcome Web!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>dropboxd&lt;/code> will now create a &lt;code>~/Dropbox&lt;/code> folder and start synchronizing. Stop &lt;code>dropboxd&lt;/code> with CTRL+C.&lt;/p>
+&lt;h3 id="arch-linux---systemd">Arch Linux - systemd&lt;/h3>
+&lt;p>Run Dropbox as daemon with systemd. Create &lt;code>/usr/lib/systemd/system/dropbox@.service&lt;/code>
+with the following content.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-systemd" data-lang="systemd">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Unit]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Description=&lt;span style="color:#87ceeb">Dropbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>After=&lt;span style="color:#87ceeb">local-fs.target network.target&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Service]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Type=&lt;span style="color:#87ceeb">simple&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ExecStart=&lt;span style="color:#87ceeb">/usr/local/bin/dropboxd&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ExecReload=&lt;span style="color:#87ceeb">/bin/kill -HUP $MAINPID&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>KillMode=&lt;span style="color:#87ceeb">process&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Restart=&lt;span style="color:#87ceeb">always&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User=&lt;span style="color:#87ceeb">%I&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Install]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>WantedBy=&lt;span style="color:#87ceeb">multi-user.target&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the daemon for your user, run the following replace&lt;code>&amp;lt;user&amp;gt;&lt;/code> with your
+username. This will ensure Dropbox is started when the system boots.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable dropbox@&amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl start dropbox@&amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="debianubuntu---initd">Debian/Ubuntu - init.d&lt;/h3>
+&lt;p>Run Dropbox as daemon with init.d. Create &lt;code>/etc/init.d/dropbox&lt;/code> with the
+following content, replacing &lt;code>&amp;lt;user&amp;gt;&lt;/code> with your username.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>&lt;span style="color:#0f0">### BEGIN INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Provides: dropbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Start: $local_fs $remote_fs $network $syslog $named&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Stop: $local_fs $remote_fs $network $syslog $named&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Start: 2 3 4 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Stop: 0 1 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># X-Interactive: false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Short-Description: dropbox service&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">### END INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DROPBOX_USERS&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&amp;lt;user&amp;gt;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DAEMON&lt;/span>=/opt/dropbox/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>start() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Starting dropbox...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>getent passwd &lt;span style="color:#eedd82">$dbuser&lt;/span> | cut -d: -f6&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOME&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> start-stop-daemon -b -o -c &lt;span style="color:#eedd82">$dbuser&lt;/span> -S -u &lt;span style="color:#eedd82">$dbuser&lt;/span> -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>stop() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Stopping dropbox...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>getent passwd &lt;span style="color:#eedd82">$dbuser&lt;/span> | cut -d: -f6&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon -o -c &lt;span style="color:#eedd82">$dbuser&lt;/span> -K -u &lt;span style="color:#eedd82">$dbuser&lt;/span> -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>status() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">dbpid&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>pgrep -u &lt;span style="color:#eedd82">$dbuser&lt;/span> dropbox&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#eedd82">$dbpid&lt;/span> ] ; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;dropboxd for USER &lt;/span>&lt;span style="color:#eedd82">$dbuser&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;dropboxd for USER &lt;/span>&lt;span style="color:#eedd82">$dbuser&lt;/span>&lt;span style="color:#87ceeb">: running (pid &lt;/span>&lt;span style="color:#eedd82">$dbpid&lt;/span>&lt;span style="color:#87ceeb">)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$1&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart|reload|force-reload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Usage: /etc/init.d/dropbox {start|stop|reload|force-reload|restart|status}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>exit &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the init.d script.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chmod +x /etc/init.d/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo update-rc.d dropbox defaults
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-dropbox-client---all-distros">Install Dropbox client - all distros&lt;/h2>
+&lt;p>It is recommended to download the official Dropbox client to configure Dropbox
+and get its status.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download?dl=packages/dropbox.py&amp;#34;&lt;/span> -O dropbox-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod &lt;span style="color:#f60">755&lt;/span> dropbox-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i s&lt;span style="color:#87ceeb">&amp;#39;/#!\/usr\/bin\/python/#!\/usr\/bin\/env python2/&amp;#39;&lt;/span> dropbox-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv dropbox-cli /usr/local/bin/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For usage instructions run &lt;code>dropbox-cli help&lt;/code>.&lt;/p>
+&lt;h2 id="disable-lan-sync">Disable LAN Sync&lt;/h2>
+&lt;p>Stop Dropbox from sending LAN Sync broadcasts every 30 seconds over port 17500.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dropbox-cli lansync n
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I&amp;rsquo;m planning to make more use of Dropbox for content management and content
+delivery, blog posts to follow.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.dropboxwiki.com/Text_Based_Linux_Install">http://www.dropboxwiki.com/Text_Based_Linux_Install&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://aur.archlinux.org/packages/dropbox/">https://aur.archlinux.org/packages/dropbox/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Dropbox">https://wiki.archlinux.org/index.php/Dropbox&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Publishing a Nikola blog via Dropbox on a headless Linux server</summary></item></channel></rss>

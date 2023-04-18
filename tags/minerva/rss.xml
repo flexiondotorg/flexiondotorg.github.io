@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Minerva on Wimpy's World</title><link>https://wimpysworld.com/tags/minerva/</link><description>Recent content in Minerva on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 26 Apr 2006 17:42:11 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/minerva/rss.xml" rel="self" type="application/rss+xml"/><item><title>Project Minerva is coming home</title><link>https://wimpysworld.com/posts/project-minerva-is-coming-home/</link><pubDate>Wed, 26 Apr 2006 17:42:11 +0000</pubDate><guid>https://wimpysworld.com/posts/project-minerva-is-coming-home/</guid><description>It&amp;rsquo;s coming home. Minerva is coming home.</description></item><item><title>Leaving Minerva</title><link>https://wimpysworld.com/posts/leaving-minerva/</link><pubDate>Thu, 01 Sep 2005 09:47:16 +0000</pubDate><guid>https://wimpysworld.com/posts/leaving-minerva/</guid><description>Standing down from the Minerva project</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Minerva on Wimpy's World</title><link>https://wimpysworld.com/tags/minerva/</link><description>Recent content in Minerva on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 26 Apr 2006 17:42:11 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/minerva/rss.xml" rel="self" type="application/rss+xml"/><item><title>Project Minerva is coming home</title><link>https://wimpysworld.com/posts/project-minerva-is-coming-home/</link><pubDate>Wed, 26 Apr 2006 17:42:11 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/project-minerva-is-coming-home/</guid><description>&lt;p>Despite a generous offer from a Minerva enthusiast a year or so ago to freely
+host the Project Minerva sites, all the Project Minerva hosting is coming back
+to where it started and rightly belongs. Yes, right here with me. It just
+goes to show you really don&amp;rsquo;t get anything for free. The developers have had
+several outages with the server which was provided by SpiderTech Hosting, so
+we are bringing it back here where we can look after our interests directly.&lt;/p>
+&lt;p>Minerva users might be wondering if the fact I am fully hosting Project
+Minerva again means I am going to be developing for the project again. Well,
+we will just have to see but I did inform Chris of a little project I kicked
+off last week which may (or may not) lead to something.&lt;/p></description><summary>It&amp;rsquo;s coming home. Minerva is coming home.</summary></item><item><title>Leaving Minerva</title><link>https://wimpysworld.com/posts/leaving-minerva/</link><pubDate>Thu, 01 Sep 2005 09:47:16 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/leaving-minerva/</guid><description>&lt;p>Yesterday was a sad day. I finally notified the core &lt;a href="http://sourceforge.net/projects/minerva/">Minerva&lt;/a>
+developers that I am leaving the project. Given that I started the project a few
+years back it was not a decision I made lightly.&lt;/p>
+&lt;p>I have a couple of reasons for leaving the project, the main one being that I
+just do not have the time available to effectively lead or contribute to the
+project. All open source projects require good leadership and I haven&amp;rsquo;t been able
+to provide that for most of 2005. It is with the best interests of Minerva in
+mind that I decided to leave.&lt;/p>
+&lt;p>However, Minerva is in very good hands and is under active development,
+with Dave and Chris leading the effort. I wish all the Minerva developers and
+users every success with the upcoming release of R4, it is a marvelous
+achievement and I am sure will prove to be very successful. I will be
+keeping an eye on R4 development, and if time permits, I may contribute some
+blocks and modules in the future. Until then, good luck and make me proud!&lt;/p></description><summary>Standing down from the Minerva project</summary></item></channel></rss>

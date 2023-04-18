@@ -1,1 +1,842 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GNOME on Wimpy's World</title><link>https://wimpysworld.com/tags/gnome/</link><description>Recent content in GNOME on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/gnome/rss.xml" rel="self" type="application/rss+xml"/><item><title>Retro Home</title><link>https://wimpysworld.com/projects/retro-home/</link><pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/retro-home/</guid><description>A retro-gaming operating system for Raspberry Pi built with Ubuntu and Ludo</description></item><item><title>Memory consumption of Linux desktop environments</title><link>https://wimpysworld.com/posts/memory-consumption-of-linux-desktop-environments/</link><pubDate>Sun, 23 Mar 2014 13:30:27 +0000</pubDate><guid>https://wimpysworld.com/posts/memory-consumption-of-linux-desktop-environments/</guid><description>Comparing desktop environment memory usage with ps_mem</description></item><item><title>Arch Linux Angel</title><link>https://wimpysworld.com/posts/arch-linux-angel/</link><pubDate>Tue, 15 May 2012 11:12:13 +0000</pubDate><guid>https://wimpysworld.com/posts/arch-linux-angel/</guid><description>Automated scripted installs of Arch Linux</description></item><item><title>Installing GNOME 3 on Ubuntu 11.10</title><link>https://wimpysworld.com/posts/installing-gnome-3-on-ubuntu-11.10/</link><pubDate>Fri, 09 Dec 2011 16:21:03 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-gnome-3-on-ubuntu-11.10/</guid><description>Creating a pure GNOME 3 experience on Ubuntu 11.10</description></item><item><title>Shotwell 0.11 PPA available for Ubuntu Lucid and Maverick</title><link>https://wimpysworld.com/posts/shotwell-0.11-ppa-available-for-ubuntu-lucid-and-maverick/</link><pubDate>Tue, 30 Aug 2011 11:05:50 +0000</pubDate><guid>https://wimpysworld.com/posts/shotwell-0.11-ppa-available-for-ubuntu-lucid-and-maverick/</guid><description>Showell 0.11 is available in a PPA for Ubuntu 10.04 &amp;amp; 10.10</description></item><item><title>Shotwell 0.8.1 PPA available for Ubuntu Lucid</title><link>https://wimpysworld.com/posts/shotwell-0.8.1-ppa-available-for-ubuntu-lucid/</link><pubDate>Thu, 17 Mar 2011 17:04:42 +0000</pubDate><guid>https://wimpysworld.com/posts/shotwell-0.8.1-ppa-available-for-ubuntu-lucid/</guid><description>Get the latest Shotwell 0.8.1 via a PP for Ubuntu 10.04</description></item><item><title>Goodbye F-Spot. Hello Shotwell</title><link>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</link><pubDate>Sat, 20 Mar 2010 15:39:17 +0000</pubDate><guid>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</guid><description>F-Spot you serve me well, but here comes Shotwell</description></item><item><title>SSHMenu - SSH Connection Management</title><link>https://wimpysworld.com/posts/sshmenu-ssh-connection-management/</link><pubDate>Tue, 26 Feb 2008 13:21:28 +0000</pubDate><guid>https://wimpysworld.com/posts/sshmenu-ssh-connection-management/</guid><description>Managing SSH connections from a GNOME panel applet</description></item><item><title>gLabels 2.2.1</title><link>https://wimpysworld.com/posts/glabels-2.2.1/</link><pubDate>Wed, 30 Jan 2008 11:45:57 +0000</pubDate><guid>https://wimpysworld.com/posts/glabels-2.2.1/</guid><description>Accurate label printing for Linux is restored</description></item><item><title>BloGTK, a weblog client for Linux</title><link>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</link><pubDate>Fri, 11 Jan 2008 13:44:07 +0000</pubDate><guid>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</guid><description>Graphical blogging client for GNOME</description></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>From community contributor to director of engineering and back again</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GNOME on Wimpy's World</title><link>https://wimpysworld.com/tags/gnome/</link><description>Recent content in GNOME on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/gnome/rss.xml" rel="self" type="application/rss+xml"/><item><title>Retro Home</title><link>https://wimpysworld.com/projects/retro-home/</link><pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/retro-home/</guid><description>&lt;p>&lt;a href="https://github.com/wimpysworld/retro-home">Retro Home&lt;/a> is custom Raspberry Pi
+operating system purpose built for retro gaming. Built with
+&lt;a href="https://ubuntu.com/">Ubuntu&lt;/a> and using the minimalist emulator frontend
+&lt;a href="https://ludo.libretro.com/">Ludo&lt;/a> it supports most classic consoles from Atari,
+Nintendo, Sega and SNK along with arcade emulation support. A number of retro
+styled Raspberry Pi cases from &lt;a href="https://retroflag.com/">Retroflag&lt;/a> and
+&lt;a href="https://www.waveshare.com/product/raspberry-pi/portable-gaming.htm">Waveshare&lt;/a>
+are supported (with more in the works) using bespoke GPIO drivers.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://github.com/wimpysworld/retro-home">Retro Home&lt;/a>&lt;/li>
+&lt;li>Date: July 2020 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>A retro-gaming operating system for Raspberry Pi built with Ubuntu and Ludo</summary></item><item><title>Memory consumption of Linux desktop environments</title><link>https://wimpysworld.com/posts/memory-consumption-of-linux-desktop-environments/</link><pubDate>Sun, 23 Mar 2014 13:30:27 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/memory-consumption-of-linux-desktop-environments/</guid><description>&lt;div class="alert alert-info">
+&lt;strong>Note&lt;/strong> Updated on June 3rd 2014 and now includes LXQt and Unity.
+&lt;/div>
+&lt;p>For the last 9 months or so I&amp;rsquo;ve spent my spare time working with the
+&lt;a href="http://mate-desktop.org">MATE Desktop Team&lt;/a>. Every so often, via the various
+on-line MATE communities, the topic of how &lt;em>&amp;ldquo;light weight&amp;rdquo;&lt;/em> MATE is when
+compared to other desktop environments crops up and quite often
+&lt;a href="http://www.xfce.org/">Xfce&lt;/a> is suggested as a lighter alternative. After all
+MATE and Xfce both provide a traditional desktop environment based on GTK+ so
+this suggestion is sensible. But is Xfce actually &lt;em>&amp;ldquo;lighter&amp;rdquo;&lt;/em> than MATE?&lt;/p>
+&lt;p>I&amp;rsquo;ve found MATE to be (subjectively) more responsive that Xfce and there have
+been two recent blog posts that indicate MATE has lower memory requirements than
+Xfce.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://l3net.wordpress.com/2013/12/17/four-lightweight-desktops-for-opensuse-13-1/">Four Lightweight Desktops for openSUSE 13.1&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://l3net.wordpress.com/2014/02/15/a-memory-comparison-of-light-linux-desktops-part-3/">A Memory Comparison of Light Linux Desktops – Part 3&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Given that I&amp;rsquo;m comfortably running MATE on the Raspberry Pi Model B (which has
+just 512MB RAM) I&amp;rsquo;ve been stating that MATE is well suited for use on resource
+constrained hardware and professional workstations alike. This is still true,
+but I&amp;rsquo;ve also said that MATE is lighter than Xfce and I might have to eat humble
+pie on that one.&lt;/p>
+&lt;p>The topic of measursing desktop environment resource use came up on the
+&lt;code>#archlinux-tu&lt;/code> IRC channel recently and someone suggested using
+&lt;a href="https://github.com/pixelb/ps_mem/">ps_mem.py&lt;/a> to gather the memory usage data.
+&lt;code>ps_mem.py&lt;/code> provides a far more robust mechanism for gathering memory usage data
+than I&amp;rsquo;ve seen in previous comparisons.&lt;/p>
+&lt;p>So the seed was planted, I created a bunch of VirtualBox guest machines and set
+to work comparing the memory requirements of all the Linux desktop environments
+I could.&lt;/p>
+&lt;h2 id="damn-it-just-tell-me-what-the-lightest-desktop-environment-is">Damn it, just tell me what the &amp;ldquo;&lt;em>lightest&lt;/em>&amp;rdquo; desktop environment is!&lt;/h2>
+&lt;p>OK, for those of you who just want the final answer, with none of the
+explanation, here it is:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Desktop Environment&lt;/th>
+&lt;th>Memory Used&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Enlightenment 0.18.8&lt;/td>
+&lt;td>83.8 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LXDE 0.5.5&lt;/td>
+&lt;td>87.0 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Xfce 4.10.2&lt;/td>
+&lt;td>110.0 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LXQt 0.7.0&lt;/td>
+&lt;td>113.0 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MATE 1.8.1&lt;/td>
+&lt;td>123.0 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cinnamon 2.2.13&lt;/td>
+&lt;td>176.3 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GNOME3 3.12.2&lt;/td>
+&lt;td>245.3 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>KDE 4.13.1&lt;/td>
+&lt;td>302.6 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Unity 7.2.0.14&lt;/td>
+&lt;td>312.5 MiB&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="bullshit-how-did-you-come-up-with-these-numbers">Bullshit! How did you come up with these numbers?&lt;/h2>
+&lt;p>All the VirtualBox VMs are 32-bit with 768MB RAM and based on the same core
+&lt;a href="http://www.archlinux.org">Arch Linux&lt;/a> installation. I achieved this using my
+&lt;a href="https://github.com/flexiondotorg/archinstaller">ArchInstaller&lt;/a> script which is
+designed for quickly installing reproducible Arch Linux setups.&lt;/p>
+&lt;p>Each VM differs only by the packages that are required for the given desktop
+environment. The desktop environments native display manager is also installed
+but if it doesn&amp;rsquo;t have one then &lt;code>lightdm&lt;/code> was chosen. LXDE, Xfce, MATE, Cinnamon
+and GNOME all have &lt;code>gvfs-smb&lt;/code> installed as this enables accessing Windows and
+Samba shares (a common requirement for home and office) in their respective file
+managers and the KDE install includes packages to provide equivalent functionality.
+You can see the specific desktop environment packages or package groups that were
+installed here:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/ArchInstaller/tree/master/packages/desktop">https://github.com/flexiondotorg/ArchInstaller/tree/master/packages/desktop&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Each VM was booted, logged in and any initial desktop environment configuration
+was completed choosing the default options if prompted. Then &lt;code>ps_mem&lt;/code> was
+installed, the VM shut down and a snapshot made.&lt;/p>
+&lt;p>Each VM was then started, logged in via the display manager, the desktop
+environment was fully loaded and waited for disk activity to settle. Then
+&lt;code>ps -efH&lt;/code> and &lt;code>ps_mem&lt;/code> were executed via SSH and the results sent back to my
+workstation. When the process and memory collections were conducted there had
+been no desktop interaction and no applications had been launched.&lt;/p>
+&lt;h2 id="your-numbers-are-wrong-i-can-get-xxx-desktop-to-run-in-yyy-less-memory">Your numbers are wrong I can get &lt;em>xxx&lt;/em> desktop to run in &lt;em>yyy&lt;/em> less memory!&lt;/h2>
+&lt;p>Well done, you probably can.&lt;/p>
+&lt;p>Each virtual machine has VirtualBox guest additions, OpenSSH, Network Manager,
+&lt;code>avahi-daemon&lt;/code>, &lt;code>ntpd&lt;/code>, &lt;code>rpc.statd&lt;/code>, &lt;code>syslog-ng&lt;/code> and various other bits and bobs
+installed and running. Some of these are not required or have lighter alternatives
+available.&lt;/p>
+&lt;p>So, while I freely accept that each desktop environment can be run in less memory,
+the results here are relative to a consistent base setup.&lt;/p>
+&lt;p>However, what is important to note is that &lt;strong>I think the Cinnamon results are
+too low&lt;/strong>. Cinnamon is forked from GNOME3 and the Arch Linux package groups for
+Cinnamon only install the core Cinnamon packages but none of the GNOME3
+applications or components that would be required to create a full desktop
+environment.&lt;/p>
+&lt;p>So comparing Cinnamon with the other desktops in this test is not a fair
+comparison. For example, GNOME3 and KDE default installs on Arch Linux include
+all the accessibility extensions and applications for sight or mobility impaired
+individuals where as Cinnamon does not. This is just one example of where I
+think the Cinnamon results are skewed.&lt;/p>
+&lt;h2 id="the-ram-is-there-to-be-used-is-lighter-actually-better">The RAM is there to be used. Is lighter actually better?&lt;/h2>
+&lt;p>No, and Yes.&lt;/p>
+&lt;p>I subscribe to the school of thought that RAM is there to be used. But;&lt;/p>
+&lt;ul>
+&lt;li>I want to preserve as much free RAM for the applications I run, not for feature bloat in the desktop environment. I&amp;rsquo;m looking at you KDE.&lt;/li>
+&lt;li>I want a fully integrated desktop experience, but not one that is merely lighter because it lacks features. I&amp;rsquo;m looking at you LXDE.&lt;/li>
+&lt;li>I want a consistent user interface that any of my family could use, not one that favours style over substance. I&amp;rsquo;m looking at you Enlightenment.&lt;/li>
+&lt;/ul>
+&lt;p>Another take on lightness is that the more RAM used, the more code that needs
+executing. Therefore, higher CPU utilisation and degraded desktop performance
+on modest hardware. This could also translate into degraded battery performance.&lt;/p>
+&lt;p>This is why I choose MATE Desktop. It is a fully integrated desktop environment,
+that is responsive, feature full, has reasonable memory requirements and scales
+from single core armv6h CPU with 512MB RAM to multi core x86_64 CPU with 32GB
+RAM (for me at least).&lt;/p>
+&lt;h2 id="without-the-full-stats-it-never-happened-prove-it">Without the full stats it never happened. Prove it!&lt;/h2>
+&lt;p>He is the full data capture from &lt;code>ps_mem.py&lt;/code> for each desktop environment.&lt;/p>
+&lt;h3 id="enlightenment">Enlightenment&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>172.0 KiB + 46.5 KiB = 218.5 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>316.0 KiB + 40.0 KiB = 356.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>336.0 KiB + 87.5 KiB = 423.5 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>560.0 KiB + 37.0 KiB = 597.0 KiB crond
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>580.0 KiB + 54.0 KiB = 634.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>688.0 KiB + 67.5 KiB = 755.5 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>480.0 KiB + 276.0 KiB = 756.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>700.0 KiB + 133.5 KiB = 833.5 KiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 78.5 KiB = 846.5 KiB VBoxService
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>580.0 KiB + 267.0 KiB = 847.0 KiB tempget
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>544.0 KiB + 312.0 KiB = 856.0 KiB enlightenment_start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>764.0 KiB + 94.0 KiB = 858.0 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>600.0 KiB + 280.5 KiB = 880.5 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>624.0 KiB + 298.0 KiB = 922.0 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>724.0 KiB + 309.5 KiB = 1.0 MiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>784.0 KiB + 386.5 KiB = 1.1 MiB enlightenment_fm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>952.0 KiB + 395.0 KiB = 1.3 MiB efreetd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.0 MiB + 517.0 KiB = 1.5 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.3 MiB + -3781.0 KiB = 1.7 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 483.0 KiB = 1.7 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 234.0 KiB = 1.9 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 1.0 MiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 814.5 KiB = 2.2 MiB lightdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 1.1 MiB = 2.4 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 575.5 KiB = 3.2 MiB VBoxClient (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.4 MiB + 781.0 KiB = 3.2 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 10.9 MiB + -7741.5 KiB = 3.3 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.2 MiB + 68.5 KiB = 6.3 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.3 MiB + -2300.0 KiB = 9.1 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 16.3 MiB + 426.0 KiB = 16.7 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 19.9 MiB + 1.5 MiB = 21.4 MiB enlightenment
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 89.6 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="lxde">LXDE&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>184.0 KiB + 45.0 KiB = 229.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>320.0 KiB + 36.0 KiB = 356.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>340.0 KiB + 83.0 KiB = 423.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>360.0 KiB + 78.0 KiB = 438.0 KiB lxdm-binary
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>384.0 KiB + 93.5 KiB = 477.5 KiB lxsession
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>580.0 KiB + 50.0 KiB = 630.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>700.0 KiB + 55.0 KiB = 755.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>464.0 KiB + 297.0 KiB = 761.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.6 MiB + -3890.5 KiB = 821.5 KiB menu-cached
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>612.0 KiB + 213.0 KiB = 825.0 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>500.0 KiB + 328.0 KiB = 828.0 KiB lxdm-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 97.5 KiB = 865.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>632.0 KiB + 251.5 KiB = 883.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>644.0 KiB + 244.5 KiB = 888.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>776.0 KiB + 189.0 KiB = 965.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3888.5 KiB = 1.0 MiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>884.0 KiB + 305.0 KiB = 1.2 MiB gvfsd-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 322.0 KiB = 1.4 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 381.0 KiB = 1.5 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 410.0 KiB = 1.5 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.0 MiB + 485.5 KiB = 1.5 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 507.0 KiB = 1.7 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 259.0 KiB = 1.9 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 991.5 KiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 1.1 MiB = 2.4 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.5 MiB + 983.0 KiB = 2.4 MiB lxpolkit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.3 MiB + -3414.0 KiB = 3.0 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.3 MiB + 706.5 KiB = 4.0 MiB openbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.4 MiB + 59.5 KiB = 4.4 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.9 MiB + -1941.0 KiB = 5.0 MiB lxpanel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 12.9 MiB + -7745.0 KiB = 5.3 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.6 MiB + 1.8 MiB = 5.4 MiB pcmanfm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.5 MiB + -3637.5 KiB = 8.0 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.1 MiB + 1.8 MiB = 9.0 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.9 MiB + 604.5 KiB = 14.5 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 87.0 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="xfce">Xfce&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>176.0 KiB + 32.0 KiB = 208.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>292.0 KiB + 26.5 KiB = 318.5 KiB gpg-agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>316.0 KiB + 32.0 KiB = 348.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>324.0 KiB + 81.0 KiB = 405.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>488.0 KiB + 96.0 KiB = 584.0 KiB xfconfd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>588.0 KiB + 47.0 KiB = 635.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>464.0 KiB + 260.0 KiB = 724.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>712.0 KiB + 49.0 KiB = 761.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>608.0 KiB + 173.0 KiB = 781.0 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>644.0 KiB + 169.5 KiB = 813.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 57.5 KiB = 825.5 KiB VBoxService
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>784.0 KiB + 55.5 KiB = 839.5 KiB sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>640.0 KiB + 218.5 KiB = 858.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>764.0 KiB + 94.5 KiB = 858.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>760.0 KiB + 160.0 KiB = 920.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>872.0 KiB + 174.0 KiB = 1.0 MiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3831.0 KiB = 1.1 MiB gvfsd-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 311.0 KiB = 1.4 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 282.0 KiB = 1.4 MiB tumblerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 289.0 KiB = 1.4 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 369.0 KiB = 1.4 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 353.0 KiB = 1.5 MiB xfce4-notifyd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 515.0 KiB = 1.7 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 483.5 KiB = 1.8 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 248.5 KiB = 1.9 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.5 MiB + 465.0 KiB = 1.9 MiB Thunar
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.4 MiB + -3457.5 KiB = 2.0 MiB lightdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 992.5 KiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 695.5 KiB = 2.1 MiB panel-6-systray
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 651.0 KiB = 2.3 MiB xfce4-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 1.1 MiB = 2.3 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.9 MiB + 525.0 KiB = 2.4 MiB xfsettingsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 903.0 KiB = 2.5 MiB panel-2-actions
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.3 MiB + -3505.0 KiB = 2.9 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 442.5 KiB = 3.0 MiB VBoxClient (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 624.5 KiB = 3.2 MiB xfce4-power-manager (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.1 MiB + 1.1 MiB = 3.2 MiB xfwm4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.1 MiB + 1.3 MiB = 4.4 MiB xfce4-panel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + 61.5 KiB = 5.0 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 12.9 MiB + -7827.0 KiB = 5.3 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.8 MiB + 1.6 MiB = 5.4 MiB xfdesktop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.6 MiB + 1.3 MiB = 7.8 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.5 MiB + -3643.5 KiB = 7.9 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 23.0 MiB + -3258.0 KiB = 19.8 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 110.0 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="lxqt">LXQt&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>176.0 KiB + 35.0 KiB = 211.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>320.0 KiB + 35.0 KiB = 355.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>324.0 KiB + 83.0 KiB = 407.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>612.0 KiB + 51.0 KiB = 663.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>460.0 KiB + 267.0 KiB = 727.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>676.0 KiB + 53.0 KiB = 729.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>580.0 KiB + 179.0 KiB = 759.0 KiB menu-cached (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 63.5 KiB = 831.5 KiB VBoxService
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>604.0 KiB + 247.0 KiB = 851.0 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 96.5 KiB = 864.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>648.0 KiB + 231.5 KiB = 879.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>4.7 MiB + -3856.0 KiB = 976.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>908.0 KiB + 396.0 KiB = 1.3 MiB lxqt-globalkeysd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.1 MiB + 425.0 KiB = 1.5 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.1 MiB + 484.5 KiB = 1.6 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.2 MiB + 551.0 KiB = 1.7 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.6 MiB + 248.0 KiB = 1.9 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.1 MiB + 998.5 KiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.3 MiB + 1.0 MiB = 2.3 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.5 MiB + 933.5 KiB = 2.4 MiB lxqt-policykit-agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.6 MiB + 901.0 KiB = 2.4 MiB lxqt-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.7 MiB + 837.0 KiB = 2.5 MiB sddm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2.6 MiB + 456.5 KiB = 3.0 MiB VBoxClient (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>6.3 MiB + -3350.0 KiB = 3.1 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2.4 MiB + 1.5 MiB = 3.8 MiB lxqt-powermanagement
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2.6 MiB + 1.5 MiB = 4.1 MiB lxqt-runner
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>3.4 MiB + 881.0 KiB = 4.3 MiB openbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2.7 MiB + 1.8 MiB = 4.5 MiB lxqt-notificationd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>4.7 MiB + 59.5 KiB = 4.7 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>12.5 MiB + -7812.0 KiB = 4.9 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>3.8 MiB + 2.2 MiB = 6.0 MiB lxqt-panel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>11.5 MiB + -3644.5 KiB = 7.9 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>11.2 MiB + -2581.0 KiB = 8.7 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>12.2 MiB + 366.0 KiB = 12.6 MiB pcmanfm-qt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>18.2 MiB + -644.0 KiB = 17.6 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 113.0 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="mate">MATE&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>248.0 KiB + 57.0 KiB = 305.0 KiB rtkit-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>316.0 KiB + 31.0 KiB = 347.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>344.0 KiB + 81.0 KiB = 425.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>388.0 KiB + 80.5 KiB = 468.5 KiB dbus-launch (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.4 MiB + -4003.0 KiB = 525.0 KiB dconf-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>588.0 KiB + 45.0 KiB = 633.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>552.0 KiB + 117.0 KiB = 669.0 KiB gconfd-2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>456.0 KiB + 259.0 KiB = 715.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>548.0 KiB + 189.0 KiB = 737.0 KiB gconf-helper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>692.0 KiB + 47.0 KiB = 739.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>592.0 KiB + 150.5 KiB = 742.5 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>660.0 KiB + 179.5 KiB = 839.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>644.0 KiB + 199.5 KiB = 843.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 92.5 KiB = 860.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.7 MiB + -3955.0 KiB = 893.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3943.5 KiB = 1.0 MiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3854.0 KiB = 1.1 MiB gvfsd-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + -3789.0 KiB = 1.3 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3817.0 KiB = 1.4 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 337.0 KiB = 1.4 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 249.5 KiB = 1.9 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 429.0 KiB = 2.0 MiB polkit-mate-authentication-agent-1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.4 MiB + -3485.5 KiB = 2.0 MiB lightdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.7 MiB + 510.5 KiB = 2.2 MiB dbus-daemon (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 1.0 MiB = 2.3 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 1.0 MiB = 2.4 MiB systemd (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.8 MiB + 679.5 KiB = 2.4 MiB (sd-pam) (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.9 MiB + 570.5 KiB = 2.5 MiB mate-screensaver
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.0 MiB + 536.0 KiB = 2.5 MiB mate-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.9 MiB + 679.5 KiB = 2.6 MiB notification-area-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.1 MiB + 703.0 KiB = 2.8 MiB mate-power-manager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.2 MiB + 596.0 KiB = 2.8 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.7 MiB + 686.5 KiB = 3.4 MiB marco
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 937.5 KiB = 3.5 MiB wnck-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.6 MiB + 309.5 KiB = 3.9 MiB pulseaudio
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.7 MiB + 1.2 MiB = 3.9 MiB mate-volume-control-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.0 MiB + 1.0 MiB = 4.0 MiB clock-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.6 MiB + -2931.0 KiB = 4.7 MiB mate-settings-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.7 MiB + -2790.0 KiB = 4.9 MiB mate-panel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + 60.5 KiB = 5.1 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.0 MiB + -7854.0 KiB = 5.3 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 10.2 MiB + -2592.0 KiB = 7.7 MiB caja
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.5 MiB + -3653.5 KiB = 7.9 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.5 MiB + 1.1 MiB = 8.6 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 14.9 MiB + 1.2 MiB = 16.1 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 123.0 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="cinnamon">Cinnamon&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>248.0 KiB + 56.0 KiB = 304.0 KiB rtkit-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>316.0 KiB + 31.0 KiB = 347.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>340.0 KiB + 82.0 KiB = 422.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.4 MiB + -3995.0 KiB = 469.0 KiB dconf-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>384.0 KiB + 88.5 KiB = 472.5 KiB dbus-launch (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>576.0 KiB + 44.0 KiB = 620.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>556.0 KiB + 115.0 KiB = 671.0 KiB gconfd-2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>452.0 KiB + 258.0 KiB = 710.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>544.0 KiB + 185.0 KiB = 729.0 KiB gconf-helper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>596.0 KiB + 174.5 KiB = 770.5 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>656.0 KiB + 170.5 KiB = 826.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>800.0 KiB + 47.0 KiB = 847.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>640.0 KiB + 208.5 KiB = 848.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 88.5 KiB = 856.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.7 MiB + -3946.0 KiB = 910.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3938.5 KiB = 1.0 MiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3847.0 KiB = 1.1 MiB gvfsd-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + -3818.0 KiB = 1.3 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3819.0 KiB = 1.4 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 340.0 KiB = 1.4 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 303.0 KiB = 1.4 MiB cupsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 394.0 KiB = 1.7 MiB csd-printer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 198.5 KiB = 1.8 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 599.5 KiB = 2.0 MiB lightdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 513.5 KiB = 2.1 MiB dbus-daemon (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 979.0 KiB = 2.2 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 1.0 MiB = 2.4 MiB systemd (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.9 MiB + 784.5 KiB = 2.6 MiB (sd-pam) (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.2 MiB + -3555.0 KiB = 2.7 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.6 MiB + -3794.5 KiB = 2.9 MiB colord
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.7 MiB + 713.5 KiB = 3.4 MiB polkit-gnome-authentication-agent-1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.8 MiB + 805.0 KiB = 3.6 MiB cinnamon-screensaver
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.6 MiB + 341.5 KiB = 3.9 MiB pulseaudio
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.2 MiB + 826.5 KiB = 4.0 MiB cinnamon-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.9 MiB + 56.5 KiB = 5.0 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.2 MiB + -7890.0 KiB = 5.4 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.9 MiB + 2.1 MiB = 6.0 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.5 MiB + 2.0 MiB = 7.5 MiB cinnamon-settings-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.4 MiB + -3668.5 KiB = 7.9 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 8.2 MiB + 1.1 MiB = 9.3 MiB cinnamon-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.7 MiB + 2.0 MiB = 9.8 MiB nemo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 21.2 MiB + -527.5 KiB = 20.7 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 85.9 MiB + -34668.5 KiB = 52.1 MiB cinnamon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 176.3 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="gnome3">GNOME3&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>180.0 KiB + 34.0 KiB = 214.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>276.0 KiB + 14.0 KiB = 290.0 KiB ssh-agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>248.0 KiB + 51.0 KiB = 299.0 KiB rtkit-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>312.0 KiB + 28.0 KiB = 340.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>324.0 KiB + 21.5 KiB = 345.5 KiB systemd-hostnamed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>328.0 KiB + 20.0 KiB = 348.0 KiB systemd-localed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>324.0 KiB + 80.0 KiB = 404.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>580.0 KiB + 52.5 KiB = 632.5 KiB bluetoothd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>604.0 KiB + 40.0 KiB = 644.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>556.0 KiB + 109.0 KiB = 665.0 KiB gconfd-2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>452.0 KiB + 252.0 KiB = 704.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>680.0 KiB + 44.0 KiB = 724.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>548.0 KiB + 182.0 KiB = 730.0 KiB gconf-helper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.6 MiB + -3950.5 KiB = 765.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>596.0 KiB + 185.0 KiB = 781.0 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 50.5 KiB = 818.5 KiB VBoxService
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>696.0 KiB + 146.5 KiB = 842.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 86.5 KiB = 854.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3960.0 KiB = 960.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>852.0 KiB + 137.5 KiB = 989.5 KiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>792.0 KiB + 267.0 KiB = 1.0 MiB zeitgeist-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3910.5 KiB = 1.3 MiB gdm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + -3853.0 KiB = 1.3 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.0 MiB + 291.0 KiB = 1.3 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3877.0 KiB = 1.3 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 286.0 KiB = 1.4 MiB cupsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 133.0 KiB = 1.5 MiB gnome-keyring-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 448.0 KiB = 1.5 MiB gdm-session-worker
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 359.0 KiB = 1.7 MiB gsd-printer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 509.0 KiB = 1.7 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 192.5 KiB = 1.8 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 648.0 KiB = 1.9 MiB mission-control-5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.6 MiB + -3676.5 KiB = 2.0 MiB gnome-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 984.5 KiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.5 MiB + 573.5 KiB = 2.1 MiB zeitgeist-datahub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 953.0 KiB = 2.2 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.1 MiB + -3700.5 KiB = 2.5 MiB colord
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.1 MiB + -3656.0 KiB = 2.5 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.2 MiB + 466.0 KiB = 2.6 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.0 MiB + 728.5 KiB = 2.7 MiB gnome-shell-calendar-server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 491.5 KiB = 3.1 MiB VBoxClient (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.5 MiB + 1.0 MiB = 3.5 MiB evolution-source-registry
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.5 MiB + -2914.5 KiB = 3.6 MiB tracker-extract
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.5 MiB + 338.5 KiB = 3.9 MiB pulseaudio
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.7 MiB + -2828.5 KiB = 3.9 MiB tracker-miner-fs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.4 MiB + 2.1 MiB = 5.5 MiB goa-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.3 MiB + -7973.0 KiB = 5.5 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.9 MiB + 728.0 KiB = 5.7 MiB tracker-store
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.1 MiB + 51.5 KiB = 6.2 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.2 MiB + 2.1 MiB = 6.3 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.4 MiB + -3668.5 KiB = 7.9 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 10.1 MiB + -1729.0 KiB = 8.4 MiB gnome-settings-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 8.1 MiB + 1.7 MiB = 9.8 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 10.7 MiB + -816.5 KiB = 9.9 MiB evolution-alarm-notify
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 24.6 MiB + 1.1 MiB = 25.7 MiB evolution-calendar-factory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>143.2 MiB + -56658.5 KiB = 87.9 MiB gnome-shell
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 245.3 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="kde">KDE&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 72.0 KiB + 8.0 KiB = 80.0 KiB start_kdeinit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 80.0 KiB + 13.5 KiB = 93.5 KiB kwrapper4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>128.0 KiB + 23.0 KiB = 151.0 KiB agetty
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>176.0 KiB + 28.0 KiB = 204.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>292.0 KiB + 28.5 KiB = 320.5 KiB gpg-agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>320.0 KiB + 28.0 KiB = 348.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>272.0 KiB + 84.0 KiB = 356.0 KiB cat (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>340.0 KiB + 79.0 KiB = 419.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>604.0 KiB + 39.0 KiB = 643.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>464.0 KiB + 247.0 KiB = 711.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 87.5 KiB = 855.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>852.0 KiB + 51.5 KiB = 903.5 KiB startkde
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>352.0 KiB + 669.0 KiB = 1.0 MiB systemd-udevd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>656.0 KiB + 524.5 KiB = 1.2 MiB kdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 420.0 KiB = 1.5 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>852.0 KiB + 780.0 KiB = 1.6 MiB klauncher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 346.0 KiB = 1.7 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.5 MiB + 256.5 KiB = 1.8 MiB akonadi_control
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 529.0 KiB = 1.8 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 201.5 KiB = 1.8 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.5 MiB + 409.5 KiB = 1.9 MiB dbus-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 971.5 KiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>656.0 KiB + 1.5 MiB = 2.2 MiB kdeinit4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 997.0 KiB = 2.3 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 1.6 MiB = 2.9 MiB kio_trash (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.1 MiB + 1.1 MiB = 3.2 MiB klipper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.9 MiB + -3587.0 KiB = 3.4 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.4 MiB + 1.0 MiB = 3.5 MiB ksmserver
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.2 MiB + 594.5 KiB = 3.8 MiB kuiserver
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.2 MiB + 952.5 KiB = 4.1 MiB kglobalaccel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.4 MiB + 829.5 KiB = 4.2 MiB akonadi_migration_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.4 MiB + 837.5 KiB = 4.3 MiB polkit-kde-authentication-agent-1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.8 MiB + 716.5 KiB = 4.5 MiB knotify4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.4 MiB + 49.5 KiB = 4.5 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.8 MiB + 891.0 KiB = 4.7 MiB baloo_file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.8 MiB + 975.0 KiB = 4.7 MiB akonadi_maildispatcher_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.8 MiB + 983.0 KiB = 4.7 MiB akonadi_baloo_indexer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.1 MiB + 1.3 MiB = 5.4 MiB akonadi_newmailnotifier_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.3 MiB + 1.1 MiB = 5.4 MiB korgac
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.2 MiB + -7804.0 KiB = 5.6 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.5 MiB + 1.7 MiB = 7.1 MiB akonadi_notes_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.1 MiB + -3575.0 KiB = 7.6 MiB kactivitymanagerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.6 MiB + 2.1 MiB = 7.7 MiB akonadi_sendlater_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.4 MiB + -3697.5 KiB = 7.8 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.2 MiB + 777.5 KiB = 8.0 MiB akonadiserver
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.0 MiB + 2.9 MiB = 8.9 MiB akonadi_archivemail_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.3 MiB + 2.6 MiB = 8.9 MiB kmix
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.1 MiB + 2.9 MiB = 9.0 MiB akonadi_mailfilter_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.9 MiB + 2.4 MiB = 9.3 MiB kded4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 9.1 MiB + 2.7 MiB = 11.7 MiB akonadi_agent_launcher (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.8 MiB + -1069.5 KiB = 12.8 MiB kwin
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.2 MiB + 3.2 MiB = 16.5 MiB krunner
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 68.8 MiB + -49024.0 KiB = 21.0 MiB mysqld
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 30.3 MiB + -2270.0 KiB = 28.1 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 36.9 MiB + 6.8 MiB = 43.7 MiB plasma-desktop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 302.6 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="unity">Unity&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 92.0 KiB + 14.0 KiB = 106.0 KiB cat
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>128.0 KiB + 21.0 KiB = 149.0 KiB agetty
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>180.0 KiB + 28.0 KiB = 208.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>252.0 KiB + 47.0 KiB = 299.0 KiB rtkit-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>312.0 KiB + 27.0 KiB = 339.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>324.0 KiB + 18.0 KiB = 342.0 KiB systemd-localed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>336.0 KiB + 21.0 KiB = 357.0 KiB systemd-timedated
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>344.0 KiB + 79.0 KiB = 423.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>412.0 KiB + 69.0 KiB = 481.0 KiB dconf-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>592.0 KiB + 39.0 KiB = 631.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>588.0 KiB + 92.5 KiB = 680.5 KiB indicator-messages-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>448.0 KiB + 245.0 KiB = 693.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>604.0 KiB + 89.5 KiB = 693.5 KiB indicator-bluetooth-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>548.0 KiB + 168.0 KiB = 716.0 KiB gconf-helper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.6 MiB + -3955.0 KiB = 725.0 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>684.0 KiB + 42.0 KiB = 726.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>640.0 KiB + 100.0 KiB = 740.0 KiB gconfd-2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>636.0 KiB + 115.5 KiB = 751.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>652.0 KiB + 144.5 KiB = 796.5 KiB indicator-power-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>648.0 KiB + 158.5 KiB = 806.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>772.0 KiB + 45.5 KiB = 817.5 KiB VBoxService
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 85.5 KiB = 853.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>796.0 KiB + 122.0 KiB = 918.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>568.0 KiB + 391.5 KiB = 959.5 KiB (sd-pam)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3982.5 KiB = 969.5 KiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>824.0 KiB + 253.0 KiB = 1.1 MiB dbus (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>828.0 KiB + 271.0 KiB = 1.1 MiB zeitgeist-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.9 MiB + -3904.0 KiB = 1.1 MiB gvfsd-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.0 MiB + 131.5 KiB = 1.2 MiB indicator-session-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + -3883.0 KiB = 1.2 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 237.0 KiB = 1.3 MiB cupsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 279.0 KiB = 1.4 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3857.0 KiB = 1.4 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 324.5 KiB = 1.4 MiB zeitgeist-fts
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3833.0 KiB = 1.4 MiB indicator-application-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 382.0 KiB = 1.6 MiB indicator-sound-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 174.5 KiB = 1.8 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.6 MiB + -3769.0 KiB = 1.9 MiB gnome-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>932.0 KiB + 1.0 MiB = 1.9 MiB systemd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 537.0 KiB = 2.0 MiB lightdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 753.0 KiB = 2.1 MiB mission-control-5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 936.0 KiB = 2.2 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.8 MiB + 531.0 KiB = 2.3 MiB zeitgeist-datahub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.2 MiB + -3779.0 KiB = 2.5 MiB colord
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.2 MiB + 458.5 KiB = 2.6 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.2 MiB + -3682.0 KiB = 2.6 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.3 MiB + 515.0 KiB = 2.8 MiB gnome-fallback-mount-helper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.3 MiB + 485.0 KiB = 2.8 MiB polkit-gnome-authentication-agent-1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.4 MiB + 514.0 KiB = 2.9 MiB notify-osd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.5 MiB + 417.5 KiB = 3.0 MiB VBoxClient (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 547.5 KiB = 3.1 MiB indicator-keyboard-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.7 MiB + 657.0 KiB = 3.3 MiB indicator-printers-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.7 MiB + 854.0 KiB = 3.5 MiB telepathy-indicator
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.5 MiB + 1.1 MiB = 3.6 MiB evolution-source-registry
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.1 MiB + 577.0 KiB = 3.7 MiB bamfdaemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.6 MiB + 306.5 KiB = 3.9 MiB pulseaudio
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.0 MiB + 933.0 KiB = 3.9 MiB indicator-datetime-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.9 MiB + 1.3 MiB = 5.3 MiB unity-panel-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.2 MiB + -7982.0 KiB = 5.4 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.4 MiB + 1.8 MiB = 6.1 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.1 MiB + 747.0 KiB = 6.9 MiB goa-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.3 MiB + 50.5 KiB = 7.3 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.4 MiB + -3690.5 KiB = 7.8 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.3 MiB + 4.5 MiB = 9.8 MiB gnome-settings-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.6 MiB + 1.0 MiB = 12.6 MiB nautilus
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 24.7 MiB + 1.2 MiB = 25.8 MiB evolution-calendar-factory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 40.2 MiB + -351.0 KiB = 39.9 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>103.2 MiB + -4818.0 KiB = 98.5 MiB compiz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 312.5 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="final-thoughts">Final thoughts&lt;/h2>
+&lt;p>On Arch Linux at least, Xfce has lower resource requirements than MATE.
+When I said different in the past I was wrong, unless you use openSUSE
+in which case I was probably right, maybe.&lt;/p></description><summary>Comparing desktop environment memory usage with ps_mem</summary></item><item><title>Arch Linux Angel</title><link>https://wimpysworld.com/posts/arch-linux-angel/</link><pubDate>Tue, 15 May 2012 11:12:13 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/arch-linux-angel/</guid><description>&lt;p>I&amp;rsquo;ve been working a shell script for Arch Linux that automatically configures
+my preferred GNOME 3 setup on my netbook, laptops and workstations. The main
+features are:&lt;/p>
+&lt;ul>
+&lt;li>Quickly deploys Arch Linux to my specifications&lt;/li>
+&lt;li>Supports i686 and x64_64.&lt;/li>
+&lt;li>Detects ATI/AMD, Intel and Nvidia chipsets and configures the Open Source video drivers and enables early KMS.&lt;/li>
+&lt;li>Hardware and location aware. Installation and configuration can be different for Home vs Work or Desktop vs Netbook.&lt;/li>
+&lt;li>Detects and correctly configures some device specific hardware, such as touch screens and wireless drivers.&lt;/li>
+&lt;li>Automatically configures DAEMONS array.&lt;/li>
+&lt;li>Includes custom power management hooks for pm-utils.&lt;/li>
+&lt;li>Designed to safely run multiple times so that it can be used as a tool for keeping all systems consistent.&lt;/li>
+&lt;/ul>
+&lt;p>I&amp;rsquo;ve dubbed this script Arch Angel. I&amp;rsquo;m undecided if I&amp;rsquo;ll release it publicly
+since it is very much my personal preferences and to some extent my colleagues
+at work. I suppose the real reason for this post is that I&amp;rsquo;ve been wanting to
+take &lt;a href="http://shelr.tv/">Shelr&lt;/a> for a test drive, so click the Play button
+below to see an example run of Arch Angel.&lt;/p>
+&lt;!--
+&lt;iframe border='0' height='684'
+id='shelr_record_4fb2223c96608047be00010e' scrolling='no'
+src='http://shelr.tv/records/4fb2223c96608047be00010e/embed' style='border: 0'
+width='634' />
+--></description><summary>Automated scripted installs of Arch Linux</summary></item><item><title>Installing GNOME 3 on Ubuntu 11.10</title><link>https://wimpysworld.com/posts/installing-gnome-3-on-ubuntu-11.10/</link><pubDate>Fri, 09 Dec 2011 16:21:03 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-gnome-3-on-ubuntu-11.10/</guid><description>&lt;p>I tried &lt;a href="http://unity.ubuntu.com/">Unity&lt;/a> in Ubuntu Natty 11.04 and Ubuntu
+Oneiric 11.10. We&amp;rsquo;ve agreed to hate each other. A few weeks ago I started using
+&lt;a href="http://www.gnome.org/">GNOME 3&lt;/a> and it only took me a couple of hours to
+adapt to it&amp;rsquo;s workflow. GNOME 3 is now my desktop environment at home and and
+work. I love it! If you&amp;rsquo;d like to give GNOME 3 a whirl then you could try
+installing Jan Hoffman&amp;rsquo;s Ubuntu GNOME Shell Remix from either the 32-bit or
+64-bit ISOs he has prepared. This will give a &amp;ldquo;pure&amp;rdquo; GNOME 3 experience.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://ubuntu-gs-remix.sourceforge.net/p/home/">http://ubuntu-gs-remix.sourceforge.net/p/home/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>If you already have Ubuntu 11.10 installed then you can install GNOME 3 alongside
+Unity. Here are the incantations you&amp;rsquo;ll need to utter in a shell.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:jan-hoffmann/gnome-shell
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:aegirxx-googlemail/gnome-shell-extensions
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:gnome3-team/gnome3
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:webupd8team/gnome3
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libglib2.0-bin gnome-core gnome-documents gnome-shell gnome-sushi gnome-tweak-tool gnomeshell-default-settings gtk3-engines-unico
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The repositories added above will give you access to Jan&amp;rsquo;s GNOME 3 meta
+packages, updated GNOME 3 packages and some extra GNOME 3 extensions. GNOME 3
+extensions add all manner of additional tweaks and functionality. Some
+extensions can even provide a user experience more akin to that of GNOME 2.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://intgat.tigress.co.uk/rmy/extensions/index.html">http://intgat.tigress.co.uk/rmy/extensions/index.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>In order to get acquainted with GNOME 3 I suggest you read the
+&lt;a href="http://www.gnome.org/gnome-3/">Discover GNOME 3&lt;/a> (watch the videos too) and
+&lt;a href="http://live.gnome.org/GnomeShell/CheatSheet">GNOME 3 Cheat Sheet&lt;/a> pages. Having
+read those you&amp;rsquo;ll soon master GNOME 3. After you&amp;rsquo;ve used GNOME 3 for a while you
+may conclude it is a more usable desktop environment than Unity, which isn&amp;rsquo;t a
+surprising conclusion to arrive at given Unity sucks the big one right now. If
+you want a &lt;em>&amp;ldquo;pure&amp;rdquo;&lt;/em> GNOME 3 experience then the following commands will purge
+Unity and other bits and bobs that GNOME 3 simply doesn&amp;rsquo;t require.&lt;/p>
+&lt;h2 id="remove-unity">Remove Unity&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-purge unity unity-2d unity-2d-launcher unity-asset-pool unity-common &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>unity-greeter unity-lens-applications unity-lens-music libunity-misc4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="remove-overlay-scrollbars">Remove Overlay Scrollbars&lt;/h2>
+&lt;p>These just don&amp;rsquo;t work on my netbook since they regularly obscure portions of
+the window I actually want to click on. The can safely be removed even if you
+intend to continue using Unity.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge overlay-scrollbar liboverlay-scrollbar-0.2-0 liboverlay-scrollbar3-0.2-0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="remove-indicators">Remove Indicators&lt;/h2>
+&lt;p>If you never going back to Unity, Indicators can be safely removed.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge xchat-gnome-indicator indicator-appmenu indicator-power &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>indicator-session indicator-sound indicator-status-provider-mc5 &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>libindicator-messages-status-provider1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="remove-global-menu">Remove Global Menu&lt;/h2>
+&lt;p>Again, Global Menu is not used by GNOME 3. So if you not going back to Unity
+these can be safely removed.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge appmenu-gtk3 appmenu-gtk appmenu-qt firefox-globalmenu &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>thunderbird-globalmenu
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Finally, a word or warning: &lt;strong>Distribution upgrades are not possible!&lt;/strong> You
+can&amp;rsquo;t upgrade to a newer version of Ubuntu when using Jan Hoffman&amp;rsquo;s Ubuntu
+GNOME Shell Remix or if you modify an existing Ubuntu 11.10 using my method
+above. You will have to do a full install once the next Ubuntu release is
+available. This can&amp;rsquo;t be fixed as long as Jan&amp;rsquo;s meta packages are unofficial,
+because the distribution upgrade process requires having installed one of the
+desktop meta packages from the official Ubuntu repositories.&lt;/p></description><summary>Creating a pure GNOME 3 experience on Ubuntu 11.10</summary></item><item><title>Shotwell 0.11 PPA available for Ubuntu Lucid and Maverick</title><link>https://wimpysworld.com/posts/shotwell-0.11-ppa-available-for-ubuntu-lucid-and-maverick/</link><pubDate>Tue, 30 Aug 2011 11:05:50 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/shotwell-0.11-ppa-available-for-ubuntu-lucid-and-maverick/</guid><description>&lt;p>Like many others I wanted &lt;a href="http://yorba.org/shotwell/">Shotwell&lt;/a> 0.11
+for Lucid and Maverick so I&amp;rsquo;ve created a PPA for it.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://launchpad.net/~flexiondotorg/+archive/shotwell">https://launchpad.net/~flexiondotorg/+archive/shotwell&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>My PPA contains Shotwell 0.11 built for Ubuntu Lucid 10.04 LTS and Ubuntu
+Maverick 10.10. I created this PPA because I run Lucid at home and wanted the
+new version of Shotwell. Sadly, Yorba aren&amp;rsquo;t going to provide new Shotwell
+packages for Lucid due to the reasons discussed in the following ticket: -&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://trac.yorba.org/ticket/3015">http://trac.yorba.org/ticket/3015&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>As mentioned in the ticket above, there are newer versions of Shotwell available
+for Lucid in other PPAs. However, those PPAs contain hundreds of packages. If
+you&amp;rsquo;re not that brave, like me, then hopefully my PPA provides what you
+need. I have built Shotwell with minimal changes from the original Yorba
+source packages and not polluted my PPA with any unnecessary packages. Since
+Shotwell 0.11 you &lt;strong>must&lt;/strong> enable the GStreamer PPA, see the ticket
+below for the reasons for this requirement:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://redmine.yorba.org/issues/3716">http://redmine.yorba.org/issues/3716&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>To install Shotwell on Lucid and Maverick do the following:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:flexiondotorg/shotwell
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:gstreamer-developers/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get dist-upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install shotwell
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enjoy!&lt;/p></description><summary>Showell 0.11 is available in a PPA for Ubuntu 10.04 &amp;amp; 10.10</summary></item><item><title>Shotwell 0.8.1 PPA available for Ubuntu Lucid</title><link>https://wimpysworld.com/posts/shotwell-0.8.1-ppa-available-for-ubuntu-lucid/</link><pubDate>Thu, 17 Mar 2011 17:04:42 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/shotwell-0.8.1-ppa-available-for-ubuntu-lucid/</guid><description>&lt;p>Like many others I wanted &lt;a href="http://yorba.org/shotwell/">Shotwell&lt;/a> for Lucid
+so I&amp;rsquo;ve created a PPA for it.&lt;/p>
+&lt;ul>
+&lt;li>&amp;lt;https://launchpad.net/~flexiondotorg/+archive/shotwell.&lt;/li>
+&lt;/ul>
+&lt;p>My PPA contains Shotwell 0.8.1 built for Ubuntu Lucid 10.04 LTS. I created the
+PPA because I run Lucid at home and wanted the new version of Shotwell. Sadly,
+Yorba aren&amp;rsquo;t going to provide a Lucid build of Shotwell 0.8.1 due to the
+reasons discussed in the following ticket:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://trac.yorba.org/ticket/3015">http://trac.yorba.org/ticket/3015&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>As mentioned in the ticket above, there are versions of Shotwell 0.8.1
+available for Lucid in other PPAs. However, those PPAs contain hundreds of
+packages. If you&amp;rsquo;re not that brave, like me, then hopefully my PPA provides
+what you need. I have built Shotwell 0.8.1 with minimal changes from the
+original Yorba source packages and not polluted my PPA with any unnecessary
+packages &lt;strong>NOTE!&lt;/strong> My PPA has dependencies that are satisfied by the Yorba
+PPA, so you must also enable the Yorba PPA too.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://launchpad.net/~yorba/+archive/ppa">https://launchpad.net/~yorba/+archive/ppa&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>To install Shotwell 0.8.1 on Lucid do the following:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:yorba/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:flexiondotorg/shotwell
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install shotwell
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description><summary>Get the latest Shotwell 0.8.1 via a PP for Ubuntu 10.04</summary></item><item><title>Goodbye F-Spot. Hello Shotwell</title><link>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</link><pubDate>Sat, 20 Mar 2010 15:39:17 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</guid><description>&lt;p>I&amp;rsquo;ve finally found a photo organiser for Linux I can live with,
+&lt;a href="http://yorba.org/shotwell/">Shotwell&lt;/a>. Shotwell is a photo organiser
+for &lt;a href="http://www.gnome.org">GNOME&lt;/a> that I&amp;rsquo;ve been testing for a few
+months now but the recent 0.5 release which added tagging and printing,
+it means Shotwell is finally ready replace &lt;a href="http://f-spot.org">F-Spot&lt;/a> on
+my workstation.&lt;/p>
+&lt;p>Shotwell is intuitive, well documented, extremely easy to use and reliable.
+It&amp;rsquo;s easy to dismiss Shotwell as an over simplified photo manager. But once
+you start using it, you&amp;rsquo;ll quickly appreciate its clean interface and
+easy-to-use tools. Don&amp;rsquo;t just take my word for it either, Shotwell is now the
+default photo manager in &lt;a href="http://fedoraproject.org">Fedora&lt;/a> 13 alpha. Here is
+a quick run down of the features.&lt;/p>
+&lt;ul>
+&lt;li>Import photos from folders or from any digital camera supported by gPhoto.&lt;/li>
+&lt;li>Shotwell automatically groups photos taken at the same time. You can also
+use tags to organize your photo collection.&lt;/li>
+&lt;li>You can rotate, crop, reduce red-eye, and adjust the exposure, saturation,
+tint, and temperature of each photo.&lt;/li>
+&lt;li>Publish photos to Facebook, Flickr and Picasa Web Albums.&lt;/li>
+&lt;/ul>
+&lt;p>Shotwell provides a non-destructive way to tweak your photos. Instead of
+modifying the original photos, Shotwell stores all edits in a database and
+applies them on-the-fly as necessary. This means that you can easily undo all
+edits. Shotwell comes equipped with all the usual photo enhancing tools and
+slideshow. You can download a source tarball from the Shotwell home page at
+&lt;a href="http://www.yorba.org/shotwell/">http://www.yorba.org/shotwell/&lt;/a> or grab a binary for Ubuntu Karmic or Lucid
+via Yorba&amp;rsquo;s Launchpad PPA.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://launchpad.net/~yorba/+archive/ppa">https://launchpad.net/~yorba/+archive/ppa&lt;/a>&lt;/li>
+&lt;/ul></description><summary>F-Spot you serve me well, but here comes Shotwell</summary></item><item><title>SSHMenu - SSH Connection Management</title><link>https://wimpysworld.com/posts/sshmenu-ssh-connection-management/</link><pubDate>Tue, 26 Feb 2008 13:21:28 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/sshmenu-ssh-connection-management/</guid><description>&lt;p>We have a reasonable number of Debian servers at work and as a result I &lt;code>ssh&lt;/code>
+into servers about as many times as I visit Google. I have been using
+Profiles in gnome-terminal to manage my ssh connections, which is fine but
+requires I already have a terminal open to initiate a new server connection.
+Enter &lt;a href="http://sshmenu.sourceforge.net/">SSHMenu&lt;/a>, a GNOME panel applet that
+keeps all your regular SSH connections within a single mouse click.&lt;/p>
+&lt;p>I couldn&amp;rsquo;t be arsed adding up a new repo for one application, so here are my
+quick and dirty install steps.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget http://sshmenu.sourceforge.net/debian/dists/stable/contrib/binary-all/sshmenu_3.15-1_all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://sshmenu.sourceforge.net/debian/dists/stable/contrib/binary-all/sshmenu-gnome_3.15-1_all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo gdebi -n sshmenu_3.15-1_all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo gdebi -n sshmenu-gnome_3.15-1_all.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I have taken to using &lt;code>gdebi&lt;/code> to install local deb packages as it resolves and
+installs dependencies. Now add SSHMenu to a GNOME panel and configure
+your ssh connections. If SSHMenu isn&amp;rsquo;t listed in the GNOME panel applets yet,
+then you can force a refresh with the rather heavy handed&amp;hellip;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>killall gnome-panel
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description><summary>Managing SSH connections from a GNOME panel applet</summary></item><item><title>gLabels 2.2.1</title><link>https://wimpysworld.com/posts/glabels-2.2.1/</link><pubDate>Wed, 30 Jan 2008 11:45:57 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/glabels-2.2.1/</guid><description>&lt;p>&lt;a href="http://glabels.sourceforge.net/">gLabels&lt;/a>, as packaged in the Ubuntu
+repositories, has not worked properly for some time. The accuracy of printing
+was way out making gLabels a non-starter unless you went to the hassle
+of manually re-aligning every label on a page to account for the inaccuracies.&lt;/p>
+&lt;p>However, I have been patiently waiting for a new version of gLables to be
+released. The new development branch completely replaces &lt;code>libgnomeprint&lt;/code> with
+the new &lt;code>GtkPrintOperation&lt;/code> and Cairo. The upshot of that is that the printing
+accuracy issues are resolved.&lt;/p>
+&lt;p>&lt;a href="http://www.getdeb.net">GetDeb&lt;/a> have released &lt;a href="http://www.getdeb.net/app/gLabels">.debs for gLabels 2.2.1&lt;/a>
+that work with Ubuntu Gutsy 7.10. You can either download the .debs from the
+gLabels page at GetDeb and let &lt;code>gdebi&lt;/code> do its thing or do the following from the
+shell&amp;hellip;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -c ftp://cesium.di.uminho.pt/pub/getdeb/gl/glabels_2.2.1-1~getdeb1_i386.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -c ftp://cesium.di.uminho.pt/pub/getdeb/gl/glabels-data_2.2.1-1~getdeb1_all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i glabels*.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We print a lot of labels at work to identify media for flight recorders, that
+job just got a whole lot easier. More importantly, I now have a viable address
+label printing solution for my wife.&lt;/p></description><summary>Accurate label printing for Linux is restored</summary></item><item><title>BloGTK, a weblog client for Linux</title><link>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</link><pubDate>Fri, 11 Jan 2008 13:44:07 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</guid><description>&lt;p>I have been meaning to setup a weblog client for a while now. I have tested a
+couple of blog clients and have settled on &lt;a href="http://blogtk.sourceforge.net/">BloGTK&lt;/a>.&lt;/p>
+&lt;p>It has a simple user interface but comprehensive features, although I did need
+to define a few Custom Tags before the editor supported all the formatting
+options I wanted. Setting up BloGTK is very simple for Ubuntu and Debain users
+requiring an &lt;code>aptitude install blogtk&lt;/code> to get it installed and the following
+settings will connect to a Wordpress blog.&lt;/p>
+&lt;ul>
+&lt;li>Server URL: &lt;code>http://blog.example.org/xmlrpc.php&lt;/code>&lt;/li>
+&lt;li>Account: &lt;em>Your Username&lt;/em>&lt;/li>
+&lt;li>Password: &lt;em>Your Password&lt;/em>&lt;/li>
+&lt;li>Blogging System: &lt;em>Moveable Type&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>Now I can blog directly from my desktop, I am hoping it will encourage me to
+post more often.&lt;/p></description><summary>Graphical blogging client for GNOME</summary></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>&lt;p>Ubuntu comes with everything you need to run your organisation, school, home or
+enterprise. All the essential applications, like an office suite, browsers,
+email and media apps come pre-installed.&lt;/p>
+&lt;p>Community contributor since 2006, worked for Canonical from 2016 to 2021
+progressing from software engineer to director of engineering. I remain active
+in the Ubuntu community.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntu-mate.org">Ubuntu Project&lt;/a> &amp;amp; &lt;a href="https://canonical.com">Canonical&lt;/a>&lt;/li>
+&lt;li>Date: January 2006 - date&lt;/li>
+&lt;li>Role: Community contributor&lt;/li>
+&lt;/ul></description><summary>From community contributor to director of engineering and back again</summary></item></channel></rss>

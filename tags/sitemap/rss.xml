@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sitemap on Wimpy's World</title><link>https://wimpysworld.com/tags/sitemap/</link><description>Recent content in Sitemap on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 18 Jan 2009 23:19:12 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/sitemap/rss.xml" rel="self" type="application/rss+xml"/><item><title>Search engine verification and sitemaps</title><link>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</link><pubDate>Sun, 18 Jan 2009 23:19:12 +0000</pubDate><guid>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</guid><description>Verify websites with search engines and submit sitemaps for indexing</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sitemap on Wimpy's World</title><link>https://wimpysworld.com/tags/sitemap/</link><description>Recent content in Sitemap on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 18 Jan 2009 23:19:12 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/sitemap/rss.xml" rel="self" type="application/rss+xml"/><item><title>Search engine verification and sitemaps</title><link>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</link><pubDate>Sun, 18 Jan 2009 23:19:12 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</guid><description>&lt;p>I finally got around to verifying my websites with the Google, Yahoo! and MSN
+Live search engines. I&amp;rsquo;ve also setup sitemaps for my websites too. I&amp;rsquo;ve done
+this for the websites at work but couldn&amp;rsquo;t be arsed to do it for my own sites
+until today.&lt;/p>
+&lt;p>To find out why you want sitemap enable your sites read the
+&lt;a href="http://en.wikipedia.org/wiki/Site_map">Sitemap&lt;/a> page at Wikipedia. In order to
+register your sitemaps with the major search engines you&amp;rsquo;ll need to setup
+accounts for &lt;a href="https://www.google.com/webmasters/tools/">Google Webmaster Tools&lt;/a>,
+&lt;a href="http://webmaster.live.com/webmaster/">MSN Live Webmaster Tools&lt;/a> and
+&lt;a href="https://siteexplorer.search.yahoo.com/">Yahoo! Site Explorer&lt;/a>.&lt;/p>
+&lt;p>You&amp;rsquo;ll then need to &lt;em>verify&lt;/em> your site(s) with each of the search engines, they
+provide details about how to do this but it typically requires that you put a
+meta tag in your page header. Once you&amp;rsquo;ve verified your site(s) it&amp;rsquo;s time to
+create a &lt;code>sitemap.xml&lt;/code>.&lt;/p>
+&lt;p>If you have a Wordpress blog adding sitemap support is easy, just use the
+&lt;a href="http://wordpress.org/extend/plugins/google-sitemap-generator/">Google XML Sitemaps&lt;/a>
+plugin. This re-builds &lt;code>sitemap.xml&lt;/code> when you update posts, pages, comments etc.
+It also notifies all the relevant search engines that content has changed on
+your site. Very useful indeed. If you need to create your sitemap by hand, or
+better yet script its creation, then read &lt;a href="http://www.sitemaps.org/">sitemaps.org&lt;/a>
+for the protocol spec.&lt;/p></description><summary>Verify websites with search engines and submit sitemaps for indexing</summary></item></channel></rss>

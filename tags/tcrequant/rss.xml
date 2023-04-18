@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tcrequant on Wimpy's World</title><link>https://wimpysworld.com/tags/tcrequant/</link><description>Recent content in tcrequant on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 23 Apr 2009 16:47:20 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/tcrequant/rss.xml" rel="self" type="application/rss+xml"/><item><title>M2VRequantiser for 32-bit and 64-bit Linux</title><link>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</link><pubDate>Thu, 23 Apr 2009 16:47:20 +0000</pubDate><guid>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</guid><description>Finding a MPEG-2 video requantising solution for Linux</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tcrequant on Wimpy's World</title><link>https://wimpysworld.com/tags/tcrequant/</link><description>Recent content in tcrequant on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 23 Apr 2009 16:47:20 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/tcrequant/rss.xml" rel="self" type="application/rss+xml"/><item><title>M2VRequantiser for 32-bit and 64-bit Linux</title><link>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</link><pubDate>Thu, 23 Apr 2009 16:47:20 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</guid><description>&lt;p>I recently discovered that &lt;code>tcrequant&lt;/code> (part of the
+&lt;a href="http://http://www.transcoding.org/">transcode&lt;/a> suite of tools) has been
+deprecated. Worst still I found that when I ran &lt;code>tcrequant&lt;/code> on my 64-bit Linux
+workstation is was corrupting the video. See the links below for details.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://tcforge.berlios.de/archives/2009/01/18/transcode_1_1_0_final_release/index.html">transcode 1.1.0 Final Release&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.mail-archive.com/transcode-users@exit1.org/msg01773.html">[transcode-users] tcrequant status&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Therefore I decided to get the &lt;a href="http://www.metakine.com/products/dvdremaster/developers.html">M2VRequantiser&lt;/a>
+code from &lt;a href="http://www.metakine.com/">Metakine&lt;/a> working on both 32-bit and 64-bit
+Linux as a replacement for &lt;code>tcrequant&lt;/code>. M2VRequantiser accepts the raw MPEG2 video
+data (not VOB) from the standard input and writes the recompressed frames to
+the standard output. M2VRequantiser takes two arguments. The first one is a
+floating point value specifying the ratio of compression. The second is the
+size of the M2V, since the data is streamed to M2VRequantiser it cannot know
+the M2V size. The following command would recompress &amp;lsquo;original.m2v&amp;rsquo;, whose
+size is 1024000 bytes, by a factor of 1.25.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>M2VRequantiser 1.25 &lt;span style="color:#f60">1024000&lt;/span> &amp;lt; original.m2v &amp;gt; requantised.m2v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I&amp;rsquo;ve only tested on 32-bit and 64-bit Linux, specifically Ubuntu 8.10. It works
+for me but I&amp;rsquo;d be interested to get your feedback.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://code.launchpad.net/~flexiondotorg/m2vrequantiser/trunk">M2VRequantiser&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Finding a MPEG-2 video requantising solution for Linux</summary></item></channel></rss>

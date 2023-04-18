@@ -1,1 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reserved space on Wimpy's World</title><link>https://wimpysworld.com/tags/reserved-space/</link><description>Recent content in Reserved space on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 07 Jan 2010 20:42:04 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/reserved-space/rss.xml" rel="self" type="application/rss+xml"/><item><title>Recovering reserved space from ext4</title><link>https://wimpysworld.com/posts/recovering-reserved-space-from-ext4/</link><pubDate>Thu, 07 Jan 2010 20:42:04 +0000</pubDate><guid>https://wimpysworld.com/posts/recovering-reserved-space-from-ext4/</guid><description>Reclaim the 5% of disk space Ext4 reserves by default</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reserved space on Wimpy's World</title><link>https://wimpysworld.com/tags/reserved-space/</link><description>Recent content in Reserved space on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 07 Jan 2010 20:42:04 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/reserved-space/rss.xml" rel="self" type="application/rss+xml"/><item><title>Recovering reserved space from ext4</title><link>https://wimpysworld.com/posts/recovering-reserved-space-from-ext4/</link><pubDate>Thu, 07 Jan 2010 20:42:04 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/recovering-reserved-space-from-ext4/</guid><description>&lt;p>The Ext4 file system, like Ext3, reserves 5% of the blocks on the file system
+for the root user. The reserved blocks are there for root&amp;rsquo;s use as a safe
+guard if the filesystem gets full, it provides some wiggle room to enable the
+really important programs to still function. But in some cases there&amp;rsquo;s not
+much point in having space reserved for root. I&amp;rsquo;ve recently upgrade my
+workstation with a 6TB internal RAID 0 array for data storage (music, videos,
+photos, etc) and an external 6TB RAID 0 array as a backup. My OS boot from a
+1TB drive. For my 6TB arrays I want the maximum available storage and was
+interested to see what effect removing the reserved space would have. So, this
+is what I did. First I made the Ext4 file system, mounted it and queried how
+much space was available.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo mkfs.ext4 /dev/sdh1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mount /dev/sdh1 /mnt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>df -h
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Looks like I have 5.1TB of available space.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/dev/sdh1             5.4T  186M  5.1T   1% /mnt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then I unmounted the file system, removed the reserved blocks, checked the
+consistency of the file system, mounted it and queried how much space was
+available.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo umount /mnt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo tune2fs -m &lt;span style="color:#f60">0&lt;/span> /dev/sdh1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo e2fsck /dev/sdh1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>df -h
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Looks like I have 5.4TB available now, a saving of 300GB.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/dev/sdh1             5.4T  186M  5.4T   1% /mnt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, I could have simply created the files system without the reserved blocks
+in the first place, but I was interested to see the comparison.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo mkfs.ext4 -m &lt;span style="color:#f60">0&lt;/span> /dev/sdh1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Before you start removing the reserved blocks from your ext3/ext4 file systems
+do a bit a research first.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://ubuntuforums.org/showthread.php?t=215177">Disk capacity, free space, and Ext3 reserved blocks&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://wiki.archlinux.org/index.php/Ext3_Filesystem_Tips">Ext3 Filesystem Tips&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Reclaim the 5% of disk space Ext4 reserves by default</summary></item></channel></rss>

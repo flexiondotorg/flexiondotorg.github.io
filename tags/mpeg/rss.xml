@@ -1,1 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MPEG on Wimpy's World</title><link>https://wimpysworld.com/tags/mpeg/</link><description>Recent content in MPEG on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 22 Apr 2009 18:00:07 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/mpeg/rss.xml" rel="self" type="application/rss+xml"/><item><title>IMDB Film Summary as a MPEG-2 video</title><link>https://wimpysworld.com/posts/imdb-film-summary-as-a-mpeg-2-video/</link><pubDate>Wed, 22 Apr 2009 18:00:07 +0000</pubDate><guid>https://wimpysworld.com/posts/imdb-film-summary-as-a-mpeg-2-video/</guid><description>Create film preview information for your UPnP server</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MPEG on Wimpy's World</title><link>https://wimpysworld.com/tags/mpeg/</link><description>Recent content in MPEG on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 22 Apr 2009 18:00:07 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/mpeg/rss.xml" rel="self" type="application/rss+xml"/><item><title>IMDB Film Summary as a MPEG-2 video</title><link>https://wimpysworld.com/posts/imdb-film-summary-as-a-mpeg-2-video/</link><pubDate>Wed, 22 Apr 2009 18:00:07 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/imdb-film-summary-as-a-mpeg-2-video/</guid><description>&lt;p>&lt;strong>UPDATE! I no longer use or maintain the script below. I suggest the vastly
+superior &lt;a href="http://www.bunyipawonga.org/sheetmaker/index.php">Sheet Maker for Linux&lt;/a>&lt;/strong>.&lt;/p>
+&lt;p>If you&amp;rsquo;ve read my blog before you&amp;rsquo;ll know I run Mediatomb DLNA server with my
+PlayStation 3 as the client, You&amp;rsquo;ll also know I am working towards importing my
+entire DVD collection into my Mediatomb server. However, my wife wants to know
+something about each film in the library without having to dig out the DVD
+case from storage. My solution is to include a MPEG-2 video displaying the
+film summary in the Mediatomb library for each DVD I have imported so it can
+be easily viewed from the PS3.&lt;/p>
+&lt;p>My script is called IMDB-to-MPEG and I&amp;rsquo;ve finally got round to uploading it.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/IMDB-to-MPEG">IMDB-to-MPEG&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>The scripts takes one parameter as input, a film title. The plotline, year of
+release, genres, cast list and running time for that film are gathered from IMDB
+and formatted as text. Here is an example.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> The Usual Suspects (1995)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> A boat has been destroyed, criminals are dead, and
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> the key to this mystery lies with the only
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> survivor and his twisted, convoluted story
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> beginning with five career crooks in a seemingly
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> random police lineup. (106 mins)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Starring Stephen Baldwin as Michael McManus,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Gabriel Byrne as Dean Keaton, Benicio Del Toro as
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Fred Fenster, Kevin Pollak as Todd Hockney, and
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Kevin Spacey as Roger &amp;#39;Verbal&amp;#39; Kint.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Genres: Crime, Mystery, Thriller.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Rated 8.7 out of 10 from 227,964 votes.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The text is converted into an image and then encoded into a MPEG-2 video using
+the lowest possible bitrate/resolution that is acceptable to read when viewing
+on a 42&amp;quot; plasma from my sofa.&lt;/p>
+&lt;p>Directories for each matching genre are created and also one for the IMDB
+rating (rounded down). The MPEG-2 is stored in the &amp;lsquo;All&amp;rsquo; folder and then
+symlinked to the genres and rating for that film. I then copy my video into
+the appropriate directory in &amp;lsquo;All&amp;rsquo;. For example.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> .
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |-- All
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |   `-- The_Usual_Suspects
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |       `-- About_The_Usual_Suspects.mpg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |-- Genres
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |   |-- Crime
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |   |   `-- The_Usual_Suspects -&amp;gt; ../../All/The_Usual_Suspects
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |   |-- Mystery
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |   |   `-- The_Usual_Suspects -&amp;gt; ../../All/The_Usual_Suspects
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |   `-- Thriller
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |       `-- The_Usual_Suspects -&amp;gt; ../../All/The_Usual_Suspects
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |-- Ratings
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> `-- 8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> `-- The_Usual_Suspects -&amp;gt; ../../All/The_Usual_Suspects
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This code was lashed up in a few hours, it ain&amp;rsquo;t pretty but it works for me on
+my Ubuntu systems, maybe it&amp;rsquo;ll work for you too.&lt;/p></description><summary>Create film preview information for your UPnP server</summary></item></channel></rss>

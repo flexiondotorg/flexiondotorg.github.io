@@ -1,1 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Firewall on Wimpy's World</title><link>https://wimpysworld.com/tags/firewall/</link><description>Recent content in Firewall on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 09 Mar 2013 08:37:43 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/firewall/rss.xml" rel="self" type="application/rss+xml"/><item><title>Uncomplicated Firewall (UFW) on Arch Linux</title><link>https://wimpysworld.com/posts/uncomplicated-firewall-ufw-on-arch-linux/</link><pubDate>Sat, 09 Mar 2013 08:37:43 +0000</pubDate><guid>https://wimpysworld.com/posts/uncomplicated-firewall-ufw-on-arch-linux/</guid><description>Configuring Uncomplicated Firewall (UFW) on Arch Linux.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Firewall on Wimpy's World</title><link>https://wimpysworld.com/tags/firewall/</link><description>Recent content in Firewall on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 09 Mar 2013 08:37:43 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/firewall/rss.xml" rel="self" type="application/rss+xml"/><item><title>Uncomplicated Firewall (UFW) on Arch Linux</title><link>https://wimpysworld.com/posts/uncomplicated-firewall-ufw-on-arch-linux/</link><pubDate>Sat, 09 Mar 2013 08:37:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/uncomplicated-firewall-ufw-on-arch-linux/</guid><description>&lt;p>While migrating one of my VPS servers to &lt;a href="http://www.archlinux.org">Arch Linux&lt;/a>
+I deployed &lt;a href="https://wiki.ubuntu.com/UncomplicatedFirewall">Uncomplicated Firewall (UFW)&lt;/a>
+to handle basic firewall duties. I like &lt;code>ufw&lt;/code> as it provides simple host-based
+firewall management and, in my opinion, one of the better projects to come out
+of the Ubuntu camp.&lt;/p>
+&lt;p>Install &lt;code>ufw&lt;/code> as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Syy -noconfirm --needed ufw
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Configuring &lt;code>ufw&lt;/code> is simple but make sure you have console access to the host
+you are configuring just in case you lock yourself out.&lt;/p>
+&lt;p>&lt;strong>NOTE!&lt;/strong> When enabling &lt;code>ufw&lt;/code> the chains are flushed and connections may be
+dropped. You can add rules to the firewall before enabling it however, so if you
+are testing &lt;code>ufw&lt;/code> on a remote machine it is recommended you perform&amp;hellip;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ufw allow ssh/tcp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&amp;hellip;before running &lt;code>sudo ufw enable&lt;/code>. Once the firewall is enabled, adding and
+removing rules will not flush the firewall, although modifying an existing rule
+will.&lt;/p>
+&lt;p>Set the default behaviour to deny all incoming connections.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw default deny
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open up TCP port 22 but with rate limiting enabled which will deny connections
+from an IP address that has attempted to initiate 6 or more connections in the
+last 30 seconds. Ideal for protecting &lt;code>sshd&lt;/code> but you should conisder other
+&lt;a href="https://wimpysworld.com/posts/ssh-brute-force-defense/">SSH brute force defense&lt;/a>
+techniques as well.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw limit tcp/22
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I&amp;rsquo;m hosting a few websites on my VPS so I open http and https.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw allow 80/tcp
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ufw allow 443/tcp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the &lt;code>ufw&lt;/code> systemd unit.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable ufw
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl start ufw
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>However, &lt;code>ufw&lt;/code> is not enabled at this point. To enable the firewall you also
+have to do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw enable
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can see the status of the firewall using &lt;code>sudo ufw status&lt;/code>.&lt;/p>
+&lt;p>On low-end servers it might be beneficial to disable logging.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw logging off
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>At this point you should have a basic firewall configured and &lt;code>ufw help&lt;/code> or the
+references below will assist you.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Uncomplicated_Firewall">https://wiki.archlinux.org/index.php/Uncomplicated_Firewall&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.ubuntu.com/UncomplicatedFirewall">https://wiki.ubuntu.com/UncomplicatedFirewall&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://launchpad.net/ufw">https://launchpad.net/ufw&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Configuring Uncomplicated Firewall (UFW) on Arch Linux.</summary></item></channel></rss>

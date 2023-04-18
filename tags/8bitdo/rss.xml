@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>8Bitdo on Wimpy's World</title><link>https://wimpysworld.com/tags/8bitdo/</link><description>Recent content in 8Bitdo on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 24 Jan 2017 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/8bitdo/rss.xml" rel="self" type="application/rss+xml"/><item><title>DIY SNES Classic</title><link>https://wimpysworld.com/posts/diy-snes-classic/</link><pubDate>Tue, 24 Jan 2017 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/diy-snes-classic/</guid><description>I made my own &amp;ldquo;SNES Classic&amp;rdquo; with a Raspberry Pi</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>8Bitdo on Wimpy's World</title><link>https://wimpysworld.com/tags/8bitdo/</link><description>Recent content in 8Bitdo on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 24 Jan 2017 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/8bitdo/rss.xml" rel="self" type="application/rss+xml"/><item><title>DIY SNES Classic</title><link>https://wimpysworld.com/posts/diy-snes-classic/</link><pubDate>Tue, 24 Jan 2017 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/diy-snes-classic/</guid><description>&lt;p>Inspired by the recent &lt;a href="http://www.nintendo.com/nes-classic/">NES Classic&lt;/a> I
+made a &lt;strong>DIY SNES Classic&lt;/strong> just in time for the Christmas holidays and it&amp;rsquo;s
+very portable!&lt;/p>
+&lt;p class="text-center">
+&lt;img src="diy-homemade-snes-classic-raspberrypi.webp" class="img-fluid" alt="Raspberry Pi 3 in a 3D printed SNES case with 8Bitdo SNES30 controllers"/>
+&lt;br />
+&lt;em>Raspberry Pi 3 in a 3D printed SNES case with 8Bitdo SNES30 controllers&lt;/em>
+&lt;/p>
+&lt;p>To make one yourself you&amp;rsquo;ll need:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3 Model B&lt;/a>.&lt;/li>
+&lt;li>&lt;a href="https://retropie.org.uk/">Retropie 4.1&lt;/a> or newer.&lt;/li>
+&lt;li>Two &lt;a href="http://www.8bitdo.com/snes30/">8Bitdo SNES30 wireless controllers&lt;/a>.&lt;/li>
+&lt;li>A &lt;a href="https://www.etsy.com/uk/listing/485061145/snes-3d-printed-case-raspberry-pi">SNES 3D Printed case&lt;/a>.&lt;/li>
+&lt;li>&lt;a href="https://github.com/biscuits99/rp-video-manager">CRT scanline shaders&lt;/a> to complete the retro look on the big screen.&lt;/li>
+&lt;/ul>
+&lt;p>Both controllers use Bluetooth, so two player wire-free gaming is possible. The
+USB cables are just for charging, but if you&amp;rsquo;ve got no charge they can be used
+as wired controllers too. Retropie can be controlled via the controllers, no
+keyboard/mouse required.&lt;/p></description><summary>I made my own &amp;ldquo;SNES Classic&amp;rdquo; with a Raspberry Pi</summary></item></channel></rss>

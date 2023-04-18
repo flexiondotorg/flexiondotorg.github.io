@@ -1,1 +1,123 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>F2FS on Wimpy's World</title><link>https://wimpysworld.com/tags/f2fs/</link><description>Recent content in F2FS on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 28 Aug 2013 20:10:09 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/f2fs/rss.xml" rel="self" type="application/rss+xml"/><item><title>Linux Mint LMDE on Hybrid Disk Laptop</title><link>https://wimpysworld.com/posts/linux-mint-lmde-on-hybrid-disk-laptop/</link><pubDate>Wed, 28 Aug 2013 20:10:09 +0000</pubDate><guid>https://wimpysworld.com/posts/linux-mint-lmde-on-hybrid-disk-laptop/</guid><description>Installing Linux Mint Debian Edition (LMDE) on a Laptop with Hybrid Disk</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>F2FS on Wimpy's World</title><link>https://wimpysworld.com/tags/f2fs/</link><description>Recent content in F2FS on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 28 Aug 2013 20:10:09 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/f2fs/rss.xml" rel="self" type="application/rss+xml"/><item><title>Linux Mint LMDE on Hybrid Disk Laptop</title><link>https://wimpysworld.com/posts/linux-mint-lmde-on-hybrid-disk-laptop/</link><pubDate>Wed, 28 Aug 2013 20:10:09 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/linux-mint-lmde-on-hybrid-disk-laptop/</guid><description>&lt;p>I have an old Thinkpad T43p that I am trying to extend the life of. So I recently
+fitted a cheap 60GB IDE Solid State Drive (SSD) and put a 320GB SATA Hard Disk
+Drive (HDD) in the Ultrabay. This is not a true hybrid disk, but the principles
+are similar. The root partition will go on the SDD (for performance) and the
+home partition will be located on the HDD (for capacity).&lt;/p>
+&lt;p>I&amp;rsquo;ve been running &lt;a href="http://www.archlinux.org">Arch Linux&lt;/a> on the T43p and the SDD
+improves system responsiveness and boot time considerably, especially when using
+&lt;a href="http://en.wikipedia.org/wiki/F2FS">F2FS&lt;/a> or
+&lt;a href="https://btrfs.wiki.kernel.org/index.php/Main_Page">btrfs&lt;/a> (with LZO
+compression and SSD mount options) on the root filesystem.&lt;/p>
+&lt;p>I am also testing &lt;a href="http://www.linuxmint.com/download_lmde.php">Linux Mint Debian Edition&lt;/a> (LMDE)
+with the &lt;a href="http://mate-desktop.org/">MATE Desktop&lt;/a> desktop to determine if this
+is a suitable operating system for my family to use. It appears they find
+&lt;a href="http://www.gnome.org/gnome-3/">GNOME 3&lt;/a> confusing and would prefer a familiar
+desktop experience.&lt;/p>
+&lt;p>While testing LMDE 201203 I ran into a few issues, so I&amp;rsquo;ve decided to capture
+my notes here for future reference.&lt;/p>
+&lt;h1 id="fix-the-installer">Fix the installer&lt;/h1>
+&lt;p>In order to install LMDE using partitions on multiple drives you must
+use the ADVANCED USER install mode. However, the ADVANCED USER install mode
+has a bug that prevents the installer from completing, so that needs to be
+fixed first.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /usr/lib/live-installer/frontend/gtk_interface.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Find the following on line 1765.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>self.wTree.get_widget(&lt;span style="color:#87ceeb">&amp;#34;button_next&amp;#34;&lt;/span>).show()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After it add the following line, making sure the indentation is correct.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>self.wTree.get_widget(&lt;span style="color:#87ceeb">&amp;#34;button_next&amp;#34;&lt;/span>).set_sensitive(&lt;span style="color:#f00">True&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="installing-lmde">Installing LMDE&lt;/h1>
+&lt;ul>
+&lt;li>Double click the &lt;code>Install Linux Mint&lt;/code> icon on the desktop.&lt;/li>
+&lt;li>Select your &lt;em>Language&lt;/em> and click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>Select your &lt;em>Timezone&lt;/em> and click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>Select your &lt;em>Keyboard layout&lt;/em> and click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>Enter your &lt;em>User info&lt;/em> and click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>From the &lt;em>Hard drive&lt;/em> window Select &lt;code>Manually mount partitions (ADVANCED USERS ONLY)&lt;/code> and click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>The &lt;em>Please make sure you wish to manually manage partitions&lt;/em> window will
+appear. On my system the SSD is detected on &lt;code>/dev/sda&lt;/code> and the HDD is detected
+on &lt;code>/dev/sdb&lt;/code>. Start &lt;code>GParted&lt;/code> and partition and format the drives as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> /dev/sda1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Size: 256MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Create as: Primary Partition
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> File system: ext4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Label: boot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /dev/sda2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Size: 2048MiB (or the size you prefer)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Create as: Primary Partition
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> File system: linux-swap
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Label: swap
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /dev/sda3
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Size: Remainder
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Create as: Primary Partition
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> File system: btrfs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Label: root
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /dev/sdb1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Size: All
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Create as: Primary Partition
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> File system: ext4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Label: home
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Apply the changes and close GParted.&lt;/p>
+&lt;p>I use ext4 for the &lt;code>/boot&lt;/code> partition because GRUB can&amp;rsquo;t currently boot from btrfs
+in LMDE. I use ext4 for &lt;code>/home&lt;/code> because it offers the best performance on rotational
+drives on my Thinkpad T43p. I use btrfs on the &lt;code>/root&lt;/code> partition because performs
+best (by some margin) on solid state drives in my Thinkpad T43p.&lt;/p>
+&lt;p>The filesystems need mounting under &lt;code>/target&lt;/code> so the installer can install the
+OS. Open a Terminal and do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo mkdir /target
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mount -t btrfs -o &lt;span style="color:#eedd82">compress&lt;/span>=lzo,ssd /dev/disk/by-label/root /target
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkdir /target/{boot,home}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mount -t ext4 /dev/disk/by-label/boot /target/boot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mount -t ext4 /dev/disk/by-label/home /target/home
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Return to the Linux Mint Debian Installer.&lt;/p>
+&lt;ul>
+&lt;li>Click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>From the &lt;em>Advanced options&lt;/em> check &lt;code>Install GRUB&lt;/code> and select &lt;code>/dev/sda&lt;/code>. Click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>Confirm the &lt;em>Summary&lt;/em> is correct and click &lt;code>Install&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>Time for a cup of tea while the install runs. A pop-up, titled &lt;em>Installation
+Paused&lt;/em>, will appear. Click &lt;code>OK&lt;/code>.&lt;/p>
+&lt;h2 id="create-targetetcfstab">Create &lt;code>/target/etc/fstab&lt;/code>&lt;/h2>
+&lt;p>Do as the installer says and create &lt;code>/target/etc/fstab&lt;/code>. Open a Terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /target/etc/fstab
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The following &lt;code>fstab&lt;/code> works for my T43p.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span># /etc/fstab: static file system information.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># &amp;lt;file system&amp;gt; &amp;lt;mount point&amp;gt; &amp;lt;type&amp;gt; &amp;lt;options&amp;gt; &amp;lt;dump&amp;gt; &amp;lt;pass&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>proc /proc proc defaults 0 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>LABEL=root / btrfs defaults,noatime,compress=lzo,ssd 0 1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>LABEL=boot /boot ext4 defaults,noatime 0 2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>LABEL=home /home ext4 defaults,relatime 0 2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>LABEL=swap none swap sw 0 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="upgrade-mate-16-and-remove-legacy-mate-14-packages">Upgrade MATE 1.6 and remove legacy MATE 1.4 packages&lt;/h2>
+&lt;p>MATE 1.6 has been released for LMDE 201203 so it is a good idea to upgrade
+and remove legacy packages before the first boot to ensure a clean
+configuration. Open a Terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chroot /target
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get install apt-show-versions
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get dist-upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Some MATE 1.4 packages will be left behind that are no longer required. The
+following can help identify them.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-show-versions | grep 1&lt;span style="color:#87ceeb">\.&lt;/span>4&lt;span style="color:#87ceeb">\.&lt;/span>[0-9]&lt;span style="color:#87ceeb">\-&lt;/span>[0-9]&lt;span style="color:#87ceeb">\+&lt;/span>wheezy | cut -f1 -d&lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Purge the old MATE 1.4 packages.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">PKGS&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>apt-show-versions | grep 1&lt;span style="color:#87ceeb">\.&lt;/span>4&lt;span style="color:#87ceeb">\.&lt;/span>[0-9]&lt;span style="color:#87ceeb">\-&lt;/span>[0-9]&lt;span style="color:#87ceeb">\+&lt;/span>wheezy | cut -f1 -d&lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get purge &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">PKGS&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Exit the &lt;code>chroot&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>exit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="finish-the-install">Finish the install&lt;/h2>
+&lt;p>Return to the Linux Mint Debian Installer.&lt;/p>
+&lt;ul>
+&lt;li>Click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>Some final installation steps will now complete.&lt;/li>
+&lt;li>A pop-up, titled &lt;em>Installation finished&lt;/em>, will appear. Click &lt;code>Yes&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>Your computer will reboot and start LMDE.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://forums.linuxmint.com/viewtopic.php?f=189&amp;amp;t=129381">http://forums.linuxmint.com/viewtopic.php?f=189&amp;amp;t=129381&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://forums.linuxmint.com/viewtopic.php?f=185&amp;amp;t=143547">http://forums.linuxmint.com/viewtopic.php?f=185&amp;amp;t=143547&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Installing Linux Mint Debian Edition (LMDE) on a Laptop with Hybrid Disk</summary></item></channel></rss>

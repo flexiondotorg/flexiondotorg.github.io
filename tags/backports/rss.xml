@@ -1,1 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Backports on Wimpy's World</title><link>https://wimpysworld.com/tags/backports/</link><description>Recent content in Backports on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 19 Jun 2014 22:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/backports/rss.xml" rel="self" type="application/rss+xml"/><item><title>MATE Desktop on Debian Wheezy</title><link>https://wimpysworld.com/posts/mate-desktop-on-debian-wheezy/</link><pubDate>Thu, 19 Jun 2014 22:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/mate-desktop-on-debian-wheezy/</guid><description>Setting up MATE Desktop on Debian Wheezy</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Backports on Wimpy's World</title><link>https://wimpysworld.com/tags/backports/</link><description>Recent content in Backports on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 19 Jun 2014 22:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/backports/rss.xml" rel="self" type="application/rss+xml"/><item><title>MATE Desktop on Debian Wheezy</title><link>https://wimpysworld.com/posts/mate-desktop-on-debian-wheezy/</link><pubDate>Thu, 19 Jun 2014 22:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/mate-desktop-on-debian-wheezy/</guid><description>&lt;p>I&amp;rsquo;m a member of the &lt;a href="http://mate-desktop.org">MATE Desktop&lt;/a> team and until
+recently the majority of my involvement has been focused around &lt;a href="http://www.archlinux.org">Arch Linux&lt;/a>.&lt;/p>
+&lt;p>However, I&amp;rsquo;m working on a MATE project that is based on a &lt;a href="http://www.debian.org">Debian&lt;/a>
+derivative. MATE has recently been accepted into the &lt;a href="backports.debian.org/">Debian Backports&lt;/a>
+repository for Wheezy, so I decided to do a &lt;em>&amp;ldquo;MATE from scratch&amp;rdquo;&lt;/em> on Debian using
+an old netbook to get familiar with the MATE package naming differences between
+Arch Linux and Debian.&lt;/p>
+&lt;h1 id="install-debian">Install Debian&lt;/h1>
+&lt;p>I installed Debian Wheezy from the &lt;a href="https://www.debian.org/CD/netinst/">netinst&lt;/a>
+ISO to ensure the target install was as minimal as possible. I went with
+the defaults until the &amp;lsquo;Software selection&amp;rsquo; dialogue, at this point
+unselect everything except &amp;ldquo;SSH server&amp;rdquo;. Like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>[ ] Debian desktop environment
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ] Web server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ] Print server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ] SQL database
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ] DNS Server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ] File server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ] Mail server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[X] SSH server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ] Laptop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ] Standard system utilities
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="debian-iso-with-firmware">Debian ISO with Firmware&lt;/h2>
+&lt;p>If you&amp;rsquo;re installing on hardware that requires additional firmware in
+order for it to work with Linux then use the netinst ISO that includes
+firmware.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/">http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="configure-debian">Configure Debian&lt;/h1>
+&lt;p>When the install is finished, reboot and configure Debian a little.&lt;/p>
+&lt;h2 id="repositories">Repositories&lt;/h2>
+&lt;p>You&amp;rsquo;ll need to install &lt;code>lsb-release&lt;/code> for the following to work.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install lsb-release
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is what I put in &lt;code>/etc/apt/sources.list&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat &amp;gt;/etc/apt/sources.list&lt;span style="color:#87ceeb">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb http://ftp.uk.debian.org/debian/ $(lsb_release -cs) main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb-src http://ftp.uk.debian.org/debian/ $(lsb_release -cs) main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb http://security.debian.org/ $(lsb_release -cs)/updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb-src http://security.debian.org/ $(lsb_release -cs)/updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb"># $(lsb_release -cs)-updates, previously known as &amp;#39;volatile&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb http://ftp.uk.debian.org/debian/ $(lsb_release -cs)-updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb-src http://ftp.uk.debian.org/debian/ $(lsb_release -cs)-updates main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="backports">Backports&lt;/h2>
+&lt;p>MATE is only available in the wheezy-backports repository.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat &amp;gt;/etc/apt/sources.list.d/backports.list &lt;span style="color:#87ceeb">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb http://ftp.uk.debian.org/debian $(lsb_release -cs)-backports main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">deb-src http://ftp.uk.debian.org/debian $(lsb_release -cs)-backports main contrib non-free
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Update.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>All backports are deactivated by default (i.e. the packages are pinned to 100
+by using ButAutomaticUpgrades: yes in the Release files. If you want to install
+something from backports run:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get -t wheezy-backports install &lt;span style="color:#87ceeb">&amp;#34;package&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="install-mate-desktop">Install MATE Desktop&lt;/h1>
+&lt;p>First install the LightDM display manager.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install accountsservice lightdm lightdm-gtk-greeter
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now for the MATE Desktop itself.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get -t wheezy-backports install mate-desktop-environment-extras
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="networkmanager">NetworkManager&lt;/h2>
+&lt;p>I typically use NetworkManager, so lets install that too.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install network-manager-gnome
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="supplementary">Supplementary&lt;/h2>
+&lt;p>Depending on your hardware you may require CPU frequency utilities or
+additional firmware.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install cpufreqd cpufrequtil firmware-linux firmware-linux-nonfree
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>And, that&amp;rsquo;s it! Reboot and you&amp;rsquo;ll see the LightDM greeter waiting for your
+login credentials.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://wiki.mate-desktop.org/download?s%5B%5D=debian">http://wiki.mate-desktop.org/download?s[]=debian&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.debian.org/InstallingDebianOn/HP/HP2133">https://wiki.debian.org/InstallingDebianOn/HP/HP2133&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Setting up MATE Desktop on Debian Wheezy</summary></item></channel></rss>

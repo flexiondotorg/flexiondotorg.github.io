@@ -1,1 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>iPlayer on Wimpy's World</title><link>https://wimpysworld.com/tags/iplayer/</link><description>Recent content in iPlayer on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 25 Mar 2013 18:09:21 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/iplayer/rss.xml" rel="self" type="application/rss+xml"/><item><title>get-iplayer on Debian 6.0</title><link>https://wimpysworld.com/posts/get-iplayer-on-debian-6.0/</link><pubDate>Mon, 25 Mar 2013 18:09:21 +0000</pubDate><guid>https://wimpysworld.com/posts/get-iplayer-on-debian-6.0/</guid><description>Installing get-iplayer on a Debian (Squeeze) 6.0</description></item><item><title>PlayStation 3 compatible MPEG-4 container repacker</title><link>https://wimpysworld.com/posts/playstation-3-compatible-mpeg-4-container-repacker/</link><pubDate>Thu, 23 Apr 2009 17:09:11 +0000</pubDate><guid>https://wimpysworld.com/posts/playstation-3-compatible-mpeg-4-container-repacker/</guid><description>Automatically repack MPEG-4 video files for PlayStation 3 compatibility</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>iPlayer on Wimpy's World</title><link>https://wimpysworld.com/tags/iplayer/</link><description>Recent content in iPlayer on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 25 Mar 2013 18:09:21 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/iplayer/rss.xml" rel="self" type="application/rss+xml"/><item><title>get-iplayer on Debian 6.0</title><link>https://wimpysworld.com/posts/get-iplayer-on-debian-6.0/</link><pubDate>Mon, 25 Mar 2013 18:09:21 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/get-iplayer-on-debian-6.0/</guid><description>&lt;p>I use &lt;a href="http://www.infradead.org/get_iplayer/html/get_iplayer.html">get-iplayer&lt;/a>
+to download TV programs so I can watch them on the devices that suit me, when it
+suits me. What follows is how I install &lt;code>get-iplayer&lt;/code> on a headless Debian 6.0
+server I have a home. The server in question is really low powered so building
+from source was not an option.&lt;/p>
+&lt;p>In order to install the latest version of &lt;code>get-iplayer&lt;/code> (currently 2.82) on
+&lt;a href="http://www.debian.org">Debian&lt;/a> Squeeze a couple of additional package
+repositories need enabling.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.deb-multimedia.org/">Debain Multimedia&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://backports-master.debian.org/">Debian Backports&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Enable the Debain Backports repository by adding the following line to
+&lt;code>/etc/apt/sources.list.d/backports.list&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>deb http://backports.debian.org/debian-backports squeeze-backports main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the Debain Multimedia repository by adding the following lines to
+&lt;code>/etc/apt/sources.list.d/multimedia.list&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>deb http://www.deb-multimedia.org squeeze main non-free
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>deb http://www.deb-multimedia.org squeeze-backports main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Update the repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install the &lt;code>deb-multimedia-keyring&lt;/code> package.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get --allow-unauthenticated install deb-multimedia-keyring
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>get-iplayer&lt;/code> (currently v2.78) from the official Debian repositories,
+this will also install the dependencies.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install get-iplayer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install the &lt;code>get-iplayer&lt;/code> suggested packages.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install ffmpeg rtmpdump libdata-dump-perl libid3-tools libcrypt-ssleay-perl libio-socket-ssl-perl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I have seen it suggested that &lt;code>mplayer&lt;/code> should also be installed. I&amp;rsquo;ve not
+determined if that is an absolute requirement. But this is how to install it
+on a headless Debian computer.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get --no-install-recommends install mplayer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Finally, upgrade &lt;code>get-iplayer&lt;/code> to v2.82.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install libmp3-tag-perl libxml-simple-perl
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://ftp.uk.debian.org/debian/pool/main/g/get-iplayer/get-iplayer_2.82-2_all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i get-iplayer_2.82-2_all.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>At this point &lt;code>get-iplayer&lt;/code> should be good to go and the &lt;a href="http://www.infradead.org/get_iplayer/html/get_iplayer.html">get-iplayer&lt;/a>
+website and &lt;code>man get-iplayer&lt;/code> will assist you.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.infradead.org/get_iplayer/html/get_iplayer.html">http://www.infradead.org/get_iplayer/html/get_iplayer.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.deb-multimedia.org/">http://www.deb-multimedia.org/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://backports-master.debian.org/">http://backports-master.debian.org/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://lists.infradead.org/pipermail/get_iplayer/2012-June/003065.html">http://lists.infradead.org/pipermail/get_iplayer/2012-June/003065.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://tech.leeporte.co.uk/get_iplayer-under-debian-squeeze/">http://tech.leeporte.co.uk/get_iplayer-under-debian-squeeze/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Installing get-iplayer on a Debian (Squeeze) 6.0</summary></item><item><title>PlayStation 3 compatible MPEG-4 container repacker</title><link>https://wimpysworld.com/posts/playstation-3-compatible-mpeg-4-container-repacker/</link><pubDate>Thu, 23 Apr 2009 17:09:11 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/playstation-3-compatible-mpeg-4-container-repacker/</guid><description>&lt;p>Some of my mobile phones have been able to record video clips in MPEG-4
+format. Sadly some of these clips don&amp;rsquo;t play on the PlayStation 3 and those
+that do stutter terribly. I use &lt;a href="http://po-ru.com/projects/iplayer-downloader/">iplayer-dl&lt;/a>
+to download content from BBC iPlayer. Sadly the files are in a Quicktime
+container and are not playable on the PlayStation 3.&lt;/p>
+&lt;p>In order to address both these issues I created a script which extracts the
+audio and video from an existing MPEG-4 or ISO Media Apple QuickTime container
+and repacks them in a new MPEG-4 container with optional splitting of the
+resulting MPEG-4 to maintain FAT32 compatibility. The new MPEG-4 files play
+just fine on my PlayStation 3. This script works on Ubuntu, should work on any
+other Linux/Unix flavour and possibly Mac OS X providing you have the required
+tools installed.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/MP4-Packer">MP4-Repacker&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Automatically repack MPEG-4 video files for PlayStation 3 compatibility</summary></item></channel></rss>

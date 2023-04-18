@@ -1,1 +1,551 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Content Management on Wimpy's World</title><link>https://wimpysworld.com/tags/content-management/</link><description>Recent content in Content Management on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 05 Nov 2015 11:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/content-management/rss.xml" rel="self" type="application/rss+xml"/><item><title>Installing Nikola on Ubuntu</title><link>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</link><pubDate>Thu, 05 Nov 2015 11:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</guid><description>How to install Nikola on Ubuntu 14.04 or newer</description></item><item><title>Installing Nikola on Debian</title><link>https://wimpysworld.com/posts/installing-nikola-on-debian/</link><pubDate>Mon, 31 Mar 2014 16:19:43 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-nikola-on-debian/</guid><description>How to install Nikola static site generator on Debian</description></item><item><title>Installing Nikola on Arch Linux</title><link>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</link><pubDate>Fri, 08 Mar 2013 17:13:43 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</guid><description>Install Nikola static site generator in a virtualenv on Arch Linux</description></item><item><title>Dropbox is my Nikola publish button</title><link>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</link><pubDate>Wed, 06 Mar 2013 19:01:21 +0000</pubDate><guid>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</guid><description>Publishing a Nikola blog via Dropbox on a headless Linux server</description></item><item><title>Migrating Wordpress to Nikola</title><link>https://wimpysworld.com/posts/migrating-wordpress-to-nikola/</link><pubDate>Mon, 22 Oct 2012 17:13:43 +0000</pubDate><guid>https://wimpysworld.com/posts/migrating-wordpress-to-nikola/</guid><description>From a dynamic Wordpress site to static Nikola site</description></item><item><title>Wordpress Search Engine Optimisation</title><link>https://wimpysworld.com/posts/wordpress-search-engine-optimisation/</link><pubDate>Mon, 26 Jan 2009 15:37:55 +0000</pubDate><guid>https://wimpysworld.com/posts/wordpress-search-engine-optimisation/</guid><description>Wordpress plugins that help automate SEO</description></item><item><title>Hacking WordTwit into WordDent</title><link>https://wimpysworld.com/posts/hacking-wordtwit-into-worddent/</link><pubDate>Fri, 23 Jan 2009 18:24:20 +0000</pubDate><guid>https://wimpysworld.com/posts/hacking-wordtwit-into-worddent/</guid><description>Automatically post Wordpress blog notification to Identi.ca</description></item><item><title>Search engine verification and sitemaps</title><link>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</link><pubDate>Sun, 18 Jan 2009 23:19:12 +0000</pubDate><guid>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</guid><description>Verify websites with search engines and submit sitemaps for indexing</description></item><item><title>Blog post notifications to Twitter</title><link>https://wimpysworld.com/posts/blog-post-notifications-to-twitter/</link><pubDate>Sat, 17 Jan 2009 10:45:12 +0000</pubDate><guid>https://wimpysworld.com/posts/blog-post-notifications-to-twitter/</guid><description>Send new Wordpress blog notifications to Twitter</description></item><item><title>BloGTK, a weblog client for Linux</title><link>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</link><pubDate>Fri, 11 Jan 2008 13:44:07 +0000</pubDate><guid>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</guid><description>Graphical blogging client for GNOME</description></item><item><title>Flexion.Org is re-activated!</title><link>https://wimpysworld.com/posts/flexion.org-is-re-activated/</link><pubDate>Sat, 22 Sep 2007 11:22:43 +0000</pubDate><guid>https://wimpysworld.com/posts/flexion.org-is-re-activated/</guid><description>Jaws dropped in a move to Wordpress</description></item><item><title>R3-born 0.1.1 is released!</title><link>https://wimpysworld.com/posts/r3-born-0.1.1-is-released/</link><pubDate>Fri, 09 Mar 2007 21:59:45 +0000</pubDate><guid>https://wimpysworld.com/posts/r3-born-0.1.1-is-released/</guid><description>R3-born is good enough to run a website</description></item><item><title>R3-born 0.1.0 is released!</title><link>https://wimpysworld.com/posts/r3-born-0.1.0-is-released/</link><pubDate>Tue, 30 Jan 2007 11:52:55 +0000</pubDate><guid>https://wimpysworld.com/posts/r3-born-0.1.0-is-released/</guid><description>After 10 months work R3-born 0.1.0 is ready</description></item><item><title>Announcing R3-born</title><link>https://wimpysworld.com/posts/announcing-r3-born/</link><pubDate>Fri, 08 Sep 2006 17:48:47 +0000</pubDate><guid>https://wimpysworld.com/posts/announcing-r3-born/</guid><description>Minerva is r3-born</description></item><item><title>Comments off, Overdue update and R3-born</title><link>https://wimpysworld.com/posts/comments-off-overdue-update-and-r3-born/</link><pubDate>Tue, 04 Jul 2006 13:14:55 +0000</pubDate><guid>https://wimpysworld.com/posts/comments-off-overdue-update-and-r3-born/</guid><description>Jaws spam counter measures suck</description></item><item><title>Project Minerva is coming home</title><link>https://wimpysworld.com/posts/project-minerva-is-coming-home/</link><pubDate>Wed, 26 Apr 2006 17:42:11 +0000</pubDate><guid>https://wimpysworld.com/posts/project-minerva-is-coming-home/</guid><description>It&amp;rsquo;s coming home. Minerva is coming home.</description></item><item><title>Leaving Minerva</title><link>https://wimpysworld.com/posts/leaving-minerva/</link><pubDate>Thu, 01 Sep 2005 09:47:16 +0000</pubDate><guid>https://wimpysworld.com/posts/leaving-minerva/</guid><description>Standing down from the Minerva project</description></item><item><title>Introducing Stanley, a new theme for Jaws</title><link>https://wimpysworld.com/posts/introducing-stanley-a-new-theme-for-jaws/</link><pubDate>Fri, 12 Aug 2005 09:29:53 +0000</pubDate><guid>https://wimpysworld.com/posts/introducing-stanley-a-new-theme-for-jaws/</guid><description>A new theme for Jaws called Stanley</description></item><item><title>Basic site layout complete</title><link>https://wimpysworld.com/posts/basic-site-layout-complete/</link><pubDate>Mon, 08 Aug 2005 09:27:44 +0000</pubDate><guid>https://wimpysworld.com/posts/basic-site-layout-complete/</guid><description>Website look and feel with Jaws</description></item><item><title>Grrr, a site with teeth</title><link>https://wimpysworld.com/posts/grrr-a-site-with-teeth/</link><pubDate>Fri, 05 Aug 2005 09:10:10 +0000</pubDate><guid>https://wimpysworld.com/posts/grrr-a-site-with-teeth/</guid><description>Rebooting Flexion.Org using Jaws</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Content Management on Wimpy's World</title><link>https://wimpysworld.com/tags/content-management/</link><description>Recent content in Content Management on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 05 Nov 2015 11:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/content-management/rss.xml" rel="self" type="application/rss+xml"/><item><title>Installing Nikola on Ubuntu</title><link>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</link><pubDate>Thu, 05 Nov 2015 11:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</guid><description>&lt;p>Nikola is a static site and blog generator written in &lt;a href="http://www.python.org">Python&lt;/a>
+that I&amp;rsquo;ve been using for a good while now. This blog post describes how to install
+&lt;a href="http://getnikola.com/">Nikola&lt;/a> on Ubuntu 14.04 or newer. Now, this may look
+like a long winded way to install Nikola, given that .deb package exists, but in
+my opinion it is the correct way to install Nikola on Ubuntu.&lt;/p>
+&lt;h2 id="installing-python">Installing Python&lt;/h2>
+&lt;p>First you&amp;rsquo;ll need Python.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install cython3 libpython3.4 python3.4 python3.4-dev python3.4-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now install the Python &amp;ldquo;package&amp;rdquo; management utilities.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install python-setuptools python-virtualenv python-pip virtualenvwrapper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="the-snakepit">The Snakepit&lt;/h2>
+&lt;p>Create a &amp;ldquo;Snakepit&amp;rdquo; directory for storing all the virtualenvs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-virtualenv-for-nikola">Create a virtualenv for Nikola&lt;/h2>
+&lt;p>The following will create a new virtualenv called &lt;code>nikola&lt;/code> based on Python 3.4.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>virtualenv -p /usr/bin/python3.4 ~/Snakepit/nikola-773
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h3>
+&lt;p>To activate the virtualenv do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>source ~/Snakepit/nikola-773/bin/activate
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Your shell prompt will change while a virtualenv is being worked on to indicate
+which virtualenv is currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or manually
+install any Python libraries safe in the knowledge you will not adversely
+damage any other virtualenvs or the global packages in the process. Very useful
+for developing a new branch which may have different library requirements than
+the master/head.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by simply
+executing &lt;code>deactivate&lt;/code>.&lt;/p>
+&lt;h2 id="install-nikola-requirements">Install Nikola requirements&lt;/h2>
+&lt;p>Nikola requires some additional packages.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install liblcms2-dev libfreetype6-dev libjpeg8-dev &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>libopenjp2-7-dev libtiff5-dev libwebp-dev libxslt1-dev libxml2-dev &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>libyaml-dev libzmq-dev zlib1g-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Some of the content optimisation filters require additional packages.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install closure-compiler jpegoptim optipng yui-compressor
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install Tidy 5. (optional)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get -y remove libtidy-0.99-0 tidy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://binaries.html-tidy.org/binaries/tidy-5.1.14/tidy-5.1.14-64bit.deb -O /tmp/tidy5.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i /tmp/tidy5.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s /usr/bin/tidy /usr/local/bin/tidy5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm /tmp/tidy5.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="what-are-these-requirements-for">What are these requirements for?&lt;/h3>
+&lt;p>The following are required to build &lt;code>pillow&lt;/code>, the Python imaging library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>liblcms2-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libfreetype6-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libjpeg8-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libopenjp2-7-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libtiff5-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libwebp-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>zlib1g-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>lxml&lt;/code>, a Python XML library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libxml2-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libxslt1-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>python-coveralls&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libyaml-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>pyzmq&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libzmq-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="install-nikola">Install Nikola&lt;/h2>
+&lt;p>First install Cython, which will ensure some of the packages required by Nikola use
+all the available optimisations.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install --upgrade Cython
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install all of Nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install --upgrade &lt;span style="color:#87ceeb">&amp;#34;Nikola[extras,tests]&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-site">Create a site&lt;/h2>
+&lt;p>After installing Nikola, you should create a site. A site is a collection of
+all assets needed to render your website, including configuration, posts,
+pages, images, and all other files and customizations.&lt;/p>
+&lt;p>To create a site, you need to run:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nikola init &amp;lt;directory_name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A wizard will guide your initial setup The &lt;code>--demo&lt;/code> option can be used to populate
+your site with some example content. If you do not want the wizard, use the &lt;code>--quiet&lt;/code>
+argument.&lt;/p>
+&lt;p>Nikola is now installed and and initial site is setup. &lt;code>nikola help&lt;/code> and the
+&lt;a href="http://getnikola.com/handbook.html">Nikola Handbook&lt;/a> will assist you from here.&lt;/p></description><summary>How to install Nikola on Ubuntu 14.04 or newer</summary></item><item><title>Installing Nikola on Debian</title><link>https://wimpysworld.com/posts/installing-nikola-on-debian/</link><pubDate>Mon, 31 Mar 2014 16:19:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-nikola-on-debian/</guid><description>&lt;p>Nikola is a static site and blog generator written in &lt;a href="http://www.python.org">Python&lt;/a>
+that I&amp;rsquo;ve been using for a good while now. This blog post describes how to install
+&lt;a href="http://getnikola.com/">Nikola&lt;/a> on Debian. Now, this may look like a long winded way
+to install Nikola, given that Debian .deb package exist, but in my opinion it is
+the correct way to install Nikola on Debian.&lt;/p>
+&lt;h2 id="installing-python">Installing Python&lt;/h2>
+&lt;p>First you&amp;rsquo;ll need Python and &lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.7 python2.7 python2.7-dev python2.7-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove any &lt;code>apt&lt;/code> installed Python packages that we are about to replace. The
+versions of these packages in the Debian repositories soon get stale.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge python-setuptools python-virtualenv python-pip python-profiler
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>pip&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://bootstrap.pypa.io/get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 get-pip.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;code>pip&lt;/code> to install &lt;code>virtualenv&lt;/code> and &lt;code>virtualenvwrapper&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pip install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pip install virtualenvwrapper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="the-snakepit">The Snakepit&lt;/h2>
+&lt;p>Create a &amp;ldquo;Snakepit&amp;rdquo; directory for storing all the virtualenvs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following your &lt;code>~/.bashrc&lt;/code> to enable &lt;code>virtualenvwrapper&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WORKON_HOME&lt;/span>=&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/Snakepit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">if&lt;/span> [ -f /usr/local/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/local/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">elif&lt;/span> [ -f /usr/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-virtualenv-for-nikola">Create a virtualenv for Nikola&lt;/h2>
+&lt;p>Open a new shell to ensure that the &lt;code>virtualenvwrapper&lt;/code> configuration is active.
+The following will create a new virtualenv called &lt;code>nikola&lt;/code> based on Python 2.7.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkvirtualenv -p /usr/bin/python2.7 ~/Snakepit/nikola-640
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h3>
+&lt;p>To activate an existing virtualenv do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>workon nikola-640
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can switch to another virtualenv at any time, just use &lt;code>workon envname&lt;/code>.
+Your shell prompt will change while a virtualenv is being worked on to
+indicate which virtualenv is currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or manually
+install any Python libraries safe in the knowledge you will not adversely
+damage any other virtualenvs or the global packages in the process. Very
+useful for developing a new branch which may have different library requirements
+than the master/head.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by
+simply executing &lt;code>deactivate&lt;/code>.&lt;/p>
+&lt;h2 id="install-nikola-requirements">Install Nikola requirements&lt;/h2>
+&lt;p>Nikola is will be powered by Python 2.7 and some additional packages will
+be required.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install python2.7-dev libfreetype6-dev libjpeg8-dev libxslt1-dev libxml2-dev libyaml-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="what-are-these-requirements-for">What are these requirements for?&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>python2.7-dev&lt;/code> provides the header files for Python 2.7 so that Python
+modules with C extensions can be built.&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>pillow&lt;/code>, the Python imaging library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libjpeg8-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libfreetype6-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>lxml&lt;/code>, a Python XML library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libxml2-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libxslt1-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>python-coveralls&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libyaml-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="install-nikola">Install Nikola&lt;/h2>
+&lt;p>Download Nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir -p &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">VIRTUAL_ENV&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/src
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">VIRTUAL_ENV&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/src
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget https://github.com/getnikola/nikola/archive/v6.4.0.tar.gz -O nikola-640.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar zxvf nikola-640.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd nikola-6.4.0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install the Nikola requirements.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install -r requirements-full.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you intend to use the Nikola planetoid (Planet generator) plugin you&amp;rsquo;ll also
+need to following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install peewee feedparser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Actually install nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>python setup.py install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nikola is now installed. &lt;code>nikola help&lt;/code> and the &lt;a href="http://getnikola.com/handbook.html">Nikola Handbook&lt;/a>
+will assist you from here on.&lt;/p></description><summary>How to install Nikola static site generator on Debian</summary></item><item><title>Installing Nikola on Arch Linux</title><link>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</link><pubDate>Fri, 08 Mar 2013 17:13:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</guid><description>&lt;p>I&amp;rsquo;ve decided to migrate one of my servers to &lt;a href="https://www.archlinux.org/">Arch Linux&lt;/a>.
+I&amp;rsquo;m not sure that a rolling release distro really suits servers but I&amp;rsquo;ve enjoyed
+using Arch Linux over the last year on my workstations and the only way to
+assess it&amp;rsquo;s suitability on a server is to try it. So, I&amp;rsquo;ve decided to migrate my
+blog to an Arch Linux server.&lt;/p>
+&lt;p>This blog post describes how to install &lt;a href="http://getnikola.com/">Nikola&lt;/a>
+on Arch Linux. Nikola is a static site and blog generator written in
+&lt;a href="http://www.python.org">Python&lt;/a> that I&amp;rsquo;ve been using for a few months.&lt;/p>
+&lt;p>First you&amp;rsquo;ll need Python and &lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>
+so read my &lt;a href="https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/">Python and virtualenv on Arch Linux and Ubuntu&lt;/a>
+blog post and get yourself equipped.&lt;/p>
+&lt;p>Install the Nikola dependencies.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --noconfirm --needed freetype2 libxslt libxml2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo packer -S --noconfirm --noedit libjpeg6
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Create a &lt;code>virtualenv&lt;/code> for Nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkvirtualenv -p /usr/bin/python2.7 nikola-640
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will notice your shell prompt has changed to indicate that the &lt;code>nikola-640&lt;/code>
+virtualenv is now active. Install Nikola and the optional libraries I use.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install https://github.com/getnikola/nikola/archive/v6.4.0.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you intend to use the Nikola planetoid (Planet generator) plugin you&amp;rsquo;ll also
+need to following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install peewee feedparser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nikola is now installed. &lt;code>nikola help&lt;/code> and the &lt;a href="http://getnikola.com/handbook.html">Nikola Handbook&lt;/a>
+will assist you from here on.&lt;/p></description><summary>Install Nikola static site generator in a virtualenv on Arch Linux</summary></item><item><title>Dropbox is my Nikola publish button</title><link>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</link><pubDate>Wed, 06 Mar 2013 19:01:21 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</guid><description>&lt;p>When I &lt;a href="https://wimpysworld.com/posts/migrating-wordpress-to-nikola/">migrated my site to Nikola&lt;/a>
+I wanted to ensure I could manage my blog from the shell, the web, Android
+smartphone or Android tablet. I took some inspiration from &lt;a href="http://joehewitt.com">Joe Hewitt&amp;rsquo;s&lt;/a>
+article &lt;a href="http://joehewitt.com/2011/10/03/dropbox-is-my-publish-button">Dropbox is my publish button&lt;/a>
+and created a free Dropbox account which links to a shared folder on my Dropbox
+Pro account. I created a simple shell script (invoked via &lt;code>cron&lt;/code> every minute)
+that looks for a trigger file, if the trigger file exists Nikola publishes and
+deploys the site.&lt;/p>
+&lt;p>I am able to edit content from anywhere, on any device, and trigger publishing.
+Very happy.&lt;/p>
+&lt;p>What follows is how I install Dropbox on headless servers running Arch Linux
+and Debian/Ubuntu.&lt;/p>
+&lt;h2 id="installing-dropbox-daemon---all-distros">Installing Dropbox daemon - all distros&lt;/h2>
+&lt;p>Download the latest Dropbox stable release for 32-bit or 64-bit.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O dropbox.tar.gz &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download/?plat=lnx.x86&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -O dropbox.tar.gz &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download/?plat=lnx.x86_64&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Extract the archive and install Dropbox in &lt;code>/opt&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -xvzf dropbox.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv ~/.dropbox-dist /opt/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo find /opt/dropbox/ -type f -exec chmod &lt;span style="color:#f60">644&lt;/span> {} &lt;span style="color:#87ceeb">\;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">755&lt;/span> /opt/dropbox/dropboxd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">755&lt;/span> /opt/dropbox/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s /opt/dropbox/dropboxd /usr/local/bin/dropboxd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run &lt;code>dropboxd&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/usr/local/bin/dropboxd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You should see output like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>This client is not linked to any account... Please visit https://www.dropbox.com/cli_link?host_id=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx to link this machine.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Visit the URL, login with your Dropbox account and link the account. You should see the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Client successfully linked, Welcome Web!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>dropboxd&lt;/code> will now create a &lt;code>~/Dropbox&lt;/code> folder and start synchronizing. Stop &lt;code>dropboxd&lt;/code> with CTRL+C.&lt;/p>
+&lt;h3 id="arch-linux---systemd">Arch Linux - systemd&lt;/h3>
+&lt;p>Run Dropbox as daemon with systemd. Create &lt;code>/usr/lib/systemd/system/dropbox@.service&lt;/code>
+with the following content.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-systemd" data-lang="systemd">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Unit]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Description=&lt;span style="color:#87ceeb">Dropbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>After=&lt;span style="color:#87ceeb">local-fs.target network.target&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Service]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Type=&lt;span style="color:#87ceeb">simple&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ExecStart=&lt;span style="color:#87ceeb">/usr/local/bin/dropboxd&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ExecReload=&lt;span style="color:#87ceeb">/bin/kill -HUP $MAINPID&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>KillMode=&lt;span style="color:#87ceeb">process&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Restart=&lt;span style="color:#87ceeb">always&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User=&lt;span style="color:#87ceeb">%I&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Install]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>WantedBy=&lt;span style="color:#87ceeb">multi-user.target&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the daemon for your user, run the following replace&lt;code>&amp;lt;user&amp;gt;&lt;/code> with your
+username. This will ensure Dropbox is started when the system boots.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable dropbox@&amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl start dropbox@&amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="debianubuntu---initd">Debian/Ubuntu - init.d&lt;/h3>
+&lt;p>Run Dropbox as daemon with init.d. Create &lt;code>/etc/init.d/dropbox&lt;/code> with the
+following content, replacing &lt;code>&amp;lt;user&amp;gt;&lt;/code> with your username.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>&lt;span style="color:#0f0">### BEGIN INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Provides: dropbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Start: $local_fs $remote_fs $network $syslog $named&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Stop: $local_fs $remote_fs $network $syslog $named&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Start: 2 3 4 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Stop: 0 1 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># X-Interactive: false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Short-Description: dropbox service&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">### END INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DROPBOX_USERS&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&amp;lt;user&amp;gt;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DAEMON&lt;/span>=/opt/dropbox/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>start() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Starting dropbox...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>getent passwd &lt;span style="color:#eedd82">$dbuser&lt;/span> | cut -d: -f6&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOME&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> start-stop-daemon -b -o -c &lt;span style="color:#eedd82">$dbuser&lt;/span> -S -u &lt;span style="color:#eedd82">$dbuser&lt;/span> -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>stop() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Stopping dropbox...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>getent passwd &lt;span style="color:#eedd82">$dbuser&lt;/span> | cut -d: -f6&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon -o -c &lt;span style="color:#eedd82">$dbuser&lt;/span> -K -u &lt;span style="color:#eedd82">$dbuser&lt;/span> -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>status() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">dbpid&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>pgrep -u &lt;span style="color:#eedd82">$dbuser&lt;/span> dropbox&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#eedd82">$dbpid&lt;/span> ] ; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;dropboxd for USER &lt;/span>&lt;span style="color:#eedd82">$dbuser&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;dropboxd for USER &lt;/span>&lt;span style="color:#eedd82">$dbuser&lt;/span>&lt;span style="color:#87ceeb">: running (pid &lt;/span>&lt;span style="color:#eedd82">$dbpid&lt;/span>&lt;span style="color:#87ceeb">)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$1&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart|reload|force-reload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Usage: /etc/init.d/dropbox {start|stop|reload|force-reload|restart|status}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>exit &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the init.d script.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chmod +x /etc/init.d/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo update-rc.d dropbox defaults
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-dropbox-client---all-distros">Install Dropbox client - all distros&lt;/h2>
+&lt;p>It is recommended to download the official Dropbox client to configure Dropbox
+and get its status.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download?dl=packages/dropbox.py&amp;#34;&lt;/span> -O dropbox-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod &lt;span style="color:#f60">755&lt;/span> dropbox-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i s&lt;span style="color:#87ceeb">&amp;#39;/#!\/usr\/bin\/python/#!\/usr\/bin\/env python2/&amp;#39;&lt;/span> dropbox-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv dropbox-cli /usr/local/bin/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For usage instructions run &lt;code>dropbox-cli help&lt;/code>.&lt;/p>
+&lt;h2 id="disable-lan-sync">Disable LAN Sync&lt;/h2>
+&lt;p>Stop Dropbox from sending LAN Sync broadcasts every 30 seconds over port 17500.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dropbox-cli lansync n
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I&amp;rsquo;m planning to make more use of Dropbox for content management and content
+delivery, blog posts to follow.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.dropboxwiki.com/Text_Based_Linux_Install">http://www.dropboxwiki.com/Text_Based_Linux_Install&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://aur.archlinux.org/packages/dropbox/">https://aur.archlinux.org/packages/dropbox/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Dropbox">https://wiki.archlinux.org/index.php/Dropbox&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Publishing a Nikola blog via Dropbox on a headless Linux server</summary></item><item><title>Migrating Wordpress to Nikola</title><link>https://wimpysworld.com/posts/migrating-wordpress-to-nikola/</link><pubDate>Mon, 22 Oct 2012 17:13:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/migrating-wordpress-to-nikola/</guid><description>&lt;p>I recently migrated three sites from a self hosted &lt;a href="http://www.wordpress.org">Wordpress&lt;/a>
+installation to &lt;a href="http://getnikola.com/">Nikola&lt;/a>. Nikola is a static
+site and blog generator written in &lt;a href="http://www.python.org">Python&lt;/a>.&lt;/p>
+&lt;p>Although I use both &lt;a href="http://docutils.sourceforge.net/rst.html">reStructuredText&lt;/a>
+and &lt;a href="http://daringfireball.net/projects/markdown/">Markdown&lt;/a>, I decided
+to migrate my Wordpress content to Markdown.&lt;/p>
+&lt;p>This is by no means an exhaustive Wordpress to Nikola migration guide but it
+should provide enough clues for anyone else wanting to do the same. The
+following was done on Ubuntu 10.04 LTS.&lt;/p>
+&lt;p>Export the Wordpress content. &lt;code>Tools -&amp;gt; Export -&amp;gt; All Content&lt;/code>&lt;/p>
+&lt;p>Use &lt;code>xmllint&lt;/code> to find any errors in the Wordpress XML export and fix them.&lt;/p>
+&lt;h2 id="nikola-5">Nikola 5&lt;/h2>
+&lt;p>&lt;strong>UPDATE!&lt;/strong> I&amp;rsquo;ve added the instructions for install Nikola 5 since fist
+publishing this post.&lt;/p>
+&lt;p>Install Nikola 5 in a &lt;code>virtualenv&lt;/code> using
+&lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd ~
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libxslt1-dev libxml2-dev libjpeg62-dev python2.6-dev
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://nikola-generator.googlecode.com/files/nikola-5.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>unzip ~/nikola-5.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkvirtualenv -i markdown -r ~/nikola-5/requirements.txt --use-distribute nikola-5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd ~/nikola-5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>python setup.py install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="nikola-4">Nikola 4&lt;/h2>
+&lt;p>Install Nikola 4.0.3, in a &lt;code>virtualenv&lt;/code> using
+&lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>.
+Nikola 4.0.3 spits deprecation warnings with &lt;code>doit&amp;gt;=0.16.1&lt;/code> hence the use of
+&lt;code>sed&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd ~
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libxslt1-dev libxml2-dev libjpeg62-dev python2.6-dev
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://nikola-generator.googlecode.com/files/nikola-4.0.3.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>unzip ~/nikola-4.0.3.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#87ceeb">&amp;#39;s/&amp;gt;=0\.16/==0\.16/&amp;#39;&lt;/span> ~/nikola-4.0.3/requirements.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkvirtualenv -i markdown -r ~/nikola-4.0.3/requirements.txt --use-distribute nikola
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd nikola-4.0.3
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>python setup.py install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Import the Wordpress content.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nikola import_wordpress wordpress.linted.xml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;a href="https://github.com/aaronsw/html2text">html2text&lt;/a> to convert the HTML
+markup in &lt;code>new_site/posts/*.wp&lt;/code> to &lt;em>real&lt;/em> Markdown.&lt;/p>
+&lt;p>Use the &lt;a href="http://wordpress.org/extend/plugins/disqus-comment-system/">Disqus Wordpress Plug-in&lt;/a>
+to migrate Wordpress comments to &lt;a href="http://www.disqus.com">Disqus&lt;/a>.&lt;/p>
+&lt;p>If required, generate a list of the Wordpress URLs for Nikola redirections.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>grep &lt;span style="color:#87ceeb">&amp;#34;&amp;lt;link&amp;gt;&amp;#34;&lt;/span> wordpress.linted.xml | sed -e &lt;span style="color:#87ceeb">&amp;#39;s/&amp;lt;link&amp;gt;//g&amp;#39;&lt;/span> -e &lt;span style="color:#87ceeb">&amp;#39;s/&amp;lt;\/link&amp;gt;//g&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I migrated from several sub-domains to one top-level and the Wordpress URLs
+I was using can&amp;rsquo;t be persevered with Nikola. I use a combination of Nikola
+redirects and nginx configuration to handle the re-directions.&lt;/p>
+&lt;p>At this point the bulk of the migration is done. I tweaked the Nikola &lt;code>conf.py&lt;/code>
+to use &lt;code>.md&lt;/code> files instead of &lt;code>.wp&lt;/code>, added some assets to the Nikola &lt;code>files&lt;/code>
+directory, configured deployments and updated the theme. I also decided to axe
+some obsolete blog posts.&lt;/p>
+&lt;p>Migrating to Disqus has been very frustrating and although my comments have
+now been migrated the Migrate Threads has yet reflect the new URLs of my posts.
+There is no visibility of what, if anything, is happening when you execute the
+Disqus URL Mapper. This is not a Nikola issue.&lt;/p>
+&lt;p>I am extremely happy with Nikola itself and it has proved itself flexible and
+I can now capture my notes in a familiar format and in a familiar environment,
+Python. Next steps are to integrate Nikola with Dropbox so I can publish from
+any device with ease and add a search facility.&lt;/p></description><summary>From a dynamic Wordpress site to static Nikola site</summary></item><item><title>Wordpress Search Engine Optimisation</title><link>https://wimpysworld.com/posts/wordpress-search-engine-optimisation/</link><pubDate>Mon, 26 Jan 2009 15:37:55 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/wordpress-search-engine-optimisation/</guid><description>&lt;p>I manage several websites at work and have therefore learned something about
+search engine optimisation (SEO). Our main site at work uses
+&lt;a href="http:/www.wordpress.org">Wordpress&lt;/a> as the content manager, which has good
+SEO features by default. Last week we launched a new website and I also
+refreshed the other sites, in so doing I found a great article discussing how
+to fully SEO your Wordpress site. It is a good read even if you don&amp;rsquo;t use
+Wordpress, but for those of you that do, it recommends a suite of plugins that
+do all the hard work for you.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://yoast.com/articles/wordpress-seo/">Wordpress SEO - The definitive guide to high rankings for your Blog&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Wordpress plugins that help automate SEO</summary></item><item><title>Hacking WordTwit into WordDent</title><link>https://wimpysworld.com/posts/hacking-wordtwit-into-worddent/</link><pubDate>Fri, 23 Jan 2009 18:24:20 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/hacking-wordtwit-into-worddent/</guid><description>&lt;p>I have quickly forked &lt;a href="https://wordpress.org/plugins/wordtwit/">WordTwit&lt;/a> into
+WordDent. WordDent is a Wordpress plugin that utilizes the Twitter API to
+automatically push a published post to your &lt;a href="http://identi.ca">Identi.ca&lt;/a>
+account as a dent. It allows all your Identi.ca contacts to keep up to date
+with your blog postings. I&amp;rsquo;m still just testing that WordDent works
+correctly. I&amp;rsquo;ll find out if the nice people over at
+&lt;a href="http://www.bravenewcode.com">Brave New Code&lt;/a> will agree to me releasing
+WordDent since I can&amp;rsquo;t fine any license details for WordTwit.&lt;/p></description><summary>Automatically post Wordpress blog notification to Identi.ca</summary></item><item><title>Search engine verification and sitemaps</title><link>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</link><pubDate>Sun, 18 Jan 2009 23:19:12 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</guid><description>&lt;p>I finally got around to verifying my websites with the Google, Yahoo! and MSN
+Live search engines. I&amp;rsquo;ve also setup sitemaps for my websites too. I&amp;rsquo;ve done
+this for the websites at work but couldn&amp;rsquo;t be arsed to do it for my own sites
+until today.&lt;/p>
+&lt;p>To find out why you want sitemap enable your sites read the
+&lt;a href="http://en.wikipedia.org/wiki/Site_map">Sitemap&lt;/a> page at Wikipedia. In order to
+register your sitemaps with the major search engines you&amp;rsquo;ll need to setup
+accounts for &lt;a href="https://www.google.com/webmasters/tools/">Google Webmaster Tools&lt;/a>,
+&lt;a href="http://webmaster.live.com/webmaster/">MSN Live Webmaster Tools&lt;/a> and
+&lt;a href="https://siteexplorer.search.yahoo.com/">Yahoo! Site Explorer&lt;/a>.&lt;/p>
+&lt;p>You&amp;rsquo;ll then need to &lt;em>verify&lt;/em> your site(s) with each of the search engines, they
+provide details about how to do this but it typically requires that you put a
+meta tag in your page header. Once you&amp;rsquo;ve verified your site(s) it&amp;rsquo;s time to
+create a &lt;code>sitemap.xml&lt;/code>.&lt;/p>
+&lt;p>If you have a Wordpress blog adding sitemap support is easy, just use the
+&lt;a href="http://wordpress.org/extend/plugins/google-sitemap-generator/">Google XML Sitemaps&lt;/a>
+plugin. This re-builds &lt;code>sitemap.xml&lt;/code> when you update posts, pages, comments etc.
+It also notifies all the relevant search engines that content has changed on
+your site. Very useful indeed. If you need to create your sitemap by hand, or
+better yet script its creation, then read &lt;a href="http://www.sitemaps.org/">sitemaps.org&lt;/a>
+for the protocol spec.&lt;/p></description><summary>Verify websites with search engines and submit sitemaps for indexing</summary></item><item><title>Blog post notifications to Twitter</title><link>https://wimpysworld.com/posts/blog-post-notifications-to-twitter/</link><pubDate>Sat, 17 Jan 2009 10:45:12 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/blog-post-notifications-to-twitter/</guid><description>&lt;p>I&amp;rsquo;ve just installed &lt;a href="http://www.bravenewcode.com/wordtwit/">WordTwit&lt;/a> on my
+blog. WordTwit keeps track of when you publish new posts, and automatically
+informs all of your followers by pushing out a Twitter tweet. All links are
+automatically converted to tiny URLs.&lt;/p></description><summary>Send new Wordpress blog notifications to Twitter</summary></item><item><title>BloGTK, a weblog client for Linux</title><link>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</link><pubDate>Fri, 11 Jan 2008 13:44:07 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</guid><description>&lt;p>I have been meaning to setup a weblog client for a while now. I have tested a
+couple of blog clients and have settled on &lt;a href="http://blogtk.sourceforge.net/">BloGTK&lt;/a>.&lt;/p>
+&lt;p>It has a simple user interface but comprehensive features, although I did need
+to define a few Custom Tags before the editor supported all the formatting
+options I wanted. Setting up BloGTK is very simple for Ubuntu and Debain users
+requiring an &lt;code>aptitude install blogtk&lt;/code> to get it installed and the following
+settings will connect to a Wordpress blog.&lt;/p>
+&lt;ul>
+&lt;li>Server URL: &lt;code>http://blog.example.org/xmlrpc.php&lt;/code>&lt;/li>
+&lt;li>Account: &lt;em>Your Username&lt;/em>&lt;/li>
+&lt;li>Password: &lt;em>Your Password&lt;/em>&lt;/li>
+&lt;li>Blogging System: &lt;em>Moveable Type&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>Now I can blog directly from my desktop, I am hoping it will encourage me to
+post more often.&lt;/p></description><summary>Graphical blogging client for GNOME</summary></item><item><title>Flexion.Org is re-activated!</title><link>https://wimpysworld.com/posts/flexion.org-is-re-activated/</link><pubDate>Sat, 22 Sep 2007 11:22:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/flexion.org-is-re-activated/</guid><description>&lt;p>I have finally got around to re-activating this website after many months of
+neglect. The first thing to do was move away from &lt;a href="http://jaws-project.com/">Jaws&lt;/a>.
+Sadly, my Jaws installation is broken in a way that newer Jaws releases refuse
+to upgrade it.&lt;/p>
+&lt;p>I did some research and decided to migrate to &lt;a href="http://www.wordpress.org">Wordpress&lt;/a>
+since it caters for all the essentials I require either in the core
+functionality or via plugins. Plus I can integrate with some other stuff I want
+to use.&lt;/p>
+&lt;p>The migration to Wordpress was made all the easier thanks to the excellent &lt;a href="http://trac.wordpress.org/ticket/4184">Jaws import plugin&lt;/a>
+I found on the Wordpress trac. However, I decided not to use the Textile plugin
+to preserve the Jaws formatted text. Instead I chose to manually clean up some
+of the old entries so I could stick with the TinyMCE editor long term.&lt;/p>
+&lt;p>I am happy with Wordpress thus far and look forward to getting some plugins
+going and picking up a new theme over the coming days and weeks.&lt;/p></description><summary>Jaws dropped in a move to Wordpress</summary></item><item><title>R3-born 0.1.1 is released!</title><link>https://wimpysworld.com/posts/r3-born-0.1.1-is-released/</link><pubDate>Fri, 09 Mar 2007 21:59:45 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/r3-born-0.1.1-is-released/</guid><description>&lt;p>&lt;a href="http://www.sourceforge.net/projects/r3-born/">R3-born&lt;/a> 0.1.1 is released :-)&lt;/p>
+&lt;h2 id="r3-born-core-change-log">R3-born Core Change Log&lt;/h2>
+&lt;p>Here are the main changes for this release. &lt;em>v0.1.1 : 9th March 2007&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>Added Akismet anti-spam API&lt;/li>
+&lt;li>Added a version checker for the Core and also for Blocks and Modules.&lt;/li>
+&lt;li>Added search bot (Google, MSN, Yahoo!, etc) detection.&lt;/li>
+&lt;li>Added logging (in Combined Log Format) to the R3-born Intrusion Prevention System.&lt;/li>
+&lt;li>Enhanced the Module API so it now supports safe updating and custom CSS for blocks and modules.&lt;/li>
+&lt;li>Enhanced the Layout Manager&lt;/li>
+&lt;li>Enhanced the Registration and Profile pages by separating them.&lt;/li>
+&lt;li>Enhanced the Template engine by back porting some features from phpBB 3.0.x&lt;/li>
+&lt;li>Optimised and fixed the Search API&lt;/li>
+&lt;li>Optimised and simplified Coloured Groups.&lt;/li>
+&lt;li>Improved the Groups Management ACP&lt;/li>
+&lt;li>Improved the Styles Management ACP&lt;/li>
+&lt;li>Fixed various bugs in the core.&lt;/li>
+&lt;li>Significant feature enhancements, bug fixes and optimisations added to the Menu and Who Is Online blocks.&lt;/li>
+&lt;li>Significant feature enhancements, bug fixes and optimisations added to the Comments, Downloads, Forum, Pages,&lt;/li>
+&lt;li>Private Messages, Weblogs and View Online modules.&lt;/li>
+&lt;li>New modules : bot_list, cookie, error, google, referrers and sql_backup&lt;/li>
+&lt;li>New blocks : recent_blogs, recent_comments, recent_pages, recent_topics, search, socmarks and visit_counter.&lt;/li>
+&lt;/ul>
+&lt;p>R3-born 0.1.1 has fulfilled its first major objective, which is to be functional
+enough to run a website.&lt;/p></description><summary>R3-born is good enough to run a website</summary></item><item><title>R3-born 0.1.0 is released!</title><link>https://wimpysworld.com/posts/r3-born-0.1.0-is-released/</link><pubDate>Tue, 30 Jan 2007 11:52:55 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/r3-born-0.1.0-is-released/</guid><description>&lt;p>Finally, R3-born 0.1.0 is released. &lt;a href="http://www.sourceforge.net/projects/r3-born/">R3-born&lt;/a>
+is a content management system for modest websites which I hope will be ideal for
+individuals running their own sites or small community websites.&lt;/p>
+&lt;p>Due to my accident I have not been able to address all of the bugs which have
+been reported recently and the downloads are only available as bzip2 tarballs
+right now. Please report any bugs you might encounter as 0.1.0 has really only
+been tested on Debian Sarge (stable) running PHP4 and MSQL 4. Feedback from
+other configurations will be useful and all reported bugs will be investigated.&lt;/p></description><summary>After 10 months work R3-born 0.1.0 is ready</summary></item><item><title>Announcing R3-born</title><link>https://wimpysworld.com/posts/announcing-r3-born/</link><pubDate>Fri, 08 Sep 2006 17:48:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/announcing-r3-born/</guid><description>&lt;p>I suppose it is a bit silly to announce this just before I go on holiday but
+what the heck. &lt;a href="http://www.sourceforge.net/projects/r3-born/">R3-born&lt;/a> is
+intended to be a simple and modular content management system for modest websites.
+My hope is that it will be ideal for individuals running their own sites or for
+small community websites. R3-born is coded in PHP (4.2.0 or better required)
+and requires an SQL database, currently MySQL 3.x, 4.x and 5.x, Postgres 7.x
+or better and MS-SQL 7.x or better are supported.&lt;/p>
+&lt;h2 id="current-status">Current Status&lt;/h2>
+&lt;p>Right now, R3-born is considered pre-alpha and not suitable for a production
+website but is ready for testers to start feeding back on bugs, feature requests
+and in the near future code changes. Development has been fairly rapid so far. I
+started the project in April 2006 and I hope to release a beta version of
+R3-born later in 2006.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.sourceforge.net/projects/r3-born/">http://www.sourceforge.net/projects/r3-born/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Minerva is r3-born</summary></item><item><title>Comments off, Overdue update and R3-born</title><link>https://wimpysworld.com/posts/comments-off-overdue-update-and-r3-born/</link><pubDate>Tue, 04 Jul 2006 13:14:55 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/comments-off-overdue-update-and-r3-born/</guid><description>&lt;p>First of all, I have disabled comments on my blog. &lt;a href="http://jaws-project.com/">Jaws&lt;/a>
+has spam protection and captachs but both implementations suck. This site doesn&amp;rsquo;t
+generate much feedback so disabling comments altogether is not really a problem.
+I haven&amp;rsquo;t updated the site recently and here is why. The 0.6.x release of Jaws
+is buggy and I still haven&amp;rsquo;t found anything else which fully meets my needs for
+managing my own web content.&lt;/p>
+&lt;p>Therefore for the last couple of months I have been working on an open source
+CMS of my own called R3-born. More details to follow about that soon, but you
+can find the project over at Sourceforge, don&amp;rsquo;t expect anything to work
+(although it does for the most part) it is pre-alpha and unreleased. SVN is the
+only way to snag the source.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.sourceforge.net/projects/r3-born/">R3-born&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Jaws spam counter measures suck</summary></item><item><title>Project Minerva is coming home</title><link>https://wimpysworld.com/posts/project-minerva-is-coming-home/</link><pubDate>Wed, 26 Apr 2006 17:42:11 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/project-minerva-is-coming-home/</guid><description>&lt;p>Despite a generous offer from a Minerva enthusiast a year or so ago to freely
+host the Project Minerva sites, all the Project Minerva hosting is coming back
+to where it started and rightly belongs. Yes, right here with me. It just
+goes to show you really don&amp;rsquo;t get anything for free. The developers have had
+several outages with the server which was provided by SpiderTech Hosting, so
+we are bringing it back here where we can look after our interests directly.&lt;/p>
+&lt;p>Minerva users might be wondering if the fact I am fully hosting Project
+Minerva again means I am going to be developing for the project again. Well,
+we will just have to see but I did inform Chris of a little project I kicked
+off last week which may (or may not) lead to something.&lt;/p></description><summary>It&amp;rsquo;s coming home. Minerva is coming home.</summary></item><item><title>Leaving Minerva</title><link>https://wimpysworld.com/posts/leaving-minerva/</link><pubDate>Thu, 01 Sep 2005 09:47:16 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/leaving-minerva/</guid><description>&lt;p>Yesterday was a sad day. I finally notified the core &lt;a href="http://sourceforge.net/projects/minerva/">Minerva&lt;/a>
+developers that I am leaving the project. Given that I started the project a few
+years back it was not a decision I made lightly.&lt;/p>
+&lt;p>I have a couple of reasons for leaving the project, the main one being that I
+just do not have the time available to effectively lead or contribute to the
+project. All open source projects require good leadership and I haven&amp;rsquo;t been able
+to provide that for most of 2005. It is with the best interests of Minerva in
+mind that I decided to leave.&lt;/p>
+&lt;p>However, Minerva is in very good hands and is under active development,
+with Dave and Chris leading the effort. I wish all the Minerva developers and
+users every success with the upcoming release of R4, it is a marvelous
+achievement and I am sure will prove to be very successful. I will be
+keeping an eye on R4 development, and if time permits, I may contribute some
+blocks and modules in the future. Until then, good luck and make me proud!&lt;/p></description><summary>Standing down from the Minerva project</summary></item><item><title>Introducing Stanley, a new theme for Jaws</title><link>https://wimpysworld.com/posts/introducing-stanley-a-new-theme-for-jaws/</link><pubDate>Fri, 12 Aug 2005 09:29:53 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/introducing-stanley-a-new-theme-for-jaws/</guid><description>&lt;p>I&amp;rsquo;ve finished hacking together a new theme for &lt;a href="http://jaws-project.com/">Jaws&lt;/a>
+0.5.x, which I have named Stanley, and is now the default theme on this site.
+I&amp;rsquo;ve still got to fix a couple of bugs and make sure that it is compatible with
+browsers other than Firefox. I wanted a theme which was crisp and clean, but
+also fully compatible with Jaws, so I decided to blend some of my favourite
+themes together. Stanley is inspired by the Kubrick theme which is popular among
+bloggers and although the Kubrick graphics have been borrowed the style sheet
+and layout are derived from the &lt;code>jaws&lt;/code>, &lt;code>orange-grey&lt;/code> and &lt;code>simple-green&lt;/code>
+themes which are bundled with Jaws. As a result Stanley is properly Jaws
+compatible, in that left and right layouts work, all the CSS elements are
+supported and CSS tweaks are used throughout to improve the visual appeal.&lt;/p></description><summary>A new theme for Jaws called Stanley</summary></item><item><title>Basic site layout complete</title><link>https://wimpysworld.com/posts/basic-site-layout-complete/</link><pubDate>Mon, 08 Aug 2005 09:27:44 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/basic-site-layout-complete/</guid><description>&lt;p>After fiddling around with the &lt;a href="http://jaws-project.com/">Jaws&lt;/a> setup for a while
+I have finally settled on something which I&amp;rsquo;m happy with. Once I found the
+&lt;code>default_page&lt;/code> setting in the registry I was very happy. I&amp;rsquo;ll enable more
+gadgets (plugins) as I find a use for them, but my next task will probably be
+creating my own theme or at least combining ideas from several existing themes.&lt;/p></description><summary>Website look and feel with Jaws</summary></item><item><title>Grrr, a site with teeth</title><link>https://wimpysworld.com/posts/grrr-a-site-with-teeth/</link><pubDate>Fri, 05 Aug 2005 09:10:10 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/grrr-a-site-with-teeth/</guid><description>&lt;p>Well, I have decided to get Flexion.Org on-line again and picked &lt;a href="http://jaws-project.com/">Jaws&lt;/a>
+as the tool for the job. This might seem an odd choice considering I have been
+working on Minerva for the last 3 years, but there you are, life is strange.&lt;/p></description><summary>Rebooting Flexion.Org using Jaws</summary></item></channel></rss>

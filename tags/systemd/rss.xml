@@ -1,1 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>systemd on Wimpy's World</title><link>https://wimpysworld.com/tags/systemd/</link><description>Recent content in systemd on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/systemd/rss.xml" rel="self" type="application/rss+xml"/><item><title>machinespawn</title><link>https://wimpysworld.com/projects/machinespawn/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/machinespawn/</guid><description>Quickly stand up systemd-nspawn containers for development or CI/CD</description></item><item><title>Arch Linux</title><link>https://wimpysworld.com/projects/arch-linux/</link><pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/arch-linux/</guid><description>Arch Linux Trusted User &amp;amp; Package maintainer</description></item><item><title>NFS and CIFS mounts with systemd</title><link>https://wimpysworld.com/posts/nfs-and-cifs-mounts-with-systemd/</link><pubDate>Fri, 26 Jul 2013 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/nfs-and-cifs-mounts-with-systemd/</guid><description>Wait for network when mounting NFS and CIFS volumes</description></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>From community contributor to director of engineering and back again</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>systemd on Wimpy's World</title><link>https://wimpysworld.com/tags/systemd/</link><description>Recent content in systemd on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/systemd/rss.xml" rel="self" type="application/rss+xml"/><item><title>machinespawn</title><link>https://wimpysworld.com/projects/machinespawn/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/machinespawn/</guid><description>&lt;p>&lt;a href="https://github.com/wimpysworld/machinespawn">machinespawn&lt;/a> is a wrapper for
+&lt;code>machinectl&lt;/code> and &lt;code>systemd-nspawn&lt;/code> to creating and managing containers; primarily
+focused at local development environment and CI/CD with a heavy emphasis on
+caching.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://github.com/wimpysworld/machinespawn">machinespawn&lt;/a>&lt;/li>
+&lt;li>Date: October 2022 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>Quickly stand up systemd-nspawn containers for development or CI/CD</summary></item><item><title>Arch Linux</title><link>https://wimpysworld.com/projects/arch-linux/</link><pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/arch-linux/</guid><description>&lt;p>&lt;a href="https://archlinux.org">Arch Linux &lt;/a> is a Linux distribution that uses a rolling
+release model, such that a regular system update is all that is needed to obtain
+all the latest software. The design approach follows the KISS principle
+(&lt;i>&amp;ldquo;keep it simple, stupid&amp;rdquo;&lt;/i>) and focuses on elegance, code correctness,
+minimalism and simplicity.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://archlinux.org">Arch Linux &lt;/a>&lt;/li>
+&lt;li>Date: December 2013 - December 2016&lt;/li>
+&lt;li>Role: Trusted user &amp;amp; Package maintainer&lt;/li>
+&lt;/ul></description><summary>Arch Linux Trusted User &amp;amp; Package maintainer</summary></item><item><title>NFS and CIFS mounts with systemd</title><link>https://wimpysworld.com/posts/nfs-and-cifs-mounts-with-systemd/</link><pubDate>Fri, 26 Jul 2013 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/nfs-and-cifs-mounts-with-systemd/</guid><description>&lt;p>I have an NFS server at home and at work we have Windows (not Samba) servers.
+When I first switched to &lt;code>systemd&lt;/code> I noticed that boot and shutdown were
+seriously delayed while NFS and CIFS were mounted/unmounted. &lt;code>systemd&lt;/code> was
+designed to eliminate those kinds of delays, so I did some research to find
+out how to correctly mount NFS and CIFS using &lt;code>systemd&lt;/code>.&lt;/p>
+&lt;h1 id="systemd-friendly-fstab">systemd friendly fstab&lt;/h1>
+&lt;p>Below are some example &lt;code>/etc/fstab&lt;/code> entries for NFS and CIFS mounts that are
+&lt;code>systemd&lt;/code> friendly, the pertinent mount options are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>noauto,x-systemd.automount,_netdev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>I found that &lt;code>noauto,x-systemd.automount&lt;/code> improved the boot performance and
+&lt;code>_netdev&lt;/code> improved the shutdown performance.&lt;/p>
+&lt;h2 id="nfs">NFS&lt;/h2>
+&lt;p>This is typically what I have use for mounting my home NAS.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>nfs-server:/SomeData /media/SomeData nfs defaults,noauto,x-systemd.automount,_netdev,noatime 0 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="cifs">CIFS&lt;/h2>
+&lt;p>This is what I use at work to work correctly with Windows Server.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>//cifs-server/MoreData /media/MoreData cifs defaults,noauto,x-systemd.automount,_netdev,rw,noperm,credentials=/home/username/.smb-credentials 0 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The contents of the credentials file looks something like this.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>username=&lt;span style="color:#87ceeb">yourusername&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>password=&lt;span style="color:#87ceeb">yourpassword&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>domain=&lt;span style="color:#87ceeb">COMPANYDOMAIN&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="references">References&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Systemd#Filesystem_mounts">https://wiki.archlinux.org/index.php/Systemd#Filesystem_mounts&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Wait for network when mounting NFS and CIFS volumes</summary></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>&lt;p>Ubuntu comes with everything you need to run your organisation, school, home or
+enterprise. All the essential applications, like an office suite, browsers,
+email and media apps come pre-installed.&lt;/p>
+&lt;p>Community contributor since 2006, worked for Canonical from 2016 to 2021
+progressing from software engineer to director of engineering. I remain active
+in the Ubuntu community.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntu-mate.org">Ubuntu Project&lt;/a> &amp;amp; &lt;a href="https://canonical.com">Canonical&lt;/a>&lt;/li>
+&lt;li>Date: January 2006 - date&lt;/li>
+&lt;li>Role: Community contributor&lt;/li>
+&lt;/ul></description><summary>From community contributor to director of engineering and back again</summary></item></channel></rss>

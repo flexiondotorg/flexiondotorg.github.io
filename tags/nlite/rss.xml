@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nLite on Wimpy's World</title><link>https://wimpysworld.com/tags/nlite/</link><description>Recent content in nLite on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 05 Mar 2006 06:41:38 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/nlite/rss.xml" rel="self" type="application/rss+xml"/><item><title>Slimlining Windows XP with nLite and XPLite</title><link>https://wimpysworld.com/posts/slimlining-windows-xp-with-nlite-and-xplite/</link><pubDate>Sun, 05 Mar 2006 06:41:38 +0000</pubDate><guid>https://wimpysworld.com/posts/slimlining-windows-xp-with-nlite-and-xplite/</guid><description>Trimming the Windows fat with nLite</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nLite on Wimpy's World</title><link>https://wimpysworld.com/tags/nlite/</link><description>Recent content in nLite on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 05 Mar 2006 06:41:38 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/nlite/rss.xml" rel="self" type="application/rss+xml"/><item><title>Slimlining Windows XP with nLite and XPLite</title><link>https://wimpysworld.com/posts/slimlining-windows-xp-with-nlite-and-xplite/</link><pubDate>Sun, 05 Mar 2006 06:41:38 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/slimlining-windows-xp-with-nlite-and-xplite/</guid><description>&lt;p>A shocking truth is that despite my preference for Linux I do still have to
+use Microsoft Windows/ I have recently started a new job where I am now
+required to use Windows XP on my desktop at work and I also need a Windows
+computer at home in order to update firmware/software and configure most
+devices in my home cinema.&lt;/p>
+&lt;p>So I have decided to install Windows XP on my most aging of laptops so it is
+always available for my home cinema tweaking, this also means I can remove dual
+boot Windows partitions on my main computer. However, because my old laptop is a
+bit short on memory I need to tweak Windows XP a good deal. I have been a long
+time user of 98Lite and XPLite from &lt;a href="http://www.litepc.com">LitePC.om&lt;/a> and have
+been slim lining Windows for many years. I have recently found &lt;a href="http://www.nliteos.com">nLite&lt;/a>
+which does much the same as XPLite except it rebuilds the Windows XP (or Windows 2000 and
+Windows 2003) installation CD so that the configuration changes you make, and
+Windows components you remove, are ingrained in a new ISO image.&lt;/p>
+&lt;p>The biggest benefit is that using nLite I can integrate Service Pack 2 and all
+the current hotfixes and patches into the new ISO meaning that after an install
+the new Windows system is better secured. I have also been able to integrate Firefox
+into my custom Windows XP install CD and completely remove Internet Explorer,
+and by using the &lt;a href="http://windowsupdate.62nds.com/">WindizUpdate&lt;/a> it is possible
+to do online Windows Updates using Firefox, Opera and K-Meleon.&lt;/p>
+&lt;p>There are also many other benefits to using nLite other than simply removing or
+adding software components, you can also pre-configure just about every aspect
+of the Windows environment and nLite will wrap all this into an unattended
+installation ISO image. My custom Windows XP install CD I made with nLite is
+just 145mb!&lt;/p></description><summary>Trimming the Windows fat with nLite</summary></item></channel></rss>

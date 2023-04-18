@@ -1,1 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R3-born on Wimpy's World</title><link>https://wimpysworld.com/tags/r3-born/</link><description>Recent content in R3-born on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Fri, 09 Mar 2007 21:59:45 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/r3-born/rss.xml" rel="self" type="application/rss+xml"/><item><title>R3-born 0.1.1 is released!</title><link>https://wimpysworld.com/posts/r3-born-0.1.1-is-released/</link><pubDate>Fri, 09 Mar 2007 21:59:45 +0000</pubDate><guid>https://wimpysworld.com/posts/r3-born-0.1.1-is-released/</guid><description>R3-born is good enough to run a website</description></item><item><title>R3-born 0.1.0 is released!</title><link>https://wimpysworld.com/posts/r3-born-0.1.0-is-released/</link><pubDate>Tue, 30 Jan 2007 11:52:55 +0000</pubDate><guid>https://wimpysworld.com/posts/r3-born-0.1.0-is-released/</guid><description>After 10 months work R3-born 0.1.0 is ready</description></item><item><title>Announcing R3-born</title><link>https://wimpysworld.com/posts/announcing-r3-born/</link><pubDate>Fri, 08 Sep 2006 17:48:47 +0000</pubDate><guid>https://wimpysworld.com/posts/announcing-r3-born/</guid><description>Minerva is r3-born</description></item><item><title>Comments off, Overdue update and R3-born</title><link>https://wimpysworld.com/posts/comments-off-overdue-update-and-r3-born/</link><pubDate>Tue, 04 Jul 2006 13:14:55 +0000</pubDate><guid>https://wimpysworld.com/posts/comments-off-overdue-update-and-r3-born/</guid><description>Jaws spam counter measures suck</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R3-born on Wimpy's World</title><link>https://wimpysworld.com/tags/r3-born/</link><description>Recent content in R3-born on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Fri, 09 Mar 2007 21:59:45 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/r3-born/rss.xml" rel="self" type="application/rss+xml"/><item><title>R3-born 0.1.1 is released!</title><link>https://wimpysworld.com/posts/r3-born-0.1.1-is-released/</link><pubDate>Fri, 09 Mar 2007 21:59:45 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/r3-born-0.1.1-is-released/</guid><description>&lt;p>&lt;a href="http://www.sourceforge.net/projects/r3-born/">R3-born&lt;/a> 0.1.1 is released :-)&lt;/p>
+&lt;h2 id="r3-born-core-change-log">R3-born Core Change Log&lt;/h2>
+&lt;p>Here are the main changes for this release. &lt;em>v0.1.1 : 9th March 2007&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>Added Akismet anti-spam API&lt;/li>
+&lt;li>Added a version checker for the Core and also for Blocks and Modules.&lt;/li>
+&lt;li>Added search bot (Google, MSN, Yahoo!, etc) detection.&lt;/li>
+&lt;li>Added logging (in Combined Log Format) to the R3-born Intrusion Prevention System.&lt;/li>
+&lt;li>Enhanced the Module API so it now supports safe updating and custom CSS for blocks and modules.&lt;/li>
+&lt;li>Enhanced the Layout Manager&lt;/li>
+&lt;li>Enhanced the Registration and Profile pages by separating them.&lt;/li>
+&lt;li>Enhanced the Template engine by back porting some features from phpBB 3.0.x&lt;/li>
+&lt;li>Optimised and fixed the Search API&lt;/li>
+&lt;li>Optimised and simplified Coloured Groups.&lt;/li>
+&lt;li>Improved the Groups Management ACP&lt;/li>
+&lt;li>Improved the Styles Management ACP&lt;/li>
+&lt;li>Fixed various bugs in the core.&lt;/li>
+&lt;li>Significant feature enhancements, bug fixes and optimisations added to the Menu and Who Is Online blocks.&lt;/li>
+&lt;li>Significant feature enhancements, bug fixes and optimisations added to the Comments, Downloads, Forum, Pages,&lt;/li>
+&lt;li>Private Messages, Weblogs and View Online modules.&lt;/li>
+&lt;li>New modules : bot_list, cookie, error, google, referrers and sql_backup&lt;/li>
+&lt;li>New blocks : recent_blogs, recent_comments, recent_pages, recent_topics, search, socmarks and visit_counter.&lt;/li>
+&lt;/ul>
+&lt;p>R3-born 0.1.1 has fulfilled its first major objective, which is to be functional
+enough to run a website.&lt;/p></description><summary>R3-born is good enough to run a website</summary></item><item><title>R3-born 0.1.0 is released!</title><link>https://wimpysworld.com/posts/r3-born-0.1.0-is-released/</link><pubDate>Tue, 30 Jan 2007 11:52:55 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/r3-born-0.1.0-is-released/</guid><description>&lt;p>Finally, R3-born 0.1.0 is released. &lt;a href="http://www.sourceforge.net/projects/r3-born/">R3-born&lt;/a>
+is a content management system for modest websites which I hope will be ideal for
+individuals running their own sites or small community websites.&lt;/p>
+&lt;p>Due to my accident I have not been able to address all of the bugs which have
+been reported recently and the downloads are only available as bzip2 tarballs
+right now. Please report any bugs you might encounter as 0.1.0 has really only
+been tested on Debian Sarge (stable) running PHP4 and MSQL 4. Feedback from
+other configurations will be useful and all reported bugs will be investigated.&lt;/p></description><summary>After 10 months work R3-born 0.1.0 is ready</summary></item><item><title>Announcing R3-born</title><link>https://wimpysworld.com/posts/announcing-r3-born/</link><pubDate>Fri, 08 Sep 2006 17:48:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/announcing-r3-born/</guid><description>&lt;p>I suppose it is a bit silly to announce this just before I go on holiday but
+what the heck. &lt;a href="http://www.sourceforge.net/projects/r3-born/">R3-born&lt;/a> is
+intended to be a simple and modular content management system for modest websites.
+My hope is that it will be ideal for individuals running their own sites or for
+small community websites. R3-born is coded in PHP (4.2.0 or better required)
+and requires an SQL database, currently MySQL 3.x, 4.x and 5.x, Postgres 7.x
+or better and MS-SQL 7.x or better are supported.&lt;/p>
+&lt;h2 id="current-status">Current Status&lt;/h2>
+&lt;p>Right now, R3-born is considered pre-alpha and not suitable for a production
+website but is ready for testers to start feeding back on bugs, feature requests
+and in the near future code changes. Development has been fairly rapid so far. I
+started the project in April 2006 and I hope to release a beta version of
+R3-born later in 2006.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.sourceforge.net/projects/r3-born/">http://www.sourceforge.net/projects/r3-born/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Minerva is r3-born</summary></item><item><title>Comments off, Overdue update and R3-born</title><link>https://wimpysworld.com/posts/comments-off-overdue-update-and-r3-born/</link><pubDate>Tue, 04 Jul 2006 13:14:55 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/comments-off-overdue-update-and-r3-born/</guid><description>&lt;p>First of all, I have disabled comments on my blog. &lt;a href="http://jaws-project.com/">Jaws&lt;/a>
+has spam protection and captachs but both implementations suck. This site doesn&amp;rsquo;t
+generate much feedback so disabling comments altogether is not really a problem.
+I haven&amp;rsquo;t updated the site recently and here is why. The 0.6.x release of Jaws
+is buggy and I still haven&amp;rsquo;t found anything else which fully meets my needs for
+managing my own web content.&lt;/p>
+&lt;p>Therefore for the last couple of months I have been working on an open source
+CMS of my own called R3-born. More details to follow about that soon, but you
+can find the project over at Sourceforge, don&amp;rsquo;t expect anything to work
+(although it does for the most part) it is pre-alpha and unreleased. SVN is the
+only way to snag the source.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.sourceforge.net/projects/r3-born/">R3-born&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Jaws spam counter measures suck</summary></item></channel></rss>

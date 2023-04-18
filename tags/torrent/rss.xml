@@ -1,1 +1,130 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Torrent on Wimpy's World</title><link>https://wimpysworld.com/tags/torrent/</link><description>Recent content in Torrent on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 21 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/torrent/rss.xml" rel="self" type="application/rss+xml"/><item><title>Setting up BitSync on Debian</title><link>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</link><pubDate>Sat, 21 Jun 2014 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</guid><description>Setting up BitTorrent Sync on Debian</description></item><item><title>Headless Debian 6.0 Torrent Server</title><link>https://wimpysworld.com/posts/headless-debian-6.0-torrent-server/</link><pubDate>Thu, 21 Mar 2013 17:35:22 +0000</pubDate><guid>https://wimpysworld.com/posts/headless-debian-6.0-torrent-server/</guid><description>Installing Transmission daemon on headless Debian (Squeeze) 6.0</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Torrent on Wimpy's World</title><link>https://wimpysworld.com/tags/torrent/</link><description>Recent content in Torrent on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 21 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/torrent/rss.xml" rel="self" type="application/rss+xml"/><item><title>Setting up BitSync on Debian</title><link>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</link><pubDate>Sat, 21 Jun 2014 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</guid><description>&lt;p>I&amp;rsquo;ve replaced Dropbox with &lt;a href="http://www.bittorrent.com/sync">BitTorrent Sync&lt;/a>.
+In order to do this I&amp;rsquo;ve have &lt;code>btsync&lt;/code> running on a VPS (2CPU, 2GB, 400GB), my
+home server and assorted Arch Linux workstations.&lt;/p>
+&lt;p>I had a couple of reasons for migrating away from Dropbox.&lt;/p>
+&lt;ul>
+&lt;li>Dropbox was costing $100 per year.&lt;/li>
+&lt;li>Dropbox encryption model is weak and I have data security/privacy.&lt;/li>
+&lt;/ul>
+&lt;p>The VPS I am running BitTorrent Sync on costs $50 per year and provides four
+times the storage. I run &lt;code>btsync&lt;/code> on a VPS so that there is always a server
+&lt;em>&amp;ldquo;in the cloud&amp;rdquo;&lt;/em> that is available to sync with so that my setup emulates what
+Dropbox used to do.&lt;/p>
+&lt;p>All my servers are running Debian and this is how I install &lt;code>btsync&lt;/code> on
+Debian.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sh -c &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#f00">$(&lt;/span>curl -fsSL http://debian.yeasoft.net/add-btsync-repository.sh&lt;span style="color:#f00">)&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install btsync
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is how I respond to the prompts:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>* Do you want to define a default BitTorrent Sync instance? : YES
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* BitTorrent Sync Daemon Credentials: yourusername
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* BitTorrent Sync Daemon Group: yourusername
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Niceness of the BitTorrent Sync Daemon: 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* On which portnumber should BitTorrent Sync listen? 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* BitTorrent Sync Listen Port: 12345
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Do you want BitTorrent Sync to request port mapping via UPNP? NO
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Download Bandwith Limit: 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Upload Bandwith Limit: 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Web Interface Bind IP Address: 0.0.0.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Web Interface Listen Port: 8888
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* The username for accessing the web interface: yourusername
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* The password for accessing the web interface: yourpassword
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>As you&amp;rsquo;ll see, I don&amp;rsquo;t use UPNP on my VPS. I elect a specific port (not
+actually 12345 by the way) and open that port up with &lt;code>ufw&lt;/code>. I also only
+allow access to the WebUI port from another server I own which reverse
+proxies via &lt;code>nginx&lt;/code>.&lt;/p>
+&lt;p>&lt;code>btsync&lt;/code> works really well, I have it syncing hundreds of thousands of
+files that amount to several hundred gigabytes of data. On my Arch Linux
+workstations I use the brilliant &lt;a href="http://www.yeasoft.com/site/projects:btsync-deb:btsync-gui">btsync-gui&lt;/a>
+and &lt;a href="https://play.google.com/store/apps/details?id=com.bittorrent.sync">BitTorrent Sync is also available for Android&lt;/a>.&lt;/p>
+&lt;p>That said, I still use a free Dropbox account to sync photos from mine and my
+wife&amp;rsquo;s Android phones. I have a Dropbox instance running on my home file server
+and everyday it runs a script to automatically import these photos into Plex.&lt;/p>
+&lt;p>Such a shame, that at the time of writing, &lt;code>btsync&lt;/code> is closed source :-(
+Maybe that will change but if it doesn&amp;rsquo;t &lt;a href="http://syncthing.net/">syncthing&lt;/a>
+may well be the answer when it has matured a little.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.yeasoft.com/site/projects:btsync-deb:btsync-server">http://www.yeasoft.com/site/projects:btsync-deb:btsync-server&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://forum.bittorrent.com/topic/18974-debian-and-ubuntu-server-packages-for-bittorrent-sync/">http://forum.bittorrent.com/topic/18974-debian-and-ubuntu-server-packages-for-bittorrent-sync/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Setting up BitTorrent Sync on Debian</summary></item><item><title>Headless Debian 6.0 Torrent Server</title><link>https://wimpysworld.com/posts/headless-debian-6.0-torrent-server/</link><pubDate>Thu, 21 Mar 2013 17:35:22 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/headless-debian-6.0-torrent-server/</guid><description>&lt;p>I recently switched ISPs at home and now have unlimited high speed broadband.&lt;/p>
+&lt;p>Finally I can participate in torrenting Linux .ISO images. I always download
+the latest distros using &lt;a href="http://en.wikipedia.org/wiki/BitTorrent">BitTorrent&lt;/a>
+and can now contribute to the community by seeding the distros I&amp;rsquo;ve downloaded.&lt;/p>
+&lt;p>I have a small (in size and resources) &lt;a href="http://www.debian.org">Debian&lt;/a> 6.0
+headless server at home that I wanted to turn into a torrent box. I&amp;rsquo;m a big fan
+of &lt;a href="http://www.transmissionbt.com/">Transmission&lt;/a> since it can be managed from
+the shell, web and Android phone/tablet. Sadly, the Transmission packages in the
+official Debain squeeze repositories are quite old, 2.03 at the time of writing,
+and there are no Transmission packages in &lt;a href="http://backports-master.debian.org/">Debian Backports&lt;/a>.&lt;/p>
+&lt;p>However after flexing my &lt;em>google-fu&lt;/em> I found a &lt;a href="http://apt.balocco.name/changelog.txt">3rd party Debian Squeeze
+repository&lt;/a> that includes fairly current
+(2.73 at the time of writing) Transmission packages specifically for headless use.
+Yah!&lt;/p>
+&lt;h2 id="install-transmission-daemon">Install Transmission Daemon&lt;/h2>
+&lt;p>First become root.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo -s -H
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the repository key.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-key adv --keyserver keyserver.ubuntu.com --recv-key 92B84A1E
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the repository.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#87ceeb">&amp;#34;deb http://apt.balocco.name squeeze main&amp;#34;&lt;/span> &amp;gt; /etc/apt/sources.list.d/balocco.list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Update the package list.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install Transmission.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install transmission-cli transmission-daemon transmission-webinterface
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="basic-configuration">Basic Configuration&lt;/h2>
+&lt;p>The Transmission settings can be found in &lt;code>/etc/transmission-daemon/settings.json&lt;/code>.&lt;/p>
+&lt;p>&lt;strong>If &lt;code>transmission-daemon&lt;/code> is running when you make changes to &lt;code>settings.json&lt;/code>
+the changes you make will be discarded the next time &lt;code>transmission-daemon&lt;/code> is started.&lt;/strong>&lt;/p>
+&lt;p>Therefore either stop &lt;code>transmission-daemon&lt;/code> before you make any changes or you can make
+the daemon reload &lt;code>settings.json&lt;/code> by sending it the SIGHUP signal.&lt;/p>
+&lt;h3 id="connect-from-anywhere">Connect from anywhere&lt;/h3>
+&lt;p>If you want to be able to connect to Transmission from anywhere on the Internet
+stop &lt;code>transmission-daemon&lt;/code>, make the following changes to &lt;code>settings.json&lt;/code> and
+then start &lt;code>transmission-daemon&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&amp;#34;rpc-password&amp;#34;&lt;/span>: &lt;span style="color:#87ceeb">&amp;#34;YourPlainTextPassword&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&amp;#34;rpc-username&amp;#34;&lt;/span>: &lt;span style="color:#87ceeb">&amp;#34;YourUsername&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&amp;#34;rpc-whitelist-enabled&amp;#34;&lt;/span>: &lt;span style="color:#f00">false&lt;/span>,
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>rpc-username&lt;/code> field will need adding but you can edit the existing entry
+for &lt;code>rpc-password&lt;/code>. Enter the &lt;code>rpc-password&lt;/code> as a plain text string, Transmission
+will automatically convert the password to a hash the next time it is started.&lt;/p>
+&lt;h2 id="connect-via-a-browser">Connect via a browser&lt;/h2>
+&lt;p>You should now be able to access the Transmission web interface via
+&lt;code>http://yourhost.example.org:9091&lt;/code>. If you didn&amp;rsquo;t change the username and password
+(you really should) the defaults are:&lt;/p>
+&lt;ul>
+&lt;li>Username : &lt;code>transmission&lt;/code>&lt;/li>
+&lt;li>Password : &lt;code>transmission&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="connect-via-android">Connect via Android&lt;/h2>
+&lt;p>I have an Android phone and an Android tablet. I use
+&lt;a href="https://play.google.com/store/apps/details?id=com.neogb.rtac">Remote Transmission&lt;/a>
+on my Android devices to manage my torrent box.&lt;/p>
+&lt;h2 id="connect-via-the-shell">Connect via the shell&lt;/h2>
+&lt;p>If, like me, you spend the majority of you time at the shell. Then
+&lt;a href="https://github.com/fagga/transmission-remote-cli">transmission-remote-cli&lt;/a> is
+probably for you. All my workstation run &lt;a href="http://www.archlinux.org">Arch Linux&lt;/a> so
+I install &lt;code>transmission-remote-cli&lt;/code> as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S transmission-remote-cli
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>See the GitHub project page for &lt;code>tramission-remote-cli&lt;/code> for instructions on how
+to connect to a remote Transmission daemon.&lt;/p>
+&lt;h2 id="block-list">Block List&lt;/h2>
+&lt;p>Regardless of how you intend to use Transmission you should enable a block list,
+this can be done via &lt;code>settings.json&lt;/code> and the web interface. The following block
+lists are a good start.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://list.iblocklist.com/?list=bt_level1&amp;amp;fileformat=p2p&amp;amp;archiveformat=gz">http://list.iblocklist.com/?list=bt_level1&amp;amp;fileformat=p2p&amp;amp;archiveformat=gz&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.bluetack.co.uk/config/level1.gz">http://www.bluetack.co.uk/config/level1.gz&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>That covers the basics for getting Transmission running on headless Debian 6.0 and
+how to connect to it from just about anywhere and on any device. I recommend reading
+the &lt;a href="https://trac.transmissionbt.com/wiki">Trasmission Wiki&lt;/a> as Transmission is
+capable of so much more than I have covered in this blog post.&lt;/p>
+&lt;p>Happy torrenting.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://apt.balocco.name/changelog.txt">http://apt.balocco.name/changelog.txt&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.lowendtalk.com/discussion/1001/squeeze-repository">http://www.lowendtalk.com/discussion/1001/squeeze-repository&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://trac.transmissionbt.com/wiki/EditConfigFiles">https://trac.transmissionbt.com/wiki/EditConfigFiles&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/fagga/transmission-remote-cli">https://github.com/fagga/transmission-remote-cli&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.iblocklist.com/">http://www.iblocklist.com/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Installing Transmission daemon on headless Debian (Squeeze) 6.0</summary></item></channel></rss>

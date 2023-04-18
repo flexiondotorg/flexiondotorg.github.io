@@ -1,1 +1,136 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mac on Wimpy's World</title><link>https://wimpysworld.com/tags/mac/</link><description>Recent content in Mac on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 09 Jan 2006 11:28:54 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/mac/rss.xml" rel="self" type="application/rss+xml"/><item><title>Powerbook G3 (Old World) Ubuntu Install</title><link>https://wimpysworld.com/posts/powerbook-g3-old-world-ubuntu-install/</link><pubDate>Mon, 09 Jan 2006 11:28:54 +0000</pubDate><guid>https://wimpysworld.com/posts/powerbook-g3-old-world-ubuntu-install/</guid><description>Installing Ubuntu on a PowerBook G3 for hack value</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mac on Wimpy's World</title><link>https://wimpysworld.com/tags/mac/</link><description>Recent content in Mac on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 09 Jan 2006 11:28:54 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/mac/rss.xml" rel="self" type="application/rss+xml"/><item><title>Powerbook G3 (Old World) Ubuntu Install</title><link>https://wimpysworld.com/posts/powerbook-g3-old-world-ubuntu-install/</link><pubDate>Mon, 09 Jan 2006 11:28:54 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/powerbook-g3-old-world-ubuntu-install/</guid><description>&lt;p>James bought a PowerBook G3 to the January 2006 &lt;a href="http://www.hants.lug.org.uk/">HantsLUG&lt;/a>
+meeting and wanted to have Ubuntu installed on it. I used to be familiar with
+Apple Mac computers in the mid to late 90&amp;rsquo;s because the company I worked for used
+Macs exclusively on the desktop, so I decided to give it a whirl.&lt;/p>
+&lt;p>The bottom line is that this old PowerBook G3 is now running Ubuntu Hoary 5.04
+quite happily and I will soon be phone James to arrange for him to pick up his
+computer.&lt;/p>
+&lt;p>The article is largely based on the &lt;a href="https://wiki.ubuntu.com/Installation/OldWorldMacs">OldWorldsMac Ubuntu Wiki&lt;/a>,
+I have included the specifics of James setup here so he has a record of how his
+computer was configured.&lt;/p>
+&lt;p>I quickly realised that simply inserting the Ubuntu Hoary 5.04 PowerPC install
+CD and rebooting while holding down the &amp;lsquo;C&amp;rsquo; key wasn&amp;rsquo;t going to work. It seems
+that James computer is old enough to be a right pain in the arse to get working
+with Linux, but that just makes me want to get it working all the more &lt;code>:-)&lt;/code>&lt;/p>
+&lt;p>By the end of the HantsLUG meeting Ubuntu Hoary 5.04 was just completing the
+final setup steps and would have been ready to use, but someone pulled the power
+block out of the mains and James battery is dead, so the computer shutdown &lt;code>:-(&lt;/code>
+I took the PowerBook G3 home with me to fix/complete the installation but when
+I got home I decided to download Ubuntu Breezy and install that instead. Sadly,
+James PowerBook only has a 2GB hard disk (1.9GB available for Linux) and this
+wasn&amp;rsquo;t sufficient for the Breezy installation to complete so I reverted to Hoary.&lt;/p>
+&lt;h2 id="identifying-the-powerbook-g3">Identifying the PowerBook G3&lt;/h2>
+&lt;p>After some Googling I soon discovered that there are two classes of PowerBook G3,
+OldWorld and NewWorld, and that each of the classes have a number of slightly
+different models in the range. I took a guess that James was an OldWorld
+PowerBook based on the fact it had no USB ports. It turns out this was a good
+guess.&lt;/p>
+&lt;p>Making the assumption that James PowerBook was OldWorld meant that I should use
+&lt;a href="http://penguinppc.org/bootloaders/bootx/">BootX&lt;/a> to boot into Linux from MacOS
+as opposed to using yaboot which is for NewWorld PowerPCs.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://docs.info.apple.com/article.html?artnum=24604">PowerBook G3 Computers: How to Identify Different Models&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="doing-the-macos-installation">Doing the MacOS Installation&lt;/h2>
+&lt;p>The first job was to erase the hard disk and install MacOS in a small parition
+and leave the rest of the drive unallocated for installing Ubuntu later on.&lt;/p>
+&lt;ul>
+&lt;li>Insert MacOS 8.1 CD&lt;/li>
+&lt;li>Reboot&lt;/li>
+&lt;li>Hold down &amp;lsquo;C&amp;rsquo; as the computer boots to get it to boot from CD&lt;/li>
+&lt;li>Erase the Hard Disk&lt;/li>
+&lt;li>Use Drive Setup to make a 150MB HFS partition.&lt;/li>
+&lt;li>Install MacOS, leaving off all the optional components. The only thing you need is Stuffit and a browser which are both part of the minimal MacOS8.1 install.&lt;/li>
+&lt;/ul>
+&lt;p>After the install I delete some odds and ends I didn&amp;rsquo;t need and also used
+Extensions Manager to deselect a lot of components that were not required.
+Finally, I configured TCP/IP to use DHCP.&lt;/p>
+&lt;h3 id="tools-update">Tools Update&lt;/h3>
+&lt;p>James wanted to be able to use MacOS for basic web surfing, so that meant
+finding an more modern alternative to Netscape 3.0.3 which was installed be
+default. Sadly The only (relatively) upto date browser I could find which would
+install on MacOS 8.1 was Internet Explorer 5.1.7. I also needed an updated
+version of Stuffit Expander to extract BootX 1.2.2. I used Netscape 3.0.3 to
+download IE and Stuffit from the URL&amp;rsquo;s below&amp;hellip;&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.microsoft.com/mac/downloads.aspx?pid=download&amp;amp;location=/mac/DOWNLOAD/IE/ie5_classic.xml&amp;amp;secid=30&amp;amp;ssid=11&amp;amp;flgnosysreq=True">Internet Explorer 5.1.7 for Mac OS 8.1 to 9.x&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.sfsu.edu/ftp/mac/utils/aladdin_exp55.hqx">Stuffit Expander 5.5 for MacOS Classic&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&amp;hellip;and installed them. Once they were working a deleted Netscpae 3.0.3 and the
+old version of Stuffit.&lt;/p>
+&lt;h2 id="bootx">BootX&lt;/h2>
+&lt;p>Older versions of Stuffit will only extract BootX 1.1.3 which I why I updated
+Stuffit Expander as explained earlier. Download BootX 1.2.2.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://penguinppc.org/bootloaders/bootx/">BootX&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Open it with Stuffit and extract it the the Desktop then open the resulting
+BootX 1.2.2 folder on the desktop. Drag each of the following&amp;hellip;&lt;/p>
+&lt;ul>
+&lt;li>BootX&lt;/li>
+&lt;li>BootX Extension&lt;/li>
+&lt;li>Linux Kernels&lt;/li>
+&lt;/ul>
+&lt;p>&amp;hellip;onto the &amp;ldquo;System Folder&amp;rdquo; one at a time to install BootX correctly. Insert the
+Ubuntu PPC install CD and navigate to the &lt;code>/install/powerpc&lt;/code> folder.&lt;/p>
+&lt;ul>
+&lt;li>Copy &lt;code>vmlinux&lt;/code> to (the Linux kernel) &lt;code>System Folder/Linux Kernels&lt;/code>&lt;/li>
+&lt;li>Copy &lt;code>initrd.gz&lt;/code> (the init ramdisk image) to &lt;code>System Folder/&lt;/code> and rename it to &lt;code>ramdisk.image.gz&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>BootX should appear on the apple menu and also run on every reboot during the
+boot process, meaning that you can choose to boot Linux without having to wait
+for the entire MacOS to load &lt;code>:-)&lt;/code> When you run BootX it should show &amp;lsquo;vmlinux&amp;rsquo;
+as an available kernel, now add the following to &amp;ldquo;More kernel arguments&amp;rdquo; to make
+sure the correct video mode is used for Linux.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>video=atyfb:vmode:14,cmode:32,mclk:71
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now click the &amp;ldquo;Options&amp;rdquo; button, check &amp;ldquo;Use Specified RAM disk&amp;rdquo; and select
+&lt;code>System Folder/ramdisk.image.gz&lt;/code>. Click on the &amp;ldquo;Save to prefs&amp;rdquo; button and then
+click on the &amp;ldquo;Linux&amp;rdquo; button and in a short while you should be looking at the
+regular Ubuntu install dialogs.&lt;/p>
+&lt;h3 id="other-video-mode-suggestions">Other Video Mode Suggestions&lt;/h3>
+&lt;p>I didn&amp;rsquo;t test these, but my understanding is the &amp;lsquo;cmode&amp;rsquo; choose the bit depth 8
+for 8bit, 16, for 16bit and so one. &amp;lsquo;mclk&amp;rsquo; controls the graphics/monitor refresh
+rate I think, I was lucky that I the video mode suggested in the BootX README
+worked first go.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>video=atyfb:vmode:14,cmode:32,mclk:65
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>video=atyfb:vmode:14,cmode:8,mclk:63
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="doing-the-ubuntu-installation">Doing the Ubuntu Installation&lt;/h2>
+&lt;p>The installer will display an error message that &amp;ldquo;Configure a multiseat system&amp;rdquo;
+failed. You can ignore this&amp;hellip;&lt;/p>
+&lt;ul>
+&lt;li>Select &amp;lsquo;Continue&amp;rsquo;&lt;/li>
+&lt;li>Select &amp;lsquo;Detect Hardware&amp;rsquo; and press Enter&lt;/li>
+&lt;/ul>
+&lt;p>&amp;hellip;and the install will continue normally.&lt;/p>
+&lt;h3 id="partitioning">Partitioning&lt;/h3>
+&lt;p>When it gets to partitioning the drive Ubuntu will suggest using the entire disk
+for Linux. Don&amp;rsquo;t do that because you still need MacOS to run BootX to bootstrap
+Linux. Select the &amp;ldquo;Use Free Space&amp;rdquo; option or partition manually.&lt;/p>
+&lt;h3 id="copying-boot-to-the-hfs-system-folder">Copying /boot to the HFS System Folder&lt;/h3>
+&lt;p>The rest of the install is fairly straight forward until you get to the part
+where Ubuntu tries to install a bootloader. GRUB and Lilo don&amp;rsquo;t work on OldWorld
+Macs, so Ubuntu will warn you that no bootloader can be installed. Switch to a
+second console at this point (Option-F2) and use &lt;code>df&lt;/code> to see where things are
+currently mounted. In my case the newly installed ubuntu was on &lt;code>/dev/hda8&lt;/code>
+mounted as &lt;code>/target&lt;/code> and the HFS filesystem was &lt;code>/dev/hda7&lt;/code>. Make a mountpoint
+and mount the HFS filesystem.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd /target
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkdir hfs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mount /dev/hda7 hfs -t hfs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You might also want to add an entry to &lt;code>/etc/fstab&lt;/code> so it will be mounted when
+you reboot. This makes updating kernels easier in the future.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#87ceeb">&amp;#39;/dev/hda7 /hfs hfs defaults&amp;#39;&lt;/span> &amp;gt;&amp;gt; etc/fstab
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now copy the kernel and boot image over;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cp boot/vmlinux hfs/System&lt;span style="color:#87ceeb">\ &lt;/span>Folder/Linux&lt;span style="color:#87ceeb">\ &lt;/span>Kernels/vmlinux
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cp boot/initrd.img hfs/System&lt;span style="color:#87ceeb">\ &lt;/span>Folder/ramdisk.image.gz
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Option-F1 to get back to the installer, and tell it to go ahead and reboot.&lt;/p>
+&lt;p>When the machine reboots the BootX dialog should come up straight away, just
+click &amp;ldquo;Linux&amp;rdquo; and Ubuntu should proceed through the rest of the install as usual.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://ubuntuforums.org/showthread.php?t=73689">http://ubuntuforums.org/showthread.php?t=73689&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://ubuntuforums.org/showthread.php?t=36431">http://ubuntuforums.org/showthread.php?t=36431&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.ubuntu.com/Installation/OldWorldMacs">https://wiki.ubuntu.com/Installation/OldWorldMacs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://penguinppc.org/">http://penguinppc.org/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://gonz.wordpress.com/2006/03/22/installing-ubuntu-510-breezy-badger-on-an-old-world-powerbook-g3-wallstreet/">http://gonz.wordpress.com/2006/03/22/installing-ubuntu-510-breezy-badger-on-an-old-world-powerbook-g3-wallstreet/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Installing Ubuntu on a PowerBook G3 for hack value</summary></item></channel></rss>

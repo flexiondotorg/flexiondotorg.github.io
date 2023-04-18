@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BloGTK on Wimpy's World</title><link>https://wimpysworld.com/tags/blogtk/</link><description>Recent content in BloGTK on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Fri, 11 Jan 2008 13:44:07 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/blogtk/rss.xml" rel="self" type="application/rss+xml"/><item><title>BloGTK, a weblog client for Linux</title><link>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</link><pubDate>Fri, 11 Jan 2008 13:44:07 +0000</pubDate><guid>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</guid><description>Graphical blogging client for GNOME</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BloGTK on Wimpy's World</title><link>https://wimpysworld.com/tags/blogtk/</link><description>Recent content in BloGTK on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Fri, 11 Jan 2008 13:44:07 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/blogtk/rss.xml" rel="self" type="application/rss+xml"/><item><title>BloGTK, a weblog client for Linux</title><link>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</link><pubDate>Fri, 11 Jan 2008 13:44:07 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/blogtk-a-weblog-client-for-linux/</guid><description>&lt;p>I have been meaning to setup a weblog client for a while now. I have tested a
+couple of blog clients and have settled on &lt;a href="http://blogtk.sourceforge.net/">BloGTK&lt;/a>.&lt;/p>
+&lt;p>It has a simple user interface but comprehensive features, although I did need
+to define a few Custom Tags before the editor supported all the formatting
+options I wanted. Setting up BloGTK is very simple for Ubuntu and Debain users
+requiring an &lt;code>aptitude install blogtk&lt;/code> to get it installed and the following
+settings will connect to a Wordpress blog.&lt;/p>
+&lt;ul>
+&lt;li>Server URL: &lt;code>http://blog.example.org/xmlrpc.php&lt;/code>&lt;/li>
+&lt;li>Account: &lt;em>Your Username&lt;/em>&lt;/li>
+&lt;li>Password: &lt;em>Your Password&lt;/em>&lt;/li>
+&lt;li>Blogging System: &lt;em>Moveable Type&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>Now I can blog directly from my desktop, I am hoping it will encourage me to
+post more often.&lt;/p></description><summary>Graphical blogging client for GNOME</summary></item></channel></rss>

@@ -1,1 +1,145 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MPEG-2 on Wimpy's World</title><link>https://wimpysworld.com/tags/mpeg-2/</link><description>Recent content in MPEG-2 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 20 Sep 2009 08:48:36 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/mpeg-2/rss.xml" rel="self" type="application/rss+xml"/><item><title>IMDB Film Summary as a MPEG-2 video, Part 2</title><link>https://wimpysworld.com/posts/imdb-film-summary-as-a-mpeg-2-video-part-2/</link><pubDate>Sun, 20 Sep 2009 08:48:36 +0000</pubDate><guid>https://wimpysworld.com/posts/imdb-film-summary-as-a-mpeg-2-video-part-2/</guid><description>Improvements to film summaries embedded in videos</description></item><item><title>M2VRequantiser for 32-bit and 64-bit Linux</title><link>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</link><pubDate>Thu, 23 Apr 2009 16:47:20 +0000</pubDate><guid>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</guid><description>Finding a MPEG-2 video requantising solution for Linux</description></item><item><title>Converting DVB-T to DVD Compliant MPEG-2</title><link>https://wimpysworld.com/posts/converting-dvb-t-to-dvd-compliant-mpeg-2/</link><pubDate>Thu, 22 Jan 2009 23:46:26 +0000</pubDate><guid>https://wimpysworld.com/posts/converting-dvb-t-to-dvd-compliant-mpeg-2/</guid><description>Export PlayTV recorded video from PlayStation 3</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MPEG-2 on Wimpy's World</title><link>https://wimpysworld.com/tags/mpeg-2/</link><description>Recent content in MPEG-2 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 20 Sep 2009 08:48:36 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/mpeg-2/rss.xml" rel="self" type="application/rss+xml"/><item><title>IMDB Film Summary as a MPEG-2 video, Part 2</title><link>https://wimpysworld.com/posts/imdb-film-summary-as-a-mpeg-2-video-part-2/</link><pubDate>Sun, 20 Sep 2009 08:48:36 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/imdb-film-summary-as-a-mpeg-2-video-part-2/</guid><description>&lt;p>&lt;strong>UPDATE! I no longer use or maintain the script below. I suggest the vastly
+superior &lt;a href="http://www.bunyipawonga.org/sheetmaker/index.php">Sheet Maker for Linux&lt;/a>&lt;/strong>.&lt;/p>
+&lt;p>Back in April I released a script to create a MPEG video summarising a movie
+using data from IMDB, you can find the original post in the URL below to learn
+why I created such a script in the first place.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="2009-04-imdb-film-summary-mpeg2-video.html">IMDB Film Summary as a MPEG-2 video&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Today I&amp;rsquo;ve released v2.0 of that script, which is almost a complete re-write
+mostly thanks to Eric at &lt;a href="http://yPass.net/">yPass.net&lt;/a> who contributed
+significantly. Thanks to Eric the script is much improved since version 1.0,
+here is a run down of what&amp;rsquo;s new.&lt;/p>
+&lt;h2 id="v20-2009-19th-september">v2.0 2009, 19th September.&lt;/h2>
+&lt;ul>
+&lt;li>Merged yet more contributions from Eric, &lt;a href="http://www.ypass.net">http://www.ypass.net&lt;/a>. Thanks Eric!&lt;/li>
+&lt;li>Added usage instructions.&lt;/li>
+&lt;li>Added categorisation by Certificate.&lt;/li>
+&lt;li>Added dynamic computation of video bitrate.&lt;/li>
+&lt;li>Added silent audio generation.&lt;/li>
+&lt;li>Added a shell script to reprocess an entire film store.&lt;/li>
+&lt;li>Re-added MPEG-2 video encoding.&lt;/li>
+&lt;li>Improved video encoding speed by removing pre-processing with &lt;code>jpeg2yuv&lt;/code>.&lt;/li>
+&lt;li>Fixed spiffy animations when cover art is not available.&lt;/li>
+&lt;li>Fixed spiffy animations on platforms that may have incomplete GD.&lt;/li>
+&lt;li>Modified filename input so that an input filename is optional rather than mandatory.&lt;/li>
+&lt;/ul>
+&lt;h2 id="v12-2009-17th-july">v1.2 2009, 17th July.&lt;/h2>
+&lt;ul>
+&lt;li>Merged extensive contributions from Eric, &lt;a href="http://www.ypass.net">http://www.ypass.net&lt;/a>. Thanks Eric!&lt;/li>
+&lt;li>Updated the README to reflect Eric&amp;rsquo;s changes.&lt;/li>
+&lt;li>MPEG-4 video encoding replaced MPEG-2 video encoding.&lt;/li>
+&lt;li>Never released to the public.&lt;/li>
+&lt;/ul>
+&lt;p>To download the script and find out how to make full use of it visit the
+release page below.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/IMDB-to-MPEG">IMDB-to-MPEG&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>As it stands the IMDB-to-MPEG script does what I require, so I will maintain it
+in it&amp;rsquo;s current form. However, Eric has been working on a new direction by
+adding support for NetFlix, creating a GUI with php-gtk and some other cool
+stuff. While Eric has shared the details with me, I simply don&amp;rsquo;t have the time
+to add all that good stuff to IMDB-to-MPEG, so if you like the sound of what
+Eric has been up to hop over to his site to find out more.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.ypass.net/blog/2009/07/netflix-has-a-developer-api/">Netflix Has a Developer API&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Improvements to film summaries embedded in videos</summary></item><item><title>M2VRequantiser for 32-bit and 64-bit Linux</title><link>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</link><pubDate>Thu, 23 Apr 2009 16:47:20 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</guid><description>&lt;p>I recently discovered that &lt;code>tcrequant&lt;/code> (part of the
+&lt;a href="http://http://www.transcoding.org/">transcode&lt;/a> suite of tools) has been
+deprecated. Worst still I found that when I ran &lt;code>tcrequant&lt;/code> on my 64-bit Linux
+workstation is was corrupting the video. See the links below for details.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://tcforge.berlios.de/archives/2009/01/18/transcode_1_1_0_final_release/index.html">transcode 1.1.0 Final Release&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.mail-archive.com/transcode-users@exit1.org/msg01773.html">[transcode-users] tcrequant status&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Therefore I decided to get the &lt;a href="http://www.metakine.com/products/dvdremaster/developers.html">M2VRequantiser&lt;/a>
+code from &lt;a href="http://www.metakine.com/">Metakine&lt;/a> working on both 32-bit and 64-bit
+Linux as a replacement for &lt;code>tcrequant&lt;/code>. M2VRequantiser accepts the raw MPEG2 video
+data (not VOB) from the standard input and writes the recompressed frames to
+the standard output. M2VRequantiser takes two arguments. The first one is a
+floating point value specifying the ratio of compression. The second is the
+size of the M2V, since the data is streamed to M2VRequantiser it cannot know
+the M2V size. The following command would recompress &amp;lsquo;original.m2v&amp;rsquo;, whose
+size is 1024000 bytes, by a factor of 1.25.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>M2VRequantiser 1.25 &lt;span style="color:#f60">1024000&lt;/span> &amp;lt; original.m2v &amp;gt; requantised.m2v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I&amp;rsquo;ve only tested on 32-bit and 64-bit Linux, specifically Ubuntu 8.10. It works
+for me but I&amp;rsquo;d be interested to get your feedback.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://code.launchpad.net/~flexiondotorg/m2vrequantiser/trunk">M2VRequantiser&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Finding a MPEG-2 video requantising solution for Linux</summary></item><item><title>Converting DVB-T to DVD Compliant MPEG-2</title><link>https://wimpysworld.com/posts/converting-dvb-t-to-dvd-compliant-mpeg-2/</link><pubDate>Thu, 22 Jan 2009 23:46:26 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/converting-dvb-t-to-dvd-compliant-mpeg-2/</guid><description>&lt;p>I am just about to clean up and convert another batch of programmes I have
+recorded from Freeview (DVB-T in the UK) so that I can add them to my
+DLNA Server. I thought I&amp;rsquo;d share the method I use on Ubuntu.&lt;/p>
+&lt;p>By clean up, I mean edit out any adverts and trim crap from the start and the
+end of the recordings. It just so happens that the result of this process is
+a DVD compliant MPEG-2 which is suitable for DVD authoring, or in my case,
+streaming around the house. This method of conversion should work for any DVB
+PVR which allows you to export recordings via USB and, of course,
+&lt;a href="http://www.mythtv.org/">MythTV&lt;/a> or similar.&lt;/p>
+&lt;h2 id="dvb-ripping">DVB Ripping&lt;/h2>
+&lt;p>I have a PlayTV add-on for the PlayStation 3 which enables me to record Freeview
+(DVB-T) broadcasts to the PS3 internal hard disk. I mostly use PlayTV to record
+films. To prevent the PlayStation 3 hard disk filling up with films I wanted to
+export, edit out any adverts and then serve the edited file from my DLNA server
+or author it to DVD.&lt;/p>
+&lt;p>This process does not re-encode the audio or video therefore it is fairly quick
+and the output is the same quality as the input.&lt;/p>
+&lt;p>Although I am using a PlayStation 3 as PVR and MPEG-2 TS (Transport Stream) file
+can be converted to a MPEG-2 PS (Program Stream) file using this process.&lt;/p>
+&lt;h2 id="export-from-playstation-3">Export from PlayStation 3&lt;/h2>
+&lt;h3 id="playtv-to-home-menu">PlayTV to Home Menu&lt;/h3>
+&lt;p>First we need to move the recording from the PlayTV Library to the PS3 Home Menu.
+Start PlayTV, open the Library, select the recording and choose the Move to Home
+Menu option.&lt;/p>
+&lt;h3 id="copy-from-home-menu-to-external-usb">Copy from Home Menu to External USB&lt;/h3>
+&lt;ul>
+&lt;li>Quit PlayTV&lt;/li>
+&lt;li>Plug in an external (FAT32 formatted) USB drive to the PS3.&lt;/li>
+&lt;li>Go to Video on the PS3 Home Menu and select the recording you moved there earlier.&lt;/li>
+&lt;li>Select Copy from the Options screen and choose the external USB drive as the target.&lt;/li>
+&lt;/ul>
+&lt;h2 id="clean-mpeg-2-ts-and-convert-to-mpeg-2-ps">Clean MPEG-2 TS and convert to MPEG-2 PS&lt;/h2>
+&lt;p>Plug the USB drive into your Ubuntu workstation and copy the &lt;code>.m2ts&lt;/code> file to your
+hard disk.&lt;/p>
+&lt;p>You will need to &lt;a href="http://project-x.sourceforge.net/">Project X&lt;/a> to clean the
+MPEG-2 TS and convert it to MPEG-2 PS.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install project-x
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="edit-out-the-adverts">Edit out the adverts&lt;/h2>
+&lt;p>Start the Project X GUI and load your &lt;code>.m2ts&lt;/code> file.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>File -&amp;gt; Add&lt;/code> and select your .m2ts file.&lt;/li>
+&lt;/ul>
+&lt;p>Now use Project X to add cut points to edit out any adverts.&lt;/p>
+&lt;h2 id="de-multiplex-the-audio-and-video">De-multiplex the audio and video&lt;/h2>
+&lt;p>When you have completed your edits you need to &amp;lsquo;demux&amp;rsquo; the &lt;code>.m2ts&lt;/code> file into two
+streams, one holding the audio (.mp2) and one holding the video (.m2v).&lt;/p>
+&lt;ul>
+&lt;li>Click the &lt;code>Prepare &amp;gt;&amp;gt;&lt;/code> button.&lt;/li>
+&lt;li>From the &lt;code>Process Window&lt;/code> select the &lt;code>Action&lt;/code> type &lt;code>to M2P&lt;/code>&lt;/li>
+&lt;li>Click the start button and wait for the processing to finish.&lt;/li>
+&lt;li>Clock the &amp;lsquo;&amp;lsquo;Process Windows&amp;rsquo;&amp;rsquo; and quit Project X.&lt;/li>
+&lt;/ul>
+&lt;h2 id="re-multiplex-the-audio-and-video">Re-multiplex the audio and video&lt;/h2>
+&lt;p>The reason for the de-mux and then re-musing it to ensure the timecodes are
+correct, other the video will not playback correctly.&lt;/p>
+&lt;p>Install MJPEG tools.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install mjpegtools
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now we need to re-multiplex the audio and video to create a DVD compliant MPEG-2 PS file.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mplex -f &lt;span style="color:#f60">8&lt;/span> -o muxed-%d.mpg audio.mp2 video.m2v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>-f 8&lt;/code> option specifies a dvd-compliant stream that is compatible with dvdauthor.
+The &lt;code>-o&lt;/code> option specifies the outfile, you can substitute &lt;code>muxed-%d.mpg&lt;/code> with a
+more descriptive name if you like. &lt;code>%d&lt;/code> is expanded to a number if &lt;code>mplex&lt;/code> decides
+to split the output to several files, this usually happens when the recording
+contains commercials and is nothing to worry about.&lt;/p>
+&lt;h2 id="author-dvd">Author DVD&lt;/h2>
+&lt;p>The MPEG-2 PS file that has been created should be suitable for DVD authoring
+using DeVeDe. When adding MPEG-2 PS files created using the method above open
+the DeVeDe &lt;code>Advanced options&lt;/code> and select &lt;em>This file is already a DVD/xCD-suitable
+MPEG-PS file&lt;/em> in the &lt;code>Misc&lt;/code> menu.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://project-x.sourceforge.net/">http://project-x.sourceforge.net/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://ttcut.tritime.de/index.2.html">http://ttcut.tritime.de/index.2.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://gopchop.org/index.php">http://gopchop.org/index.php&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://gopchop.sourceforge.net/">http://gopchop.sourceforge.net/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.rastersoft.com/programas/devede.html">http://www.rastersoft.com/programas/devede.html&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Export PlayTV recorded video from PlayStation 3</summary></item></channel></rss>

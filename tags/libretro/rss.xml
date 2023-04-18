@@ -1,1 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>libretro on Wimpy's World</title><link>https://wimpysworld.com/tags/libretro/</link><description>Recent content in libretro on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/libretro/rss.xml" rel="self" type="application/rss+xml"/><item><title>Retro Home</title><link>https://wimpysworld.com/projects/retro-home/</link><pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/retro-home/</guid><description>A retro-gaming operating system for Raspberry Pi built with Ubuntu and Ludo</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>libretro on Wimpy's World</title><link>https://wimpysworld.com/tags/libretro/</link><description>Recent content in libretro on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/libretro/rss.xml" rel="self" type="application/rss+xml"/><item><title>Retro Home</title><link>https://wimpysworld.com/projects/retro-home/</link><pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/retro-home/</guid><description>&lt;p>&lt;a href="https://github.com/wimpysworld/retro-home">Retro Home&lt;/a> is custom Raspberry Pi
+operating system purpose built for retro gaming. Built with
+&lt;a href="https://ubuntu.com/">Ubuntu&lt;/a> and using the minimalist emulator frontend
+&lt;a href="https://ludo.libretro.com/">Ludo&lt;/a> it supports most classic consoles from Atari,
+Nintendo, Sega and SNK along with arcade emulation support. A number of retro
+styled Raspberry Pi cases from &lt;a href="https://retroflag.com/">Retroflag&lt;/a> and
+&lt;a href="https://www.waveshare.com/product/raspberry-pi/portable-gaming.htm">Waveshare&lt;/a>
+are supported (with more in the works) using bespoke GPIO drivers.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://github.com/wimpysworld/retro-home">Retro Home&lt;/a>&lt;/li>
+&lt;li>Date: July 2020 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>A retro-gaming operating system for Raspberry Pi built with Ubuntu and Ludo</summary></item></channel></rss>

@@ -1,1 +1,271 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Raspberry Pi on Wimpy's World</title><link>https://wimpysworld.com/tags/raspberry-pi/</link><description>Recent content in Raspberry Pi on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/raspberry-pi/rss.xml" rel="self" type="application/rss+xml"/><item><title>Retro Home</title><link>https://wimpysworld.com/projects/retro-home/</link><pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/retro-home/</guid><description>A retro-gaming operating system for Raspberry Pi built with Ubuntu and Ludo</description></item><item><title>DIY SNES Classic</title><link>https://wimpysworld.com/posts/diy-snes-classic/</link><pubDate>Tue, 24 Jan 2017 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/diy-snes-classic/</guid><description>I made my own &amp;ldquo;SNES Classic&amp;rdquo; with a Raspberry Pi</description></item><item><title>Raspberry Pi 3 Nextcloud Box running on Ubuntu Core</title><link>https://wimpysworld.com/posts/raspberry-pi-3-nextcloud-box-running-on-ubuntu-core/</link><pubDate>Tue, 13 Dec 2016 17:17:00 +0000</pubDate><guid>https://wimpysworld.com/posts/raspberry-pi-3-nextcloud-box-running-on-ubuntu-core/</guid><description>Creating a Pi 3 powered Nextcloud Box with Ubuntu Core</description></item><item><title>Ubuntu MATE</title><link>https://wimpysworld.com/projects/ubuntu-mate/</link><pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu-mate/</guid><description>Ubuntu MATE is a Linux distribution I made for my friends and family</description></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>From community contributor to director of engineering and back again</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Raspberry Pi on Wimpy's World</title><link>https://wimpysworld.com/tags/raspberry-pi/</link><description>Recent content in Raspberry Pi on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/raspberry-pi/rss.xml" rel="self" type="application/rss+xml"/><item><title>Retro Home</title><link>https://wimpysworld.com/projects/retro-home/</link><pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/retro-home/</guid><description>&lt;p>&lt;a href="https://github.com/wimpysworld/retro-home">Retro Home&lt;/a> is custom Raspberry Pi
+operating system purpose built for retro gaming. Built with
+&lt;a href="https://ubuntu.com/">Ubuntu&lt;/a> and using the minimalist emulator frontend
+&lt;a href="https://ludo.libretro.com/">Ludo&lt;/a> it supports most classic consoles from Atari,
+Nintendo, Sega and SNK along with arcade emulation support. A number of retro
+styled Raspberry Pi cases from &lt;a href="https://retroflag.com/">Retroflag&lt;/a> and
+&lt;a href="https://www.waveshare.com/product/raspberry-pi/portable-gaming.htm">Waveshare&lt;/a>
+are supported (with more in the works) using bespoke GPIO drivers.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://github.com/wimpysworld/retro-home">Retro Home&lt;/a>&lt;/li>
+&lt;li>Date: July 2020 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>A retro-gaming operating system for Raspberry Pi built with Ubuntu and Ludo</summary></item><item><title>DIY SNES Classic</title><link>https://wimpysworld.com/posts/diy-snes-classic/</link><pubDate>Tue, 24 Jan 2017 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/diy-snes-classic/</guid><description>&lt;p>Inspired by the recent &lt;a href="http://www.nintendo.com/nes-classic/">NES Classic&lt;/a> I
+made a &lt;strong>DIY SNES Classic&lt;/strong> just in time for the Christmas holidays and it&amp;rsquo;s
+very portable!&lt;/p>
+&lt;p class="text-center">
+&lt;img src="diy-homemade-snes-classic-raspberrypi.webp" class="img-fluid" alt="Raspberry Pi 3 in a 3D printed SNES case with 8Bitdo SNES30 controllers"/>
+&lt;br />
+&lt;em>Raspberry Pi 3 in a 3D printed SNES case with 8Bitdo SNES30 controllers&lt;/em>
+&lt;/p>
+&lt;p>To make one yourself you&amp;rsquo;ll need:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3 Model B&lt;/a>.&lt;/li>
+&lt;li>&lt;a href="https://retropie.org.uk/">Retropie 4.1&lt;/a> or newer.&lt;/li>
+&lt;li>Two &lt;a href="http://www.8bitdo.com/snes30/">8Bitdo SNES30 wireless controllers&lt;/a>.&lt;/li>
+&lt;li>A &lt;a href="https://www.etsy.com/uk/listing/485061145/snes-3d-printed-case-raspberry-pi">SNES 3D Printed case&lt;/a>.&lt;/li>
+&lt;li>&lt;a href="https://github.com/biscuits99/rp-video-manager">CRT scanline shaders&lt;/a> to complete the retro look on the big screen.&lt;/li>
+&lt;/ul>
+&lt;p>Both controllers use Bluetooth, so two player wire-free gaming is possible. The
+USB cables are just for charging, but if you&amp;rsquo;ve got no charge they can be used
+as wired controllers too. Retropie can be controlled via the controllers, no
+keyboard/mouse required.&lt;/p></description><summary>I made my own &amp;ldquo;SNES Classic&amp;rdquo; with a Raspberry Pi</summary></item><item><title>Raspberry Pi 3 Nextcloud Box running on Ubuntu Core</title><link>https://wimpysworld.com/posts/raspberry-pi-3-nextcloud-box-running-on-ubuntu-core/</link><pubDate>Tue, 13 Dec 2016 17:17:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/raspberry-pi-3-nextcloud-box-running-on-ubuntu-core/</guid><description>&lt;p>I recently bought the &lt;a href="https://nextcloud.com/box/">Nextcloud Box&lt;/a>. When
+it came to setting it up I ran into a problem, I only had Raspberry Pi 3
+computers available and at the time of writing the microSDHC card
+provided with the Nextcloud Box only supports the Raspberry Pi 2. &lt;em>Bummer!&lt;/em>&lt;/p>
+&lt;h1 id="overview">Overview&lt;/h1>
+&lt;p>This guide outlines how to use &lt;a href="https://www.ubuntu.com/core">Ubuntu Core&lt;/a>
+on the &lt;a href="https://www.raspberrypi.org/">Raspberry Pi 3&lt;/a> to run &lt;a href="https://nextcloud.com/">Nextcloud&lt;/a>
+provided as a &lt;a href="http://snapcraft.io">snap&lt;/a> from the Ubuntu store.&lt;/p>
+&lt;p>If you&amp;rsquo;re not familiar with Ubuntu Core, here&amp;rsquo;s a quote:&lt;/p>
+&lt;blockquote>
+&lt;p>Ubuntu Core is a tiny, transactional version of Ubuntu for IoT devices and large container deployments. It runs a new breed of super-secure, remotely upgradeable Linux app packages known as snaps&lt;/p>
+&lt;/blockquote>
+&lt;p>After following this guide Ubuntu Core and any installed snaps (and
+their data) will reside on the SD card and the 1TB hard disk in the
+Nextcloud box will be available for file storage. This
+guide explains how to:&lt;/p>
+&lt;ul>
+&lt;li>Install and configure Ubuntu Core 16 for the Raspberry Pi 3&lt;/li>
+&lt;li>Format the 1TB hard disk in the Nextcloud Box and auto-mount it&lt;/li>
+&lt;li>Install the Nextcloud snap and connect the &lt;code>removable-media&lt;/code> interface to allow access to the hard disk&lt;/li>
+&lt;li>Activate and configure the Nextcloud &lt;em>External Storage&lt;/em> app so the hard disk can be used to store files&lt;/li>
+&lt;li>Optional configuration of Email and HTTPS for Nextcloud&lt;/li>
+&lt;/ul>
+&lt;h2 id="prepare-a-microsdhc-card">Prepare a microSDHC card&lt;/h2>
+&lt;p>I explained the main steps in this post but you &lt;em>really should&lt;/em> read and
+follow the &lt;a href="https://developer.ubuntu.com/en/snappy/start/raspberry-pi-2/">Get started with a Raspberry Pi 2 or 3&lt;/a>
+page as it fully explains how to use a desktop computer to download an
+Ubuntu Core image for your Raspberry Pi 2 or 3 and copy it to an SD card
+ready to boot.&lt;/p>
+&lt;p>Here&amp;rsquo;s how to create an Ubuntu Core microSDHC card for the Raspberry Pi
+3 using an Ubuntu desktop:&lt;/p>
+&lt;ul>
+&lt;li>Download &lt;a href="http://releases.ubuntu.com/ubuntu-core/16/ubuntu-core-16-pi3.img.xz">Ubuntu Core 16 image for Raspberry Pi 3&lt;/a>&lt;/li>
+&lt;li>Insert the microSDHC card into your PC
+&lt;ul>
+&lt;li>Use &lt;a href="apt://gnome-disk-utility">GNOME Disks&lt;/a> and its &lt;em>Restore Disk Image&amp;hellip;&lt;/em> option, which &lt;strong>natively supports XZ compressed images.&lt;/strong>&lt;/li>
+&lt;li>Select your SD card from the panel on the left&lt;/li>
+&lt;li>Click the &amp;ldquo;burger menu&amp;rdquo; on the right and Select &lt;em>Restore Disk Image&amp;hellip;&lt;/em>&lt;/li>
+&lt;li>Making sure the SD card is still selected, click the Power icon on the right.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Eject the SD card physically from your PC.&lt;/li>
+&lt;/ul>
+&lt;div class="text-center">&lt;img src="GNOME-Disks-Restore-Disk-Image.png" class="img-fluid" alt="GNOME Disks - Restore Disk Image" />&lt;/div>
+&lt;h2 id="ubuntu-core-first-boot">Ubuntu Core first boot&lt;/h2>
+&lt;p>An Ubuntu SSO account is required to setup the first user on Ubuntu Core:&lt;/p>
+&lt;ul>
+&lt;li>Start by creating an &lt;a href="https://login.ubuntu.com/">Ubuntu SSO account&lt;/a>&lt;/li>
+&lt;li>Import an &lt;a href="https://login.ubuntu.com/ssh-keys">SSH Key into your Ubuntu SSO account&lt;/a>
+&lt;ul>
+&lt;li>Here are &lt;a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys">instructions to generate an SSH Key&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>You&amp;rsquo;ll need a keyboard and monitor connected to the Raspberry Pi 3 to go complete the first boot process and device configuration.&lt;/li>
+&lt;/ul>
+&lt;p>Insert the Ubuntu Core microSHDC into the Raspberry Pi, which should be
+in the &lt;a href="https://nextcloud.com/wp-content/themes/next/assets/files/Box-Assembly-Guide.pdf?x16328">assembled Nextcloud Box&lt;/a>
+with a keyboard and monitor connected. Plug in the power.&lt;/p>
+&lt;ul>
+&lt;li>The system will boot then become ready to configure&lt;/li>
+&lt;li>The device will display the prompt &lt;em>&amp;ldquo;Press enter to configure&amp;rdquo;&lt;/em>&lt;/li>
+&lt;li>Press enter then select &lt;em>&amp;ldquo;Start&amp;rdquo;&lt;/em> to begin configuring your network and an administrator account. Follow the instructions on the screen, you will be asked to configure your network and enter your Ubuntu SSO credentials&lt;/li>
+&lt;li>At the end of the process, you will see your credentials to access your Ubuntu Core machine:&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>This device is registered to &amp;lt;Ubuntu SSO email address&amp;gt;.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Remote access was enabled via authentication with the SSO user &amp;lt;Ubuntu SSO user name&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Public SSH keys were added to the device for remote access.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="login">Login&lt;/h3>
+&lt;p>Once setup is done, you can login to Ubuntu Core using ssh, from a
+computer on the same network, using the following command:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ssh &amp;lt;Ubuntu SSO user name&amp;gt;@&amp;lt;device IP address&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The user name is your Ubuntu SSO user name.&lt;/p>
+&lt;h3 id="reconfiguring-network">Reconfiguring network&lt;/h3>
+&lt;p>Should you need to reconfigure the network at a later stage you can do
+so with:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo console-conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="prepare-1tb-hard-disk">Prepare 1TB hard disk&lt;/h2>
+&lt;p>Log in to your Raspberry Pi 3 running Ubuntu Core via ssh.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ssh &amp;lt;Ubuntu SSO user name&amp;gt;@&amp;lt;device IP address&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="partition-and-format-the-nextcloud-box-hard-disk">Partition and format the Nextcloud Box hard disk&lt;/h3>
+&lt;p>This will create a single partition formatted with the ext4 filesystem.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo fdisk /dev/sda
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Do the following to create the partition:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Command (m for help): o
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Created a new DOS disklabel with disk identifier 0x253fea38.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Command (m for help): n
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Partition type
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> p primary (0 primary, 0 extended, 4 free)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> e extended (container for logical partitions)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Select (default p): p
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Partition number (1-4, default 1): 1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>First sector (2048-1953458175, default 2048):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Last sector, +sectors or +size{K,M,G,T,P} (2048-1953458175, default 1953458175):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Created a new partition 1 of type &amp;#39;Linux&amp;#39; and of size 931.5 GiB.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Command (m for help): w
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now format the partition and give it the label &lt;strong>data&lt;/strong>. This label will
+be used to reference it for mounting later:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo mkfs.ext4 -L data /dev/sda1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="automatically-mount-the-partition">Automatically mount the partition&lt;/h3>
+&lt;p>Most of the Ubuntu Core root file system is read-only, so it is not
+possible to edit &lt;code>/etc/fstab&lt;/code>. Therefore we&amp;rsquo;ll use &lt;a href="https://www.freedesktop.org/wiki/Software/systemd/">systemd&lt;/a>
+to achieve that.&lt;/p>
+&lt;p>Be aware of one of the &lt;code>systemd.mount&lt;/code> pitfalls:&lt;/p>
+&lt;blockquote>
+&lt;p>Mount units must be named after the mount point directories they control. Example: the mount point /home/lennart must be configured in a unit file home-lennart.mount.&lt;/p>
+&lt;/blockquote>
+&lt;p>Yes that&amp;rsquo;s right! &lt;strong>The unit filename must match the mount point path&lt;/strong>.&lt;/p>
+&lt;p>Create the &lt;code>media-data.mount&lt;/code> unit:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo vi /writable/system-data/etc/systemd/system/media-data.mount
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following content:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-systemd" data-lang="systemd">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Unit]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Description=&lt;span style="color:#87ceeb">Mount unit for data&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Mount]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>What=&lt;span style="color:#87ceeb">/dev/disk/by-label/data&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Where=&lt;span style="color:#87ceeb">/media/data&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Type=&lt;span style="color:#87ceeb">ext4&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Install]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>WantedBy=&lt;span style="color:#87ceeb">multi-user.target&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Reload systemd, scanning for new or changed units:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl daemon-reload
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the &lt;code>media-data.mount&lt;/code> unit, which will mount the volume, and also
+enable it so it will be automatically mounted on boot.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl start media-data.mount
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl enable media-data.mount
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>And just like any other unit, you can view its status using
+&lt;code>systemctl status&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl status media-data.mount
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="update-ubuntu-core">Update Ubuntu Core&lt;/h2>
+&lt;p>Make sure Ubuntu Core is up-to-date and reboot.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo snap refresh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo reboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After the reboot, make sure &lt;code>/media/data&lt;/code> is mounted. If not double
+check the steps above.&lt;/p>
+&lt;h2 id="install-nextcloud">Install Nextcloud&lt;/h2>
+&lt;p>The Nextcloud snap uses the &lt;code>removable-media&lt;/code> interface, which grants
+access to &lt;code>/media/*&lt;/code>, and requires manual connection:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo snap install nextcloud
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo snap connect nextcloud:removable-media core:removable-media
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Browse to the Nextcloud IP address and create the admin user account,
+for example:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://nextcloud.local/">http://nextcloud.local/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="nextcloud-configuration">Nextcloud configuration&lt;/h2>
+&lt;p>In the examples below replace &lt;code>nextcloud.local&lt;/code> with the IP address or
+hostname of your Nextcloud Box and replace &lt;code>example.org&lt;/code> with your domain.&lt;/p>
+&lt;h3 id="external-storage">External Storage&lt;/h3>
+&lt;p>Enable the External Storge app via:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://nextcloud.local/index.php/settings/apps?category=disabled#">http://nextcloud.local/index.php/settings/apps?category=disabled#&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Configure External Storage app via:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://nextcloud.local/index.php/settings/admin/externalstorages">http://nextcloud.local/index.php/settings/admin/externalstorages&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Use these settings:&lt;/p>
+&lt;ul>
+&lt;li>Folder name: &lt;em>data&lt;/em>&lt;/li>
+&lt;li>External storage: &lt;em>Local&lt;/em>&lt;/li>
+&lt;li>Authentication: &lt;em>None&lt;/em>&lt;/li>
+&lt;li>Configuration: &lt;code>/media/data&lt;/code>&lt;/li>
+&lt;li>Available for: &lt;em>All&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h3 id="email">Email&lt;/h3>
+&lt;p>Configure your outgoing email settings via:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://nextcloud.local/index.php/settings/admin/additional">http://nextcloud.local/index.php/settings/admin/additional&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>I use &lt;a href="https://sendgrid.com/">Sendgrid&lt;/a> for sending email alerts from my
+servers and devices. These are the settings that work for me:&lt;/p>
+&lt;ul>
+&lt;li>Send mode: &lt;em>SMTP&lt;/em>&lt;/li>
+&lt;li>Encryption: &lt;em>STARTTLS&lt;/em>&lt;/li>
+&lt;li>From address: &lt;em>&lt;a href="mailto:nextcloud@example.org">nextcloud@example.org&lt;/a>&lt;/em>&lt;/li>
+&lt;li>Authentication method: &lt;em>Plain&lt;/em>&lt;/li>
+&lt;li>Authentication required: &lt;em>Yes&lt;/em>&lt;/li>
+&lt;li>Server address: &lt;em>smtp.sendgrid.net:587&lt;/em>&lt;/li>
+&lt;li>Username: &lt;code>apikey&lt;/code>&lt;/li>
+&lt;li>Password: &lt;code>theactualapikey&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="enabling-https">Enabling HTTPS&lt;/h3>
+&lt;p>It is strongly recommend that you use HTTPS if you intend to expose your
+Nextcloud to the Internet.&lt;/p>
+&lt;p>First do a test to see if you can install a Let&amp;rsquo;s Encrypt certificate:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nextcloud.enable-https -d
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Answer the questions:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Have you met these requirements? (y/n) y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Please enter an email address (for urgent notices or key recovery): name@example.org
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Please enter your domain name(s) (space-separated): nextcloud.example.org
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Attempting to obtain certificates... done
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Looks like you&amp;#39;re ready for HTTPS!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If everything went well, then install the certificate&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nextcloud.enable-https
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Answer the questions again:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Have you met these requirements? (y/n) y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Please enter an email address (for urgent notices or key recovery): name@example.org
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Please enter your domain name(s) (space-separated): nextcloud.example.org
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Attempting to obtain certificates... done
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Restarting apache... done
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If Let&amp;rsquo;s Encrypt didn&amp;rsquo;t work for you, you can always use Nextcloud with
+a self-signed certificate.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nextcloud.enable-https -s
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="manual-configuration-changes">Manual configuration changes&lt;/h3>
+&lt;p>If you need to make any tweaks to the Nextcloud configuration file you
+can edit it like so:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo vi /var/snap/nextcloud/current/nextcloud/config/config.php
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you have manually edited the Nextcloud configuration you may need to
+restart nextcloud:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo snap disable nextcloud
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo snap enable nextcloud
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>So there it is, Nextcloud running on Ubuntu Core powered by a Raspberry
+Pi 3. The performance is reasonable, obviously not stellar, but certainly
+good enough to move some cloud services for a small family away from the
+likes of Google and Dropbox. Now go and install some
+&lt;a href="https://nextcloud.com/install/#install-clients">Nextcloud clients for your desktops and devices&lt;/a> :-)&lt;/p></description><summary>Creating a Pi 3 powered Nextcloud Box with Ubuntu Core</summary></item><item><title>Ubuntu MATE</title><link>https://wimpysworld.com/projects/ubuntu-mate/</link><pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu-mate/</guid><description>&lt;p>A community developed Ubuntu based operating system that beautifully integrates
+the &lt;a href="https://mate-desktop.org">MATE desktop&lt;/a>. Ubuntu MATE is a stable,
+easy-to-use operating system with a configurable desktop environment and is
+suitable for modern workstations, laptops, single board computers and older
+hardware alike.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntu-mate.org">Ubuntu MATE Project&lt;/a>&lt;/li>
+&lt;li>Date: June 2014 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>Ubuntu MATE is a Linux distribution I made for my friends and family</summary></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>&lt;p>Ubuntu comes with everything you need to run your organisation, school, home or
+enterprise. All the essential applications, like an office suite, browsers,
+email and media apps come pre-installed.&lt;/p>
+&lt;p>Community contributor since 2006, worked for Canonical from 2016 to 2021
+progressing from software engineer to director of engineering. I remain active
+in the Ubuntu community.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntu-mate.org">Ubuntu Project&lt;/a> &amp;amp; &lt;a href="https://canonical.com">Canonical&lt;/a>&lt;/li>
+&lt;li>Date: January 2006 - date&lt;/li>
+&lt;li>Role: Community contributor&lt;/li>
+&lt;/ul></description><summary>From community contributor to director of engineering and back again</summary></item></channel></rss>

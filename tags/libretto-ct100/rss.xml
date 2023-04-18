@@ -1,1 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Libretto CT100 on Wimpy's World</title><link>https://wimpysworld.com/tags/libretto-ct100/</link><description>Recent content in Libretto CT100 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 12 Sep 2005 10:27:05 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/libretto-ct100/rss.xml" rel="self" type="application/rss+xml"/><item><title>Handheld Linux</title><link>https://wimpysworld.com/posts/handheld-linux/</link><pubDate>Mon, 12 Sep 2005 10:27:05 +0000</pubDate><guid>https://wimpysworld.com/posts/handheld-linux/</guid><description>Craving a handheld Linux device</description></item><item><title>Debian 3.1 on Libretto CT100</title><link>https://wimpysworld.com/posts/debian-3.1-on-libretto-ct100/</link><pubDate>Fri, 09 Sep 2005 10:26:14 +0000</pubDate><guid>https://wimpysworld.com/posts/debian-3.1-on-libretto-ct100/</guid><description>Running Xfce &amp;amp; Firefox on the Toshiba Libretto CT100</description></item><item><title>Server crash! But I have the perfect replacement</title><link>https://wimpysworld.com/posts/server-crash-but-i-have-the-perfect-replacement/</link><pubDate>Fri, 09 Sep 2005 10:18:22 +0000</pubDate><guid>https://wimpysworld.com/posts/server-crash-but-i-have-the-perfect-replacement/</guid><description>Running a Linux server on a Libretto CT100</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Libretto CT100 on Wimpy's World</title><link>https://wimpysworld.com/tags/libretto-ct100/</link><description>Recent content in Libretto CT100 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 12 Sep 2005 10:27:05 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/libretto-ct100/rss.xml" rel="self" type="application/rss+xml"/><item><title>Handheld Linux</title><link>https://wimpysworld.com/posts/handheld-linux/</link><pubDate>Mon, 12 Sep 2005 10:27:05 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/handheld-linux/</guid><description>&lt;p>I have replaced the disk in my Libretto CT100 with a 20GB disk I had going
+spare and re-installed Debian Sarge 3.1, this time I didn&amp;rsquo;t bother with the
+2.6 kernel or Xfce because I&amp;rsquo;ve had my fun with those now. But playing
+around with Linux on my Libretto has re-kindled my interested in running Linux
+on small portable devices.&lt;/p>
+&lt;p>Earlier this year I experimented with &lt;a href="http://familiar.handhelds.org/">Familiar Linux&lt;/a>
+0.8.2 on my iPAQ 3970 and installed via a serial cable, which was very slow
+going. So I&amp;rsquo;ve invested in a 512MB Compact Flash card to speed up my next
+round of tinkering with Familiar but this time I intend to leave Familiar
+installed and not re-flash the 3970 with PocketPC 2002. The
+&lt;a href="http://familiar.handhelds.org/releases/v0.8.2/install/index.html">Familiar v0.8.2 Installation&lt;/a>
+guide covers pretty much everything you need to know about the installation
+process.&lt;/p></description><summary>Craving a handheld Linux device</summary></item><item><title>Debian 3.1 on Libretto CT100</title><link>https://wimpysworld.com/posts/debian-3.1-on-libretto-ct100/</link><pubDate>Fri, 09 Sep 2005 10:26:14 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/debian-3.1-on-libretto-ct100/</guid><description>&lt;p>I decided to stick with the 2.1GB hard disk in the end, but in order to
+complete the initial install I fitted it in an old IBM Thinkpad 600X. This
+allowed me to boot off the Debian 3.1 Net Install CD and get a basic system
+installed. Once that was done I fitted the hard disk back in the Libretto and
+installed the essential bits and pieces I needed. I am feeling a lot of love
+for &lt;code>apt-get&lt;/code> today.&lt;/p>
+&lt;p>Then I got carried away. I upgraded to the 2.6 kernel, installed X and
+Xfce 4.2.2. Then I migrated to the testing repositories, the upgrade for which
+has finished a few minutes ago. I found Quentin Stafford-Fraser&amp;rsquo;s
+&lt;a href="http://www.qandr.org/quentin/libretto/">Linux on the Libretto 100CT&lt;/a> page very
+helpful in finding the right Modeline settings to get X going. I don&amp;rsquo;t really
+need Xfce on the Libretto but I couldn&amp;rsquo;t resist getting it running. Despite the
+low spec processor and just 64MB of RAM it runs very well, even Firefox is
+usable. I might have to bring this box along to the next HantsLUG meeting.&lt;/p></description><summary>Running Xfce &amp;amp; Firefox on the Toshiba Libretto CT100</summary></item><item><title>Server crash! But I have the perfect replacement</title><link>https://wimpysworld.com/posts/server-crash-but-i-have-the-perfect-replacement/</link><pubDate>Fri, 09 Sep 2005 10:18:22 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/server-crash-but-i-have-the-perfect-replacement/</guid><description>&lt;p>The CPU fan on my home server stopped spinning, which has rendered the computer
+unusable until I find the time to replace it. I have my workstation, so I can
+keep working for the most part, but the services I was running on the server
+are critical so I need a server replacement ASAP. I have decided to setup a
+dedicated server for those services.&lt;/p>
+&lt;p>I always knew my Libretto CT100 would come in handy someday. With 64MB RAM
+and a Pentium 166mhz MMX CPU I think it will make an excellent server. Although
+I may upgrade the hard disk from 2.1GB to 20GB. I am undecided which distro I&amp;rsquo;ll
+install, probably Ubuntu 5.10 or Debian 3.1, but because the Libretto CT100
+has weird hardware this install is not straight forward. The following web pages
+seem to be the most useful to me right now:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.geocities.com/davissharonforest/">Installing Debian Linux 3.1 Sarge on Toshiba Libretto 50&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.redgrittybrick.org/linux/libretto.html">Installing RedHat Linux on a Toshiba Libretto 100CT&lt;/a>
+&lt;ul>
+&lt;li>Has good background information on the hardware and hibernation partition&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>There are several other installs documented on the &lt;a href="http://www.linux-on-laptops.com/toshiba.html">Linux on Toshiba Laptop and Notebook Computers&lt;/a> page.&lt;/p></description><summary>Running a Linux server on a Libretto CT100</summary></item></channel></rss>

@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Amazon on Wimpy's World</title><link>https://wimpysworld.com/tags/amazon/</link><description>Recent content in Amazon on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 16 Dec 2009 22:30:48 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/amazon/rss.xml" rel="self" type="application/rss+xml"/><item><title>Amazon Loves Linux Music Lovers</title><link>https://wimpysworld.com/posts/amazon-loves-linux-music-lovers/</link><pubDate>Wed, 16 Dec 2009 22:30:48 +0000</pubDate><guid>https://wimpysworld.com/posts/amazon-loves-linux-music-lovers/</guid><description>Amazon treats Linux users like 1st class citizens</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Amazon on Wimpy's World</title><link>https://wimpysworld.com/tags/amazon/</link><description>Recent content in Amazon on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 16 Dec 2009 22:30:48 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/amazon/rss.xml" rel="self" type="application/rss+xml"/><item><title>Amazon Loves Linux Music Lovers</title><link>https://wimpysworld.com/posts/amazon-loves-linux-music-lovers/</link><pubDate>Wed, 16 Dec 2009 22:30:48 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/amazon-loves-linux-music-lovers/</guid><description>&lt;p>I&amp;rsquo;ve no idea when Amazon.co.uk launched their MP3 store and I&amp;rsquo;ve no idea when
+they released their Linux client for downloading the MP3s you purchased. I
+don&amp;rsquo;t care, I just want to say I&amp;rsquo;m really impressed Amazon have considered us
+Linux users. Well done Amazon!&lt;/p>
+&lt;p>Not only that but the MP3s are DRM free, encoded using variable bit rates aiming
+at an average of 256 kilobits per second (kbps), album cover art is included with
+each song and the tracks are typically cheaper than iTunes. Well done again.&lt;/p>
+&lt;p>Doubtless some would want an Open Source client and unencumbered formats such as
+Ogg and FLAC, but I&amp;rsquo;m pretty happy with what Amazon have on offer so long as it
+works. Which it does.&lt;/p>
+&lt;p>However, the Linux MP3 downloader client is 32-bit only. Not so good, but
+it can be successfully installed in 64-bit Ubuntu. Here&amp;rsquo;s how I did in on
+Ubuntu Jaunty 9.04 64-bit.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -c http://frozenfox.freehostia.com/cappy/getlibs-all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dpkg -i getlibs-all.deb    
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget &lt;span style="color:#87ceeb">&amp;#34;http://www.amazon.co.uk/gp/dmusic/help/amd-installer-redirect.html/ref=dm_amd_linux_ubuntu?ie=UTF8&amp;amp;forceos=LINUX&amp;amp;callingPage=%2Fgp%2Fdmusic%2Fhelp%2Famd.html&amp;amp;linux_Ubuntu.x=1&amp;#34;&lt;/span> -O amazonmp3.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dpkg -i --force-architecture amazonmp3.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>getlibs /usr/bin/amazonmp3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description><summary>Amazon treats Linux users like 1st class citizens</summary></item></channel></rss>

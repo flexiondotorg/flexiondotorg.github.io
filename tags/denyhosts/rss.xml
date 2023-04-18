@@ -1,1 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DenyHosts on Wimpy's World</title><link>https://wimpysworld.com/tags/denyhosts/</link><description>Recent content in DenyHosts on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 26 Nov 2012 13:14:09 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/denyhosts/rss.xml" rel="self" type="application/rss+xml"/><item><title>SSH brute force defense</title><link>https://wimpysworld.com/posts/ssh-brute-force-defense/</link><pubDate>Mon, 26 Nov 2012 13:14:09 +0000</pubDate><guid>https://wimpysworld.com/posts/ssh-brute-force-defense/</guid><description>Deploy DenyHosts or Fail2Ban to better prevent SSH brute force attacks.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DenyHosts on Wimpy's World</title><link>https://wimpysworld.com/tags/denyhosts/</link><description>Recent content in DenyHosts on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 26 Nov 2012 13:14:09 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/denyhosts/rss.xml" rel="self" type="application/rss+xml"/><item><title>SSH brute force defense</title><link>https://wimpysworld.com/posts/ssh-brute-force-defense/</link><pubDate>Mon, 26 Nov 2012 13:14:09 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/ssh-brute-force-defense/</guid><description>&lt;p>I have several VPS hosts with different providers using different
+virtualisation platforms. Naturally I have &lt;a href="http://www.openssh.org/">OpenSSH&lt;/a>
+running on these VPS hosts and deploy either &lt;a href="http://denyhosts.sourceforge.net/">DenyHosts&lt;/a>
+or &lt;a href="http://www.fail2ban.org/">Fail2Ban&lt;/a> to add an extra security layer to
+thwart SSH brute force attacks and other abuse.&lt;/p>
+&lt;p>DenyHosts blocks brute force attacks by adding offending IP addresses to
+&lt;code>/etc/hosts.deny&lt;/code>. It therefore requires the SSH server is configured with
+&lt;code>tcp_wrappers&lt;/code>. Arch Linux &lt;a href="https://www.archlinux.org/news/dropping-tcp_wrappers-support/">dropped support for tcp_wrappers&lt;/a>
+so DenyHosts is not suitable for Arch. Fail2Ban supports blocking via &lt;code>iptables&lt;/code> and/or
+&lt;code>tcp_wrappers&lt;/code> and can also block offending hosts that are abusing services other than just &lt;code>sshd&lt;/code>.&lt;/p>
+&lt;h2 id="denyhosts-on-ubuntu">DenyHosts on Ubuntu&lt;/h2>
+&lt;p>Here is a simple example for DenyHosts on Ubuntu Lucid 10.04 LTS Server.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install denyhosts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>That&amp;rsquo;s it. The default configuration will provide suitable prevention, but do
+take a look at &lt;code>/etc/denyhosts.conf&lt;/code> for a full run down of all available options.
+I use the defaults with the following exceptions:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>PURGE_DENY = &lt;span style="color:#87ceeb">5d&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>PURGE_THRESHOLD = &lt;span style="color:#87ceeb">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ADMIN_EMAIL =
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>SYSLOG_REPORT=&lt;span style="color:#87ceeb">NO&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You might want to consider whitelisting some of your own IP address. Create a
+file called &lt;code>allowed-hosts&lt;/code> in &lt;code>/var/lib/denyhosts&lt;/code> and list each of your
+&amp;ldquo;trusted&amp;rdquo; IP addresses.&lt;/p>
+&lt;p>DenyHosts can be restarted by executing:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/denyhosts restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="fail2ban-on-arch-linux">Fail2Ban on Arch Linux&lt;/h2>
+&lt;p>Fail2Ban now supports systemd.&lt;/p>
+&lt;p>Configuration files are stored in &lt;code>/etc/fail2ban&lt;/code>. General configuration is
+&lt;code>/etc/fail2ban/jail.conf&lt;/code>, but this file might be overwritten in the future. To
+preserve customisations, create &lt;code>/etc/fail2ban/jail.local&lt;/code> and add your local
+configuration settings to it. In the example below some IP addresses are whitelisted
+and the default backend is set to systemd:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[DEFAULT]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ignoreip = &lt;span style="color:#87ceeb">172.16.0.2/32&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>backend = &lt;span style="color:#87ceeb">systemd&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Next create a custom sshd configuration in &lt;code>/etc/fail2ban/jail.d/sshd.conf&lt;/code>
+which will temporarily ban offending IP addresses.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># fail2ban SSH&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># block ssh after 3 unsuccessful login attempts for 10 minutes&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[sshd]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enabled = &lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>action = &lt;span style="color:#87ceeb">iptables[chain=INPUT, protocol=tcp, port=22, name=sshd]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>maxRetry = &lt;span style="color:#87ceeb">3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>findtime = &lt;span style="color:#87ceeb">600&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bantime = &lt;span style="color:#87ceeb">600&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>port = &lt;span style="color:#87ceeb">22&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &amp;lsquo;action&amp;rsquo; creates DROP rule in iptables after 3 unsuccessful login
+attempts, valid for 10 minutes (bantime). Findtime defines time frame in which
+fail2ban will count failed login attempts from logs, so if one IP has 3
+incorrect login attempts in last 10 minutes, it will be banned.&lt;/p>
+&lt;p>Enable and start the Fail2Ban daemon.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable fail2ban
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl start fail2ban
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Basic commands for fail2ban-client:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fail2ban-client start sshd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fail2ban-client stop sshd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fail2ban-client reload sshd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fail2ban-client status sshd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fail2ban-client set sshd unbanip 172.16.0.4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>See the &lt;a href="https://wiki.archlinux.org/index.php/Fail2ban">Arch Linux Fail2Ban Wiki page&lt;/a>
+for more details.&lt;/p>
+&lt;p>&lt;strong>References&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://krisko210.blogspot.co.uk/2014/03/setting-up-fail2ban.html">http://krisko210.blogspot.co.uk/2014/03/setting-up-fail2ban.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="ssh-best-practice">SSH best practice&lt;/h2>
+&lt;p>DenyHosts and Fail2Ban do not provide complete protection against SSH brute
+force attacks. I employ other SSH best practice to better secure the SSH
+services I expose to the Internet, and so should you. The following is a
+good reference.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.ibm.com/developerworks/aix/library/au-sshsecurity/index.html">Getting started with SSH security and configuration&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="other-ssh-brute-force-prevention-tools">Other SSH brute force prevention tools&lt;/h2>
+&lt;p>In the interests of fairness, other SSH brute force preventation tools are
+available.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.sshguard.net/">Sshgaurd&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://cgi.csc.liv.ac.uk/~greg/sshdfilter/">sshdfilter&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://help.ubuntu.com/community/UFW">Uncomplicated Firewall&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Uncomplicated_Firewall#Rate_Limiting_with_ufw">Rate Limiting&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Do you know any other tools that help prevent SSH brute force attacks?&lt;/p></description><summary>Deploy DenyHosts or Fail2Ban to better prevent SSH brute force attacks.</summary></item></channel></rss>

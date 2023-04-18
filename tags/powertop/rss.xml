@@ -1,1 +1,96 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>powertop on Wimpy's World</title><link>https://wimpysworld.com/tags/powertop/</link><description>Recent content in powertop on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 16 Dec 2015 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/powertop/rss.xml" rel="self" type="application/rss+xml"/><item><title>HP Microserver N54L power saving and performance tuning using Debian</title><link>https://wimpysworld.com/posts/hp-microserver-n54l-power-saving-and-performance-tuning-using-debian/</link><pubDate>Wed, 16 Dec 2015 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/hp-microserver-n54l-power-saving-and-performance-tuning-using-debian/</guid><description>Configure HP Microserver N54L Power Saving on Debian</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>powertop on Wimpy's World</title><link>https://wimpysworld.com/tags/powertop/</link><description>Recent content in powertop on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 16 Dec 2015 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/powertop/rss.xml" rel="self" type="application/rss+xml"/><item><title>HP Microserver N54L power saving and performance tuning using Debian</title><link>https://wimpysworld.com/posts/hp-microserver-n54l-power-saving-and-performance-tuning-using-debian/</link><pubDate>Wed, 16 Dec 2015 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/hp-microserver-n54l-power-saving-and-performance-tuning-using-debian/</guid><description>&lt;p>I&amp;rsquo;ve installed &lt;a href="http://www.openmediavault.org/">Open Media Vault&lt;/a>
+on a &lt;a href="http://www8.hp.com/uk/en/products/proliant-servers/product-detail.html?oid=5336624">HP ProLiant MicroServer G7 N54L&lt;/a>
+and use it as media server for the house. OpenMediaVault (OMV) is a
+network attached storage (NAS) solution based on &lt;a href="http://www.debian.org">Debian&lt;/a>.&lt;/p>
+&lt;p>I want to minimise power consumption but maximise performance. Here are
+some tweaks reduce power consumption and improve network performance.&lt;/p>
+&lt;h1 id="power-saving">Power Saving&lt;/h1>
+&lt;p>Install the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install amd64-microcode firmware-linux firmware-linux-free &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>firmware-linux-nonfree pciutils powertop radeontool
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>And for ACPI.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install acpi acpid acpi-support acpi-support-base
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="aspm-and-acpi">ASPM and ACPI&lt;/h2>
+&lt;p>First I enabled PCIE ASPM in the BIOS and forced the kernel to use it and
+ACPI via &lt;code>grub&lt;/code> by changing &lt;code>GRUB_CMDLINE_LINUX_DEFAULT&lt;/code> in &lt;code>/etc/default/grub&lt;/code>,
+so it looks like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">GRUB_CMDLINE_LINUX_DEFAULT&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;quiet acpi=force pcie_aspm=force nmi_watchdog=0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then update &lt;code>grub&lt;/code> and reboot.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>update-grub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>reboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="enable-power-saving-via-udev">Enable Power Saving via udev&lt;/h2>
+&lt;p>The following rules file &lt;code>/etc/udev/rules.d/90-local-n54l.rules&lt;/code> enables
+power saving modes for all PCI, SCSI and USB devices and ASPM. Futher
+the internal Radeon card power profile is set to low as there is rarely
+a monitor connected. The file contains the following:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">SUBSYSTEM&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;module&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">KERNEL&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;pcie_aspm&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">ACTION&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;add&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">TEST&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;parameters/policy&amp;#34;&lt;/span>, ATTR{parameters/policy}=&lt;span style="color:#87ceeb">&amp;#34;powersave&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">SUBSYSTEM&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;i2c&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">ACTION&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;add&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">TEST&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;power/control&amp;#34;&lt;/span>, ATTR{power/control}=&lt;span style="color:#87ceeb">&amp;#34;auto&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">SUBSYSTEM&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;pci&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">ACTION&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;add&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">TEST&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;power/control&amp;#34;&lt;/span>, ATTR{power/control}=&lt;span style="color:#87ceeb">&amp;#34;auto&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">SUBSYSTEM&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;usb&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">ACTION&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;add&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">TEST&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;power/control&amp;#34;&lt;/span>, ATTR{power/control}=&lt;span style="color:#87ceeb">&amp;#34;auto&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">SUBSYSTEM&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;usb&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">ACTION&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;add&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">TEST&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;power/autosuspend&amp;#34;&lt;/span>, ATTR{power/autosuspend}=&lt;span style="color:#87ceeb">&amp;#34;2&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">SUBSYSTEM&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;scsi&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">ACTION&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;add&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">TEST&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;power/control&amp;#34;&lt;/span>, ATTR{power/control}=&lt;span style="color:#87ceeb">&amp;#34;auto&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">SUBSYSTEM&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;spi&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">ACTION&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;add&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">TEST&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;power/control&amp;#34;&lt;/span>, ATTR{power/control}=&lt;span style="color:#87ceeb">&amp;#34;auto&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">SUBSYSTEM&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;drm&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">KERNEL&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;card*&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">ACTION&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;add&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">DRIVERS&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;radeon&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">TEST&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;power/control&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">TEST&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;device/power_method&amp;#34;&lt;/span>, ATTR{device/power_method}=&lt;span style="color:#87ceeb">&amp;#34;profile&amp;#34;&lt;/span>, ATTR{device/power_profile}=&lt;span style="color:#87ceeb">&amp;#34;low&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">SUBSYSTEM&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;scsi_host&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">KERNEL&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;host*&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">ACTION&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;add&amp;#34;&lt;/span>, &lt;span style="color:#eedd82">TEST&lt;/span>==&lt;span style="color:#87ceeb">&amp;#34;link_power_management_policy&amp;#34;&lt;/span>, ATTR{link_power_management_policy}=&lt;span style="color:#87ceeb">&amp;#34;min_power&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add this to &lt;code>/erc/rc.local&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#87ceeb">&amp;#39;1500&amp;#39;&lt;/span> &amp;gt; &lt;span style="color:#87ceeb">&amp;#39;/proc/sys/vm/dirty_writeback_centisecs&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="hard-disk-spindown">Hard disk spindown&lt;/h2>
+&lt;p>Using the Open Media Vault web interface got to &lt;code>Storage -&amp;gt; Physical Disks&lt;/code>,
+select each disk in turn and click &lt;code>Edit&lt;/code> then set:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Advanced Power Management:&lt;/strong> Intermediate power usage with standby&lt;/li>
+&lt;li>&lt;strong>Automatic Acoustic Management:&lt;/strong> Minimum performance, Minimum acoustic output&lt;/li>
+&lt;li>&lt;strong>Spindown time:&lt;/strong> 20 minutes&lt;/li>
+&lt;/ul>
+&lt;h1 id="performance-tuning">Performance Tuning&lt;/h1>
+&lt;h2 id="network">Network&lt;/h2>
+&lt;p>The following tweaks improve network performance ,but &lt;strong>I have a
+&lt;a href="http://www.hiwifi.co.uk/">HP NC360T PCI Express Dual Port Gigabit Server Adapter&lt;/a>&lt;/strong>
+in my N54L so these settings may not be applicable to the onboard NIC.&lt;/p>
+&lt;p>Add this to &lt;code>/erc/rc.local&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ethtool -G eth0 rx &lt;span style="color:#f60">4096&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ethtool -G eth1 rx &lt;span style="color:#f60">4096&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ethtool -G eth0 tx &lt;span style="color:#f60">4096&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ethtool -G eth1 tx &lt;span style="color:#f60">4096&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ifconfig eth0 txqueuelen &lt;span style="color:#f60">1000&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ifconfig eth1 txqueuelen &lt;span style="color:#f60">1000&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following to &lt;code>/etc/sysctl.d/local.conf&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fs.file-max = &lt;span style="color:#f60">100000&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.core.netdev_max_backlog = &lt;span style="color:#f60">50000&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.core.optmem_max = &lt;span style="color:#f60">40960&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.core.rmem_default = &lt;span style="color:#f60">16777216&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.core.rmem_max = &lt;span style="color:#f60">16777216&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.core.wmem_default = &lt;span style="color:#f60">16777216&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.core.wmem_max = &lt;span style="color:#f60">16777216&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.conf.all.accept_redirects = &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.conf.all.accept_source_route = &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.conf.all.log_martians = &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.conf.all.send_redirects = &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.ip_local_port_range = &lt;span style="color:#f60">10000&lt;/span> &lt;span style="color:#f60">65000&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.tcp_fin_timeout = &lt;span style="color:#f60">10&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.tcp_max_syn_backlog = &lt;span style="color:#f60">30000&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.tcp_max_tw_buckets = &lt;span style="color:#f60">2000000&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.tcp_rfc1337 = &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.tcp_rmem = &lt;span style="color:#f60">4096&lt;/span> &lt;span style="color:#f60">87380&lt;/span> &lt;span style="color:#f60">16777216&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.tcp_sack=&lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.tcp_slow_start_after_idle = &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.tcp_timestamps=&lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.tcp_tw_reuse = &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.tcp_wmem = &lt;span style="color:#f60">4096&lt;/span> &lt;span style="color:#f60">65536&lt;/span> &lt;span style="color:#f60">16777216&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.udp_rmem_min = &lt;span style="color:#f60">8192&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>net.ipv4.udp_wmem_min = &lt;span style="color:#f60">8192&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>vm.swappiness = &lt;span style="color:#f60">10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>With these settings applied &lt;code>powertop&lt;/code> reports everything that can be in
+a power saving mode is and the room temperature is measurably cooler.
+More importantly, with four 4TB drives in a RAID-5 configuration
+formatted with XFS and dual bonded gigabit ethernet, I am able to backup
+data to the server at a sustained rate of 105MB/s, which is 0.85 Gbit.&lt;/p>
+&lt;p>Not too shabby for an AMD Turion II Neo N54L (2.2GHz) 🙂&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.wgdd.de/2013/08/hp-n54l-microserver-energy-efficiency.html?m=1">http://www.wgdd.de/2013/08/hp-n54l-microserver-energy-efficiency.html?m=1&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://gareth.halfacree.co.uk/2014/02/tuning-an-hp-proliant-microserver">http://gareth.halfacree.co.uk/2014/02/tuning-an-hp-proliant-microserver&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.scottalanmiller.com/linux/2011/06/20/working-with-nic-ring-buffers/">http://www.scottalanmiller.com/linux/2011/06/20/working-with-nic-ring-buffers/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gist.github.com/dstroot/2785263">https://gist.github.com/dstroot/2785263&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Configure HP Microserver N54L Power Saving on Debian</summary></item></channel></rss>

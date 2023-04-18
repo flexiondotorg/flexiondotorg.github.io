@@ -1,1 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>iPAQ 3970 on Wimpy's World</title><link>https://wimpysworld.com/tags/ipaq-3970/</link><description>Recent content in iPAQ 3970 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 12 Sep 2005 10:27:05 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ipaq-3970/rss.xml" rel="self" type="application/rss+xml"/><item><title>Handheld Linux</title><link>https://wimpysworld.com/posts/handheld-linux/</link><pubDate>Mon, 12 Sep 2005 10:27:05 +0000</pubDate><guid>https://wimpysworld.com/posts/handheld-linux/</guid><description>Craving a handheld Linux device</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>iPAQ 3970 on Wimpy's World</title><link>https://wimpysworld.com/tags/ipaq-3970/</link><description>Recent content in iPAQ 3970 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 12 Sep 2005 10:27:05 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ipaq-3970/rss.xml" rel="self" type="application/rss+xml"/><item><title>Handheld Linux</title><link>https://wimpysworld.com/posts/handheld-linux/</link><pubDate>Mon, 12 Sep 2005 10:27:05 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/handheld-linux/</guid><description>&lt;p>I have replaced the disk in my Libretto CT100 with a 20GB disk I had going
+spare and re-installed Debian Sarge 3.1, this time I didn&amp;rsquo;t bother with the
+2.6 kernel or Xfce because I&amp;rsquo;ve had my fun with those now. But playing
+around with Linux on my Libretto has re-kindled my interested in running Linux
+on small portable devices.&lt;/p>
+&lt;p>Earlier this year I experimented with &lt;a href="http://familiar.handhelds.org/">Familiar Linux&lt;/a>
+0.8.2 on my iPAQ 3970 and installed via a serial cable, which was very slow
+going. So I&amp;rsquo;ve invested in a 512MB Compact Flash card to speed up my next
+round of tinkering with Familiar but this time I intend to leave Familiar
+installed and not re-flash the 3970 with PocketPC 2002. The
+&lt;a href="http://familiar.handhelds.org/releases/v0.8.2/install/index.html">Familiar v0.8.2 Installation&lt;/a>
+guide covers pretty much everything you need to know about the installation
+process.&lt;/p></description><summary>Craving a handheld Linux device</summary></item></channel></rss>

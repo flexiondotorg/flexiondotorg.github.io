@@ -1,1 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NUC5i7RYH on Wimpy's World</title><link>https://wimpysworld.com/tags/nuc5i7ryh/</link><description>Recent content in NUC5i7RYH on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 13 Dec 2015 13:18:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/nuc5i7ryh/rss.xml" rel="self" type="application/rss+xml"/><item><title>Intel NUC5i7RYH with Ubuntu</title><link>https://wimpysworld.com/posts/intel-nuc5i7ryh-with-ubuntu/</link><pubDate>Sun, 13 Dec 2015 13:18:00 +0000</pubDate><guid>https://wimpysworld.com/posts/intel-nuc5i7ryh-with-ubuntu/</guid><description>My Intel NUC5i7RYH part list and build</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NUC5i7RYH on Wimpy's World</title><link>https://wimpysworld.com/tags/nuc5i7ryh/</link><description>Recent content in NUC5i7RYH on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 13 Dec 2015 13:18:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/nuc5i7ryh/rss.xml" rel="self" type="application/rss+xml"/><item><title>Intel NUC5i7RYH with Ubuntu</title><link>https://wimpysworld.com/posts/intel-nuc5i7ryh-with-ubuntu/</link><pubDate>Sun, 13 Dec 2015 13:18:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/intel-nuc5i7ryh-with-ubuntu/</guid><description>&lt;p>I&amp;rsquo;ve just bought my first &lt;em>brand new&lt;/em> computer since 2008. Thanks to
+the &lt;a href="https://en.wikipedia.org/wiki/Black_Friday_(shopping)">Black Friday&lt;/a>
+and &lt;a href="https://en.wikipedia.org/wiki/Cyber_Monday">Cyber Monday&lt;/a> sales on
+&lt;a href="http://www.amazon.co.uk">Amazon.co.uk&lt;/a> and &lt;a href="http://www.scan.co.uk">Scan.co.uk&lt;/a>
+this year I was able to put together a pretty sweet Intel NUC which is
+now running &lt;a href="https://ubuntu-mate.org">Ubuntu MATE 15.10&lt;/a>.&lt;/p>
+&lt;p>I spoke about this new system on &lt;a href="http://www.jupiterbroadcasting.com/91276/thunderclouds-around-thunderbird-lup-122/">LINUX Unplugged Episode 122&lt;/a> and have been contacted by people
+wanting more details. Hopefully this blog post will answer any outstanding
+questions. Press play below to hear to what I said on the podcast.&lt;/p>
+&lt;!--
+Add start when it becomes a feature
+https://github.com/gohugoio/hugo/pull/10521
+start="5996"
+-->
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/qBoxqO1zFgI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;h2 id="the-nuc">The NUC&lt;/h2>
+&lt;p>I purchased an Intel Next Unit of Computing (NUC) Kit
+&lt;a href="http://www.intel.com/content/www/us/en/nuc/nuc-kit-nuc5i7ryh.html">NUC5I7RYH&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>Barebones mini PC&lt;/li>
+&lt;li>1 x &lt;a href="http://ark.intel.com/products/84993/Intel-Core-i7-5557U-Processor-4M-Cache-up-to-3_40-GHz">Core i7 5557U&lt;/a> / 3.1 GHz&lt;/li>
+&lt;li>&lt;a href="http://www.intel.com/content/www/us/en/support/graphics-drivers/intel-iris-graphics-6100-for-5th-generation-intel-core-processors.html">Iris Graphics 6100&lt;/a>&lt;/li>
+&lt;li>Gigabit Ethernet&lt;/li>
+&lt;li>Bluetooth 4.0 LE&lt;/li>
+&lt;li>802.11a/b/g/n/ac WiFi&lt;/li>
+&lt;/ul>
+&lt;p>Everything works out of the box with Ubuntu MATE 15.10 including sending
+audio to the monitor over HDMI and DisplayPort.&lt;/p>
+&lt;h2 id="the-ram">The RAM&lt;/h2>
+&lt;p>The &lt;a href="http://ark.intel.com/products/84993/Intel-Core-i7-5557U-Processor-4M-Cache-up-to-3_40-GHz">Core i7 5557U&lt;/a>
+specs state that DDR3L 1866 Mhz RAM is supported. The arstechnica
+&lt;a href="http://arstechnica.com/gadgets/2015/03/mini-review-intels-powered-up-core-i7-broadwell-mini-pc/">Mini-review: Intel’s powered-up Core i7 Broadwell mini PC&lt;/a>
+has some benchmarks that show a performance improvement when using 1866
+Mhz clocked RAM, so I purchased:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.hyperxgaming.com/us/memory/impact">HyperX Impact SODIMM - 16GB Kit*(2x8GB) - DDR3L 1866MHz CL11 SODIMM&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="the-ssds">The SSDs&lt;/h2>
+&lt;p>I have two SSDs in the NUC.&lt;/p>
+&lt;ul>
+&lt;li>Samsung MZVPV256HDGL-00000 - SM951 256GB M.2 PCI-e 3.0 x 4 &lt;a href="https://en.wikipedia.org/wiki/NVM_Express">NVMe&lt;/a> Solid State Drive&lt;/li>
+&lt;li>&lt;a href="https://www.sandisk.co.uk/home/ssd/ultra-ii-ssd">SanDisk Ultra II SSD 960 GB Sata III 2.5-inch Internal SSD&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>This is where you might need to do some more research.&lt;/strong> At the
+time of writing, it is not possible to boot directly from the Samsung
+SM951 NVMe SSD. Although other quad channel NVMe SSDs do appear to be
+supported as the boot device. It is possible that the &lt;a href="http://www.samsung.com/global/business/semiconductor/minisite/SSD/global/html/ssd950pro/overview.html">Samsung SSD 950 Pro&lt;/a>,
+which is also NVMe, can be used as the boot device in Linux, but &lt;em>don&amp;rsquo;t
+take my word for it&lt;/em>. Do your research.&lt;/p>
+&lt;p>My work around was make the SanDisk Ultra II the boot device by putting
+&lt;code>/boot&lt;/code> and the MBR on it. I have put &lt;code>/&lt;/code> and &lt;code>swap&lt;/code> (swap because I
+want to experiment with suspend and hibernate) are on the Samsung SM951
+and &lt;code>/home&lt;/code> is on the SanDisk Ultra II.&lt;/p>
+&lt;p>There are faster SSDs than the SanDisk Ultra II but this was 50% off
+during Black Friday and just too good a deal to pass by. I did
+sacrifice a little performance on this component, so if absolute
+performance is your goal look at alternative SSDs, the &lt;a href="http://www.samsung.com/global/business/semiconductor/minisite/SSD/global/html/ssd850evo/overview.html">Samsung 850 EVO&lt;/a>
+seems to benchmark favourably.&lt;/p>
+&lt;h2 id="the-monitor">The Monitor&lt;/h2>
+&lt;p>A week after I purchased the NUC I noticed &lt;a href="http://www.ebuyer.com/">ebuyer.com&lt;/a>
+were selling the monitor I wanted with a £100 discount. So I snapped one up.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.samsung.com/uk/business/business-products/business-monitor/professional/LS27D85KTSN/XU">Samsung S27D850T&lt;/a> 27&amp;quot; WQHD LED DVI HDMI Monitor&lt;/li>
+&lt;/ul>
+&lt;p>The NUC is connected via mini Display Port and my Dell Precision T7400
+is connected via HDMI. The Samsung S27D850T has an audio out and a 2.1
+speaker set is connected to it.&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>I&amp;rsquo;m extremely happy with the &lt;a href="http://www.intel.com/content/www/us/en/nuc/nuc-kit-nuc5i7ryh.html">NUC5I7RYH&lt;/a>.
+Linux compatibility is first class, it&amp;rsquo;s fast and has relatively low
+power consumption. You can even charge a mobile phone using one of the
+front USB ports (the yellow one) when the NUC is powered off. It is my
+principle workstation and is able to handle everything I demand from it,
+with ease:&lt;/p>
+&lt;ul>
+&lt;li>mp3 and ogg audio encoding&lt;/li>
+&lt;li>h.264 video encoding (~1 min of video @480p encodes in 1 second)&lt;/li>
+&lt;li>running multiple virtual machines&lt;/li>
+&lt;li>compiling large applications&lt;/li>
+&lt;li>creating xz compressed images of Ubuntu flavours for the Raspberry Pi 2&lt;/li>
+&lt;/ul>
+&lt;p>I&amp;rsquo;ve not tried gaming on it yet, but the holidays are approaching and
+&lt;a href="http://www.gridgame.com/">GRID Autosport&lt;/a> was released for
+&lt;a href="http://store.steampowered.com/steamos/">SteamOS&lt;/a> this week. So I know
+what I&amp;rsquo;ll be doing in a couple of weeks time &lt;code>:-D&lt;/code>&lt;/p></description><summary>My Intel NUC5i7RYH part list and build</summary></item></channel></rss>

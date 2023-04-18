@@ -1,1 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AC3 on Wimpy's World</title><link>https://wimpysworld.com/tags/ac3/</link><description>Recent content in AC3 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 27 Aug 2009 20:48:58 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ac3/rss.xml" rel="self" type="application/rss+xml"/><item><title>MKV to MPEG-4 conversion script</title><link>https://wimpysworld.com/posts/mkv-to-mpeg-4-conversion-script/</link><pubDate>Thu, 27 Aug 2009 20:48:58 +0000</pubDate><guid>https://wimpysworld.com/posts/mkv-to-mpeg-4-conversion-script/</guid><description>Creating PlayStation 3 and Xbox 360 compatible MPEG-4 videos</description></item><item><title>MKV to M2TS conversion script</title><link>https://wimpysworld.com/posts/mkv-to-m2ts-conversion-script/</link><pubDate>Thu, 23 Apr 2009 17:00:58 +0000</pubDate><guid>https://wimpysworld.com/posts/mkv-to-m2ts-conversion-script/</guid><description>Convert Matroska file to MPEG2-TS for PlayStation 3 compatibility</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AC3 on Wimpy's World</title><link>https://wimpysworld.com/tags/ac3/</link><description>Recent content in AC3 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 27 Aug 2009 20:48:58 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ac3/rss.xml" rel="self" type="application/rss+xml"/><item><title>MKV to MPEG-4 conversion script</title><link>https://wimpysworld.com/posts/mkv-to-mpeg-4-conversion-script/</link><pubDate>Thu, 27 Aug 2009 20:48:58 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/mkv-to-mpeg-4-conversion-script/</guid><description>&lt;p>The PlayStation 3 can&amp;rsquo;t play MKV files. Therefore I&amp;rsquo;ve written a script that
+creates a PlayStation 3 or Xbox 360 compatible MPEG-4 from Matroska providing
+the video is H.264 and audio is AC3 or DTS.&lt;/p>
+&lt;p>Xbox 360 compatibility requires that audio is forcibly downmixed to stereo
+with &lt;code>--stereo&lt;/code>. AAC 5.1 audio will have the correct channel assignments when
+transcoding from AC3 5.1 and DTS 5.1. If &lt;code>neroAacEnc&lt;/code> is installed then it is
+used in preference to &lt;code>faac&lt;/code> for encoding the AAC audio, as it produces better
+quality output. &lt;code>neroAacEnc&lt;/code> is optional.&lt;/p>
+&lt;p>The script does as little re-encoding as possible, only the audio and
+subtitles are re-encoded or converted. The script can detect profile 5.1 H.264
+and patch it to 4.1 in under a second. Any subtitles in the Matroska are
+preserved. If &lt;code>mp4creator&lt;/code> is used the subtitles are extracted stored in a
+seperate file. If &lt;code>MP4Box&lt;/code> is used (default) the subtitles are converted to
+GPAC Timed Text and muxed into the resulting MPEG-4. The PlayStation 3 can&amp;rsquo;t
+display these subtitles but some software players can.&lt;/p>
+&lt;p>The script can optionally split the Matroska if it is greater than 4GB to ensure
+PlayStation 3, Xbox 360 and FAT32 compatibility. This script works on Ubuntu and
+should work on any other Linux/Unix flavour and possibly Mac OS X providing you
+have the required tools installed.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/MKV-to-MP4">MKV-to-MP4&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Creating PlayStation 3 and Xbox 360 compatible MPEG-4 videos</summary></item><item><title>MKV to M2TS conversion script</title><link>https://wimpysworld.com/posts/mkv-to-m2ts-conversion-script/</link><pubDate>Thu, 23 Apr 2009 17:00:58 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/mkv-to-m2ts-conversion-script/</guid><description>&lt;p>The PlayStation 3 can&amp;rsquo;t play MKV files. Therefore I&amp;rsquo;ve written a
+script that creates a PlayStation 3 compatible M2TS from a MKV,
+assuming video is H.264 and audio is AC3 or DTS with as little
+re-encoding as possible. Any subtitles in the MKV are preserved
+in the M2TS although the PlayStation 3 can&amp;rsquo;t display subtitles in M2TS
+containers. Optionally splits the M2TS, if it is greater than 4GB,
+to maintain FAT32 compatibility. Unlike other MKV to M2TS solutions,
+this script doesn&amp;rsquo;t create any intermediate files during the conversion.&lt;/p>
+&lt;p>The PlayStation 3 can&amp;rsquo;t play DTS audio streams in M2TS containers, therefore
+DTS audio is transcoded to AC3.&lt;/p>
+&lt;p>This script works on Ubuntu, should work on any other Linux/Unix flavour and
+possibly Mac OS X providing you have the required tools installed.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/MKV-to-M2TS">MKV-to-M2TS&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Convert Matroska file to MPEG2-TS for PlayStation 3 compatibility</summary></item></channel></rss>

@@ -1,1 +1,1500 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arch Linux on Wimpy's World</title><link>https://wimpysworld.com/tags/arch-linux/</link><description>Recent content in Arch Linux on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 16 Apr 2014 07:07:09 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/arch-linux/rss.xml" rel="self" type="application/rss+xml"/><item><title>BIP IRC proxy</title><link>https://wimpysworld.com/posts/bip-irc-proxy/</link><pubDate>Wed, 16 Apr 2014 07:07:09 +0000</pubDate><guid>https://wimpysworld.com/posts/bip-irc-proxy/</guid><description>Installing BIP IRC Proxy on Debian Wheezy &amp;amp; Arch Linux</description></item><item><title>LXC on Arch Linux</title><link>https://wimpysworld.com/posts/lxc-on-arch-linux/</link><pubDate>Tue, 15 Apr 2014 02:44:11 +0000</pubDate><guid>https://wimpysworld.com/posts/lxc-on-arch-linux/</guid><description>A rough guide to running Debian containers on Arch Linux with LXC</description></item><item><title>Memory consumption of Linux desktop environments</title><link>https://wimpysworld.com/posts/memory-consumption-of-linux-desktop-environments/</link><pubDate>Sun, 23 Mar 2014 13:30:27 +0000</pubDate><guid>https://wimpysworld.com/posts/memory-consumption-of-linux-desktop-environments/</guid><description>Comparing desktop environment memory usage with ps_mem</description></item><item><title>Arch Linux</title><link>https://wimpysworld.com/projects/arch-linux/</link><pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/arch-linux/</guid><description>Arch Linux Trusted User &amp;amp; Package maintainer</description></item><item><title>SketchUp Make on Arch Linux</title><link>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</link><pubDate>Thu, 15 Aug 2013 15:42:47 +0000</pubDate><guid>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</guid><description>Install SketchUp Make 2013 on Arch Linux with Wine 1.7</description></item><item><title>Spring cleaning Arch Linux</title><link>https://wimpysworld.com/posts/spring-cleaning-arch-linux/</link><pubDate>Tue, 07 May 2013 18:09:21 +0000</pubDate><guid>https://wimpysworld.com/posts/spring-cleaning-arch-linux/</guid><description>How to clean up installed packages on Arch Linux.</description></item><item><title>nullmailer on Arch Linux</title><link>https://wimpysworld.com/posts/nullmailer-on-arch-linux/</link><pubDate>Sat, 09 Mar 2013 23:27:43 +0000</pubDate><guid>https://wimpysworld.com/posts/nullmailer-on-arch-linux/</guid><description>Configuring nullmailer on Arch Linux to relay email via Gmail</description></item><item><title>Uncomplicated Firewall (UFW) on Arch Linux</title><link>https://wimpysworld.com/posts/uncomplicated-firewall-ufw-on-arch-linux/</link><pubDate>Sat, 09 Mar 2013 08:37:43 +0000</pubDate><guid>https://wimpysworld.com/posts/uncomplicated-firewall-ufw-on-arch-linux/</guid><description>Configuring Uncomplicated Firewall (UFW) on Arch Linux.</description></item><item><title>Installing Nikola on Arch Linux</title><link>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</link><pubDate>Fri, 08 Mar 2013 17:13:43 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</guid><description>Install Nikola static site generator in a virtualenv on Arch Linux</description></item><item><title>Microsoft Office 2010 on Arch Linux and Ubuntu</title><link>https://wimpysworld.com/posts/microsoft-office-2010-on-arch-linux-and-ubuntu/</link><pubDate>Tue, 29 Jan 2013 16:16:47 +0000</pubDate><guid>https://wimpysworld.com/posts/microsoft-office-2010-on-arch-linux-and-ubuntu/</guid><description>Install Microsoft Office 2010 on Arch Linux and Ubuntu</description></item><item><title>Python and virtualenv on Arch Linux and Ubuntu</title><link>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</link><pubDate>Tue, 11 Dec 2012 20:38:50 +0000</pubDate><guid>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</guid><description>Installing Python and virtualenv on Arch Linux and Ubuntu</description></item><item><title>SSH brute force defense</title><link>https://wimpysworld.com/posts/ssh-brute-force-defense/</link><pubDate>Mon, 26 Nov 2012 13:14:09 +0000</pubDate><guid>https://wimpysworld.com/posts/ssh-brute-force-defense/</guid><description>Deploy DenyHosts or Fail2Ban to better prevent SSH brute force attacks.</description></item><item><title>Netflix for ArchLinux</title><link>https://wimpysworld.com/posts/netflix-for-archlinux/</link><pubDate>Thu, 22 Nov 2012 22:14:47 +0000</pubDate><guid>https://wimpysworld.com/posts/netflix-for-archlinux/</guid><description>Netflix is available for ArchLinux</description></item><item><title>Arch Linux Angel</title><link>https://wimpysworld.com/posts/arch-linux-angel/</link><pubDate>Tue, 15 May 2012 11:12:13 +0000</pubDate><guid>https://wimpysworld.com/posts/arch-linux-angel/</guid><description>Automated scripted installs of Arch Linux</description></item><item><title>Take Mark Shuttleworth's advice, try Arch Linux</title><link>https://wimpysworld.com/posts/take-mark-shuttleworths-advice-try-arch-linux/</link><pubDate>Wed, 02 May 2012 19:00:19 +0000</pubDate><guid>https://wimpysworld.com/posts/take-mark-shuttleworths-advice-try-arch-linux/</guid><description>My experiences switching from Ubuntu to Arch Linux</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arch Linux on Wimpy's World</title><link>https://wimpysworld.com/tags/arch-linux/</link><description>Recent content in Arch Linux on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 16 Apr 2014 07:07:09 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/arch-linux/rss.xml" rel="self" type="application/rss+xml"/><item><title>BIP IRC proxy</title><link>https://wimpysworld.com/posts/bip-irc-proxy/</link><pubDate>Wed, 16 Apr 2014 07:07:09 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/bip-irc-proxy/</guid><description>&lt;p>&lt;strong>I switched from BIP to &lt;a href="http://wiki.znc.in/ZNC">ZNC&lt;/a>, and &lt;a href="https://wimpysworld.com/posts/znc-irc-proxy/">recommend you use ZNC instead&lt;/a>!&lt;/strong>&lt;/p>
+&lt;p>&lt;a href="http://bip.milkypond.org/">BIP&lt;/a> is an IRC proxy that maintains a persistent
+connection(s) to a list of IRC channels. You can then point your IRC client to
+BIP each time you log in and playback the conversations that took place while
+you were away.&lt;/p>
+&lt;p>I&amp;rsquo;ve found bBIP to be so useful that I now &lt;a href="https://www.archlinux.org/packages/community/x86_64/bip/">maintain BIP for Arch Linux&lt;/a>,
+although I now run my BIP proxy on Debian because my new VPS provider doesn&amp;rsquo;t
+offer Arch Linux as an option.&lt;/p>
+&lt;h2 id="installing-bip">Installing BIP&lt;/h2>
+&lt;p>Installing BIP is simple for both Arch Linux and Debian.&lt;/p>
+&lt;h3 id="debian">Debian&lt;/h3>
+&lt;p>I run BIP on Debian Wheezy with the backport repository enabled.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get -t wheezy-backports install bip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo sed -i &lt;span style="color:#87ceeb">&amp;#39;s/ENABLED=0/ENABLED=1/&amp;#39;&lt;/span> /etc/default/bip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="arch-linux">Arch Linux&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -S bip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl enable bip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-user">Create a user&lt;/h2>
+&lt;p>The next thing to do is create a username and password and BIP provides it&amp;rsquo;s
+own utility for doing this called &lt;code>bipmkpw&lt;/code>. Replace &amp;lsquo;username&amp;rsquo; with whatever
+you want your BIP &amp;lsquo;username&amp;rsquo; to be. This name has no relation to any IRC
+usernames so it can be anything.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bipmkpw username
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enter a password when prompted. The password will then be output as a hash.
+Make a note of both the hashed and un-hashed values somewhere, you will need
+them later.&lt;/p>
+&lt;h2 id="create-a-certificate">Create a certificate&lt;/h2>
+&lt;p>We don&amp;rsquo;t want the username and password being sent as clear-text, so we will
+create an SSL certificate for BIP to use.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>openssl req -new -newkey rsa:4096 -nodes -x509 -keyout bip.pem -out bip.pem
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Move the certificate to &lt;code>/var/lib/bip&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo mv bip.pem /var/lib/bip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Change ownership and permissions of the certificate to the user &lt;code>bip&lt;/code> which was
+created automatically when the package was installed.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chown bip:bip /var/lib/bip/bip.pem
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">600&lt;/span> /var/lib/bip/bip.pem
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="configure-bip">Configure BIP&lt;/h2>
+&lt;p>Here is example configuration for BIP. Copy it to &lt;code>/etc/bip.conf&lt;/code>, modify it
+accordingly and then change the ownership and permissions.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chown bip:bip /etc/bip.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">640&lt;/span> /etc/bip.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="example-configuration">Example configuration&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span># bip default config file.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Thou shoult change thy password
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ip = &amp;#34;0.0.0.0&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># To connect a client to bip, try the port below, and
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># be sure to set the password to the value
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># specified in the network you want to connect to.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>port = 7778;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># If you set this to true, you&amp;#39;ll only be able to connect to bip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># with a SSL capable IRC client. Be sure to generate a certificate
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># for bip with &amp;#39;make cert&amp;#39;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>client_side_ssl = true;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>log_level = 3;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pid_file=&amp;#34;/var/run/bip/bip.pid&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># This is where logs go. Channel and private messages will use that
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># configuration value as a prefix, and then log_format to determine
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># full log filename.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>log_root = &amp;#34;/var/log/bip/&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Log format allows you to make log filenames depend on the log line&amp;#39;s
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># attributes. Here&amp;#39;s a list :
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %u -&amp;gt; user name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %n -&amp;gt; network name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %Y -&amp;gt; 4 digit year
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %m -&amp;gt; 2 digit month
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %d -&amp;gt; 2 digit day
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %c -&amp;gt; destination (#chan, privates, ...)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#log_format = &amp;#34;%n/%Y-%m/%c.%d.log&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Sets the frequency (in seconds) of log syncing (real write to kernel)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#log_sync_interval = 5;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Makes bip send the log of each channel and privates while
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># you were not connected to the proxy upon connection.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>backlog = true; # enable backlog
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>backlog_lines = 0; # number of lines in backlog, 0 means no limit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>backlog_always = false; # backlog even lines already backlogged
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># If blreset_on_talk talking on an irc network has the same effect of issuing
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># /bip blreset, meaning that stuffed logged before the command won&amp;#39;t be read
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># back on backlog
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>blreset_on_talk = true;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Network definition, a name and server info
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>network {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;freenode&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server { host = &amp;#34;chat.freenode.net&amp;#34;; port = 6667; };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>network {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;blitzed&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server { host = &amp;#34;irc.blitzed.org&amp;#34;; port = 6667; };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Configuration example with one user who connects to two irc networks
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># To use the multi-server feature:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># - define the connections
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># - chose and setup a different login for each connection
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># on your irc client:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># - Use the multi server feature of your client, the server being each time
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># the server where bip is running. In your client setup server password to:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># username:password:connectionname
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># - do not store the password in clear here, use the bipmkpw util to generate
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># a hash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># User structure is grouping information for a given user
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # The name in bip of the user
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # This is used by bip only
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;USERNAME; #BIP User account created with bipmkpw
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> password = &amp;#34;00000000000000000000000000000000000000&amp;#34;; # the hash bipmkpw created
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_check_mode = &amp;#34;none&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # These will be the default for each connections
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> default_nick = &amp;#34;NICKNAME&amp;#34;; #IRC Nick
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> default_user = &amp;#34;IRCUSERNAME&amp;#34;; #IRC User
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> default_realname = &amp;#34;REALNAME&amp;#34;; #IRC Real Name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> admin = true;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> backlog_msg_only = true; # When true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # A user can have mutiple connections to irc networks.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # define a connection:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> connection {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;freenode&amp;#34;; # used by bip only
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> network = &amp;#34;freenode&amp;#34;; # which ircnet to connect to
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # these will be sent to the real IRC server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> user = &amp;#34;IRCUSERNAME&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> realname = &amp;#34;IRCREALNAME&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> password = &amp;#34;serverpassword&amp;#34;; #can be commented out if not needed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Some options:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> follow_nick = true;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ignore_first_nick = false;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> #on_connect_send = &amp;#34;PRIVMSG NickServ :IDENTIFY nspassword&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Autojoined channels:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> channel { name = &amp;#34;#cat&amp;#34;; }; # Join #cat
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> channel { name = &amp;#34;#dog&amp;#34;; backlog = false; }; # Join #dog but don&amp;#39;t backlog it.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> channel { name = &amp;#34;#pig&amp;#34;; key = &amp;#34;01nk01nk&amp;#34;; }; # Join #pig that has a password.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> connection {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;blitzed&amp;#34;; # used by bip only
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> network = &amp;#34;blitzed&amp;#34;; # which ircnet to connect to
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # these will be sent to the real IRC server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> user = &amp;#34;IRCUSERNAME&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> realname = &amp;#34;IRCREALNAME&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> password = &amp;#34;serverpassword&amp;#34;; #can be commented out if not needed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Some options:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> follow_nick = true;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ignore_first_nick = false;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> #on_connect_send = &amp;#34;PRIVMSG NickServ :IDENTIFY nspassword&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Autojoined channels:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> channel { name = &amp;#34;#bar&amp;#34;; };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> channel { name = &amp;#34;#foo&amp;#34;; };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you require any clarification about what the configuration options do then
+&lt;code>man bip.conf&lt;/code> is your friend.&lt;/p>
+&lt;h2 id="start-bip">Start BIP&lt;/h2>
+&lt;p>Now that BIP is configured, it can be started.&lt;/p>
+&lt;h3 id="debian-1">Debian&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/bip start
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="arch-linux-1">Arch Linux&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl start bip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="client-configuration">Client configuration&lt;/h2>
+&lt;p>I use &lt;a href="http://hexchat.github.io/">HexChat&lt;/a>, but other IRC clients are available.
+I add a new Network to HexChat for each of the IRC networks I defined in
+&lt;code>/etc/bip.conf&lt;/code>. The screen shot below shows how I configure a BIP network in
+HexChat.&lt;/p>
+&lt;p>&lt;img src="BIP-freenode.png" alt="HexChat BIP Configuration" title="Example HexChat Network Configuration to a BIP proxy">&lt;/p>
+&lt;h3 id="password-format">Password format&lt;/h3>
+&lt;p>The Password is the most important and confusing item. &lt;strong>This is for BIP,
+not for any IRC network&lt;/strong>. Remember the unhashed password? That goes here but
+with a twist. The format for the password is:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>bipusername:unhashedbippassword:bipnetwork
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Bipnetwork? What is that? It is from the following section of &lt;code>/etc/bip.conf&lt;/code>
+on the server?&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>network {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;freenode&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server { host = &amp;#34;chat.freenode.net&amp;#34;; port = 6667; };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A more practical example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>myuser:S3cr3tP@$$w0rd:freenode
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>And that&amp;rsquo;s it! We are now perpetually connected to IRC, can connect to BIP
+proxy from multiple devices in a completely transparent and seamless manner.
+Moreover, the logs for all channels are saved and automatically rotated on the
+server.&lt;/p>
+&lt;p>If you looking for an alternative to BIP, then try &lt;a href="http://wiki.znc.in/ZNC">ZNC&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>References&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.linaro.org/Resources/HowTo/BIP">https://wiki.linaro.org/Resources/HowTo/BIP&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://nerderati.com/2010/11/perpetual-irc-the-proxy-edition/">http://nerderati.com/2010/11/perpetual-irc-the-proxy-edition/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://stevengorrell.com/bip-irc-proxy/">http://stevengorrell.com/bip-irc-proxy/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Installing BIP IRC Proxy on Debian Wheezy &amp;amp; Arch Linux</summary></item><item><title>LXC on Arch Linux</title><link>https://wimpysworld.com/posts/lxc-on-arch-linux/</link><pubDate>Tue, 15 Apr 2014 02:44:11 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/lxc-on-arch-linux/</guid><description>&lt;p>At some point last year I was experimenting with Linux Containers (LXC) on
+Arch Linux. &lt;strong>I never finished the blog post but somehow it was briefly published
+and then unplublished&lt;/strong>. I have no idea how accurate this blog post is but someone
+did see it and bookmarked it. &lt;strong>They recently emailed me to ask where the blog has
+disappeared to, so here it is in all its unfinished glory&lt;/strong>.&lt;/p>
+&lt;h1 id="install-lxc">Install LXC&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Syy --needed --noconfirm arch-install-scripts bridge-utils lxc netctl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="netctl-bridge">netctl Bridge&lt;/h1>
+&lt;p>The guest containers will connect to the LAN via a bridged network deviced.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /etc/netctl/bridge
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">Description&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;Bridge&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">Interface&lt;/span>=br0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">Connection&lt;/span>=bridge
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">BindsToInterfaces&lt;/span>=(eth0)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">IP&lt;/span>=dhcp
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">## sets forward delay time&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">FwdDelay&lt;/span>=&lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">## sets max age of hello message&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">#MaxAge=10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable and start the bridge.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo netctl enable bridge
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo netctl start bridge
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="creating-containers">Creating Containers&lt;/h1>
+&lt;p>I&amp;rsquo;m only interested in running Arch Linux or Debian containers.&lt;/p>
+&lt;h2 id="container-configurations">Container Configurations&lt;/h2>
+&lt;p>Each container should have a matching configuration file, they look something like this.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>lxc.arch = i686
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.utsname = myhostname
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.network.type = veth
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.network.flags = up
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.network.link = br0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.network.ipv4 = 0.0.0.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.network.name = eth0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>lxc.arch&lt;/code> Architecture for the container, valid options are &lt;code>x86&lt;/code>, &lt;code>i686&lt;/code>, &lt;code>x86_64&lt;/code>, &lt;code>amd64&lt;/code>.&lt;/li>
+&lt;li>&lt;code>lxc.utsman&lt;/code> Container name, should also be used when naming the configuration file&lt;/li>
+&lt;li>&lt;code>lxc_network.type&lt;/code> Type of network virtualization to be used for the
+container. The option &lt;code>veth&lt;/code> defines a peer network device. It is created
+with one side assigned to the container and the other side is attached to a
+bridge by the &lt;code>lxc.network.link&lt;/code> option.&lt;/li>
+&lt;li>&lt;code>lxc_network.flags&lt;/code> Network actions. The value &lt;code>up&lt;/code> in this case activates the network.&lt;/li>
+&lt;li>&lt;code>lxc.network.link&lt;/code> Host network interface to be used for the container.&lt;/li>
+&lt;li>&lt;code>lxc.network.ipv4&lt;/code> IPv4 address assigned to the virtualized interface. Use
+the address 0.0.0.0 to make use of DHCP. Use &lt;code>lxc.network.ipv6&lt;/code> if you need
+IPv6 support.&lt;/li>
+&lt;li>&lt;code>lxc.network.name&lt;/code> Dynamically allocated interface name. This option will
+rename the interface in the container.&lt;/li>
+&lt;/ul>
+&lt;p>More example files can be found in &lt;code>/usr/share/doc/lxc/examples/&lt;/code>.
+Find details about all options via &lt;code>man lxc.conf&lt;/code>.&lt;/p>
+&lt;h2 id="arch-linux">Arch Linux&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-create -t archlinux -n arch-01 -f ~/arch-01.conf -- --packages netctl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I am unable to get DHCP to work for a Arch Linux LXC container, therefore
+my dirty hack is to alway use a statis IP address in the &lt;code>netctl&lt;/code> profile. There
+is also a bug (&lt;a href="https://bugs.archlinux.org/task/35715">#35715&lt;/a>) was helpful in
+narrowing down the problem, but wasn&amp;rsquo;t the solution in my case. Use
+&lt;code>/var/lib/lxc/CONTAIN_NAME/rootfs/etc/netctl/example/ethernet-static&lt;/code> as a template.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo cp /var/lib/lxc/CONTAIN_NAME/rootfs/etc/netctl/example/ethernet-static /var/lib/lxc/CONTAIN_NAME/rootfs/etc/netctl/static
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Modify &lt;code>/var/lib/lxc/CONTAIN_NAME/rootfs/etc/netctl/static&lt;/code> accordingly. Now
+create a hook, with the same name as the &lt;code>netctl&lt;/code> profile.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /var/lib/lxc/CONTAIN_NAME/rootfs/etc/netctl/hooks/static
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/usr/bin/env bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">if&lt;/span> [[ &lt;span style="color:#f00">$(&lt;/span>systemd-detect-virt&lt;span style="color:#f00">)&lt;/span> != none ]]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">BindsToInterfaces&lt;/span>=()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">ForceConnect&lt;/span>=yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the container and enable the &lt;code>netctl&lt;/code> profile.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>netctl enable static
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>netctl start static
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="debian-containers">Debian Containers.&lt;/h2>
+&lt;p>Install &lt;code>debobootstrap&lt;/code> and &lt;code>dpkg&lt;/code> so that Debian containers can be created.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>packer -S --noedit dpkg debootstrap
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="squeeze">Squeeze&lt;/h3>
+&lt;p>Create a Debian container, &lt;code>squeeze&lt;/code> is the default.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-create -t debian -n squeeze-01 -f ~/squeeze-01.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Change the &lt;code>root&lt;/code> password.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>chroot /var/lib/lxc/squeeze/rootfs/ passwd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="wheezy">Wheezy&lt;/h3>
+&lt;p>Much the same as the Squeeze exaple above but use the following template.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/simonvanderveldt/lxc-debian-wheezy-template">https://github.com/simonvanderveldt/lxc-debian-wheezy-template&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="using-containers">Using containers&lt;/h1>
+&lt;p>Start a container&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-start -d -n CONTAINER_NAME
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Connect to the container and log in:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-console -n CONTAINER_NAME
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>To halt a container cleanly by the containers initv-system:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-halt -n CONTAINER_NAME
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Stop and remove your container always with the two steps:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-stop -n CONTAINER_NAME
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo lxc-destroy -n CONTAINER_NAME
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://nurupoga.org/articles/archlinux-on-lxc-with-netctl/">http://nurupoga.org/articles/archlinux-on-lxc-with-netctl/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://bbs.archlinux.org/viewtopic.php?id=164753">https://bbs.archlinux.org/viewtopic.php?id=164753&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://andyortlieb.wordpress.com/2013/03/15/practical-use-of-lxc-in-arch-linux-in-march-of-2013/">http://andyortlieb.wordpress.com/2013/03/15/practical-use-of-lxc-in-arch-linux-in-march-of-2013/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Linux_Containers">https://wiki.archlinux.org/index.php/Linux_Containers&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Lxc-systemd">https://wiki.archlinux.org/index.php/Lxc-systemd&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Netctl">https://wiki.archlinux.org/index.php/Netctl&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.suse.com/documentation/sles11/singlehtml/lxc_quickstart/lxc_quickstart.html">https://www.suse.com/documentation/sles11/singlehtml/lxc_quickstart/lxc_quickstart.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://wiki.gentoo.org/wiki/LXC">http://wiki.gentoo.org/wiki/LXC&lt;/a>&lt;/li>
+&lt;/ul></description><summary>A rough guide to running Debian containers on Arch Linux with LXC</summary></item><item><title>Memory consumption of Linux desktop environments</title><link>https://wimpysworld.com/posts/memory-consumption-of-linux-desktop-environments/</link><pubDate>Sun, 23 Mar 2014 13:30:27 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/memory-consumption-of-linux-desktop-environments/</guid><description>&lt;div class="alert alert-info">
+&lt;strong>Note&lt;/strong> Updated on June 3rd 2014 and now includes LXQt and Unity.
+&lt;/div>
+&lt;p>For the last 9 months or so I&amp;rsquo;ve spent my spare time working with the
+&lt;a href="http://mate-desktop.org">MATE Desktop Team&lt;/a>. Every so often, via the various
+on-line MATE communities, the topic of how &lt;em>&amp;ldquo;light weight&amp;rdquo;&lt;/em> MATE is when
+compared to other desktop environments crops up and quite often
+&lt;a href="http://www.xfce.org/">Xfce&lt;/a> is suggested as a lighter alternative. After all
+MATE and Xfce both provide a traditional desktop environment based on GTK+ so
+this suggestion is sensible. But is Xfce actually &lt;em>&amp;ldquo;lighter&amp;rdquo;&lt;/em> than MATE?&lt;/p>
+&lt;p>I&amp;rsquo;ve found MATE to be (subjectively) more responsive that Xfce and there have
+been two recent blog posts that indicate MATE has lower memory requirements than
+Xfce.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://l3net.wordpress.com/2013/12/17/four-lightweight-desktops-for-opensuse-13-1/">Four Lightweight Desktops for openSUSE 13.1&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://l3net.wordpress.com/2014/02/15/a-memory-comparison-of-light-linux-desktops-part-3/">A Memory Comparison of Light Linux Desktops – Part 3&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Given that I&amp;rsquo;m comfortably running MATE on the Raspberry Pi Model B (which has
+just 512MB RAM) I&amp;rsquo;ve been stating that MATE is well suited for use on resource
+constrained hardware and professional workstations alike. This is still true,
+but I&amp;rsquo;ve also said that MATE is lighter than Xfce and I might have to eat humble
+pie on that one.&lt;/p>
+&lt;p>The topic of measursing desktop environment resource use came up on the
+&lt;code>#archlinux-tu&lt;/code> IRC channel recently and someone suggested using
+&lt;a href="https://github.com/pixelb/ps_mem/">ps_mem.py&lt;/a> to gather the memory usage data.
+&lt;code>ps_mem.py&lt;/code> provides a far more robust mechanism for gathering memory usage data
+than I&amp;rsquo;ve seen in previous comparisons.&lt;/p>
+&lt;p>So the seed was planted, I created a bunch of VirtualBox guest machines and set
+to work comparing the memory requirements of all the Linux desktop environments
+I could.&lt;/p>
+&lt;h2 id="damn-it-just-tell-me-what-the-lightest-desktop-environment-is">Damn it, just tell me what the &amp;ldquo;&lt;em>lightest&lt;/em>&amp;rdquo; desktop environment is!&lt;/h2>
+&lt;p>OK, for those of you who just want the final answer, with none of the
+explanation, here it is:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Desktop Environment&lt;/th>
+&lt;th>Memory Used&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Enlightenment 0.18.8&lt;/td>
+&lt;td>83.8 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LXDE 0.5.5&lt;/td>
+&lt;td>87.0 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Xfce 4.10.2&lt;/td>
+&lt;td>110.0 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LXQt 0.7.0&lt;/td>
+&lt;td>113.0 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MATE 1.8.1&lt;/td>
+&lt;td>123.0 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cinnamon 2.2.13&lt;/td>
+&lt;td>176.3 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GNOME3 3.12.2&lt;/td>
+&lt;td>245.3 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>KDE 4.13.1&lt;/td>
+&lt;td>302.6 MiB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Unity 7.2.0.14&lt;/td>
+&lt;td>312.5 MiB&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="bullshit-how-did-you-come-up-with-these-numbers">Bullshit! How did you come up with these numbers?&lt;/h2>
+&lt;p>All the VirtualBox VMs are 32-bit with 768MB RAM and based on the same core
+&lt;a href="http://www.archlinux.org">Arch Linux&lt;/a> installation. I achieved this using my
+&lt;a href="https://github.com/flexiondotorg/archinstaller">ArchInstaller&lt;/a> script which is
+designed for quickly installing reproducible Arch Linux setups.&lt;/p>
+&lt;p>Each VM differs only by the packages that are required for the given desktop
+environment. The desktop environments native display manager is also installed
+but if it doesn&amp;rsquo;t have one then &lt;code>lightdm&lt;/code> was chosen. LXDE, Xfce, MATE, Cinnamon
+and GNOME all have &lt;code>gvfs-smb&lt;/code> installed as this enables accessing Windows and
+Samba shares (a common requirement for home and office) in their respective file
+managers and the KDE install includes packages to provide equivalent functionality.
+You can see the specific desktop environment packages or package groups that were
+installed here:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/ArchInstaller/tree/master/packages/desktop">https://github.com/flexiondotorg/ArchInstaller/tree/master/packages/desktop&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Each VM was booted, logged in and any initial desktop environment configuration
+was completed choosing the default options if prompted. Then &lt;code>ps_mem&lt;/code> was
+installed, the VM shut down and a snapshot made.&lt;/p>
+&lt;p>Each VM was then started, logged in via the display manager, the desktop
+environment was fully loaded and waited for disk activity to settle. Then
+&lt;code>ps -efH&lt;/code> and &lt;code>ps_mem&lt;/code> were executed via SSH and the results sent back to my
+workstation. When the process and memory collections were conducted there had
+been no desktop interaction and no applications had been launched.&lt;/p>
+&lt;h2 id="your-numbers-are-wrong-i-can-get-xxx-desktop-to-run-in-yyy-less-memory">Your numbers are wrong I can get &lt;em>xxx&lt;/em> desktop to run in &lt;em>yyy&lt;/em> less memory!&lt;/h2>
+&lt;p>Well done, you probably can.&lt;/p>
+&lt;p>Each virtual machine has VirtualBox guest additions, OpenSSH, Network Manager,
+&lt;code>avahi-daemon&lt;/code>, &lt;code>ntpd&lt;/code>, &lt;code>rpc.statd&lt;/code>, &lt;code>syslog-ng&lt;/code> and various other bits and bobs
+installed and running. Some of these are not required or have lighter alternatives
+available.&lt;/p>
+&lt;p>So, while I freely accept that each desktop environment can be run in less memory,
+the results here are relative to a consistent base setup.&lt;/p>
+&lt;p>However, what is important to note is that &lt;strong>I think the Cinnamon results are
+too low&lt;/strong>. Cinnamon is forked from GNOME3 and the Arch Linux package groups for
+Cinnamon only install the core Cinnamon packages but none of the GNOME3
+applications or components that would be required to create a full desktop
+environment.&lt;/p>
+&lt;p>So comparing Cinnamon with the other desktops in this test is not a fair
+comparison. For example, GNOME3 and KDE default installs on Arch Linux include
+all the accessibility extensions and applications for sight or mobility impaired
+individuals where as Cinnamon does not. This is just one example of where I
+think the Cinnamon results are skewed.&lt;/p>
+&lt;h2 id="the-ram-is-there-to-be-used-is-lighter-actually-better">The RAM is there to be used. Is lighter actually better?&lt;/h2>
+&lt;p>No, and Yes.&lt;/p>
+&lt;p>I subscribe to the school of thought that RAM is there to be used. But;&lt;/p>
+&lt;ul>
+&lt;li>I want to preserve as much free RAM for the applications I run, not for feature bloat in the desktop environment. I&amp;rsquo;m looking at you KDE.&lt;/li>
+&lt;li>I want a fully integrated desktop experience, but not one that is merely lighter because it lacks features. I&amp;rsquo;m looking at you LXDE.&lt;/li>
+&lt;li>I want a consistent user interface that any of my family could use, not one that favours style over substance. I&amp;rsquo;m looking at you Enlightenment.&lt;/li>
+&lt;/ul>
+&lt;p>Another take on lightness is that the more RAM used, the more code that needs
+executing. Therefore, higher CPU utilisation and degraded desktop performance
+on modest hardware. This could also translate into degraded battery performance.&lt;/p>
+&lt;p>This is why I choose MATE Desktop. It is a fully integrated desktop environment,
+that is responsive, feature full, has reasonable memory requirements and scales
+from single core armv6h CPU with 512MB RAM to multi core x86_64 CPU with 32GB
+RAM (for me at least).&lt;/p>
+&lt;h2 id="without-the-full-stats-it-never-happened-prove-it">Without the full stats it never happened. Prove it!&lt;/h2>
+&lt;p>He is the full data capture from &lt;code>ps_mem.py&lt;/code> for each desktop environment.&lt;/p>
+&lt;h3 id="enlightenment">Enlightenment&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>172.0 KiB + 46.5 KiB = 218.5 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>316.0 KiB + 40.0 KiB = 356.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>336.0 KiB + 87.5 KiB = 423.5 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>560.0 KiB + 37.0 KiB = 597.0 KiB crond
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>580.0 KiB + 54.0 KiB = 634.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>688.0 KiB + 67.5 KiB = 755.5 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>480.0 KiB + 276.0 KiB = 756.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>700.0 KiB + 133.5 KiB = 833.5 KiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 78.5 KiB = 846.5 KiB VBoxService
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>580.0 KiB + 267.0 KiB = 847.0 KiB tempget
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>544.0 KiB + 312.0 KiB = 856.0 KiB enlightenment_start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>764.0 KiB + 94.0 KiB = 858.0 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>600.0 KiB + 280.5 KiB = 880.5 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>624.0 KiB + 298.0 KiB = 922.0 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>724.0 KiB + 309.5 KiB = 1.0 MiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>784.0 KiB + 386.5 KiB = 1.1 MiB enlightenment_fm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>952.0 KiB + 395.0 KiB = 1.3 MiB efreetd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.0 MiB + 517.0 KiB = 1.5 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.3 MiB + -3781.0 KiB = 1.7 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 483.0 KiB = 1.7 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 234.0 KiB = 1.9 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 1.0 MiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 814.5 KiB = 2.2 MiB lightdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 1.1 MiB = 2.4 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 575.5 KiB = 3.2 MiB VBoxClient (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.4 MiB + 781.0 KiB = 3.2 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 10.9 MiB + -7741.5 KiB = 3.3 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.2 MiB + 68.5 KiB = 6.3 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.3 MiB + -2300.0 KiB = 9.1 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 16.3 MiB + 426.0 KiB = 16.7 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 19.9 MiB + 1.5 MiB = 21.4 MiB enlightenment
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 89.6 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="lxde">LXDE&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>184.0 KiB + 45.0 KiB = 229.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>320.0 KiB + 36.0 KiB = 356.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>340.0 KiB + 83.0 KiB = 423.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>360.0 KiB + 78.0 KiB = 438.0 KiB lxdm-binary
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>384.0 KiB + 93.5 KiB = 477.5 KiB lxsession
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>580.0 KiB + 50.0 KiB = 630.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>700.0 KiB + 55.0 KiB = 755.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>464.0 KiB + 297.0 KiB = 761.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.6 MiB + -3890.5 KiB = 821.5 KiB menu-cached
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>612.0 KiB + 213.0 KiB = 825.0 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>500.0 KiB + 328.0 KiB = 828.0 KiB lxdm-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 97.5 KiB = 865.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>632.0 KiB + 251.5 KiB = 883.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>644.0 KiB + 244.5 KiB = 888.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>776.0 KiB + 189.0 KiB = 965.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3888.5 KiB = 1.0 MiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>884.0 KiB + 305.0 KiB = 1.2 MiB gvfsd-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 322.0 KiB = 1.4 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 381.0 KiB = 1.5 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 410.0 KiB = 1.5 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.0 MiB + 485.5 KiB = 1.5 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 507.0 KiB = 1.7 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 259.0 KiB = 1.9 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 991.5 KiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 1.1 MiB = 2.4 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.5 MiB + 983.0 KiB = 2.4 MiB lxpolkit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.3 MiB + -3414.0 KiB = 3.0 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.3 MiB + 706.5 KiB = 4.0 MiB openbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.4 MiB + 59.5 KiB = 4.4 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.9 MiB + -1941.0 KiB = 5.0 MiB lxpanel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 12.9 MiB + -7745.0 KiB = 5.3 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.6 MiB + 1.8 MiB = 5.4 MiB pcmanfm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.5 MiB + -3637.5 KiB = 8.0 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.1 MiB + 1.8 MiB = 9.0 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.9 MiB + 604.5 KiB = 14.5 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 87.0 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="xfce">Xfce&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>176.0 KiB + 32.0 KiB = 208.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>292.0 KiB + 26.5 KiB = 318.5 KiB gpg-agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>316.0 KiB + 32.0 KiB = 348.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>324.0 KiB + 81.0 KiB = 405.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>488.0 KiB + 96.0 KiB = 584.0 KiB xfconfd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>588.0 KiB + 47.0 KiB = 635.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>464.0 KiB + 260.0 KiB = 724.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>712.0 KiB + 49.0 KiB = 761.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>608.0 KiB + 173.0 KiB = 781.0 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>644.0 KiB + 169.5 KiB = 813.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 57.5 KiB = 825.5 KiB VBoxService
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>784.0 KiB + 55.5 KiB = 839.5 KiB sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>640.0 KiB + 218.5 KiB = 858.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>764.0 KiB + 94.5 KiB = 858.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>760.0 KiB + 160.0 KiB = 920.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>872.0 KiB + 174.0 KiB = 1.0 MiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3831.0 KiB = 1.1 MiB gvfsd-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 311.0 KiB = 1.4 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 282.0 KiB = 1.4 MiB tumblerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 289.0 KiB = 1.4 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 369.0 KiB = 1.4 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 353.0 KiB = 1.5 MiB xfce4-notifyd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 515.0 KiB = 1.7 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 483.5 KiB = 1.8 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 248.5 KiB = 1.9 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.5 MiB + 465.0 KiB = 1.9 MiB Thunar
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.4 MiB + -3457.5 KiB = 2.0 MiB lightdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 992.5 KiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 695.5 KiB = 2.1 MiB panel-6-systray
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 651.0 KiB = 2.3 MiB xfce4-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 1.1 MiB = 2.3 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.9 MiB + 525.0 KiB = 2.4 MiB xfsettingsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 903.0 KiB = 2.5 MiB panel-2-actions
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.3 MiB + -3505.0 KiB = 2.9 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 442.5 KiB = 3.0 MiB VBoxClient (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 624.5 KiB = 3.2 MiB xfce4-power-manager (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.1 MiB + 1.1 MiB = 3.2 MiB xfwm4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.1 MiB + 1.3 MiB = 4.4 MiB xfce4-panel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + 61.5 KiB = 5.0 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 12.9 MiB + -7827.0 KiB = 5.3 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.8 MiB + 1.6 MiB = 5.4 MiB xfdesktop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.6 MiB + 1.3 MiB = 7.8 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.5 MiB + -3643.5 KiB = 7.9 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 23.0 MiB + -3258.0 KiB = 19.8 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 110.0 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="lxqt">LXQt&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>176.0 KiB + 35.0 KiB = 211.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>320.0 KiB + 35.0 KiB = 355.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>324.0 KiB + 83.0 KiB = 407.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>612.0 KiB + 51.0 KiB = 663.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>460.0 KiB + 267.0 KiB = 727.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>676.0 KiB + 53.0 KiB = 729.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>580.0 KiB + 179.0 KiB = 759.0 KiB menu-cached (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 63.5 KiB = 831.5 KiB VBoxService
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>604.0 KiB + 247.0 KiB = 851.0 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 96.5 KiB = 864.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>648.0 KiB + 231.5 KiB = 879.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>4.7 MiB + -3856.0 KiB = 976.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>908.0 KiB + 396.0 KiB = 1.3 MiB lxqt-globalkeysd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.1 MiB + 425.0 KiB = 1.5 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.1 MiB + 484.5 KiB = 1.6 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.2 MiB + 551.0 KiB = 1.7 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.6 MiB + 248.0 KiB = 1.9 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.1 MiB + 998.5 KiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.3 MiB + 1.0 MiB = 2.3 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.5 MiB + 933.5 KiB = 2.4 MiB lxqt-policykit-agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.6 MiB + 901.0 KiB = 2.4 MiB lxqt-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>1.7 MiB + 837.0 KiB = 2.5 MiB sddm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2.6 MiB + 456.5 KiB = 3.0 MiB VBoxClient (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>6.3 MiB + -3350.0 KiB = 3.1 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2.4 MiB + 1.5 MiB = 3.8 MiB lxqt-powermanagement
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2.6 MiB + 1.5 MiB = 4.1 MiB lxqt-runner
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>3.4 MiB + 881.0 KiB = 4.3 MiB openbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2.7 MiB + 1.8 MiB = 4.5 MiB lxqt-notificationd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>4.7 MiB + 59.5 KiB = 4.7 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>12.5 MiB + -7812.0 KiB = 4.9 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>3.8 MiB + 2.2 MiB = 6.0 MiB lxqt-panel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>11.5 MiB + -3644.5 KiB = 7.9 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>11.2 MiB + -2581.0 KiB = 8.7 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>12.2 MiB + 366.0 KiB = 12.6 MiB pcmanfm-qt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>18.2 MiB + -644.0 KiB = 17.6 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 113.0 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="mate">MATE&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>248.0 KiB + 57.0 KiB = 305.0 KiB rtkit-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>316.0 KiB + 31.0 KiB = 347.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>344.0 KiB + 81.0 KiB = 425.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>388.0 KiB + 80.5 KiB = 468.5 KiB dbus-launch (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.4 MiB + -4003.0 KiB = 525.0 KiB dconf-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>588.0 KiB + 45.0 KiB = 633.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>552.0 KiB + 117.0 KiB = 669.0 KiB gconfd-2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>456.0 KiB + 259.0 KiB = 715.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>548.0 KiB + 189.0 KiB = 737.0 KiB gconf-helper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>692.0 KiB + 47.0 KiB = 739.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>592.0 KiB + 150.5 KiB = 742.5 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>660.0 KiB + 179.5 KiB = 839.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>644.0 KiB + 199.5 KiB = 843.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 92.5 KiB = 860.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.7 MiB + -3955.0 KiB = 893.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3943.5 KiB = 1.0 MiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3854.0 KiB = 1.1 MiB gvfsd-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + -3789.0 KiB = 1.3 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3817.0 KiB = 1.4 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 337.0 KiB = 1.4 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 249.5 KiB = 1.9 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 429.0 KiB = 2.0 MiB polkit-mate-authentication-agent-1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.4 MiB + -3485.5 KiB = 2.0 MiB lightdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.7 MiB + 510.5 KiB = 2.2 MiB dbus-daemon (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 1.0 MiB = 2.3 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 1.0 MiB = 2.4 MiB systemd (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.8 MiB + 679.5 KiB = 2.4 MiB (sd-pam) (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.9 MiB + 570.5 KiB = 2.5 MiB mate-screensaver
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.0 MiB + 536.0 KiB = 2.5 MiB mate-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.9 MiB + 679.5 KiB = 2.6 MiB notification-area-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.1 MiB + 703.0 KiB = 2.8 MiB mate-power-manager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.2 MiB + 596.0 KiB = 2.8 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.7 MiB + 686.5 KiB = 3.4 MiB marco
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 937.5 KiB = 3.5 MiB wnck-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.6 MiB + 309.5 KiB = 3.9 MiB pulseaudio
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.7 MiB + 1.2 MiB = 3.9 MiB mate-volume-control-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.0 MiB + 1.0 MiB = 4.0 MiB clock-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.6 MiB + -2931.0 KiB = 4.7 MiB mate-settings-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.7 MiB + -2790.0 KiB = 4.9 MiB mate-panel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + 60.5 KiB = 5.1 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.0 MiB + -7854.0 KiB = 5.3 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 10.2 MiB + -2592.0 KiB = 7.7 MiB caja
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.5 MiB + -3653.5 KiB = 7.9 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.5 MiB + 1.1 MiB = 8.6 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 14.9 MiB + 1.2 MiB = 16.1 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 123.0 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="cinnamon">Cinnamon&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>248.0 KiB + 56.0 KiB = 304.0 KiB rtkit-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>316.0 KiB + 31.0 KiB = 347.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>340.0 KiB + 82.0 KiB = 422.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.4 MiB + -3995.0 KiB = 469.0 KiB dconf-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>384.0 KiB + 88.5 KiB = 472.5 KiB dbus-launch (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>576.0 KiB + 44.0 KiB = 620.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>556.0 KiB + 115.0 KiB = 671.0 KiB gconfd-2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>452.0 KiB + 258.0 KiB = 710.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>544.0 KiB + 185.0 KiB = 729.0 KiB gconf-helper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>596.0 KiB + 174.5 KiB = 770.5 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>656.0 KiB + 170.5 KiB = 826.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>800.0 KiB + 47.0 KiB = 847.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>640.0 KiB + 208.5 KiB = 848.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 88.5 KiB = 856.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.7 MiB + -3946.0 KiB = 910.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3938.5 KiB = 1.0 MiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3847.0 KiB = 1.1 MiB gvfsd-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + -3818.0 KiB = 1.3 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3819.0 KiB = 1.4 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 340.0 KiB = 1.4 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 303.0 KiB = 1.4 MiB cupsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 394.0 KiB = 1.7 MiB csd-printer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 198.5 KiB = 1.8 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 599.5 KiB = 2.0 MiB lightdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 513.5 KiB = 2.1 MiB dbus-daemon (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 979.0 KiB = 2.2 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 1.0 MiB = 2.4 MiB systemd (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.9 MiB + 784.5 KiB = 2.6 MiB (sd-pam) (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.2 MiB + -3555.0 KiB = 2.7 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.6 MiB + -3794.5 KiB = 2.9 MiB colord
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.7 MiB + 713.5 KiB = 3.4 MiB polkit-gnome-authentication-agent-1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.8 MiB + 805.0 KiB = 3.6 MiB cinnamon-screensaver
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.6 MiB + 341.5 KiB = 3.9 MiB pulseaudio
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.2 MiB + 826.5 KiB = 4.0 MiB cinnamon-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.9 MiB + 56.5 KiB = 5.0 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.2 MiB + -7890.0 KiB = 5.4 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.9 MiB + 2.1 MiB = 6.0 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.5 MiB + 2.0 MiB = 7.5 MiB cinnamon-settings-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.4 MiB + -3668.5 KiB = 7.9 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 8.2 MiB + 1.1 MiB = 9.3 MiB cinnamon-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.7 MiB + 2.0 MiB = 9.8 MiB nemo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 21.2 MiB + -527.5 KiB = 20.7 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 85.9 MiB + -34668.5 KiB = 52.1 MiB cinnamon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 176.3 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="gnome3">GNOME3&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>180.0 KiB + 34.0 KiB = 214.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>276.0 KiB + 14.0 KiB = 290.0 KiB ssh-agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>248.0 KiB + 51.0 KiB = 299.0 KiB rtkit-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>312.0 KiB + 28.0 KiB = 340.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>324.0 KiB + 21.5 KiB = 345.5 KiB systemd-hostnamed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>328.0 KiB + 20.0 KiB = 348.0 KiB systemd-localed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>324.0 KiB + 80.0 KiB = 404.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>580.0 KiB + 52.5 KiB = 632.5 KiB bluetoothd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>604.0 KiB + 40.0 KiB = 644.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>556.0 KiB + 109.0 KiB = 665.0 KiB gconfd-2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>452.0 KiB + 252.0 KiB = 704.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>680.0 KiB + 44.0 KiB = 724.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>548.0 KiB + 182.0 KiB = 730.0 KiB gconf-helper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.6 MiB + -3950.5 KiB = 765.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>596.0 KiB + 185.0 KiB = 781.0 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 50.5 KiB = 818.5 KiB VBoxService
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>696.0 KiB + 146.5 KiB = 842.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 86.5 KiB = 854.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3960.0 KiB = 960.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>852.0 KiB + 137.5 KiB = 989.5 KiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>792.0 KiB + 267.0 KiB = 1.0 MiB zeitgeist-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3910.5 KiB = 1.3 MiB gdm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + -3853.0 KiB = 1.3 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.0 MiB + 291.0 KiB = 1.3 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3877.0 KiB = 1.3 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 286.0 KiB = 1.4 MiB cupsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 133.0 KiB = 1.5 MiB gnome-keyring-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 448.0 KiB = 1.5 MiB gdm-session-worker
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 359.0 KiB = 1.7 MiB gsd-printer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 509.0 KiB = 1.7 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 192.5 KiB = 1.8 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 648.0 KiB = 1.9 MiB mission-control-5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.6 MiB + -3676.5 KiB = 2.0 MiB gnome-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 984.5 KiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.5 MiB + 573.5 KiB = 2.1 MiB zeitgeist-datahub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 953.0 KiB = 2.2 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.1 MiB + -3700.5 KiB = 2.5 MiB colord
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.1 MiB + -3656.0 KiB = 2.5 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.2 MiB + 466.0 KiB = 2.6 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.0 MiB + 728.5 KiB = 2.7 MiB gnome-shell-calendar-server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 491.5 KiB = 3.1 MiB VBoxClient (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.5 MiB + 1.0 MiB = 3.5 MiB evolution-source-registry
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.5 MiB + -2914.5 KiB = 3.6 MiB tracker-extract
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.5 MiB + 338.5 KiB = 3.9 MiB pulseaudio
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.7 MiB + -2828.5 KiB = 3.9 MiB tracker-miner-fs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.4 MiB + 2.1 MiB = 5.5 MiB goa-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.3 MiB + -7973.0 KiB = 5.5 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.9 MiB + 728.0 KiB = 5.7 MiB tracker-store
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.1 MiB + 51.5 KiB = 6.2 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.2 MiB + 2.1 MiB = 6.3 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.4 MiB + -3668.5 KiB = 7.9 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 10.1 MiB + -1729.0 KiB = 8.4 MiB gnome-settings-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 8.1 MiB + 1.7 MiB = 9.8 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 10.7 MiB + -816.5 KiB = 9.9 MiB evolution-alarm-notify
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 24.6 MiB + 1.1 MiB = 25.7 MiB evolution-calendar-factory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>143.2 MiB + -56658.5 KiB = 87.9 MiB gnome-shell
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 245.3 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="kde">KDE&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 72.0 KiB + 8.0 KiB = 80.0 KiB start_kdeinit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 80.0 KiB + 13.5 KiB = 93.5 KiB kwrapper4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>128.0 KiB + 23.0 KiB = 151.0 KiB agetty
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>176.0 KiB + 28.0 KiB = 204.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>292.0 KiB + 28.5 KiB = 320.5 KiB gpg-agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>320.0 KiB + 28.0 KiB = 348.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>272.0 KiB + 84.0 KiB = 356.0 KiB cat (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>340.0 KiB + 79.0 KiB = 419.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>604.0 KiB + 39.0 KiB = 643.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>464.0 KiB + 247.0 KiB = 711.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 87.5 KiB = 855.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>852.0 KiB + 51.5 KiB = 903.5 KiB startkde
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>352.0 KiB + 669.0 KiB = 1.0 MiB systemd-udevd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>656.0 KiB + 524.5 KiB = 1.2 MiB kdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 420.0 KiB = 1.5 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>852.0 KiB + 780.0 KiB = 1.6 MiB klauncher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 346.0 KiB = 1.7 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.5 MiB + 256.5 KiB = 1.8 MiB akonadi_control
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 529.0 KiB = 1.8 MiB (sd-pam) (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 201.5 KiB = 1.8 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.5 MiB + 409.5 KiB = 1.9 MiB dbus-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 971.5 KiB = 2.1 MiB systemd (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>656.0 KiB + 1.5 MiB = 2.2 MiB kdeinit4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 997.0 KiB = 2.3 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 1.6 MiB = 2.9 MiB kio_trash (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.1 MiB + 1.1 MiB = 3.2 MiB klipper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.9 MiB + -3587.0 KiB = 3.4 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.4 MiB + 1.0 MiB = 3.5 MiB ksmserver
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.2 MiB + 594.5 KiB = 3.8 MiB kuiserver
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.2 MiB + 952.5 KiB = 4.1 MiB kglobalaccel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.4 MiB + 829.5 KiB = 4.2 MiB akonadi_migration_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.4 MiB + 837.5 KiB = 4.3 MiB polkit-kde-authentication-agent-1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.8 MiB + 716.5 KiB = 4.5 MiB knotify4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.4 MiB + 49.5 KiB = 4.5 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.8 MiB + 891.0 KiB = 4.7 MiB baloo_file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.8 MiB + 975.0 KiB = 4.7 MiB akonadi_maildispatcher_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.8 MiB + 983.0 KiB = 4.7 MiB akonadi_baloo_indexer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.1 MiB + 1.3 MiB = 5.4 MiB akonadi_newmailnotifier_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.3 MiB + 1.1 MiB = 5.4 MiB korgac
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.2 MiB + -7804.0 KiB = 5.6 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.5 MiB + 1.7 MiB = 7.1 MiB akonadi_notes_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.1 MiB + -3575.0 KiB = 7.6 MiB kactivitymanagerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.6 MiB + 2.1 MiB = 7.7 MiB akonadi_sendlater_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.4 MiB + -3697.5 KiB = 7.8 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.2 MiB + 777.5 KiB = 8.0 MiB akonadiserver
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.0 MiB + 2.9 MiB = 8.9 MiB akonadi_archivemail_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.3 MiB + 2.6 MiB = 8.9 MiB kmix
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.1 MiB + 2.9 MiB = 9.0 MiB akonadi_mailfilter_agent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.9 MiB + 2.4 MiB = 9.3 MiB kded4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 9.1 MiB + 2.7 MiB = 11.7 MiB akonadi_agent_launcher (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.8 MiB + -1069.5 KiB = 12.8 MiB kwin
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.2 MiB + 3.2 MiB = 16.5 MiB krunner
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 68.8 MiB + -49024.0 KiB = 21.0 MiB mysqld
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 30.3 MiB + -2270.0 KiB = 28.1 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 36.9 MiB + 6.8 MiB = 43.7 MiB plasma-desktop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 302.6 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="unity">Unity&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> Private + Shared = RAM used Program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 92.0 KiB + 14.0 KiB = 106.0 KiB cat
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>128.0 KiB + 21.0 KiB = 149.0 KiB agetty
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>180.0 KiB + 28.0 KiB = 208.0 KiB dbus-launch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>252.0 KiB + 47.0 KiB = 299.0 KiB rtkit-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>312.0 KiB + 27.0 KiB = 339.0 KiB dhcpcd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>324.0 KiB + 18.0 KiB = 342.0 KiB systemd-localed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>336.0 KiB + 21.0 KiB = 357.0 KiB systemd-timedated
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>344.0 KiB + 79.0 KiB = 423.0 KiB rpcbind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>412.0 KiB + 69.0 KiB = 481.0 KiB dconf-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>592.0 KiB + 39.0 KiB = 631.0 KiB systemd-logind
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>588.0 KiB + 92.5 KiB = 680.5 KiB indicator-messages-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>448.0 KiB + 245.0 KiB = 693.0 KiB avahi-daemon (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>604.0 KiB + 89.5 KiB = 693.5 KiB indicator-bluetooth-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>548.0 KiB + 168.0 KiB = 716.0 KiB gconf-helper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.6 MiB + -3955.0 KiB = 725.0 KiB at-spi-bus-launcher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>684.0 KiB + 42.0 KiB = 726.0 KiB systemd-udevd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>640.0 KiB + 100.0 KiB = 740.0 KiB gconfd-2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>636.0 KiB + 115.5 KiB = 751.5 KiB at-spi2-registryd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>652.0 KiB + 144.5 KiB = 796.5 KiB indicator-power-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>648.0 KiB + 158.5 KiB = 806.5 KiB gvfsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>772.0 KiB + 45.5 KiB = 817.5 KiB VBoxService
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>768.0 KiB + 85.5 KiB = 853.5 KiB rpc.statd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>796.0 KiB + 122.0 KiB = 918.0 KiB accounts-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>568.0 KiB + 391.5 KiB = 959.5 KiB (sd-pam)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.8 MiB + -3982.5 KiB = 969.5 KiB gvfsd-fuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>824.0 KiB + 253.0 KiB = 1.1 MiB dbus (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>828.0 KiB + 271.0 KiB = 1.1 MiB zeitgeist-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.9 MiB + -3904.0 KiB = 1.1 MiB gvfsd-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.0 MiB + 131.5 KiB = 1.2 MiB indicator-session-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.0 MiB + -3883.0 KiB = 1.2 MiB upowerd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 237.0 KiB = 1.3 MiB cupsd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 279.0 KiB = 1.4 MiB gvfs-udisks2-volume-monitor
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3857.0 KiB = 1.4 MiB udisksd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.1 MiB + 324.5 KiB = 1.4 MiB zeitgeist-fts
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.1 MiB + -3833.0 KiB = 1.4 MiB indicator-application-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.2 MiB + 382.0 KiB = 1.6 MiB indicator-sound-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.6 MiB + 174.5 KiB = 1.8 MiB syslog-ng
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.6 MiB + -3769.0 KiB = 1.9 MiB gnome-session
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>932.0 KiB + 1.0 MiB = 1.9 MiB systemd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 537.0 KiB = 2.0 MiB lightdm (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.4 MiB + 753.0 KiB = 2.1 MiB mission-control-5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.3 MiB + 936.0 KiB = 2.2 MiB sshd (2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1.8 MiB + 531.0 KiB = 2.3 MiB zeitgeist-datahub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.2 MiB + -3779.0 KiB = 2.5 MiB colord
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.2 MiB + 458.5 KiB = 2.6 MiB dbus-daemon (3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.2 MiB + -3682.0 KiB = 2.6 MiB NetworkManager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.3 MiB + 515.0 KiB = 2.8 MiB gnome-fallback-mount-helper
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.3 MiB + 485.0 KiB = 2.8 MiB polkit-gnome-authentication-agent-1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.4 MiB + 514.0 KiB = 2.9 MiB notify-osd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.5 MiB + 417.5 KiB = 3.0 MiB VBoxClient (4)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.6 MiB + 547.5 KiB = 3.1 MiB indicator-keyboard-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.7 MiB + 657.0 KiB = 3.3 MiB indicator-printers-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.7 MiB + 854.0 KiB = 3.5 MiB telepathy-indicator
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2.5 MiB + 1.1 MiB = 3.6 MiB evolution-source-registry
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.1 MiB + 577.0 KiB = 3.7 MiB bamfdaemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.6 MiB + 306.5 KiB = 3.9 MiB pulseaudio
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.0 MiB + 933.0 KiB = 3.9 MiB indicator-datetime-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.9 MiB + 1.3 MiB = 5.3 MiB unity-panel-service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 13.2 MiB + -7982.0 KiB = 5.4 MiB polkitd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4.4 MiB + 1.8 MiB = 6.1 MiB nm-applet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6.1 MiB + 747.0 KiB = 6.9 MiB goa-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7.3 MiB + 50.5 KiB = 7.3 MiB systemd-journald
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.4 MiB + -3690.5 KiB = 7.8 MiB ntpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5.3 MiB + 4.5 MiB = 9.8 MiB gnome-settings-daemon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 11.6 MiB + 1.0 MiB = 12.6 MiB nautilus
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 24.7 MiB + 1.2 MiB = 25.8 MiB evolution-calendar-factory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 40.2 MiB + -351.0 KiB = 39.9 MiB Xorg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>103.2 MiB + -4818.0 KiB = 98.5 MiB compiz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---------------------------------
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 312.5 MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=================================
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="final-thoughts">Final thoughts&lt;/h2>
+&lt;p>On Arch Linux at least, Xfce has lower resource requirements than MATE.
+When I said different in the past I was wrong, unless you use openSUSE
+in which case I was probably right, maybe.&lt;/p></description><summary>Comparing desktop environment memory usage with ps_mem</summary></item><item><title>Arch Linux</title><link>https://wimpysworld.com/projects/arch-linux/</link><pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/arch-linux/</guid><description>&lt;p>&lt;a href="https://archlinux.org">Arch Linux &lt;/a> is a Linux distribution that uses a rolling
+release model, such that a regular system update is all that is needed to obtain
+all the latest software. The design approach follows the KISS principle
+(&lt;i>&amp;ldquo;keep it simple, stupid&amp;rdquo;&lt;/i>) and focuses on elegance, code correctness,
+minimalism and simplicity.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://archlinux.org">Arch Linux &lt;/a>&lt;/li>
+&lt;li>Date: December 2013 - December 2016&lt;/li>
+&lt;li>Role: Trusted user &amp;amp; Package maintainer&lt;/li>
+&lt;/ul></description><summary>Arch Linux Trusted User &amp;amp; Package maintainer</summary></item><item><title>SketchUp Make on Arch Linux</title><link>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</link><pubDate>Thu, 15 Aug 2013 15:42:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</guid><description>&lt;p>I use &lt;a href="http://www.sketchup.com">SketchUp&lt;/a> at work to manipulate models for use
+in &lt;a href="http://earth.google.com">Google Earth&lt;/a>. Here is how I got SketchUp Make
+2013 installed and working on &lt;a href="http://www.archlinux.org">Arch Linux&lt;/a> under
+&lt;a href="http://www.winehq.com">Wine&lt;/a> 1.7.&lt;/p>
+&lt;h1 id="wine-for-arch-linux">Wine for Arch Linux&lt;/h1>
+&lt;p>Install Wine on Arch Linux as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed icoutils libwbclient libxslt lib32-mpg123 p11-kit lib32-p11-kit samba wine winetricks wine-mono wine_gecko
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm ttf-ms-fonts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For 64-bit also install the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm lib32-libwbclient lib32-libxslt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="installing-sketchup-make">Installing SketchUp Make&lt;/h1>
+&lt;p>Once Wine is installed download SketchUp Make 2013.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.sketchup.com/download">http://www.sketchup.com/download&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Create a clean wine prefix.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WINEPREFIX&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">/.sketchup&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WINEARCH&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;win32&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wineboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>corefonts&lt;/code> using &lt;code>winetricks&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>winetricks corefonts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the SketchUp Make setup.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wine SketchUpWEN.exe
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Follow the installation wizard, I just went with the defaults.&lt;/p>
+&lt;p>That&amp;rsquo;s it. SketchUp is installed and should be associated with the appropriate
+file types.&lt;/p>
+&lt;h2 id="video-corruption">Video Corruption&lt;/h2>
+&lt;p>My workstation has a Radeon 5000 series graphics card and I use the Open Source
+&lt;code>radeon&lt;/code> driver. I don&amp;rsquo;t know if this problem is specific to my hardware/drivers
+but SketchUp will eventually (sometimes immediately) encounter video corruption.
+Once that happens I can&amp;rsquo;t see or manipluate the models.&lt;/p>
+&lt;p>The solution that works for me is:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>env &lt;span style="color:#eedd82">WINEPREFIX&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">/.sketchup&amp;#34;&lt;/span> &lt;span style="color:#eedd82">LIBGL_ALWAYS_SOFTWARE&lt;/span>=&lt;span style="color:#f60">1&lt;/span> &lt;span style="color:#eedd82">vblank_mode&lt;/span>=&lt;span style="color:#f60">0&lt;/span> wine &lt;span style="color:#87ceeb">&amp;#34;C:\Program Files\SketchUp\SketchUp 2013\SketchUp.exe&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If this also works for you then &lt;code>SketchUp.desktop&lt;/code> can be modified to persist
+these settings.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nano ~/.local/share/applications/wine/Programs/SketchUp&lt;span style="color:#87ceeb">\ &lt;/span>2013/SketchUp.desktop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Replace the contents with what follows but change &lt;code>USER&lt;/code> with your username.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Desktop Entry]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Name=&lt;span style="color:#87ceeb">SketchUp&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Exec=&lt;span style="color:#87ceeb">env WINEPREFIX=&amp;#34;/home/USER/.sketchup&amp;#34; LIBGL_ALWAYS_SOFTWARE=1 vblank_mode=0 wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/USER/.sketchup/dosdevices/c:/users/USER/Start\\ Menu/Programs/SketchUp\\ 2013/SketchUp.lnk&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Type=&lt;span style="color:#87ceeb">Application&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>StartupNotify=&lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Icon=&lt;span style="color:#87ceeb">1871_SketchUpIcon.0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="uninstalling-sketchup-make">Uninstalling SketchUp Make&lt;/h2>
+&lt;p>Should you ever need to, you can uninstall SketchUp Make as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rm -rfv &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/.sketchup/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rfv ~/.local/share/applications/wine/Programs/SketchUp&lt;span style="color:#87ceeb">\ &lt;/span>2013/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://appdb.winehq.org/objectManager.php?sClass=version&amp;amp;iId=28620">http://appdb.winehq.org/objectManager.php?sClass=version&amp;amp;iId=28620&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Install SketchUp Make 2013 on Arch Linux with Wine 1.7</summary></item><item><title>Spring cleaning Arch Linux</title><link>https://wimpysworld.com/posts/spring-cleaning-arch-linux/</link><pubDate>Tue, 07 May 2013 18:09:21 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/spring-cleaning-arch-linux/</guid><description>&lt;p>About a year ago I migrated all my workstations, laptops and netbooks to
+&lt;a href="http://www.archlinux.org">Arch Linux&lt;/a>. Since then, I&amp;rsquo;ve setup Arch Linux
+on a &lt;a href="http://www.raspberrypi.org">Raspberry Pi&lt;/a> and this server was also
+recently migrated to Arch Linux.&lt;/p>
+&lt;p>I&amp;rsquo;ve had no major issues issues during the last year and have upgraded through
+five major Linux kernels, transitioned to &lt;code>systemd&lt;/code> and upgraded from GNOME 3.2
+to 3.8.&lt;/p>
+&lt;p>Although I have been disciplined about &lt;a href="https://wiki.archlinux.org/index.php/Pacnew_and_Pacsave_Files">merging &lt;code>.pacnew&lt;/code> files&lt;/a>
+frequently, during the upgrades and experimentation&amp;rsquo;s I have packages installed
+that I no longer require and obsolete files kicking about.&lt;/p>
+&lt;p>After the upgrade to GNOME 3.8 I decided to clean up a little. I rarely dip
+into the AUR, but when I do I always use &lt;a href="https://aur.archlinux.org/packages/packer/">&lt;code>packer&lt;/code>&lt;/a>
+to clearly separate what is official from what is not.&lt;/p>
+&lt;h2 id="finding-what-is-installed">Finding what is installed&lt;/h2>
+&lt;p>The following commands are useful for identifying installed packages based on
+where they were installed from. The package lists generated from the commands below
+can be quite big but often highlight packages that I know I&amp;rsquo;m no longer using nor
+require.&lt;/p>
+&lt;h3 id="listing-installed-packages">Listing installed packages&lt;/h3>
+&lt;p>List packages installed from the official repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Qq | grep -Fv -f &amp;lt;(pacman -Qqm)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>List packages installed from the AUR.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Qqm
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="listing-installed-packages-by-size">Listing installed packages by size&lt;/h3>
+&lt;p>Use &lt;code>pacsysclean&lt;/code> to list installed packages sorted by size, it helps identify
+large packages that are no longer required which can the be manually uninstalled.&lt;/p>
+&lt;h3 id="listing-orphaned-packages">Listing orphaned packages&lt;/h3>
+&lt;p>List orphaned packages install from the official repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Qqtd | grep -Fv -f &amp;lt;(pacman -Qqtdm)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>List ophaned packages from the AUR.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Qqmtd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="getting-package-information">Getting package information&lt;/h3>
+&lt;p>Get package information for a package in the official repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Si &amp;lt;package&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Get package information for a package in the AUR.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>packer -Si &amp;lt;package&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="removing-orphaned-packages">Removing orphaned packages&lt;/h2>
+&lt;p>Removing orphaned packages manually can be very time consuming, but is by far the
+safer option. However, I decided to take a brave pill a uninstall all orphaned
+packages automatically.&lt;/p>
+&lt;p>Remove all orphaned packages installed from the official repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Rs &lt;span style="color:#87ceeb">`&lt;/span>pacman -Qqtd | grep -Fv -f &amp;lt;(pacman -Qqtdm)&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove all ophanced packages install from the AUR.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Rs &lt;span style="color:#f00">$(&lt;/span>pacman -Qqtdm&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="re-installing-what-you-do-need">Re-installing what you do need&lt;/h2>
+&lt;p>When you do something scary like removing all the obsolete packages automatically,
+then you should really make sure you do have everything install that you require.&lt;/p>
+&lt;h3 id="re-install-64-bit-base">Re-install 64-bit base&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed &lt;span style="color:#87ceeb">`&lt;/span>pacman -Sqg base multilib-devel | grep -v gcc-libs | tr &lt;span style="color:#87ceeb">&amp;#39;\n&amp;#39;&lt;/span> &lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="re-install-32-bit-base">Re-install 32-bit base&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed &lt;span style="color:#87ceeb">`&lt;/span>pacman -Sqg base base-devel | tr &lt;span style="color:#87ceeb">&amp;#39;\n&amp;#39;&lt;/span> &lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Reinstall the groups required for a GNOME 3 desktop.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed &lt;span style="color:#87ceeb">`&lt;/span>pacman -Sqg gnome gnome-extra telepathy | tr &lt;span style="color:#87ceeb">&amp;#39;\n&amp;#39;&lt;/span> &lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install all missing dependencies for packages in the official repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed &lt;span style="color:#87ceeb">`&lt;/span>pacman -Si &lt;span style="color:#eedd82">$@&lt;/span> 2&amp;gt;/dev/null | awk -F &lt;span style="color:#87ceeb">&amp;#34;: &amp;#34;&lt;/span> -v &lt;span style="color:#eedd82">filter&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;^Depends&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">\ &lt;/span>&lt;span style="color:#87ceeb">&amp;#39;$0 ~ filter {gsub(/[&amp;gt;=&amp;lt;][^ ]*/,&amp;#34;&amp;#34;,$2) ; gsub(/ +/,&amp;#34;\n&amp;#34;,$2) ; print $2}&amp;#39;&lt;/span> | grep -v smtp- | sort -u&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install all missing dependencies for packages in the AUR. This will re-install even if the
+package is already installed. I can&amp;rsquo;t be arsed to filter it out for a one liner.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm &lt;span style="color:#87ceeb">`&lt;/span>packer -Si &lt;span style="color:#f00">$(&lt;/span>pacman -Qqm&lt;span style="color:#f00">)&lt;/span> 2&amp;gt;/dev/null | awk -F &lt;span style="color:#87ceeb">&amp;#34;: &amp;#34;&lt;/span> -v &lt;span style="color:#eedd82">filter&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;^Depends&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">\ &lt;/span>&lt;span style="color:#87ceeb">&amp;#39;$0 ~ filter {gsub(/[&amp;gt;=&amp;lt;][^ ]*/,&amp;#34;&amp;#34;,$2) ; gsub(/ +/,&amp;#34;\n&amp;#34;,$2) ; print $2}&amp;#39;&lt;/span> | grep -v java- | sort -u&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="find-files-not-associated-with-a-package">Find files not associated with a package&lt;/h2>
+&lt;p>When packages are removed they may leave some files behind. The following will find all files
+not associated with a package. These files can &lt;em>not&lt;/em> be automatically deleted, each entry
+requires assessment.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Qlq | sort -u &amp;gt; /tmp/db
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo find /bin /etc /sbin /usr ! -name lost+found &lt;span style="color:#87ceeb">\(&lt;/span> -type d -printf &lt;span style="color:#87ceeb">&amp;#39;%p/\n&amp;#39;&lt;/span> -o -print &lt;span style="color:#87ceeb">\)&lt;/span> | sort &amp;gt; /tmp/fs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>comm -23 /tmp/fs /tmp/db
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>As with all spring cleaning chores, I got bored by this stage as my workstation
+was looking pretty tidy. Much of what is presented in this blog post is a rehash
+of what others have already contributed to the &lt;a href="https://wiki.archlinux.org/">Arch Linux Wiki&lt;/a>.
+I&amp;rsquo;ve just organised what &amp;ldquo;&lt;em>Works For Me&lt;/em> ™&amp;rdquo; so I know what to do next year.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Pacman_Tips">https://wiki.archlinux.org/index.php/Pacman_Tips&lt;/a>&lt;/li>
+&lt;/ul></description><summary>How to clean up installed packages on Arch Linux.</summary></item><item><title>nullmailer on Arch Linux</title><link>https://wimpysworld.com/posts/nullmailer-on-arch-linux/</link><pubDate>Sat, 09 Mar 2013 23:27:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/nullmailer-on-arch-linux/</guid><description>&lt;p>I&amp;rsquo;ve been a fan of &lt;a href="http://untroubled.org/nullmailer/">nullmailer&lt;/a> for some years
+now, so much so that I took ownership of the &lt;a href="https://aur.archlinux.org/packages/nullmailer/">nullmailer package for Arch Linux&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>nullmailer is a sendmail/qmail/etc replacement MTA for hosts which
+relay to a fixed set of smart relays. It is designed to be simple to
+configure, secure, and easily extendable.&lt;/p>
+&lt;/blockquote>
+&lt;p>The other advantage &lt;code>nullmailer&lt;/code> has compared to similar tools is that is queues
+email until it is able to deliver it upstream.&lt;/p>
+&lt;p>Install &lt;code>nullmailer&lt;/code> as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>packer -S --noedit --noconfirm nullmailer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Configuring &lt;code>nullmailer&lt;/code> to relay via Gmail can be achieved using
+&lt;a href="http://en.wikipedia.org/wiki/SMTPS">SMTPS&lt;/a> or
+&lt;a href="http://en.wikipedia.org/wiki/Mail_submission_agent">MSA&lt;/a>. &lt;code>nullmailer&lt;/code> has
+had these capabilities since 1.10. The following provides some useful clues
+&lt;code>/usr/lib/nullmailer/smtp --help&lt;/code>.&lt;/p>
+&lt;p>While these examples are specific to relaying via Gmail, you can see it is
+trivial to adapt them to any other mail host.&lt;/p>
+&lt;h2 id="relay-via-gmail-using-msa">Relay via Gmail using MSA&lt;/h2>
+&lt;p>Add to following to &lt;code>/etc/nullmailer/remotes&lt;/code>. I prefer this technique.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>smtp.gmail.com smtp --port=&lt;span style="color:#f60">587&lt;/span> --auth-login --user=you@gmail.com --pass=Yourpassword --starttls
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="relay-via-gmail-using-smtps">Relay via Gmail using SMTPS&lt;/h2>
+&lt;p>Add to following to &lt;code>/etc/nullmailer/remotes&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>smtp.gmail.com smtp --port=&lt;span style="color:#f60">465&lt;/span> --auth-login --user=you@gmail.com --pass=Yourpassword --ssl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once you&amp;rsquo;ve got &lt;code>/etc/nullmailer/remotes&lt;/code> configured start the nullmailer service.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl start nullmailer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>To test &lt;code>nullmailer&lt;/code> can relay email correctly do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#87ceeb">&amp;#34;Test 1&amp;#34;&lt;/span> | mailx -s &lt;span style="color:#87ceeb">&amp;#34;Test One&amp;#34;&lt;/span> me@example.org
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can see what &lt;code>nullmailer&lt;/code> is up to by checking the systemd journal or syslog
+(if you&amp;rsquo;ve syslog enabled systemd). This is how to get the logs from the systemd
+journal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>journalctl &lt;span style="color:#eedd82">_SYSTEMD_UNIT&lt;/span>=nullmailer.service
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Or via syslog.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo grep nullmailer /var/log/daemon.log
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>When you&amp;rsquo;re happy &lt;code>nullmailer&lt;/code> is working enable the systemd unit.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable nullmailer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Email will now flow as required.&lt;/p></description><summary>Configuring nullmailer on Arch Linux to relay email via Gmail</summary></item><item><title>Uncomplicated Firewall (UFW) on Arch Linux</title><link>https://wimpysworld.com/posts/uncomplicated-firewall-ufw-on-arch-linux/</link><pubDate>Sat, 09 Mar 2013 08:37:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/uncomplicated-firewall-ufw-on-arch-linux/</guid><description>&lt;p>While migrating one of my VPS servers to &lt;a href="http://www.archlinux.org">Arch Linux&lt;/a>
+I deployed &lt;a href="https://wiki.ubuntu.com/UncomplicatedFirewall">Uncomplicated Firewall (UFW)&lt;/a>
+to handle basic firewall duties. I like &lt;code>ufw&lt;/code> as it provides simple host-based
+firewall management and, in my opinion, one of the better projects to come out
+of the Ubuntu camp.&lt;/p>
+&lt;p>Install &lt;code>ufw&lt;/code> as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Syy -noconfirm --needed ufw
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Configuring &lt;code>ufw&lt;/code> is simple but make sure you have console access to the host
+you are configuring just in case you lock yourself out.&lt;/p>
+&lt;p>&lt;strong>NOTE!&lt;/strong> When enabling &lt;code>ufw&lt;/code> the chains are flushed and connections may be
+dropped. You can add rules to the firewall before enabling it however, so if you
+are testing &lt;code>ufw&lt;/code> on a remote machine it is recommended you perform&amp;hellip;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ufw allow ssh/tcp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&amp;hellip;before running &lt;code>sudo ufw enable&lt;/code>. Once the firewall is enabled, adding and
+removing rules will not flush the firewall, although modifying an existing rule
+will.&lt;/p>
+&lt;p>Set the default behaviour to deny all incoming connections.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw default deny
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open up TCP port 22 but with rate limiting enabled which will deny connections
+from an IP address that has attempted to initiate 6 or more connections in the
+last 30 seconds. Ideal for protecting &lt;code>sshd&lt;/code> but you should conisder other
+&lt;a href="https://wimpysworld.com/posts/ssh-brute-force-defense/">SSH brute force defense&lt;/a>
+techniques as well.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw limit tcp/22
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I&amp;rsquo;m hosting a few websites on my VPS so I open http and https.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw allow 80/tcp
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ufw allow 443/tcp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the &lt;code>ufw&lt;/code> systemd unit.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable ufw
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl start ufw
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>However, &lt;code>ufw&lt;/code> is not enabled at this point. To enable the firewall you also
+have to do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw enable
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can see the status of the firewall using &lt;code>sudo ufw status&lt;/code>.&lt;/p>
+&lt;p>On low-end servers it might be beneficial to disable logging.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo ufw logging off
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>At this point you should have a basic firewall configured and &lt;code>ufw help&lt;/code> or the
+references below will assist you.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Uncomplicated_Firewall">https://wiki.archlinux.org/index.php/Uncomplicated_Firewall&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.ubuntu.com/UncomplicatedFirewall">https://wiki.ubuntu.com/UncomplicatedFirewall&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://launchpad.net/ufw">https://launchpad.net/ufw&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Configuring Uncomplicated Firewall (UFW) on Arch Linux.</summary></item><item><title>Installing Nikola on Arch Linux</title><link>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</link><pubDate>Fri, 08 Mar 2013 17:13:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</guid><description>&lt;p>I&amp;rsquo;ve decided to migrate one of my servers to &lt;a href="https://www.archlinux.org/">Arch Linux&lt;/a>.
+I&amp;rsquo;m not sure that a rolling release distro really suits servers but I&amp;rsquo;ve enjoyed
+using Arch Linux over the last year on my workstations and the only way to
+assess it&amp;rsquo;s suitability on a server is to try it. So, I&amp;rsquo;ve decided to migrate my
+blog to an Arch Linux server.&lt;/p>
+&lt;p>This blog post describes how to install &lt;a href="http://getnikola.com/">Nikola&lt;/a>
+on Arch Linux. Nikola is a static site and blog generator written in
+&lt;a href="http://www.python.org">Python&lt;/a> that I&amp;rsquo;ve been using for a few months.&lt;/p>
+&lt;p>First you&amp;rsquo;ll need Python and &lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>
+so read my &lt;a href="https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/">Python and virtualenv on Arch Linux and Ubuntu&lt;/a>
+blog post and get yourself equipped.&lt;/p>
+&lt;p>Install the Nikola dependencies.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --noconfirm --needed freetype2 libxslt libxml2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo packer -S --noconfirm --noedit libjpeg6
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Create a &lt;code>virtualenv&lt;/code> for Nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkvirtualenv -p /usr/bin/python2.7 nikola-640
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will notice your shell prompt has changed to indicate that the &lt;code>nikola-640&lt;/code>
+virtualenv is now active. Install Nikola and the optional libraries I use.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install https://github.com/getnikola/nikola/archive/v6.4.0.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you intend to use the Nikola planetoid (Planet generator) plugin you&amp;rsquo;ll also
+need to following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install peewee feedparser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nikola is now installed. &lt;code>nikola help&lt;/code> and the &lt;a href="http://getnikola.com/handbook.html">Nikola Handbook&lt;/a>
+will assist you from here on.&lt;/p></description><summary>Install Nikola static site generator in a virtualenv on Arch Linux</summary></item><item><title>Microsoft Office 2010 on Arch Linux and Ubuntu</title><link>https://wimpysworld.com/posts/microsoft-office-2010-on-arch-linux-and-ubuntu/</link><pubDate>Tue, 29 Jan 2013 16:16:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/microsoft-office-2010-on-arch-linux-and-ubuntu/</guid><description>&lt;p>We have a mix of Linux and Windows users at work. My department use Linux
+and the rest of the business use Windows. We been running a mixture of
+&lt;a href="http://www.libreoffice.org/">LibreOffice&lt;/a> and &lt;a href="http://office.microsoft.com/en-GB">Microsoft Office&lt;/a>,
+which works pretty well until you start trying to collaborate, then it gets
+messy pretty quickly.&lt;/p>
+&lt;p>So, it was decided at the end of 2012 to migrate everyone, including the
+Linux users, to Microsoft Office 2010.&lt;/p>
+&lt;p>What follows is an installation guide for &lt;a href="http://www.winehq.org/">Wine&lt;/a> and
+the &lt;a href="http://office.microsoft.com/en-gb/try/">60 day trial version of Office Home and Business 2010&lt;/a>
+on Arch Linux and Ubuntu. Most of this information was sourced from the Wine AppDB&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://appdb.winehq.org/objectManager.php?sClass=version&amp;amp;iId=17336">http://appdb.winehq.org/objectManager.php?sClass=version&amp;amp;iId=17336&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="wine-for-ubuntu-1204-lts-or-better">Wine for Ubuntu 12.04 LTS (or better)&lt;/h1>
+&lt;p>Install Wine on Ubuntu as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:ubuntu-wine/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install ttf-mscorefonts-installer samba wine1.5 wine-gecko1.8 wine-mono
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For 64-bit also install the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install ia32-libs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="wine-for-arch-linux">Wine for Arch Linux&lt;/h1>
+&lt;div class="alert alert-info">&lt;strong>Update&lt;/strong> I updated this section on August 8th 2013 to reflect recent changes in Arch Linux&lt;/div>
+&lt;p>Install Wine on Arch Linux as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed icoutils libwbclient libxslt lib32-mpg123 p11-kit lib32-p11-kit samba wine winetricks wine-mono wine_gecko
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm ttf-ms-fonts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For 64-bit also install the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm lib32-libwbclient lib32-libxslt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="installing-office-2010">Installing Office 2010&lt;/h1>
+&lt;p>Once Wine is installed, installing Office 2010 is the same for Arch Linux and Ubuntu.&lt;/p>
+&lt;p>Create a clean wine prefix.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WINEPREFIX&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">/.msoffice2010&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WINEARCH&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;win32&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>winecfg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Click the &lt;code>Libraries&lt;/code> tab, select &lt;code>riched20&lt;/code> and click &lt;code>Add&lt;/code>. The default entry
+should read &lt;code>riched20 (native, builtin)&lt;/code>. Click &lt;code>Apply&lt;/code>, then click &lt;code>OK&lt;/code>. This will
+ensure that PowerPoint starts and selection boxes display correctly.&lt;/p>
+&lt;p>Install &lt;code>libxml6&lt;/code> and &lt;code>corefonts&lt;/code> with &lt;code>winetricks&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>winetricks msxml6 corefonts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the Office 2010 setup. In the example below &lt;code>X17-75058.exe&lt;/code> is the name of the
+60 day trial version of Office Home and Business 2010 that I downloaded.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wine X17-75058.exe
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Follow the installation wizard, we are only interested in running the essentials,
+Word, Excel and PowerPoint. This is what I selected during the install.&lt;/p>
+&lt;ul>
+&lt;li>Enter your serial number.&lt;/li>
+&lt;li>Leave ticked &lt;code>Attempt to automatically activate my product online.&lt;/code>&lt;/li>
+&lt;li>Click &lt;code>Continue&lt;/code>&lt;/li>
+&lt;li>Tick &lt;code>I accept the terms of this agreement&lt;/code>&lt;/li>
+&lt;li>Click &lt;code>Continue&lt;/code>&lt;/li>
+&lt;li>Click &lt;code>Customise&lt;/code>
+&lt;ul>
+&lt;li>Microsoft Access (Trial) [Not Available]&lt;/li>
+&lt;li>Microsoft Excel [Run all from My Computer]&lt;/li>
+&lt;li>Microsoft OneNote [Not Available]&lt;/li>
+&lt;li>Microsoft Outlook [Not Available]&lt;/li>
+&lt;li>Microsoft PowerPoint [Run all from My Computer]&lt;/li>
+&lt;li>Microsoft Publisher (Trial) [Not Available]&lt;/li>
+&lt;li>Microsoft Visio Viewer [Run from My Computer]&lt;/li>
+&lt;li>Microsoft Word [Run all from My Computer]&lt;/li>
+&lt;li>Office Shared Features [Defaults]&lt;/li>
+&lt;li>Office Tools [Defaults]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Click &lt;code>Instal Now&lt;/code>.&lt;/li>
+&lt;li>Click &lt;code>Close&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>That&amp;rsquo;s it. Office 2010 is installed and should be associated with the appropriate
+file types.&lt;/p>
+&lt;h2 id="some-issues">Some Issues&lt;/h2>
+&lt;p>Here are some of the issues we noticed running Office 2010 under Wine.&lt;/p>
+&lt;ul>
+&lt;li>Always install Office 2010 into it&amp;rsquo;s own &lt;code>WINEPREFIX&lt;/code>. You are less likely to run into problem that way.&lt;/li>
+&lt;li>Online updates do not work. Fortunately, the trial installer has SP1 integrated.&lt;/li>
+&lt;li>If you purchase Office 2010 licenses you can still use the trial installer with your purchased license key(s).&lt;/li>
+&lt;li>We did test a trial of &lt;a href="http://www.codeweavers.com/">CrossOver&lt;/a>. However, it wouldn&amp;rsquo;t activate Office 2010 on Arch Linux but did activate on Ubuntu.&lt;/li>
+&lt;li>Files saved to &lt;code>cifs&lt;/code> mounts are set read-only. This might be a Wine issue or due to the unusual way we have our file server configured, we are still investigating.&lt;/li>
+&lt;/ul>
+&lt;h2 id="uninstalling-office-2010">Uninstalling Office 2010&lt;/h2>
+&lt;p>Should you ever need to, you can uninstall Office 2010 as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rm -rfv &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/.msoffice2010/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rfv ~/.local/share/applications/wine-extension-*
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rfv ~/.local/share/applications/wine/Programs/Microsoft&lt;span style="color:#87ceeb">\ &lt;/span>Office/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description><summary>Install Microsoft Office 2010 on Arch Linux and Ubuntu</summary></item><item><title>Python and virtualenv on Arch Linux and Ubuntu</title><link>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</link><pubDate>Tue, 11 Dec 2012 20:38:50 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</guid><description>&lt;p>We use &lt;a href="http://www.python.org">Python&lt;/a> for pretty much all our software
+development at &lt;a href="http://www.flightdataservices.com/">work&lt;/a>. We also use
+&lt;a href="http://www.virtualenv.org">virtualenv&lt;/a> and
+&lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>
+extensively, both for development &lt;em>and&lt;/em> deployment.&lt;/p>
+&lt;h2 id="why-is-virtualenv-so-great">Why is virtualenv so great?&lt;/h2>
+&lt;p>It just is. Read the &lt;a href="http://www.virtualenv.org/en/latest/">virtualenv documentation&lt;/a>.
+If you&amp;rsquo;re a Python developer you need &lt;code>virtualenv&lt;/code> in your life. You also need
+&lt;code>virtualenvwrapper&lt;/code> too.&lt;/p>
+&lt;blockquote>
+&lt;p>virtualenvwrapper is a set of extensions to Ian Bicking’s virtualenv tool
+for creating isolated Python development environments.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="installing-python-and-virtualenvwrapper">Installing Python and virtualenvwrapper&lt;/h2>
+&lt;p>Outlined below is how I install Python and &lt;code>virtualenvwrapper&lt;/code>. We have not
+yet made the jump to Python 3 at work, hence the references to Python 2.6 and
+2.7. Some of us develop on Arch Linux, but all deployments are on Ubuntu.&lt;/p>
+&lt;h3 id="arch-linux">Arch Linux&lt;/h3>
+&lt;p>As Arch Linux is a rolling release we can simply install everything via
+&lt;code>pacman&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Syy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed --noconfirm python-pip python-setuptools python-virtualenv
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed --noconfirm python2-pip python2-setuptools python2-virtualenv python-virtualenvwrapper&lt;span style="color:#87ceeb">&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Simple.&lt;/p>
+&lt;h3 id="ubuntu">Ubuntu&lt;/h3>
+&lt;p>The following was done on Ubuntu Lucid 10.04 LTS.&lt;/p>
+&lt;p>Add some essential PPAs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:bzr/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:git-core/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:fkrull/deadsnakes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Update the system and install Python 2.6 and 2.7.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.6 python2.6 python2.6-dev python2.6-minimal
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.7 python2.7 python2.7-dev python2.7-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove any &lt;code>apt&lt;/code> installed Python packages that we are about to repalce. The
+versions of these packages in the Ubuntu repos and PPAs are too old.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge python-setuptools python-virtualenv python-pip python-profiler
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>distribute&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -O http://python-distribute.org/distribute_setup.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.6 distribute_setup.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 distribute_setup.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>pip&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.6 get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 get-pip.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;code>pip&lt;/code> to install &lt;code>virtualenv&lt;/code> and &lt;code>virtualenv&lt;/code> wrapper.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pip-2.6 install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pip-2.7 install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pip install virtualenvwrapper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Fairly simple.&lt;/p>
+&lt;h3 id="the-snakepit">The Snakepit&lt;/h3>
+&lt;p>This step is common to Arch Linux and Ubuntu. Create a &lt;em>&amp;ldquo;Snakepit&amp;rdquo;&lt;/em> directory for
+storing all the virtualenvs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following your &lt;code>~/.bashrc&lt;/code> to enable &lt;code>virtualenvwrapper&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WORKON_HOME&lt;/span>=&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/Snakepit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">if&lt;/span> [ -f /usr/local/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/local/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">elif&lt;/span> [ -f /usr/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="creating-a-virtualenv">Creating a virtualenv&lt;/h2>
+&lt;p>Open a new shell to ensure that the &lt;code>virtualenvwrapper&lt;/code> configuration is
+active.&lt;/p>
+&lt;p>The following will create a new virtualenv called &lt;code>Nikola5&lt;/code> based on Python
+2.7 and will not give access to the global &lt;code>site-packages&lt;/code> directory.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkvirtualenv -p python2.7 --no-site-packages ~/Snakepit/Nikola5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>mkvirtualenv_help&lt;/code> shows a full list of arguments, the &lt;code>-r&lt;/code> switch can install
+all the packages listed in a &lt;code>pip&lt;/code> requirements file into the newly created
+virtualenv. Very useful.&lt;/p>
+&lt;h2 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h2>
+&lt;p>To workon, or activate, an existing virtualenv do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>workon Nikola5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can switch to another virtualenv at any time, just use &lt;code>workon envname&lt;/code>.
+Your shell prompt will change while a virtualenv is being worked on to indicate
+which virtualenv is currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or manually
+install any Python libraries safe in the knowledge you will not adversely
+damage any other virtualenvs or the global packages in the process. Very useful
+for developing a new branch which may have different library requirements than
+the master/head.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by simply
+executing:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>deactivate
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>That just about sums up my notes.&lt;/p></description><summary>Installing Python and virtualenv on Arch Linux and Ubuntu</summary></item><item><title>SSH brute force defense</title><link>https://wimpysworld.com/posts/ssh-brute-force-defense/</link><pubDate>Mon, 26 Nov 2012 13:14:09 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/ssh-brute-force-defense/</guid><description>&lt;p>I have several VPS hosts with different providers using different
+virtualisation platforms. Naturally I have &lt;a href="http://www.openssh.org/">OpenSSH&lt;/a>
+running on these VPS hosts and deploy either &lt;a href="http://denyhosts.sourceforge.net/">DenyHosts&lt;/a>
+or &lt;a href="http://www.fail2ban.org/">Fail2Ban&lt;/a> to add an extra security layer to
+thwart SSH brute force attacks and other abuse.&lt;/p>
+&lt;p>DenyHosts blocks brute force attacks by adding offending IP addresses to
+&lt;code>/etc/hosts.deny&lt;/code>. It therefore requires the SSH server is configured with
+&lt;code>tcp_wrappers&lt;/code>. Arch Linux &lt;a href="https://www.archlinux.org/news/dropping-tcp_wrappers-support/">dropped support for tcp_wrappers&lt;/a>
+so DenyHosts is not suitable for Arch. Fail2Ban supports blocking via &lt;code>iptables&lt;/code> and/or
+&lt;code>tcp_wrappers&lt;/code> and can also block offending hosts that are abusing services other than just &lt;code>sshd&lt;/code>.&lt;/p>
+&lt;h2 id="denyhosts-on-ubuntu">DenyHosts on Ubuntu&lt;/h2>
+&lt;p>Here is a simple example for DenyHosts on Ubuntu Lucid 10.04 LTS Server.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install denyhosts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>That&amp;rsquo;s it. The default configuration will provide suitable prevention, but do
+take a look at &lt;code>/etc/denyhosts.conf&lt;/code> for a full run down of all available options.
+I use the defaults with the following exceptions:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>PURGE_DENY = &lt;span style="color:#87ceeb">5d&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>PURGE_THRESHOLD = &lt;span style="color:#87ceeb">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ADMIN_EMAIL =
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>SYSLOG_REPORT=&lt;span style="color:#87ceeb">NO&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You might want to consider whitelisting some of your own IP address. Create a
+file called &lt;code>allowed-hosts&lt;/code> in &lt;code>/var/lib/denyhosts&lt;/code> and list each of your
+&amp;ldquo;trusted&amp;rdquo; IP addresses.&lt;/p>
+&lt;p>DenyHosts can be restarted by executing:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/denyhosts restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="fail2ban-on-arch-linux">Fail2Ban on Arch Linux&lt;/h2>
+&lt;p>Fail2Ban now supports systemd.&lt;/p>
+&lt;p>Configuration files are stored in &lt;code>/etc/fail2ban&lt;/code>. General configuration is
+&lt;code>/etc/fail2ban/jail.conf&lt;/code>, but this file might be overwritten in the future. To
+preserve customisations, create &lt;code>/etc/fail2ban/jail.local&lt;/code> and add your local
+configuration settings to it. In the example below some IP addresses are whitelisted
+and the default backend is set to systemd:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[DEFAULT]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ignoreip = &lt;span style="color:#87ceeb">172.16.0.2/32&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>backend = &lt;span style="color:#87ceeb">systemd&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Next create a custom sshd configuration in &lt;code>/etc/fail2ban/jail.d/sshd.conf&lt;/code>
+which will temporarily ban offending IP addresses.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># fail2ban SSH&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># block ssh after 3 unsuccessful login attempts for 10 minutes&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[sshd]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>enabled = &lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>action = &lt;span style="color:#87ceeb">iptables[chain=INPUT, protocol=tcp, port=22, name=sshd]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>maxRetry = &lt;span style="color:#87ceeb">3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>findtime = &lt;span style="color:#87ceeb">600&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bantime = &lt;span style="color:#87ceeb">600&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>port = &lt;span style="color:#87ceeb">22&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &amp;lsquo;action&amp;rsquo; creates DROP rule in iptables after 3 unsuccessful login
+attempts, valid for 10 minutes (bantime). Findtime defines time frame in which
+fail2ban will count failed login attempts from logs, so if one IP has 3
+incorrect login attempts in last 10 minutes, it will be banned.&lt;/p>
+&lt;p>Enable and start the Fail2Ban daemon.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable fail2ban
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl start fail2ban
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Basic commands for fail2ban-client:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fail2ban-client start sshd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fail2ban-client stop sshd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fail2ban-client reload sshd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fail2ban-client status sshd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fail2ban-client set sshd unbanip 172.16.0.4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>See the &lt;a href="https://wiki.archlinux.org/index.php/Fail2ban">Arch Linux Fail2Ban Wiki page&lt;/a>
+for more details.&lt;/p>
+&lt;p>&lt;strong>References&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://krisko210.blogspot.co.uk/2014/03/setting-up-fail2ban.html">http://krisko210.blogspot.co.uk/2014/03/setting-up-fail2ban.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="ssh-best-practice">SSH best practice&lt;/h2>
+&lt;p>DenyHosts and Fail2Ban do not provide complete protection against SSH brute
+force attacks. I employ other SSH best practice to better secure the SSH
+services I expose to the Internet, and so should you. The following is a
+good reference.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.ibm.com/developerworks/aix/library/au-sshsecurity/index.html">Getting started with SSH security and configuration&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="other-ssh-brute-force-prevention-tools">Other SSH brute force prevention tools&lt;/h2>
+&lt;p>In the interests of fairness, other SSH brute force preventation tools are
+available.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.sshguard.net/">Sshgaurd&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://cgi.csc.liv.ac.uk/~greg/sshdfilter/">sshdfilter&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://help.ubuntu.com/community/UFW">Uncomplicated Firewall&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Uncomplicated_Firewall#Rate_Limiting_with_ufw">Rate Limiting&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Do you know any other tools that help prevent SSH brute force attacks?&lt;/p></description><summary>Deploy DenyHosts or Fail2Ban to better prevent SSH brute force attacks.</summary></item><item><title>Netflix for ArchLinux</title><link>https://wimpysworld.com/posts/netflix-for-archlinux/</link><pubDate>Thu, 22 Nov 2012 22:14:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/netflix-for-archlinux/</guid><description>&lt;p>Something wonderful has happened! &lt;a href="http://demizerone.com/">Jesus Alvarez&lt;/a> has
+created pre-compiled packages for &lt;code>netflix-desktop&lt;/code> for Arch Linux.&lt;/p>
+&lt;p>There is no need for me to repeat the installation instructions as they are
+clearly documented on the page below.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://demizerone.com/archnetflix/">Arch Netflix - Netflix on the desktop through WINE&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>The source code for both of the packages can be found at &lt;a href="https://github.com/demizer/archnetflix">archnetflix-github&lt;/a>.&lt;/p>
+&lt;p>For reporting problems, please see the AUR page at &lt;a href="https://aur.archlinux.org/packages/netflix-desktop">netflix-desktop-aur&lt;/a> or the &lt;a href="https://bbs.archlinux.org/viewtopic.php?pid=1196370">announcement forum posting&lt;/a>.&lt;/p></description><summary>Netflix is available for ArchLinux</summary></item><item><title>Arch Linux Angel</title><link>https://wimpysworld.com/posts/arch-linux-angel/</link><pubDate>Tue, 15 May 2012 11:12:13 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/arch-linux-angel/</guid><description>&lt;p>I&amp;rsquo;ve been working a shell script for Arch Linux that automatically configures
+my preferred GNOME 3 setup on my netbook, laptops and workstations. The main
+features are:&lt;/p>
+&lt;ul>
+&lt;li>Quickly deploys Arch Linux to my specifications&lt;/li>
+&lt;li>Supports i686 and x64_64.&lt;/li>
+&lt;li>Detects ATI/AMD, Intel and Nvidia chipsets and configures the Open Source video drivers and enables early KMS.&lt;/li>
+&lt;li>Hardware and location aware. Installation and configuration can be different for Home vs Work or Desktop vs Netbook.&lt;/li>
+&lt;li>Detects and correctly configures some device specific hardware, such as touch screens and wireless drivers.&lt;/li>
+&lt;li>Automatically configures DAEMONS array.&lt;/li>
+&lt;li>Includes custom power management hooks for pm-utils.&lt;/li>
+&lt;li>Designed to safely run multiple times so that it can be used as a tool for keeping all systems consistent.&lt;/li>
+&lt;/ul>
+&lt;p>I&amp;rsquo;ve dubbed this script Arch Angel. I&amp;rsquo;m undecided if I&amp;rsquo;ll release it publicly
+since it is very much my personal preferences and to some extent my colleagues
+at work. I suppose the real reason for this post is that I&amp;rsquo;ve been wanting to
+take &lt;a href="http://shelr.tv/">Shelr&lt;/a> for a test drive, so click the Play button
+below to see an example run of Arch Angel.&lt;/p>
+&lt;!--
+&lt;iframe border='0' height='684'
+id='shelr_record_4fb2223c96608047be00010e' scrolling='no'
+src='http://shelr.tv/records/4fb2223c96608047be00010e/embed' style='border: 0'
+width='634' />
+--></description><summary>Automated scripted installs of Arch Linux</summary></item><item><title>Take Mark Shuttleworth's advice, try Arch Linux</title><link>https://wimpysworld.com/posts/take-mark-shuttleworths-advice-try-arch-linux/</link><pubDate>Wed, 02 May 2012 19:00:19 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/take-mark-shuttleworths-advice-try-arch-linux/</guid><description>&lt;p>In a recent &lt;a href="http://irclogs.ubuntu.com/2012/05/01/%23ubuntu-classroom.html">Ubuntu community feedback session run on IRC&lt;/a>
+Mark Shuttleworth said:&lt;/p>
+&lt;blockquote>
+&lt;p>if you are a super-technologist then there is value in learning all about
+linux from every angle try arch. try gentoo. try fedora. try debian. try suse.
+they are all good&lt;/p>
+&lt;/blockquote>
+&lt;p>So, I did. I tried &lt;a href="http://www.archlinux.org/">Arch Linux&lt;/a> and it is is not
+just good, it&amp;rsquo;s truly brilliant! The truth is, I didn&amp;rsquo;t take Mark
+Shuttleworth&amp;rsquo;s advice. I took the advice of a quietly spoken work colleague.
+Whenever he saw me getting frustrated with Ubuntu he reminded me (quietly)
+that he was running Arch Linux and that it was really rather good.
+It turns out I should have listened to my colleague years ago, because he
+was right all along. He often is.&lt;/p>
+&lt;p>I started learning Arch Linux a few weeks ago and as of the time of writing
+all our home computers are running Arch Linux and so is my office workstation.
+I moved away from Ubuntu (which I&amp;rsquo;ve been using daily since 2004) because:&lt;/p>
+&lt;ul>
+&lt;li>I often find myself needing/wanting updated packages on my workstations.
+Ubuntu + PPAs just wasn&amp;rsquo;t doing it for me anymore. I concluded I needed a rolling
+release distribution.&lt;/li>
+&lt;li>In my humble opinion, Unity is a software engineering solution developed
+(by programmers) not designed using UI-patterns (by user interface designers)
+consequently it sucks the big one.&lt;/li>
+&lt;li>It was less hassle for me to switch to Arch Linux than bend Ubuntu to my will.&lt;/li>
+&lt;/ul>
+&lt;p>That said, I do wish Canonical every success with Unity, they&amp;rsquo;ll need it, as
+it needs some polish and refinement as it stands today. For anyone interested
+in giving Arch Linux a try here are some observations.&lt;/p>
+&lt;ul>
+&lt;li>Arch Linux does not hold you hand, you should be competent with a Linux
+based distribution. I&amp;rsquo;ve been using Linux since 0.99patch2 so I think I qualify.&lt;/li>
+&lt;li>Read the &lt;a href="https://wiki.archlinux.org/index.php/Beginners'_Guide">Unofficial Beginners&amp;rsquo; Guide&lt;/a>
+and &lt;a href="https://wiki.archlinux.org/index.php/Official_Arch_Linux_Install_Guide">Official Installation Guide&lt;/a>
+before you install anything.&lt;/li>
+&lt;li>Install Arch Linux in a virtual machine to get acquainted.&lt;/li>
+&lt;li>Be prepared to fix &lt;em>your&lt;/em> own problems. Fortunately the
+&lt;a href="https://wiki.archlinux.org/">Arch Linux Wiki&lt;/a> and &lt;a href="https://bbs.archlinux.org/">Arch Linux Forums&lt;/a>
+are a great source of good information.&lt;/li>
+&lt;/ul>
+&lt;p>Here is a list of what I most like about Arch Linux:&lt;/p>
+&lt;ul>
+&lt;li>It&amp;rsquo;s a rolling release. I&amp;rsquo;ve already progressed through several kernels
+and been upgraded from GNOME 3.2 to 3.4. No fuss, no mess.&lt;/li>
+&lt;li>It keeps out of my way, I get to build the OS they way I want it.
+&lt;em>Yes, I&amp;rsquo;m looking at you Unity, Overlay Scrollbars, Unity App Indicators, Ubuntu One and upstart!&lt;/em>&lt;/li>
+&lt;li>The &lt;a href="https://aur.archlinux.org/index.php">AUR&lt;/a>. It&amp;rsquo;s like a great big PPA.&lt;/li>
+&lt;li>Creating my own packages is super simple.&lt;/li>
+&lt;li>Adding my own packages to the AUR is super simple. I&amp;rsquo;ve already contributed 8 packages.&lt;/li>
+&lt;li>I&amp;rsquo;m learning more about Linux than I have done in years.&lt;/li>
+&lt;/ul>
+&lt;p>Here&amp;rsquo;s what I&amp;rsquo;m not so keen about, but can live with.&lt;/p>
+&lt;ul>
+&lt;li>Some of the comments in the Forums and AUR are from real arse hats with a
+superiority complex. New comers may be put off by their tone and look elsewhere.&lt;/li>
+&lt;li>The &lt;a href="https://aur.archlinux.org/index.php">AUR&lt;/a>. Package quality in the AUR
+is variable, some are pretty poor. So long as the maintainer is not one of the
+aforementioned arse hats then contributing fixes and improvements is easy.&lt;/li>
+&lt;li>It&amp;rsquo;s a rolling release, so may not be suitable for serious server deployments.
+That said, I will migrate my own servers to Arch Linux in due course and see if
+I can prove myself wrong.&lt;/li>
+&lt;/ul>
+&lt;p>So there you have it, I like Arch Linux very much and recommend it to other
+technically competent individuals looking to regain control of their computer(s).&lt;/p></description><summary>My experiences switching from Ubuntu to Arch Linux</summary></item></channel></rss>

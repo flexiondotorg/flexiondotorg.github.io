@@ -1,1 +1,914 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Wimpy's World</title><link>https://wimpysworld.com/tags/python/</link><description>Recent content in Python on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/python/rss.xml" rel="self" type="application/rss+xml"/><item><title>Retro Home</title><link>https://wimpysworld.com/projects/retro-home/</link><pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/retro-home/</guid><description>A retro-gaming operating system for Raspberry Pi built with Ubuntu and Ludo</description></item><item><title>Installing Nikola on Ubuntu</title><link>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</link><pubDate>Thu, 05 Nov 2015 11:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</guid><description>How to install Nikola on Ubuntu 14.04 or newer</description></item><item><title>Installing Willie IRC Bot on Debian</title><link>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</link><pubDate>Sat, 09 Aug 2014 11:11:11 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</guid><description>How I Installed Willie IRC Bot on Debian Wheezy</description></item><item><title>Ubuntu MATE</title><link>https://wimpysworld.com/projects/ubuntu-mate/</link><pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu-mate/</guid><description>Ubuntu MATE is a Linux distribution I made for my friends and family</description></item><item><title>Installing Nikola on Debian</title><link>https://wimpysworld.com/posts/installing-nikola-on-debian/</link><pubDate>Mon, 31 Mar 2014 16:19:43 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-nikola-on-debian/</guid><description>How to install Nikola static site generator on Debian</description></item><item><title>openSUSE</title><link>https://wimpysworld.com/projects/opensuse/</link><pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/opensuse/</guid><description>Student mentor for Google Summer of Code 2014</description></item><item><title>Linux Mint LMDE on Hybrid Disk Laptop</title><link>https://wimpysworld.com/posts/linux-mint-lmde-on-hybrid-disk-laptop/</link><pubDate>Wed, 28 Aug 2013 20:10:09 +0000</pubDate><guid>https://wimpysworld.com/posts/linux-mint-lmde-on-hybrid-disk-laptop/</guid><description>Installing Linux Mint Debian Edition (LMDE) on a Laptop with Hybrid Disk</description></item><item><title>Python Distributions</title><link>https://wimpysworld.com/posts/python-distributions/</link><pubDate>Mon, 24 Jun 2013 13:11:43 +0000</pubDate><guid>https://wimpysworld.com/posts/python-distributions/</guid><description>A selection of Python distributions for data analysis</description></item><item><title>Installing Nikola on Arch Linux</title><link>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</link><pubDate>Fri, 08 Mar 2013 17:13:43 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</guid><description>Install Nikola static site generator in a virtualenv on Arch Linux</description></item><item><title>Dropbox is my Nikola publish button</title><link>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</link><pubDate>Wed, 06 Mar 2013 19:01:21 +0000</pubDate><guid>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</guid><description>Publishing a Nikola blog via Dropbox on a headless Linux server</description></item><item><title>Python and virtualenv on Arch Linux and Ubuntu</title><link>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</link><pubDate>Tue, 11 Dec 2012 20:38:50 +0000</pubDate><guid>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</guid><description>Installing Python and virtualenv on Arch Linux and Ubuntu</description></item><item><title>Migrating Wordpress to Nikola</title><link>https://wimpysworld.com/posts/migrating-wordpress-to-nikola/</link><pubDate>Mon, 22 Oct 2012 17:13:43 +0000</pubDate><guid>https://wimpysworld.com/posts/migrating-wordpress-to-nikola/</guid><description>From a dynamic Wordpress site to static Nikola site</description></item><item><title>MATE Desktop</title><link>https://wimpysworld.com/projects/mate-desktop/</link><pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/mate-desktop/</guid><description>Preserving a traditional desktop metaphor</description></item><item><title>Distributing closed source Python applications</title><link>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</link><pubDate>Thu, 29 Jan 2009 13:04:03 +0000</pubDate><guid>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</guid><description>Freezing proprietary Python applications for distribution to clients</description></item><item><title>POLARIS</title><link>https://wimpysworld.com/projects/polaris/</link><pubDate>Tue, 01 May 2007 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/polaris/</guid><description>Disrupting incumbent flight data analysis solutions with Open Source</description></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>From community contributor to director of engineering and back again</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Wimpy's World</title><link>https://wimpysworld.com/tags/python/</link><description>Recent content in Python on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/python/rss.xml" rel="self" type="application/rss+xml"/><item><title>Retro Home</title><link>https://wimpysworld.com/projects/retro-home/</link><pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/retro-home/</guid><description>&lt;p>&lt;a href="https://github.com/wimpysworld/retro-home">Retro Home&lt;/a> is custom Raspberry Pi
+operating system purpose built for retro gaming. Built with
+&lt;a href="https://ubuntu.com/">Ubuntu&lt;/a> and using the minimalist emulator frontend
+&lt;a href="https://ludo.libretro.com/">Ludo&lt;/a> it supports most classic consoles from Atari,
+Nintendo, Sega and SNK along with arcade emulation support. A number of retro
+styled Raspberry Pi cases from &lt;a href="https://retroflag.com/">Retroflag&lt;/a> and
+&lt;a href="https://www.waveshare.com/product/raspberry-pi/portable-gaming.htm">Waveshare&lt;/a>
+are supported (with more in the works) using bespoke GPIO drivers.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://github.com/wimpysworld/retro-home">Retro Home&lt;/a>&lt;/li>
+&lt;li>Date: July 2020 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>A retro-gaming operating system for Raspberry Pi built with Ubuntu and Ludo</summary></item><item><title>Installing Nikola on Ubuntu</title><link>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</link><pubDate>Thu, 05 Nov 2015 11:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</guid><description>&lt;p>Nikola is a static site and blog generator written in &lt;a href="http://www.python.org">Python&lt;/a>
+that I&amp;rsquo;ve been using for a good while now. This blog post describes how to install
+&lt;a href="http://getnikola.com/">Nikola&lt;/a> on Ubuntu 14.04 or newer. Now, this may look
+like a long winded way to install Nikola, given that .deb package exists, but in
+my opinion it is the correct way to install Nikola on Ubuntu.&lt;/p>
+&lt;h2 id="installing-python">Installing Python&lt;/h2>
+&lt;p>First you&amp;rsquo;ll need Python.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install cython3 libpython3.4 python3.4 python3.4-dev python3.4-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now install the Python &amp;ldquo;package&amp;rdquo; management utilities.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install python-setuptools python-virtualenv python-pip virtualenvwrapper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="the-snakepit">The Snakepit&lt;/h2>
+&lt;p>Create a &amp;ldquo;Snakepit&amp;rdquo; directory for storing all the virtualenvs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-virtualenv-for-nikola">Create a virtualenv for Nikola&lt;/h2>
+&lt;p>The following will create a new virtualenv called &lt;code>nikola&lt;/code> based on Python 3.4.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>virtualenv -p /usr/bin/python3.4 ~/Snakepit/nikola-773
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h3>
+&lt;p>To activate the virtualenv do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>source ~/Snakepit/nikola-773/bin/activate
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Your shell prompt will change while a virtualenv is being worked on to indicate
+which virtualenv is currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or manually
+install any Python libraries safe in the knowledge you will not adversely
+damage any other virtualenvs or the global packages in the process. Very useful
+for developing a new branch which may have different library requirements than
+the master/head.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by simply
+executing &lt;code>deactivate&lt;/code>.&lt;/p>
+&lt;h2 id="install-nikola-requirements">Install Nikola requirements&lt;/h2>
+&lt;p>Nikola requires some additional packages.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install liblcms2-dev libfreetype6-dev libjpeg8-dev &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>libopenjp2-7-dev libtiff5-dev libwebp-dev libxslt1-dev libxml2-dev &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>libyaml-dev libzmq-dev zlib1g-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Some of the content optimisation filters require additional packages.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install closure-compiler jpegoptim optipng yui-compressor
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install Tidy 5. (optional)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get -y remove libtidy-0.99-0 tidy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://binaries.html-tidy.org/binaries/tidy-5.1.14/tidy-5.1.14-64bit.deb -O /tmp/tidy5.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i /tmp/tidy5.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s /usr/bin/tidy /usr/local/bin/tidy5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm /tmp/tidy5.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="what-are-these-requirements-for">What are these requirements for?&lt;/h3>
+&lt;p>The following are required to build &lt;code>pillow&lt;/code>, the Python imaging library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>liblcms2-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libfreetype6-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libjpeg8-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libopenjp2-7-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libtiff5-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libwebp-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>zlib1g-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>lxml&lt;/code>, a Python XML library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libxml2-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libxslt1-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>python-coveralls&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libyaml-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>pyzmq&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libzmq-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="install-nikola">Install Nikola&lt;/h2>
+&lt;p>First install Cython, which will ensure some of the packages required by Nikola use
+all the available optimisations.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install --upgrade Cython
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install all of Nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install --upgrade &lt;span style="color:#87ceeb">&amp;#34;Nikola[extras,tests]&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-site">Create a site&lt;/h2>
+&lt;p>After installing Nikola, you should create a site. A site is a collection of
+all assets needed to render your website, including configuration, posts,
+pages, images, and all other files and customizations.&lt;/p>
+&lt;p>To create a site, you need to run:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nikola init &amp;lt;directory_name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A wizard will guide your initial setup The &lt;code>--demo&lt;/code> option can be used to populate
+your site with some example content. If you do not want the wizard, use the &lt;code>--quiet&lt;/code>
+argument.&lt;/p>
+&lt;p>Nikola is now installed and and initial site is setup. &lt;code>nikola help&lt;/code> and the
+&lt;a href="http://getnikola.com/handbook.html">Nikola Handbook&lt;/a> will assist you from here.&lt;/p></description><summary>How to install Nikola on Ubuntu 14.04 or newer</summary></item><item><title>Installing Willie IRC Bot on Debian</title><link>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</link><pubDate>Sat, 09 Aug 2014 11:11:11 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</guid><description>&lt;p>&lt;a href="http://willie.dftba.net/">Willie&lt;/a> is an IRC bot written in &lt;a href="http://www.python.org">Python&lt;/a>
+that I&amp;rsquo;ve recently started using. This blog post describes how to install Willie
+on Debian and as usual I will be using &lt;code>virtualenv&lt;/code> to isolate this Python
+application from the rest of the system.&lt;/p>
+&lt;h2 id="installing-python">Installing Python&lt;/h2>
+&lt;p>First you&amp;rsquo;ll need Python.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.7 python2.7 python2.7-dev python2.7-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The following will also be required to enable all the features Willie supports.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install enchant python2.7-dev libxslt1-dev libxml2-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove any &lt;code>apt&lt;/code> installed Python packages that we are about to replace.
+The versions of these packages in the Debian repositories soon get stale.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge python-setuptools python-virtualenv python-pip python-profiler
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>pip&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://bootstrap.pypa.io/get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 get-pip.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;code>pip&lt;/code> to install &lt;code>virtualenv&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pip install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="the-snakepit">The Snakepit&lt;/h2>
+&lt;p>Create a &amp;ldquo;Snakepit&amp;rdquo; directory for storing all the Python virtual
+environments.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-virtualenv-for-willie">Create a virtualenv for Willie&lt;/h2>
+&lt;p>The following will create a new virtualenv called &lt;code>willie&lt;/code> using Python
+2.7 as the interpreter.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>virtualenv -p /usr/bin/python2.7 ~/Snakepit/willie
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h3>
+&lt;p>Activate the virtualenv for Willie.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>source ~/Snakepit/willie/bin/activate
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Your shell prompt will change, something like &lt;code>(willie)user@host:~$&lt;/code>,
+while a virtualenv is being worked on to indicate which virtualenv is
+currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or
+manually install any Python libraries safe in the knowledge you will
+not upset any other virtualenvs or the global packages in the process.
+Very useful for developing a new branch which may have different
+library requirements than the current stable release.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by
+simply executing &lt;code>deactivate&lt;/code>.&lt;/p>
+&lt;h2 id="install-willie">Install Willie&lt;/h2>
+&lt;p>I&amp;rsquo;ve decided to use Python 2.7 to run Willie and therefore have to
+install &lt;code>backports.ssl_match_hostname&lt;/code> which is not required if you use
+Python 3.3.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install willie backports.ssl_match_hostname
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="additional-functionality">Additional functionality&lt;/h3>
+&lt;p>Willie has no external dependencies, besides Python. However, some of
+the modules do have external dependencies. So install the following
+Python modules so that I can make use of everything Willie can do.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install feedparser pytz lxml praw pyenchant pygeoip ipython --upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="configure-willie">Configure Willie&lt;/h2>
+&lt;p>I am not going to explain to how to configure Willie because all that
+good stuff is very well documented by the project.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/embolalia/willie/wiki">https://github.com/embolalia/willie/wiki&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>But for reference, my &lt;code>default.cfg&lt;/code> looks something like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[core]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nick = &lt;span style="color:#87ceeb">nicofyourbot&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user = &lt;span style="color:#87ceeb">nicofyourbot&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>name = &lt;span style="color:#87ceeb">Give You Bot A Name&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>host = &lt;span style="color:#87ceeb">chat.freenode.net&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>use_ssl = &lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>verify_ssl = &lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>port = &lt;span style="color:#87ceeb">6697&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>owner = &lt;span style="color:#87ceeb">nicofthebotowner&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>channels = &lt;span style="color:#87ceeb">#example&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nickserv_password = &lt;span style="color:#87ceeb">************&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>prefix = &lt;span style="color:#87ceeb">\.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>timeout = &lt;span style="color:#87ceeb">120&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[db]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>userdb_type = &lt;span style="color:#87ceeb">sqlite&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>userdb_file = &lt;span style="color:#87ceeb">/home/username/.willie/willie.db&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="willie-as-a-daemon">Willie as a daemon&lt;/h2>
+&lt;p>From this point on I assume you&amp;rsquo;ve completed the first run
+configuration of Willie and have &lt;code>.willie/default.cfg&lt;/code> in your home
+directory.&lt;/p>
+&lt;p>Add the following to &lt;code>/etc/init.d/willie&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>&lt;span style="color:#0f0">### BEGIN INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Provides: willie&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Start: $local_fs $remote_fs&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Stop: $local_fs $remote_fs&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Should-Start: $network&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Should-Stop: $network&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Start: 2 3 4 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Stop: 0 1 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Short-Description: Willie IRC Bot.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Description: Start and stops the Willie IRC bot for a given user.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">### END INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># NOTE! Replace with the user you want to run Willie.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">willie_USER&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;yourusername&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>getent passwd &lt;span style="color:#eedd82">$willie_USER&lt;/span> | awk -F: &lt;span style="color:#87ceeb">&amp;#39;{print $6}&amp;#39;&lt;/span>&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DAEMON&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">/Snakepit/willie/bin/willie&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">CONFIG&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">/.willie/default.cfg&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>startd() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -f &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">CONFIG&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Starting Willie for &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon -c &lt;span style="color:#eedd82">$willie_USER&lt;/span> -u &lt;span style="color:#eedd82">$willie_USER&lt;/span> -x &lt;span style="color:#eedd82">$DAEMON&lt;/span> -S -- --config &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">CONFIG&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span> --fork --quiet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Couldn&amp;#39;t start Willie for &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb"> (no &lt;/span>&lt;span style="color:#eedd82">$CONFIG&lt;/span>&lt;span style="color:#87ceeb"> found)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>stopd() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Stopping Willie for &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">willie_PID&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>pgrep -fu &lt;span style="color:#eedd82">$willie_USER&lt;/span> &lt;span style="color:#eedd82">$DAEMON&lt;/span>&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$willie_PID&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Willie for USER &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kill -15 &lt;span style="color:#eedd82">$willie_PID&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>status() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">willie_PID&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>pgrep -fu &lt;span style="color:#eedd82">$willie_USER&lt;/span> &lt;span style="color:#eedd82">$DAEMON&lt;/span>&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$willie_PID&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Willie for USER &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Willie for USER &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">: running (pid &lt;/span>&lt;span style="color:#eedd82">$willie_PID&lt;/span>&lt;span style="color:#87ceeb">)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$1&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start) startd ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop) stopd ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart|reload|force-reload) stopd &amp;amp;&amp;amp; startd ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status) status ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *) echo &lt;span style="color:#87ceeb">&amp;#34;Usage: /etc/init.d/willie {start|stop|reload|force-reload|restart|status}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>exit &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Set the permissions.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chmod +x /etc/init.d/willie
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Check that you can start/stop Willie.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/willie start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/willie status
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/willie stop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add &lt;code>willie&lt;/code> to the startup/shutdown sequence.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo update-rc.d willie defaults
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>And that&amp;rsquo;s it. Willie is now running as a daemon inside a virtualenv.&lt;/p></description><summary>How I Installed Willie IRC Bot on Debian Wheezy</summary></item><item><title>Ubuntu MATE</title><link>https://wimpysworld.com/projects/ubuntu-mate/</link><pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu-mate/</guid><description>&lt;p>A community developed Ubuntu based operating system that beautifully integrates
+the &lt;a href="https://mate-desktop.org">MATE desktop&lt;/a>. Ubuntu MATE is a stable,
+easy-to-use operating system with a configurable desktop environment and is
+suitable for modern workstations, laptops, single board computers and older
+hardware alike.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntu-mate.org">Ubuntu MATE Project&lt;/a>&lt;/li>
+&lt;li>Date: June 2014 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>Ubuntu MATE is a Linux distribution I made for my friends and family</summary></item><item><title>Installing Nikola on Debian</title><link>https://wimpysworld.com/posts/installing-nikola-on-debian/</link><pubDate>Mon, 31 Mar 2014 16:19:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-nikola-on-debian/</guid><description>&lt;p>Nikola is a static site and blog generator written in &lt;a href="http://www.python.org">Python&lt;/a>
+that I&amp;rsquo;ve been using for a good while now. This blog post describes how to install
+&lt;a href="http://getnikola.com/">Nikola&lt;/a> on Debian. Now, this may look like a long winded way
+to install Nikola, given that Debian .deb package exist, but in my opinion it is
+the correct way to install Nikola on Debian.&lt;/p>
+&lt;h2 id="installing-python">Installing Python&lt;/h2>
+&lt;p>First you&amp;rsquo;ll need Python and &lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.7 python2.7 python2.7-dev python2.7-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove any &lt;code>apt&lt;/code> installed Python packages that we are about to replace. The
+versions of these packages in the Debian repositories soon get stale.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge python-setuptools python-virtualenv python-pip python-profiler
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>pip&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://bootstrap.pypa.io/get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 get-pip.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;code>pip&lt;/code> to install &lt;code>virtualenv&lt;/code> and &lt;code>virtualenvwrapper&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pip install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pip install virtualenvwrapper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="the-snakepit">The Snakepit&lt;/h2>
+&lt;p>Create a &amp;ldquo;Snakepit&amp;rdquo; directory for storing all the virtualenvs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following your &lt;code>~/.bashrc&lt;/code> to enable &lt;code>virtualenvwrapper&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WORKON_HOME&lt;/span>=&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/Snakepit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">if&lt;/span> [ -f /usr/local/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/local/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">elif&lt;/span> [ -f /usr/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-virtualenv-for-nikola">Create a virtualenv for Nikola&lt;/h2>
+&lt;p>Open a new shell to ensure that the &lt;code>virtualenvwrapper&lt;/code> configuration is active.
+The following will create a new virtualenv called &lt;code>nikola&lt;/code> based on Python 2.7.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkvirtualenv -p /usr/bin/python2.7 ~/Snakepit/nikola-640
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h3>
+&lt;p>To activate an existing virtualenv do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>workon nikola-640
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can switch to another virtualenv at any time, just use &lt;code>workon envname&lt;/code>.
+Your shell prompt will change while a virtualenv is being worked on to
+indicate which virtualenv is currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or manually
+install any Python libraries safe in the knowledge you will not adversely
+damage any other virtualenvs or the global packages in the process. Very
+useful for developing a new branch which may have different library requirements
+than the master/head.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by
+simply executing &lt;code>deactivate&lt;/code>.&lt;/p>
+&lt;h2 id="install-nikola-requirements">Install Nikola requirements&lt;/h2>
+&lt;p>Nikola is will be powered by Python 2.7 and some additional packages will
+be required.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install python2.7-dev libfreetype6-dev libjpeg8-dev libxslt1-dev libxml2-dev libyaml-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="what-are-these-requirements-for">What are these requirements for?&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>python2.7-dev&lt;/code> provides the header files for Python 2.7 so that Python
+modules with C extensions can be built.&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>pillow&lt;/code>, the Python imaging library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libjpeg8-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libfreetype6-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>lxml&lt;/code>, a Python XML library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libxml2-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libxslt1-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>python-coveralls&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libyaml-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="install-nikola">Install Nikola&lt;/h2>
+&lt;p>Download Nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir -p &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">VIRTUAL_ENV&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/src
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">VIRTUAL_ENV&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/src
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget https://github.com/getnikola/nikola/archive/v6.4.0.tar.gz -O nikola-640.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar zxvf nikola-640.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd nikola-6.4.0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install the Nikola requirements.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install -r requirements-full.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you intend to use the Nikola planetoid (Planet generator) plugin you&amp;rsquo;ll also
+need to following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install peewee feedparser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Actually install nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>python setup.py install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nikola is now installed. &lt;code>nikola help&lt;/code> and the &lt;a href="http://getnikola.com/handbook.html">Nikola Handbook&lt;/a>
+will assist you from here on.&lt;/p></description><summary>How to install Nikola static site generator on Debian</summary></item><item><title>openSUSE</title><link>https://wimpysworld.com/projects/opensuse/</link><pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/opensuse/</guid><description>&lt;p>Mentored three students for the &lt;a href="https://www.google-melange.com/gsoc/org2/google/gsoc2014/opensuse">openSUSE 2014 Google Summer of Code&lt;/a>.
+All three students successfully completed their projects for the
+&lt;a href="https://mate-desktop.org">MATE Desktop&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="http://www.opensuse.org">openSUSE&lt;/a>&lt;/li>
+&lt;li>Date: February 2014 - August 2014&lt;/li>
+&lt;li>Role: Student mentor&lt;/li>
+&lt;/ul></description><summary>Student mentor for Google Summer of Code 2014</summary></item><item><title>Linux Mint LMDE on Hybrid Disk Laptop</title><link>https://wimpysworld.com/posts/linux-mint-lmde-on-hybrid-disk-laptop/</link><pubDate>Wed, 28 Aug 2013 20:10:09 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/linux-mint-lmde-on-hybrid-disk-laptop/</guid><description>&lt;p>I have an old Thinkpad T43p that I am trying to extend the life of. So I recently
+fitted a cheap 60GB IDE Solid State Drive (SSD) and put a 320GB SATA Hard Disk
+Drive (HDD) in the Ultrabay. This is not a true hybrid disk, but the principles
+are similar. The root partition will go on the SDD (for performance) and the
+home partition will be located on the HDD (for capacity).&lt;/p>
+&lt;p>I&amp;rsquo;ve been running &lt;a href="http://www.archlinux.org">Arch Linux&lt;/a> on the T43p and the SDD
+improves system responsiveness and boot time considerably, especially when using
+&lt;a href="http://en.wikipedia.org/wiki/F2FS">F2FS&lt;/a> or
+&lt;a href="https://btrfs.wiki.kernel.org/index.php/Main_Page">btrfs&lt;/a> (with LZO
+compression and SSD mount options) on the root filesystem.&lt;/p>
+&lt;p>I am also testing &lt;a href="http://www.linuxmint.com/download_lmde.php">Linux Mint Debian Edition&lt;/a> (LMDE)
+with the &lt;a href="http://mate-desktop.org/">MATE Desktop&lt;/a> desktop to determine if this
+is a suitable operating system for my family to use. It appears they find
+&lt;a href="http://www.gnome.org/gnome-3/">GNOME 3&lt;/a> confusing and would prefer a familiar
+desktop experience.&lt;/p>
+&lt;p>While testing LMDE 201203 I ran into a few issues, so I&amp;rsquo;ve decided to capture
+my notes here for future reference.&lt;/p>
+&lt;h1 id="fix-the-installer">Fix the installer&lt;/h1>
+&lt;p>In order to install LMDE using partitions on multiple drives you must
+use the ADVANCED USER install mode. However, the ADVANCED USER install mode
+has a bug that prevents the installer from completing, so that needs to be
+fixed first.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /usr/lib/live-installer/frontend/gtk_interface.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Find the following on line 1765.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>self.wTree.get_widget(&lt;span style="color:#87ceeb">&amp;#34;button_next&amp;#34;&lt;/span>).show()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After it add the following line, making sure the indentation is correct.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>self.wTree.get_widget(&lt;span style="color:#87ceeb">&amp;#34;button_next&amp;#34;&lt;/span>).set_sensitive(&lt;span style="color:#f00">True&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="installing-lmde">Installing LMDE&lt;/h1>
+&lt;ul>
+&lt;li>Double click the &lt;code>Install Linux Mint&lt;/code> icon on the desktop.&lt;/li>
+&lt;li>Select your &lt;em>Language&lt;/em> and click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>Select your &lt;em>Timezone&lt;/em> and click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>Select your &lt;em>Keyboard layout&lt;/em> and click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>Enter your &lt;em>User info&lt;/em> and click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>From the &lt;em>Hard drive&lt;/em> window Select &lt;code>Manually mount partitions (ADVANCED USERS ONLY)&lt;/code> and click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>The &lt;em>Please make sure you wish to manually manage partitions&lt;/em> window will
+appear. On my system the SSD is detected on &lt;code>/dev/sda&lt;/code> and the HDD is detected
+on &lt;code>/dev/sdb&lt;/code>. Start &lt;code>GParted&lt;/code> and partition and format the drives as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> /dev/sda1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Size: 256MiB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Create as: Primary Partition
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> File system: ext4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Label: boot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /dev/sda2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Size: 2048MiB (or the size you prefer)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Create as: Primary Partition
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> File system: linux-swap
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Label: swap
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /dev/sda3
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Size: Remainder
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Create as: Primary Partition
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> File system: btrfs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Label: root
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /dev/sdb1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Size: All
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Create as: Primary Partition
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> File system: ext4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Label: home
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Apply the changes and close GParted.&lt;/p>
+&lt;p>I use ext4 for the &lt;code>/boot&lt;/code> partition because GRUB can&amp;rsquo;t currently boot from btrfs
+in LMDE. I use ext4 for &lt;code>/home&lt;/code> because it offers the best performance on rotational
+drives on my Thinkpad T43p. I use btrfs on the &lt;code>/root&lt;/code> partition because performs
+best (by some margin) on solid state drives in my Thinkpad T43p.&lt;/p>
+&lt;p>The filesystems need mounting under &lt;code>/target&lt;/code> so the installer can install the
+OS. Open a Terminal and do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo mkdir /target
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mount -t btrfs -o &lt;span style="color:#eedd82">compress&lt;/span>=lzo,ssd /dev/disk/by-label/root /target
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkdir /target/{boot,home}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mount -t ext4 /dev/disk/by-label/boot /target/boot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mount -t ext4 /dev/disk/by-label/home /target/home
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Return to the Linux Mint Debian Installer.&lt;/p>
+&lt;ul>
+&lt;li>Click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>From the &lt;em>Advanced options&lt;/em> check &lt;code>Install GRUB&lt;/code> and select &lt;code>/dev/sda&lt;/code>. Click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>Confirm the &lt;em>Summary&lt;/em> is correct and click &lt;code>Install&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>Time for a cup of tea while the install runs. A pop-up, titled &lt;em>Installation
+Paused&lt;/em>, will appear. Click &lt;code>OK&lt;/code>.&lt;/p>
+&lt;h2 id="create-targetetcfstab">Create &lt;code>/target/etc/fstab&lt;/code>&lt;/h2>
+&lt;p>Do as the installer says and create &lt;code>/target/etc/fstab&lt;/code>. Open a Terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /target/etc/fstab
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The following &lt;code>fstab&lt;/code> works for my T43p.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span># /etc/fstab: static file system information.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># &amp;lt;file system&amp;gt; &amp;lt;mount point&amp;gt; &amp;lt;type&amp;gt; &amp;lt;options&amp;gt; &amp;lt;dump&amp;gt; &amp;lt;pass&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>proc /proc proc defaults 0 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>LABEL=root / btrfs defaults,noatime,compress=lzo,ssd 0 1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>LABEL=boot /boot ext4 defaults,noatime 0 2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>LABEL=home /home ext4 defaults,relatime 0 2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>LABEL=swap none swap sw 0 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="upgrade-mate-16-and-remove-legacy-mate-14-packages">Upgrade MATE 1.6 and remove legacy MATE 1.4 packages&lt;/h2>
+&lt;p>MATE 1.6 has been released for LMDE 201203 so it is a good idea to upgrade
+and remove legacy packages before the first boot to ensure a clean
+configuration. Open a Terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chroot /target
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get install apt-show-versions
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get dist-upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Some MATE 1.4 packages will be left behind that are no longer required. The
+following can help identify them.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-show-versions | grep 1&lt;span style="color:#87ceeb">\.&lt;/span>4&lt;span style="color:#87ceeb">\.&lt;/span>[0-9]&lt;span style="color:#87ceeb">\-&lt;/span>[0-9]&lt;span style="color:#87ceeb">\+&lt;/span>wheezy | cut -f1 -d&lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Purge the old MATE 1.4 packages.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">PKGS&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>apt-show-versions | grep 1&lt;span style="color:#87ceeb">\.&lt;/span>4&lt;span style="color:#87ceeb">\.&lt;/span>[0-9]&lt;span style="color:#87ceeb">\-&lt;/span>[0-9]&lt;span style="color:#87ceeb">\+&lt;/span>wheezy | cut -f1 -d&lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get purge &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">PKGS&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Exit the &lt;code>chroot&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>exit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="finish-the-install">Finish the install&lt;/h2>
+&lt;p>Return to the Linux Mint Debian Installer.&lt;/p>
+&lt;ul>
+&lt;li>Click &lt;code>Forward&lt;/code>.&lt;/li>
+&lt;li>Some final installation steps will now complete.&lt;/li>
+&lt;li>A pop-up, titled &lt;em>Installation finished&lt;/em>, will appear. Click &lt;code>Yes&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>Your computer will reboot and start LMDE.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://forums.linuxmint.com/viewtopic.php?f=189&amp;amp;t=129381">http://forums.linuxmint.com/viewtopic.php?f=189&amp;amp;t=129381&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://forums.linuxmint.com/viewtopic.php?f=185&amp;amp;t=143547">http://forums.linuxmint.com/viewtopic.php?f=185&amp;amp;t=143547&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Installing Linux Mint Debian Edition (LMDE) on a Laptop with Hybrid Disk</summary></item><item><title>Python Distributions</title><link>https://wimpysworld.com/posts/python-distributions/</link><pubDate>Mon, 24 Jun 2013 13:11:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/python-distributions/</guid><description>&lt;p>At &lt;a href="http://www.flightdataservices.com">work&lt;/a> I maintain the
+&lt;a href="http://http://jenkins-ci.org/">Jenkins&lt;/a> test and build servers. I&amp;rsquo;m just about
+to update our Windows build servers and thought I&amp;rsquo;d better check the available
+&amp;ldquo;Python Distributions&amp;rdquo; to see if our current choice (the brilliant
+&lt;a href="https://code.google.com/p/pythonxy/">Python(x,y)&lt;/a> is still the most suitable for
+our needs.&lt;/p>
+&lt;p>Our &lt;a href="http://github.com/FlightDataServices">Flight Data Analyzer&lt;/a> makes extensive
+use of &lt;a href="http://www.numpy.org/">Numpy&lt;/a>, &lt;a href="http://www.scipy.org/">Scipy&lt;/a>,
+&lt;a href="http://code.google.com/p/h5py/">h5py&lt;/a> and other analysis tools. So, pre-built
+Python distributions on Windows save me a lot of &lt;del>pain&lt;/del> time. On Linux we roll
+our own of course.&lt;/p>
+&lt;p>What follows is a list of Python Distributions that include Python and the essential
+modules we require.&lt;/p>
+&lt;h2 id="anaconda">Anaconda&lt;/h2>
+&lt;blockquote>
+&lt;p>Completely free enterprise-ready Python distribution for large-scale data
+processing, predictive analytics, and scientific computing.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://store.continuum.io/cshop/anaconda/">https://store.continuum.io/cshop/anaconda/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Heard about this for the first time a couple of days ago. It looks very promising
+with 32-bit and 64-bit flavours and MKL optimised modules are available from the
+reasonably priced Anaconda Accelerate. While I roll my own Python Distribution for
+our Linux build servers, I am rather taken with the idea of using Anaconda on Linux
+and Windows to provide a consistent platform everywhere. I&amp;rsquo;m looking forward to
+testing Anaconda this week.&lt;/p>
+&lt;p>&lt;a href="http://www.continuum.io">Continuum&lt;/a> appear to be taking on Enthought at their
+own game, and good luck to them as they have some really interesting projects
+on the go.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.continuum.io/developer-resources">http://www.continuum.io/developer-resources&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="enthought-canopy">Enthought Canopy&lt;/h2>
+&lt;blockquote>
+&lt;p>Enthought Canopy is a comprehensive Python analysis environment with easy
+installation &amp;amp; updates of the proven Enthought Python distribution - all part
+of a robust platform you can explore, develop and visualize on.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://www.enthought.com/products/canopy/">https://www.enthought.com/products/canopy/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>We used to use Entought EPD and Canopy builds on EPD. However, we decided to
+switch from EPD and consolidate analyst workstation and build server deployments
+around Python(x,y).&lt;/p>
+&lt;p>There were several factors to this decision, but the main issue was that updates
+to the EPD package repositories were slow for some essential modules we use. Canopy
+seems to have inherited package latency from EPD as Numpy is still at 1.6.1 while
+we now require Numpy 1.7.&lt;/p>
+&lt;p>Paid versions of Canopy have MKL optimizations and 64-bit platform support.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.enthought.com/products/canopy/compare-subscriptions/">https://www.enthought.com/products/canopy/compare-subscriptions/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="pythonxy">Python(x,y)&lt;/h2>
+&lt;blockquote>
+&lt;p>Scientific-oriented Python Distribution based on Qt and Spyder.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://code.google.com/p/pythonxy/">https://code.google.com/p/pythonxy/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>This is what we currently use for Windows build servers and analyst workstations.
+The only reason I&amp;rsquo;m conisdering switching is that is it 32-bit only. Other than
+that, I love it and highly recommend it. Python(x,y) doesn&amp;rsquo;t offer MKL optimisations.&lt;/p>
+&lt;h2 id="winpython">WinPython&lt;/h2>
+&lt;blockquote>
+&lt;p>WinPython is a portable scientific Python 2/3 32/64bit distribution for Windows&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="http://code.google.com/p/winpython/">http://code.google.com/p/winpython/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>From the same stable as Python(x,y) but has 32-bit and 64-bit flavours, yummy.
+WinPython includes everything I need so will definately get fully tested this week.&lt;/p>
+&lt;h2 id="portable-python">Portable Python&lt;/h2>
+&lt;blockquote>
+&lt;p>Portable Python is a Python programming language pre-configured to run directly
+from any USB storage device, enabling you to have, at any time, a portable
+programming environment.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="http://portablepython.com/">http://portablepython.com/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Not looked at this in any real detail. Appears to be 32-bit only but does include
+a number of essential packages.&lt;/p>
+&lt;h2 id="unofficial-windows-binaries-for-python-extension-packages">Unofficial Windows Binaries for Python Extension Packages&lt;/h2>
+&lt;blockquote>
+&lt;p>Provides 32- and 64-bit Windows binaries of many scientific open-source extension
+packages for the official CPython distribution of the Python programming language.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">http://www.lfd.uci.edu/~gohlke/pythonlibs/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>OK, so this is not a Python distribution but it is compelling. 32-bit and 64-bit
+platforms are catered for and MKL optimizations are available at no cost. Each
+package needs to be installed individually, which can be seen as both good and bad.
+Good because you only install what you actually require and bad because the initial
+installation is protracted. That said, it is on my evaluation list for this week.&lt;/p>
+&lt;h2 id="anymore">Anymore?&lt;/h2>
+&lt;p>Those are the Python Distributions I&amp;rsquo;m aware of. Are there any others I should
+consider?&lt;/p></description><summary>A selection of Python distributions for data analysis</summary></item><item><title>Installing Nikola on Arch Linux</title><link>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</link><pubDate>Fri, 08 Mar 2013 17:13:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</guid><description>&lt;p>I&amp;rsquo;ve decided to migrate one of my servers to &lt;a href="https://www.archlinux.org/">Arch Linux&lt;/a>.
+I&amp;rsquo;m not sure that a rolling release distro really suits servers but I&amp;rsquo;ve enjoyed
+using Arch Linux over the last year on my workstations and the only way to
+assess it&amp;rsquo;s suitability on a server is to try it. So, I&amp;rsquo;ve decided to migrate my
+blog to an Arch Linux server.&lt;/p>
+&lt;p>This blog post describes how to install &lt;a href="http://getnikola.com/">Nikola&lt;/a>
+on Arch Linux. Nikola is a static site and blog generator written in
+&lt;a href="http://www.python.org">Python&lt;/a> that I&amp;rsquo;ve been using for a few months.&lt;/p>
+&lt;p>First you&amp;rsquo;ll need Python and &lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>
+so read my &lt;a href="https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/">Python and virtualenv on Arch Linux and Ubuntu&lt;/a>
+blog post and get yourself equipped.&lt;/p>
+&lt;p>Install the Nikola dependencies.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --noconfirm --needed freetype2 libxslt libxml2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo packer -S --noconfirm --noedit libjpeg6
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Create a &lt;code>virtualenv&lt;/code> for Nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkvirtualenv -p /usr/bin/python2.7 nikola-640
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will notice your shell prompt has changed to indicate that the &lt;code>nikola-640&lt;/code>
+virtualenv is now active. Install Nikola and the optional libraries I use.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install https://github.com/getnikola/nikola/archive/v6.4.0.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you intend to use the Nikola planetoid (Planet generator) plugin you&amp;rsquo;ll also
+need to following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install peewee feedparser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nikola is now installed. &lt;code>nikola help&lt;/code> and the &lt;a href="http://getnikola.com/handbook.html">Nikola Handbook&lt;/a>
+will assist you from here on.&lt;/p></description><summary>Install Nikola static site generator in a virtualenv on Arch Linux</summary></item><item><title>Dropbox is my Nikola publish button</title><link>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</link><pubDate>Wed, 06 Mar 2013 19:01:21 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/</guid><description>&lt;p>When I &lt;a href="https://wimpysworld.com/posts/migrating-wordpress-to-nikola/">migrated my site to Nikola&lt;/a>
+I wanted to ensure I could manage my blog from the shell, the web, Android
+smartphone or Android tablet. I took some inspiration from &lt;a href="http://joehewitt.com">Joe Hewitt&amp;rsquo;s&lt;/a>
+article &lt;a href="http://joehewitt.com/2011/10/03/dropbox-is-my-publish-button">Dropbox is my publish button&lt;/a>
+and created a free Dropbox account which links to a shared folder on my Dropbox
+Pro account. I created a simple shell script (invoked via &lt;code>cron&lt;/code> every minute)
+that looks for a trigger file, if the trigger file exists Nikola publishes and
+deploys the site.&lt;/p>
+&lt;p>I am able to edit content from anywhere, on any device, and trigger publishing.
+Very happy.&lt;/p>
+&lt;p>What follows is how I install Dropbox on headless servers running Arch Linux
+and Debian/Ubuntu.&lt;/p>
+&lt;h2 id="installing-dropbox-daemon---all-distros">Installing Dropbox daemon - all distros&lt;/h2>
+&lt;p>Download the latest Dropbox stable release for 32-bit or 64-bit.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O dropbox.tar.gz &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download/?plat=lnx.x86&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -O dropbox.tar.gz &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download/?plat=lnx.x86_64&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Extract the archive and install Dropbox in &lt;code>/opt&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -xvzf dropbox.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv ~/.dropbox-dist /opt/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo find /opt/dropbox/ -type f -exec chmod &lt;span style="color:#f60">644&lt;/span> {} &lt;span style="color:#87ceeb">\;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">755&lt;/span> /opt/dropbox/dropboxd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">755&lt;/span> /opt/dropbox/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s /opt/dropbox/dropboxd /usr/local/bin/dropboxd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run &lt;code>dropboxd&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/usr/local/bin/dropboxd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You should see output like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>This client is not linked to any account... Please visit https://www.dropbox.com/cli_link?host_id=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx to link this machine.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Visit the URL, login with your Dropbox account and link the account. You should see the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Client successfully linked, Welcome Web!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>dropboxd&lt;/code> will now create a &lt;code>~/Dropbox&lt;/code> folder and start synchronizing. Stop &lt;code>dropboxd&lt;/code> with CTRL+C.&lt;/p>
+&lt;h3 id="arch-linux---systemd">Arch Linux - systemd&lt;/h3>
+&lt;p>Run Dropbox as daemon with systemd. Create &lt;code>/usr/lib/systemd/system/dropbox@.service&lt;/code>
+with the following content.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-systemd" data-lang="systemd">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Unit]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Description=&lt;span style="color:#87ceeb">Dropbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>After=&lt;span style="color:#87ceeb">local-fs.target network.target&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Service]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Type=&lt;span style="color:#87ceeb">simple&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ExecStart=&lt;span style="color:#87ceeb">/usr/local/bin/dropboxd&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ExecReload=&lt;span style="color:#87ceeb">/bin/kill -HUP $MAINPID&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>KillMode=&lt;span style="color:#87ceeb">process&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Restart=&lt;span style="color:#87ceeb">always&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User=&lt;span style="color:#87ceeb">%I&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Install]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>WantedBy=&lt;span style="color:#87ceeb">multi-user.target&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the daemon for your user, run the following replace&lt;code>&amp;lt;user&amp;gt;&lt;/code> with your
+username. This will ensure Dropbox is started when the system boots.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable dropbox@&amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl start dropbox@&amp;lt;user&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="debianubuntu---initd">Debian/Ubuntu - init.d&lt;/h3>
+&lt;p>Run Dropbox as daemon with init.d. Create &lt;code>/etc/init.d/dropbox&lt;/code> with the
+following content, replacing &lt;code>&amp;lt;user&amp;gt;&lt;/code> with your username.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>&lt;span style="color:#0f0">### BEGIN INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Provides: dropbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Start: $local_fs $remote_fs $network $syslog $named&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Stop: $local_fs $remote_fs $network $syslog $named&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Start: 2 3 4 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Stop: 0 1 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># X-Interactive: false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Short-Description: dropbox service&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">### END INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DROPBOX_USERS&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&amp;lt;user&amp;gt;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DAEMON&lt;/span>=/opt/dropbox/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>start() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Starting dropbox...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>getent passwd &lt;span style="color:#eedd82">$dbuser&lt;/span> | cut -d: -f6&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOME&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> start-stop-daemon -b -o -c &lt;span style="color:#eedd82">$dbuser&lt;/span> -S -u &lt;span style="color:#eedd82">$dbuser&lt;/span> -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>stop() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Stopping dropbox...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>getent passwd &lt;span style="color:#eedd82">$dbuser&lt;/span> | cut -d: -f6&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon -o -c &lt;span style="color:#eedd82">$dbuser&lt;/span> -K -u &lt;span style="color:#eedd82">$dbuser&lt;/span> -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>status() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">dbpid&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>pgrep -u &lt;span style="color:#eedd82">$dbuser&lt;/span> dropbox&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#eedd82">$dbpid&lt;/span> ] ; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;dropboxd for USER &lt;/span>&lt;span style="color:#eedd82">$dbuser&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;dropboxd for USER &lt;/span>&lt;span style="color:#eedd82">$dbuser&lt;/span>&lt;span style="color:#87ceeb">: running (pid &lt;/span>&lt;span style="color:#eedd82">$dbpid&lt;/span>&lt;span style="color:#87ceeb">)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$1&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart|reload|force-reload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Usage: /etc/init.d/dropbox {start|stop|reload|force-reload|restart|status}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>exit &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the init.d script.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chmod +x /etc/init.d/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo update-rc.d dropbox defaults
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-dropbox-client---all-distros">Install Dropbox client - all distros&lt;/h2>
+&lt;p>It is recommended to download the official Dropbox client to configure Dropbox
+and get its status.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download?dl=packages/dropbox.py&amp;#34;&lt;/span> -O dropbox-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod &lt;span style="color:#f60">755&lt;/span> dropbox-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i s&lt;span style="color:#87ceeb">&amp;#39;/#!\/usr\/bin\/python/#!\/usr\/bin\/env python2/&amp;#39;&lt;/span> dropbox-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv dropbox-cli /usr/local/bin/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For usage instructions run &lt;code>dropbox-cli help&lt;/code>.&lt;/p>
+&lt;h2 id="disable-lan-sync">Disable LAN Sync&lt;/h2>
+&lt;p>Stop Dropbox from sending LAN Sync broadcasts every 30 seconds over port 17500.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dropbox-cli lansync n
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I&amp;rsquo;m planning to make more use of Dropbox for content management and content
+delivery, blog posts to follow.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.dropboxwiki.com/Text_Based_Linux_Install">http://www.dropboxwiki.com/Text_Based_Linux_Install&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://aur.archlinux.org/packages/dropbox/">https://aur.archlinux.org/packages/dropbox/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Dropbox">https://wiki.archlinux.org/index.php/Dropbox&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Publishing a Nikola blog via Dropbox on a headless Linux server</summary></item><item><title>Python and virtualenv on Arch Linux and Ubuntu</title><link>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</link><pubDate>Tue, 11 Dec 2012 20:38:50 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</guid><description>&lt;p>We use &lt;a href="http://www.python.org">Python&lt;/a> for pretty much all our software
+development at &lt;a href="http://www.flightdataservices.com/">work&lt;/a>. We also use
+&lt;a href="http://www.virtualenv.org">virtualenv&lt;/a> and
+&lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>
+extensively, both for development &lt;em>and&lt;/em> deployment.&lt;/p>
+&lt;h2 id="why-is-virtualenv-so-great">Why is virtualenv so great?&lt;/h2>
+&lt;p>It just is. Read the &lt;a href="http://www.virtualenv.org/en/latest/">virtualenv documentation&lt;/a>.
+If you&amp;rsquo;re a Python developer you need &lt;code>virtualenv&lt;/code> in your life. You also need
+&lt;code>virtualenvwrapper&lt;/code> too.&lt;/p>
+&lt;blockquote>
+&lt;p>virtualenvwrapper is a set of extensions to Ian Bicking’s virtualenv tool
+for creating isolated Python development environments.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="installing-python-and-virtualenvwrapper">Installing Python and virtualenvwrapper&lt;/h2>
+&lt;p>Outlined below is how I install Python and &lt;code>virtualenvwrapper&lt;/code>. We have not
+yet made the jump to Python 3 at work, hence the references to Python 2.6 and
+2.7. Some of us develop on Arch Linux, but all deployments are on Ubuntu.&lt;/p>
+&lt;h3 id="arch-linux">Arch Linux&lt;/h3>
+&lt;p>As Arch Linux is a rolling release we can simply install everything via
+&lt;code>pacman&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Syy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed --noconfirm python-pip python-setuptools python-virtualenv
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed --noconfirm python2-pip python2-setuptools python2-virtualenv python-virtualenvwrapper&lt;span style="color:#87ceeb">&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Simple.&lt;/p>
+&lt;h3 id="ubuntu">Ubuntu&lt;/h3>
+&lt;p>The following was done on Ubuntu Lucid 10.04 LTS.&lt;/p>
+&lt;p>Add some essential PPAs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:bzr/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:git-core/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:fkrull/deadsnakes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Update the system and install Python 2.6 and 2.7.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.6 python2.6 python2.6-dev python2.6-minimal
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.7 python2.7 python2.7-dev python2.7-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove any &lt;code>apt&lt;/code> installed Python packages that we are about to repalce. The
+versions of these packages in the Ubuntu repos and PPAs are too old.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge python-setuptools python-virtualenv python-pip python-profiler
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>distribute&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -O http://python-distribute.org/distribute_setup.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.6 distribute_setup.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 distribute_setup.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>pip&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.6 get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 get-pip.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;code>pip&lt;/code> to install &lt;code>virtualenv&lt;/code> and &lt;code>virtualenv&lt;/code> wrapper.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pip-2.6 install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pip-2.7 install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pip install virtualenvwrapper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Fairly simple.&lt;/p>
+&lt;h3 id="the-snakepit">The Snakepit&lt;/h3>
+&lt;p>This step is common to Arch Linux and Ubuntu. Create a &lt;em>&amp;ldquo;Snakepit&amp;rdquo;&lt;/em> directory for
+storing all the virtualenvs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following your &lt;code>~/.bashrc&lt;/code> to enable &lt;code>virtualenvwrapper&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WORKON_HOME&lt;/span>=&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/Snakepit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">if&lt;/span> [ -f /usr/local/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/local/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">elif&lt;/span> [ -f /usr/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="creating-a-virtualenv">Creating a virtualenv&lt;/h2>
+&lt;p>Open a new shell to ensure that the &lt;code>virtualenvwrapper&lt;/code> configuration is
+active.&lt;/p>
+&lt;p>The following will create a new virtualenv called &lt;code>Nikola5&lt;/code> based on Python
+2.7 and will not give access to the global &lt;code>site-packages&lt;/code> directory.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkvirtualenv -p python2.7 --no-site-packages ~/Snakepit/Nikola5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>mkvirtualenv_help&lt;/code> shows a full list of arguments, the &lt;code>-r&lt;/code> switch can install
+all the packages listed in a &lt;code>pip&lt;/code> requirements file into the newly created
+virtualenv. Very useful.&lt;/p>
+&lt;h2 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h2>
+&lt;p>To workon, or activate, an existing virtualenv do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>workon Nikola5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can switch to another virtualenv at any time, just use &lt;code>workon envname&lt;/code>.
+Your shell prompt will change while a virtualenv is being worked on to indicate
+which virtualenv is currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or manually
+install any Python libraries safe in the knowledge you will not adversely
+damage any other virtualenvs or the global packages in the process. Very useful
+for developing a new branch which may have different library requirements than
+the master/head.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by simply
+executing:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>deactivate
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>That just about sums up my notes.&lt;/p></description><summary>Installing Python and virtualenv on Arch Linux and Ubuntu</summary></item><item><title>Migrating Wordpress to Nikola</title><link>https://wimpysworld.com/posts/migrating-wordpress-to-nikola/</link><pubDate>Mon, 22 Oct 2012 17:13:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/migrating-wordpress-to-nikola/</guid><description>&lt;p>I recently migrated three sites from a self hosted &lt;a href="http://www.wordpress.org">Wordpress&lt;/a>
+installation to &lt;a href="http://getnikola.com/">Nikola&lt;/a>. Nikola is a static
+site and blog generator written in &lt;a href="http://www.python.org">Python&lt;/a>.&lt;/p>
+&lt;p>Although I use both &lt;a href="http://docutils.sourceforge.net/rst.html">reStructuredText&lt;/a>
+and &lt;a href="http://daringfireball.net/projects/markdown/">Markdown&lt;/a>, I decided
+to migrate my Wordpress content to Markdown.&lt;/p>
+&lt;p>This is by no means an exhaustive Wordpress to Nikola migration guide but it
+should provide enough clues for anyone else wanting to do the same. The
+following was done on Ubuntu 10.04 LTS.&lt;/p>
+&lt;p>Export the Wordpress content. &lt;code>Tools -&amp;gt; Export -&amp;gt; All Content&lt;/code>&lt;/p>
+&lt;p>Use &lt;code>xmllint&lt;/code> to find any errors in the Wordpress XML export and fix them.&lt;/p>
+&lt;h2 id="nikola-5">Nikola 5&lt;/h2>
+&lt;p>&lt;strong>UPDATE!&lt;/strong> I&amp;rsquo;ve added the instructions for install Nikola 5 since fist
+publishing this post.&lt;/p>
+&lt;p>Install Nikola 5 in a &lt;code>virtualenv&lt;/code> using
+&lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd ~
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libxslt1-dev libxml2-dev libjpeg62-dev python2.6-dev
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://nikola-generator.googlecode.com/files/nikola-5.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>unzip ~/nikola-5.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkvirtualenv -i markdown -r ~/nikola-5/requirements.txt --use-distribute nikola-5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd ~/nikola-5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>python setup.py install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="nikola-4">Nikola 4&lt;/h2>
+&lt;p>Install Nikola 4.0.3, in a &lt;code>virtualenv&lt;/code> using
+&lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>.
+Nikola 4.0.3 spits deprecation warnings with &lt;code>doit&amp;gt;=0.16.1&lt;/code> hence the use of
+&lt;code>sed&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd ~
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libxslt1-dev libxml2-dev libjpeg62-dev python2.6-dev
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://nikola-generator.googlecode.com/files/nikola-4.0.3.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>unzip ~/nikola-4.0.3.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#87ceeb">&amp;#39;s/&amp;gt;=0\.16/==0\.16/&amp;#39;&lt;/span> ~/nikola-4.0.3/requirements.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkvirtualenv -i markdown -r ~/nikola-4.0.3/requirements.txt --use-distribute nikola
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd nikola-4.0.3
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>python setup.py install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Import the Wordpress content.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nikola import_wordpress wordpress.linted.xml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;a href="https://github.com/aaronsw/html2text">html2text&lt;/a> to convert the HTML
+markup in &lt;code>new_site/posts/*.wp&lt;/code> to &lt;em>real&lt;/em> Markdown.&lt;/p>
+&lt;p>Use the &lt;a href="http://wordpress.org/extend/plugins/disqus-comment-system/">Disqus Wordpress Plug-in&lt;/a>
+to migrate Wordpress comments to &lt;a href="http://www.disqus.com">Disqus&lt;/a>.&lt;/p>
+&lt;p>If required, generate a list of the Wordpress URLs for Nikola redirections.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>grep &lt;span style="color:#87ceeb">&amp;#34;&amp;lt;link&amp;gt;&amp;#34;&lt;/span> wordpress.linted.xml | sed -e &lt;span style="color:#87ceeb">&amp;#39;s/&amp;lt;link&amp;gt;//g&amp;#39;&lt;/span> -e &lt;span style="color:#87ceeb">&amp;#39;s/&amp;lt;\/link&amp;gt;//g&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I migrated from several sub-domains to one top-level and the Wordpress URLs
+I was using can&amp;rsquo;t be persevered with Nikola. I use a combination of Nikola
+redirects and nginx configuration to handle the re-directions.&lt;/p>
+&lt;p>At this point the bulk of the migration is done. I tweaked the Nikola &lt;code>conf.py&lt;/code>
+to use &lt;code>.md&lt;/code> files instead of &lt;code>.wp&lt;/code>, added some assets to the Nikola &lt;code>files&lt;/code>
+directory, configured deployments and updated the theme. I also decided to axe
+some obsolete blog posts.&lt;/p>
+&lt;p>Migrating to Disqus has been very frustrating and although my comments have
+now been migrated the Migrate Threads has yet reflect the new URLs of my posts.
+There is no visibility of what, if anything, is happening when you execute the
+Disqus URL Mapper. This is not a Nikola issue.&lt;/p>
+&lt;p>I am extremely happy with Nikola itself and it has proved itself flexible and
+I can now capture my notes in a familiar format and in a familiar environment,
+Python. Next steps are to integrate Nikola with Dropbox so I can publish from
+any device with ease and add a search facility.&lt;/p></description><summary>From a dynamic Wordpress site to static Nikola site</summary></item><item><title>MATE Desktop</title><link>https://wimpysworld.com/projects/mate-desktop/</link><pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/mate-desktop/</guid><description>&lt;p>The &lt;a href="https://mate-desktop.org">MATE Desktop Environment&lt;/a> is the continuation of
+&lt;a href="https://en.wikipedia.org/wiki/GNOME_2">GNOME 2&lt;/a>. MATE Desktop provides an
+intuitive and attractive desktop environment using traditional metaphors for
+Linux and other Unix-like operating systems.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://mate-desktop.org">MATE Desktop&lt;/a>&lt;/li>
+&lt;li>Date: June 2012 - date&lt;/li>
+&lt;li>Role: Developer &amp;amp; Community Manager&lt;/li>
+&lt;/ul></description><summary>Preserving a traditional desktop metaphor</summary></item><item><title>Distributing closed source Python applications</title><link>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</link><pubDate>Thu, 29 Jan 2009 13:04:03 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</guid><description>&lt;p>Last November we switched to &lt;a href="http://www.python.org/">Python&lt;/a> as the principal
+language for all new software development projects at work, ditching Microsoft
+Visual C++ and PHP in the process. Last Friday we released our first Python
+application to our customers for both Windows and Linux users.&lt;/p>
+&lt;p>Although we make good use of Open Source software development tools and
+methodologies the application we have just written is propritary and the
+source can not be released publicly. We needed to compile, or &lt;em>freeze&lt;/em>, the
+Python script in order to create a standalone executable. Tools that do this
+have been around for sometime, however our application makes use of Win32
+Extensions for Python and WMI on Windows, DBUS/HAL on Linux, wxPython
+on both, and a number of other modules. This is quite a big ask for the Python
+script compilers and initially the only tool which could build this lot
+successfully was &lt;a href="http://www.py2exe.org/">py2exe&lt;/a>. Sadly that only solves part
+of the problem since it is a Windows only tool.&lt;/p>
+&lt;p>Then we found &lt;a href="http://pypi.python.org/pypi/bbfreeze/">bbfreeze&lt;/a>, which
+supports both Windows and Linux with Mac OS X support being actively
+developed. &lt;code>bbfreeze&lt;/code> has a simple build API and we were soon using it to build
+stand alone executables for both Windows and Linux. Everything is peachy, all
+we needed was as means to install our application.&lt;/p>
+&lt;p>We only need a tarball for Linux since we manage all kiosk installations, but
+our customer can install the Windows version. Enter &lt;a href="http://www.jrsoftware.org/isinfo.php">InnoSetup&lt;/a>.
+InnoSetup is a free installer for Windows programs and installer can even be
+created from the command line, perfect for integration with our Jenkins build
+servers.&lt;/p></description><summary>Freezing proprietary Python applications for distribution to clients</summary></item><item><title>POLARIS</title><link>https://wimpysworld.com/projects/polaris/</link><pubDate>Tue, 01 May 2007 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/polaris/</guid><description>&lt;p>Led the design, development and operation of the POLARIS project at
+&lt;a href="https://flightdataservices.com">Flight Data Services&lt;/a>. An Open Source analysis
+engine developed using Python that can scale to analyse and report on millions
+of commercial aviation flights to comply with global aviation safety regulations.
+Now known as Flight Data Connect and owned by L3HARRIS and apparently no longer
+available as Open Source.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://flightdataservices.com">Flight Data Services&lt;/a>&lt;/li>
+&lt;li>Date: May 2007 - September 2015&lt;/li>
+&lt;li>Role: Manager of IT Operations &amp;amp; Software Engineering&lt;/li>
+&lt;/ul></description><summary>Disrupting incumbent flight data analysis solutions with Open Source</summary></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>&lt;p>Ubuntu comes with everything you need to run your organisation, school, home or
+enterprise. All the essential applications, like an office suite, browsers,
+email and media apps come pre-installed.&lt;/p>
+&lt;p>Community contributor since 2006, worked for Canonical from 2016 to 2021
+progressing from software engineer to director of engineering. I remain active
+in the Ubuntu community.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntu-mate.org">Ubuntu Project&lt;/a> &amp;amp; &lt;a href="https://canonical.com">Canonical&lt;/a>&lt;/li>
+&lt;li>Date: January 2006 - date&lt;/li>
+&lt;li>Role: Community contributor&lt;/li>
+&lt;/ul></description><summary>From community contributor to director of engineering and back again</summary></item></channel></rss>

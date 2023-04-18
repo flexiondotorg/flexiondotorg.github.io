@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Analysis on Wimpy's World</title><link>https://wimpysworld.com/tags/analysis/</link><description>Recent content in Analysis on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 01 May 2007 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/analysis/rss.xml" rel="self" type="application/rss+xml"/><item><title>POLARIS</title><link>https://wimpysworld.com/projects/polaris/</link><pubDate>Tue, 01 May 2007 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/polaris/</guid><description>Disrupting incumbent flight data analysis solutions with Open Source</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Analysis on Wimpy's World</title><link>https://wimpysworld.com/tags/analysis/</link><description>Recent content in Analysis on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 01 May 2007 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/analysis/rss.xml" rel="self" type="application/rss+xml"/><item><title>POLARIS</title><link>https://wimpysworld.com/projects/polaris/</link><pubDate>Tue, 01 May 2007 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/polaris/</guid><description>&lt;p>Led the design, development and operation of the POLARIS project at
+&lt;a href="https://flightdataservices.com">Flight Data Services&lt;/a>. An Open Source analysis
+engine developed using Python that can scale to analyse and report on millions
+of commercial aviation flights to comply with global aviation safety regulations.
+Now known as Flight Data Connect and owned by L3HARRIS and apparently no longer
+available as Open Source.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://flightdataservices.com">Flight Data Services&lt;/a>&lt;/li>
+&lt;li>Date: May 2007 - September 2015&lt;/li>
+&lt;li>Role: Manager of IT Operations &amp;amp; Software Engineering&lt;/li>
+&lt;/ul></description><summary>Disrupting incumbent flight data analysis solutions with Open Source</summary></item></channel></rss>

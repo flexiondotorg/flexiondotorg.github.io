@@ -1,1 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Label Printing on Wimpy's World</title><link>https://wimpysworld.com/tags/label-printing/</link><description>Recent content in Label Printing on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 30 Jan 2008 11:45:57 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/label-printing/rss.xml" rel="self" type="application/rss+xml"/><item><title>gLabels 2.2.1</title><link>https://wimpysworld.com/posts/glabels-2.2.1/</link><pubDate>Wed, 30 Jan 2008 11:45:57 +0000</pubDate><guid>https://wimpysworld.com/posts/glabels-2.2.1/</guid><description>Accurate label printing for Linux is restored</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Label Printing on Wimpy's World</title><link>https://wimpysworld.com/tags/label-printing/</link><description>Recent content in Label Printing on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 30 Jan 2008 11:45:57 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/label-printing/rss.xml" rel="self" type="application/rss+xml"/><item><title>gLabels 2.2.1</title><link>https://wimpysworld.com/posts/glabels-2.2.1/</link><pubDate>Wed, 30 Jan 2008 11:45:57 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/glabels-2.2.1/</guid><description>&lt;p>&lt;a href="http://glabels.sourceforge.net/">gLabels&lt;/a>, as packaged in the Ubuntu
+repositories, has not worked properly for some time. The accuracy of printing
+was way out making gLabels a non-starter unless you went to the hassle
+of manually re-aligning every label on a page to account for the inaccuracies.&lt;/p>
+&lt;p>However, I have been patiently waiting for a new version of gLables to be
+released. The new development branch completely replaces &lt;code>libgnomeprint&lt;/code> with
+the new &lt;code>GtkPrintOperation&lt;/code> and Cairo. The upshot of that is that the printing
+accuracy issues are resolved.&lt;/p>
+&lt;p>&lt;a href="http://www.getdeb.net">GetDeb&lt;/a> have released &lt;a href="http://www.getdeb.net/app/gLabels">.debs for gLabels 2.2.1&lt;/a>
+that work with Ubuntu Gutsy 7.10. You can either download the .debs from the
+gLabels page at GetDeb and let &lt;code>gdebi&lt;/code> do its thing or do the following from the
+shell&amp;hellip;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -c ftp://cesium.di.uminho.pt/pub/getdeb/gl/glabels_2.2.1-1~getdeb1_i386.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -c ftp://cesium.di.uminho.pt/pub/getdeb/gl/glabels-data_2.2.1-1~getdeb1_all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i glabels*.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We print a lot of labels at work to identify media for flight recorders, that
+job just got a whole lot easier. More importantly, I now have a viable address
+label printing solution for my wife.&lt;/p></description><summary>Accurate label printing for Linux is restored</summary></item></channel></rss>

@@ -1,1 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fedora on Wimpy's World</title><link>https://wimpysworld.com/tags/fedora/</link><description>Recent content in Fedora on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Fri, 03 Feb 2006 11:43:06 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/fedora/rss.xml" rel="self" type="application/rss+xml"/><item><title>The honeymoon is over</title><link>https://wimpysworld.com/posts/the-honeymoon-is-over/</link><pubDate>Fri, 03 Feb 2006 11:43:06 +0000</pubDate><guid>https://wimpysworld.com/posts/the-honeymoon-is-over/</guid><description>Ditching Fedora and sticking with Ubuntu</description></item><item><title>Leading edge Fedora Core 4</title><link>https://wimpysworld.com/posts/leading-edge-fedora-core-4/</link><pubDate>Sat, 14 Jan 2006 11:32:31 +0000</pubDate><guid>https://wimpysworld.com/posts/leading-edge-fedora-core-4/</guid><description>Taking a look at Fedora Core 4</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fedora on Wimpy's World</title><link>https://wimpysworld.com/tags/fedora/</link><description>Recent content in Fedora on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Fri, 03 Feb 2006 11:43:06 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/fedora/rss.xml" rel="self" type="application/rss+xml"/><item><title>The honeymoon is over</title><link>https://wimpysworld.com/posts/the-honeymoon-is-over/</link><pubDate>Fri, 03 Feb 2006 11:43:06 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/the-honeymoon-is-over/</guid><description>&lt;p>Despite my glowing comments about &lt;a href="http://fedoraproject.org/">Fedora&lt;/a> a couple
+of weeks back, the honeymoon period is well and truly over. My biggest gripe
+with Fedora is even with numerous compatible repositories enabled there isn&amp;rsquo;t a
+suitable selection of packages available and dependency breakage is all too
+frequent.&lt;/p>
+&lt;p>Although I can build my own packages from source I just don&amp;rsquo;t have the time
+(or inclination) for that anymore. I do really like the Early Logon feature and
+the working NetworkManager in Fedora, but sadly these features are not enough to
+keep me away from Ubuntu. As a result I have just finished migrating all my
+computers to Ubuntu Dapper Drake 6.04 - Flight 3, which is shaping up to be
+another excellent release. Matt Galvin has been doing a great job of tracking
+the new features in each of the Dapper Flight pre-releases, see the Wiki entries
+below&amp;hellip;&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.ubuntu.com/DapperFlight2">https://wiki.ubuntu.com/DapperFlight2&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.ubuntu.com/DapperFlight3">https://wiki.ubuntu.com/DapperFlight3&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.ubuntu.com/DapperFlight4">https://wiki.ubuntu.com/DapperFlight4&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Having spent 6 weeks using Fedora I have decided that I have learnt enough
+about it to conclude it just isn&amp;rsquo;t for me and I will be seeing out the rest of
+2006 using Ubuntu as my desktop OS. However, I will dabble with other distros
+periodically.&lt;/p></description><summary>Ditching Fedora and sticking with Ubuntu</summary></item><item><title>Leading edge Fedora Core 4</title><link>https://wimpysworld.com/posts/leading-edge-fedora-core-4/</link><pubDate>Sat, 14 Jan 2006 11:32:31 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/leading-edge-fedora-core-4/</guid><description>&lt;p>Having spent all of 2005 using &lt;a href="http://www.ubuntu.com">Ubuntu&lt;/a> I have learnt a
+lot about &lt;a href="http://www.debian.org">Debian&lt;/a> and even started using Debian for my
+servers.&lt;/p>
+&lt;p>Despite using Linux for over 10 years I had never previously used Debian and had
+even avoided using it. I was surprised by how much I liked using Ubuntu and
+Debian and decided that I give &lt;a href="http://fedoraproject.org/">Fedora&lt;/a> another try
+as I have never warmed to &lt;a href="http://www.redhat.com/">redhat&lt;/a> in the same way I had
+never previously warmed to Debian. For the longest time I used &lt;a href="http://www.slackware.com/">Slackware&lt;/a>
+and then switched to &lt;a href="http://crux.nu/">Crux&lt;/a>.&lt;/p>
+&lt;p>This week I have installed Fedora Core 4 on my home computer and been hugely
+impressed, but this is mostly down to finding the nrpms.net repository. I was
+already using the RPMforge.net group of repositories and nrpms.net is striving
+for RPMforge compatibility, so far I haven&amp;rsquo;t experienced any package or
+dependency breakage so they must be doing something right. Thanks to nrpms.net
+I have effortlessly upgraded FC4 to GNOME 2.12.1, Firefox 1.5, mono 1.1.12 plus
+numerous other GNOME applications I regularly use which aren&amp;rsquo;t available
+elsewhere. The real bonus was to get NetworkManager 0.5.1 from nrpms.net which
+actually works, and works reliably!&lt;/p>
+&lt;p>As a result, this is a Linux distribution I can install on my wifes laptop
+without fear of reprisals. I have found that installing proprietary
+hardware drivers and software has been much simpler for Fedora than Ubuntu,
+most notable are VMWare Player, Linuxant HSF modem drivers, ATI drivers, Opera
+and Skype.&lt;/p>
+&lt;p>I have been able to get my Smartphone and PocketPC working under Ubuntu
+the amount of tweaking and constant manual intervention is cumbersome. So I
+was staggered when after installing the SynCE packages on Fedora both devices
+just worked when connected via USB, the whole process was completely seamless.&lt;/p>
+&lt;p>So, after a few days tinkering I have everything I need installed, configured
+and working reliably. Fedora is not perfect thought, &lt;code>yum&lt;/code> is still lagging
+behind &lt;code>apt&lt;/code> and even that even after enabling a number of the excellent 3rd
+party repositories the number and variety of packages available
+to FC4 isn&amp;rsquo;t that great. Installing software is just so slow, what the bloody
+hell is &lt;code>yum&lt;/code> doing? Using &lt;code>yumex&lt;/code> is coma inducing and &lt;code>up2date&lt;/code> just doesn&amp;rsquo;t
+work.&lt;/p>
+&lt;p>That said, there is some work being done in these areas for FC5 so maybe
+the gap will be closed on &lt;code>apt&lt;/code> a little in the coming months. I do like the
+fact that the official Fedora repositories update packages past the
+final release date, something which Ubuntu doesn&amp;rsquo;t do. This means that on my
+first &lt;code>yum update&lt;/code> OpenOffice was upgrade from 1.9.140 Beta to 2.0.1 final and
+many other essential applications were also upgraded. Just when I thought it
+couldn&amp;rsquo;t get any better I discovered the &amp;ldquo;Early Login&amp;rdquo; feature which is new to
+Fedora Core 4. It is simply brilliant and I can not get from power button to
+GNOME desktop in 20 seconds. I so wanted to not like Fedora but I have to say
+I think I might be converted. I will have to see how long this enthusiasm for
+Fedora will last, but I am already looking forward to FC5.&lt;/p></description><summary>Taking a look at Fedora Core 4</summary></item></channel></rss>

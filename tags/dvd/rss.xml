@@ -1,1 +1,127 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DVD on Wimpy's World</title><link>https://wimpysworld.com/tags/dvd/</link><description>Recent content in DVD on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Fri, 04 Dec 2009 07:53:58 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/dvd/rss.xml" rel="self" type="application/rss+xml"/><item><title>DVD to MPEG2-TS Ripper for Linux</title><link>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</link><pubDate>Fri, 04 Dec 2009 07:53:58 +0000</pubDate><guid>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</guid><description>Ripping DVDs to MPEG-2 Transport Streams for DLNA streaming</description></item><item><title>DVD to MPEG2-PS Ripper for Linux</title><link>https://wimpysworld.com/posts/dvd-to-mpeg2-ps-ripper-for-linux/</link><pubDate>Thu, 23 Apr 2009 16:50:31 +0000</pubDate><guid>https://wimpysworld.com/posts/dvd-to-mpeg2-ps-ripper-for-linux/</guid><description>Ripping DVDs to MPEG2-PS for streaming via UPnP</description></item><item><title>Converting DVB-T to DVD Compliant MPEG-2</title><link>https://wimpysworld.com/posts/converting-dvb-t-to-dvd-compliant-mpeg-2/</link><pubDate>Thu, 22 Jan 2009 23:46:26 +0000</pubDate><guid>https://wimpysworld.com/posts/converting-dvb-t-to-dvd-compliant-mpeg-2/</guid><description>Export PlayTV recorded video from PlayStation 3</description></item><item><title>DVD Box Sets - Extended Film Watching Session is Coming</title><link>https://wimpysworld.com/posts/dvd-box-sets-extended-film-watching-session-is-coming/</link><pubDate>Wed, 15 Feb 2006 12:25:47 +0000</pubDate><guid>https://wimpysworld.com/posts/dvd-box-sets-extended-film-watching-session-is-coming/</guid><description>Planning some DVD binge viewing</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DVD on Wimpy's World</title><link>https://wimpysworld.com/tags/dvd/</link><description>Recent content in DVD on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Fri, 04 Dec 2009 07:53:58 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/dvd/rss.xml" rel="self" type="application/rss+xml"/><item><title>DVD to MPEG2-TS Ripper for Linux</title><link>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</link><pubDate>Fri, 04 Dec 2009 07:53:58 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</guid><description>&lt;p>A while back I released a script that rips a DVD to MPEG-2 PS allowing the
+user to select one audio stream and one subtitle stream. Optionally the video
+can be requantised, using M2VRequantiser and an ISO image created. If creating
+an ISO image the chapters are also preserved from the original DVD. You can
+see the original post below.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="2009-04-dvd-mpeg2ps-ripper-linux.html">DVD to MPEG-2 PS Ripper for Linux&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>I&amp;rsquo;ve just released an update to that original script which fixes subtitles in
+the original MPEG-2 PS mode but now adds the capability to rip MPEG-2 TS. The
+video stream can still be shrunk and in MPEG-2 PS mode the video is still
+requantised but in MPEG-2 TS mode the video is re-encoded as H.264.&lt;/p>
+&lt;p>Requantising is faster but can introduce artifacting. H.264 encoding is
+slower, but produces very good quality. I am currently re-importing my entire
+DVD collection, using this script, to my DLNA server using MPEG-2 TS and
+re-encoding the video to H.264. This gives me high quality rips at relatively
+small size (~3Gb) whilst preserving Dolby Digital 5.1 audio. Perfect for
+playback via DLNA on the PS3. Some things to be aware of:&lt;/p>
+&lt;ul>
+&lt;li>Subtitles are only supported in MPEG-2 PS mode.&lt;/li>
+&lt;li>MPEG-2 PS files created by this script are DVD compliant.&lt;/li>
+&lt;li>ISO files created by this script will preserve the chapters from the original DVD.&lt;/li>
+&lt;li>The PS3 can only play DTS audio in MPEG-2 PS streams when they have been authored to DVD.&lt;/li>
+&lt;li>The PS3 can only play subtitles in MPEG-2 PS streams when they have been authored to DVD.&lt;/li>
+&lt;li>The PS3 can&amp;rsquo;t play DTS audio in MPEG-2 TS streams therefore this script will transcode DTS to AC3 when in MPEG-2 TS mode.&lt;/li>
+&lt;/ul>
+&lt;p>To download the script and find out how to make full use of it visit the
+release page below.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/DVD-to-MPG">DVD-to-MPG&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Ripping DVDs to MPEG-2 Transport Streams for DLNA streaming</summary></item><item><title>DVD to MPEG2-PS Ripper for Linux</title><link>https://wimpysworld.com/posts/dvd-to-mpeg2-ps-ripper-for-linux/</link><pubDate>Thu, 23 Apr 2009 16:50:31 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/dvd-to-mpeg2-ps-ripper-for-linux/</guid><description>&lt;p>Every so often I find myself in looking through the ex-rental DVD &lt;em>&amp;ldquo;bargain
+bin&amp;rdquo;&lt;/em>. Quite often I find something I consider a bargain. However, the
+experience of watching an ex-rental DVD is typically ruined by the various
+trailers and marketing guff at the start which you can&amp;rsquo;t skip. My wife hates
+that stuff, and I love my wife, so I routinely rip the main feature of newly
+acquired ex-rental DVD movies so we can avoid that crap.&lt;/p>
+&lt;p>I run a Mediatomb DLNA server and I want to load it with all my DVDs. Ripping
+them helps reduce the amount of storage I require. MPEG2-PS files are
+compatible with my PlayStation 3 which is the client to my Mediatomb DLNA server.
+As a solution to the above I created a script, which can extract the main feature
+from a DVD video, allowing the user to select one audio stream and one subtitle
+stream. Optionally the video can be requantised, using M2VRequantiser, and an ISO
+image created. If creating an ISO image the chapters are also preserved from
+the original DVD. I&amp;rsquo;ve lobbed my code into GitHub.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/DVD-to-MPG">DVD-to-MPG&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Ripping DVDs to MPEG2-PS for streaming via UPnP</summary></item><item><title>Converting DVB-T to DVD Compliant MPEG-2</title><link>https://wimpysworld.com/posts/converting-dvb-t-to-dvd-compliant-mpeg-2/</link><pubDate>Thu, 22 Jan 2009 23:46:26 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/converting-dvb-t-to-dvd-compliant-mpeg-2/</guid><description>&lt;p>I am just about to clean up and convert another batch of programmes I have
+recorded from Freeview (DVB-T in the UK) so that I can add them to my
+DLNA Server. I thought I&amp;rsquo;d share the method I use on Ubuntu.&lt;/p>
+&lt;p>By clean up, I mean edit out any adverts and trim crap from the start and the
+end of the recordings. It just so happens that the result of this process is
+a DVD compliant MPEG-2 which is suitable for DVD authoring, or in my case,
+streaming around the house. This method of conversion should work for any DVB
+PVR which allows you to export recordings via USB and, of course,
+&lt;a href="http://www.mythtv.org/">MythTV&lt;/a> or similar.&lt;/p>
+&lt;h2 id="dvb-ripping">DVB Ripping&lt;/h2>
+&lt;p>I have a PlayTV add-on for the PlayStation 3 which enables me to record Freeview
+(DVB-T) broadcasts to the PS3 internal hard disk. I mostly use PlayTV to record
+films. To prevent the PlayStation 3 hard disk filling up with films I wanted to
+export, edit out any adverts and then serve the edited file from my DLNA server
+or author it to DVD.&lt;/p>
+&lt;p>This process does not re-encode the audio or video therefore it is fairly quick
+and the output is the same quality as the input.&lt;/p>
+&lt;p>Although I am using a PlayStation 3 as PVR and MPEG-2 TS (Transport Stream) file
+can be converted to a MPEG-2 PS (Program Stream) file using this process.&lt;/p>
+&lt;h2 id="export-from-playstation-3">Export from PlayStation 3&lt;/h2>
+&lt;h3 id="playtv-to-home-menu">PlayTV to Home Menu&lt;/h3>
+&lt;p>First we need to move the recording from the PlayTV Library to the PS3 Home Menu.
+Start PlayTV, open the Library, select the recording and choose the Move to Home
+Menu option.&lt;/p>
+&lt;h3 id="copy-from-home-menu-to-external-usb">Copy from Home Menu to External USB&lt;/h3>
+&lt;ul>
+&lt;li>Quit PlayTV&lt;/li>
+&lt;li>Plug in an external (FAT32 formatted) USB drive to the PS3.&lt;/li>
+&lt;li>Go to Video on the PS3 Home Menu and select the recording you moved there earlier.&lt;/li>
+&lt;li>Select Copy from the Options screen and choose the external USB drive as the target.&lt;/li>
+&lt;/ul>
+&lt;h2 id="clean-mpeg-2-ts-and-convert-to-mpeg-2-ps">Clean MPEG-2 TS and convert to MPEG-2 PS&lt;/h2>
+&lt;p>Plug the USB drive into your Ubuntu workstation and copy the &lt;code>.m2ts&lt;/code> file to your
+hard disk.&lt;/p>
+&lt;p>You will need to &lt;a href="http://project-x.sourceforge.net/">Project X&lt;/a> to clean the
+MPEG-2 TS and convert it to MPEG-2 PS.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install project-x
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="edit-out-the-adverts">Edit out the adverts&lt;/h2>
+&lt;p>Start the Project X GUI and load your &lt;code>.m2ts&lt;/code> file.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>File -&amp;gt; Add&lt;/code> and select your .m2ts file.&lt;/li>
+&lt;/ul>
+&lt;p>Now use Project X to add cut points to edit out any adverts.&lt;/p>
+&lt;h2 id="de-multiplex-the-audio-and-video">De-multiplex the audio and video&lt;/h2>
+&lt;p>When you have completed your edits you need to &amp;lsquo;demux&amp;rsquo; the &lt;code>.m2ts&lt;/code> file into two
+streams, one holding the audio (.mp2) and one holding the video (.m2v).&lt;/p>
+&lt;ul>
+&lt;li>Click the &lt;code>Prepare &amp;gt;&amp;gt;&lt;/code> button.&lt;/li>
+&lt;li>From the &lt;code>Process Window&lt;/code> select the &lt;code>Action&lt;/code> type &lt;code>to M2P&lt;/code>&lt;/li>
+&lt;li>Click the start button and wait for the processing to finish.&lt;/li>
+&lt;li>Clock the &amp;lsquo;&amp;lsquo;Process Windows&amp;rsquo;&amp;rsquo; and quit Project X.&lt;/li>
+&lt;/ul>
+&lt;h2 id="re-multiplex-the-audio-and-video">Re-multiplex the audio and video&lt;/h2>
+&lt;p>The reason for the de-mux and then re-musing it to ensure the timecodes are
+correct, other the video will not playback correctly.&lt;/p>
+&lt;p>Install MJPEG tools.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install mjpegtools
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now we need to re-multiplex the audio and video to create a DVD compliant MPEG-2 PS file.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mplex -f &lt;span style="color:#f60">8&lt;/span> -o muxed-%d.mpg audio.mp2 video.m2v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>-f 8&lt;/code> option specifies a dvd-compliant stream that is compatible with dvdauthor.
+The &lt;code>-o&lt;/code> option specifies the outfile, you can substitute &lt;code>muxed-%d.mpg&lt;/code> with a
+more descriptive name if you like. &lt;code>%d&lt;/code> is expanded to a number if &lt;code>mplex&lt;/code> decides
+to split the output to several files, this usually happens when the recording
+contains commercials and is nothing to worry about.&lt;/p>
+&lt;h2 id="author-dvd">Author DVD&lt;/h2>
+&lt;p>The MPEG-2 PS file that has been created should be suitable for DVD authoring
+using DeVeDe. When adding MPEG-2 PS files created using the method above open
+the DeVeDe &lt;code>Advanced options&lt;/code> and select &lt;em>This file is already a DVD/xCD-suitable
+MPEG-PS file&lt;/em> in the &lt;code>Misc&lt;/code> menu.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://project-x.sourceforge.net/">http://project-x.sourceforge.net/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://ttcut.tritime.de/index.2.html">http://ttcut.tritime.de/index.2.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://gopchop.org/index.php">http://gopchop.org/index.php&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://gopchop.sourceforge.net/">http://gopchop.sourceforge.net/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.rastersoft.com/programas/devede.html">http://www.rastersoft.com/programas/devede.html&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Export PlayTV recorded video from PlayStation 3</summary></item><item><title>DVD Box Sets - Extended Film Watching Session is Coming</title><link>https://wimpysworld.com/posts/dvd-box-sets-extended-film-watching-session-is-coming/</link><pubDate>Wed, 15 Feb 2006 12:25:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/dvd-box-sets-extended-film-watching-session-is-coming/</guid><description>&lt;p>Today I finally got around to ordering some stuff from Amazon.co.uk using the
+vouchers I was given as present at Christmas. I have ordered The Matrix
+Trilogy and The Lord of the Rings Trilogy (Extended Edition Box Set) which I
+hope arrive before the weekend as my wife is away for a few days which should be
+enough time to get through both box sets 😄&lt;/p></description><summary>Planning some DVD binge viewing</summary></item></channel></rss>

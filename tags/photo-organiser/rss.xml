@@ -1,1 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Photo Organiser on Wimpy's World</title><link>https://wimpysworld.com/tags/photo-organiser/</link><description>Recent content in Photo Organiser on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 20 Mar 2010 15:39:17 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/photo-organiser/rss.xml" rel="self" type="application/rss+xml"/><item><title>Goodbye F-Spot. Hello Shotwell</title><link>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</link><pubDate>Sat, 20 Mar 2010 15:39:17 +0000</pubDate><guid>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</guid><description>F-Spot you serve me well, but here comes Shotwell</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Photo Organiser on Wimpy's World</title><link>https://wimpysworld.com/tags/photo-organiser/</link><description>Recent content in Photo Organiser on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 20 Mar 2010 15:39:17 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/photo-organiser/rss.xml" rel="self" type="application/rss+xml"/><item><title>Goodbye F-Spot. Hello Shotwell</title><link>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</link><pubDate>Sat, 20 Mar 2010 15:39:17 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</guid><description>&lt;p>I&amp;rsquo;ve finally found a photo organiser for Linux I can live with,
+&lt;a href="http://yorba.org/shotwell/">Shotwell&lt;/a>. Shotwell is a photo organiser
+for &lt;a href="http://www.gnome.org">GNOME&lt;/a> that I&amp;rsquo;ve been testing for a few
+months now but the recent 0.5 release which added tagging and printing,
+it means Shotwell is finally ready replace &lt;a href="http://f-spot.org">F-Spot&lt;/a> on
+my workstation.&lt;/p>
+&lt;p>Shotwell is intuitive, well documented, extremely easy to use and reliable.
+It&amp;rsquo;s easy to dismiss Shotwell as an over simplified photo manager. But once
+you start using it, you&amp;rsquo;ll quickly appreciate its clean interface and
+easy-to-use tools. Don&amp;rsquo;t just take my word for it either, Shotwell is now the
+default photo manager in &lt;a href="http://fedoraproject.org">Fedora&lt;/a> 13 alpha. Here is
+a quick run down of the features.&lt;/p>
+&lt;ul>
+&lt;li>Import photos from folders or from any digital camera supported by gPhoto.&lt;/li>
+&lt;li>Shotwell automatically groups photos taken at the same time. You can also
+use tags to organize your photo collection.&lt;/li>
+&lt;li>You can rotate, crop, reduce red-eye, and adjust the exposure, saturation,
+tint, and temperature of each photo.&lt;/li>
+&lt;li>Publish photos to Facebook, Flickr and Picasa Web Albums.&lt;/li>
+&lt;/ul>
+&lt;p>Shotwell provides a non-destructive way to tweak your photos. Instead of
+modifying the original photos, Shotwell stores all edits in a database and
+applies them on-the-fly as necessary. This means that you can easily undo all
+edits. Shotwell comes equipped with all the usual photo enhancing tools and
+slideshow. You can download a source tarball from the Shotwell home page at
+&lt;a href="http://www.yorba.org/shotwell/">http://www.yorba.org/shotwell/&lt;/a> or grab a binary for Ubuntu Karmic or Lucid
+via Yorba&amp;rsquo;s Launchpad PPA.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://launchpad.net/~yorba/+archive/ppa">https://launchpad.net/~yorba/+archive/ppa&lt;/a>&lt;/li>
+&lt;/ul></description><summary>F-Spot you serve me well, but here comes Shotwell</summary></item></channel></rss>

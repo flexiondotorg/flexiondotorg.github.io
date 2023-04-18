@@ -1,1 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C on Wimpy's World</title><link>https://wimpysworld.com/tags/c/</link><description>Recent content in C on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 01 Jun 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/c/rss.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu MATE</title><link>https://wimpysworld.com/projects/ubuntu-mate/</link><pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu-mate/</guid><description>Ubuntu MATE is a Linux distribution I made for my friends and family</description></item><item><title>openSUSE</title><link>https://wimpysworld.com/projects/opensuse/</link><pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/opensuse/</guid><description>Student mentor for Google Summer of Code 2014</description></item><item><title>MATE Desktop</title><link>https://wimpysworld.com/projects/mate-desktop/</link><pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/mate-desktop/</guid><description>Preserving a traditional desktop metaphor</description></item><item><title>DVD to MPEG2-TS Ripper for Linux</title><link>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</link><pubDate>Fri, 04 Dec 2009 07:53:58 +0000</pubDate><guid>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</guid><description>Ripping DVDs to MPEG-2 Transport Streams for DLNA streaming</description></item><item><title>M2VRequantiser for 32-bit and 64-bit Linux</title><link>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</link><pubDate>Thu, 23 Apr 2009 16:47:20 +0000</pubDate><guid>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</guid><description>Finding a MPEG-2 video requantising solution for Linux</description></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>From community contributor to director of engineering and back again</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C on Wimpy's World</title><link>https://wimpysworld.com/tags/c/</link><description>Recent content in C on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 01 Jun 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/c/rss.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu MATE</title><link>https://wimpysworld.com/projects/ubuntu-mate/</link><pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu-mate/</guid><description>&lt;p>A community developed Ubuntu based operating system that beautifully integrates
+the &lt;a href="https://mate-desktop.org">MATE desktop&lt;/a>. Ubuntu MATE is a stable,
+easy-to-use operating system with a configurable desktop environment and is
+suitable for modern workstations, laptops, single board computers and older
+hardware alike.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntu-mate.org">Ubuntu MATE Project&lt;/a>&lt;/li>
+&lt;li>Date: June 2014 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>Ubuntu MATE is a Linux distribution I made for my friends and family</summary></item><item><title>openSUSE</title><link>https://wimpysworld.com/projects/opensuse/</link><pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/opensuse/</guid><description>&lt;p>Mentored three students for the &lt;a href="https://www.google-melange.com/gsoc/org2/google/gsoc2014/opensuse">openSUSE 2014 Google Summer of Code&lt;/a>.
+All three students successfully completed their projects for the
+&lt;a href="https://mate-desktop.org">MATE Desktop&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="http://www.opensuse.org">openSUSE&lt;/a>&lt;/li>
+&lt;li>Date: February 2014 - August 2014&lt;/li>
+&lt;li>Role: Student mentor&lt;/li>
+&lt;/ul></description><summary>Student mentor for Google Summer of Code 2014</summary></item><item><title>MATE Desktop</title><link>https://wimpysworld.com/projects/mate-desktop/</link><pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/mate-desktop/</guid><description>&lt;p>The &lt;a href="https://mate-desktop.org">MATE Desktop Environment&lt;/a> is the continuation of
+&lt;a href="https://en.wikipedia.org/wiki/GNOME_2">GNOME 2&lt;/a>. MATE Desktop provides an
+intuitive and attractive desktop environment using traditional metaphors for
+Linux and other Unix-like operating systems.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://mate-desktop.org">MATE Desktop&lt;/a>&lt;/li>
+&lt;li>Date: June 2012 - date&lt;/li>
+&lt;li>Role: Developer &amp;amp; Community Manager&lt;/li>
+&lt;/ul></description><summary>Preserving a traditional desktop metaphor</summary></item><item><title>DVD to MPEG2-TS Ripper for Linux</title><link>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</link><pubDate>Fri, 04 Dec 2009 07:53:58 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</guid><description>&lt;p>A while back I released a script that rips a DVD to MPEG-2 PS allowing the
+user to select one audio stream and one subtitle stream. Optionally the video
+can be requantised, using M2VRequantiser and an ISO image created. If creating
+an ISO image the chapters are also preserved from the original DVD. You can
+see the original post below.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="2009-04-dvd-mpeg2ps-ripper-linux.html">DVD to MPEG-2 PS Ripper for Linux&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>I&amp;rsquo;ve just released an update to that original script which fixes subtitles in
+the original MPEG-2 PS mode but now adds the capability to rip MPEG-2 TS. The
+video stream can still be shrunk and in MPEG-2 PS mode the video is still
+requantised but in MPEG-2 TS mode the video is re-encoded as H.264.&lt;/p>
+&lt;p>Requantising is faster but can introduce artifacting. H.264 encoding is
+slower, but produces very good quality. I am currently re-importing my entire
+DVD collection, using this script, to my DLNA server using MPEG-2 TS and
+re-encoding the video to H.264. This gives me high quality rips at relatively
+small size (~3Gb) whilst preserving Dolby Digital 5.1 audio. Perfect for
+playback via DLNA on the PS3. Some things to be aware of:&lt;/p>
+&lt;ul>
+&lt;li>Subtitles are only supported in MPEG-2 PS mode.&lt;/li>
+&lt;li>MPEG-2 PS files created by this script are DVD compliant.&lt;/li>
+&lt;li>ISO files created by this script will preserve the chapters from the original DVD.&lt;/li>
+&lt;li>The PS3 can only play DTS audio in MPEG-2 PS streams when they have been authored to DVD.&lt;/li>
+&lt;li>The PS3 can only play subtitles in MPEG-2 PS streams when they have been authored to DVD.&lt;/li>
+&lt;li>The PS3 can&amp;rsquo;t play DTS audio in MPEG-2 TS streams therefore this script will transcode DTS to AC3 when in MPEG-2 TS mode.&lt;/li>
+&lt;/ul>
+&lt;p>To download the script and find out how to make full use of it visit the
+release page below.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/DVD-to-MPG">DVD-to-MPG&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Ripping DVDs to MPEG-2 Transport Streams for DLNA streaming</summary></item><item><title>M2VRequantiser for 32-bit and 64-bit Linux</title><link>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</link><pubDate>Thu, 23 Apr 2009 16:47:20 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/m2vrequantiser-for-32-bit-and-64-bit-linux/</guid><description>&lt;p>I recently discovered that &lt;code>tcrequant&lt;/code> (part of the
+&lt;a href="http://http://www.transcoding.org/">transcode&lt;/a> suite of tools) has been
+deprecated. Worst still I found that when I ran &lt;code>tcrequant&lt;/code> on my 64-bit Linux
+workstation is was corrupting the video. See the links below for details.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://tcforge.berlios.de/archives/2009/01/18/transcode_1_1_0_final_release/index.html">transcode 1.1.0 Final Release&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.mail-archive.com/transcode-users@exit1.org/msg01773.html">[transcode-users] tcrequant status&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Therefore I decided to get the &lt;a href="http://www.metakine.com/products/dvdremaster/developers.html">M2VRequantiser&lt;/a>
+code from &lt;a href="http://www.metakine.com/">Metakine&lt;/a> working on both 32-bit and 64-bit
+Linux as a replacement for &lt;code>tcrequant&lt;/code>. M2VRequantiser accepts the raw MPEG2 video
+data (not VOB) from the standard input and writes the recompressed frames to
+the standard output. M2VRequantiser takes two arguments. The first one is a
+floating point value specifying the ratio of compression. The second is the
+size of the M2V, since the data is streamed to M2VRequantiser it cannot know
+the M2V size. The following command would recompress &amp;lsquo;original.m2v&amp;rsquo;, whose
+size is 1024000 bytes, by a factor of 1.25.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>M2VRequantiser 1.25 &lt;span style="color:#f60">1024000&lt;/span> &amp;lt; original.m2v &amp;gt; requantised.m2v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I&amp;rsquo;ve only tested on 32-bit and 64-bit Linux, specifically Ubuntu 8.10. It works
+for me but I&amp;rsquo;d be interested to get your feedback.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://code.launchpad.net/~flexiondotorg/m2vrequantiser/trunk">M2VRequantiser&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Finding a MPEG-2 video requantising solution for Linux</summary></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>&lt;p>Ubuntu comes with everything you need to run your organisation, school, home or
+enterprise. All the essential applications, like an office suite, browsers,
+email and media apps come pre-installed.&lt;/p>
+&lt;p>Community contributor since 2006, worked for Canonical from 2016 to 2021
+progressing from software engineer to director of engineering. I remain active
+in the Ubuntu community.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntu-mate.org">Ubuntu Project&lt;/a> &amp;amp; &lt;a href="https://canonical.com">Canonical&lt;/a>&lt;/li>
+&lt;li>Date: January 2006 - date&lt;/li>
+&lt;li>Role: Community contributor&lt;/li>
+&lt;/ul></description><summary>From community contributor to director of engineering and back again</summary></item></channel></rss>

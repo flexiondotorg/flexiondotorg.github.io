@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nullmailer on Wimpy's World</title><link>https://wimpysworld.com/tags/nullmailer/</link><description>Recent content in nullmailer on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 09 Mar 2013 23:27:43 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/nullmailer/rss.xml" rel="self" type="application/rss+xml"/><item><title>nullmailer on Arch Linux</title><link>https://wimpysworld.com/posts/nullmailer-on-arch-linux/</link><pubDate>Sat, 09 Mar 2013 23:27:43 +0000</pubDate><guid>https://wimpysworld.com/posts/nullmailer-on-arch-linux/</guid><description>Configuring nullmailer on Arch Linux to relay email via Gmail</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nullmailer on Wimpy's World</title><link>https://wimpysworld.com/tags/nullmailer/</link><description>Recent content in nullmailer on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 09 Mar 2013 23:27:43 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/nullmailer/rss.xml" rel="self" type="application/rss+xml"/><item><title>nullmailer on Arch Linux</title><link>https://wimpysworld.com/posts/nullmailer-on-arch-linux/</link><pubDate>Sat, 09 Mar 2013 23:27:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/nullmailer-on-arch-linux/</guid><description>&lt;p>I&amp;rsquo;ve been a fan of &lt;a href="http://untroubled.org/nullmailer/">nullmailer&lt;/a> for some years
+now, so much so that I took ownership of the &lt;a href="https://aur.archlinux.org/packages/nullmailer/">nullmailer package for Arch Linux&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>nullmailer is a sendmail/qmail/etc replacement MTA for hosts which
+relay to a fixed set of smart relays. It is designed to be simple to
+configure, secure, and easily extendable.&lt;/p>
+&lt;/blockquote>
+&lt;p>The other advantage &lt;code>nullmailer&lt;/code> has compared to similar tools is that is queues
+email until it is able to deliver it upstream.&lt;/p>
+&lt;p>Install &lt;code>nullmailer&lt;/code> as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>packer -S --noedit --noconfirm nullmailer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Configuring &lt;code>nullmailer&lt;/code> to relay via Gmail can be achieved using
+&lt;a href="http://en.wikipedia.org/wiki/SMTPS">SMTPS&lt;/a> or
+&lt;a href="http://en.wikipedia.org/wiki/Mail_submission_agent">MSA&lt;/a>. &lt;code>nullmailer&lt;/code> has
+had these capabilities since 1.10. The following provides some useful clues
+&lt;code>/usr/lib/nullmailer/smtp --help&lt;/code>.&lt;/p>
+&lt;p>While these examples are specific to relaying via Gmail, you can see it is
+trivial to adapt them to any other mail host.&lt;/p>
+&lt;h2 id="relay-via-gmail-using-msa">Relay via Gmail using MSA&lt;/h2>
+&lt;p>Add to following to &lt;code>/etc/nullmailer/remotes&lt;/code>. I prefer this technique.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>smtp.gmail.com smtp --port=&lt;span style="color:#f60">587&lt;/span> --auth-login --user=you@gmail.com --pass=Yourpassword --starttls
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="relay-via-gmail-using-smtps">Relay via Gmail using SMTPS&lt;/h2>
+&lt;p>Add to following to &lt;code>/etc/nullmailer/remotes&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>smtp.gmail.com smtp --port=&lt;span style="color:#f60">465&lt;/span> --auth-login --user=you@gmail.com --pass=Yourpassword --ssl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once you&amp;rsquo;ve got &lt;code>/etc/nullmailer/remotes&lt;/code> configured start the nullmailer service.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl start nullmailer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>To test &lt;code>nullmailer&lt;/code> can relay email correctly do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#87ceeb">&amp;#34;Test 1&amp;#34;&lt;/span> | mailx -s &lt;span style="color:#87ceeb">&amp;#34;Test One&amp;#34;&lt;/span> me@example.org
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can see what &lt;code>nullmailer&lt;/code> is up to by checking the systemd journal or syslog
+(if you&amp;rsquo;ve syslog enabled systemd). This is how to get the logs from the systemd
+journal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>journalctl &lt;span style="color:#eedd82">_SYSTEMD_UNIT&lt;/span>=nullmailer.service
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Or via syslog.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo grep nullmailer /var/log/daemon.log
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>When you&amp;rsquo;re happy &lt;code>nullmailer&lt;/code> is working enable the systemd unit.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable nullmailer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Email will now flow as required.&lt;/p></description><summary>Configuring nullmailer on Arch Linux to relay email via Gmail</summary></item></channel></rss>

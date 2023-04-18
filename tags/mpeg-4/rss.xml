@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MPEG-4 on Wimpy's World</title><link>https://wimpysworld.com/tags/mpeg-4/</link><description>Recent content in MPEG-4 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 23 Apr 2009 17:09:11 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/mpeg-4/rss.xml" rel="self" type="application/rss+xml"/><item><title>PlayStation 3 compatible MPEG-4 container repacker</title><link>https://wimpysworld.com/posts/playstation-3-compatible-mpeg-4-container-repacker/</link><pubDate>Thu, 23 Apr 2009 17:09:11 +0000</pubDate><guid>https://wimpysworld.com/posts/playstation-3-compatible-mpeg-4-container-repacker/</guid><description>Automatically repack MPEG-4 video files for PlayStation 3 compatibility</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MPEG-4 on Wimpy's World</title><link>https://wimpysworld.com/tags/mpeg-4/</link><description>Recent content in MPEG-4 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 23 Apr 2009 17:09:11 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/mpeg-4/rss.xml" rel="self" type="application/rss+xml"/><item><title>PlayStation 3 compatible MPEG-4 container repacker</title><link>https://wimpysworld.com/posts/playstation-3-compatible-mpeg-4-container-repacker/</link><pubDate>Thu, 23 Apr 2009 17:09:11 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/playstation-3-compatible-mpeg-4-container-repacker/</guid><description>&lt;p>Some of my mobile phones have been able to record video clips in MPEG-4
+format. Sadly some of these clips don&amp;rsquo;t play on the PlayStation 3 and those
+that do stutter terribly. I use &lt;a href="http://po-ru.com/projects/iplayer-downloader/">iplayer-dl&lt;/a>
+to download content from BBC iPlayer. Sadly the files are in a Quicktime
+container and are not playable on the PlayStation 3.&lt;/p>
+&lt;p>In order to address both these issues I created a script which extracts the
+audio and video from an existing MPEG-4 or ISO Media Apple QuickTime container
+and repacks them in a new MPEG-4 container with optional splitting of the
+resulting MPEG-4 to maintain FAT32 compatibility. The new MPEG-4 files play
+just fine on my PlayStation 3. This script works on Ubuntu, should work on any
+other Linux/Unix flavour and possibly Mac OS X providing you have the required
+tools installed.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/MP4-Packer">MP4-Repacker&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Automatically repack MPEG-4 video files for PlayStation 3 compatibility</summary></item></channel></rss>

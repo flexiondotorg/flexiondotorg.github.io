@@ -1,1 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pacman on Wimpy's World</title><link>https://wimpysworld.com/tags/pacman/</link><description>Recent content in pacman on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 01 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/pacman/rss.xml" rel="self" type="application/rss+xml"/><item><title>Arch Linux</title><link>https://wimpysworld.com/projects/arch-linux/</link><pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/arch-linux/</guid><description>Arch Linux Trusted User &amp;amp; Package maintainer</description></item><item><title>Spring cleaning Arch Linux</title><link>https://wimpysworld.com/posts/spring-cleaning-arch-linux/</link><pubDate>Tue, 07 May 2013 18:09:21 +0000</pubDate><guid>https://wimpysworld.com/posts/spring-cleaning-arch-linux/</guid><description>How to clean up installed packages on Arch Linux.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pacman on Wimpy's World</title><link>https://wimpysworld.com/tags/pacman/</link><description>Recent content in pacman on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 01 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/pacman/rss.xml" rel="self" type="application/rss+xml"/><item><title>Arch Linux</title><link>https://wimpysworld.com/projects/arch-linux/</link><pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/arch-linux/</guid><description>&lt;p>&lt;a href="https://archlinux.org">Arch Linux &lt;/a> is a Linux distribution that uses a rolling
+release model, such that a regular system update is all that is needed to obtain
+all the latest software. The design approach follows the KISS principle
+(&lt;i>&amp;ldquo;keep it simple, stupid&amp;rdquo;&lt;/i>) and focuses on elegance, code correctness,
+minimalism and simplicity.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://archlinux.org">Arch Linux &lt;/a>&lt;/li>
+&lt;li>Date: December 2013 - December 2016&lt;/li>
+&lt;li>Role: Trusted user &amp;amp; Package maintainer&lt;/li>
+&lt;/ul></description><summary>Arch Linux Trusted User &amp;amp; Package maintainer</summary></item><item><title>Spring cleaning Arch Linux</title><link>https://wimpysworld.com/posts/spring-cleaning-arch-linux/</link><pubDate>Tue, 07 May 2013 18:09:21 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/spring-cleaning-arch-linux/</guid><description>&lt;p>About a year ago I migrated all my workstations, laptops and netbooks to
+&lt;a href="http://www.archlinux.org">Arch Linux&lt;/a>. Since then, I&amp;rsquo;ve setup Arch Linux
+on a &lt;a href="http://www.raspberrypi.org">Raspberry Pi&lt;/a> and this server was also
+recently migrated to Arch Linux.&lt;/p>
+&lt;p>I&amp;rsquo;ve had no major issues issues during the last year and have upgraded through
+five major Linux kernels, transitioned to &lt;code>systemd&lt;/code> and upgraded from GNOME 3.2
+to 3.8.&lt;/p>
+&lt;p>Although I have been disciplined about &lt;a href="https://wiki.archlinux.org/index.php/Pacnew_and_Pacsave_Files">merging &lt;code>.pacnew&lt;/code> files&lt;/a>
+frequently, during the upgrades and experimentation&amp;rsquo;s I have packages installed
+that I no longer require and obsolete files kicking about.&lt;/p>
+&lt;p>After the upgrade to GNOME 3.8 I decided to clean up a little. I rarely dip
+into the AUR, but when I do I always use &lt;a href="https://aur.archlinux.org/packages/packer/">&lt;code>packer&lt;/code>&lt;/a>
+to clearly separate what is official from what is not.&lt;/p>
+&lt;h2 id="finding-what-is-installed">Finding what is installed&lt;/h2>
+&lt;p>The following commands are useful for identifying installed packages based on
+where they were installed from. The package lists generated from the commands below
+can be quite big but often highlight packages that I know I&amp;rsquo;m no longer using nor
+require.&lt;/p>
+&lt;h3 id="listing-installed-packages">Listing installed packages&lt;/h3>
+&lt;p>List packages installed from the official repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Qq | grep -Fv -f &amp;lt;(pacman -Qqm)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>List packages installed from the AUR.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Qqm
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="listing-installed-packages-by-size">Listing installed packages by size&lt;/h3>
+&lt;p>Use &lt;code>pacsysclean&lt;/code> to list installed packages sorted by size, it helps identify
+large packages that are no longer required which can the be manually uninstalled.&lt;/p>
+&lt;h3 id="listing-orphaned-packages">Listing orphaned packages&lt;/h3>
+&lt;p>List orphaned packages install from the official repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Qqtd | grep -Fv -f &amp;lt;(pacman -Qqtdm)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>List ophaned packages from the AUR.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Qqmtd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="getting-package-information">Getting package information&lt;/h3>
+&lt;p>Get package information for a package in the official repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Si &amp;lt;package&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Get package information for a package in the AUR.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>packer -Si &amp;lt;package&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="removing-orphaned-packages">Removing orphaned packages&lt;/h2>
+&lt;p>Removing orphaned packages manually can be very time consuming, but is by far the
+safer option. However, I decided to take a brave pill a uninstall all orphaned
+packages automatically.&lt;/p>
+&lt;p>Remove all orphaned packages installed from the official repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Rs &lt;span style="color:#87ceeb">`&lt;/span>pacman -Qqtd | grep -Fv -f &amp;lt;(pacman -Qqtdm)&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove all ophanced packages install from the AUR.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Rs &lt;span style="color:#f00">$(&lt;/span>pacman -Qqtdm&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="re-installing-what-you-do-need">Re-installing what you do need&lt;/h2>
+&lt;p>When you do something scary like removing all the obsolete packages automatically,
+then you should really make sure you do have everything install that you require.&lt;/p>
+&lt;h3 id="re-install-64-bit-base">Re-install 64-bit base&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed &lt;span style="color:#87ceeb">`&lt;/span>pacman -Sqg base multilib-devel | grep -v gcc-libs | tr &lt;span style="color:#87ceeb">&amp;#39;\n&amp;#39;&lt;/span> &lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="re-install-32-bit-base">Re-install 32-bit base&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed &lt;span style="color:#87ceeb">`&lt;/span>pacman -Sqg base base-devel | tr &lt;span style="color:#87ceeb">&amp;#39;\n&amp;#39;&lt;/span> &lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Reinstall the groups required for a GNOME 3 desktop.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed &lt;span style="color:#87ceeb">`&lt;/span>pacman -Sqg gnome gnome-extra telepathy | tr &lt;span style="color:#87ceeb">&amp;#39;\n&amp;#39;&lt;/span> &lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install all missing dependencies for packages in the official repositories.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed &lt;span style="color:#87ceeb">`&lt;/span>pacman -Si &lt;span style="color:#eedd82">$@&lt;/span> 2&amp;gt;/dev/null | awk -F &lt;span style="color:#87ceeb">&amp;#34;: &amp;#34;&lt;/span> -v &lt;span style="color:#eedd82">filter&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;^Depends&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">\ &lt;/span>&lt;span style="color:#87ceeb">&amp;#39;$0 ~ filter {gsub(/[&amp;gt;=&amp;lt;][^ ]*/,&amp;#34;&amp;#34;,$2) ; gsub(/ +/,&amp;#34;\n&amp;#34;,$2) ; print $2}&amp;#39;&lt;/span> | grep -v smtp- | sort -u&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install all missing dependencies for packages in the AUR. This will re-install even if the
+package is already installed. I can&amp;rsquo;t be arsed to filter it out for a one liner.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm &lt;span style="color:#87ceeb">`&lt;/span>packer -Si &lt;span style="color:#f00">$(&lt;/span>pacman -Qqm&lt;span style="color:#f00">)&lt;/span> 2&amp;gt;/dev/null | awk -F &lt;span style="color:#87ceeb">&amp;#34;: &amp;#34;&lt;/span> -v &lt;span style="color:#eedd82">filter&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;^Depends&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">\ &lt;/span>&lt;span style="color:#87ceeb">&amp;#39;$0 ~ filter {gsub(/[&amp;gt;=&amp;lt;][^ ]*/,&amp;#34;&amp;#34;,$2) ; gsub(/ +/,&amp;#34;\n&amp;#34;,$2) ; print $2}&amp;#39;&lt;/span> | grep -v java- | sort -u&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="find-files-not-associated-with-a-package">Find files not associated with a package&lt;/h2>
+&lt;p>When packages are removed they may leave some files behind. The following will find all files
+not associated with a package. These files can &lt;em>not&lt;/em> be automatically deleted, each entry
+requires assessment.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -Qlq | sort -u &amp;gt; /tmp/db
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo find /bin /etc /sbin /usr ! -name lost+found &lt;span style="color:#87ceeb">\(&lt;/span> -type d -printf &lt;span style="color:#87ceeb">&amp;#39;%p/\n&amp;#39;&lt;/span> -o -print &lt;span style="color:#87ceeb">\)&lt;/span> | sort &amp;gt; /tmp/fs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>comm -23 /tmp/fs /tmp/db
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>As with all spring cleaning chores, I got bored by this stage as my workstation
+was looking pretty tidy. Much of what is presented in this blog post is a rehash
+of what others have already contributed to the &lt;a href="https://wiki.archlinux.org/">Arch Linux Wiki&lt;/a>.
+I&amp;rsquo;ve just organised what &amp;ldquo;&lt;em>Works For Me&lt;/em> ™&amp;rdquo; so I know what to do next year.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Pacman_Tips">https://wiki.archlinux.org/index.php/Pacman_Tips&lt;/a>&lt;/li>
+&lt;/ul></description><summary>How to clean up installed packages on Arch Linux.</summary></item></channel></rss>

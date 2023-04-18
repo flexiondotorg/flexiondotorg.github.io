@@ -1,1 +1,415 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>virtualenv on Wimpy's World</title><link>https://wimpysworld.com/tags/virtualenv/</link><description>Recent content in virtualenv on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 05 Nov 2015 11:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/virtualenv/rss.xml" rel="self" type="application/rss+xml"/><item><title>Installing Nikola on Ubuntu</title><link>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</link><pubDate>Thu, 05 Nov 2015 11:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</guid><description>How to install Nikola on Ubuntu 14.04 or newer</description></item><item><title>Installing Willie IRC Bot on Debian</title><link>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</link><pubDate>Sat, 09 Aug 2014 11:11:11 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</guid><description>How I Installed Willie IRC Bot on Debian Wheezy</description></item><item><title>Installing Nikola on Debian</title><link>https://wimpysworld.com/posts/installing-nikola-on-debian/</link><pubDate>Mon, 31 Mar 2014 16:19:43 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-nikola-on-debian/</guid><description>How to install Nikola static site generator on Debian</description></item><item><title>Installing Nikola on Arch Linux</title><link>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</link><pubDate>Fri, 08 Mar 2013 17:13:43 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</guid><description>Install Nikola static site generator in a virtualenv on Arch Linux</description></item><item><title>Python and virtualenv on Arch Linux and Ubuntu</title><link>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</link><pubDate>Tue, 11 Dec 2012 20:38:50 +0000</pubDate><guid>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</guid><description>Installing Python and virtualenv on Arch Linux and Ubuntu</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>virtualenv on Wimpy's World</title><link>https://wimpysworld.com/tags/virtualenv/</link><description>Recent content in virtualenv on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 05 Nov 2015 11:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/virtualenv/rss.xml" rel="self" type="application/rss+xml"/><item><title>Installing Nikola on Ubuntu</title><link>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</link><pubDate>Thu, 05 Nov 2015 11:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-nikola-on-ubuntu/</guid><description>&lt;p>Nikola is a static site and blog generator written in &lt;a href="http://www.python.org">Python&lt;/a>
+that I&amp;rsquo;ve been using for a good while now. This blog post describes how to install
+&lt;a href="http://getnikola.com/">Nikola&lt;/a> on Ubuntu 14.04 or newer. Now, this may look
+like a long winded way to install Nikola, given that .deb package exists, but in
+my opinion it is the correct way to install Nikola on Ubuntu.&lt;/p>
+&lt;h2 id="installing-python">Installing Python&lt;/h2>
+&lt;p>First you&amp;rsquo;ll need Python.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install cython3 libpython3.4 python3.4 python3.4-dev python3.4-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now install the Python &amp;ldquo;package&amp;rdquo; management utilities.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install python-setuptools python-virtualenv python-pip virtualenvwrapper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="the-snakepit">The Snakepit&lt;/h2>
+&lt;p>Create a &amp;ldquo;Snakepit&amp;rdquo; directory for storing all the virtualenvs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-virtualenv-for-nikola">Create a virtualenv for Nikola&lt;/h2>
+&lt;p>The following will create a new virtualenv called &lt;code>nikola&lt;/code> based on Python 3.4.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>virtualenv -p /usr/bin/python3.4 ~/Snakepit/nikola-773
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h3>
+&lt;p>To activate the virtualenv do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>source ~/Snakepit/nikola-773/bin/activate
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Your shell prompt will change while a virtualenv is being worked on to indicate
+which virtualenv is currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or manually
+install any Python libraries safe in the knowledge you will not adversely
+damage any other virtualenvs or the global packages in the process. Very useful
+for developing a new branch which may have different library requirements than
+the master/head.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by simply
+executing &lt;code>deactivate&lt;/code>.&lt;/p>
+&lt;h2 id="install-nikola-requirements">Install Nikola requirements&lt;/h2>
+&lt;p>Nikola requires some additional packages.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install liblcms2-dev libfreetype6-dev libjpeg8-dev &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>libopenjp2-7-dev libtiff5-dev libwebp-dev libxslt1-dev libxml2-dev &lt;span style="color:#87ceeb">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&lt;/span>libyaml-dev libzmq-dev zlib1g-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Some of the content optimisation filters require additional packages.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install closure-compiler jpegoptim optipng yui-compressor
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install Tidy 5. (optional)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get -y remove libtidy-0.99-0 tidy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://binaries.html-tidy.org/binaries/tidy-5.1.14/tidy-5.1.14-64bit.deb -O /tmp/tidy5.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i /tmp/tidy5.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s /usr/bin/tidy /usr/local/bin/tidy5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm /tmp/tidy5.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="what-are-these-requirements-for">What are these requirements for?&lt;/h3>
+&lt;p>The following are required to build &lt;code>pillow&lt;/code>, the Python imaging library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>liblcms2-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libfreetype6-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libjpeg8-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libopenjp2-7-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libtiff5-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libwebp-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>zlib1g-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>lxml&lt;/code>, a Python XML library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libxml2-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libxslt1-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>python-coveralls&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libyaml-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>pyzmq&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libzmq-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="install-nikola">Install Nikola&lt;/h2>
+&lt;p>First install Cython, which will ensure some of the packages required by Nikola use
+all the available optimisations.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install --upgrade Cython
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install all of Nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install --upgrade &lt;span style="color:#87ceeb">&amp;#34;Nikola[extras,tests]&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-site">Create a site&lt;/h2>
+&lt;p>After installing Nikola, you should create a site. A site is a collection of
+all assets needed to render your website, including configuration, posts,
+pages, images, and all other files and customizations.&lt;/p>
+&lt;p>To create a site, you need to run:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nikola init &amp;lt;directory_name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A wizard will guide your initial setup The &lt;code>--demo&lt;/code> option can be used to populate
+your site with some example content. If you do not want the wizard, use the &lt;code>--quiet&lt;/code>
+argument.&lt;/p>
+&lt;p>Nikola is now installed and and initial site is setup. &lt;code>nikola help&lt;/code> and the
+&lt;a href="http://getnikola.com/handbook.html">Nikola Handbook&lt;/a> will assist you from here.&lt;/p></description><summary>How to install Nikola on Ubuntu 14.04 or newer</summary></item><item><title>Installing Willie IRC Bot on Debian</title><link>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</link><pubDate>Sat, 09 Aug 2014 11:11:11 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</guid><description>&lt;p>&lt;a href="http://willie.dftba.net/">Willie&lt;/a> is an IRC bot written in &lt;a href="http://www.python.org">Python&lt;/a>
+that I&amp;rsquo;ve recently started using. This blog post describes how to install Willie
+on Debian and as usual I will be using &lt;code>virtualenv&lt;/code> to isolate this Python
+application from the rest of the system.&lt;/p>
+&lt;h2 id="installing-python">Installing Python&lt;/h2>
+&lt;p>First you&amp;rsquo;ll need Python.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.7 python2.7 python2.7-dev python2.7-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The following will also be required to enable all the features Willie supports.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install enchant python2.7-dev libxslt1-dev libxml2-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove any &lt;code>apt&lt;/code> installed Python packages that we are about to replace.
+The versions of these packages in the Debian repositories soon get stale.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge python-setuptools python-virtualenv python-pip python-profiler
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>pip&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://bootstrap.pypa.io/get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 get-pip.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;code>pip&lt;/code> to install &lt;code>virtualenv&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pip install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="the-snakepit">The Snakepit&lt;/h2>
+&lt;p>Create a &amp;ldquo;Snakepit&amp;rdquo; directory for storing all the Python virtual
+environments.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-virtualenv-for-willie">Create a virtualenv for Willie&lt;/h2>
+&lt;p>The following will create a new virtualenv called &lt;code>willie&lt;/code> using Python
+2.7 as the interpreter.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>virtualenv -p /usr/bin/python2.7 ~/Snakepit/willie
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h3>
+&lt;p>Activate the virtualenv for Willie.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>source ~/Snakepit/willie/bin/activate
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Your shell prompt will change, something like &lt;code>(willie)user@host:~$&lt;/code>,
+while a virtualenv is being worked on to indicate which virtualenv is
+currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or
+manually install any Python libraries safe in the knowledge you will
+not upset any other virtualenvs or the global packages in the process.
+Very useful for developing a new branch which may have different
+library requirements than the current stable release.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by
+simply executing &lt;code>deactivate&lt;/code>.&lt;/p>
+&lt;h2 id="install-willie">Install Willie&lt;/h2>
+&lt;p>I&amp;rsquo;ve decided to use Python 2.7 to run Willie and therefore have to
+install &lt;code>backports.ssl_match_hostname&lt;/code> which is not required if you use
+Python 3.3.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install willie backports.ssl_match_hostname
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="additional-functionality">Additional functionality&lt;/h3>
+&lt;p>Willie has no external dependencies, besides Python. However, some of
+the modules do have external dependencies. So install the following
+Python modules so that I can make use of everything Willie can do.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install feedparser pytz lxml praw pyenchant pygeoip ipython --upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="configure-willie">Configure Willie&lt;/h2>
+&lt;p>I am not going to explain to how to configure Willie because all that
+good stuff is very well documented by the project.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/embolalia/willie/wiki">https://github.com/embolalia/willie/wiki&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>But for reference, my &lt;code>default.cfg&lt;/code> looks something like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[core]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nick = &lt;span style="color:#87ceeb">nicofyourbot&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user = &lt;span style="color:#87ceeb">nicofyourbot&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>name = &lt;span style="color:#87ceeb">Give You Bot A Name&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>host = &lt;span style="color:#87ceeb">chat.freenode.net&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>use_ssl = &lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>verify_ssl = &lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>port = &lt;span style="color:#87ceeb">6697&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>owner = &lt;span style="color:#87ceeb">nicofthebotowner&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>channels = &lt;span style="color:#87ceeb">#example&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nickserv_password = &lt;span style="color:#87ceeb">************&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>prefix = &lt;span style="color:#87ceeb">\.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>timeout = &lt;span style="color:#87ceeb">120&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[db]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>userdb_type = &lt;span style="color:#87ceeb">sqlite&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>userdb_file = &lt;span style="color:#87ceeb">/home/username/.willie/willie.db&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="willie-as-a-daemon">Willie as a daemon&lt;/h2>
+&lt;p>From this point on I assume you&amp;rsquo;ve completed the first run
+configuration of Willie and have &lt;code>.willie/default.cfg&lt;/code> in your home
+directory.&lt;/p>
+&lt;p>Add the following to &lt;code>/etc/init.d/willie&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>&lt;span style="color:#0f0">### BEGIN INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Provides: willie&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Start: $local_fs $remote_fs&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Stop: $local_fs $remote_fs&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Should-Start: $network&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Should-Stop: $network&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Start: 2 3 4 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Stop: 0 1 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Short-Description: Willie IRC Bot.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Description: Start and stops the Willie IRC bot for a given user.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">### END INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># NOTE! Replace with the user you want to run Willie.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">willie_USER&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;yourusername&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>getent passwd &lt;span style="color:#eedd82">$willie_USER&lt;/span> | awk -F: &lt;span style="color:#87ceeb">&amp;#39;{print $6}&amp;#39;&lt;/span>&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DAEMON&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">/Snakepit/willie/bin/willie&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">CONFIG&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">/.willie/default.cfg&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>startd() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -f &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">CONFIG&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Starting Willie for &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon -c &lt;span style="color:#eedd82">$willie_USER&lt;/span> -u &lt;span style="color:#eedd82">$willie_USER&lt;/span> -x &lt;span style="color:#eedd82">$DAEMON&lt;/span> -S -- --config &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">CONFIG&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span> --fork --quiet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Couldn&amp;#39;t start Willie for &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb"> (no &lt;/span>&lt;span style="color:#eedd82">$CONFIG&lt;/span>&lt;span style="color:#87ceeb"> found)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>stopd() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Stopping Willie for &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">willie_PID&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>pgrep -fu &lt;span style="color:#eedd82">$willie_USER&lt;/span> &lt;span style="color:#eedd82">$DAEMON&lt;/span>&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$willie_PID&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Willie for USER &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kill -15 &lt;span style="color:#eedd82">$willie_PID&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>status() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">willie_PID&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>pgrep -fu &lt;span style="color:#eedd82">$willie_USER&lt;/span> &lt;span style="color:#eedd82">$DAEMON&lt;/span>&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$willie_PID&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Willie for USER &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Willie for USER &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">: running (pid &lt;/span>&lt;span style="color:#eedd82">$willie_PID&lt;/span>&lt;span style="color:#87ceeb">)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$1&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start) startd ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop) stopd ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart|reload|force-reload) stopd &amp;amp;&amp;amp; startd ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status) status ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *) echo &lt;span style="color:#87ceeb">&amp;#34;Usage: /etc/init.d/willie {start|stop|reload|force-reload|restart|status}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>exit &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Set the permissions.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chmod +x /etc/init.d/willie
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Check that you can start/stop Willie.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/willie start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/willie status
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/willie stop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add &lt;code>willie&lt;/code> to the startup/shutdown sequence.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo update-rc.d willie defaults
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>And that&amp;rsquo;s it. Willie is now running as a daemon inside a virtualenv.&lt;/p></description><summary>How I Installed Willie IRC Bot on Debian Wheezy</summary></item><item><title>Installing Nikola on Debian</title><link>https://wimpysworld.com/posts/installing-nikola-on-debian/</link><pubDate>Mon, 31 Mar 2014 16:19:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-nikola-on-debian/</guid><description>&lt;p>Nikola is a static site and blog generator written in &lt;a href="http://www.python.org">Python&lt;/a>
+that I&amp;rsquo;ve been using for a good while now. This blog post describes how to install
+&lt;a href="http://getnikola.com/">Nikola&lt;/a> on Debian. Now, this may look like a long winded way
+to install Nikola, given that Debian .deb package exist, but in my opinion it is
+the correct way to install Nikola on Debian.&lt;/p>
+&lt;h2 id="installing-python">Installing Python&lt;/h2>
+&lt;p>First you&amp;rsquo;ll need Python and &lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.7 python2.7 python2.7-dev python2.7-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove any &lt;code>apt&lt;/code> installed Python packages that we are about to replace. The
+versions of these packages in the Debian repositories soon get stale.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge python-setuptools python-virtualenv python-pip python-profiler
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>pip&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://bootstrap.pypa.io/get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 get-pip.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;code>pip&lt;/code> to install &lt;code>virtualenv&lt;/code> and &lt;code>virtualenvwrapper&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pip install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pip install virtualenvwrapper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="the-snakepit">The Snakepit&lt;/h2>
+&lt;p>Create a &amp;ldquo;Snakepit&amp;rdquo; directory for storing all the virtualenvs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following your &lt;code>~/.bashrc&lt;/code> to enable &lt;code>virtualenvwrapper&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WORKON_HOME&lt;/span>=&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/Snakepit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">if&lt;/span> [ -f /usr/local/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/local/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">elif&lt;/span> [ -f /usr/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-virtualenv-for-nikola">Create a virtualenv for Nikola&lt;/h2>
+&lt;p>Open a new shell to ensure that the &lt;code>virtualenvwrapper&lt;/code> configuration is active.
+The following will create a new virtualenv called &lt;code>nikola&lt;/code> based on Python 2.7.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkvirtualenv -p /usr/bin/python2.7 ~/Snakepit/nikola-640
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h3>
+&lt;p>To activate an existing virtualenv do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>workon nikola-640
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can switch to another virtualenv at any time, just use &lt;code>workon envname&lt;/code>.
+Your shell prompt will change while a virtualenv is being worked on to
+indicate which virtualenv is currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or manually
+install any Python libraries safe in the knowledge you will not adversely
+damage any other virtualenvs or the global packages in the process. Very
+useful for developing a new branch which may have different library requirements
+than the master/head.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by
+simply executing &lt;code>deactivate&lt;/code>.&lt;/p>
+&lt;h2 id="install-nikola-requirements">Install Nikola requirements&lt;/h2>
+&lt;p>Nikola is will be powered by Python 2.7 and some additional packages will
+be required.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install python2.7-dev libfreetype6-dev libjpeg8-dev libxslt1-dev libxml2-dev libyaml-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="what-are-these-requirements-for">What are these requirements for?&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>python2.7-dev&lt;/code> provides the header files for Python 2.7 so that Python
+modules with C extensions can be built.&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>pillow&lt;/code>, the Python imaging library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libjpeg8-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libfreetype6-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>lxml&lt;/code>, a Python XML library.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libxml2-dev&lt;/code>&lt;/li>
+&lt;li>&lt;code>libxslt1-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following are required to build &lt;code>python-coveralls&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>libyaml-dev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="install-nikola">Install Nikola&lt;/h2>
+&lt;p>Download Nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir -p &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">VIRTUAL_ENV&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/src
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">VIRTUAL_ENV&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/src
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget https://github.com/getnikola/nikola/archive/v6.4.0.tar.gz -O nikola-640.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar zxvf nikola-640.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd nikola-6.4.0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install the Nikola requirements.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install -r requirements-full.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you intend to use the Nikola planetoid (Planet generator) plugin you&amp;rsquo;ll also
+need to following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install peewee feedparser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Actually install nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>python setup.py install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nikola is now installed. &lt;code>nikola help&lt;/code> and the &lt;a href="http://getnikola.com/handbook.html">Nikola Handbook&lt;/a>
+will assist you from here on.&lt;/p></description><summary>How to install Nikola static site generator on Debian</summary></item><item><title>Installing Nikola on Arch Linux</title><link>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</link><pubDate>Fri, 08 Mar 2013 17:13:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-nikola-on-arch-linux/</guid><description>&lt;p>I&amp;rsquo;ve decided to migrate one of my servers to &lt;a href="https://www.archlinux.org/">Arch Linux&lt;/a>.
+I&amp;rsquo;m not sure that a rolling release distro really suits servers but I&amp;rsquo;ve enjoyed
+using Arch Linux over the last year on my workstations and the only way to
+assess it&amp;rsquo;s suitability on a server is to try it. So, I&amp;rsquo;ve decided to migrate my
+blog to an Arch Linux server.&lt;/p>
+&lt;p>This blog post describes how to install &lt;a href="http://getnikola.com/">Nikola&lt;/a>
+on Arch Linux. Nikola is a static site and blog generator written in
+&lt;a href="http://www.python.org">Python&lt;/a> that I&amp;rsquo;ve been using for a few months.&lt;/p>
+&lt;p>First you&amp;rsquo;ll need Python and &lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>
+so read my &lt;a href="https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/">Python and virtualenv on Arch Linux and Ubuntu&lt;/a>
+blog post and get yourself equipped.&lt;/p>
+&lt;p>Install the Nikola dependencies.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --noconfirm --needed freetype2 libxslt libxml2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo packer -S --noconfirm --noedit libjpeg6
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Create a &lt;code>virtualenv&lt;/code> for Nikola.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkvirtualenv -p /usr/bin/python2.7 nikola-640
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will notice your shell prompt has changed to indicate that the &lt;code>nikola-640&lt;/code>
+virtualenv is now active. Install Nikola and the optional libraries I use.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install https://github.com/getnikola/nikola/archive/v6.4.0.zip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you intend to use the Nikola planetoid (Planet generator) plugin you&amp;rsquo;ll also
+need to following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install peewee feedparser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nikola is now installed. &lt;code>nikola help&lt;/code> and the &lt;a href="http://getnikola.com/handbook.html">Nikola Handbook&lt;/a>
+will assist you from here on.&lt;/p></description><summary>Install Nikola static site generator in a virtualenv on Arch Linux</summary></item><item><title>Python and virtualenv on Arch Linux and Ubuntu</title><link>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</link><pubDate>Tue, 11 Dec 2012 20:38:50 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/python-and-virtualenv-on-arch-linux-and-ubuntu/</guid><description>&lt;p>We use &lt;a href="http://www.python.org">Python&lt;/a> for pretty much all our software
+development at &lt;a href="http://www.flightdataservices.com/">work&lt;/a>. We also use
+&lt;a href="http://www.virtualenv.org">virtualenv&lt;/a> and
+&lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>
+extensively, both for development &lt;em>and&lt;/em> deployment.&lt;/p>
+&lt;h2 id="why-is-virtualenv-so-great">Why is virtualenv so great?&lt;/h2>
+&lt;p>It just is. Read the &lt;a href="http://www.virtualenv.org/en/latest/">virtualenv documentation&lt;/a>.
+If you&amp;rsquo;re a Python developer you need &lt;code>virtualenv&lt;/code> in your life. You also need
+&lt;code>virtualenvwrapper&lt;/code> too.&lt;/p>
+&lt;blockquote>
+&lt;p>virtualenvwrapper is a set of extensions to Ian Bicking’s virtualenv tool
+for creating isolated Python development environments.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="installing-python-and-virtualenvwrapper">Installing Python and virtualenvwrapper&lt;/h2>
+&lt;p>Outlined below is how I install Python and &lt;code>virtualenvwrapper&lt;/code>. We have not
+yet made the jump to Python 3 at work, hence the references to Python 2.6 and
+2.7. Some of us develop on Arch Linux, but all deployments are on Ubuntu.&lt;/p>
+&lt;h3 id="arch-linux">Arch Linux&lt;/h3>
+&lt;p>As Arch Linux is a rolling release we can simply install everything via
+&lt;code>pacman&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Syy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed --noconfirm python-pip python-setuptools python-virtualenv
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed --noconfirm python2-pip python2-setuptools python2-virtualenv python-virtualenvwrapper&lt;span style="color:#87ceeb">&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Simple.&lt;/p>
+&lt;h3 id="ubuntu">Ubuntu&lt;/h3>
+&lt;p>The following was done on Ubuntu Lucid 10.04 LTS.&lt;/p>
+&lt;p>Add some essential PPAs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:bzr/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:git-core/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:fkrull/deadsnakes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Update the system and install Python 2.6 and 2.7.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.6 python2.6 python2.6-dev python2.6-minimal
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.7 python2.7 python2.7-dev python2.7-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove any &lt;code>apt&lt;/code> installed Python packages that we are about to repalce. The
+versions of these packages in the Ubuntu repos and PPAs are too old.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge python-setuptools python-virtualenv python-pip python-profiler
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>distribute&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -O http://python-distribute.org/distribute_setup.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.6 distribute_setup.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 distribute_setup.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>pip&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.6 get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 get-pip.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;code>pip&lt;/code> to install &lt;code>virtualenv&lt;/code> and &lt;code>virtualenv&lt;/code> wrapper.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pip-2.6 install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pip-2.7 install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo pip install virtualenvwrapper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Fairly simple.&lt;/p>
+&lt;h3 id="the-snakepit">The Snakepit&lt;/h3>
+&lt;p>This step is common to Arch Linux and Ubuntu. Create a &lt;em>&amp;ldquo;Snakepit&amp;rdquo;&lt;/em> directory for
+storing all the virtualenvs.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following your &lt;code>~/.bashrc&lt;/code> to enable &lt;code>virtualenvwrapper&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WORKON_HOME&lt;/span>=&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/Snakepit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">if&lt;/span> [ -f /usr/local/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/local/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">elif&lt;/span> [ -f /usr/bin/virtualenvwrapper.sh ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source /usr/bin/virtualenvwrapper.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="creating-a-virtualenv">Creating a virtualenv&lt;/h2>
+&lt;p>Open a new shell to ensure that the &lt;code>virtualenvwrapper&lt;/code> configuration is
+active.&lt;/p>
+&lt;p>The following will create a new virtualenv called &lt;code>Nikola5&lt;/code> based on Python
+2.7 and will not give access to the global &lt;code>site-packages&lt;/code> directory.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkvirtualenv -p python2.7 --no-site-packages ~/Snakepit/Nikola5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>mkvirtualenv_help&lt;/code> shows a full list of arguments, the &lt;code>-r&lt;/code> switch can install
+all the packages listed in a &lt;code>pip&lt;/code> requirements file into the newly created
+virtualenv. Very useful.&lt;/p>
+&lt;h2 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h2>
+&lt;p>To workon, or activate, an existing virtualenv do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>workon Nikola5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can switch to another virtualenv at any time, just use &lt;code>workon envname&lt;/code>.
+Your shell prompt will change while a virtualenv is being worked on to indicate
+which virtualenv is currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or manually
+install any Python libraries safe in the knowledge you will not adversely
+damage any other virtualenvs or the global packages in the process. Very useful
+for developing a new branch which may have different library requirements than
+the master/head.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by simply
+executing:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>deactivate
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>That just about sums up my notes.&lt;/p></description><summary>Installing Python and virtualenv on Arch Linux and Ubuntu</summary></item></channel></rss>

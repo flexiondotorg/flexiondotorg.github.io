@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Freeze on Wimpy's World</title><link>https://wimpysworld.com/tags/freeze/</link><description>Recent content in Freeze on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 29 Jan 2009 13:04:03 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/freeze/rss.xml" rel="self" type="application/rss+xml"/><item><title>Distributing closed source Python applications</title><link>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</link><pubDate>Thu, 29 Jan 2009 13:04:03 +0000</pubDate><guid>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</guid><description>Freezing proprietary Python applications for distribution to clients</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Freeze on Wimpy's World</title><link>https://wimpysworld.com/tags/freeze/</link><description>Recent content in Freeze on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 29 Jan 2009 13:04:03 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/freeze/rss.xml" rel="self" type="application/rss+xml"/><item><title>Distributing closed source Python applications</title><link>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</link><pubDate>Thu, 29 Jan 2009 13:04:03 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</guid><description>&lt;p>Last November we switched to &lt;a href="http://www.python.org/">Python&lt;/a> as the principal
+language for all new software development projects at work, ditching Microsoft
+Visual C++ and PHP in the process. Last Friday we released our first Python
+application to our customers for both Windows and Linux users.&lt;/p>
+&lt;p>Although we make good use of Open Source software development tools and
+methodologies the application we have just written is propritary and the
+source can not be released publicly. We needed to compile, or &lt;em>freeze&lt;/em>, the
+Python script in order to create a standalone executable. Tools that do this
+have been around for sometime, however our application makes use of Win32
+Extensions for Python and WMI on Windows, DBUS/HAL on Linux, wxPython
+on both, and a number of other modules. This is quite a big ask for the Python
+script compilers and initially the only tool which could build this lot
+successfully was &lt;a href="http://www.py2exe.org/">py2exe&lt;/a>. Sadly that only solves part
+of the problem since it is a Windows only tool.&lt;/p>
+&lt;p>Then we found &lt;a href="http://pypi.python.org/pypi/bbfreeze/">bbfreeze&lt;/a>, which
+supports both Windows and Linux with Mac OS X support being actively
+developed. &lt;code>bbfreeze&lt;/code> has a simple build API and we were soon using it to build
+stand alone executables for both Windows and Linux. Everything is peachy, all
+we needed was as means to install our application.&lt;/p>
+&lt;p>We only need a tarball for Linux since we manage all kiosk installations, but
+our customer can install the Windows version. Enter &lt;a href="http://www.jrsoftware.org/isinfo.php">InnoSetup&lt;/a>.
+InnoSetup is a free installer for Windows programs and installer can even be
+created from the command line, perfect for integration with our Jenkins build
+servers.&lt;/p></description><summary>Freezing proprietary Python applications for distribution to clients</summary></item></channel></rss>

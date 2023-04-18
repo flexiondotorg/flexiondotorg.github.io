@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Podcast on Wimpy's World</title><link>https://wimpysworld.com/tags/podcast/</link><description>Recent content in Podcast on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 24 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/podcast/rss.xml" rel="self" type="application/rss+xml"/><item><title>Linux Downtime</title><link>https://wimpysworld.com/projects/linux-downtime/</link><pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/linux-downtime/</guid><description>Open source professionals having relaxed discussions in their downtime</description></item><item><title>Ubuntu Podcast</title><link>https://wimpysworld.com/projects/ubuntu-podcast/</link><pubDate>Sun, 01 Feb 2015 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu-podcast/</guid><description>A weekly family-friendly audio magazine for the Ubuntu community</description></item><item><title>LINUX Unplugged</title><link>https://wimpysworld.com/projects/linux-unplugged/</link><pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/linux-unplugged/</guid><description>Weekly Linux talk show with no script, no limits and tons of opinion</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Podcast on Wimpy's World</title><link>https://wimpysworld.com/tags/podcast/</link><description>Recent content in Podcast on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 24 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/podcast/rss.xml" rel="self" type="application/rss+xml"/><item><title>Linux Downtime</title><link>https://wimpysworld.com/projects/linux-downtime/</link><pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/linux-downtime/</guid><description>&lt;p>Open source professionals &lt;a href="https://wimpress.com">Martin Wimpress&lt;/a>,
+&lt;a href="https://linktr.ee/haydenbarnes">Hayden Barnes&lt;/a>, &lt;a href="https://reaperworld.com/">Gary Kramlich&lt;/a>,
+and &lt;a href="https://popey.com/">Alan Pope&lt;/a> join &lt;a href="https://joeress.com/">Joe Ressington&lt;/a>
+for relaxed discussions in their downtime. From working in the industry and
+progressing your career, to managing a project&amp;rsquo;s community, and beyond.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://linuxdowntime.com">Linux Downtime&lt;/a>&lt;/li>
+&lt;li>Date: April 2022 - date&lt;/li>
+&lt;li>Role: Co-presenter &amp;amp; Producer&lt;/li>
+&lt;/ul></description><summary>Open source professionals having relaxed discussions in their downtime</summary></item><item><title>Ubuntu Podcast</title><link>https://wimpysworld.com/projects/ubuntu-podcast/</link><pubDate>Sun, 01 Feb 2015 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu-podcast/</guid><description>&lt;p>&lt;a href="https://ubuntupodcast.org">Ubuntu Podcast&lt;/a> was a weekly podcast that discussd
+news from the Ubuntu and Open Source community. The podcast ran from 2008 to
+2021 and I joined the line up of presenters in 2015. In addition to the weekly
+podcasts we also participated in live shows at &lt;a href="https://oggcamp.org/">OggCamp&lt;/a>
+and &lt;a href="https://fosstalk.com/">FOSS Talk Live&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntupodcast.org">Ubuntu Podcast&lt;/a>&lt;/li>
+&lt;li>Date: February 2015 - September 2021&lt;/li>
+&lt;li>Role: Co-presenter &amp;amp; Producer&lt;/li>
+&lt;/ul></description><summary>A weekly family-friendly audio magazine for the Ubuntu community</summary></item><item><title>LINUX Unplugged</title><link>https://wimpysworld.com/projects/linux-unplugged/</link><pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/linux-unplugged/</guid><description>&lt;p>&lt;a href="https://linuxunplugged.com/">LINUX Unplugged&lt;/a> is
+a weekly show, by &lt;a href="https://www.jupiterbroadcasting.com/">Jupiter Broadcasting&lt;/a>,
+that debates and discusses developments and goings on in the Linux community. I
+joined as a regular contributor in January 2014.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://www.jupiterbroadcasting.com/">Jupiter Broadcasting&lt;/a>&lt;/li>
+&lt;li>Date: January 2014 - February 2021&lt;/li>
+&lt;li>Role: Talking Head&lt;/li>
+&lt;/ul></description><summary>Weekly Linux talk show with no script, no limits and tons of opinion</summary></item></channel></rss>

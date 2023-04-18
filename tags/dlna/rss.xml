@@ -1,1 +1,178 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DLNA on Wimpy's World</title><link>https://wimpysworld.com/tags/dlna/</link><description>Recent content in DLNA on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 26 Aug 2013 21:49:09 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/dlna/rss.xml" rel="self" type="application/rss+xml"/><item><title>Setting up MiniDLNA on Open Media Vault</title><link>https://wimpysworld.com/posts/setting-up-minidlna-on-open-media-vault/</link><pubDate>Mon, 26 Aug 2013 21:49:09 +0000</pubDate><guid>https://wimpysworld.com/posts/setting-up-minidlna-on-open-media-vault/</guid><description>Music streaming with MiniDLNA on Open Media Vault</description></item><item><title>Mediatomb vs. MiniDLNA</title><link>https://wimpysworld.com/posts/mediatomb-vs-minidlna/</link><pubDate>Fri, 18 Dec 2009 15:34:12 +0000</pubDate><guid>https://wimpysworld.com/posts/mediatomb-vs-minidlna/</guid><description>Comparing Mediatomb and MiniDLNA streaming servers</description></item><item><title>DVD to MPEG2-TS Ripper for Linux</title><link>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</link><pubDate>Fri, 04 Dec 2009 07:53:58 +0000</pubDate><guid>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</guid><description>Ripping DVDs to MPEG-2 Transport Streams for DLNA streaming</description></item><item><title>DVD to MPEG2-PS Ripper for Linux</title><link>https://wimpysworld.com/posts/dvd-to-mpeg2-ps-ripper-for-linux/</link><pubDate>Thu, 23 Apr 2009 16:50:31 +0000</pubDate><guid>https://wimpysworld.com/posts/dvd-to-mpeg2-ps-ripper-for-linux/</guid><description>Ripping DVDs to MPEG2-PS for streaming via UPnP</description></item><item><title>Converting Matroska to M2TS for PS3 and Mediatomb</title><link>https://wimpysworld.com/posts/converting-matroska-to-m2ts-for-ps3-and-mediatomb/</link><pubDate>Wed, 15 Apr 2009 16:19:24 +0000</pubDate><guid>https://wimpysworld.com/posts/converting-matroska-to-m2ts-for-ps3-and-mediatomb/</guid><description>Fast conversion of Matroska video to MPEG2-TS</description></item><item><title>Mediatomb 0.12 - Streaming audio and video around the house</title><link>https://wimpysworld.com/posts/mediatomb-0.12-streaming-audio-and-video-around-the-house/</link><pubDate>Sat, 07 Feb 2009 16:23:39 +0000</pubDate><guid>https://wimpysworld.com/posts/mediatomb-0.12-streaming-audio-and-video-around-the-house/</guid><description>In home streaming via UPnP with Mediatomb</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DLNA on Wimpy's World</title><link>https://wimpysworld.com/tags/dlna/</link><description>Recent content in DLNA on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 26 Aug 2013 21:49:09 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/dlna/rss.xml" rel="self" type="application/rss+xml"/><item><title>Setting up MiniDLNA on Open Media Vault</title><link>https://wimpysworld.com/posts/setting-up-minidlna-on-open-media-vault/</link><pubDate>Mon, 26 Aug 2013 21:49:09 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/setting-up-minidlna-on-open-media-vault/</guid><description>&lt;p>I have &lt;a href="http://www.openmediavault.org/">Open Media Vault&lt;/a> running on a
+&lt;a href="http://www8.hp.com/uk/en/products/proliant-servers/product-detail.html?oid=5336624">HP ProLiant MicroServer G7 N54L&lt;/a>.&lt;/p>
+&lt;p>OpenMediaVault (OMV) is a network attached storage (NAS) solution based on
+&lt;a href="http://www.debian.org">Debian&lt;/a> Linux. At the time of writing OMV 0.5.x is
+based on Debian 6.0 (Squeeze).&lt;/p>
+&lt;p>In recent months &lt;a href="http://www.plexapp.com">Plex&lt;/a> has taken over just about all
+media streaming duties in our house, with the expectation of streaming music
+because Plex music playback and streaming is seriously lacking (no playlists!).
+So, &lt;a href="http://sourceforge.net/projects/minidlna/">MiniDLNA&lt;/a> is still required for
+serving up music around the house.&lt;/p>
+&lt;h1 id="install-minidlna-on-omv">Install MiniDLNA on OMV&lt;/h1>
+&lt;p>There is a 3rd party plugin repository for Open Media Vault which includes
+packages to install MiniDLNA and a WebUI plugin for managing MiniDLNA via OMV.
+I upgraded to OMV 0.5.x this morning. and with the 0.5.x the Plugin API changed
+and as of the time of writing none of the 3rd party plugins had not been migrated
+to OMV 0.5.x. That said, MiniDLNA is super simple to configure so a WebUI is
+not a requirement for me.&lt;/p>
+&lt;p>MiniDLNA is not currently packaged for Debian Squeeze in the official repositories but
+&lt;a href="http://blog.steve.org.uk/minidlna_is_now_packaged.html">Steve Kemp&lt;/a> has packaged
+a fairly up-to-date version of MiniDLNA for Squeeze. Brilliant! Do the following as
+&lt;code>root&lt;/code> to install MiniDLNA.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget http://packages.steve.org.uk/minidlna/apt-key.pub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-key add apt-key.pub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo deb http://packages.steve.org.uk/minidlna/squeeze/ ./&lt;span style="color:#87ceeb">&amp;#34; &amp;gt; /etc/apt/sources.list.d/minidlna.list
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">echo &amp;#34;&lt;/span>deb-src http://packages.steve.org.uk/minidlna/squeeze/ ./&lt;span style="color:#87ceeb">&amp;#34; &amp;gt;&amp;gt; /etc/apt/sources.list.d/minidlna.list
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once you&amp;rsquo;ve done that run the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get install minidlna
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The MiniDLNA defaults in Steve&amp;rsquo;s package assume you have your music in
+&lt;code>/srv/music&lt;/code>. So you&amp;rsquo;ll probably need to modify &lt;code>/etc/minidlna/minidlna.conf&lt;/code>
+accordingly. From this point &lt;code>man minidlna&lt;/code> and &lt;code>man minidlna.conf&lt;/code> will
+guide you.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://blog.steve.org.uk/minidlna_is_now_packaged.html">http://blog.steve.org.uk/minidlna_is_now_packaged.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://packages.steve.org.uk/minidlna/">http://packages.steve.org.uk/minidlna/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://sourceforge.net/projects/minidlna/">http://sourceforge.net/projects/minidlna/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Music streaming with MiniDLNA on Open Media Vault</summary></item><item><title>Mediatomb vs. MiniDLNA</title><link>https://wimpysworld.com/posts/mediatomb-vs-minidlna/</link><pubDate>Fri, 18 Dec 2009 15:34:12 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/mediatomb-vs-minidlna/</guid><description>&lt;p>I&amp;rsquo;ve been using &lt;a href="http://mediatomb.cc/">Mediatomb&lt;/a> for nearly two years now but
+decided to give &lt;a href="http://sourceforge.net/projects/minidlna/">MiniDLNA&lt;/a> a whirl
+since it is a fully fledged DLNA server whereas Mediatomb is UPnP only. I&amp;rsquo;m
+currently running both Mediatomb SVN and MiniDLNA CVS. So, how does MiniDLNA
+compare to Mediatomb?&lt;/p>
+&lt;ul>
+&lt;li>MiniDLNA is easier to compile, configure, uses less RAM and has less software
+dependencies than Mediatomb.&lt;/li>
+&lt;li>MiniDLNA doesn&amp;rsquo;t currently support music play lists or Last.fm scrobbling.
+Mediatomb supports &lt;code>.m3u&lt;/code> and &lt;code>.pls&lt;/code> playlists but requires a 3rd party patch
+to add Last.fm scrobbling.&lt;/li>
+&lt;li>MiniDLNA doesn&amp;rsquo;t support dynamic video thumbnail creation, which would be
+nice to have but is not essential, cover images are supported. Mediatomb
+supports video thumbnails via &lt;code>ffmpegthumbnailer&lt;/code>.&lt;/li>
+&lt;li>MiniDLNA doesn&amp;rsquo;t currently have any transcoding support. This is of little
+consequence for me since I import video content into my library in a format
+natively supported by the PS3, either MP3, MPEG-2 TS or MPEG-4. Mediatomb
+does support transcoding but it is somewhat fiddly to setup and you can&amp;rsquo;t
+pause transcoded content.&lt;/li>
+&lt;li>MiniDLNA works &lt;em>&amp;ldquo;out of the box&amp;rdquo;&lt;/em> with the PS3 (and other DLNA clients)
+while Mediatomb requires some tweaking.&lt;/li>
+&lt;li>Mediatomb&amp;rsquo;s default video import script doesn&amp;rsquo;t suit how I organise my
+video library, but MiniDLNA suits my video library perfectly.&lt;/li>
+&lt;/ul>
+&lt;p>So, as of today I am running both Mediatomb and MiniDLNA. Mediatomb is
+exclusively handling audio since playlist and Last.fm support are essential
+for me. MiniDLNA is now handling video exclusively. I&amp;rsquo;m very happy with the
+results but should MiniDLNA add .m3u/.pls play lists and Last.fm support I
+will switch everything to MiniDLNA.&lt;/p>
+&lt;h2 id="2-years-later">2 years later&amp;hellip;&lt;/h2>
+&lt;p>Since writing this post MiniDLNA added support for playlists. It still doesn&amp;rsquo;t
+support Last.fm scrobbling though. Despite that I switched to MiniDLNA and it
+has been streaming audio and video around the house for that last couple of
+years.&lt;/p></description><summary>Comparing Mediatomb and MiniDLNA streaming servers</summary></item><item><title>DVD to MPEG2-TS Ripper for Linux</title><link>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</link><pubDate>Fri, 04 Dec 2009 07:53:58 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/dvd-to-mpeg2-ts-ripper-for-linux/</guid><description>&lt;p>A while back I released a script that rips a DVD to MPEG-2 PS allowing the
+user to select one audio stream and one subtitle stream. Optionally the video
+can be requantised, using M2VRequantiser and an ISO image created. If creating
+an ISO image the chapters are also preserved from the original DVD. You can
+see the original post below.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="2009-04-dvd-mpeg2ps-ripper-linux.html">DVD to MPEG-2 PS Ripper for Linux&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>I&amp;rsquo;ve just released an update to that original script which fixes subtitles in
+the original MPEG-2 PS mode but now adds the capability to rip MPEG-2 TS. The
+video stream can still be shrunk and in MPEG-2 PS mode the video is still
+requantised but in MPEG-2 TS mode the video is re-encoded as H.264.&lt;/p>
+&lt;p>Requantising is faster but can introduce artifacting. H.264 encoding is
+slower, but produces very good quality. I am currently re-importing my entire
+DVD collection, using this script, to my DLNA server using MPEG-2 TS and
+re-encoding the video to H.264. This gives me high quality rips at relatively
+small size (~3Gb) whilst preserving Dolby Digital 5.1 audio. Perfect for
+playback via DLNA on the PS3. Some things to be aware of:&lt;/p>
+&lt;ul>
+&lt;li>Subtitles are only supported in MPEG-2 PS mode.&lt;/li>
+&lt;li>MPEG-2 PS files created by this script are DVD compliant.&lt;/li>
+&lt;li>ISO files created by this script will preserve the chapters from the original DVD.&lt;/li>
+&lt;li>The PS3 can only play DTS audio in MPEG-2 PS streams when they have been authored to DVD.&lt;/li>
+&lt;li>The PS3 can only play subtitles in MPEG-2 PS streams when they have been authored to DVD.&lt;/li>
+&lt;li>The PS3 can&amp;rsquo;t play DTS audio in MPEG-2 TS streams therefore this script will transcode DTS to AC3 when in MPEG-2 TS mode.&lt;/li>
+&lt;/ul>
+&lt;p>To download the script and find out how to make full use of it visit the
+release page below.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/DVD-to-MPG">DVD-to-MPG&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Ripping DVDs to MPEG-2 Transport Streams for DLNA streaming</summary></item><item><title>DVD to MPEG2-PS Ripper for Linux</title><link>https://wimpysworld.com/posts/dvd-to-mpeg2-ps-ripper-for-linux/</link><pubDate>Thu, 23 Apr 2009 16:50:31 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/dvd-to-mpeg2-ps-ripper-for-linux/</guid><description>&lt;p>Every so often I find myself in looking through the ex-rental DVD &lt;em>&amp;ldquo;bargain
+bin&amp;rdquo;&lt;/em>. Quite often I find something I consider a bargain. However, the
+experience of watching an ex-rental DVD is typically ruined by the various
+trailers and marketing guff at the start which you can&amp;rsquo;t skip. My wife hates
+that stuff, and I love my wife, so I routinely rip the main feature of newly
+acquired ex-rental DVD movies so we can avoid that crap.&lt;/p>
+&lt;p>I run a Mediatomb DLNA server and I want to load it with all my DVDs. Ripping
+them helps reduce the amount of storage I require. MPEG2-PS files are
+compatible with my PlayStation 3 which is the client to my Mediatomb DLNA server.
+As a solution to the above I created a script, which can extract the main feature
+from a DVD video, allowing the user to select one audio stream and one subtitle
+stream. Optionally the video can be requantised, using M2VRequantiser, and an ISO
+image created. If creating an ISO image the chapters are also preserved from
+the original DVD. I&amp;rsquo;ve lobbed my code into GitHub.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/DVD-to-MPG">DVD-to-MPG&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Ripping DVDs to MPEG2-PS for streaming via UPnP</summary></item><item><title>Converting Matroska to M2TS for PS3 and Mediatomb</title><link>https://wimpysworld.com/posts/converting-matroska-to-m2ts-for-ps3-and-mediatomb/</link><pubDate>Wed, 15 Apr 2009 16:19:24 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/converting-matroska-to-m2ts-for-ps3-and-mediatomb/</guid><description>&lt;p>It has been a while since I last posted, mainly due to not having Internet
+access at home for a month. Anyway, I&amp;rsquo;m online again and I have been tinkering
+with various projects the most recent of which is Matroska conversion (again).&lt;/p>
+&lt;h2 id="matroska-to-mp4">Matroska to MP4&lt;/h2>
+&lt;p>For sometime I have been converting Martoska files to MPEG-4 with AAC 5.1 audio
+so I can stream them via Mediatomb to my PlayStation 3. The conversion process
+works well although there is some overhead in transcoding the audio and the
+AAC 5.1 audio is not as good quality as the original AC3 or DTS.&lt;/p>
+&lt;p>If you are interested I&amp;rsquo;ve put my code in GitHub, the script automates the
+whole process.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/MKV-to-MP4">MPV-to-MP4&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="matroska-to-m2ts">Matroska to M2TS&lt;/h2>
+&lt;p>A little while back I read it was possible to convert those same Matroska file
+to M2TS files which, so long as the audio is AC3, so takes much less time to
+convert. As the PlayStation 3 can&amp;rsquo;t play DTS audio streams inside a M2TS container
+there is still a requirement to transcode DTS to AC3. That said the conversion to
+M2TS requires less file I/O than converting to MPEG-4 and is therefore it is
+generally a quicker conversion method, typically just 2 or 3 minutes on my
+workstation at home.&lt;/p>
+&lt;p>Plus the audio quality of the AC3 or transcoded DTS is better than that of
+transcoded AAC 5.1. I&amp;rsquo;ve created my own script to fully automate the conversion
+process. The script has been tested on Ubuntu 8.10 64-bit but there is an
+outside chance it will work on Mac OS X if you can get the required tools
+installed. Again, you can find my script on GitHub.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/MKV-to-M2TS">MPV-to-M2TS&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Fast conversion of Matroska video to MPEG2-TS</summary></item><item><title>Mediatomb 0.12 - Streaming audio and video around the house</title><link>https://wimpysworld.com/posts/mediatomb-0.12-streaming-audio-and-video-around-the-house/</link><pubDate>Sat, 07 Feb 2009 16:23:39 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/mediatomb-0.12-streaming-audio-and-video-around-the-house/</guid><description>&lt;p>&lt;a href="http://mediatomb.cc/">Mediatomb&lt;/a> is an open source (GPL) UPnP MediaServer
+with a nice web user interface, it allows you to stream your digital media
+through your home network and listen to/watch it on a variety of UPnP
+compatible devices, such as the PlayStation in my case.&lt;/p>
+&lt;p>Mediatomb 0.12 is not yet released as final yet but it is certainly stable
+enough for general use, so I spent the last week migrating from Mediatomb 0.11
+to Mediatomb 0.12.&lt;/p>
+&lt;p>I&amp;rsquo;ve recently finished ripping my entire CD collection (344 CDs) to MP3 and I
+am currently ripping my DVD collection (85 done so far) to MP4 with AAC 5.1
+audio. The &amp;lsquo;Music&amp;rsquo; and &amp;lsquo;Video&amp;rsquo; folders in our home directories are mounted via
+NFS. The Mediatomb server uses the same data sources so any playlists or new
+music/videos we might import are immediately reflected in Mediatomb.&lt;/p>
+&lt;p>Our entire CD library is now available at the click of a button, automatically
+organised by genre, artist and date. We have also created some playlists
+in &lt;code>.m3u&lt;/code> or &lt;code>.pls&lt;/code> format.&lt;/p>
+&lt;p>New to Mediatomb 0.12 is the ability to scrobble your music to
+&lt;a href="http://www.last.fm">Last.fm&lt;/a>, this a killer feature for me and why I chose to
+migrate to 0.12 before it goes final.&lt;/p>
+&lt;p>I ripped the CDs using &lt;a href="http://www.burtonini.com/blog/computers/sound-juicer">SoundJuicer&lt;/a>,
+since I can configure it to use &lt;a href="http://lame.cvs.sourceforge.net/viewvc/lame/lame/doc/html/presets.html">LAME presets&lt;/a>.
+I then used the &lt;a href="http://musicbrainz.org/doc/PicardTagger">Music Brainz Picard Tagger&lt;/a> to
+add additional tagging and embed cover art and then applied ReplayGain.&lt;/p>
+&lt;p>Finally my wife and I use &lt;a href="http://banshee-project.org/">Banshee&lt;/a> to manage the
+music library on our computers, including the creation of playlists and syncing
+to our iPods.&lt;/p>
+&lt;p>I am using &lt;a href="http://handbrake.fr/">Handbrake&lt;/a> to rip the DVDs to MP4. I&amp;rsquo;ve created a
+new PS3 compatible profile which is focused on quality, I&amp;rsquo;ll post details
+about that in the future. Mediatomb 0.12 has some experimental features to
+stream video content from .ISO images of DVDs. I&amp;rsquo;ve yet to play with that but
+it sounds very cool. I&amp;rsquo;ve also created a script which queries IMDB to
+categorise our film library by genre and create summary information about
+each film in the library. I&amp;rsquo;ll be posting more about that soon. I haven&amp;rsquo;t
+finalised how we will integrate Photo management with Mediatomb yet, but that
+is that final piece in the puzzle.&lt;/p></description><summary>In home streaming via UPnP with Mediatomb</summary></item></channel></rss>

@@ -1,1 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on Wimpy's World</title><link>https://wimpysworld.com/tags/windows/</link><description>Recent content in Windows on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/windows/rss.xml" rel="self" type="application/rss+xml"/><item><title>Quickemu</title><link>https://wimpysworld.com/projects/quickemu/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/quickemu/</guid><description>Quickly create and run optimised Windows, macOS and Linux virtual machines</description></item><item><title>Distributing closed source Python applications</title><link>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</link><pubDate>Thu, 29 Jan 2009 13:04:03 +0000</pubDate><guid>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</guid><description>Freezing proprietary Python applications for distribution to clients</description></item><item><title>Portable app</title><link>https://wimpysworld.com/posts/portable-app/</link><pubDate>Thu, 09 Mar 2006 05:40:07 +0000</pubDate><guid>https://wimpysworld.com/posts/portable-app/</guid><description>Working around corporate Windows policies with Portable Apps</description></item><item><title>Slimlining Windows XP with nLite and XPLite</title><link>https://wimpysworld.com/posts/slimlining-windows-xp-with-nlite-and-xplite/</link><pubDate>Sun, 05 Mar 2006 06:41:38 +0000</pubDate><guid>https://wimpysworld.com/posts/slimlining-windows-xp-with-nlite-and-xplite/</guid><description>Trimming the Windows fat with nLite</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on Wimpy's World</title><link>https://wimpysworld.com/tags/windows/</link><description>Recent content in Windows on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/windows/rss.xml" rel="self" type="application/rss+xml"/><item><title>Quickemu</title><link>https://wimpysworld.com/projects/quickemu/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/quickemu/</guid><description>&lt;p>Quickly create and run highly optimised desktop virtual machines for Linux,
+macOS and Windows; with just two commands. You decide what operating system you
+want to run and &lt;a href="https://github.com/quickemu-project/quickemu">Quickemu&lt;/a> will figure out the best way to do it for you&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://github.com/quickemu-project">Quickemu Project&lt;/a>&lt;/li>
+&lt;li>Date: March 2020 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>Quickly create and run optimised Windows, macOS and Linux virtual machines</summary></item><item><title>Distributing closed source Python applications</title><link>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</link><pubDate>Thu, 29 Jan 2009 13:04:03 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/distributing-closed-source-python-applications/</guid><description>&lt;p>Last November we switched to &lt;a href="http://www.python.org/">Python&lt;/a> as the principal
+language for all new software development projects at work, ditching Microsoft
+Visual C++ and PHP in the process. Last Friday we released our first Python
+application to our customers for both Windows and Linux users.&lt;/p>
+&lt;p>Although we make good use of Open Source software development tools and
+methodologies the application we have just written is propritary and the
+source can not be released publicly. We needed to compile, or &lt;em>freeze&lt;/em>, the
+Python script in order to create a standalone executable. Tools that do this
+have been around for sometime, however our application makes use of Win32
+Extensions for Python and WMI on Windows, DBUS/HAL on Linux, wxPython
+on both, and a number of other modules. This is quite a big ask for the Python
+script compilers and initially the only tool which could build this lot
+successfully was &lt;a href="http://www.py2exe.org/">py2exe&lt;/a>. Sadly that only solves part
+of the problem since it is a Windows only tool.&lt;/p>
+&lt;p>Then we found &lt;a href="http://pypi.python.org/pypi/bbfreeze/">bbfreeze&lt;/a>, which
+supports both Windows and Linux with Mac OS X support being actively
+developed. &lt;code>bbfreeze&lt;/code> has a simple build API and we were soon using it to build
+stand alone executables for both Windows and Linux. Everything is peachy, all
+we needed was as means to install our application.&lt;/p>
+&lt;p>We only need a tarball for Linux since we manage all kiosk installations, but
+our customer can install the Windows version. Enter &lt;a href="http://www.jrsoftware.org/isinfo.php">InnoSetup&lt;/a>.
+InnoSetup is a free installer for Windows programs and installer can even be
+created from the command line, perfect for integration with our Jenkins build
+servers.&lt;/p></description><summary>Freezing proprietary Python applications for distribution to clients</summary></item><item><title>Portable app</title><link>https://wimpysworld.com/posts/portable-app/</link><pubDate>Thu, 09 Mar 2006 05:40:07 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/portable-app/</guid><description>&lt;p>I started a new job last week, I am contracting for the first time. I needed
+some applications installed on my desktop at work, but to do so would not be
+permitted as part of my clients standard build policies.&lt;/p>
+&lt;p>So I started making a USB disk with the tools I needed and in doing do I found
+the &lt;a href="http://portableapps.com/">Portableapp&lt;/a> and &lt;a href="http://www.portablefreeware.com/">The Portable Freeware Collection&lt;/a>
+websites which ease the process no end.&lt;/p>
+&lt;p>A portable app is a computer program that you can carry around with you on a
+portable device and use on any Windows computer. When your USB thumb drive,
+portable hard drive, iPod or other portable device is plugged in, you have
+access to your software and personal data just as you would on your own PC. And
+when you unplug, none of your personal data is left behind.&lt;/p></description><summary>Working around corporate Windows policies with Portable Apps</summary></item><item><title>Slimlining Windows XP with nLite and XPLite</title><link>https://wimpysworld.com/posts/slimlining-windows-xp-with-nlite-and-xplite/</link><pubDate>Sun, 05 Mar 2006 06:41:38 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/slimlining-windows-xp-with-nlite-and-xplite/</guid><description>&lt;p>A shocking truth is that despite my preference for Linux I do still have to
+use Microsoft Windows/ I have recently started a new job where I am now
+required to use Windows XP on my desktop at work and I also need a Windows
+computer at home in order to update firmware/software and configure most
+devices in my home cinema.&lt;/p>
+&lt;p>So I have decided to install Windows XP on my most aging of laptops so it is
+always available for my home cinema tweaking, this also means I can remove dual
+boot Windows partitions on my main computer. However, because my old laptop is a
+bit short on memory I need to tweak Windows XP a good deal. I have been a long
+time user of 98Lite and XPLite from &lt;a href="http://www.litepc.com">LitePC.om&lt;/a> and have
+been slim lining Windows for many years. I have recently found &lt;a href="http://www.nliteos.com">nLite&lt;/a>
+which does much the same as XPLite except it rebuilds the Windows XP (or Windows 2000 and
+Windows 2003) installation CD so that the configuration changes you make, and
+Windows components you remove, are ingrained in a new ISO image.&lt;/p>
+&lt;p>The biggest benefit is that using nLite I can integrate Service Pack 2 and all
+the current hotfixes and patches into the new ISO meaning that after an install
+the new Windows system is better secured. I have also been able to integrate Firefox
+into my custom Windows XP install CD and completely remove Internet Explorer,
+and by using the &lt;a href="http://windowsupdate.62nds.com/">WindizUpdate&lt;/a> it is possible
+to do online Windows Updates using Firefox, Opera and K-Meleon.&lt;/p>
+&lt;p>There are also many other benefits to using nLite other than simply removing or
+adding software components, you can also pre-configure just about every aspect
+of the Windows environment and nLite will wrap all this into an unattended
+installation ISO image. My custom Windows XP install CD I made with nLite is
+just 145mb!&lt;/p></description><summary>Trimming the Windows fat with nLite</summary></item></channel></rss>

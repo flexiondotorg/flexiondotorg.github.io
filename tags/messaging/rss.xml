@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Messaging on Wimpy's World</title><link>https://wimpysworld.com/tags/messaging/</link><description>Recent content in Messaging on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 25 Sep 2012 19:38:34 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/messaging/rss.xml" rel="self" type="application/rss+xml"/><item><title>Android Gmail Conversation View</title><link>https://wimpysworld.com/posts/android-gmail-conversation-view/</link><pubDate>Tue, 25 Sep 2012 19:38:34 +0000</pubDate><guid>https://wimpysworld.com/posts/android-gmail-conversation-view/</guid><description>List view email clients for Android that support Gmail</description></item><item><title>Zindus contact sync for Thunderbird and Zimbra</title><link>https://wimpysworld.com/posts/zindus-contact-sync-for-thunderbird-and-zimbra/</link><pubDate>Thu, 10 Jan 2008 15:41:24 +0000</pubDate><guid>https://wimpysworld.com/posts/zindus-contact-sync-for-thunderbird-and-zimbra/</guid><description>Zimbra contact syncing for Thunderbird on Linux</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Messaging on Wimpy's World</title><link>https://wimpysworld.com/tags/messaging/</link><description>Recent content in Messaging on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 25 Sep 2012 19:38:34 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/messaging/rss.xml" rel="self" type="application/rss+xml"/><item><title>Android Gmail Conversation View</title><link>https://wimpysworld.com/posts/android-gmail-conversation-view/</link><pubDate>Tue, 25 Sep 2012 19:38:34 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/android-gmail-conversation-view/</guid><description>&lt;p>I recently migrated several domains I manage for family and friends
+to the &lt;em>&amp;ldquo;free&amp;rdquo;&lt;/em> version of &lt;a href="http://http://www.google.com/enterprise/apps/business/">Google Apps&lt;/a>.&lt;/p>
+&lt;p>I setup the Gmail app on their Android phones for them and email
+arrives promptly and spam is pretty much eradicated. Happy days.&lt;/p>
+&lt;p>However, the Gmail app for Android only supports a conversation view of
+emails. My wife and I hate that and have actually missed emails because
+new emails get burried in an earlier email conversation way down your
+inbox. Frustratingly changing the preferences on the Gmail website to
+disable the conversation view does not propagate to the Gmail app.&lt;/p>
+&lt;p>The best solution to this that I have found is to to not use the Gmail
+app and install &lt;a href="https://play.google.com/store/apps/details?id=com.fsck.k9">K-9 Mail&lt;/a>
+instead connected to Google App accounts via IMAP and SMTP. K-9 Mail
+(only?) supports a traditional list view of your emails and unlike the
+built in Email app for Android K9-Mail supports push notifications so
+you get near instantaneous notification of new email.&lt;/p>
+&lt;p>If you want to support the K-9 Mail developer then consider purchasing
+&lt;a href="https://play.google.com/store/apps/details?id=com.kaitenmail">Kaiten Mail&lt;/a>
+which is an enhanced version of K-9 Mail and is particularly good on Android
+tablets.&lt;/p></description><summary>List view email clients for Android that support Gmail</summary></item><item><title>Zindus contact sync for Thunderbird and Zimbra</title><link>https://wimpysworld.com/posts/zindus-contact-sync-for-thunderbird-and-zimbra/</link><pubDate>Thu, 10 Jan 2008 15:41:24 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/zindus-contact-sync-for-thunderbird-and-zimbra/</guid><description>&lt;p>When I setup the mail server at work I picked &lt;a href="http://www.zimbra.com/">Zimbra&lt;/a>.
+It&amp;rsquo;s great.&lt;/p>
+&lt;p>Today Zimbra just got a bit better when I found &lt;a href="http://www.zindus.com">Zindus&lt;/a>.
+Zindus is open source software and runs on all Thunderbird platforms including
+Windows, Mac OSX and Linux. Zindus can sync your contacts between Zimbra and
+Thunderbird. It syncs everything from Address Books to your GAL (Global Address List).&lt;/p>
+&lt;p>It currently supports ZCS 3.x to 5.x. Adding the &lt;a href="http://www.mozilla.org/projects/calendar/">Lightning&lt;/a>
+and Zindus add-ons to Thunderbird create a very complete desktop client to
+Zimbra for any platform. Can&amp;rsquo;t wait to share to good news with my Outlook users.&lt;/p></description><summary>Zimbra contact syncing for Thunderbird on Linux</summary></item></channel></rss>

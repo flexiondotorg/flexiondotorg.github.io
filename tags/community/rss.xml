@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Community on Wimpy's World</title><link>https://wimpysworld.com/tags/community/</link><description>Recent content in Community on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 24 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/community/rss.xml" rel="self" type="application/rss+xml"/><item><title>Linux Downtime</title><link>https://wimpysworld.com/projects/linux-downtime/</link><pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/linux-downtime/</guid><description>Open source professionals having relaxed discussions in their downtime</description></item><item><title>Ubuntu MATE</title><link>https://wimpysworld.com/projects/ubuntu-mate/</link><pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu-mate/</guid><description>Ubuntu MATE is a Linux distribution I made for my friends and family</description></item><item><title>MATE Desktop</title><link>https://wimpysworld.com/projects/mate-desktop/</link><pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/mate-desktop/</guid><description>Preserving a traditional desktop metaphor</description></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>From community contributor to director of engineering and back again</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Community on Wimpy's World</title><link>https://wimpysworld.com/tags/community/</link><description>Recent content in Community on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 24 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/community/rss.xml" rel="self" type="application/rss+xml"/><item><title>Linux Downtime</title><link>https://wimpysworld.com/projects/linux-downtime/</link><pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/linux-downtime/</guid><description>&lt;p>Open source professionals &lt;a href="https://wimpress.com">Martin Wimpress&lt;/a>,
+&lt;a href="https://linktr.ee/haydenbarnes">Hayden Barnes&lt;/a>, &lt;a href="https://reaperworld.com/">Gary Kramlich&lt;/a>,
+and &lt;a href="https://popey.com/">Alan Pope&lt;/a> join &lt;a href="https://joeress.com/">Joe Ressington&lt;/a>
+for relaxed discussions in their downtime. From working in the industry and
+progressing your career, to managing a project&amp;rsquo;s community, and beyond.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://linuxdowntime.com">Linux Downtime&lt;/a>&lt;/li>
+&lt;li>Date: April 2022 - date&lt;/li>
+&lt;li>Role: Co-presenter &amp;amp; Producer&lt;/li>
+&lt;/ul></description><summary>Open source professionals having relaxed discussions in their downtime</summary></item><item><title>Ubuntu MATE</title><link>https://wimpysworld.com/projects/ubuntu-mate/</link><pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu-mate/</guid><description>&lt;p>A community developed Ubuntu based operating system that beautifully integrates
+the &lt;a href="https://mate-desktop.org">MATE desktop&lt;/a>. Ubuntu MATE is a stable,
+easy-to-use operating system with a configurable desktop environment and is
+suitable for modern workstations, laptops, single board computers and older
+hardware alike.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntu-mate.org">Ubuntu MATE Project&lt;/a>&lt;/li>
+&lt;li>Date: June 2014 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>Ubuntu MATE is a Linux distribution I made for my friends and family</summary></item><item><title>MATE Desktop</title><link>https://wimpysworld.com/projects/mate-desktop/</link><pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/mate-desktop/</guid><description>&lt;p>The &lt;a href="https://mate-desktop.org">MATE Desktop Environment&lt;/a> is the continuation of
+&lt;a href="https://en.wikipedia.org/wiki/GNOME_2">GNOME 2&lt;/a>. MATE Desktop provides an
+intuitive and attractive desktop environment using traditional metaphors for
+Linux and other Unix-like operating systems.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://mate-desktop.org">MATE Desktop&lt;/a>&lt;/li>
+&lt;li>Date: June 2012 - date&lt;/li>
+&lt;li>Role: Developer &amp;amp; Community Manager&lt;/li>
+&lt;/ul></description><summary>Preserving a traditional desktop metaphor</summary></item><item><title>Ubuntu</title><link>https://wimpysworld.com/projects/ubuntu/</link><pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/ubuntu/</guid><description>&lt;p>Ubuntu comes with everything you need to run your organisation, school, home or
+enterprise. All the essential applications, like an office suite, browsers,
+email and media apps come pre-installed.&lt;/p>
+&lt;p>Community contributor since 2006, worked for Canonical from 2016 to 2021
+progressing from software engineer to director of engineering. I remain active
+in the Ubuntu community.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://ubuntu-mate.org">Ubuntu Project&lt;/a> &amp;amp; &lt;a href="https://canonical.com">Canonical&lt;/a>&lt;/li>
+&lt;li>Date: January 2006 - date&lt;/li>
+&lt;li>Role: Community contributor&lt;/li>
+&lt;/ul></description><summary>From community contributor to director of engineering and back again</summary></item></channel></rss>

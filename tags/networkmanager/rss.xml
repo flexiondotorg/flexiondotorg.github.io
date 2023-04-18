@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NetworkManager on Wimpy's World</title><link>https://wimpysworld.com/tags/networkmanager/</link><description>Recent content in NetworkManager on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 02 Mar 2006 11:26:39 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/networkmanager/rss.xml" rel="self" type="application/rss+xml"/><item><title>NetworkManager and Ubuntu Dapper Drake 6.04</title><link>https://wimpysworld.com/posts/networkmanager-and-ubuntu-dapper-drake-6.04/</link><pubDate>Thu, 02 Mar 2006 11:26:39 +0000</pubDate><guid>https://wimpysworld.com/posts/networkmanager-and-ubuntu-dapper-drake-6.04/</guid><description>Fixing NetworkManager applet on Ubuntu 6.04</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NetworkManager on Wimpy's World</title><link>https://wimpysworld.com/tags/networkmanager/</link><description>Recent content in NetworkManager on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 02 Mar 2006 11:26:39 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/networkmanager/rss.xml" rel="self" type="application/rss+xml"/><item><title>NetworkManager and Ubuntu Dapper Drake 6.04</title><link>https://wimpysworld.com/posts/networkmanager-and-ubuntu-dapper-drake-6.04/</link><pubDate>Thu, 02 Mar 2006 11:26:39 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/networkmanager-and-ubuntu-dapper-drake-6.04/</guid><description>&lt;p>A week or so ago the
+&lt;a href="http://www.gnome.org/projects/NetworkManager/">NetworkManager&lt;/a> package was
+changed so that &lt;code>nm-applet&lt;/code> (the system tray application) was separated into
+it&amp;rsquo;s own package. After I updated and installed &lt;code>nm-applet&lt;/code>, I noticed that it
+didn&amp;rsquo;t startup anymore. I didn&amp;rsquo;t have time to investigate until this morning and
+found the answer in the following forum posting&amp;hellip;&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.ubuntuforums.org/showthread.php?t=134251">NetworkManager broken after last update&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Here is the pearl of wisdom, from that forum discussion, that helped me make
+my system to be NetworkManager compatible again.&lt;/p>
+&lt;p>&lt;em>&amp;ldquo;Network Manager has been installed on your system, however it will not
+immediately be able to manage your network interfaces. To avoid problems with
+important configuration being ignored, or strange behaviours, the Ubuntu version
+will not manage any network interface configured in the /etc/network/interfaces file.&lt;/em>&lt;/p>
+&lt;p>&lt;em>To allow interfaces to be managed with Network Manager either edit the
+/etc/network/interfaces file and remove (or comment out) the &amp;ldquo;auto&amp;rdquo; and &amp;ldquo;iface&amp;rdquo;
+lines for those interfaces you wish it to manage, or use the &amp;ldquo;Networking&amp;rdquo;
+administration tool (found under the &amp;ldquo;System&amp;rdquo; menu) to disable the interfaces.&amp;rdquo;&lt;/em>&lt;/p></description><summary>Fixing NetworkManager applet on Ubuntu 6.04</summary></item></channel></rss>

@@ -1,1 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SketchUp on Wimpy's World</title><link>https://wimpysworld.com/tags/sketchup/</link><description>Recent content in SketchUp on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 15 Aug 2013 15:42:47 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/sketchup/rss.xml" rel="self" type="application/rss+xml"/><item><title>SketchUp Make on Arch Linux</title><link>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</link><pubDate>Thu, 15 Aug 2013 15:42:47 +0000</pubDate><guid>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</guid><description>Install SketchUp Make 2013 on Arch Linux with Wine 1.7</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SketchUp on Wimpy's World</title><link>https://wimpysworld.com/tags/sketchup/</link><description>Recent content in SketchUp on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 15 Aug 2013 15:42:47 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/sketchup/rss.xml" rel="self" type="application/rss+xml"/><item><title>SketchUp Make on Arch Linux</title><link>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</link><pubDate>Thu, 15 Aug 2013 15:42:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</guid><description>&lt;p>I use &lt;a href="http://www.sketchup.com">SketchUp&lt;/a> at work to manipulate models for use
+in &lt;a href="http://earth.google.com">Google Earth&lt;/a>. Here is how I got SketchUp Make
+2013 installed and working on &lt;a href="http://www.archlinux.org">Arch Linux&lt;/a> under
+&lt;a href="http://www.winehq.com">Wine&lt;/a> 1.7.&lt;/p>
+&lt;h1 id="wine-for-arch-linux">Wine for Arch Linux&lt;/h1>
+&lt;p>Install Wine on Arch Linux as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed icoutils libwbclient libxslt lib32-mpg123 p11-kit lib32-p11-kit samba wine winetricks wine-mono wine_gecko
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm ttf-ms-fonts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For 64-bit also install the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm lib32-libwbclient lib32-libxslt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="installing-sketchup-make">Installing SketchUp Make&lt;/h1>
+&lt;p>Once Wine is installed download SketchUp Make 2013.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.sketchup.com/download">http://www.sketchup.com/download&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Create a clean wine prefix.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WINEPREFIX&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">/.sketchup&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WINEARCH&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;win32&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wineboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>corefonts&lt;/code> using &lt;code>winetricks&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>winetricks corefonts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the SketchUp Make setup.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wine SketchUpWEN.exe
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Follow the installation wizard, I just went with the defaults.&lt;/p>
+&lt;p>That&amp;rsquo;s it. SketchUp is installed and should be associated with the appropriate
+file types.&lt;/p>
+&lt;h2 id="video-corruption">Video Corruption&lt;/h2>
+&lt;p>My workstation has a Radeon 5000 series graphics card and I use the Open Source
+&lt;code>radeon&lt;/code> driver. I don&amp;rsquo;t know if this problem is specific to my hardware/drivers
+but SketchUp will eventually (sometimes immediately) encounter video corruption.
+Once that happens I can&amp;rsquo;t see or manipluate the models.&lt;/p>
+&lt;p>The solution that works for me is:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>env &lt;span style="color:#eedd82">WINEPREFIX&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">/.sketchup&amp;#34;&lt;/span> &lt;span style="color:#eedd82">LIBGL_ALWAYS_SOFTWARE&lt;/span>=&lt;span style="color:#f60">1&lt;/span> &lt;span style="color:#eedd82">vblank_mode&lt;/span>=&lt;span style="color:#f60">0&lt;/span> wine &lt;span style="color:#87ceeb">&amp;#34;C:\Program Files\SketchUp\SketchUp 2013\SketchUp.exe&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If this also works for you then &lt;code>SketchUp.desktop&lt;/code> can be modified to persist
+these settings.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nano ~/.local/share/applications/wine/Programs/SketchUp&lt;span style="color:#87ceeb">\ &lt;/span>2013/SketchUp.desktop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Replace the contents with what follows but change &lt;code>USER&lt;/code> with your username.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Desktop Entry]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Name=&lt;span style="color:#87ceeb">SketchUp&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Exec=&lt;span style="color:#87ceeb">env WINEPREFIX=&amp;#34;/home/USER/.sketchup&amp;#34; LIBGL_ALWAYS_SOFTWARE=1 vblank_mode=0 wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/USER/.sketchup/dosdevices/c:/users/USER/Start\\ Menu/Programs/SketchUp\\ 2013/SketchUp.lnk&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Type=&lt;span style="color:#87ceeb">Application&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>StartupNotify=&lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Icon=&lt;span style="color:#87ceeb">1871_SketchUpIcon.0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="uninstalling-sketchup-make">Uninstalling SketchUp Make&lt;/h2>
+&lt;p>Should you ever need to, you can uninstall SketchUp Make as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rm -rfv &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/.sketchup/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rfv ~/.local/share/applications/wine/Programs/SketchUp&lt;span style="color:#87ceeb">\ &lt;/span>2013/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://appdb.winehq.org/objectManager.php?sClass=version&amp;amp;iId=28620">http://appdb.winehq.org/objectManager.php?sClass=version&amp;amp;iId=28620&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Install SketchUp Make 2013 on Arch Linux with Wine 1.7</summary></item></channel></rss>

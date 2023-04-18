@@ -1,1 +1,650 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Firmware on Wimpy's World</title><link>https://wimpysworld.com/tags/firmware/</link><description>Recent content in Firmware on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 29 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/firmware/rss.xml" rel="self" type="application/rss+xml"/><item><title>Humax Foxsat HDR Custom Firmware</title><link>https://wimpysworld.com/posts/humax-foxsat-hdr-custom-firmware/</link><pubDate>Sun, 29 Jun 2014 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/humax-foxsat-hdr-custom-firmware/</guid><description>Hard disk upgrades and custom firmware on the Humx Foxsat HDR</description></item><item><title>Ployer Momo8 IPS Custom Firmware</title><link>https://wimpysworld.com/posts/ployer-momo8-ips-custom-firmware/</link><pubDate>Fri, 22 Mar 2013 13:35:34 +0000</pubDate><guid>https://wimpysworld.com/posts/ployer-momo8-ips-custom-firmware/</guid><description>Ployer Momo8 IPS Custom Firmware with ClockWorkMod</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Firmware on Wimpy's World</title><link>https://wimpysworld.com/tags/firmware/</link><description>Recent content in Firmware on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 29 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/firmware/rss.xml" rel="self" type="application/rss+xml"/><item><title>Humax Foxsat HDR Custom Firmware</title><link>https://wimpysworld.com/posts/humax-foxsat-hdr-custom-firmware/</link><pubDate>Sun, 29 Jun 2014 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/humax-foxsat-hdr-custom-firmware/</guid><description>&lt;p>I&amp;rsquo;ve had these notes kicking around for absolutely ages. I haven&amp;rsquo;t checked to
+see if this stuff is still accurate because during the last 12 months or so our
+viewing habits have changed and we almost exclusively watch streamed content now.&lt;/p>
+&lt;p>That said, my father-in-law gave us a &lt;a href="http://www.amazon.co.uk/Humax-FOXSAT-HDR-Freesat-Digital-Recorder/dp/B001L5YU36">Humax Foxsat HDR&lt;/a>
+Freesat digital recorder as a thank you for some work I did for him. It turns
+out the Humax Foxsat HDR is quite hackable.&lt;/p>
+&lt;h1 id="hard-disk-upgrade">Hard Disk Upgrade&lt;/h1>
+&lt;p>I contributed to the topic below. The Humax firmware only supports disks up to
+1TB but the hackers method works for 2TB drives, possibly bigger but I haven&amp;rsquo;t
+tried. I&amp;rsquo;ve upgraded mine and my father-in-laws to 2TB without any problems.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/forums/pvrs-vcrs/1336395-humax-foxsat-hdr-upgrade-hdd-2tb.html">http://www.avforums.com/forums/pvrs-vcrs/1336395-humax-foxsat-hdr-upgrade-hdd-2tb.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="custom-firmware">Custom Firmware&lt;/h1>
+&lt;p>These are the topics that discuss the custom firmware itself and includes the
+downloads. Once the custom firmware is installed and it&amp;rsquo;s advanced interface has
+been enabled you can enable several add-ons such as Samba, Mediatomb, ssh, ftp, etc.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/threads/media-file-server-bundle-for-the-foxsat-hdr-release-4-part-5.1829374/">http://www.avforums.com/threads/media-file-server-bundle-for-the-foxsat-hdr-release-4-part-5.1829374/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1747997-media-file-server-bundle-foxsat-hdr-release-4-0-part-4-a.html">http://www.avforums.com/forums/freesat/1747997-media-file-server-bundle-foxsat-hdr-release-4-0-part-4-a.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1661195-media-file-server-bundle-foxsat-hdr-release-4-0-part-3-a.html">http://www.avforums.com/forums/freesat/1661195-media-file-server-bundle-foxsat-hdr-release-4-0-part-3-a.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1599048-media-file-server-bundle-foxsat-hdr-release-4-0-part-2-a.html">http://www.avforums.com/forums/freesat/1599048-media-file-server-bundle-foxsat-hdr-release-4-0-part-2-a.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1517610-media-file-server-bundle-foxsat-hdr-release-4-0-part-1-a.html">http://www.avforums.com/forums/freesat/1517610-media-file-server-bundle-foxsat-hdr-release-4-0-part-1-a.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="web-interface">Web Interface&lt;/h2>
+&lt;p>This is the topic about the web interface. No download required it is
+bundled in the custom firmware above.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1601205-web-interface-channel-editor-plug-foxsat-hdr.html">http://www.avforums.com/forums/freesat/1601205-web-interface-channel-editor-plug-foxsat-hdr.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="channel-editor">Channel Editor&lt;/h2>
+&lt;p>The channel editor is installed and configured via the web interface and
+is one of my favourite add-ons. It also allows you to enable non-freesat
+channels in the normal guide.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1601205-web-interface-channel-editor-plug-foxsat-hdr.html">http://www.avforums.com/forums/freesat/1601205-web-interface-channel-editor-plug-foxsat-hdr.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="non-freesat-channels">Non Freesat channels&lt;/h1>
+&lt;p>We get our broadcasts from Astra 2A / Astra 2B / Astra 2D / Eurobird 1 (28.2°E).
+Other free to air channels are available and KingOfSat lists them all.
+These channels can only be added via the Humax setup menus, but can then
+be presented in the normal EPG using the Channel Editor above.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://en.kingofsat.net/pos-28.2E.php">http://en.kingofsat.net/pos-28.2E.php&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="decrypt-hd-recordings">Decrypt HD recordings&lt;/h1>
+&lt;p>I never actually tried this, but what follows might be useful.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/forums/pvrs-vcrs/1721573-can-i-install-auto-unprotect-foxsat-hdr-if-so-how.html">http://www.avforums.com/forums/pvrs-vcrs/1721573-can-i-install-auto-unprotect-foxsat-hdr-if-so-how.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/18051843-post715.html">http://www.avforums.com/forums/18051843-post715.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/18057417-post732.html">http://www.avforums.com/forums/18057417-post732.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/18061024-post740.html">http://www.avforums.com/forums/18061024-post740.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/18085731-post768.html">http://www.avforums.com/forums/18085731-post768.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="ota-updates">OTA updates&lt;/h1>
+&lt;p>&lt;strong>This is not so relevant now, since Humax haven&amp;rsquo;t released an OTA update for some time.&lt;/strong>&lt;/p>
+&lt;p>I have not yet found a way to prevent automatic over the air updates from being
+automatically applied. When an over the air update is applied the Humax still
+works, but the web interface and all the add-ons stop working. The can be solved
+by waiting for the custom firmware to be updated (which happen remarkably quickly)
+and then re-flashing the custom firmware. All the add-ons should start working again.&lt;/p></description><summary>Hard disk upgrades and custom firmware on the Humx Foxsat HDR</summary></item><item><title>Ployer Momo8 IPS Custom Firmware</title><link>https://wimpysworld.com/posts/ployer-momo8-ips-custom-firmware/</link><pubDate>Fri, 22 Mar 2013 13:35:34 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/ployer-momo8-ips-custom-firmware/</guid><description>&lt;p>I bought a &lt;a href="https://wimpysworld.com/posts/2012-09-quality-android-tablet-on-a-budget-ployer-momo8-ips/">budget Android tablet a little while back&lt;/a>
+that turned out to be really rather good. However, there were issues with the
+initial firmware.&lt;/p>
+&lt;ul>
+&lt;li>Connecting to, or maintaining connection with, some wireless networks was unreliable.&lt;/li>
+&lt;li>When the internal NAND was under moderate load the tablet would become unresponsive.&lt;/li>
+&lt;/ul>
+&lt;p>Ployer released a firmware update in November 2012 and again in April 2013 which
+addressed these issues. Here&amp;rsquo;s the translated change log.&lt;/p>
+&lt;blockquote>
+&lt;ol>
+&lt;li>Increase the volume buttons on the vertical screen.&lt;/li>
+&lt;li>System, audio and video decoding, browser, Flash player, 3G module, boot
+animation module BUG repair.&lt;/li>
+&lt;li>Update NandFlash, Mali, Wifi module drivers, while addressing some CTS
+tests BUG and the stability of the system as a whole has been further
+enhanced.&lt;/li>
+&lt;li>Optimize Flash stability, improve the efficiency of the implementation of
+the DDR.&lt;/li>
+&lt;li>Default input method Sogou input method.&lt;/li>
+&lt;li>Update Google Pinyin input method.&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;p>However, the official Ployer firmware comes pre-loaded with a selection of
+Chinese applications and defaults to a Chinese language.&lt;/p>
+&lt;h1 id="objectives">Objectives&lt;/h1>
+&lt;p>I decided to have a go a making my own custom firmware for the Ployer Momo8 IPS
+with the following goals.&lt;/p>
+&lt;ul>
+&lt;li>Pre-rooted.&lt;/li>
+&lt;li>Removal of pre-installed Chinese apps.&lt;/li>
+&lt;li>Removal of bloatware.&lt;/li>
+&lt;li>Extend &lt;code>/data&lt;/code> partition.&lt;/li>
+&lt;li>Make it a &lt;i>&amp;ldquo;Google Experience&amp;rdquo;&lt;/i> device.&lt;/li>
+&lt;li>ClockWorkMod Recovery (available to donors)&lt;/li>
+&lt;/ul>
+&lt;p>I think I&amp;rsquo;ve been fairly successful. My firmware includes Android 4.1.2
+features and even some Android 4.2 features. Until someone successfully ports
+&lt;a href="http://www.cyanogenmod.org/">cyanogenmod&lt;/a> to the Ployer Momo8 IPS or Ployer
+release a 4.2.x update then my firmware is the most complete &lt;i>&amp;ldquo;Google Experience&amp;rdquo;&lt;/i>
+you&amp;rsquo;ll find for the device.&lt;/p>
+&lt;h1 id="changes">Changes&lt;/h1>
+&lt;p>Below are the changes I made to the official Ployer Momo8 IPS firmware.&lt;/p>
+&lt;h2 id="13164">13.164&lt;/h2>
+&lt;p>This release is mainly a fix for Google+. The builds are running now and will
+be available for download later today.&lt;/p>
+&lt;ul>
+&lt;li>Integrated SuperSU 1.32
+&lt;ul>
+&lt;li>&lt;a href="http://forum.xda-developers.com/showthread.php?t=1538053">http://forum.xda-developers.com/showthread.php?t=1538053&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Tweaked WiFi 2.4Ghz Transmit Power. &lt;code>maxp2ga0&lt;/code> is now 76 in:
+&lt;ul>
+&lt;li>This appears to be the default for other devices with the same chipset, feedback welcomed.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Reverted &lt;code>PlusOne.apk&lt;/code> to the version in 13.137
+&lt;ul>
+&lt;li>This should fix the force closes.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="13149">13.149&lt;/h2>
+&lt;p>The purpose of this release is to refresh some system apps, address some
+compatibility issues and to offer versions of my custom firmware based on both
+20130325 and 20121120.&lt;/p>
+&lt;ul>
+&lt;li>Based on the Official Ployer MOMO8(IPS)-4.1.1-Firmware-20130325 and the Official Ployer MOMO8(IPS)-4.1.1-Firmware-20121120.
+&lt;ul>
+&lt;li>Feedback suggests that WiFi works better for some when using firmware based on the 20121120 version.&lt;/li>
+&lt;li>&lt;u>Only donors will have access to the 20121120 versions.&lt;/u>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated SuperSU 1.30
+&lt;ul>
+&lt;li>&lt;a href="http://forum.xda-developers.com/showthread.php?t=1538053">http://forum.xda-developers.com/showthread.php?t=1538053&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Removed the &lt;code>framework.jar&lt;/code> patch as it introduces incompatibilities of its own.&lt;/li>
+&lt;li>Removed the PicoTTS voice data files from the &lt;code>/system&lt;/code> partition.
+&lt;ul>
+&lt;li>PicoTTS voices can be selectively installed via &lt;code>Settings -&amp;gt; Language and Input&lt;/code>.&lt;/li>
+&lt;li>This is a space saving measure and essential for the 20121120 version.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated the following, as of May 25th 2013:
+&lt;ul>
+&lt;li>&lt;code>Magazines.apk&lt;/code> (Google Play Magazines)&lt;/li>
+&lt;li>&lt;code>Music2.apk&lt;/code> (Google Play Music)&lt;/li>
+&lt;li>&lt;code>PlusOne.apk&lt;/code> (Google+)&lt;/li>
+&lt;li>&lt;code>Talk.apk&lt;/code> (Hangouts)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="13137">13.137&lt;/h2>
+&lt;p>This release is focused on stability, adding the new Google Play features
+announced at &lt;a href="https://developers.google.com/events/io/">Google I/O 2013&lt;/a> and
+also includes everything from the previous releases.&lt;/p>
+&lt;ul>
+&lt;li>Integrated Android 4.2 sounds, fonts and boot animation
+&lt;ul>
+&lt;li>Boot animation is now the correct size, higher quality and doesn&amp;rsquo;t flicker at the end of a boot.&lt;/li>
+&lt;li>All Android 4.2 sounds and fonts are now included.
+&lt;ul>
+&lt;li>Fixed default notification sound.&lt;/li>
+&lt;li>Lock screen font looks much nicer.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="http://forum.xda-developers.com/showthread.php?t=1991734">http://forum.xda-developers.com/showthread.php?t=1991734&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Android 4.2.2 keyboard
+&lt;ul>
+&lt;li>&lt;a href="http://forum.xda-developers.com/showthread.php?p=38124560">http://forum.xda-developers.com/showthread.php?p=38124560&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Nova Launcher 2.1
+&lt;ul>
+&lt;li>&lt;a href="http://novalauncher.com">http://novalauncher.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Feedly 15.0.1
+&lt;ul>
+&lt;li>&lt;a href="http://www.feedly.com">http://www.feedly.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Power Toggles 4.6.6
+&lt;ul>
+&lt;li>&lt;a href="http://www.powertoggles.com">http://www.powertoggles.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Tweaked WiFi 2.4Ghz Transmit Power. &lt;code>maxp2ga0&lt;/code> is now 100 in:
+&lt;ul>
+&lt;li>&lt;code>/etc/firmware/nvram_RK901.txt&lt;/code> was previously 74.&lt;/li>
+&lt;li>&lt;code>/etc/firmware/nvram_RK903.cal&lt;/code> was previously 76.&lt;/li>
+&lt;li>&lt;code>/etc/firmware/nvram_RK903.txt&lt;/code> was previosuly 72.&lt;/li>
+&lt;li>&lt;code>/etc/firmware/nvram_RK903_26M.cal&lt;/code> was previously 60.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Tweaked WiFi 5.0Ghz Transmit Power. &lt;code>maxp5ga0&lt;/code>, &lt;code>maxp5gla0&lt;/code> and &lt;code>maxp5gha0&lt;/code> are now 100 in:
+&lt;ul>
+&lt;li>&lt;code>/etc/firmware/nvram_RK903.cal&lt;/code> were all previously 80.&lt;/li>
+&lt;li>&lt;code>/etc/firmware/nvram_RK903_26M.cal&lt;/code> were all previously 80.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Added camera icon to the application drawer.&lt;/li>
+&lt;li>Fixed boot up time
+&lt;ul>
+&lt;li>Boot up time is significantly faster, with the exception of the first boot after a firmware flash.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Fixed apps disappearing from the Settings and the Play Store.&lt;/li>
+&lt;li>Replaced Google Talk with Hangouts&lt;/li>
+&lt;li>Removed Google Drive and Google Earth
+&lt;ul>
+&lt;li>When pre-installed they would Force Close.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated the following, as of May 16th 2013:
+&lt;ul>
+&lt;li>&lt;code>Books.apk&lt;/code> (Google Play Books)&lt;/li>
+&lt;li>&lt;code>GestureSearch.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Currents.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>GoogleEars.apk&lt;/code> (Sound Search)&lt;/li>
+&lt;li>&lt;code>GmsCore.apk&lt;/code> (Google Play Services)&lt;/li>
+&lt;li>&lt;code>Magazines.apk&lt;/code> (Google Play Magazines)&lt;/li>
+&lt;li>&lt;code>Maps.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Music2.apk&lt;/code> (Google Play Music)&lt;/li>
+&lt;li>&lt;code>Phonesky.apk&lt;/code> (Play Store)&lt;/li>
+&lt;li>&lt;code>Talk.apk&lt;/code> (Hangouts)&lt;/li>
+&lt;li>&lt;code>TalkBack.apk&lt;/code> (Accessibility)&lt;/li>
+&lt;li>&lt;code>Videos.apk&lt;/code> (Google Play Movies)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="13129">13.129&lt;/h2>
+&lt;p>This version includes everything from the previous release plus the changes below.&lt;/p>
+&lt;ul>
+&lt;li>Based on the Official Ployer MOMO8(IPS)-4.1.1-Firmware-20130325
+&lt;ul>
+&lt;li>&lt;a href="http://download.ployer.cn/downdetail.asp?id=763">http://download.ployer.cn/downdetail.asp?id=763&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Boot loader upgraded to 1.22
+&lt;ul>
+&lt;li>Switching to Upgrade mode in Rockchip Batch Tool is much quicker.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Extended &lt;code>/system&lt;/code> partition from 375M to 428M&lt;/li>
+&lt;li>Removed more Chinese applications and bloatware
+&lt;ul>
+&lt;li>Removed UCBrowser shared objects from &lt;code>/system/lib&lt;/code>&lt;/li>
+&lt;li>Removed QQMiniHD shared objects from &lt;code>/system/lib&lt;/code>&lt;/li>
+&lt;li>Removed more Adobe Reader shared objects from &lt;code>/system/lib&lt;/code> and fonts from &lt;code>/system/fonts/adobefonts&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Clockworkmod Recovery to 6.0.31 (donors only)
+&lt;ul>
+&lt;li>&lt;a href="http://androtab.info/clockworkmod/rockchip/changelog/">http://androtab.info/clockworkmod/rockchip/changelog/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Adobe Flash 11.1.115.54
+&lt;ul>
+&lt;li>&lt;a href="http://helpx.adobe.com/flash-player/kb/archived-flash-player-versions.html">http://helpx.adobe.com/flash-player/kb/archived-flash-player-versions.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated File Wrangler 1.5
+&lt;ul>
+&lt;li>&lt;a href="https://play.google.com/store/apps/details?id=com.amon.filewrangler">https://play.google.com/store/apps/details?id=com.amon.filewrangler&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated AdAway 2.3 (Google now blocks all advert blockers from the Play Store)
+&lt;ul>
+&lt;li>&lt;a href="http://code.google.com/p/ad-away/">http://code.google.com/p/ad-away/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Replaced Launcher2 4.1.5 with Nova Launcher 2.0.2
+&lt;ul>
+&lt;li>&lt;a href="http://novalauncher.com">http://novalauncher.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Replaced the default wallpaper with the default wallpaper from the Nexus 10.&lt;/li>
+&lt;li>Removed User Management - it was not reliable.&lt;/li>
+&lt;li>Removed &lt;code>Chrome.apk&lt;/code> but updated &lt;code>/system/lib/libchromeview.so&lt;/code> from Chrome 26.0.1410.58
+&lt;ul>
+&lt;li>This is a space saving measure but ensures the ROM is Chrome compatible.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated the following, as of May 10th 2013:
+&lt;ul>
+&lt;li>&lt;code>Authenticator.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>CalendarGoogle.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Currents.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Drive.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Earth.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Gmail.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>GooglePlayBooks.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>GooglePlayMagazines.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>GooglePlayMovies.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>GooglePlayMusic.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>GooglePlayServices.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Keep.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Maps.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Phonesky.apk&lt;/code> (Play Store)&lt;/li>
+&lt;li>&lt;code>PlusOne.apk&lt;/code> (Google+)&lt;/li>
+&lt;li>&lt;code>Street.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>YouTube.apk&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="13080">13.080&lt;/h2>
+&lt;ul>
+&lt;li>Based on the Official Ployer MOMO8(IPS)-4.1.1-Firmware-20121120
+&lt;ul>
+&lt;li>&lt;a href="http://download.ployer.cn/downdetail.asp?id=763">http://download.ployer.cn/downdetail.asp?id=763&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Extended &lt;code>/data&lt;/code> partition to 2GB.
+&lt;ul>
+&lt;li>&lt;a href="http://www.freaktab.com/showthread.php?287-RockChip-ROM-Building-Tips-and-Tricks-by-Finless&amp;amp;p=4054&amp;amp;viewfull=1#post4054">http://www.freaktab.com/showthread.php?287-RockChip-ROM-Building-Tips-and-Tricks-by-Finless&amp;amp;p=4054&amp;amp;viewfull=1#post4054&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Removed Chinese applications.
+&lt;ul>
+&lt;li>&lt;code>UCBrowser_V2.1.1.219_Android3_pf147_(Build12110718).apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>dopoolplayer&lt;/code>&lt;/li>
+&lt;li>&lt;code>iReader_android_v2000_108044_guanwang.apk&lt;/code> including shared objects from &lt;code>/system/lib&lt;/code>.&lt;/li>
+&lt;li>&lt;code>market_hd.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>qiyiyingshi_V3.0_mumayi_e3d3e.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>qq_mini_hd_1.9.1.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>sougoushurufa.apk&lt;/code> including shared objects from &lt;code>/system/lib&lt;/code>.&lt;/li>
+&lt;li>&lt;code>zhonghuawannianli_ECalendar_V3.2.3_mumayi_3ee39.apk&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Cleaned up &lt;code>build.prop&lt;/code>
+&lt;ul>
+&lt;li>Changed Chinese strings to ASCII&lt;/li>
+&lt;li>Configured English (UK) as default language/locale.&lt;/li>
+&lt;li>Configured Europe/London as default time zone.&lt;/li>
+&lt;li>Default display brightness set at 50%&lt;/li>
+&lt;li>Deleted settings for Chinese applications that have been removed.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Removed Rockchip Utilities.
+&lt;ul>
+&lt;li>&lt;code>ApkInstaller.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>RkExplorer.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>RKUpdateService.apk&lt;/code> including shared objects from &lt;code>/system/lib&lt;/code>.&lt;/li>
+&lt;li>&lt;code>RkVideoPlayer.apk&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Removed bloatware.
+&lt;ul>
+&lt;li>Adobe Reader including shared objects from &lt;code>/system/lib&lt;/code>.&lt;/li>
+&lt;li>DocsToGo.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated SuperSU 1.25
+&lt;ul>
+&lt;li>&lt;a href="http://forum.xda-developers.com/showthread.php?t=1538053">http://forum.xda-developers.com/showthread.php?t=1538053&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Clockworkmod Recovery 6.0.28
+&lt;ul>
+&lt;li>&lt;a href="http://androtab.info/clockworkmod/rockchip/">http://androtab.info/clockworkmod/rockchip/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://forum.xda-developers.com/showthread.php?t=2102679">http://forum.xda-developers.com/showthread.php?t=2102679&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Google Apps (JZO54K) 4.1.2
+&lt;ul>
+&lt;li>Adds the first boot Setup Wizard.&lt;/li>
+&lt;li>Adds Picasa photo syncing.&lt;/li>
+&lt;li>Face Unlock 4.1.2&lt;/li>
+&lt;li>Google Talk 4.1.2&lt;/li>
+&lt;li>&lt;a href="http://rootzwiki.com/topic/31532-gapps-412-485486-jzo54k-gapps-package-1012/">http://rootzwiki.com/topic/31532-gapps-412-485486-jzo54k-gapps-package-1012/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Launcher2 4.2, includes 50% transparency on app drawer.
+&lt;ul>
+&lt;li>&lt;a href="http://forum.xda-developers.com/showthread.php?t=1995812">http://forum.xda-developers.com/showthread.php?t=1995812&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated some Jelly Bean 4.2 features:
+&lt;ul>
+&lt;li>Jelly Bean 4.2 clock.&lt;/li>
+&lt;li>Jelly Bean 4.2 keyboard with gesture.&lt;/li>
+&lt;li>Movie Studio video editor.&lt;/li>
+&lt;li>&lt;a href="http://forum.xda-developers.com/showthread.php?t=2010535">http://forum.xda-developers.com/showthread.php?t=2010535&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Cyanogenmod 10.0 APKs
+&lt;ul>
+&lt;li>&lt;code>Calculator.apk&lt;/code> : Adds different calculator panels.&lt;/li>
+&lt;li>&lt;code>Galaxy4.apk&lt;/code> : Smaller APK&lt;/li>
+&lt;li>&lt;code>HoloSpiralWallpaper.apk&lt;/code> : Smaller APK&lt;/li>
+&lt;li>&lt;code>LiveWallpapers.apk&lt;/code> : Smaller APK&lt;/li>
+&lt;li>&lt;code>LiveWallpapersPicker.apk&lt;/code> : Smaller APK&lt;/li>
+&lt;li>&lt;code>MagicSmokeWallpapers.apk&lt;/code> : Smaller APK&lt;/li>
+&lt;li>&lt;code>NoiseField.apk&lt;/code> : Smaller APK&lt;/li>
+&lt;li>&lt;code>PhaseBeam.apk&lt;/code> : Smaller APK&lt;/li>
+&lt;li>&lt;code>SoundRecorder.apk&lt;/code> : Smaller APK&lt;/li>
+&lt;li>&lt;code>VisualizationWallpapers.apk&lt;/code> : Smaller APK&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Adobe Flash 11.1.115.47
+&lt;ul>
+&lt;li>&lt;a href="http://helpx.adobe.com/flash-player/kb/archived-flash-player-versions.html">http://helpx.adobe.com/flash-player/kb/archived-flash-player-versions.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Quick Boot 4.2
+&lt;ul>
+&lt;li>&lt;a href="https://play.google.com/store/apps/details?id=com.siriusapplications.quickboot">https://play.google.com/store/apps/details?id=com.siriusapplications.quickboot&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated File Wrangler 1.4
+&lt;ul>
+&lt;li>&lt;a href="https://play.google.com/store/apps/details?id=com.amon.filewrangler">https://play.google.com/store/apps/details?id=com.amon.filewrangler&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated User Management
+&lt;ul>
+&lt;li>&lt;a href="http://forum.xda-developers.com/showthread.php?t=1824066">http://forum.xda-developers.com/showthread.php?t=1824066&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://play.google.com/store/apps/details?id=com.appaholics.um">https://play.google.com/store/apps/details?id=com.appaholics.um&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated busybox 1.20.2&lt;/li>
+&lt;li>Added additional permissions files for increased compatibility.
+&lt;ul>
+&lt;li>&lt;code>android.hardware.camera.autofocus.xml&lt;/code>&lt;/li>
+&lt;li>&lt;code>android.hardware.camera.front.xml&lt;/code>&lt;/li>
+&lt;li>&lt;code>android.hardware.ethernet.xml&lt;/code>&lt;/li>
+&lt;li>&lt;code>android.hardware.sensor.accelerometer.xml&lt;/code>&lt;/li>
+&lt;li>&lt;code>android.hardware.sensor.light.xml&lt;/code>&lt;/li>
+&lt;li>&lt;code>android.hardware.touchscreen.multitouch.xml&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Replaced ring tones, alerts and notifications with the audio from Nexus 4.&lt;/li>
+&lt;li>Replaced boot animation with the Nexus animation.&lt;/li>
+&lt;li>Replaced the default wallpaper with one from the Jelly Bean SDK.&lt;/li>
+&lt;li>Updated the following, as of March 18th 2012:
+&lt;ul>
+&lt;li>&lt;code>CalendarGoogle.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Gmail.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>GooglePlayMovies.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>GooglePlayMusic.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>GooglePlayServices.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>PlusOne.apk&lt;/code> (Google+)&lt;/li>
+&lt;li>&lt;code>Maps.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Phonesky.apk&lt;/code> (Google Play Store)&lt;/li>
+&lt;li>&lt;code>Street.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>YouTube.apk&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Removed &lt;code>Chrome.apk&lt;/code> but updated &lt;code>/system/lib/libchromeview.so&lt;/code>.
+&lt;ul>
+&lt;li>This is a space saving measure but ensures the ROM is Chrome compatible.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Patched &lt;code>framework.jar&lt;/code> so that Gameloft titles work.
+&lt;ul>
+&lt;li>&lt;a href="http://www.slatedroid.com/topic/50354-gameloft-game-fix-for-license-check-or-loop/">http://www.slatedroid.com/topic/50354-gameloft-game-fix-for-license-check-or-loop/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://dragondevs.com/index.php?/topic/1265-gameloft-game-fix-for-license-check-or-loop/">http://dragondevs.com/index.php?/topic/1265-gameloft-game-fix-for-license-check-or-loop/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://forum.xda-developers.com/showthread.php?t=955847">http://forum.xda-developers.com/showthread.php?t=955847&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>All APKs are ZipAligned.&lt;/li>
+&lt;/ul>
+&lt;h2 id="what-didnt-change">What didn&amp;rsquo;t change&lt;/h2>
+&lt;ul>
+&lt;li>I haven&amp;rsquo;t modified &lt;code>build.prop&lt;/code> to make the Ployer Momo8 IPS masquerade as
+another brand or model of Android device. I will not be making this change, please
+don&amp;rsquo;t request it.&lt;/li>
+&lt;li>Although my firmware includes many features from Android 4.1.2 and some from
+Android 4.2 I haven&amp;rsquo;t bumped the Android version or Build number. That would be
+dishonest and misleading.&lt;/li>
+&lt;/ul>
+&lt;h2 id="known-issues">Known Issues&lt;/h2>
+&lt;ul>
+&lt;li>Adobe Flash is enabled the first time the Browser app (not Chrome) is executed.&lt;/li>
+&lt;li>Hangouts app does not work on the first boot following a firmware flash. It
+does works correctly on subsequent boots.&lt;/li>
+&lt;li>Although &lt;code>busybox&lt;/code> is included in the ROM, no sym-links are created.&lt;/li>
+&lt;li>Some Gameloft titles may not work, Asphalt 7 for example. Do other Gameloft
+titles work properly? This problem is present in the official Ployer firmware too,
+there are framework patches to fix this problem but they seem to introduce other
+incompatibilities.&lt;/li>
+&lt;/ul>
+&lt;h1 id="donate">Donate&lt;/h1>
+&lt;p>&lt;del>Please consider donating to this project. It is nice to have the effort I&amp;rsquo;ve
+put into this custom firmware recognized. I don&amp;rsquo;t ask for much, it is at your
+discretion, but just think how happy I&amp;rsquo;ll look when I am sipping the beer you
+bought me 😄&lt;/del>&lt;/p>
+&lt;h1 id="downloads">Downloads&lt;/h1>
+&lt;p>You&amp;rsquo;ll need Rockchip Batch Tool which include the RockChip USB drivers and
+the firmware flashing utility. I&amp;rsquo;ve modified Rockchip Batch Tool to default to
+English language and removed old logs and transient data to reduce the size of
+the download. You&amp;rsquo;ll also need the firmware itself.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://ge.tt/9NH0edD1?c" target="_blank">Ployer MOMO8 IPS Firmware&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Download Rockchip Batch Tool and the STOCK RECOVERY version of the ROM. Unzip both
+archives once they are downloaded.&lt;/p>
+&lt;h1 id="how-to-flash">How to Flash&lt;/h1>
+&lt;div class="alert alert-warning">&lt;strong>Warning&lt;/strong> Always (&lt;u>I can't
+stress this enough&lt;/u>) flash the STOCK RECOVERY version of my custom ROM.
+&lt;strong>Never&lt;/strong> flash the CWM RECOVERY version without first having
+flashed the STOCK RECOVERY version. If you are upgrading from another ROM
+(even one of mine) always flash the STOCK RECOVERY version first.&lt;/div>
+&lt;p>Flashing this ROM will will effectively factory reset your tablet, wipe your
+installed apps, app data and preferences. If you have rooted your tablet you
+might want to consider making a backup with
+&lt;a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup">Titanium Backup * root&lt;/a>.
+If you have not rooted your tablet then you could use &lt;a href="https://play.google.com/store/apps/details?id=com.koushikdutta.backup">Helium - App Sync and Backup&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>Install the Rockchip USB drivers included with Rockchip Batch Tool.
+&lt;ul>
+&lt;li>This was simple of Windows XP but I couldn&amp;rsquo;t get Windows 7 to accept the Rockchip drivers. However, installing &lt;a href="http://www.moborobo.com/">MoboRobo&lt;/a> on Windows 7 provided the correct driver.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Turn the Ployer Momo8 IPS on.&lt;/li>
+&lt;li>On the tablet go to &lt;code>Settings&lt;/code> -&amp;gt; &lt;code>Developer options&lt;/code> and &lt;strong>untick&lt;/strong> &lt;code>USB debugging&lt;/code>.&lt;/li>
+&lt;li>Start &lt;code>RKBatchTool.exe&lt;/code>.&lt;/li>
+&lt;li>In &lt;code>RKBatchTool&lt;/code> choose firmware file, click the &lt;code>Switch&lt;/code> button. The
+device icon should change to green to indicate a successful connection.&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-info">&lt;strong>Note&lt;/strong> The very first time your
+`Switch` to upgrade mode, Windows may prompt you to install additional
+Rockchip USB drivers.&lt;/div>
+&lt;ul>
+&lt;li>&lt;strong>Only if the device icon changed to Green&lt;/strong>, click &lt;code>Upgrade&lt;/code>.&lt;/li>
+&lt;li>The firmware will be flashed and the tablet will automatically reboot into Recovery.&lt;/li>
+&lt;li>You will see a green Android and then the paritions (&lt;code>/data&lt;/code>, &lt;code>/cache&lt;/code> and &lt;code>/mnt/sdcard&lt;/code>) will be formatted.
+&lt;ul>
+&lt;li>&lt;code>/mnt/sdcard&lt;/code> is the internal memory, not the microSDHC card inserted in the card reader.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>When the formatting is complete the tablet will reboot.&lt;/li>
+&lt;/ul>
+&lt;p>The first boot may take a little longer than usual. You will be presented with
+the Welcome wizard where you can configure language and locale, etc. You can
+optionally enter your Google Apps or Gmail account credentials and doing so will
+prompt for which Wifi network to associate with.&lt;/p>
+&lt;h2 id="rockchip-batch-tool-video">Rockchip Batch Tool Video&lt;/h2>
+&lt;p>I&amp;rsquo;ve also made a video showing how to flash the firmware. Frankly, the
+hardest part is getting the Rockchip drivers installed.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/Itcy13bYJfU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;h1 id="how-to-flash-the-cwm-version">How to Flash the CWM version&lt;/h1>
+&lt;div class="alert alert-block">&lt;strong>Warning&lt;/strong> Like I said,
+&lt;strong>never&lt;/strong> flash the CWM RECOVERY version of my ROM without first
+having flashed the STOCK RECOVERY version. The CWM version is made available
+to donors.&lt;/div>
+&lt;ul>
+&lt;li>Flash the STOCK RECOVERY version of the ROM as detailed above.&lt;/li>
+&lt;li>Follow the same procedure, but this time flash the CWM RECOVERY version.&lt;/li>
+&lt;li>When the CWM RECOVERY flash is complete the tablet will boot into CWM recovery. Do the following:
+&lt;ul>
+&lt;li>&lt;code>wipe cache partition&lt;/code>&lt;/li>
+&lt;li>&lt;code>advanced&lt;/code> -&amp;gt; &lt;code>wipe dalvik cache&lt;/code>&lt;/li>
+&lt;li>&lt;code>++++++Go Back++++++&lt;/code>&lt;/li>
+&lt;li>&lt;code>reboot system now&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The tablet will reboot, it will be a slower boot than usual but subsequent boots will be quicker.&lt;/li>
+&lt;/ul>
+&lt;h2 id="clockworkmod-recovery">ClockWorkMod Recovery&lt;/h2>
+&lt;p>Booting to recovery can be achieved using the pre-install Quick Boot app.&lt;/p>
+&lt;p>The Ployer Momo8 IPS only has one hardware button (power) so CWM is controlled
+with gestures.&lt;/p>
+&lt;ul>
+&lt;li>Swipe up/down: up/down&lt;/li>
+&lt;li>Swipe left: select&lt;/li>
+&lt;li>Swipe right: back&lt;/li>
+&lt;/ul>
+&lt;p>The Power button also acts as select, which I find to be the most reliable way
+to select an action.&lt;/p>
+&lt;h1 id="faq">FAQ&lt;/h1>
+&lt;h2 id="does-this-custom-firmware-fix-wifi-connectivity">Does this custom firmware fix WiFi connectivity?&lt;/h2>
+&lt;p>Short answer, possibly.&lt;/p>
+&lt;p>Of all the WiFi networks I have access to, only one causes the Ployer Momo8
+IPS to encounter weak signal and intermittent connections. When using the
+Official Ployer firmware on that WiFi network, connecting more than 5 meters
+from the access point is unreliable and maintaining a connection is almost
+impossible.&lt;/p>
+&lt;p>Using my firmware I can connect and maintain a connection up to about 10
+meters from the access point. My testing, and the feedback from others
+suggests the my firmware improves the WiFi signal by 8 to 10dBm.&lt;/p>
+&lt;p>From my testing the Momo8 IPS appears to have issues with some wireless access
+points, possibly related to the chipset in the access point or the Momo8 IPS,
+but I&amp;rsquo;ve not been able to pin it down. That said, I&amp;rsquo;ve got access to 2 Draytek
+Vigor routers and the Momo8 IPS does not work well with either of them. Every
+other wireless network I&amp;rsquo;ve connected to works well.&lt;/p>
+&lt;p>For example, at home I stream 720p movies via DLNA over WiFi and watch them on
+the Momo8 IPS using &lt;a href="https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad">MX Player&lt;/a>.
+It works perfectly and never buffers or lags. However, your mileage may vary.&lt;/p>
+&lt;h2 id="why-should-i-always-flash-the-stock-recovery-version-first">Why should I always flash the STOCK RECOVERY version first?&lt;/h2>
+&lt;p>Short answer, it&amp;rsquo;s the safest option.&lt;/p>
+&lt;p>There are 6 different ROMs (official or otherwise) that I am aware of for the
+Ployer Momo8 IPS. They &lt;strong>all&lt;/strong> have slightly different partition layouts. If
+you flash one of my CWM RECOVERY ROMs over a ROM using a slightly different
+partition layout, it will almost certainly soft brick the tablet. The STOCK
+RECOVERY will always correctly format the partitions directly after a flash,
+thereby mitigating the risk of soft bricking the tablet.&lt;/p>
+&lt;h2 id="ooops-ive-soft-bricked-my-tablet-what-do-i-do">Ooops, I&amp;rsquo;ve soft bricked my tablet. What do I do?&lt;/h2>
+&lt;p>Read the comments here, there are several useful tips. You can also use the
+comments here to see if anyone can offer assistance. Alternatively, go the
+Ployer Momo8 forum on Slatedroid, read what others have done and ask for
+help.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.slatedroid.com/forum/445-momo8/">http://www.slatedroid.com/forum/445-momo8/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="how-do-the-20130325-and-20121120-versions-differ">How do the 20130325 and 20121120 versions differ.&lt;/h2>
+&lt;p>The differences Ployer made between 20130325 and 20121120 is not well
+documented. I did some additional analysis of what changed between the
+November 2012 and April 2013 releases from Ployer, you can find my
+notes here:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.slatedroid.com/topic/68650-new-official-firmware-momo8-ips-411-firmware-20130325/page__view__findpost__p__819153">New Official Firmware: MOMO8 (IPS) -4.1.1 firmware 20130325&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>In addition to whatever Ployer changed, this is how my 20121120 differs from
+20130325.&lt;/p>
+&lt;ul>
+&lt;li>The &lt;code>/system&lt;/code> partition on the 20121120 version is 375MB, therefore the
+following system apps are not included:
+&lt;ul>
+&lt;li>&lt;code>AdAway.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Authenticator.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Books.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Currents.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Feedly.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>GestureSearch.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Keep.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Magazines.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>Videos.apk&lt;/code>&lt;/li>
+&lt;li>&lt;code>YouTube.apk&lt;/code>&lt;/li>
+&lt;li>All of the above can be installed from the Play Store, which the exception
+of &lt;a href="http://code.google.com/p/ad-away/">AdAway&lt;/a> which can be side-loaded.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Boot loader is version 1.20 rather than the newer 1.22.&lt;/li>
+&lt;li>All other tweaks and modifications are the same.&lt;/li>
+&lt;/ul>
+&lt;p>Some people have reported that WiFi is more reliable when using a firmware
+based on 20121120. Due to the size of the custom firmwares and the bandwidth they
+consume, &lt;u>custom versions of my firmware based on 20121120 are only available
+to donors&lt;/u>.&lt;/p>
+&lt;h1 id="feedback">Feedback&lt;/h1>
+&lt;p>Your feedback is welcome, please use the comments are below.&lt;/p></description><summary>Ployer Momo8 IPS Custom Firmware with ClockWorkMod</summary></item></channel></rss>

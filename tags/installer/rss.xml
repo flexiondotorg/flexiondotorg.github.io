@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Installer on Wimpy's World</title><link>https://wimpysworld.com/tags/installer/</link><description>Recent content in Installer on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 15 May 2012 11:12:13 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/installer/rss.xml" rel="self" type="application/rss+xml"/><item><title>Arch Linux Angel</title><link>https://wimpysworld.com/posts/arch-linux-angel/</link><pubDate>Tue, 15 May 2012 11:12:13 +0000</pubDate><guid>https://wimpysworld.com/posts/arch-linux-angel/</guid><description>Automated scripted installs of Arch Linux</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Installer on Wimpy's World</title><link>https://wimpysworld.com/tags/installer/</link><description>Recent content in Installer on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 15 May 2012 11:12:13 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/installer/rss.xml" rel="self" type="application/rss+xml"/><item><title>Arch Linux Angel</title><link>https://wimpysworld.com/posts/arch-linux-angel/</link><pubDate>Tue, 15 May 2012 11:12:13 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/arch-linux-angel/</guid><description>&lt;p>I&amp;rsquo;ve been working a shell script for Arch Linux that automatically configures
+my preferred GNOME 3 setup on my netbook, laptops and workstations. The main
+features are:&lt;/p>
+&lt;ul>
+&lt;li>Quickly deploys Arch Linux to my specifications&lt;/li>
+&lt;li>Supports i686 and x64_64.&lt;/li>
+&lt;li>Detects ATI/AMD, Intel and Nvidia chipsets and configures the Open Source video drivers and enables early KMS.&lt;/li>
+&lt;li>Hardware and location aware. Installation and configuration can be different for Home vs Work or Desktop vs Netbook.&lt;/li>
+&lt;li>Detects and correctly configures some device specific hardware, such as touch screens and wireless drivers.&lt;/li>
+&lt;li>Automatically configures DAEMONS array.&lt;/li>
+&lt;li>Includes custom power management hooks for pm-utils.&lt;/li>
+&lt;li>Designed to safely run multiple times so that it can be used as a tool for keeping all systems consistent.&lt;/li>
+&lt;/ul>
+&lt;p>I&amp;rsquo;ve dubbed this script Arch Angel. I&amp;rsquo;m undecided if I&amp;rsquo;ll release it publicly
+since it is very much my personal preferences and to some extent my colleagues
+at work. I suppose the real reason for this post is that I&amp;rsquo;ve been wanting to
+take &lt;a href="http://shelr.tv/">Shelr&lt;/a> for a test drive, so click the Play button
+below to see an example run of Arch Angel.&lt;/p>
+&lt;!--
+&lt;iframe border='0' height='684'
+id='shelr_record_4fb2223c96608047be00010e' scrolling='no'
+src='http://shelr.tv/records/4fb2223c96608047be00010e/embed' style='border: 0'
+width='634' />
+--></description><summary>Automated scripted installs of Arch Linux</summary></item></channel></rss>

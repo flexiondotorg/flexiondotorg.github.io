@@ -1,1 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UltraSonic on Wimpy's World</title><link>https://wimpysworld.com/tags/ultrasonic/</link><description>Recent content in UltraSonic on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 12 Jul 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ultrasonic/rss.xml" rel="self" type="application/rss+xml"/><item><title>subSonic on Debian</title><link>https://wimpysworld.com/posts/subsonic-on-debian/</link><pubDate>Sat, 12 Jul 2014 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/subsonic-on-debian/</guid><description>Setting up subSonic music streaming on Debian</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UltraSonic on Wimpy's World</title><link>https://wimpysworld.com/tags/ultrasonic/</link><description>Recent content in UltraSonic on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 12 Jul 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ultrasonic/rss.xml" rel="self" type="application/rss+xml"/><item><title>subSonic on Debian</title><link>https://wimpysworld.com/posts/subsonic-on-debian/</link><pubDate>Sat, 12 Jul 2014 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/subsonic-on-debian/</guid><description>&lt;p>Last year I removed all my music from Google Play Music and created my own
+&lt;a href="http://www.subsonic.org/">subSonic&lt;/a> server. I really like subSonic but don&amp;rsquo;t
+use it a huge amount, mostly for syncing some music to my phone prior to going
+on holiday or business. Therefore, I&amp;rsquo;ve made a single one time donation to the
+project rather than the ongoing monthly usage fee.&lt;/p>
+&lt;h1 id="installing-subsonic-on-debian">Installing subSonic on Debian&lt;/h1>
+&lt;p>This is how I install subSonic on Debian Wheezy.&lt;/p>
+&lt;h2 id="install-tomcat">Install Tomcat.&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install tomcat7
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-subsonic">Install subSonic.&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install ffmpeg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkdir /var/subsonic
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chown tomcat7: /var/subsonic
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo wget -c https://github.com/KHresearch/subsonic/releases/download/v4.9-kang/subsonic.war
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo cp subsonic.war /var/lib/tomcat7/webapps
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Restart Tomcat.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service tomcat7 restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Login to subSonic by visiting &lt;a href="http://server.example.org:8080/subsonic">http://server.example.org:8080/subsonic&lt;/a> and
+login with the credentials &lt;code>admin&lt;/code> and &lt;code>admin&lt;/code>. Make sure you change the
+password straight away.&lt;/p>
+&lt;p>Right, that is it. You can stop here and start filling subSonic with your
+music.&lt;/p>
+&lt;h1 id="subsonic-clients">subSonic clients&lt;/h1>
+&lt;p>On the rare occasions that I listen to music via subSonic I use
+&lt;a href="https://play.google.com/store/apps/details?id=com.thejoshwa.ultrasonic.androidapp">UltraSonic&lt;/a>
+for Android and &lt;a href="https://www.clementine-player.org/">Clementine&lt;/a> on my Arch Linux
+workstations.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.subsonic.org/pages/installation.jsp">http://www.subsonic.org/pages/installation.jsp&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/KHresearch/subsonic/">https://github.com/KHresearch/subsonic/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Setting up subSonic music streaming on Debian</summary></item></channel></rss>

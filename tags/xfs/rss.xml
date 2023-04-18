@@ -1,1 +1,204 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>XFS on Wimpy's World</title><link>https://wimpysworld.com/tags/xfs/</link><description>Recent content in XFS on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Fri, 12 Feb 2010 13:14:44 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/xfs/rss.xml" rel="self" type="application/rss+xml"/><item><title>Give XFS a chance. Don't believe the FUD.</title><link>https://wimpysworld.com/posts/give-xfs-a-chance-dont-believe-the-fud/</link><pubDate>Fri, 12 Feb 2010 13:14:44 +0000</pubDate><guid>https://wimpysworld.com/posts/give-xfs-a-chance-dont-believe-the-fud/</guid><description>In which I dispel some myths about XFS and fanboi a little</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>XFS on Wimpy's World</title><link>https://wimpysworld.com/tags/xfs/</link><description>Recent content in XFS on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Fri, 12 Feb 2010 13:14:44 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/xfs/rss.xml" rel="self" type="application/rss+xml"/><item><title>Give XFS a chance. Don't believe the FUD.</title><link>https://wimpysworld.com/posts/give-xfs-a-chance-dont-believe-the-fud/</link><pubDate>Fri, 12 Feb 2010 13:14:44 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/give-xfs-a-chance-dont-believe-the-fud/</guid><description>&lt;p>After tinkering with Ext4 I did some research and tested other file systems on
+my new disk arrays. I&amp;rsquo;ve concluded that &lt;a href="http://oss.sgi.com/projects/xfs/">XFS&lt;/a>,
+once tuned, is the best file system for my needs and it could well be the best
+file system for your needs too.&lt;/p>
+&lt;p>The remainder of this page explains how I arrived at that decision and how I tune
+XFS to get optimal, yet safe, performance that can rival Ext4 and JFS.&lt;/p>
+&lt;h2 id="benchmarks">Benchmarks&lt;/h2>
+&lt;p>Here are some benchmarks.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://izanbardprince.wordpress.com/2009/03/28/comparing-boot-performance-of-ext3-ext4-and-xfs-on-ubuntu-jaunty/">http://izanbardprince.wordpress.com/2009/03/28/comparing-boot-performance-of-ext3-ext4-and-xfs-on-ubuntu-jaunty/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://linuxgazette.net/122/piszcz.html">http://linuxgazette.net/122/piszcz.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.phoronix.com/scan.php?page=article&amp;amp;item=reiser4_linux35&amp;amp;num=1">Reiser4 Benchmarked On Linux 3.5 Against EXT4, Btrfs, XFS, ReiserFS&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="why-i-chose-xfs">Why I chose XFS&lt;/h2>
+&lt;p>I have not chosen XFS for performance alone, indeed some benchmarks show that
+XFS it outperformed for some file operations.&lt;/p>
+&lt;p>My workstation at home has two 6TB disk arrays and a 1TB root file system.
+The disk arrays contain photo, music and video libraries which are streamed
+via UPnP/DLNA and DAAP. The video files can be 2GB to 30GB in size. I also
+do a good deal of HD video encoding, processing and editing. My root partition
+contains many virtual machine images of which several are running at any given
+time.&lt;/p>
+&lt;p>My work laptop has a 250GB root file system and also contains many virtual
+machine images of which one is usually running.&lt;/p>
+&lt;p>XFS is designed with large file systems and large file handling in mind.
+It seems a sensible choice for those reasons alone, but I also liked the
+following features:&lt;/p>
+&lt;ul>
+&lt;li>XFS has on-line defragmentation tools, while (at the original time of writing in early 2010) Ext3/4 and JFS do not.&lt;/li>
+&lt;li>XFS dramatically reduces start-up time by avoiding &lt;code>fsck&lt;/code> delay. Ext3/4 can be very slow to &lt;code>fsck&lt;/code> large volumes.&lt;/li>
+&lt;li>XFS has very fast (a few seconds or less) file system creation. JFS is faster than XFS but Ext4 takes many, many minutes.&lt;/li>
+&lt;li>XFS formatted disk capacity is greater than Ext3/4 even after removing the reserved blocks from the Ext3/4 file system. JFS formatted capacity is similar to XFS.&lt;/li>
+&lt;/ul>
+&lt;p>On that last point, XFS gains 400GB over Ext4 on a 6TB array but when the
+Ext4 reserved blocks are removed XFS gains 100GB over Ext4.&lt;/p>
+&lt;h2 id="tuning-xfs">Tuning XFS&lt;/h2>
+&lt;p>Most of the performance tuning information I found (at the original time
+of writing in early 2010) is out of date and doesn&amp;rsquo;t reflect the XFS
+defaults in modern Linux kernels.&lt;/p>
+&lt;p>&lt;em>That said, the information on this page is quite old and I no longer
+feel the need to tweak XFS like I once did.&lt;/em>&lt;/p>
+&lt;h3 id="creating-xfs">Creating XFS&lt;/h3>
+&lt;h4 id="xfs-310-and-kernel-2632-or-newer">XFS 3.1.0 and Kernel 2.6.32 or newer&lt;/h4>
+&lt;p>Ubuntu Lucid 10.04 comes with XFS 3.1.0. The defaults used when creating a XFS file
+system using Ubuntu 10.04 are optimal and do not require any tweaking.&lt;/p>
+&lt;h4 id="xfs-302-and-kernel-2631-or-older">XFS 3.0.2 and Kernel 2.6.31 or older&lt;/h4>
+&lt;p>Ubuntu Karmic 9.10 comes with XFS 3.0.2. If you are running an earlier Ubuntu
+release and want to use a tuned XFS root file system you can&amp;rsquo;t simply use the
+graphical partitioning tool from the Ubuntu LiveCD installer. However, it is
+very easy manually create the tuned XFS file systems. Simply boot the Ubuntu
+Live CD, then start a new shell &lt;code>Application -&amp;gt; Accessories -&amp;gt; Terminal&lt;/code>.&lt;/p>
+&lt;p>Now run the following as &lt;code>root&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkfs.xfs -l lazy-count=&lt;span style="color:#f60">1&lt;/span> -L VolumeName &amp;lt;dev&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>lasy-count=1&lt;/code> is a default since XFS 3.1.0 but was recommended by the XFS
+developers before that. &lt;code>lazy-count&lt;/code> is a &lt;code>mkfs&lt;/code> option because it changes the
+on-disk format slightly, and older kernels do not understand this new format.
+Hence &lt;code>mkfs&lt;/code> sets a superblock feature bit to prevent the file system from being
+mounted on kernels that don&amp;rsquo;t understand the slightly different disk format.
+So you must specify &lt;code>lazy-count=0&lt;/code> if you want to disable this feature for older
+kernels which don&amp;rsquo;t support it.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://oss.sgi.com/archives/xfs/2007-12/msg00536.html">http://oss.sgi.com/archives/xfs/2007-12/msg00536.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="forcing-a-tuned-xfs-creation">Forcing a tuned XFS creation&lt;/h3>
+&lt;p>If you are not sure what XFS version you are running, and therefore what the
+defaults might be on your system, you can fully tune XFS using the following.&lt;/p>
+&lt;h4 id="for--1tb-xfs-file-system">For &amp;lt; 1TB XFS file system&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkfs.xfs -l lazy-count=1,version=2,size=128m -i &lt;span style="color:#eedd82">attr&lt;/span>=&lt;span style="color:#f60">2&lt;/span> -d &lt;span style="color:#eedd82">agcount&lt;/span>=&lt;span style="color:#f60">4&lt;/span> -L VolumeName &amp;lt;dev&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="for--1tb-xfs-filesystem">For &amp;gt; 1TB XFS filesystem&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkfs.xfs -l lazy-count=1,version=2,size=128m -i &lt;span style="color:#eedd82">attr&lt;/span>=&lt;span style="color:#f60">2&lt;/span> -d &lt;span style="color:#eedd82">agcount&lt;/span>=&lt;span style="color:#f60">16&lt;/span> -L VolumeName &amp;lt;dev&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once you have created all your tuned XFS file systems start the Ubuntu installer from the
+Live CD. When the disk partitioning section comes round choose: &lt;code>Specify Partitions Manually&lt;/code>&lt;/p>
+&lt;p>Now &lt;code>Change&lt;/code> each XFS file system telling the partitioner where to mount each XFS file system.
+But ensure that you &lt;strong>do not&lt;/strong> tick &lt;code>Format the Partition:&lt;/code>, thereby preserving your tuned XFS
+file systems.&lt;/p>
+&lt;p>When you see this message, just click Continue.&lt;/p>
+&lt;blockquote>
+&lt;p>The file system on /dev/sda1 assigned to /boot has not been marked for
+formatting. Directories containing system files (/etc, /lib, /usr,
+/var, &amp;hellip;) that already exist under any defined mountpoint will be deleted
+during the install.&lt;/p>
+&lt;p>Please ensure that you have backed up any critical data before installing.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="mounting-xfs">Mounting XFS&lt;/h3>
+&lt;p>Further performance optimisations can be gained but specifying some additional mount
+options for your XFS file systems.&lt;/p>
+&lt;p>To manually mount a XFS file system with, optimal mount options, use the following:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mount -t xfs -o noatime,osyncisosync,logbsize=256k,logbufs=&lt;span style="color:#f60">8&lt;/span> &amp;lt;dev&amp;gt; &amp;lt;mtpt&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>/etc/fstab&lt;/code> entries I use look something like this.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>UUID=xxxxxxxxxxx...x &amp;lt;mtpt&amp;gt; xfs noatime,osyncisosync,logbsize=256k,logbufs=8 0 2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>logsbsize' and &lt;/code>logbufs&lt;code>options address the often sited limitation of XFS when handling lots of small files and large number of file deletions. The above assumes you don't require&lt;/code>atime&lt;code>. Not using &lt;/code>atime` provides a significant performance benefit.&lt;/p>
+&lt;h4 id="atime-relatime-and-noatime">atime, relatime and noatime&lt;/h4>
+&lt;p>Every time a file is accessed (read or write) the default for most file systems
+is to append the metadata associated with that file with an updated access time.
+Thus, even read operations incur an overhead associated with a write to the file
+system. This can lead to a significant degradation in performance in some usage
+scenarios. Appending &lt;code>noatime&lt;/code> to the fstab line for &lt;em>any&lt;/em> file system stops
+this action from happening.&lt;/p>
+&lt;p>One may also specify a &lt;code>relatime&lt;/code> option which updates the atime if the previous
+atime is older than the mtime or ctime. In terms of performance, this will not be
+as fast as the &lt;code>noatime&lt;/code> mount option, but is useful if using applications that
+need to know when files were last read (like &lt;code>mutt&lt;/code>).&lt;/p>
+&lt;p>As access time is of little importance in most scenarios, this alteration has
+been widely touted as a fast and easy way to get a performance boost. Even
+Linus Torvalds seems to be a proponent of this optimization&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://kerneltrap.org/node/14148">http://kerneltrap.org/node/14148&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Access time is &lt;em>not&lt;/em> the same as the last-modified time. Disabling access
+time will still enable you to see when files were last modified by a write
+operation.&lt;/p>
+&lt;h4 id="async-and-nobarrier">async and nobarrier&lt;/h4>
+&lt;p>If you really want to go for all out performance you can also provide &lt;code>async&lt;/code> and
+&lt;code>nobarrier&lt;/code> mount options. But you really need to understand and accept the potential
+issues with using these options.&lt;/p>
+&lt;p>Read the following to understand what write barriers are and if you are prepared
+to disable them to gain performance.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://lwn.net/Articles/283161/">http://lwn.net/Articles/283161/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="xfs-userspace-tools">XFS userspace tools&lt;/h2>
+&lt;p>XFS is available as a kernel module in Ubuntu and also available from the Live
+CDs. Once Ubuntu is installed you can install the XFS userspace tools as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install xfsdump xfsprogs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="de-fragmenting-xfs">De-fragmenting XFS&lt;/h3>
+&lt;p>There are two utilities that XFS has to manage this fragmentation.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>xfs_db&lt;/code> XFS Debug Information. Used to examine an XFS file system for problems or gather information about the XFS file system.&lt;/li>
+&lt;li>&lt;code>xfs_fsr&lt;/code> File System Organiser. Improves the organisation of mounted file systems. The reorganisation algorithm operates on one file at a time, compacting or otherwise improving the layout of the file extents (contiguous blocks of file data).&lt;/li>
+&lt;/ul>
+&lt;h4 id="defragment-a-file-system">Defragment a file system&lt;/h4>
+&lt;p>To find the health of a XFS file system use the &lt;code>xfs_db&lt;/code> command to
+gather some information. In the example below &lt;code>/dev/sda1&lt;/code> is mounted as
+&lt;code>/boot&lt;/code> and &lt;code>/dev/sda3&lt;/code> is mounted as &lt;code>/root&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo xfs_db -c frag -r /dev/sda1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>actual 162, ideal 162, fragmentation factor 0.00%
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo xfs_db -c frag -r /dev/sda3
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>actual 2288833, ideal 254504, fragmentation factor 88.88%
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The closer the fragmentation factor is to 0% the better. Unsurprisingly
+&lt;code>/boot&lt;/code> is not fragmented. However &lt;code>/root&lt;/code> is very fragmented.&lt;/p>
+&lt;p>Defragmenting XFS file systems can be done on a live running system,
+but it is a good idea to schedule this for a time where the partition
+will be used less.&lt;/p>
+&lt;p>The file system reorganizer for XFS is &lt;code>xfs_fsr&lt;/code>. Typically, I instruct
+&lt;code>xfs_fsr&lt;/code> to reorganise &lt;code>/dev/sda3&lt;/code> with a timeout (-t) of 6hrs (60 * 60 * 6 = 21600)
+which is specified in seconds. But for the purposes of this example I used a timeout of 15 mins.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo xfs_fsr -t &lt;span style="color:#f60">300&lt;/span> /dev/sda3 -v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The output will look something like this.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>/ start inode=0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ino=145565
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>extents before:2 after:1 DONE ino=145565
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ino=145662
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>extents before:2 after:1 DONE ino=145662
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ino=600148
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>extents before:2 after:1 DONE ino=600148
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ino=1127295
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>extents before:82794 after:1 DONE ino=1127295
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ino=1127243
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>extents before:2 after:1 DONE ino=1127243
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ino=1382852
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>extents before:50869 after:1 DONE ino=1382852
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ino=1422636
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>When the defrag is finished check how well the file system reorganising was.&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo xfs_db -c frag -r /dev/sda3
+actual 2155648, ideal 254512, fragmentation factor 88.19%
+&lt;/code>&lt;/pre>&lt;p>As you can see defragmenting for 15 mins doesn&amp;rsquo;t improve things greatly, which
+is why &lt;code>xfs_fsr&lt;/code> needs to be run for several hours or more.&lt;/p>
+&lt;p>Manually defragmenting the file system is simple enough, but a better solution
+would be to schedule a cron job to run periodically.&lt;/p>
+&lt;h4 id="defragment-a-file">Defragment a file&lt;/h4>
+&lt;p>It is also possible to de-fragment a single file. To determine if a file is
+in need of defragmenting run the following&amp;hellip;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>xfs_bmap -v /srv/A320/PGQAR.DAT | wc -l
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will output a number which showing the number of extents the file is using.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>95280
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This number should be close to 1. So in the example above, I have a very fragmented file.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo xfs_fsr -v /srv/A320/PGQAR.DAT
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will output something like the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/srv/A320/PGQAR.DAT
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>extents before:95278 after:1 DONE /srv/A320/PGQAR.DAT
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The file is now defragmented. I use the method above to target defragmentation where I
+know files reside that are most likely to be fragmented, rather than defragmenting the
+whole file system.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;h3 id="xfs-references">XFS References&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://www.xfs.org/index.php/Main_Page">http://www.xfs.org/index.php/Main_Page&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://en.wikipedia.org/wiki/XFS">http://en.wikipedia.org/wiki/XFS&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://oss.sgi.com/projects/xfs/papers/hellwig.pdf">http://oss.sgi.com/projects/xfs/papers/hellwig.pdf&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.ibm.com/developerworks/linux/library/l-fs9.html">http://www.ibm.com/developerworks/linux/library/l-fs9.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.ibm.com/developerworks/linux/library/l-fs10.html">http://www.ibm.com/developerworks/linux/library/l-fs10.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.mythtv.org/wiki/XFS_Filesystem">http://www.mythtv.org/wiki/XFS_Filesystem&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.thushanfernando.com/index.php/2009/01/25/maintaining-your-xfs-with-xfs-fsr/">http://www.thushanfernando.com/index.php/2009/01/25/maintaining-your-xfs-with-xfs-fsr/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.linux.com/archive/feature/141404">http://www.linux.com/archive/feature/141404&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="performance-tuning-xfs-references">Performance Tuning XFS References&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://everything2.com/index.pl?node_id=1479435">http://everything2.com/index.pl?node_id=1479435&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.opensubscriber.com/message/xfs@oss.sgi.com/8198329.html">http://www.opensubscriber.com/message/xfs@oss.sgi.com/8198329.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://ondrejcertik.blogspot.com/2008/02/xfs-is-20x-slower-than-ext3-with.html">http://ondrejcertik.blogspot.com/2008/02/xfs-is-20x-slower-than-ext3-with.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://archives.free.net.ph/message/20090825.155236.abd842ef.en.html">http://archives.free.net.ph/message/20090825.155236.abd842ef.en.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.mythtv.org/wiki/Optimizing_Performance#XFS-Specific_Tips">http://www.mythtv.org/wiki/Optimizing_Performance#XFS-Specific_Tips&lt;/a>&lt;/li>
+&lt;/ul></description><summary>In which I dispel some myths about XFS and fanboi a little</summary></item></channel></rss>

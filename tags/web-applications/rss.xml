@@ -1,1 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web Applications on Wimpy's World</title><link>https://wimpysworld.com/tags/web-applications/</link><description>Recent content in Web Applications on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 17 Oct 2012 13:11:56 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/web-applications/rss.xml" rel="self" type="application/rss+xml"/><item><title>draw.io - Draw diagrams online, free</title><link>https://wimpysworld.com/posts/drawio-draw-diagrams-online-free/</link><pubDate>Wed, 17 Oct 2012 13:11:56 +0000</pubDate><guid>https://wimpysworld.com/posts/drawio-draw-diagrams-online-free/</guid><description>A web based data flow diagram application</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web Applications on Wimpy's World</title><link>https://wimpysworld.com/tags/web-applications/</link><description>Recent content in Web Applications on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 17 Oct 2012 13:11:56 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/web-applications/rss.xml" rel="self" type="application/rss+xml"/><item><title>draw.io - Draw diagrams online, free</title><link>https://wimpysworld.com/posts/drawio-draw-diagrams-online-free/</link><pubDate>Wed, 17 Oct 2012 13:11:56 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/drawio-draw-diagrams-online-free/</guid><description>&lt;p>Yesterday I needed to create a data flow diagram for one of our
+technology partners at work. They are presenting to the &lt;a href="http://www.faa.gov/">FAA&lt;/a>
+and need to explain how we (&lt;a href="http://www.flightdataservices.com">Flight Data Services&lt;/a>)
+can replay the data from tens of thousands of flights in extremely short order.&lt;/p>
+&lt;p>Anyway, I went looking for a good tool to draw the diagram. I&amp;rsquo;ve
+tried several in the past and never really been satisfied. I found
+&lt;a href="http://www.draw.io/about.html">draw.io&lt;/a> and it is really good.
+This is how they describe it.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="http://www.draw.io/">draw.io&lt;/a> is an online diagramming application
+and github project. It features the full range of visual configuration
+you expect, as well as web application features such as a full range of
+export options, a large collection of icons, real-time collaboration
+and embedded widget sharing.&lt;/p>
+&lt;/blockquote>
+&lt;p>The shape library is extensive and pretty consistent. I was able
+to export the diagram in the formats I wanted. Overall, it&amp;rsquo;s not
+half bad and completely free.&lt;/p></description><summary>A web based data flow diagram application</summary></item></channel></rss>

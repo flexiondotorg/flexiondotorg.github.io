@@ -1,1 +1,141 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wine on Wimpy's World</title><link>https://wimpysworld.com/tags/wine/</link><description>Recent content in wine on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Thu, 15 Aug 2013 15:42:47 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/wine/rss.xml" rel="self" type="application/rss+xml"/><item><title>SketchUp Make on Arch Linux</title><link>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</link><pubDate>Thu, 15 Aug 2013 15:42:47 +0000</pubDate><guid>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</guid><description>Install SketchUp Make 2013 on Arch Linux with Wine 1.7</description></item><item><title>Microsoft Office 2010 on Arch Linux and Ubuntu</title><link>https://wimpysworld.com/posts/microsoft-office-2010-on-arch-linux-and-ubuntu/</link><pubDate>Tue, 29 Jan 2013 16:16:47 +0000</pubDate><guid>https://wimpysworld.com/posts/microsoft-office-2010-on-arch-linux-and-ubuntu/</guid><description>Install Microsoft Office 2010 on Arch Linux and Ubuntu</description></item><item><title>Netflix for ArchLinux</title><link>https://wimpysworld.com/posts/netflix-for-archlinux/</link><pubDate>Thu, 22 Nov 2012 22:14:47 +0000</pubDate><guid>https://wimpysworld.com/posts/netflix-for-archlinux/</guid><description>Netflix is available for ArchLinux</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wine on Wimpy's World</title><link>https://wimpysworld.com/tags/wine/</link><description>Recent content in wine on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 15 Aug 2013 15:42:47 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/wine/rss.xml" rel="self" type="application/rss+xml"/><item><title>SketchUp Make on Arch Linux</title><link>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</link><pubDate>Thu, 15 Aug 2013 15:42:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/sketchup-make-on-arch-linux/</guid><description>&lt;p>I use &lt;a href="http://www.sketchup.com">SketchUp&lt;/a> at work to manipulate models for use
+in &lt;a href="http://earth.google.com">Google Earth&lt;/a>. Here is how I got SketchUp Make
+2013 installed and working on &lt;a href="http://www.archlinux.org">Arch Linux&lt;/a> under
+&lt;a href="http://www.winehq.com">Wine&lt;/a> 1.7.&lt;/p>
+&lt;h1 id="wine-for-arch-linux">Wine for Arch Linux&lt;/h1>
+&lt;p>Install Wine on Arch Linux as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed icoutils libwbclient libxslt lib32-mpg123 p11-kit lib32-p11-kit samba wine winetricks wine-mono wine_gecko
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm ttf-ms-fonts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For 64-bit also install the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm lib32-libwbclient lib32-libxslt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="installing-sketchup-make">Installing SketchUp Make&lt;/h1>
+&lt;p>Once Wine is installed download SketchUp Make 2013.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.sketchup.com/download">http://www.sketchup.com/download&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Create a clean wine prefix.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WINEPREFIX&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">/.sketchup&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WINEARCH&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;win32&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wineboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>corefonts&lt;/code> using &lt;code>winetricks&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>winetricks corefonts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the SketchUp Make setup.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wine SketchUpWEN.exe
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Follow the installation wizard, I just went with the defaults.&lt;/p>
+&lt;p>That&amp;rsquo;s it. SketchUp is installed and should be associated with the appropriate
+file types.&lt;/p>
+&lt;h2 id="video-corruption">Video Corruption&lt;/h2>
+&lt;p>My workstation has a Radeon 5000 series graphics card and I use the Open Source
+&lt;code>radeon&lt;/code> driver. I don&amp;rsquo;t know if this problem is specific to my hardware/drivers
+but SketchUp will eventually (sometimes immediately) encounter video corruption.
+Once that happens I can&amp;rsquo;t see or manipluate the models.&lt;/p>
+&lt;p>The solution that works for me is:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>env &lt;span style="color:#eedd82">WINEPREFIX&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">/.sketchup&amp;#34;&lt;/span> &lt;span style="color:#eedd82">LIBGL_ALWAYS_SOFTWARE&lt;/span>=&lt;span style="color:#f60">1&lt;/span> &lt;span style="color:#eedd82">vblank_mode&lt;/span>=&lt;span style="color:#f60">0&lt;/span> wine &lt;span style="color:#87ceeb">&amp;#34;C:\Program Files\SketchUp\SketchUp 2013\SketchUp.exe&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If this also works for you then &lt;code>SketchUp.desktop&lt;/code> can be modified to persist
+these settings.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nano ~/.local/share/applications/wine/Programs/SketchUp&lt;span style="color:#87ceeb">\ &lt;/span>2013/SketchUp.desktop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Replace the contents with what follows but change &lt;code>USER&lt;/code> with your username.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Desktop Entry]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Name=&lt;span style="color:#87ceeb">SketchUp&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Exec=&lt;span style="color:#87ceeb">env WINEPREFIX=&amp;#34;/home/USER/.sketchup&amp;#34; LIBGL_ALWAYS_SOFTWARE=1 vblank_mode=0 wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/USER/.sketchup/dosdevices/c:/users/USER/Start\\ Menu/Programs/SketchUp\\ 2013/SketchUp.lnk&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Type=&lt;span style="color:#87ceeb">Application&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>StartupNotify=&lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Icon=&lt;span style="color:#87ceeb">1871_SketchUpIcon.0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="uninstalling-sketchup-make">Uninstalling SketchUp Make&lt;/h2>
+&lt;p>Should you ever need to, you can uninstall SketchUp Make as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rm -rfv &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/.sketchup/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rfv ~/.local/share/applications/wine/Programs/SketchUp&lt;span style="color:#87ceeb">\ &lt;/span>2013/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://appdb.winehq.org/objectManager.php?sClass=version&amp;amp;iId=28620">http://appdb.winehq.org/objectManager.php?sClass=version&amp;amp;iId=28620&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Install SketchUp Make 2013 on Arch Linux with Wine 1.7</summary></item><item><title>Microsoft Office 2010 on Arch Linux and Ubuntu</title><link>https://wimpysworld.com/posts/microsoft-office-2010-on-arch-linux-and-ubuntu/</link><pubDate>Tue, 29 Jan 2013 16:16:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/microsoft-office-2010-on-arch-linux-and-ubuntu/</guid><description>&lt;p>We have a mix of Linux and Windows users at work. My department use Linux
+and the rest of the business use Windows. We been running a mixture of
+&lt;a href="http://www.libreoffice.org/">LibreOffice&lt;/a> and &lt;a href="http://office.microsoft.com/en-GB">Microsoft Office&lt;/a>,
+which works pretty well until you start trying to collaborate, then it gets
+messy pretty quickly.&lt;/p>
+&lt;p>So, it was decided at the end of 2012 to migrate everyone, including the
+Linux users, to Microsoft Office 2010.&lt;/p>
+&lt;p>What follows is an installation guide for &lt;a href="http://www.winehq.org/">Wine&lt;/a> and
+the &lt;a href="http://office.microsoft.com/en-gb/try/">60 day trial version of Office Home and Business 2010&lt;/a>
+on Arch Linux and Ubuntu. Most of this information was sourced from the Wine AppDB&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://appdb.winehq.org/objectManager.php?sClass=version&amp;amp;iId=17336">http://appdb.winehq.org/objectManager.php?sClass=version&amp;amp;iId=17336&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="wine-for-ubuntu-1204-lts-or-better">Wine for Ubuntu 12.04 LTS (or better)&lt;/h1>
+&lt;p>Install Wine on Ubuntu as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:ubuntu-wine/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install ttf-mscorefonts-installer samba wine1.5 wine-gecko1.8 wine-mono
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For 64-bit also install the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install ia32-libs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="wine-for-arch-linux">Wine for Arch Linux&lt;/h1>
+&lt;div class="alert alert-info">&lt;strong>Update&lt;/strong> I updated this section on August 8th 2013 to reflect recent changes in Arch Linux&lt;/div>
+&lt;p>Install Wine on Arch Linux as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -S --needed icoutils libwbclient libxslt lib32-mpg123 p11-kit lib32-p11-kit samba wine winetricks wine-mono wine_gecko
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm ttf-ms-fonts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For 64-bit also install the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo packer -S --noedit --noconfirm lib32-libwbclient lib32-libxslt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="installing-office-2010">Installing Office 2010&lt;/h1>
+&lt;p>Once Wine is installed, installing Office 2010 is the same for Arch Linux and Ubuntu.&lt;/p>
+&lt;p>Create a clean wine prefix.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WINEPREFIX&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">/.msoffice2010&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>export &lt;span style="color:#eedd82">WINEARCH&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;win32&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>winecfg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Click the &lt;code>Libraries&lt;/code> tab, select &lt;code>riched20&lt;/code> and click &lt;code>Add&lt;/code>. The default entry
+should read &lt;code>riched20 (native, builtin)&lt;/code>. Click &lt;code>Apply&lt;/code>, then click &lt;code>OK&lt;/code>. This will
+ensure that PowerPoint starts and selection boxes display correctly.&lt;/p>
+&lt;p>Install &lt;code>libxml6&lt;/code> and &lt;code>corefonts&lt;/code> with &lt;code>winetricks&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>winetricks msxml6 corefonts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the Office 2010 setup. In the example below &lt;code>X17-75058.exe&lt;/code> is the name of the
+60 day trial version of Office Home and Business 2010 that I downloaded.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wine X17-75058.exe
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Follow the installation wizard, we are only interested in running the essentials,
+Word, Excel and PowerPoint. This is what I selected during the install.&lt;/p>
+&lt;ul>
+&lt;li>Enter your serial number.&lt;/li>
+&lt;li>Leave ticked &lt;code>Attempt to automatically activate my product online.&lt;/code>&lt;/li>
+&lt;li>Click &lt;code>Continue&lt;/code>&lt;/li>
+&lt;li>Tick &lt;code>I accept the terms of this agreement&lt;/code>&lt;/li>
+&lt;li>Click &lt;code>Continue&lt;/code>&lt;/li>
+&lt;li>Click &lt;code>Customise&lt;/code>
+&lt;ul>
+&lt;li>Microsoft Access (Trial) [Not Available]&lt;/li>
+&lt;li>Microsoft Excel [Run all from My Computer]&lt;/li>
+&lt;li>Microsoft OneNote [Not Available]&lt;/li>
+&lt;li>Microsoft Outlook [Not Available]&lt;/li>
+&lt;li>Microsoft PowerPoint [Run all from My Computer]&lt;/li>
+&lt;li>Microsoft Publisher (Trial) [Not Available]&lt;/li>
+&lt;li>Microsoft Visio Viewer [Run from My Computer]&lt;/li>
+&lt;li>Microsoft Word [Run all from My Computer]&lt;/li>
+&lt;li>Office Shared Features [Defaults]&lt;/li>
+&lt;li>Office Tools [Defaults]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Click &lt;code>Instal Now&lt;/code>.&lt;/li>
+&lt;li>Click &lt;code>Close&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>That&amp;rsquo;s it. Office 2010 is installed and should be associated with the appropriate
+file types.&lt;/p>
+&lt;h2 id="some-issues">Some Issues&lt;/h2>
+&lt;p>Here are some of the issues we noticed running Office 2010 under Wine.&lt;/p>
+&lt;ul>
+&lt;li>Always install Office 2010 into it&amp;rsquo;s own &lt;code>WINEPREFIX&lt;/code>. You are less likely to run into problem that way.&lt;/li>
+&lt;li>Online updates do not work. Fortunately, the trial installer has SP1 integrated.&lt;/li>
+&lt;li>If you purchase Office 2010 licenses you can still use the trial installer with your purchased license key(s).&lt;/li>
+&lt;li>We did test a trial of &lt;a href="http://www.codeweavers.com/">CrossOver&lt;/a>. However, it wouldn&amp;rsquo;t activate Office 2010 on Arch Linux but did activate on Ubuntu.&lt;/li>
+&lt;li>Files saved to &lt;code>cifs&lt;/code> mounts are set read-only. This might be a Wine issue or due to the unusual way we have our file server configured, we are still investigating.&lt;/li>
+&lt;/ul>
+&lt;h2 id="uninstalling-office-2010">Uninstalling Office 2010&lt;/h2>
+&lt;p>Should you ever need to, you can uninstall Office 2010 as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rm -rfv &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">HOME&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>/.msoffice2010/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rfv ~/.local/share/applications/wine-extension-*
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rfv ~/.local/share/applications/wine/Programs/Microsoft&lt;span style="color:#87ceeb">\ &lt;/span>Office/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description><summary>Install Microsoft Office 2010 on Arch Linux and Ubuntu</summary></item><item><title>Netflix for ArchLinux</title><link>https://wimpysworld.com/posts/netflix-for-archlinux/</link><pubDate>Thu, 22 Nov 2012 22:14:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/netflix-for-archlinux/</guid><description>&lt;p>Something wonderful has happened! &lt;a href="http://demizerone.com/">Jesus Alvarez&lt;/a> has
+created pre-compiled packages for &lt;code>netflix-desktop&lt;/code> for Arch Linux.&lt;/p>
+&lt;p>There is no need for me to repeat the installation instructions as they are
+clearly documented on the page below.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://demizerone.com/archnetflix/">Arch Netflix - Netflix on the desktop through WINE&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>The source code for both of the packages can be found at &lt;a href="https://github.com/demizer/archnetflix">archnetflix-github&lt;/a>.&lt;/p>
+&lt;p>For reporting problems, please see the AUR page at &lt;a href="https://aur.archlinux.org/packages/netflix-desktop">netflix-desktop-aur&lt;/a> or the &lt;a href="https://bbs.archlinux.org/viewtopic.php?pid=1196370">announcement forum posting&lt;/a>.&lt;/p></description><summary>Netflix is available for ArchLinux</summary></item></channel></rss>

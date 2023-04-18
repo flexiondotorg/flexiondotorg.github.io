@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dpkg on Wimpy's World</title><link>https://wimpysworld.com/tags/dpkg/</link><description>Recent content in dpkg on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/dpkg/rss.xml" rel="self" type="application/rss+xml"/><item><title>deb-get</title><link>https://wimpysworld.com/projects/deb-get/</link><pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/deb-get/</guid><description>apt-get functionality for .debs published in GitHub release or 3rd party repositories</description></item><item><title>Debian</title><link>https://wimpysworld.com/projects/debian/</link><pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/debian/</guid><description>Package maintainer for (mostly) MATE Desktop in Debian and Ubuntu</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dpkg on Wimpy's World</title><link>https://wimpysworld.com/tags/dpkg/</link><description>Recent content in dpkg on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/dpkg/rss.xml" rel="self" type="application/rss+xml"/><item><title>deb-get</title><link>https://wimpysworld.com/projects/deb-get/</link><pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/deb-get/</guid><description>&lt;p>&lt;a href="https://github.com/wimpysworld/deb-get">deb-get&lt;/a> makes it easy to install and
+update .debs published in 3rd party apt repositories or made available via
+direct download on websites or GitHub release pages.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://github.com/wimpysworld/deb-get">deb-get&lt;/a>&lt;/li>
+&lt;li>Date: April 2022 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>apt-get functionality for .debs published in GitHub release or 3rd party repositories</summary></item><item><title>Debian</title><link>https://wimpysworld.com/projects/debian/</link><pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/debian/</guid><description>&lt;p>Debian is a Unix-like computer operating system and a Linux distribution that is
+composed entirely of free and open-source software, most of which is under the
+GNU General Public License, and packaged by a group of individuals known as the
+Debian Project.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://debian.org">Debian Project&lt;/a>&lt;/li>
+&lt;li>Date: October 2014 - date&lt;/li>
+&lt;li>Role: Package maintainer&lt;/li>
+&lt;/ul></description><summary>Package maintainer for (mostly) MATE Desktop in Debian and Ubuntu</summary></item></channel></rss>

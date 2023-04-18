@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pico on Wimpy's World</title><link>https://wimpysworld.com/tags/pico/</link><description>Recent content in pico on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 22 Jan 2013 15:25:47 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/pico/rss.xml" rel="self" type="application/rss+xml"/><item><title>The nano text editor</title><link>https://wimpysworld.com/posts/the-nano-text-editor/</link><pubDate>Tue, 22 Jan 2013 15:25:47 +0000</pubDate><guid>https://wimpysworld.com/posts/the-nano-text-editor/</guid><description>Some quality of life improvements for nano text editor</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pico on Wimpy's World</title><link>https://wimpysworld.com/tags/pico/</link><description>Recent content in pico on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 22 Jan 2013 15:25:47 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/pico/rss.xml" rel="self" type="application/rss+xml"/><item><title>The nano text editor</title><link>https://wimpysworld.com/posts/the-nano-text-editor/</link><pubDate>Tue, 22 Jan 2013 15:25:47 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/the-nano-text-editor/</guid><description>&lt;p>I use the &lt;a href="http://www.nano-editor.org/">nano&lt;/a> text editor in preference to
+&lt;a href="http://www.vim.org/">vim&lt;/a> and have done for years. This is because we used
+&lt;a href="https://en.wikipedia.org/wiki/Pine_(email_client)">Pine&lt;/a> for email at
+university and my first job, the Pico text editor was used to compose mail
+messages. Due to the binary only distribution of &lt;code>pico&lt;/code>, &lt;code>nano&lt;/code> was created as
+an free software alternative. And that is why I use &lt;code>nano&lt;/code>.&lt;/p>
+&lt;p>Since I &lt;a href="https://wimpysworld.com/posts/migrating-wordpress-to-nikola/">migrated my blog to Nikola&lt;/a>
+I&amp;rsquo;m using &lt;code>nano&lt;/code> more frequently as I typically write my blog posts on a remote
+shell, so I thought I&amp;rsquo;d spend some time to tweak &lt;code>nano&lt;/code> a little.&lt;/p>
+&lt;h2 id="keybindings">Keybindings&lt;/h2>
+&lt;p>I refreshed my memory of some of the keyboard shortcuts available in &lt;code>nano&lt;/code> to
+be a little more efficient.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://mintaka.sdsu.edu/reu/nano.html">http://mintaka.sdsu.edu/reu/nano.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.tuxradar.com/content/text-editing-nano-made-easy">http://www.tuxradar.com/content/text-editing-nano-made-easy&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.cheatography.com/davechild/content/nano-shortcuts/">http://www.cheatography.com/davechild/content/nano-shortcuts/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="syntax-highlighting">Syntax Highlighting&lt;/h2>
+&lt;p>Syntax Highlighting is the killer feature for &lt;code>nano&lt;/code> that I&amp;rsquo;ve never bothered to
+configured in the past. I based my configuration one those provided by
+&lt;a href="https://github.com/craigbarnes">Craig Barnes&lt;/a>. He uses mixins to ensure a
+consistent colour theme for all the language highlighters. I don&amp;rsquo;t use his
+custom key bindings however, it gets confusing when connecting to different
+hosts that have a default &lt;code>nano&lt;/code> configuration.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/craigbarnes/nanorc">https://github.com/craigbarnes/nanorc&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Some quality of life improvements for nano text editor</summary></item></channel></rss>

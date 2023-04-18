@@ -1,1 +1,116 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MP3 on Wimpy's World</title><link>https://wimpysworld.com/tags/mp3/</link><description>Recent content in MP3 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 16 Dec 2009 22:30:48 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/mp3/rss.xml" rel="self" type="application/rss+xml"/><item><title>Amazon Loves Linux Music Lovers</title><link>https://wimpysworld.com/posts/amazon-loves-linux-music-lovers/</link><pubDate>Wed, 16 Dec 2009 22:30:48 +0000</pubDate><guid>https://wimpysworld.com/posts/amazon-loves-linux-music-lovers/</guid><description>Amazon treats Linux users like 1st class citizens</description></item><item><title>MP3Gainer - Apply ReplayGain to your entire music library</title><link>https://wimpysworld.com/posts/mp3gainer-apply-replaygain-to-your-entire-music-library/</link><pubDate>Fri, 14 Aug 2009 15:25:45 +0000</pubDate><guid>https://wimpysworld.com/posts/mp3gainer-apply-replaygain-to-your-entire-music-library/</guid><description>Volume normalise an entire MP3 library the right way</description></item><item><title>Mediatomb 0.12 - Streaming audio and video around the house</title><link>https://wimpysworld.com/posts/mediatomb-0.12-streaming-audio-and-video-around-the-house/</link><pubDate>Sat, 07 Feb 2009 16:23:39 +0000</pubDate><guid>https://wimpysworld.com/posts/mediatomb-0.12-streaming-audio-and-video-around-the-house/</guid><description>In home streaming via UPnP with Mediatomb</description></item><item><title>Cheap and Cheerful MP3 Player</title><link>https://wimpysworld.com/posts/cheap-and-cheerful-mp3-player/</link><pubDate>Fri, 10 Feb 2006 13:00:10 +0000</pubDate><guid>https://wimpysworld.com/posts/cheap-and-cheerful-mp3-player/</guid><description>Cheap as chips MP3 player upgrade</description></item><item><title>Pocket Entertainment</title><link>https://wimpysworld.com/posts/pocket-entertainment/</link><pubDate>Mon, 22 Aug 2005 09:36:08 +0000</pubDate><guid>https://wimpysworld.com/posts/pocket-entertainment/</guid><description>Using an iPAQ 4150 PocketPC for games &amp;amp; music</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MP3 on Wimpy's World</title><link>https://wimpysworld.com/tags/mp3/</link><description>Recent content in MP3 on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 16 Dec 2009 22:30:48 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/mp3/rss.xml" rel="self" type="application/rss+xml"/><item><title>Amazon Loves Linux Music Lovers</title><link>https://wimpysworld.com/posts/amazon-loves-linux-music-lovers/</link><pubDate>Wed, 16 Dec 2009 22:30:48 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/amazon-loves-linux-music-lovers/</guid><description>&lt;p>I&amp;rsquo;ve no idea when Amazon.co.uk launched their MP3 store and I&amp;rsquo;ve no idea when
+they released their Linux client for downloading the MP3s you purchased. I
+don&amp;rsquo;t care, I just want to say I&amp;rsquo;m really impressed Amazon have considered us
+Linux users. Well done Amazon!&lt;/p>
+&lt;p>Not only that but the MP3s are DRM free, encoded using variable bit rates aiming
+at an average of 256 kilobits per second (kbps), album cover art is included with
+each song and the tracks are typically cheaper than iTunes. Well done again.&lt;/p>
+&lt;p>Doubtless some would want an Open Source client and unencumbered formats such as
+Ogg and FLAC, but I&amp;rsquo;m pretty happy with what Amazon have on offer so long as it
+works. Which it does.&lt;/p>
+&lt;p>However, the Linux MP3 downloader client is 32-bit only. Not so good, but
+it can be successfully installed in 64-bit Ubuntu. Here&amp;rsquo;s how I did in on
+Ubuntu Jaunty 9.04 64-bit.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -c http://frozenfox.freehostia.com/cappy/getlibs-all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dpkg -i getlibs-all.deb    
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget &lt;span style="color:#87ceeb">&amp;#34;http://www.amazon.co.uk/gp/dmusic/help/amd-installer-redirect.html/ref=dm_amd_linux_ubuntu?ie=UTF8&amp;amp;forceos=LINUX&amp;amp;callingPage=%2Fgp%2Fdmusic%2Fhelp%2Famd.html&amp;amp;linux_Ubuntu.x=1&amp;#34;&lt;/span> -O amazonmp3.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dpkg -i --force-architecture amazonmp3.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>getlibs /usr/bin/amazonmp3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description><summary>Amazon treats Linux users like 1st class citizens</summary></item><item><title>MP3Gainer - Apply ReplayGain to your entire music library</title><link>https://wimpysworld.com/posts/mp3gainer-apply-replaygain-to-your-entire-music-library/</link><pubDate>Fri, 14 Aug 2009 15:25:45 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/mp3gainer-apply-replaygain-to-your-entire-music-library/</guid><description>&lt;p>Work has been crazy. We&amp;rsquo;re moving house. Hence, not much time for geeky stuff
+recently. I&amp;rsquo;ve been putting this off for ages, I need to &amp;ldquo;normalise&amp;rdquo; the
+volume of my MP3 music music library. Not all CDs sound equally loud. Whilst
+different musical moods require that some tracks should sound louder than
+others, the loudness of a given CD has more to do with the year of issue or
+the whim of the producer than the intended emotional effect. This difference
+carries over when you rip the CD to MP3 and random play through my music
+collection requires constant manual volume adjustment. This has been bugging
+me for a while now, but when it started to bug my wife I knew it was time to
+find a solution. My main concerns with applying some sort of audio
+normalisation were&amp;hellip;.&lt;/p>
+&lt;ul>
+&lt;li>My MP3s should not be irretrievably changed into something I end up hating.&lt;/li>
+&lt;li>The method used should be free of the application used for music playback,
+given that I play my music on iPod Nano, iPod Shuffle, PSP, PS3, Linux desktops,
+TomTom 720T FM streaming and in car MP3 player.&lt;/li>
+&lt;/ul>
+&lt;p>After some research &lt;a href="http://mp3gain.sourceforge.net">mp3gain&lt;/a> seems to be the
+tool for the job which provides an implementation of
+&lt;a href="http://www.replaygain.org/">ReplayGain&lt;/a>. However, as of today my entire CD
+collection is ripped, which is very large, so I needed a way to process my
+whole music collection in an automated fashion. I found some examples of how
+to script this, but there are caveats with the solutions I found. Therefore I
+have created my own script, MP3Gainer, to apply ReplayGain using &lt;code>mp3gain&lt;/code>
+which overcomes these common limitations. MP3Gainer recursively applies
+ReplayGain to a MP3 music collection of any size and directory depth.
+ReplayGain can be applied in &amp;rsquo;track&amp;rsquo; or &amp;lsquo;album&amp;rsquo; mode and if ReplayGain has
+previously been applied it can also be undone. It is important to understand
+that MP3Gainer &amp;lsquo;album&amp;rsquo; mode really is per album, which is what you want. Trust
+me! This script works on Ubuntu, should work on any other Linux/Unix
+flavour and possibly Mac OS X providing you have the required tools installed.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/flexiondotorg/MP3Gainer">MP3Gainer&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Volume normalise an entire MP3 library the right way</summary></item><item><title>Mediatomb 0.12 - Streaming audio and video around the house</title><link>https://wimpysworld.com/posts/mediatomb-0.12-streaming-audio-and-video-around-the-house/</link><pubDate>Sat, 07 Feb 2009 16:23:39 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/mediatomb-0.12-streaming-audio-and-video-around-the-house/</guid><description>&lt;p>&lt;a href="http://mediatomb.cc/">Mediatomb&lt;/a> is an open source (GPL) UPnP MediaServer
+with a nice web user interface, it allows you to stream your digital media
+through your home network and listen to/watch it on a variety of UPnP
+compatible devices, such as the PlayStation in my case.&lt;/p>
+&lt;p>Mediatomb 0.12 is not yet released as final yet but it is certainly stable
+enough for general use, so I spent the last week migrating from Mediatomb 0.11
+to Mediatomb 0.12.&lt;/p>
+&lt;p>I&amp;rsquo;ve recently finished ripping my entire CD collection (344 CDs) to MP3 and I
+am currently ripping my DVD collection (85 done so far) to MP4 with AAC 5.1
+audio. The &amp;lsquo;Music&amp;rsquo; and &amp;lsquo;Video&amp;rsquo; folders in our home directories are mounted via
+NFS. The Mediatomb server uses the same data sources so any playlists or new
+music/videos we might import are immediately reflected in Mediatomb.&lt;/p>
+&lt;p>Our entire CD library is now available at the click of a button, automatically
+organised by genre, artist and date. We have also created some playlists
+in &lt;code>.m3u&lt;/code> or &lt;code>.pls&lt;/code> format.&lt;/p>
+&lt;p>New to Mediatomb 0.12 is the ability to scrobble your music to
+&lt;a href="http://www.last.fm">Last.fm&lt;/a>, this a killer feature for me and why I chose to
+migrate to 0.12 before it goes final.&lt;/p>
+&lt;p>I ripped the CDs using &lt;a href="http://www.burtonini.com/blog/computers/sound-juicer">SoundJuicer&lt;/a>,
+since I can configure it to use &lt;a href="http://lame.cvs.sourceforge.net/viewvc/lame/lame/doc/html/presets.html">LAME presets&lt;/a>.
+I then used the &lt;a href="http://musicbrainz.org/doc/PicardTagger">Music Brainz Picard Tagger&lt;/a> to
+add additional tagging and embed cover art and then applied ReplayGain.&lt;/p>
+&lt;p>Finally my wife and I use &lt;a href="http://banshee-project.org/">Banshee&lt;/a> to manage the
+music library on our computers, including the creation of playlists and syncing
+to our iPods.&lt;/p>
+&lt;p>I am using &lt;a href="http://handbrake.fr/">Handbrake&lt;/a> to rip the DVDs to MP4. I&amp;rsquo;ve created a
+new PS3 compatible profile which is focused on quality, I&amp;rsquo;ll post details
+about that in the future. Mediatomb 0.12 has some experimental features to
+stream video content from .ISO images of DVDs. I&amp;rsquo;ve yet to play with that but
+it sounds very cool. I&amp;rsquo;ve also created a script which queries IMDB to
+categorise our film library by genre and create summary information about
+each film in the library. I&amp;rsquo;ll be posting more about that soon. I haven&amp;rsquo;t
+finalised how we will integrate Photo management with Mediatomb yet, but that
+is that final piece in the puzzle.&lt;/p></description><summary>In home streaming via UPnP with Mediatomb</summary></item><item><title>Cheap and Cheerful MP3 Player</title><link>https://wimpysworld.com/posts/cheap-and-cheerful-mp3-player/</link><pubDate>Fri, 10 Feb 2006 13:00:10 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/cheap-and-cheerful-mp3-player/</guid><description>&lt;p>My six year old MP3 player just isn&amp;rsquo;t up to the job anymore and I have been
+looking for an alternative, on and off, over that last few weeks. Ideally I
+would have liked a portable music player that supported Ogg Vorbis but as my
+home cinema isn&amp;rsquo;t Ogg Vorbis compatible I decided to standardize on MP3. No
+flames please!&lt;/p>
+&lt;p>I have lots of MMC and SD memory cards that I have collected over the years so
+decided get a player which could make use of them. I only need a player for use
+in the gym and while cycling so it doesn&amp;rsquo;t need to be too fancy, with that in
+mind I decided to get the &lt;a href="http://www.amazon.co.uk/Sumvision-Snowfox-XT105-Portable-Playback/dp/B000F9TD1S">Sumvision XT105 MP3 Player&lt;/a>
+which is super cheap and surprisingly good considering the price &lt;code>:-)&lt;/code>&lt;/p>
+&lt;p>Initial impressions are that the manual was obviously translated from Chinese to
+English using Google, the included headphones are not much cop. That said,
+once you plug-in a decent set of head phones the sound reproduction is very good
+and more than good enough for what I want it for and although playlists aren&amp;rsquo;t
+supported playback by folder is. That player is very light and very small, so
+ideal for use in the gym and battery life is around 10-12 hours from a single
+AAA battery. It is also Linux compatible, although I have been using a USB
+card reader to populate my memory cards with MP3s as the XT105 is only USB 1.1
+and therefore a bit slow. I am off to the gym now with some banging tunes.&lt;/p></description><summary>Cheap as chips MP3 player upgrade</summary></item><item><title>Pocket Entertainment</title><link>https://wimpysworld.com/posts/pocket-entertainment/</link><pubDate>Mon, 22 Aug 2005 09:36:08 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/pocket-entertainment/</guid><description>&lt;p>I recently discovered &lt;a href="http://www.scummvm.org/">ScummVM&lt;/a> and have started playing
+&lt;em>Zak McKracken and the Alien Mindbenders&lt;/em> for the first time in years! ScummVM
+allows you to run certain classic graphical point-and-click adventure games,
+provided you already have their data files, allowing you to play them on
+systems for which they were never designed!&lt;/p>
+&lt;p>So, I decided to organise my old adventure games for use with ScummVM so that I
+can enjoy them all again, but this has led to a couple of eBay bids to buy some
+games I am missing. I have used the ScummVM tools to compress as the game data
+files so I can fit the games on my iPAQ 4150. Life is good. I have been thinking
+of getting a new solid state Ogg Vorbis compatible portable music player but
+haven&amp;rsquo;t found one which completely suits my needs. So, my iPAQ 4150 is now
+standing in as my portable music player too. This is thanks too the excellent
+GSPlayer. I have configured my iPAQ 4150 to be a full time entertainment device.&lt;/p>
+&lt;p>I am off to get myself a decent set of head phones today, more on that later&amp;hellip;&lt;/p></description><summary>Using an iPAQ 4150 PocketPC for games &amp;amp; music</summary></item></channel></rss>

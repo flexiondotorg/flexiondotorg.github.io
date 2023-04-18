@@ -1,1 +1,294 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Plex on Wimpy's World</title><link>https://wimpysworld.com/tags/plex/</link><description>Recent content in Plex on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 28 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/plex/rss.xml" rel="self" type="application/rss+xml"/><item><title>Integrating Dropbox photo syncing with Open Media Vault and Plex</title><link>https://wimpysworld.com/posts/integrating-dropbox-photo-syncing-with-open-media-vault-and-plex/</link><pubDate>Sat, 28 Jun 2014 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/integrating-dropbox-photo-syncing-with-open-media-vault-and-plex/</guid><description>Integrating Dropbox on a headless Open Media Vault server.</description></item><item><title>Plex Media Server on Open Media Vault</title><link>https://wimpysworld.com/posts/plex-media-server-on-open-media-vault/</link><pubDate>Tue, 27 Aug 2013 21:11:43 +0000</pubDate><guid>https://wimpysworld.com/posts/plex-media-server-on-open-media-vault/</guid><description>Installing Plex Media Server on Open Media Vault (Squeeze) 6.0</description></item><item><title>Setting up Open Media Vault on the HP MicroServer N54L</title><link>https://wimpysworld.com/posts/setting-up-open-media-vault-on-the-hp-microserver-n54l/</link><pubDate>Wed, 07 Aug 2013 21:21:09 +0000</pubDate><guid>https://wimpysworld.com/posts/setting-up-open-media-vault-on-the-hp-microserver-n54l/</guid><description>Open Media Vault on the HP ProLiant MicroServer G7 N54L</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Plex on Wimpy's World</title><link>https://wimpysworld.com/tags/plex/</link><description>Recent content in Plex on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 28 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/plex/rss.xml" rel="self" type="application/rss+xml"/><item><title>Integrating Dropbox photo syncing with Open Media Vault and Plex</title><link>https://wimpysworld.com/posts/integrating-dropbox-photo-syncing-with-open-media-vault-and-plex/</link><pubDate>Sat, 28 Jun 2014 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/integrating-dropbox-photo-syncing-with-open-media-vault-and-plex/</guid><description>&lt;p>&lt;strong>This how-to was updated for Open Media Vault 2.x and 3.x on 22nd August 2016.&lt;/strong>&lt;/p>
+&lt;p>I&amp;rsquo;ve installed &lt;a href="http://www.openmediavault.org/">Open Media Vault&lt;/a>
+on a &lt;a href="http://www8.hp.com/uk/en/products/proliant-servers/product-detail.html?oid=5336624">HP ProLiant MicroServer G7 N54L&lt;/a>
+and use it as media server for the house. OpenMediaVault (OMV) is a network
+attached storage (NAS) solution based on &lt;a href="http://www.debian.org">Debian&lt;/a> Linux.&lt;/p>
+&lt;p>I use a free Dropbox account to sync photos from mine and my wife&amp;rsquo;s Android
+phones and wanted to automate to import of these photo upload into Plex, which
+is also running on Open Media Vault.&lt;/p>
+&lt;h1 id="installing-dropbox-on-open-media-vault">Installing Dropbox on Open Media Vault&lt;/h1>
+&lt;p>I looked for a Dropbox Plugin for Open Media Vault and found this:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/lordldx/openmediavault-dropbox">https://github.com/lordldx/openmediavault-dropbox&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Sadly, at the time of writing, it is unfinished and I didn&amp;rsquo;t have the time to
+go and learn the Open Media Vault plugin API.&lt;/p>
+&lt;p>The Open Media Vault forum does include a &lt;a href="http://forums.openmediavault.org/viewtopic.php?f=13&amp;amp;t=70">Dropbox HOW-TO&lt;/a>
+which is very similar to how &lt;a href="https://wimpysworld.com/posts/dropbox-is-my-nikola-publish-button/">I&amp;rsquo;ve run Dropbox on headless Linux servers&lt;/a>
+in the past. So, I decided to adapt my existing notes to Open Media Vault.&lt;/p>
+&lt;h2 id="create-a-dropbox-share">Create a Dropbox Share&lt;/h2>
+&lt;p>Create a Dropbox share via the OMV WebUI.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Access Right Management -&amp;gt; Shared Folders&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>I gave my the name &amp;ldquo;Dropbox&amp;rdquo;. I know, very original.&lt;/p>
+&lt;h2 id="installing-dropbox-on-a-headless-server">Installing Dropbox on a headless server&lt;/h2>
+&lt;p>Download and extract the latest Dropbox stable release.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd ~ &amp;amp;&amp;amp; wget -O - &lt;span style="color:#87ceeb">&amp;#34;https://www.dropbox.com/download?plat=lnx.x86_64&amp;#34;&lt;/span> | tar xzf -
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chown -Rv &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">USER&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>: ~/.dropbox-dist
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s ~/.dropbox-dist/dropboxd /usr/local/bin/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run &lt;code>dropboxd&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>~/.dropbox-dist/dropboxd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You should see output like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>This client is not linked to any account... Please visit https://www.dropbox.com/cli_link?host_id=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx to link this machine.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Visit the URL, login with your Dropbox account and link the account. You
+should see the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Client successfully linked, Welcome Web!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>dropboxd&lt;/code> will now create a &lt;code>~/Dropbox&lt;/code> folder and start synchronizing. Stop
+&lt;code>dropboxd&lt;/code> with CTRL+C.&lt;/p>
+&lt;h2 id="symlink-the-dropbox-share">Symlink the Dropbox share&lt;/h2>
+&lt;p>Login to the OMV server as &lt;code>root&lt;/code> and sym-link the Dropbox share you created
+earlier to the Dropbox directory in the root home directory.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mv ~/Dropbox ~/Dropbox-old
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -s /media/&amp;lt;UUID&amp;gt;/Dropbox ~/Dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rsync -a -W --progress ~/Dropbox-old/ ~/Dropbox/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="initd---open-media-vault-2x">init.d - Open Media Vault 2.x&lt;/h3>
+&lt;p>If you are using Open Media Vault 2.x (based on Debian wheezy) the
+you&amp;rsquo;ll need to create an init script.&lt;/p>
+&lt;p>To run Dropbox as daemon with init.d. Create &lt;code>/etc/init.d/dropbox&lt;/code> with the
+following content.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>&lt;span style="color:#0f0">### BEGIN INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Provides: dropbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Start: $local_fs $remote_fs $network $syslog $named&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Stop: $local_fs $remote_fs $network $syslog $named&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Start: 2 3 4 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Stop: 0 1 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># X-Interactive: false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Short-Description: dropbox service&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">### END INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DROPBOX_USERS&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;user_a&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DAEMON&lt;/span>=.dropbox-dist/dropboxd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>start() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Starting dropbox...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>getent passwd &lt;span style="color:#eedd82">$dbuser&lt;/span> | cut -d: -f6&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -x &lt;span style="color:#eedd82">$DAEMON&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOME&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> start-stop-daemon -b -o -c &lt;span style="color:#eedd82">$dbuser&lt;/span> -S -u &lt;span style="color:#eedd82">$dbuser&lt;/span> -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>stop() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Stopping dropbox...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>getent passwd &lt;span style="color:#eedd82">$dbuser&lt;/span> | cut -d: -f6&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon -o -c &lt;span style="color:#eedd82">$dbuser&lt;/span> -K -u &lt;span style="color:#eedd82">$dbuser&lt;/span> -x &lt;span style="color:#eedd82">$HOMEDIR&lt;/span>/&lt;span style="color:#eedd82">$DAEMON&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>status() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">for&lt;/span> dbuser in &lt;span style="color:#eedd82">$DROPBOX_USERS&lt;/span>; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">dbpid&lt;/span>=&lt;span style="color:#87ceeb">`&lt;/span>pgrep -u &lt;span style="color:#eedd82">$dbuser&lt;/span> dropbox&lt;span style="color:#87ceeb">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#eedd82">$dbpid&lt;/span> ] ; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;dropboxd for USER &lt;/span>&lt;span style="color:#eedd82">$dbuser&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;dropboxd for USER &lt;/span>&lt;span style="color:#eedd82">$dbuser&lt;/span>&lt;span style="color:#87ceeb">: running (pid &lt;/span>&lt;span style="color:#eedd82">$dbpid&lt;/span>&lt;span style="color:#87ceeb">)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$1&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart|reload|force-reload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Usage: /etc/init.d/dropbox {start|stop|reload|force-reload|restart|status}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>exit &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the init.d script.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chmod +x /etc/init.d/dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo update-rc.d dropbox defaults
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="starting-and-stopping-the-dropbox-daemon">Starting and Stopping the Dropbox daemon&lt;/h2>
+&lt;p>Use &lt;code>/etc/init.d/dropbox start&lt;/code> to start and &lt;code>/etc/init.d/dropbox stop&lt;/code> to stop.&lt;/p>
+&lt;h3 id="systemd---openmediavault-3x">systemd - OpenMediaVault 3.x&lt;/h3>
+&lt;p>If you are using Open Media Vault 3.x (based on Debian jessie) then
+you&amp;rsquo;ll need to create a systemd unit. Create the systemd service file.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /lib/systemd/system/dropbox.service
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-systemd" data-lang="systemd">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Unit]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Description=&lt;span style="color:#87ceeb">Dropbox&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>After=&lt;span style="color:#87ceeb">local-fs.target network.target&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Service]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Type=&lt;span style="color:#87ceeb">simple&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>WorkingDirectory=&lt;span style="color:#87ceeb">%h/.dropbox-dist&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ExecStart=&lt;span style="color:#87ceeb">/usr/local/bin/dropboxd&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ExecReload=&lt;span style="color:#87ceeb">/bin/kill -HUP $MAINPID&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>KillMode=&lt;span style="color:#87ceeb">process&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Restart=&lt;span style="color:#87ceeb">on-failure&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User=&lt;span style="color:#87ceeb">%I&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[Install]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>WantedBy=&lt;span style="color:#87ceeb">multi-user.target&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable the dropbox service for a given user.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl enable dropbox@user_a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the service.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl start dropbox@user_a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dropbox-client">Dropbox client&lt;/h2>
+&lt;p>It is recommended to download the official Dropbox client to configure
+Dropbox and get its status.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget &lt;span style="color:#87ceeb">&amp;#34;http://www.dropbox.com/download?dl=packages/dropbox.py&amp;#34;&lt;/span> -O dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">755&lt;/span> dropbox
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv dropbox /usr/local/bin/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can check on Dropbox status by running the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dropbox status
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For usage instructions run &lt;code>dropbox help&lt;/code>.&lt;/p>
+&lt;h1 id="photo-importing">Photo importing&lt;/h1>
+&lt;p>So, the reason for doing all this is that I now have a Dropbox instance
+running on my home file server and everyday it runs a script, that I wrote,
+to automatically import new photos into a directory that Plex monitors.
+I&amp;rsquo;ll post details about my photo sorting script, &lt;a href="https://github.com/flexiondotorg/Phort">Phort&lt;/a>,
+at a later date.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.dropboxwiki.com/Text_Based_Linux_Install">http://www.dropboxwiki.com/Text_Based_Linux_Install&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Integrating Dropbox on a headless Open Media Vault server.</summary></item><item><title>Plex Media Server on Open Media Vault</title><link>https://wimpysworld.com/posts/plex-media-server-on-open-media-vault/</link><pubDate>Tue, 27 Aug 2013 21:11:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/plex-media-server-on-open-media-vault/</guid><description>&lt;p>I&amp;rsquo;ve recently started using &lt;a href="http://www.plexapp.com">Plex Media Server&lt;/a> to
+handle most media streaming duties around the house. I run in on
+&lt;a href="http://www.openmediavault.org">Open Media Vault&lt;/a> 0.5.x. At the time of writing
+Open Media Vault is based on &lt;a href="http://www.debian.org">Debian&lt;/a> (Squeeze) 6.0.&lt;/p>
+&lt;h1 id="plex-media-server">Plex Media Server&lt;/h1>
+&lt;p>Anyway, it turns out that installing Plex Media Server on Open Media Vault is
+super simple thanks to the &lt;a href="http://forums.plexapp.com/index.php/topic/51427-plex-media-server-for-debian/">hard work of Christian Svedin&lt;/a>
+who has packaged everything and made it available via an &lt;code>apt&lt;/code> repository.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install curl
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#87ceeb">&amp;#34;deb http://shell.ninthgate.se/packages/debian squeeze main&amp;#34;&lt;/span> | sudo tee -a /etc/apt/sources.list.d/plexmediaserver.list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl http://shell.ninthgate.se/packages/shell-ninthgate-se-keyring.key | sudo apt-key add -
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install plexmediaserver
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The instructions above also work for Debian Wheezy, just change &lt;code>squeeze&lt;/code> to
+&lt;code>wheezy&lt;/code> in &lt;code>/etc/apt/sources.list.d/plexmediaserver.list&lt;/code>.&lt;/p>
+&lt;p>When the install is complete point your browser at Plex/Web, for example:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://plex.example.org:32400/web">http://plex.example.org:32400/web&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Replace &lt;code>plex.example.org&lt;/code> with your Plex Media Server hostname/ip address.&lt;/p>
+&lt;p>If you have PlexPass then head over to the &lt;a href="http://forums.plexapp.com/index.php/topic/48865-debian-package/">Preview Releases for Debian&lt;/a>
+and download and install the latest &lt;code>.deb&lt;/code>.&lt;/p>
+&lt;h1 id="plex-clients">Plex Clients&lt;/h1>
+&lt;p>I use the Plex Client for Android on phone and tablet, a Roku 2 XS in the lounge
+and Roku 2 LT in the bedroom.&lt;/p>
+&lt;p>I&amp;rsquo;ve successfully tested Plex Home Theatre on Ubuntu 12.04 and Raspbmc with
+the PleXBMC plug-in on Raspberry Pi.&lt;/p>
+&lt;h3 id="references">References&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://forums.plexapp.com/index.php/topic/51427-plex-media-server-for-debian/">http://forums.plexapp.com/index.php/topic/51427-plex-media-server-for-debian/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://forums.plexapp.com/index.php/topic/48865-debian-package/">http://forums.plexapp.com/index.php/topic/48865-debian-package/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Installing Plex Media Server on Open Media Vault (Squeeze) 6.0</summary></item><item><title>Setting up Open Media Vault on the HP MicroServer N54L</title><link>https://wimpysworld.com/posts/setting-up-open-media-vault-on-the-hp-microserver-n54l/</link><pubDate>Wed, 07 Aug 2013 21:21:09 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/setting-up-open-media-vault-on-the-hp-microserver-n54l/</guid><description>&lt;p>I&amp;rsquo;ve installed &lt;a href="http://www.openmediavault.org/">Open Media Vault&lt;/a> (OMV)
+on my new &lt;a href="http://www8.hp.com/uk/en/products/proliant-servers/product-detail.html?oid=5336624">HP ProLiant MicroServer G7 N54L&lt;/a>
+to replace my aging, and lackluster, &lt;a href="http://www.readynas.com">ReadyNAS&lt;/a> NV.&lt;/p>
+&lt;p>OpenMediaVault (OMV) is a network attached storage (NAS) solution based on
+&lt;a href="http://www.debian.org">Debian&lt;/a> Linux. At the time of writing OMV 0.5.x is
+based on Debian 6.0 (Squeeze).&lt;/p>
+&lt;p>This blog post is not going to cover the extremely simple OMV installation
+procedure, it assumes OMV 0.5.x is already installed. This post explains
+how to upgrade the kernel, install some addtional plugins and some hackery
+to update &lt;a href="http://www.transmissionbt.com/">Transmission&lt;/a>.&lt;/p>
+&lt;p>This blog post is basically the essential notes I need to recreate my server setup.&lt;/p>
+&lt;h1 id="n54l-custom-bios">N54L Custom BIOS&lt;/h1>
+&lt;p>I&amp;rsquo;ve installed one of the custom BIOS mods for the N54L.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/forums/networking-nas/1521657-hp-n36l-n40l-n54l-microserver-updated-ahci-bios-support.html">HP N36L/N40L/N54L Microserver Updated AHCI BIOS Support&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>I selected the BIOS mod above because the guy who created was an HP engineer and
+this BIOS mod only enables additional features that the N54L can actually support.
+Using this BIOS mod I&amp;rsquo;ve been able to:&lt;/p>
+&lt;ul>
+&lt;li>Enable AHCI for the Optical Disk Drive (ODD) port.&lt;/li>
+&lt;li>Enable AHCI and port multiplier for the the e-SATA port.&lt;/li>
+&lt;li>Make all drives hot-pluggable.&lt;/li>
+&lt;/ul>
+&lt;p>The 250GB hard drive that came with N54L is now relocated in the optical drive day
+and being used as the OS drive, leaving all 4 bays for data.&lt;/p>
+&lt;p>As some point in the future I may want to hook up a 4 bay e-SATA enclosure and this
+BIOS mod makes that possible.&lt;/p>
+&lt;h1 id="open-media-vault">Open Media Vault&lt;/h1>
+&lt;p>Once Open Media Vault is installed, I do the following.&lt;/p>
+&lt;h2 id="enable-ssh">Enable SSH&lt;/h2>
+&lt;p>OMV actually has a really good WebUI that can be used to accomplish most
+update/upgrade tasks but I can&amp;rsquo;t help myself. I must have shell access. From
+the OMV WebUI:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Services -&amp;gt; SSH&lt;/code>
+&lt;ul>
+&lt;li>Put a tick in &lt;code>Enable&lt;/code> and click the &lt;code>OK&lt;/code> button.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="shell-tools">Shell Tools&lt;/h2>
+&lt;p>Things crave when at the a shell.&lt;/p>
+&lt;p>Login to your OMV server as &lt;code>root&lt;/code> using SSH and then do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install less lsb-release rsync screen tree
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="omv-plugins">OMV Plugins&lt;/h1>
+&lt;p>OMV has a number of built-in plugins and a &lt;a href="http://omv-plugins.org">third party repository of plugins&lt;/a>.&lt;/p>
+&lt;h2 id="built-in-plugins">Built-in Plugins&lt;/h2>
+&lt;p>Update the built-in plugins.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>System -&amp;gt; Plugins&lt;/code>
+&lt;ul>
+&lt;li>Click the &lt;code>Check&lt;/code> icon.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="logical-volume-manager">Logical Volume Manager&lt;/h3>
+&lt;p>I use LVM. There, I said it. Enable the LVM2 plugin as follows from the OMV WebUI.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>System -&amp;gt; Plugins&lt;/code>
+&lt;ul>
+&lt;li>Highlight the &lt;code>openmediavault-lvm2&lt;/code> plugin.&lt;/li>
+&lt;li>Click the &lt;code>Install&lt;/code> icon and then &lt;code>Yes&lt;/code>.&lt;/li>
+&lt;li>When the install is &lt;code>Done ...&lt;/code>, click &lt;code>Close&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="3rd-party-omv-plugins">3rd Party OMV-Plugins&lt;/h2>
+&lt;p>Follow the instructions on the following page to enable the OMV-Extras plugin repository.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://omv-extras.org/simple/index.php?id=how-to-install-omv-extras-plugin">http://omv-extras.org/simple/index.php?id=how-to-install-omv-extras-plugin&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="backports-32-kernel">Backports 3.2 Kernel&lt;/h3>
+&lt;p>I updated the Kernel to 3.2 because it better supports the N54L hardware, in
+particular the embedded graphics controller. The Linux 3.2 kernel can be
+installed via OMV-Extras.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>System -&amp;gt; OMV-Extras.org -&amp;gt; Install Backports 3.2 kernel&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="plex-media-server">Plex Media Server&lt;/h3>
+&lt;p>Plex Media Server is available as a plugin once the OMV-Extras plugin
+repository is enabled. Plex is managed via the OMV WebUI.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Services -&amp;gt; Plex&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="transmission">Transmission&lt;/h3>
+&lt;p>Transmission is available as a plugin once the OMV-Extras plugin repository is
+enabled. Transmission is managed via the OMV WebUI.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Services -&amp;gt; BitTorrent -&amp;gt; Server&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>It&amp;rsquo;s all very straight forward. I use the following block list.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://list.iblocklist.com/?list=bt_level1&amp;amp;fileformat=p2p&amp;amp;archiveformat=gz">http://list.iblocklist.com/?list=bt_level1&amp;amp;fileformat=p2p&amp;amp;archiveformat=gz&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>That pretty much covers the stuff I won&amp;rsquo;t remember in the future. I&amp;rsquo;m considering
+adding LXC and Dropbox in the coming that will require some manual steps.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://thekentishman.wordpress.com/guides-2/open-media-vault-set-up/">http://thekentishman.wordpress.com/guides-2/open-media-vault-set-up/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://myhpmicroserver.com/wiki/Main_Page">http://myhpmicroserver.com/wiki/Main_Page&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Open Media Vault on the HP ProLiant MicroServer G7 N54L</summary></item></channel></rss>

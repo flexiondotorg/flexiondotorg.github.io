@@ -1,1 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shotwell on Wimpy's World</title><link>https://wimpysworld.com/tags/shotwell/</link><description>Recent content in Shotwell on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Tue, 30 Aug 2011 11:05:50 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/shotwell/rss.xml" rel="self" type="application/rss+xml"/><item><title>Shotwell 0.11 PPA available for Ubuntu Lucid and Maverick</title><link>https://wimpysworld.com/posts/shotwell-0.11-ppa-available-for-ubuntu-lucid-and-maverick/</link><pubDate>Tue, 30 Aug 2011 11:05:50 +0000</pubDate><guid>https://wimpysworld.com/posts/shotwell-0.11-ppa-available-for-ubuntu-lucid-and-maverick/</guid><description>Showell 0.11 is available in a PPA for Ubuntu 10.04 &amp;amp; 10.10</description></item><item><title>Shotwell 0.8.1 PPA available for Ubuntu Lucid</title><link>https://wimpysworld.com/posts/shotwell-0.8.1-ppa-available-for-ubuntu-lucid/</link><pubDate>Thu, 17 Mar 2011 17:04:42 +0000</pubDate><guid>https://wimpysworld.com/posts/shotwell-0.8.1-ppa-available-for-ubuntu-lucid/</guid><description>Get the latest Shotwell 0.8.1 via a PP for Ubuntu 10.04</description></item><item><title>Goodbye F-Spot. Hello Shotwell</title><link>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</link><pubDate>Sat, 20 Mar 2010 15:39:17 +0000</pubDate><guid>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</guid><description>F-Spot you serve me well, but here comes Shotwell</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shotwell on Wimpy's World</title><link>https://wimpysworld.com/tags/shotwell/</link><description>Recent content in Shotwell on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 30 Aug 2011 11:05:50 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/shotwell/rss.xml" rel="self" type="application/rss+xml"/><item><title>Shotwell 0.11 PPA available for Ubuntu Lucid and Maverick</title><link>https://wimpysworld.com/posts/shotwell-0.11-ppa-available-for-ubuntu-lucid-and-maverick/</link><pubDate>Tue, 30 Aug 2011 11:05:50 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/shotwell-0.11-ppa-available-for-ubuntu-lucid-and-maverick/</guid><description>&lt;p>Like many others I wanted &lt;a href="http://yorba.org/shotwell/">Shotwell&lt;/a> 0.11
+for Lucid and Maverick so I&amp;rsquo;ve created a PPA for it.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://launchpad.net/~flexiondotorg/+archive/shotwell">https://launchpad.net/~flexiondotorg/+archive/shotwell&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>My PPA contains Shotwell 0.11 built for Ubuntu Lucid 10.04 LTS and Ubuntu
+Maverick 10.10. I created this PPA because I run Lucid at home and wanted the
+new version of Shotwell. Sadly, Yorba aren&amp;rsquo;t going to provide new Shotwell
+packages for Lucid due to the reasons discussed in the following ticket: -&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://trac.yorba.org/ticket/3015">http://trac.yorba.org/ticket/3015&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>As mentioned in the ticket above, there are newer versions of Shotwell available
+for Lucid in other PPAs. However, those PPAs contain hundreds of packages. If
+you&amp;rsquo;re not that brave, like me, then hopefully my PPA provides what you
+need. I have built Shotwell with minimal changes from the original Yorba
+source packages and not polluted my PPA with any unnecessary packages. Since
+Shotwell 0.11 you &lt;strong>must&lt;/strong> enable the GStreamer PPA, see the ticket
+below for the reasons for this requirement:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://redmine.yorba.org/issues/3716">http://redmine.yorba.org/issues/3716&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>To install Shotwell on Lucid and Maverick do the following:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:flexiondotorg/shotwell
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:gstreamer-developers/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get dist-upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install shotwell
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enjoy!&lt;/p></description><summary>Showell 0.11 is available in a PPA for Ubuntu 10.04 &amp;amp; 10.10</summary></item><item><title>Shotwell 0.8.1 PPA available for Ubuntu Lucid</title><link>https://wimpysworld.com/posts/shotwell-0.8.1-ppa-available-for-ubuntu-lucid/</link><pubDate>Thu, 17 Mar 2011 17:04:42 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/shotwell-0.8.1-ppa-available-for-ubuntu-lucid/</guid><description>&lt;p>Like many others I wanted &lt;a href="http://yorba.org/shotwell/">Shotwell&lt;/a> for Lucid
+so I&amp;rsquo;ve created a PPA for it.&lt;/p>
+&lt;ul>
+&lt;li>&amp;lt;https://launchpad.net/~flexiondotorg/+archive/shotwell.&lt;/li>
+&lt;/ul>
+&lt;p>My PPA contains Shotwell 0.8.1 built for Ubuntu Lucid 10.04 LTS. I created the
+PPA because I run Lucid at home and wanted the new version of Shotwell. Sadly,
+Yorba aren&amp;rsquo;t going to provide a Lucid build of Shotwell 0.8.1 due to the
+reasons discussed in the following ticket:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://trac.yorba.org/ticket/3015">http://trac.yorba.org/ticket/3015&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>As mentioned in the ticket above, there are versions of Shotwell 0.8.1
+available for Lucid in other PPAs. However, those PPAs contain hundreds of
+packages. If you&amp;rsquo;re not that brave, like me, then hopefully my PPA provides
+what you need. I have built Shotwell 0.8.1 with minimal changes from the
+original Yorba source packages and not polluted my PPA with any unnecessary
+packages &lt;strong>NOTE!&lt;/strong> My PPA has dependencies that are satisfied by the Yorba
+PPA, so you must also enable the Yorba PPA too.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://launchpad.net/~yorba/+archive/ppa">https://launchpad.net/~yorba/+archive/ppa&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>To install Shotwell 0.8.1 on Lucid do the following:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:yorba/ppa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:flexiondotorg/shotwell
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install shotwell
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description><summary>Get the latest Shotwell 0.8.1 via a PP for Ubuntu 10.04</summary></item><item><title>Goodbye F-Spot. Hello Shotwell</title><link>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</link><pubDate>Sat, 20 Mar 2010 15:39:17 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/goodbye-f-spot-hello-shotwell/</guid><description>&lt;p>I&amp;rsquo;ve finally found a photo organiser for Linux I can live with,
+&lt;a href="http://yorba.org/shotwell/">Shotwell&lt;/a>. Shotwell is a photo organiser
+for &lt;a href="http://www.gnome.org">GNOME&lt;/a> that I&amp;rsquo;ve been testing for a few
+months now but the recent 0.5 release which added tagging and printing,
+it means Shotwell is finally ready replace &lt;a href="http://f-spot.org">F-Spot&lt;/a> on
+my workstation.&lt;/p>
+&lt;p>Shotwell is intuitive, well documented, extremely easy to use and reliable.
+It&amp;rsquo;s easy to dismiss Shotwell as an over simplified photo manager. But once
+you start using it, you&amp;rsquo;ll quickly appreciate its clean interface and
+easy-to-use tools. Don&amp;rsquo;t just take my word for it either, Shotwell is now the
+default photo manager in &lt;a href="http://fedoraproject.org">Fedora&lt;/a> 13 alpha. Here is
+a quick run down of the features.&lt;/p>
+&lt;ul>
+&lt;li>Import photos from folders or from any digital camera supported by gPhoto.&lt;/li>
+&lt;li>Shotwell automatically groups photos taken at the same time. You can also
+use tags to organize your photo collection.&lt;/li>
+&lt;li>You can rotate, crop, reduce red-eye, and adjust the exposure, saturation,
+tint, and temperature of each photo.&lt;/li>
+&lt;li>Publish photos to Facebook, Flickr and Picasa Web Albums.&lt;/li>
+&lt;/ul>
+&lt;p>Shotwell provides a non-destructive way to tweak your photos. Instead of
+modifying the original photos, Shotwell stores all edits in a database and
+applies them on-the-fly as necessary. This means that you can easily undo all
+edits. Shotwell comes equipped with all the usual photo enhancing tools and
+slideshow. You can download a source tarball from the Shotwell home page at
+&lt;a href="http://www.yorba.org/shotwell/">http://www.yorba.org/shotwell/&lt;/a> or grab a binary for Ubuntu Karmic or Lucid
+via Yorba&amp;rsquo;s Launchpad PPA.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://launchpad.net/~yorba/+archive/ppa">https://launchpad.net/~yorba/+archive/ppa&lt;/a>&lt;/li>
+&lt;/ul></description><summary>F-Spot you serve me well, but here comes Shotwell</summary></item></channel></rss>

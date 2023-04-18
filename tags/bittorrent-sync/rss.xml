@@ -1,1 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BitTorrent Sync on Wimpy's World</title><link>https://wimpysworld.com/tags/bittorrent-sync/</link><description>Recent content in BitTorrent Sync on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 21 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/bittorrent-sync/rss.xml" rel="self" type="application/rss+xml"/><item><title>Setting up BitSync on Debian</title><link>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</link><pubDate>Sat, 21 Jun 2014 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</guid><description>Setting up BitTorrent Sync on Debian</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BitTorrent Sync on Wimpy's World</title><link>https://wimpysworld.com/tags/bittorrent-sync/</link><description>Recent content in BitTorrent Sync on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 21 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/bittorrent-sync/rss.xml" rel="self" type="application/rss+xml"/><item><title>Setting up BitSync on Debian</title><link>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</link><pubDate>Sat, 21 Jun 2014 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/setting-up-bitsync-on-debian/</guid><description>&lt;p>I&amp;rsquo;ve replaced Dropbox with &lt;a href="http://www.bittorrent.com/sync">BitTorrent Sync&lt;/a>.
+In order to do this I&amp;rsquo;ve have &lt;code>btsync&lt;/code> running on a VPS (2CPU, 2GB, 400GB), my
+home server and assorted Arch Linux workstations.&lt;/p>
+&lt;p>I had a couple of reasons for migrating away from Dropbox.&lt;/p>
+&lt;ul>
+&lt;li>Dropbox was costing $100 per year.&lt;/li>
+&lt;li>Dropbox encryption model is weak and I have data security/privacy.&lt;/li>
+&lt;/ul>
+&lt;p>The VPS I am running BitTorrent Sync on costs $50 per year and provides four
+times the storage. I run &lt;code>btsync&lt;/code> on a VPS so that there is always a server
+&lt;em>&amp;ldquo;in the cloud&amp;rdquo;&lt;/em> that is available to sync with so that my setup emulates what
+Dropbox used to do.&lt;/p>
+&lt;p>All my servers are running Debian and this is how I install &lt;code>btsync&lt;/code> on
+Debian.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sh -c &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#f00">$(&lt;/span>curl -fsSL http://debian.yeasoft.net/add-btsync-repository.sh&lt;span style="color:#f00">)&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install btsync
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is how I respond to the prompts:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>* Do you want to define a default BitTorrent Sync instance? : YES
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* BitTorrent Sync Daemon Credentials: yourusername
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* BitTorrent Sync Daemon Group: yourusername
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Niceness of the BitTorrent Sync Daemon: 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* On which portnumber should BitTorrent Sync listen? 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* BitTorrent Sync Listen Port: 12345
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Do you want BitTorrent Sync to request port mapping via UPNP? NO
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Download Bandwith Limit: 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Upload Bandwith Limit: 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Web Interface Bind IP Address: 0.0.0.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* Web Interface Listen Port: 8888
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* The username for accessing the web interface: yourusername
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* The password for accessing the web interface: yourpassword
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>As you&amp;rsquo;ll see, I don&amp;rsquo;t use UPNP on my VPS. I elect a specific port (not
+actually 12345 by the way) and open that port up with &lt;code>ufw&lt;/code>. I also only
+allow access to the WebUI port from another server I own which reverse
+proxies via &lt;code>nginx&lt;/code>.&lt;/p>
+&lt;p>&lt;code>btsync&lt;/code> works really well, I have it syncing hundreds of thousands of
+files that amount to several hundred gigabytes of data. On my Arch Linux
+workstations I use the brilliant &lt;a href="http://www.yeasoft.com/site/projects:btsync-deb:btsync-gui">btsync-gui&lt;/a>
+and &lt;a href="https://play.google.com/store/apps/details?id=com.bittorrent.sync">BitTorrent Sync is also available for Android&lt;/a>.&lt;/p>
+&lt;p>That said, I still use a free Dropbox account to sync photos from mine and my
+wife&amp;rsquo;s Android phones. I have a Dropbox instance running on my home file server
+and everyday it runs a script to automatically import these photos into Plex.&lt;/p>
+&lt;p>Such a shame, that at the time of writing, &lt;code>btsync&lt;/code> is closed source :-(
+Maybe that will change but if it doesn&amp;rsquo;t &lt;a href="http://syncthing.net/">syncthing&lt;/a>
+may well be the answer when it has matured a little.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://www.yeasoft.com/site/projects:btsync-deb:btsync-server">http://www.yeasoft.com/site/projects:btsync-deb:btsync-server&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://forum.bittorrent.com/topic/18974-debian-and-ubuntu-server-packages-for-bittorrent-sync/">http://forum.bittorrent.com/topic/18974-debian-and-ubuntu-server-packages-for-bittorrent-sync/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Setting up BitTorrent Sync on Debian</summary></item></channel></rss>

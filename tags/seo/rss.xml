@@ -1,1 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SEO on Wimpy's World</title><link>https://wimpysworld.com/tags/seo/</link><description>Recent content in SEO on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 26 Jan 2009 15:37:55 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/seo/rss.xml" rel="self" type="application/rss+xml"/><item><title>Wordpress Search Engine Optimisation</title><link>https://wimpysworld.com/posts/wordpress-search-engine-optimisation/</link><pubDate>Mon, 26 Jan 2009 15:37:55 +0000</pubDate><guid>https://wimpysworld.com/posts/wordpress-search-engine-optimisation/</guid><description>Wordpress plugins that help automate SEO</description></item><item><title>Search engine verification and sitemaps</title><link>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</link><pubDate>Sun, 18 Jan 2009 23:19:12 +0000</pubDate><guid>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</guid><description>Verify websites with search engines and submit sitemaps for indexing</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SEO on Wimpy's World</title><link>https://wimpysworld.com/tags/seo/</link><description>Recent content in SEO on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 26 Jan 2009 15:37:55 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/seo/rss.xml" rel="self" type="application/rss+xml"/><item><title>Wordpress Search Engine Optimisation</title><link>https://wimpysworld.com/posts/wordpress-search-engine-optimisation/</link><pubDate>Mon, 26 Jan 2009 15:37:55 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/wordpress-search-engine-optimisation/</guid><description>&lt;p>I manage several websites at work and have therefore learned something about
+search engine optimisation (SEO). Our main site at work uses
+&lt;a href="http:/www.wordpress.org">Wordpress&lt;/a> as the content manager, which has good
+SEO features by default. Last week we launched a new website and I also
+refreshed the other sites, in so doing I found a great article discussing how
+to fully SEO your Wordpress site. It is a good read even if you don&amp;rsquo;t use
+Wordpress, but for those of you that do, it recommends a suite of plugins that
+do all the hard work for you.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://yoast.com/articles/wordpress-seo/">Wordpress SEO - The definitive guide to high rankings for your Blog&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Wordpress plugins that help automate SEO</summary></item><item><title>Search engine verification and sitemaps</title><link>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</link><pubDate>Sun, 18 Jan 2009 23:19:12 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/search-engine-verification-and-sitemaps/</guid><description>&lt;p>I finally got around to verifying my websites with the Google, Yahoo! and MSN
+Live search engines. I&amp;rsquo;ve also setup sitemaps for my websites too. I&amp;rsquo;ve done
+this for the websites at work but couldn&amp;rsquo;t be arsed to do it for my own sites
+until today.&lt;/p>
+&lt;p>To find out why you want sitemap enable your sites read the
+&lt;a href="http://en.wikipedia.org/wiki/Site_map">Sitemap&lt;/a> page at Wikipedia. In order to
+register your sitemaps with the major search engines you&amp;rsquo;ll need to setup
+accounts for &lt;a href="https://www.google.com/webmasters/tools/">Google Webmaster Tools&lt;/a>,
+&lt;a href="http://webmaster.live.com/webmaster/">MSN Live Webmaster Tools&lt;/a> and
+&lt;a href="https://siteexplorer.search.yahoo.com/">Yahoo! Site Explorer&lt;/a>.&lt;/p>
+&lt;p>You&amp;rsquo;ll then need to &lt;em>verify&lt;/em> your site(s) with each of the search engines, they
+provide details about how to do this but it typically requires that you put a
+meta tag in your page header. Once you&amp;rsquo;ve verified your site(s) it&amp;rsquo;s time to
+create a &lt;code>sitemap.xml&lt;/code>.&lt;/p>
+&lt;p>If you have a Wordpress blog adding sitemap support is easy, just use the
+&lt;a href="http://wordpress.org/extend/plugins/google-sitemap-generator/">Google XML Sitemaps&lt;/a>
+plugin. This re-builds &lt;code>sitemap.xml&lt;/code> when you update posts, pages, comments etc.
+It also notifies all the relevant search engines that content has changed on
+your site. Very useful indeed. If you need to create your sitemap by hand, or
+better yet script its creation, then read &lt;a href="http://www.sitemaps.org/">sitemaps.org&lt;/a>
+for the protocol spec.&lt;/p></description><summary>Verify websites with search engines and submit sitemaps for indexing</summary></item></channel></rss>

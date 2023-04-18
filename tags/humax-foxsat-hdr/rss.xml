@@ -1,1 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Humax Foxsat HDR on Wimpy's World</title><link>https://wimpysworld.com/tags/humax-foxsat-hdr/</link><description>Recent content in Humax Foxsat HDR on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 29 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/humax-foxsat-hdr/rss.xml" rel="self" type="application/rss+xml"/><item><title>Humax Foxsat HDR Custom Firmware</title><link>https://wimpysworld.com/posts/humax-foxsat-hdr-custom-firmware/</link><pubDate>Sun, 29 Jun 2014 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/humax-foxsat-hdr-custom-firmware/</guid><description>Hard disk upgrades and custom firmware on the Humx Foxsat HDR</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Humax Foxsat HDR on Wimpy's World</title><link>https://wimpysworld.com/tags/humax-foxsat-hdr/</link><description>Recent content in Humax Foxsat HDR on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 29 Jun 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/humax-foxsat-hdr/rss.xml" rel="self" type="application/rss+xml"/><item><title>Humax Foxsat HDR Custom Firmware</title><link>https://wimpysworld.com/posts/humax-foxsat-hdr-custom-firmware/</link><pubDate>Sun, 29 Jun 2014 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/humax-foxsat-hdr-custom-firmware/</guid><description>&lt;p>I&amp;rsquo;ve had these notes kicking around for absolutely ages. I haven&amp;rsquo;t checked to
+see if this stuff is still accurate because during the last 12 months or so our
+viewing habits have changed and we almost exclusively watch streamed content now.&lt;/p>
+&lt;p>That said, my father-in-law gave us a &lt;a href="http://www.amazon.co.uk/Humax-FOXSAT-HDR-Freesat-Digital-Recorder/dp/B001L5YU36">Humax Foxsat HDR&lt;/a>
+Freesat digital recorder as a thank you for some work I did for him. It turns
+out the Humax Foxsat HDR is quite hackable.&lt;/p>
+&lt;h1 id="hard-disk-upgrade">Hard Disk Upgrade&lt;/h1>
+&lt;p>I contributed to the topic below. The Humax firmware only supports disks up to
+1TB but the hackers method works for 2TB drives, possibly bigger but I haven&amp;rsquo;t
+tried. I&amp;rsquo;ve upgraded mine and my father-in-laws to 2TB without any problems.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/forums/pvrs-vcrs/1336395-humax-foxsat-hdr-upgrade-hdd-2tb.html">http://www.avforums.com/forums/pvrs-vcrs/1336395-humax-foxsat-hdr-upgrade-hdd-2tb.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="custom-firmware">Custom Firmware&lt;/h1>
+&lt;p>These are the topics that discuss the custom firmware itself and includes the
+downloads. Once the custom firmware is installed and it&amp;rsquo;s advanced interface has
+been enabled you can enable several add-ons such as Samba, Mediatomb, ssh, ftp, etc.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/threads/media-file-server-bundle-for-the-foxsat-hdr-release-4-part-5.1829374/">http://www.avforums.com/threads/media-file-server-bundle-for-the-foxsat-hdr-release-4-part-5.1829374/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1747997-media-file-server-bundle-foxsat-hdr-release-4-0-part-4-a.html">http://www.avforums.com/forums/freesat/1747997-media-file-server-bundle-foxsat-hdr-release-4-0-part-4-a.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1661195-media-file-server-bundle-foxsat-hdr-release-4-0-part-3-a.html">http://www.avforums.com/forums/freesat/1661195-media-file-server-bundle-foxsat-hdr-release-4-0-part-3-a.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1599048-media-file-server-bundle-foxsat-hdr-release-4-0-part-2-a.html">http://www.avforums.com/forums/freesat/1599048-media-file-server-bundle-foxsat-hdr-release-4-0-part-2-a.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1517610-media-file-server-bundle-foxsat-hdr-release-4-0-part-1-a.html">http://www.avforums.com/forums/freesat/1517610-media-file-server-bundle-foxsat-hdr-release-4-0-part-1-a.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="web-interface">Web Interface&lt;/h2>
+&lt;p>This is the topic about the web interface. No download required it is
+bundled in the custom firmware above.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1601205-web-interface-channel-editor-plug-foxsat-hdr.html">http://www.avforums.com/forums/freesat/1601205-web-interface-channel-editor-plug-foxsat-hdr.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="channel-editor">Channel Editor&lt;/h2>
+&lt;p>The channel editor is installed and configured via the web interface and
+is one of my favourite add-ons. It also allows you to enable non-freesat
+channels in the normal guide.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/forums/freesat/1601205-web-interface-channel-editor-plug-foxsat-hdr.html">http://www.avforums.com/forums/freesat/1601205-web-interface-channel-editor-plug-foxsat-hdr.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="non-freesat-channels">Non Freesat channels&lt;/h1>
+&lt;p>We get our broadcasts from Astra 2A / Astra 2B / Astra 2D / Eurobird 1 (28.2°E).
+Other free to air channels are available and KingOfSat lists them all.
+These channels can only be added via the Humax setup menus, but can then
+be presented in the normal EPG using the Channel Editor above.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://en.kingofsat.net/pos-28.2E.php">http://en.kingofsat.net/pos-28.2E.php&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="decrypt-hd-recordings">Decrypt HD recordings&lt;/h1>
+&lt;p>I never actually tried this, but what follows might be useful.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/forums/pvrs-vcrs/1721573-can-i-install-auto-unprotect-foxsat-hdr-if-so-how.html">http://www.avforums.com/forums/pvrs-vcrs/1721573-can-i-install-auto-unprotect-foxsat-hdr-if-so-how.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/18051843-post715.html">http://www.avforums.com/forums/18051843-post715.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/18057417-post732.html">http://www.avforums.com/forums/18057417-post732.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/18061024-post740.html">http://www.avforums.com/forums/18061024-post740.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.avforums.com/forums/18085731-post768.html">http://www.avforums.com/forums/18085731-post768.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="ota-updates">OTA updates&lt;/h1>
+&lt;p>&lt;strong>This is not so relevant now, since Humax haven&amp;rsquo;t released an OTA update for some time.&lt;/strong>&lt;/p>
+&lt;p>I have not yet found a way to prevent automatic over the air updates from being
+automatically applied. When an over the air update is applied the Humax still
+works, but the web interface and all the add-ons stop working. The can be solved
+by waiting for the custom firmware to be updated (which happen remarkably quickly)
+and then re-flashing the custom firmware. All the add-ons should start working again.&lt;/p></description><summary>Hard disk upgrades and custom firmware on the Humx Foxsat HDR</summary></item></channel></rss>

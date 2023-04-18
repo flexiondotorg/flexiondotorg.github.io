@@ -1,1 +1,492 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bouncer on Wimpy's World</title><link>https://wimpysworld.com/tags/bouncer/</link><description>Recent content in Bouncer on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 02 Aug 2014 10:10:10 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/bouncer/rss.xml" rel="self" type="application/rss+xml"/><item><title>ZNC IRC proxy</title><link>https://wimpysworld.com/posts/znc-irc-proxy/</link><pubDate>Sat, 02 Aug 2014 10:10:10 +0000</pubDate><guid>https://wimpysworld.com/posts/znc-irc-proxy/</guid><description>How I install the ZNC IRC bouncer on Debian Wheezy</description></item><item><title>BIP IRC proxy</title><link>https://wimpysworld.com/posts/bip-irc-proxy/</link><pubDate>Wed, 16 Apr 2014 07:07:09 +0000</pubDate><guid>https://wimpysworld.com/posts/bip-irc-proxy/</guid><description>Installing BIP IRC Proxy on Debian Wheezy &amp;amp; Arch Linux</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bouncer on Wimpy's World</title><link>https://wimpysworld.com/tags/bouncer/</link><description>Recent content in Bouncer on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 02 Aug 2014 10:10:10 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/bouncer/rss.xml" rel="self" type="application/rss+xml"/><item><title>ZNC IRC proxy</title><link>https://wimpysworld.com/posts/znc-irc-proxy/</link><pubDate>Sat, 02 Aug 2014 10:10:10 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/znc-irc-proxy/</guid><description>&lt;p>I have been using the &lt;a href="https://wimpysworld.com/posts/bip-irc-proxy/">BIP&lt;/a> IRC proxy that maintains a
+persistent connection to a list of IRC channels. However, I&amp;rsquo;ve heard good things
+about &lt;a href="http://znc.in">ZNC&lt;/a> and decided to give it a try.&lt;/p>
+&lt;p>The purpose of an IRC proxy, or bouncer, is that you can then point your IRC
+clients to them to maintain a transparent connection from multiple clients
+and playback the conversations that took place while you were away.&lt;/p>
+&lt;h2 id="installing-znc">Installing ZNC&lt;/h2>
+&lt;p>The ZNC package for Debian Wheezy are very old, so I decide to install
+from source.&lt;/p>
+&lt;h3 id="install-required-packages">Install required packages&lt;/h3>
+&lt;p>We first need to make sure we have all the packages required to build ZNC.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install build-essential libssl-dev libperl-dev pkg-config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="compile-znc">Compile ZNC&lt;/h3>
+&lt;p>Now download and compile ZNC.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://znc.in/releases/znc-1.4.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar zxvf znc-1.4.tar.gz
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd znc-1.4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./configure --with-openssl
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo make install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="create-a-user">Create a user&lt;/h3>
+&lt;p>Create a separate ZNC user so that ZNC does not need to run as root:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo groupadd znc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo adduser --system --home /var/lib/znc --group znc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="configuring-znc">Configuring ZNC&lt;/h3>
+&lt;p>You can use the interactive wizard to configure ZNC which really
+help create the initial configuration.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo -u znc /usr/local/bin/znc --datadir=/var/lib/znc --makeconf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Here is a transcript of how I answered the initial configuration questions.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>[ .. ] Checking for list of available modules...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ &amp;gt;&amp;gt; ] ok
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] Building new config
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] First let&amp;#39;s start with some global settings...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] What port would you like ZNC to listen on? (1025 to 65535): 7778
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Would you like ZNC to listen using SSL? (yes/no) [no]: yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Would you like ZNC to listen using both IPv4 and IPv6? (yes/no) [yes]:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ .. ] Verifying the listener...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ &amp;gt;&amp;gt; ] ok
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] Unable to locate pem file: [/var/lib/znc/znc.pem], creating it
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ .. ] Writing Pem file [/var/lib/znc/znc.pem]...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ &amp;gt;&amp;gt; ] ok
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] -- Global Modules --
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] +-----------+----------------------------------------------------------+
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] | Name | Description |
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] +-----------+----------------------------------------------------------+
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] | partyline | Internal channels and queries for users connected to znc |
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] | webadmin | Web based administration module |
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] +-----------+----------------------------------------------------------+
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] And 10 other (uncommon) modules. You can enable those later.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Load global module &amp;lt;partyline&amp;gt;? (yes/no) [no]: yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Load global module &amp;lt;webadmin&amp;gt;? (yes/no) [no]: yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] Now we need to set up a user...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Username (AlphaNumeric): yournick
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Enter Password:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Confirm Password:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Would you like this user to be an admin? (yes/no) [yes]:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Nick [yournick]:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Alt Nick [yournick_]:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Ident [yournick]:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Real Name [Got ZNC?]: Your Name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Bind Host (optional):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Number of lines to buffer per channel [50]: 1024
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Would you like to clear channel buffers after replay? (yes/no) [yes]:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Default channel modes [+stn]:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] -- User Modules --
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] +--------------+------------------------------------------------------------------------------------------+
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] | Name | Description |
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] +--------------+------------------------------------------------------------------------------------------+
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] | chansaver | Keep config up-to-date when user joins/parts |
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] | controlpanel | Dynamic configuration through IRC. Allows editing only yourself if you&amp;#39;re not ZNC admin. |
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] | perform | Keeps a list of commands to be executed when ZNC connects to IRC. |
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] | webadmin | Web based administration module |
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] +--------------+------------------------------------------------------------------------------------------+
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ] And 21 other (uncommon) modules. You can enable those later.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Load module &amp;lt;chansaver&amp;gt;? (yes/no) [no]: yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Load module &amp;lt;controlpanel&amp;gt;? (yes/no) [no]: tes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Load module &amp;lt;controlpanel&amp;gt;? (yes/no) [no]: yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Load module &amp;lt;perform&amp;gt;? (yes/no) [no]: yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Load module &amp;lt;webadmin&amp;gt;? (yes/no) [no]: yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Would you like to set up a network? (yes/no) [no]:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Would you like to set up another user? (yes/no) [no]:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ .. ] Writing config [/var/lib/znc/configs/znc.conf]...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ &amp;gt;&amp;gt; ] ok
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]To connect to this ZNC you need to connect to it as your IRC server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]using the port that you supplied. You have to supply your login info
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]as the IRC server password like this: user/network:pass.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]Try something like this in your IRC client...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]/server &amp;lt;znc_server_ip&amp;gt; +7778 flexiondotorg:&amp;lt;pass&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]And this in your browser...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]https://&amp;lt;znc_server_ip&amp;gt;:7778/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ** ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ ?? ] Launch ZNC now? (yes/no) [yes]: no
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="running-znv-as-a-daemon">Running ZNV as a daemon&lt;/h3>
+&lt;p>Here is a &lt;code>/etc/init.d/znc&lt;/code> for Debian based on this installation method:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#! /bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>&lt;span style="color:#0f0">### BEGIN INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Provides: znc&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Start: $remote_fs $syslog&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Stop: $remote_fs $syslog&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Start: 2 3 4 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Stop: 0 1 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Short-Description: ZNC IRC bouncer&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Description: ZNC is an IRC bouncer&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">### END INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">PATH&lt;/span>=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DESC&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;ZNC daemon&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">NAME&lt;/span>=znc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DAEMON&lt;/span>=/usr/local/bin/&lt;span style="color:#eedd82">$NAME&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DATADIR&lt;/span>=/var/lib/znc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DAEMON_ARGS&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;--datadir=&lt;/span>&lt;span style="color:#eedd82">$DATADIR&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">PIDDIR&lt;/span>=&lt;span style="color:#eedd82">$DATADIR&lt;/span>/run
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">PIDFILE&lt;/span>=&lt;span style="color:#eedd82">$PIDDIR&lt;/span>/&lt;span style="color:#eedd82">$NAME&lt;/span>.pid
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">SCRIPTNAME&lt;/span>=/etc/init.d/&lt;span style="color:#eedd82">$NAME&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">USER&lt;/span>=znc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">GROUP&lt;/span>=znc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Exit if the package is not installed&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ -x &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$DAEMON&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> ] || exit &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Read configuration variable file if it is present&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[ -r /etc/default/&lt;span style="color:#eedd82">$NAME&lt;/span> ] &amp;amp;&amp;amp; . /etc/default/&lt;span style="color:#eedd82">$NAME&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Load the VERBOSE setting and other rcS variables&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>. /lib/init/vars.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Define LSB log_* functions.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Depend on lsb-base (&amp;gt;= 3.2-14) to ensure that this file is present&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># and status_of_proc is working.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>. /lib/lsb/init-functions
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Function that starts the daemon/service&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>do_start()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># Return&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># 0 if daemon has been started&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># 1 if daemon was already running&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># 2 if daemon could not be started&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ ! -d &lt;span style="color:#eedd82">$PIDDIR&lt;/span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> mkdir &lt;span style="color:#eedd82">$PIDDIR&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> chown &lt;span style="color:#eedd82">$USER&lt;/span>:&lt;span style="color:#eedd82">$GROUP&lt;/span> &lt;span style="color:#eedd82">$PIDDIR&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon --start --quiet --pidfile &lt;span style="color:#eedd82">$PIDFILE&lt;/span> --exec &lt;span style="color:#eedd82">$DAEMON&lt;/span> --test --chuid &lt;span style="color:#eedd82">$USER&lt;/span> &amp;gt; /dev/null || &lt;span style="color:#f00">return&lt;/span> &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon --start --quiet --pidfile &lt;span style="color:#eedd82">$PIDFILE&lt;/span> --exec &lt;span style="color:#eedd82">$DAEMON&lt;/span> --chuid &lt;span style="color:#eedd82">$USER&lt;/span> -- &lt;span style="color:#eedd82">$DAEMON_ARGS&lt;/span> &amp;gt; /dev/null || &lt;span style="color:#f00">return&lt;/span> &lt;span style="color:#f60">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Function that stops the daemon/service&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>do_stop()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># Return&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># 0 if daemon has been stopped&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># 1 if daemon was already stopped&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># 2 if daemon could not be stopped&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># other if a failure occurred&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --pidfile &lt;span style="color:#eedd82">$PIDFILE&lt;/span> --name &lt;span style="color:#eedd82">$NAME&lt;/span> --chuid &lt;span style="color:#eedd82">$USER&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">RETVAL&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$?&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> [ &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$RETVAL&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> = &lt;span style="color:#f60">2&lt;/span> ] &amp;amp;&amp;amp; &lt;span style="color:#f00">return&lt;/span> &lt;span style="color:#f60">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># Wait for children to finish too if this is a daemon that forks&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># and if the daemon is only ever run from this initscript.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># If the above conditions are not satisfied then add some other code&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># that waits for the process to drop all resources that could be&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># needed by services started subsequently. A last resort is to&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># sleep for some time.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon --stop --quiet --oknodo --retry=0/30/KILL/5 --exec &lt;span style="color:#eedd82">$DAEMON&lt;/span> --chuid &lt;span style="color:#eedd82">$USER&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> [ &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$?&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> = &lt;span style="color:#f60">2&lt;/span> ] &amp;amp;&amp;amp; &lt;span style="color:#f00">return&lt;/span> &lt;span style="color:#f60">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># Many daemons don&amp;#39;t delete their pidfiles when they exit.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rm -f &lt;span style="color:#eedd82">$PIDFILE&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">return&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$RETVAL&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Function that sends a SIGHUP to the daemon/service&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>do_reload() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon --stop --signal &lt;span style="color:#f60">1&lt;/span> --quiet --pidfile &lt;span style="color:#eedd82">$PIDFILE&lt;/span> --name &lt;span style="color:#eedd82">$NAME&lt;/span> --chuid &lt;span style="color:#eedd82">$USER&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">return&lt;/span> &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$1&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> [ &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$VERBOSE&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> != no ] &amp;amp;&amp;amp; log_daemon_msg &lt;span style="color:#87ceeb">&amp;#34;Starting &lt;/span>&lt;span style="color:#eedd82">$DESC&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$NAME&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> do_start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$?&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 0|1) [ &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$VERBOSE&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> != no ] &amp;amp;&amp;amp; log_end_msg &lt;span style="color:#f60">0&lt;/span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2) [ &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$VERBOSE&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> != no ] &amp;amp;&amp;amp; log_end_msg &lt;span style="color:#f60">1&lt;/span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> [ &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$VERBOSE&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> != no ] &amp;amp;&amp;amp; log_daemon_msg &lt;span style="color:#87ceeb">&amp;#34;Stopping &lt;/span>&lt;span style="color:#eedd82">$DESC&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$NAME&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> do_stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$?&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 0|1) [ &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$VERBOSE&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> != no ] &amp;amp;&amp;amp; log_end_msg &lt;span style="color:#f60">0&lt;/span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2) [ &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$VERBOSE&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> != no ] &amp;amp;&amp;amp; log_end_msg &lt;span style="color:#f60">1&lt;/span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status_of_proc -p &lt;span style="color:#eedd82">$PIDFILE&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$DAEMON&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$NAME&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> &amp;amp;&amp;amp; exit &lt;span style="color:#f60">0&lt;/span> || exit &lt;span style="color:#eedd82">$?&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> reload)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> log_daemon_msg &lt;span style="color:#87ceeb">&amp;#34;Reloading &lt;/span>&lt;span style="color:#eedd82">$DESC&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$NAME&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> do_reload
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> log_end_msg &lt;span style="color:#eedd82">$?&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> log_daemon_msg &lt;span style="color:#87ceeb">&amp;#34;Restarting &lt;/span>&lt;span style="color:#eedd82">$DESC&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$NAME&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> do_stop
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$?&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 0|1)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> do_start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$?&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 0) log_end_msg &lt;span style="color:#f60">0&lt;/span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1) log_end_msg &lt;span style="color:#f60">1&lt;/span> ;; &lt;span style="color:#0f0"># Old process is still running&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *) log_end_msg &lt;span style="color:#f60">1&lt;/span> ;; &lt;span style="color:#0f0"># Failed to start&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># Failed to stop&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> log_end_msg &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Usage: &lt;/span>&lt;span style="color:#eedd82">$SCRIPTNAME&lt;/span>&lt;span style="color:#87ceeb"> {status|start|stop|reload|restart}&amp;#34;&lt;/span> &amp;gt;&amp;amp;&lt;span style="color:#f60">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit &lt;span style="color:#f60">3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After you&amp;rsquo;ve created the script, you must give it the proper permissions to run
+and add the script to the startup/shutdown sequence.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">755&lt;/span> /etc/init.d/znc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo update-rc.d znc defaults
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the service:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service znc start
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Stop the service:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service znc stop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="web-configuration">Web configuration&lt;/h3>
+&lt;p>I love that ZNC comes bundled with a web based configuration tool. Just
+login to &lt;a href="https://znc.example.org:7778">https://znc.example.org:7778&lt;/a> to add users, add networks to
+users and to add channels to networks. Really simple stuff.&lt;/p>
+&lt;h3 id="irc-client-configuration">IRC client configuration&lt;/h3>
+&lt;p>I use &lt;a href="http://hexchat.github.io/">HexChat&lt;/a>, but other IRC clients are available.
+Just add a new Network to HexChat for your ZNC server, use the username,
+suffixed with the network name you configured in ZNC, and your ZNC password.&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>I much prefer ZNC to BIP.&lt;/p>
+&lt;ul>
+&lt;li>I really like the web and IRC configuration but I still have the option to
+configure the config files directly.&lt;/li>
+&lt;li>ZNC is far less cryptic with regard to setting up IRC client connections and
+user management is much better implemented.&lt;/li>
+&lt;li>When I add a new channel to an existing network in ZNC it automatically appears
+in my connected clients without the need to restart anything.&lt;/li>
+&lt;li>ZNC&amp;rsquo;s IRC backlogs don&amp;rsquo;t have the confusing double time stamps present in BIP
+and ZNC is much faster re-establishing connections to my multiple IRC network and
+channels.&lt;/li>
+&lt;li>Most importantly, ZNC has been far more stable than BIP.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>References&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://wiki.znc.in/Installation">http://wiki.znc.in/Installation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://wiki.znc.in/Running_ZNC_as_a_system_daemon">http://wiki.znc.in/Running_ZNC_as_a_system_daemon&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.digitalocean.com/community/tutorials/how-to-install-znc-an-irc-bouncer-on-an-ubuntu-vps">https://www.digitalocean.com/community/tutorials/how-to-install-znc-an-irc-bouncer-on-an-ubuntu-vps&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://raymii.org/s/tutorials/Install_the_Lastest_ZNC_from_Source_in_Ubuntu.html">https://raymii.org/s/tutorials/Install_the_Lastest_ZNC_from_Source_in_Ubuntu.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://shellfish.io/tutorial/1/how-to-install-znc-on-debian-7/">https://shellfish.io/tutorial/1/how-to-install-znc-on-debian-7/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>How I install the ZNC IRC bouncer on Debian Wheezy</summary></item><item><title>BIP IRC proxy</title><link>https://wimpysworld.com/posts/bip-irc-proxy/</link><pubDate>Wed, 16 Apr 2014 07:07:09 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/bip-irc-proxy/</guid><description>&lt;p>&lt;strong>I switched from BIP to &lt;a href="http://wiki.znc.in/ZNC">ZNC&lt;/a>, and &lt;a href="https://wimpysworld.com/posts/znc-irc-proxy/">recommend you use ZNC instead&lt;/a>!&lt;/strong>&lt;/p>
+&lt;p>&lt;a href="http://bip.milkypond.org/">BIP&lt;/a> is an IRC proxy that maintains a persistent
+connection(s) to a list of IRC channels. You can then point your IRC client to
+BIP each time you log in and playback the conversations that took place while
+you were away.&lt;/p>
+&lt;p>I&amp;rsquo;ve found bBIP to be so useful that I now &lt;a href="https://www.archlinux.org/packages/community/x86_64/bip/">maintain BIP for Arch Linux&lt;/a>,
+although I now run my BIP proxy on Debian because my new VPS provider doesn&amp;rsquo;t
+offer Arch Linux as an option.&lt;/p>
+&lt;h2 id="installing-bip">Installing BIP&lt;/h2>
+&lt;p>Installing BIP is simple for both Arch Linux and Debian.&lt;/p>
+&lt;h3 id="debian">Debian&lt;/h3>
+&lt;p>I run BIP on Debian Wheezy with the backport repository enabled.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get -t wheezy-backports install bip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo sed -i &lt;span style="color:#87ceeb">&amp;#39;s/ENABLED=0/ENABLED=1/&amp;#39;&lt;/span> /etc/default/bip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="arch-linux">Arch Linux&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pacman -S bip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl enable bip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-user">Create a user&lt;/h2>
+&lt;p>The next thing to do is create a username and password and BIP provides it&amp;rsquo;s
+own utility for doing this called &lt;code>bipmkpw&lt;/code>. Replace &amp;lsquo;username&amp;rsquo; with whatever
+you want your BIP &amp;lsquo;username&amp;rsquo; to be. This name has no relation to any IRC
+usernames so it can be anything.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bipmkpw username
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enter a password when prompted. The password will then be output as a hash.
+Make a note of both the hashed and un-hashed values somewhere, you will need
+them later.&lt;/p>
+&lt;h2 id="create-a-certificate">Create a certificate&lt;/h2>
+&lt;p>We don&amp;rsquo;t want the username and password being sent as clear-text, so we will
+create an SSL certificate for BIP to use.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>openssl req -new -newkey rsa:4096 -nodes -x509 -keyout bip.pem -out bip.pem
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Move the certificate to &lt;code>/var/lib/bip&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo mv bip.pem /var/lib/bip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Change ownership and permissions of the certificate to the user &lt;code>bip&lt;/code> which was
+created automatically when the package was installed.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chown bip:bip /var/lib/bip/bip.pem
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">600&lt;/span> /var/lib/bip/bip.pem
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="configure-bip">Configure BIP&lt;/h2>
+&lt;p>Here is example configuration for BIP. Copy it to &lt;code>/etc/bip.conf&lt;/code>, modify it
+accordingly and then change the ownership and permissions.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chown bip:bip /etc/bip.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#f60">640&lt;/span> /etc/bip.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="example-configuration">Example configuration&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span># bip default config file.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Thou shoult change thy password
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ip = &amp;#34;0.0.0.0&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># To connect a client to bip, try the port below, and
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># be sure to set the password to the value
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># specified in the network you want to connect to.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>port = 7778;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># If you set this to true, you&amp;#39;ll only be able to connect to bip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># with a SSL capable IRC client. Be sure to generate a certificate
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># for bip with &amp;#39;make cert&amp;#39;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>client_side_ssl = true;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>log_level = 3;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pid_file=&amp;#34;/var/run/bip/bip.pid&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># This is where logs go. Channel and private messages will use that
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># configuration value as a prefix, and then log_format to determine
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># full log filename.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>log_root = &amp;#34;/var/log/bip/&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Log format allows you to make log filenames depend on the log line&amp;#39;s
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># attributes. Here&amp;#39;s a list :
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %u -&amp;gt; user name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %n -&amp;gt; network name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %Y -&amp;gt; 4 digit year
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %m -&amp;gt; 2 digit month
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %d -&amp;gt; 2 digit day
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># %c -&amp;gt; destination (#chan, privates, ...)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#log_format = &amp;#34;%n/%Y-%m/%c.%d.log&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Sets the frequency (in seconds) of log syncing (real write to kernel)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>#log_sync_interval = 5;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Makes bip send the log of each channel and privates while
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># you were not connected to the proxy upon connection.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>backlog = true; # enable backlog
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>backlog_lines = 0; # number of lines in backlog, 0 means no limit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>backlog_always = false; # backlog even lines already backlogged
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># If blreset_on_talk talking on an irc network has the same effect of issuing
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># /bip blreset, meaning that stuffed logged before the command won&amp;#39;t be read
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># back on backlog
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>blreset_on_talk = true;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Network definition, a name and server info
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>network {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;freenode&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server { host = &amp;#34;chat.freenode.net&amp;#34;; port = 6667; };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>network {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;blitzed&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server { host = &amp;#34;irc.blitzed.org&amp;#34;; port = 6667; };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Configuration example with one user who connects to two irc networks
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># To use the multi-server feature:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># - define the connections
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># - chose and setup a different login for each connection
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># on your irc client:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># - Use the multi server feature of your client, the server being each time
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># the server where bip is running. In your client setup server password to:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># username:password:connectionname
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># - do not store the password in clear here, use the bipmkpw util to generate
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># a hash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># User structure is grouping information for a given user
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # The name in bip of the user
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # This is used by bip only
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;USERNAME; #BIP User account created with bipmkpw
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> password = &amp;#34;00000000000000000000000000000000000000&amp;#34;; # the hash bipmkpw created
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_check_mode = &amp;#34;none&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # These will be the default for each connections
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> default_nick = &amp;#34;NICKNAME&amp;#34;; #IRC Nick
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> default_user = &amp;#34;IRCUSERNAME&amp;#34;; #IRC User
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> default_realname = &amp;#34;REALNAME&amp;#34;; #IRC Real Name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> admin = true;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> backlog_msg_only = true; # When true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # A user can have mutiple connections to irc networks.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # define a connection:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> connection {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;freenode&amp;#34;; # used by bip only
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> network = &amp;#34;freenode&amp;#34;; # which ircnet to connect to
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # these will be sent to the real IRC server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> user = &amp;#34;IRCUSERNAME&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> realname = &amp;#34;IRCREALNAME&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> password = &amp;#34;serverpassword&amp;#34;; #can be commented out if not needed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Some options:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> follow_nick = true;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ignore_first_nick = false;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> #on_connect_send = &amp;#34;PRIVMSG NickServ :IDENTIFY nspassword&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Autojoined channels:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> channel { name = &amp;#34;#cat&amp;#34;; }; # Join #cat
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> channel { name = &amp;#34;#dog&amp;#34;; backlog = false; }; # Join #dog but don&amp;#39;t backlog it.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> channel { name = &amp;#34;#pig&amp;#34;; key = &amp;#34;01nk01nk&amp;#34;; }; # Join #pig that has a password.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> connection {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;blitzed&amp;#34;; # used by bip only
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> network = &amp;#34;blitzed&amp;#34;; # which ircnet to connect to
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # these will be sent to the real IRC server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> user = &amp;#34;IRCUSERNAME&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> realname = &amp;#34;IRCREALNAME&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> password = &amp;#34;serverpassword&amp;#34;; #can be commented out if not needed
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Some options:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> follow_nick = true;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ignore_first_nick = false;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> #on_connect_send = &amp;#34;PRIVMSG NickServ :IDENTIFY nspassword&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Autojoined channels:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> channel { name = &amp;#34;#bar&amp;#34;; };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> channel { name = &amp;#34;#foo&amp;#34;; };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you require any clarification about what the configuration options do then
+&lt;code>man bip.conf&lt;/code> is your friend.&lt;/p>
+&lt;h2 id="start-bip">Start BIP&lt;/h2>
+&lt;p>Now that BIP is configured, it can be started.&lt;/p>
+&lt;h3 id="debian-1">Debian&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/bip start
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="arch-linux-1">Arch Linux&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl start bip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="client-configuration">Client configuration&lt;/h2>
+&lt;p>I use &lt;a href="http://hexchat.github.io/">HexChat&lt;/a>, but other IRC clients are available.
+I add a new Network to HexChat for each of the IRC networks I defined in
+&lt;code>/etc/bip.conf&lt;/code>. The screen shot below shows how I configure a BIP network in
+HexChat.&lt;/p>
+&lt;p>&lt;img src="BIP-freenode.png" alt="HexChat BIP Configuration" title="Example HexChat Network Configuration to a BIP proxy">&lt;/p>
+&lt;h3 id="password-format">Password format&lt;/h3>
+&lt;p>The Password is the most important and confusing item. &lt;strong>This is for BIP,
+not for any IRC network&lt;/strong>. Remember the unhashed password? That goes here but
+with a twist. The format for the password is:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>bipusername:unhashedbippassword:bipnetwork
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Bipnetwork? What is that? It is from the following section of &lt;code>/etc/bip.conf&lt;/code>
+on the server?&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>network {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name = &amp;#34;freenode&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server { host = &amp;#34;chat.freenode.net&amp;#34;; port = 6667; };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A more practical example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>myuser:S3cr3tP@$$w0rd:freenode
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>And that&amp;rsquo;s it! We are now perpetually connected to IRC, can connect to BIP
+proxy from multiple devices in a completely transparent and seamless manner.
+Moreover, the logs for all channels are saved and automatically rotated on the
+server.&lt;/p>
+&lt;p>If you looking for an alternative to BIP, then try &lt;a href="http://wiki.znc.in/ZNC">ZNC&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>References&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.linaro.org/Resources/HowTo/BIP">https://wiki.linaro.org/Resources/HowTo/BIP&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://nerderati.com/2010/11/perpetual-irc-the-proxy-edition/">http://nerderati.com/2010/11/perpetual-irc-the-proxy-edition/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://stevengorrell.com/bip-irc-proxy/">http://stevengorrell.com/bip-irc-proxy/&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Installing BIP IRC Proxy on Debian Wheezy &amp;amp; Arch Linux</summary></item></channel></rss>

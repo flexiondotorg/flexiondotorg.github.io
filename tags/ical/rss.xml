@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>iCal on Wimpy's World</title><link>https://wimpysworld.com/tags/ical/</link><description>Recent content in iCal on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 09 Jan 2008 23:20:28 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ical/rss.xml" rel="self" type="application/rss+xml"/><item><title>Simple iCal Server</title><link>https://wimpysworld.com/posts/simple-ical-server/</link><pubDate>Wed, 09 Jan 2008 23:20:28 +0000</pubDate><guid>https://wimpysworld.com/posts/simple-ical-server/</guid><description>Creating a self-hosted shared calendar</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>iCal on Wimpy's World</title><link>https://wimpysworld.com/tags/ical/</link><description>Recent content in iCal on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 09 Jan 2008 23:20:28 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ical/rss.xml" rel="self" type="application/rss+xml"/><item><title>Simple iCal Server</title><link>https://wimpysworld.com/posts/simple-ical-server/</link><pubDate>Wed, 09 Jan 2008 23:20:28 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/simple-ical-server/</guid><description>&lt;p>For the longest time I have been meaning to setup a shared calendar for my
+wife I and to use. You see, like most men I have no idea when and where I am
+supposed to be. This is because my wife keeps all this information in her
+filofax and that lives in her handbag, somewhere I never venture. So I have
+spent this evening setting up &lt;a href="http://phpicalendar.net/">PHP iCalendar&lt;/a> on
+&lt;a href="http://www.lighttpd.net/">Lighttpd&lt;/a>, and I am very happy with the results.&lt;/p>
+&lt;p>I have opted to use the &lt;code>publish.php&lt;/code> add-on provided with PHP iCalendar, rather
+than add the WebDAV module to Lighty. For our modest requirements it works
+very well. We now have full read/write access to our calendar by using the
+&lt;a href="http://www.mozilla.org/projects/calendar/">Lightning&lt;/a> extension for
+Thunderbird and read only access via the PHP iCalendar web interface. Viewing
+the calendar via the web interface requires a login first and the calendar
+publishing is protected by Lighty authentication using htdigest.&lt;/p>
+&lt;p>Lastly, because our calendar is a nice open standard I have options as to how I
+might sync it with my mobile phone. More on that when I figure it out.&lt;/p></description><summary>Creating a self-hosted shared calendar</summary></item></channel></rss>

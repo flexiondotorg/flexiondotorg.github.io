@@ -1,1 +1,102 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BIOS on Wimpy's World</title><link>https://wimpysworld.com/tags/bios/</link><description>Recent content in BIOS on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 07 Aug 2013 21:21:09 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/bios/rss.xml" rel="self" type="application/rss+xml"/><item><title>Setting up Open Media Vault on the HP MicroServer N54L</title><link>https://wimpysworld.com/posts/setting-up-open-media-vault-on-the-hp-microserver-n54l/</link><pubDate>Wed, 07 Aug 2013 21:21:09 +0000</pubDate><guid>https://wimpysworld.com/posts/setting-up-open-media-vault-on-the-hp-microserver-n54l/</guid><description>Open Media Vault on the HP ProLiant MicroServer G7 N54L</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BIOS on Wimpy's World</title><link>https://wimpysworld.com/tags/bios/</link><description>Recent content in BIOS on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 07 Aug 2013 21:21:09 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/bios/rss.xml" rel="self" type="application/rss+xml"/><item><title>Setting up Open Media Vault on the HP MicroServer N54L</title><link>https://wimpysworld.com/posts/setting-up-open-media-vault-on-the-hp-microserver-n54l/</link><pubDate>Wed, 07 Aug 2013 21:21:09 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/setting-up-open-media-vault-on-the-hp-microserver-n54l/</guid><description>&lt;p>I&amp;rsquo;ve installed &lt;a href="http://www.openmediavault.org/">Open Media Vault&lt;/a> (OMV)
+on my new &lt;a href="http://www8.hp.com/uk/en/products/proliant-servers/product-detail.html?oid=5336624">HP ProLiant MicroServer G7 N54L&lt;/a>
+to replace my aging, and lackluster, &lt;a href="http://www.readynas.com">ReadyNAS&lt;/a> NV.&lt;/p>
+&lt;p>OpenMediaVault (OMV) is a network attached storage (NAS) solution based on
+&lt;a href="http://www.debian.org">Debian&lt;/a> Linux. At the time of writing OMV 0.5.x is
+based on Debian 6.0 (Squeeze).&lt;/p>
+&lt;p>This blog post is not going to cover the extremely simple OMV installation
+procedure, it assumes OMV 0.5.x is already installed. This post explains
+how to upgrade the kernel, install some addtional plugins and some hackery
+to update &lt;a href="http://www.transmissionbt.com/">Transmission&lt;/a>.&lt;/p>
+&lt;p>This blog post is basically the essential notes I need to recreate my server setup.&lt;/p>
+&lt;h1 id="n54l-custom-bios">N54L Custom BIOS&lt;/h1>
+&lt;p>I&amp;rsquo;ve installed one of the custom BIOS mods for the N54L.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.avforums.com/forums/networking-nas/1521657-hp-n36l-n40l-n54l-microserver-updated-ahci-bios-support.html">HP N36L/N40L/N54L Microserver Updated AHCI BIOS Support&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>I selected the BIOS mod above because the guy who created was an HP engineer and
+this BIOS mod only enables additional features that the N54L can actually support.
+Using this BIOS mod I&amp;rsquo;ve been able to:&lt;/p>
+&lt;ul>
+&lt;li>Enable AHCI for the Optical Disk Drive (ODD) port.&lt;/li>
+&lt;li>Enable AHCI and port multiplier for the the e-SATA port.&lt;/li>
+&lt;li>Make all drives hot-pluggable.&lt;/li>
+&lt;/ul>
+&lt;p>The 250GB hard drive that came with N54L is now relocated in the optical drive day
+and being used as the OS drive, leaving all 4 bays for data.&lt;/p>
+&lt;p>As some point in the future I may want to hook up a 4 bay e-SATA enclosure and this
+BIOS mod makes that possible.&lt;/p>
+&lt;h1 id="open-media-vault">Open Media Vault&lt;/h1>
+&lt;p>Once Open Media Vault is installed, I do the following.&lt;/p>
+&lt;h2 id="enable-ssh">Enable SSH&lt;/h2>
+&lt;p>OMV actually has a really good WebUI that can be used to accomplish most
+update/upgrade tasks but I can&amp;rsquo;t help myself. I must have shell access. From
+the OMV WebUI:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Services -&amp;gt; SSH&lt;/code>
+&lt;ul>
+&lt;li>Put a tick in &lt;code>Enable&lt;/code> and click the &lt;code>OK&lt;/code> button.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="shell-tools">Shell Tools&lt;/h2>
+&lt;p>Things crave when at the a shell.&lt;/p>
+&lt;p>Login to your OMV server as &lt;code>root&lt;/code> using SSH and then do the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install less lsb-release rsync screen tree
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="omv-plugins">OMV Plugins&lt;/h1>
+&lt;p>OMV has a number of built-in plugins and a &lt;a href="http://omv-plugins.org">third party repository of plugins&lt;/a>.&lt;/p>
+&lt;h2 id="built-in-plugins">Built-in Plugins&lt;/h2>
+&lt;p>Update the built-in plugins.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>System -&amp;gt; Plugins&lt;/code>
+&lt;ul>
+&lt;li>Click the &lt;code>Check&lt;/code> icon.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="logical-volume-manager">Logical Volume Manager&lt;/h3>
+&lt;p>I use LVM. There, I said it. Enable the LVM2 plugin as follows from the OMV WebUI.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>System -&amp;gt; Plugins&lt;/code>
+&lt;ul>
+&lt;li>Highlight the &lt;code>openmediavault-lvm2&lt;/code> plugin.&lt;/li>
+&lt;li>Click the &lt;code>Install&lt;/code> icon and then &lt;code>Yes&lt;/code>.&lt;/li>
+&lt;li>When the install is &lt;code>Done ...&lt;/code>, click &lt;code>Close&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="3rd-party-omv-plugins">3rd Party OMV-Plugins&lt;/h2>
+&lt;p>Follow the instructions on the following page to enable the OMV-Extras plugin repository.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://omv-extras.org/simple/index.php?id=how-to-install-omv-extras-plugin">http://omv-extras.org/simple/index.php?id=how-to-install-omv-extras-plugin&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="backports-32-kernel">Backports 3.2 Kernel&lt;/h3>
+&lt;p>I updated the Kernel to 3.2 because it better supports the N54L hardware, in
+particular the embedded graphics controller. The Linux 3.2 kernel can be
+installed via OMV-Extras.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>System -&amp;gt; OMV-Extras.org -&amp;gt; Install Backports 3.2 kernel&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="plex-media-server">Plex Media Server&lt;/h3>
+&lt;p>Plex Media Server is available as a plugin once the OMV-Extras plugin
+repository is enabled. Plex is managed via the OMV WebUI.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Services -&amp;gt; Plex&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="transmission">Transmission&lt;/h3>
+&lt;p>Transmission is available as a plugin once the OMV-Extras plugin repository is
+enabled. Transmission is managed via the OMV WebUI.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Services -&amp;gt; BitTorrent -&amp;gt; Server&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>It&amp;rsquo;s all very straight forward. I use the following block list.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://list.iblocklist.com/?list=bt_level1&amp;amp;fileformat=p2p&amp;amp;archiveformat=gz">http://list.iblocklist.com/?list=bt_level1&amp;amp;fileformat=p2p&amp;amp;archiveformat=gz&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>That pretty much covers the stuff I won&amp;rsquo;t remember in the future. I&amp;rsquo;m considering
+adding LXC and Dropbox in the coming that will require some manual steps.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://thekentishman.wordpress.com/guides-2/open-media-vault-set-up/">http://thekentishman.wordpress.com/guides-2/open-media-vault-set-up/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://myhpmicroserver.com/wiki/Main_Page">http://myhpmicroserver.com/wiki/Main_Page&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Open Media Vault on the HP ProLiant MicroServer G7 N54L</summary></item></channel></rss>

@@ -1,1 +1,124 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Containers on Wimpy's World</title><link>https://wimpysworld.com/tags/containers/</link><description>Recent content in Containers on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/containers/rss.xml" rel="self" type="application/rss+xml"/><item><title>machinespawn</title><link>https://wimpysworld.com/projects/machinespawn/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/machinespawn/</guid><description>Quickly stand up systemd-nspawn containers for development or CI/CD</description></item><item><title>LXC on Arch Linux</title><link>https://wimpysworld.com/posts/lxc-on-arch-linux/</link><pubDate>Tue, 15 Apr 2014 02:44:11 +0000</pubDate><guid>https://wimpysworld.com/posts/lxc-on-arch-linux/</guid><description>A rough guide to running Debian containers on Arch Linux with LXC</description></item><item><title>POLARIS</title><link>https://wimpysworld.com/projects/polaris/</link><pubDate>Tue, 01 May 2007 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/polaris/</guid><description>Disrupting incumbent flight data analysis solutions with Open Source</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Containers on Wimpy's World</title><link>https://wimpysworld.com/tags/containers/</link><description>Recent content in Containers on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/containers/rss.xml" rel="self" type="application/rss+xml"/><item><title>machinespawn</title><link>https://wimpysworld.com/projects/machinespawn/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/machinespawn/</guid><description>&lt;p>&lt;a href="https://github.com/wimpysworld/machinespawn">machinespawn&lt;/a> is a wrapper for
+&lt;code>machinectl&lt;/code> and &lt;code>systemd-nspawn&lt;/code> to creating and managing containers; primarily
+focused at local development environment and CI/CD with a heavy emphasis on
+caching.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://github.com/wimpysworld/machinespawn">machinespawn&lt;/a>&lt;/li>
+&lt;li>Date: October 2022 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>Quickly stand up systemd-nspawn containers for development or CI/CD</summary></item><item><title>LXC on Arch Linux</title><link>https://wimpysworld.com/posts/lxc-on-arch-linux/</link><pubDate>Tue, 15 Apr 2014 02:44:11 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/lxc-on-arch-linux/</guid><description>&lt;p>At some point last year I was experimenting with Linux Containers (LXC) on
+Arch Linux. &lt;strong>I never finished the blog post but somehow it was briefly published
+and then unplublished&lt;/strong>. I have no idea how accurate this blog post is but someone
+did see it and bookmarked it. &lt;strong>They recently emailed me to ask where the blog has
+disappeared to, so here it is in all its unfinished glory&lt;/strong>.&lt;/p>
+&lt;h1 id="install-lxc">Install LXC&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pacman -Syy --needed --noconfirm arch-install-scripts bridge-utils lxc netctl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="netctl-bridge">netctl Bridge&lt;/h1>
+&lt;p>The guest containers will connect to the LAN via a bridged network deviced.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /etc/netctl/bridge
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">Description&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;Bridge&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">Interface&lt;/span>=br0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">Connection&lt;/span>=bridge
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">BindsToInterfaces&lt;/span>=(eth0)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">IP&lt;/span>=dhcp
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">## sets forward delay time&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">FwdDelay&lt;/span>=&lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">## sets max age of hello message&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">#MaxAge=10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Enable and start the bridge.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo netctl enable bridge
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo netctl start bridge
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="creating-containers">Creating Containers&lt;/h1>
+&lt;p>I&amp;rsquo;m only interested in running Arch Linux or Debian containers.&lt;/p>
+&lt;h2 id="container-configurations">Container Configurations&lt;/h2>
+&lt;p>Each container should have a matching configuration file, they look something like this.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>lxc.arch = i686
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.utsname = myhostname
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.network.type = veth
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.network.flags = up
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.network.link = br0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.network.ipv4 = 0.0.0.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lxc.network.name = eth0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>lxc.arch&lt;/code> Architecture for the container, valid options are &lt;code>x86&lt;/code>, &lt;code>i686&lt;/code>, &lt;code>x86_64&lt;/code>, &lt;code>amd64&lt;/code>.&lt;/li>
+&lt;li>&lt;code>lxc.utsman&lt;/code> Container name, should also be used when naming the configuration file&lt;/li>
+&lt;li>&lt;code>lxc_network.type&lt;/code> Type of network virtualization to be used for the
+container. The option &lt;code>veth&lt;/code> defines a peer network device. It is created
+with one side assigned to the container and the other side is attached to a
+bridge by the &lt;code>lxc.network.link&lt;/code> option.&lt;/li>
+&lt;li>&lt;code>lxc_network.flags&lt;/code> Network actions. The value &lt;code>up&lt;/code> in this case activates the network.&lt;/li>
+&lt;li>&lt;code>lxc.network.link&lt;/code> Host network interface to be used for the container.&lt;/li>
+&lt;li>&lt;code>lxc.network.ipv4&lt;/code> IPv4 address assigned to the virtualized interface. Use
+the address 0.0.0.0 to make use of DHCP. Use &lt;code>lxc.network.ipv6&lt;/code> if you need
+IPv6 support.&lt;/li>
+&lt;li>&lt;code>lxc.network.name&lt;/code> Dynamically allocated interface name. This option will
+rename the interface in the container.&lt;/li>
+&lt;/ul>
+&lt;p>More example files can be found in &lt;code>/usr/share/doc/lxc/examples/&lt;/code>.
+Find details about all options via &lt;code>man lxc.conf&lt;/code>.&lt;/p>
+&lt;h2 id="arch-linux">Arch Linux&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-create -t archlinux -n arch-01 -f ~/arch-01.conf -- --packages netctl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I am unable to get DHCP to work for a Arch Linux LXC container, therefore
+my dirty hack is to alway use a statis IP address in the &lt;code>netctl&lt;/code> profile. There
+is also a bug (&lt;a href="https://bugs.archlinux.org/task/35715">#35715&lt;/a>) was helpful in
+narrowing down the problem, but wasn&amp;rsquo;t the solution in my case. Use
+&lt;code>/var/lib/lxc/CONTAIN_NAME/rootfs/etc/netctl/example/ethernet-static&lt;/code> as a template.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo cp /var/lib/lxc/CONTAIN_NAME/rootfs/etc/netctl/example/ethernet-static /var/lib/lxc/CONTAIN_NAME/rootfs/etc/netctl/static
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Modify &lt;code>/var/lib/lxc/CONTAIN_NAME/rootfs/etc/netctl/static&lt;/code> accordingly. Now
+create a hook, with the same name as the &lt;code>netctl&lt;/code> profile.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /var/lib/lxc/CONTAIN_NAME/rootfs/etc/netctl/hooks/static
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/usr/bin/env bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">if&lt;/span> [[ &lt;span style="color:#f00">$(&lt;/span>systemd-detect-virt&lt;span style="color:#f00">)&lt;/span> != none ]]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">BindsToInterfaces&lt;/span>=()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">ForceConnect&lt;/span>=yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the container and enable the &lt;code>netctl&lt;/code> profile.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>netctl enable static
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>netctl start static
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="debian-containers">Debian Containers.&lt;/h2>
+&lt;p>Install &lt;code>debobootstrap&lt;/code> and &lt;code>dpkg&lt;/code> so that Debian containers can be created.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>packer -S --noedit dpkg debootstrap
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="squeeze">Squeeze&lt;/h3>
+&lt;p>Create a Debian container, &lt;code>squeeze&lt;/code> is the default.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-create -t debian -n squeeze-01 -f ~/squeeze-01.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Change the &lt;code>root&lt;/code> password.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>chroot /var/lib/lxc/squeeze/rootfs/ passwd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="wheezy">Wheezy&lt;/h3>
+&lt;p>Much the same as the Squeeze exaple above but use the following template.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/simonvanderveldt/lxc-debian-wheezy-template">https://github.com/simonvanderveldt/lxc-debian-wheezy-template&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="using-containers">Using containers&lt;/h1>
+&lt;p>Start a container&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-start -d -n CONTAINER_NAME
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Connect to the container and log in:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-console -n CONTAINER_NAME
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>To halt a container cleanly by the containers initv-system:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-halt -n CONTAINER_NAME
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Stop and remove your container always with the two steps:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo lxc-stop -n CONTAINER_NAME
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo lxc-destroy -n CONTAINER_NAME
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="http://nurupoga.org/articles/archlinux-on-lxc-with-netctl/">http://nurupoga.org/articles/archlinux-on-lxc-with-netctl/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://bbs.archlinux.org/viewtopic.php?id=164753">https://bbs.archlinux.org/viewtopic.php?id=164753&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://andyortlieb.wordpress.com/2013/03/15/practical-use-of-lxc-in-arch-linux-in-march-of-2013/">http://andyortlieb.wordpress.com/2013/03/15/practical-use-of-lxc-in-arch-linux-in-march-of-2013/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Linux_Containers">https://wiki.archlinux.org/index.php/Linux_Containers&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Lxc-systemd">https://wiki.archlinux.org/index.php/Lxc-systemd&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Netctl">https://wiki.archlinux.org/index.php/Netctl&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.suse.com/documentation/sles11/singlehtml/lxc_quickstart/lxc_quickstart.html">https://www.suse.com/documentation/sles11/singlehtml/lxc_quickstart/lxc_quickstart.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://wiki.gentoo.org/wiki/LXC">http://wiki.gentoo.org/wiki/LXC&lt;/a>&lt;/li>
+&lt;/ul></description><summary>A rough guide to running Debian containers on Arch Linux with LXC</summary></item><item><title>POLARIS</title><link>https://wimpysworld.com/projects/polaris/</link><pubDate>Tue, 01 May 2007 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/polaris/</guid><description>&lt;p>Led the design, development and operation of the POLARIS project at
+&lt;a href="https://flightdataservices.com">Flight Data Services&lt;/a>. An Open Source analysis
+engine developed using Python that can scale to analyse and report on millions
+of commercial aviation flights to comply with global aviation safety regulations.
+Now known as Flight Data Connect and owned by L3HARRIS and apparently no longer
+available as Open Source.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://flightdataservices.com">Flight Data Services&lt;/a>&lt;/li>
+&lt;li>Date: May 2007 - September 2015&lt;/li>
+&lt;li>Role: Manager of IT Operations &amp;amp; Software Engineering&lt;/li>
+&lt;/ul></description><summary>Disrupting incumbent flight data analysis solutions with Open Source</summary></item></channel></rss>

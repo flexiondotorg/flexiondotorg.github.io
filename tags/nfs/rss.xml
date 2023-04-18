@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NFS on Wimpy's World</title><link>https://wimpysworld.com/tags/nfs/</link><description>Recent content in NFS on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Fri, 26 Jul 2013 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/nfs/rss.xml" rel="self" type="application/rss+xml"/><item><title>NFS and CIFS mounts with systemd</title><link>https://wimpysworld.com/posts/nfs-and-cifs-mounts-with-systemd/</link><pubDate>Fri, 26 Jul 2013 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/nfs-and-cifs-mounts-with-systemd/</guid><description>Wait for network when mounting NFS and CIFS volumes</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NFS on Wimpy's World</title><link>https://wimpysworld.com/tags/nfs/</link><description>Recent content in NFS on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Fri, 26 Jul 2013 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/nfs/rss.xml" rel="self" type="application/rss+xml"/><item><title>NFS and CIFS mounts with systemd</title><link>https://wimpysworld.com/posts/nfs-and-cifs-mounts-with-systemd/</link><pubDate>Fri, 26 Jul 2013 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/nfs-and-cifs-mounts-with-systemd/</guid><description>&lt;p>I have an NFS server at home and at work we have Windows (not Samba) servers.
+When I first switched to &lt;code>systemd&lt;/code> I noticed that boot and shutdown were
+seriously delayed while NFS and CIFS were mounted/unmounted. &lt;code>systemd&lt;/code> was
+designed to eliminate those kinds of delays, so I did some research to find
+out how to correctly mount NFS and CIFS using &lt;code>systemd&lt;/code>.&lt;/p>
+&lt;h1 id="systemd-friendly-fstab">systemd friendly fstab&lt;/h1>
+&lt;p>Below are some example &lt;code>/etc/fstab&lt;/code> entries for NFS and CIFS mounts that are
+&lt;code>systemd&lt;/code> friendly, the pertinent mount options are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>noauto,x-systemd.automount,_netdev&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>I found that &lt;code>noauto,x-systemd.automount&lt;/code> improved the boot performance and
+&lt;code>_netdev&lt;/code> improved the shutdown performance.&lt;/p>
+&lt;h2 id="nfs">NFS&lt;/h2>
+&lt;p>This is typically what I have use for mounting my home NAS.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>nfs-server:/SomeData /media/SomeData nfs defaults,noauto,x-systemd.automount,_netdev,noatime 0 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="cifs">CIFS&lt;/h2>
+&lt;p>This is what I use at work to work correctly with Windows Server.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>//cifs-server/MoreData /media/MoreData cifs defaults,noauto,x-systemd.automount,_netdev,rw,noperm,credentials=/home/username/.smb-credentials 0 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The contents of the credentials file looks something like this.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>username=&lt;span style="color:#87ceeb">yourusername&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>password=&lt;span style="color:#87ceeb">yourpassword&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>domain=&lt;span style="color:#87ceeb">COMPANYDOMAIN&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="references">References&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://wiki.archlinux.org/index.php/Systemd#Filesystem_mounts">https://wiki.archlinux.org/index.php/Systemd#Filesystem_mounts&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Wait for network when mounting NFS and CIFS volumes</summary></item></channel></rss>

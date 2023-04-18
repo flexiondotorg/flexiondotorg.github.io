@@ -1,1 +1,109 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Numpy on Wimpy's World</title><link>https://wimpysworld.com/tags/numpy/</link><description>Recent content in Numpy on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 24 Jun 2013 13:11:43 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/numpy/rss.xml" rel="self" type="application/rss+xml"/><item><title>Python Distributions</title><link>https://wimpysworld.com/posts/python-distributions/</link><pubDate>Mon, 24 Jun 2013 13:11:43 +0000</pubDate><guid>https://wimpysworld.com/posts/python-distributions/</guid><description>A selection of Python distributions for data analysis</description></item><item><title>POLARIS</title><link>https://wimpysworld.com/projects/polaris/</link><pubDate>Tue, 01 May 2007 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/polaris/</guid><description>Disrupting incumbent flight data analysis solutions with Open Source</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Numpy on Wimpy's World</title><link>https://wimpysworld.com/tags/numpy/</link><description>Recent content in Numpy on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 24 Jun 2013 13:11:43 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/numpy/rss.xml" rel="self" type="application/rss+xml"/><item><title>Python Distributions</title><link>https://wimpysworld.com/posts/python-distributions/</link><pubDate>Mon, 24 Jun 2013 13:11:43 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/python-distributions/</guid><description>&lt;p>At &lt;a href="http://www.flightdataservices.com">work&lt;/a> I maintain the
+&lt;a href="http://http://jenkins-ci.org/">Jenkins&lt;/a> test and build servers. I&amp;rsquo;m just about
+to update our Windows build servers and thought I&amp;rsquo;d better check the available
+&amp;ldquo;Python Distributions&amp;rdquo; to see if our current choice (the brilliant
+&lt;a href="https://code.google.com/p/pythonxy/">Python(x,y)&lt;/a> is still the most suitable for
+our needs.&lt;/p>
+&lt;p>Our &lt;a href="http://github.com/FlightDataServices">Flight Data Analyzer&lt;/a> makes extensive
+use of &lt;a href="http://www.numpy.org/">Numpy&lt;/a>, &lt;a href="http://www.scipy.org/">Scipy&lt;/a>,
+&lt;a href="http://code.google.com/p/h5py/">h5py&lt;/a> and other analysis tools. So, pre-built
+Python distributions on Windows save me a lot of &lt;del>pain&lt;/del> time. On Linux we roll
+our own of course.&lt;/p>
+&lt;p>What follows is a list of Python Distributions that include Python and the essential
+modules we require.&lt;/p>
+&lt;h2 id="anaconda">Anaconda&lt;/h2>
+&lt;blockquote>
+&lt;p>Completely free enterprise-ready Python distribution for large-scale data
+processing, predictive analytics, and scientific computing.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://store.continuum.io/cshop/anaconda/">https://store.continuum.io/cshop/anaconda/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Heard about this for the first time a couple of days ago. It looks very promising
+with 32-bit and 64-bit flavours and MKL optimised modules are available from the
+reasonably priced Anaconda Accelerate. While I roll my own Python Distribution for
+our Linux build servers, I am rather taken with the idea of using Anaconda on Linux
+and Windows to provide a consistent platform everywhere. I&amp;rsquo;m looking forward to
+testing Anaconda this week.&lt;/p>
+&lt;p>&lt;a href="http://www.continuum.io">Continuum&lt;/a> appear to be taking on Enthought at their
+own game, and good luck to them as they have some really interesting projects
+on the go.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.continuum.io/developer-resources">http://www.continuum.io/developer-resources&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="enthought-canopy">Enthought Canopy&lt;/h2>
+&lt;blockquote>
+&lt;p>Enthought Canopy is a comprehensive Python analysis environment with easy
+installation &amp;amp; updates of the proven Enthought Python distribution - all part
+of a robust platform you can explore, develop and visualize on.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://www.enthought.com/products/canopy/">https://www.enthought.com/products/canopy/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>We used to use Entought EPD and Canopy builds on EPD. However, we decided to
+switch from EPD and consolidate analyst workstation and build server deployments
+around Python(x,y).&lt;/p>
+&lt;p>There were several factors to this decision, but the main issue was that updates
+to the EPD package repositories were slow for some essential modules we use. Canopy
+seems to have inherited package latency from EPD as Numpy is still at 1.6.1 while
+we now require Numpy 1.7.&lt;/p>
+&lt;p>Paid versions of Canopy have MKL optimizations and 64-bit platform support.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.enthought.com/products/canopy/compare-subscriptions/">https://www.enthought.com/products/canopy/compare-subscriptions/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="pythonxy">Python(x,y)&lt;/h2>
+&lt;blockquote>
+&lt;p>Scientific-oriented Python Distribution based on Qt and Spyder.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://code.google.com/p/pythonxy/">https://code.google.com/p/pythonxy/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>This is what we currently use for Windows build servers and analyst workstations.
+The only reason I&amp;rsquo;m conisdering switching is that is it 32-bit only. Other than
+that, I love it and highly recommend it. Python(x,y) doesn&amp;rsquo;t offer MKL optimisations.&lt;/p>
+&lt;h2 id="winpython">WinPython&lt;/h2>
+&lt;blockquote>
+&lt;p>WinPython is a portable scientific Python 2/3 32/64bit distribution for Windows&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="http://code.google.com/p/winpython/">http://code.google.com/p/winpython/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>From the same stable as Python(x,y) but has 32-bit and 64-bit flavours, yummy.
+WinPython includes everything I need so will definately get fully tested this week.&lt;/p>
+&lt;h2 id="portable-python">Portable Python&lt;/h2>
+&lt;blockquote>
+&lt;p>Portable Python is a Python programming language pre-configured to run directly
+from any USB storage device, enabling you to have, at any time, a portable
+programming environment.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="http://portablepython.com/">http://portablepython.com/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Not looked at this in any real detail. Appears to be 32-bit only but does include
+a number of essential packages.&lt;/p>
+&lt;h2 id="unofficial-windows-binaries-for-python-extension-packages">Unofficial Windows Binaries for Python Extension Packages&lt;/h2>
+&lt;blockquote>
+&lt;p>Provides 32- and 64-bit Windows binaries of many scientific open-source extension
+packages for the official CPython distribution of the Python programming language.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">http://www.lfd.uci.edu/~gohlke/pythonlibs/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>OK, so this is not a Python distribution but it is compelling. 32-bit and 64-bit
+platforms are catered for and MKL optimizations are available at no cost. Each
+package needs to be installed individually, which can be seen as both good and bad.
+Good because you only install what you actually require and bad because the initial
+installation is protracted. That said, it is on my evaluation list for this week.&lt;/p>
+&lt;h2 id="anymore">Anymore?&lt;/h2>
+&lt;p>Those are the Python Distributions I&amp;rsquo;m aware of. Are there any others I should
+consider?&lt;/p></description><summary>A selection of Python distributions for data analysis</summary></item><item><title>POLARIS</title><link>https://wimpysworld.com/projects/polaris/</link><pubDate>Tue, 01 May 2007 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/polaris/</guid><description>&lt;p>Led the design, development and operation of the POLARIS project at
+&lt;a href="https://flightdataservices.com">Flight Data Services&lt;/a>. An Open Source analysis
+engine developed using Python that can scale to analyse and report on millions
+of commercial aviation flights to comply with global aviation safety regulations.
+Now known as Flight Data Connect and owned by L3HARRIS and apparently no longer
+available as Open Source.&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://flightdataservices.com">Flight Data Services&lt;/a>&lt;/li>
+&lt;li>Date: May 2007 - September 2015&lt;/li>
+&lt;li>Role: Manager of IT Operations &amp;amp; Software Engineering&lt;/li>
+&lt;/ul></description><summary>Disrupting incumbent flight data analysis solutions with Open Source</summary></item></channel></rss>

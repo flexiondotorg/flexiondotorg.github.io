@@ -1,1 +1,117 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CUPS on Wimpy's World</title><link>https://wimpysworld.com/tags/cups/</link><description>Recent content in CUPS on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 05 Jul 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/cups/rss.xml" rel="self" type="application/rss+xml"/><item><title>Headless cloudprint server on Debian for MFC-7360N</title><link>https://wimpysworld.com/posts/headless-cloudprint-server-on-debian-for-mfc-7360n/</link><pubDate>Sat, 05 Jul 2014 12:00:00 +0000</pubDate><guid>https://wimpysworld.com/posts/headless-cloudprint-server-on-debian-for-mfc-7360n/</guid><description>Create a headless Cloudprint server on Debian for MFC-7360N</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CUPS on Wimpy's World</title><link>https://wimpysworld.com/tags/cups/</link><description>Recent content in CUPS on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 05 Jul 2014 12:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/cups/rss.xml" rel="self" type="application/rss+xml"/><item><title>Headless cloudprint server on Debian for MFC-7360N</title><link>https://wimpysworld.com/posts/headless-cloudprint-server-on-debian-for-mfc-7360n/</link><pubDate>Sat, 05 Jul 2014 12:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/headless-cloudprint-server-on-debian-for-mfc-7360n/</guid><description>&lt;p>I have a Brother MFC-7360N printer at home and there is also one at work.
+I wanted to to get &lt;a href="http://www.google.co.uk/cloudprint/learn/">Cloudprint&lt;/a>
+working with Android devices rather than use the Android app Brother
+provide, which is great when it works but deeply frustrating (for my wife)
+when it doesn&amp;rsquo;t.&lt;/p>
+&lt;p>What I describe below is how to Cloudprint enable &amp;ldquo;Classic printers&amp;rdquo; using
+Debian Wheezy.&lt;/p>
+&lt;h1 id="install-cups">Install CUPS&lt;/h1>
+&lt;p>Install CUPS and the Cloudprint requirements.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install cups python-cups python-daemon python-pkg-resources
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="install-the-mfc-7360n-drivers">Install the MFC-7360N Drivers&lt;/h1>
+&lt;p>I used the URL below to access the &lt;code>.deb&lt;/code> files required.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://support.brother.com/g/b/downloadlist.aspx?c=gb&amp;amp;lang=en&amp;amp;prod=mfc7360n_all&amp;amp;os=128">http://support.brother.com/g/b/downloadlist.aspx?c=gb&amp;amp;lang=en&amp;amp;prod=mfc7360n_all&amp;amp;os=128&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>If you&amp;rsquo;re running a 64-bit Debian, then install &lt;code>ia32-libs&lt;/code> first.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install ia32-libs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Download and install the MFC-7360N drivers.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -c http://download.brother.com/welcome/dlf006237/mfc7360nlpr-2.1.0-1.i386.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -c http://download.brother.com/welcome/dlf006239/cupswrapperMFC7360N-2.0.4-2.i386.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i --force-all mfc7360nlpr-2.1.0-1.i386.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i --force-all cupswrapperMFC7360N-2.0.4-2.i386.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="configure-cups">Configure CUPS&lt;/h2>
+&lt;p>Edit the CUPS configuration file commonly located in &lt;code>/etc/cups/cupsd.conf&lt;/code>
+and make the section that looks like this&amp;hellip;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span># Only listen for connections from the local machine.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Listen localhost:631
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Listen /var/run/cups/cups.sock
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&amp;hellip;is changed to look like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span># Listen on all interfaces
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Port 631
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Listen /var/run/cups/cups.sock
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Modify the Apache specific directives to allow connections from everywhere as
+well. Find the follow section in &lt;code>/etc/cups/cupsd.conf&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-apacheconf" data-lang="apacheconf">&lt;span style="display:flex;">&lt;span>&amp;lt;Location &lt;span style="color:#87ceeb">/&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Restrict access to the server...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Order allow,deny
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/Location&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Restrict access to the admin pages...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;Location &lt;span style="color:#87ceeb">/admin&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Order allow,deny
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/Location&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Restrict access to the configuration files...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;Location &lt;span style="color:#87ceeb">/admin/conf&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> AuthType Default
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Require &lt;span style="color:#f00">user&lt;/span> @SYSTEM
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Order allow,deny
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/Location&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add &lt;code>Allow All&lt;/code> after each &lt;code>Order allow,deny&lt;/code> so it looks like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-apacheconf" data-lang="apacheconf">&lt;span style="display:flex;">&lt;span>&amp;lt;Location &lt;span style="color:#87ceeb">/&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Restrict access to the server...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Order allow,deny
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Allow &lt;span style="color:#f00">All&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/Location&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Restrict access to the admin pages...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;Location &lt;span style="color:#87ceeb">/admin&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Order allow,deny
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Allow &lt;span style="color:#f00">All&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/Location&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Restrict access to the configuration files...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;Location &lt;span style="color:#87ceeb">/admin/conf&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> AuthType Default
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Require &lt;span style="color:#f00">user&lt;/span> @SYSTEM
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Order allow,deny
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Allow &lt;span style="color:#f00">All&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/Location&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="add-the-mfc-7360n-to-cups">Add the MFC-7360N to CUPS&lt;/h2>
+&lt;p>If your MFC-7360N is connected to your server via USB then you should be
+all set. Login to the CUPS administration interface on &lt;a href="http://yourserver:631">http://yourserver:631&lt;/a>
+and modify the MFC7360N printer (if one was created when the drivers where installed)
+then &lt;strong>make sure you can print a test page via CUPS before proceeding.&lt;/strong>&lt;/p>
+&lt;h1 id="install-cloudprint-and-cloudprint-service">Install Cloudprint and Cloudprint service&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -c http://davesteele.github.io/cloudprint-service/deb/cloudprint_0.11-5.1_all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -c http://davesteele.github.io/cloudprint-service/deb/cloudprint-service_0.11-5.1_all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i cloudprint_0.11-5.1_all.deb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i cloudprint-service_0.11-5.1_all.deb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="authenticate">Authenticate&lt;/h2>
+&lt;p>Google accounts with 2 step verification enabled need to use an
+application-specific password.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.google.com/support/accounts/bin/static.py?page=guide.cs&amp;amp;guide=1056283&amp;amp;topic=1056286">http://www.google.com/support/accounts/bin/static.py?page=guide.cs&amp;amp;guide=1056283&amp;amp;topic=1056286&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Authenticate &lt;code>cloudprintd&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service cloudprintd login
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You should see something like this.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Accounts with 2 factor authentication require an application-specific password
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Google username: you@example.org
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Password:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Added Printer MFC7360N
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the Cloudprint daemon.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service cloudprintd start
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If everything is working correctly you should see your printer the
+following page:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.google.com/cloudprint#printers">https://www.google.com/cloudprint#printers&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="printing-from-mobile-devices">Printing from mobile devices&lt;/h1>
+&lt;h2 id="android">Android&lt;/h2>
+&lt;p>Add the &lt;a href="https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint">Google Cloud Print&lt;/a>
+app to Android devices and you&amp;rsquo;ll be able to configure your printer
+preferences and print from Android..&lt;/p>
+&lt;h2 id="chrome-and-chromium">Chrome and Chromium&lt;/h2>
+&lt;p>When printing from within Google Chrome and Chromium you can now select
+Cloudprint as the destination and choose your printer.&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/armooo/cloudprint">https://github.com/armooo/cloudprint&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://davesteele.github.io/cloudprint-service/">http://davesteele.github.io/cloudprint-service/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/davesteele/cloudprint-service">https://github.com/davesteele/cloudprint-service&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://injustfiveminutes.com/2013/11/07/remote-access-to-cups-admin-inter/">http://injustfiveminutes.com/2013/11/07/remote-access-to-cups-admin-inter/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://ubuntuforums.org/showthread.php?t=1794179">http://ubuntuforums.org/showthread.php?t=1794179&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://support.google.com/a/answer/2906017?hl=en">https://support.google.com/a/answer/2906017?hl=en&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Create a headless Cloudprint server on Debian for MFC-7360N</summary></item></channel></rss>

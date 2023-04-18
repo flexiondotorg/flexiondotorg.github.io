@@ -1,1 +1,112 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JRE on Wimpy's World</title><link>https://wimpysworld.com/tags/jre/</link><description>Recent content in JRE on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 16 Jan 2012 13:20:05 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/jre/rss.xml" rel="self" type="application/rss+xml"/><item><title>Install Sun Java 6 JRE and JDK from .deb packages</title><link>https://wimpysworld.com/posts/install-sun-java-6-jre-and-jdk-from-deb-packages/</link><pubDate>Mon, 16 Jan 2012 13:20:05 +0000</pubDate><guid>https://wimpysworld.com/posts/install-sun-java-6-jre-and-jdk-from-deb-packages/</guid><description>An alternative approach to install Sun Java 6 on Ubuntu</description></item><item><title>Sun Java 1.6.0.30 packages for Ubuntu</title><link>https://wimpysworld.com/posts/sun-java-1.6.0.30-packages-for-ubuntu/</link><pubDate>Tue, 10 Jan 2012 10:53:50 +0000</pubDate><guid>https://wimpysworld.com/posts/sun-java-1.6.0.30-packages-for-ubuntu/</guid><description>Get Sun Java 1.6.0 packages from a PPA</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JRE on Wimpy's World</title><link>https://wimpysworld.com/tags/jre/</link><description>Recent content in JRE on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 16 Jan 2012 13:20:05 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/jre/rss.xml" rel="self" type="application/rss+xml"/><item><title>Install Sun Java 6 JRE and JDK from .deb packages</title><link>https://wimpysworld.com/posts/install-sun-java-6-jre-and-jdk-from-deb-packages/</link><pubDate>Mon, 16 Jan 2012 13:20:05 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/install-sun-java-6-jre-and-jdk-from-deb-packages/</guid><description>&lt;p>&lt;a href="https://canonical.com">Canonical&lt;/a> disabled my Java PPA at the end of last week.
+So I&amp;rsquo;ve developed another solution for installing Java on Ubuntu which doesn&amp;rsquo;t
+infringe any copyrights, licenses, terms of use or CoC&amp;rsquo;s. However, by running
+this script to download Java you acknowledge that you have read and accepted the
+terms of the Oracle end user license agreement.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.oracle.com/technetwork/java/javase/terms/license/">http://www.oracle.com/technetwork/java/javase/terms/license/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>My script is an automated wrapper for &lt;a href="https://github.com/rraptorr/sun-java6">Janusz Dziemidowicz Debian packaging
+scripts for Java 6&lt;/a>. My new script
+simply downloads the Java binary installers from Oracle, builds the .deb
+packages locally on your computer and creates a local &amp;lsquo;apt&amp;rsquo; repository for
+them. Once my script has been executed you can then &amp;lsquo;apt-get&amp;rsquo; install/upgrade
+Java 6 from your local repository. Packages are compatible with &amp;ldquo;official&amp;rdquo;
+Ubuntu ones and pre-existing Java 6 packages will upgrade cleanly. You can
+find the script and full usage instructions on github.&lt;/p>
+&lt;div class="text-center">
+&lt;iframe src="http://ghbtns.com/github-btn.html?user=flexiondotorg&amp;repo=oab-java6&amp;type=watch&amp;count=true&amp;size=large"
+allowtransparency="true" frameborder="0" scrolling="0" width="260px" height="30px">&lt;/iframe>
+&lt;iframe src="http://ghbtns.com/github-btn.html?user=flexiondotorg&amp;repo=oab-java6&amp;type=fork&amp;count=true&amp;size=large"
+allowtransparency="true" frameborder="0" scrolling="0" width="260px" height="30px">&lt;/iframe>
+&lt;/div>
+&lt;p>Please read the &lt;a href="https://github.com/flexiondotorg/oab-java6/blob/master/README.rst">README&lt;/a>
+file for a more detailed explanation of how the script works and how to use it.
+If anyone has any problems, then please submit a ticket on my
+&lt;a href="https://github.com/flexiondotorg/oab-java6/issues">Issue Tracker&lt;/a>.&lt;/p></description><summary>An alternative approach to install Sun Java 6 on Ubuntu</summary></item><item><title>Sun Java 1.6.0.30 packages for Ubuntu</title><link>https://wimpysworld.com/posts/sun-java-1.6.0.30-packages-for-ubuntu/</link><pubDate>Tue, 10 Jan 2012 10:53:50 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/sun-java-1.6.0.30-packages-for-ubuntu/</guid><description>&lt;h2 id="update-friday-13th-january-2012">Update Friday 13th January 2012&lt;/h2>
+&lt;p>&lt;strong>My Java PPA has been disabled by Canonical, possibly because they violate the Ubuntu CoC and PPA terms of use, as Jef Spaleta noted in the comments below, although I&amp;rsquo;ve had no communication from Canonical at this time. I&amp;rsquo;m preparing an alternative solution, for those of you who need Sun Java 6, that doesn&amp;rsquo;t violate and copyrights, CoCs or terms of use. A new blog post will be made when that alternate solution is available.&lt;/strong>&lt;/p>
+&lt;h2 id="update-monday-16th-january-2012">Update Monday 16th January 2012&lt;/h2>
+&lt;p>&lt;strong>I&amp;rsquo;ve developed another solution for installing Java 6u30 on Ubuntu which
+doesn&amp;rsquo;t infringe any copyrights, licenses, terms of use or CoC&amp;rsquo;s.&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="2012-01-install-sun-java-6-jre-jdk-from-deb-packages.html">Install Sun Java 6 JRE and JDK from .deb packages&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;del>Sun Java 6 packages are being removed from Ubuntu in the near future for the
+following reasons:&lt;/del>&lt;/p>
+&lt;ul>
+&lt;li>&lt;del>As of August 24th 2011, Canonical no longer have permission to redistribute
+new Java packages as Oracle has retired the &amp;ldquo;Operating System Distributor
+License for Java&amp;rdquo;.&lt;/del>&lt;/li>
+&lt;li>&lt;del>Oracle has published an advisory about security issues in the version of
+Java currently in the partner archive. Some of these issues are currently
+being exploited in the wild.&lt;/del>&lt;/li>
+&lt;li>&lt;del>Due to the severity of the security risk, &lt;strong>Canonical released a security
+update for the Sun JDK browser plugin which disables the plugin on all machines&lt;/strong>.&lt;/del>&lt;/li>
+&lt;li>&lt;del>In the near future, &lt;strong>Canonical will remove all Sun JDK packages from the
+Partner archive&lt;/strong>. This will be accomplished by pushing empty packages to
+the archive, so that the Sun JDK will be removed from all users machines
+when they do a software update. &lt;strong>Users of these packages who have not
+migrated to an alternative solution will experience failures after the
+package updates have removed Oracle Java from the system&lt;/strong>.&lt;/del>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;del>See the full Canonical notice below.&lt;/del>&lt;/p>
+&lt;ul>
+&lt;li>&lt;del>&lt;a href="https://lists.ubuntu.com/archives/ubuntu-security-announce/2011-December/001528.html">https://lists.ubuntu.com/archives/ubuntu-security-announce/2011-December/001528.html&lt;/a>&lt;/del>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;del>My personal motivations for creating this PPA are as follows:&lt;/del>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;del>I require Sun Java 6 for two enterprise applications we use at work. OpenJDK is not fully compatible.&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;del>I require Sun Java 6 for two desktop applications at home (so does my father-in-law). OpenJDK not compatible in one instance and not fully compatible in the other.&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;del>I require Sun Java 6 browser plugin for a web applications I use at home. OpenJDK is not compatible.&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;del>A friend of mine requires Sun Java 6 for building AOSP from source. OpenJDK is not compatible.&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;del>Some friends of mine play Minecraft, apparently this will help ;-)&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;del>Janusz Dziemidowicz made it easy for me - &lt;a href="https://github.com/rraptorr/sun-java6">https://github.com/rraptorr/sun-java6&lt;/a>&lt;/del>
+&lt;del>The PPA currently publishes Sun Java 6 1.6.0.30 for:&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;del>Lucid i386/amd64&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;del>Maverick i386/amd64&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;del>Natty i386/amd64&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;del>Oneiric i386/amd64&lt;/del>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;del>Precise i386. However, amd64 is failing to build on Precise. I will try and fix this in due course.&lt;/del>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;del>To Sun Java 6 , previously installed via packages, do the following.&lt;/del>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:flexiondotorg/java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get dist-upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;del>To install Sun Java 6 JRE do the following:&lt;/del>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:flexiondotorg/java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install sun-java6-jre
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;del>To install Sun Java 6 browser plugin do the following:&lt;/del>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:flexiondotorg/java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install sun-java6-plugin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;del>To install Sun Java 6 JDK do the following:&lt;/del>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-add-repository ppa:flexiondotorg/java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install sun-java6-jdk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;del>You can take a look a round my PPA from the URL below:&lt;/del>&lt;/p>
+&lt;ul>
+&lt;li>&lt;del>&lt;a href="https://launchpad.net/~flexiondotorg/+archive/java">https://launchpad.net/~flexiondotorg/+archive/java&lt;/a>&lt;/del>&lt;/li>
+&lt;/ul></description><summary>Get Sun Java 1.6.0 packages from a PPA</summary></item></channel></rss>

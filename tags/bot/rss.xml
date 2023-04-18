@@ -1,1 +1,145 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bot on Wimpy's World</title><link>https://wimpysworld.com/tags/bot/</link><description>Recent content in Bot on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sat, 09 Aug 2014 11:11:11 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/bot/rss.xml" rel="self" type="application/rss+xml"/><item><title>Installing Willie IRC Bot on Debian</title><link>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</link><pubDate>Sat, 09 Aug 2014 11:11:11 +0000</pubDate><guid>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</guid><description>How I Installed Willie IRC Bot on Debian Wheezy</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bot on Wimpy's World</title><link>https://wimpysworld.com/tags/bot/</link><description>Recent content in Bot on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sat, 09 Aug 2014 11:11:11 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/bot/rss.xml" rel="self" type="application/rss+xml"/><item><title>Installing Willie IRC Bot on Debian</title><link>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</link><pubDate>Sat, 09 Aug 2014 11:11:11 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/installing-willie-irc-bot-on-debian/</guid><description>&lt;p>&lt;a href="http://willie.dftba.net/">Willie&lt;/a> is an IRC bot written in &lt;a href="http://www.python.org">Python&lt;/a>
+that I&amp;rsquo;ve recently started using. This blog post describes how to install Willie
+on Debian and as usual I will be using &lt;code>virtualenv&lt;/code> to isolate this Python
+application from the rest of the system.&lt;/p>
+&lt;h2 id="installing-python">Installing Python&lt;/h2>
+&lt;p>First you&amp;rsquo;ll need Python.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install libpython2.7 python2.7 python2.7-dev python2.7-minimal
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The following will also be required to enable all the features Willie supports.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install enchant python2.7-dev libxslt1-dev libxml2-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Remove any &lt;code>apt&lt;/code> installed Python packages that we are about to replace.
+The versions of these packages in the Debian repositories soon get stale.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get purge python-setuptools python-virtualenv python-pip python-profiler
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install &lt;code>pip&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://bootstrap.pypa.io/get-pip.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo python2.7 get-pip.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;code>pip&lt;/code> to install &lt;code>virtualenv&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo pip install virtualenv --upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="the-snakepit">The Snakepit&lt;/h2>
+&lt;p>Create a &amp;ldquo;Snakepit&amp;rdquo; directory for storing all the Python virtual
+environments.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir ~/Snakepit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-virtualenv-for-willie">Create a virtualenv for Willie&lt;/h2>
+&lt;p>The following will create a new virtualenv called &lt;code>willie&lt;/code> using Python
+2.7 as the interpreter.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>virtualenv -p /usr/bin/python2.7 ~/Snakepit/willie
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="working-on-a-virtualenv">Working on a virtualenv&lt;/h3>
+&lt;p>Activate the virtualenv for Willie.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>source ~/Snakepit/willie/bin/activate
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Your shell prompt will change, something like &lt;code>(willie)user@host:~$&lt;/code>,
+while a virtualenv is being worked on to indicate which virtualenv is
+currently active.&lt;/p>
+&lt;p>While working on a virtualenv you can &lt;code>pip&lt;/code> install what you need or
+manually install any Python libraries safe in the knowledge you will
+not upset any other virtualenvs or the global packages in the process.
+Very useful for developing a new branch which may have different
+library requirements than the current stable release.&lt;/p>
+&lt;p>When you are finished working in a virtualenv you can deactivate it by
+simply executing &lt;code>deactivate&lt;/code>.&lt;/p>
+&lt;h2 id="install-willie">Install Willie&lt;/h2>
+&lt;p>I&amp;rsquo;ve decided to use Python 2.7 to run Willie and therefore have to
+install &lt;code>backports.ssl_match_hostname&lt;/code> which is not required if you use
+Python 3.3.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install willie backports.ssl_match_hostname
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="additional-functionality">Additional functionality&lt;/h3>
+&lt;p>Willie has no external dependencies, besides Python. However, some of
+the modules do have external dependencies. So install the following
+Python modules so that I can make use of everything Willie can do.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install feedparser pytz lxml praw pyenchant pygeoip ipython --upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="configure-willie">Configure Willie&lt;/h2>
+&lt;p>I am not going to explain to how to configure Willie because all that
+good stuff is very well documented by the project.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/embolalia/willie/wiki">https://github.com/embolalia/willie/wiki&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>But for reference, my &lt;code>default.cfg&lt;/code> looks something like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ini" data-lang="ini">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[core]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nick = &lt;span style="color:#87ceeb">nicofyourbot&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user = &lt;span style="color:#87ceeb">nicofyourbot&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>name = &lt;span style="color:#87ceeb">Give You Bot A Name&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>host = &lt;span style="color:#87ceeb">chat.freenode.net&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>use_ssl = &lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>verify_ssl = &lt;span style="color:#87ceeb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>port = &lt;span style="color:#87ceeb">6697&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>owner = &lt;span style="color:#87ceeb">nicofthebotowner&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>channels = &lt;span style="color:#87ceeb">#example&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nickserv_password = &lt;span style="color:#87ceeb">************&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>prefix = &lt;span style="color:#87ceeb">\.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>timeout = &lt;span style="color:#87ceeb">120&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">[db]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>userdb_type = &lt;span style="color:#87ceeb">sqlite&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>userdb_file = &lt;span style="color:#87ceeb">/home/username/.willie/willie.db&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="willie-as-a-daemon">Willie as a daemon&lt;/h2>
+&lt;p>From this point on I assume you&amp;rsquo;ve completed the first run
+configuration of Willie and have &lt;code>.willie/default.cfg&lt;/code> in your home
+directory.&lt;/p>
+&lt;p>Add the following to &lt;code>/etc/init.d/willie&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>&lt;span style="color:#0f0">### BEGIN INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Provides: willie&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Start: $local_fs $remote_fs&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Required-Stop: $local_fs $remote_fs&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Should-Start: $network&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Should-Stop: $network&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Start: 2 3 4 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Default-Stop: 0 1 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Short-Description: Willie IRC Bot.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Description: Start and stops the Willie IRC bot for a given user.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0">### END INIT INFO&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># NOTE! Replace with the user you want to run Willie.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">willie_USER&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;yourusername&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">HOMEDIR&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>getent passwd &lt;span style="color:#eedd82">$willie_USER&lt;/span> | awk -F: &lt;span style="color:#87ceeb">&amp;#39;{print $6}&amp;#39;&lt;/span>&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">DAEMON&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">/Snakepit/willie/bin/willie&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">CONFIG&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HOMEDIR&lt;/span>&lt;span style="color:#87ceeb">/.willie/default.cfg&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>startd() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -f &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">CONFIG&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Starting Willie for &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start-stop-daemon -c &lt;span style="color:#eedd82">$willie_USER&lt;/span> -u &lt;span style="color:#eedd82">$willie_USER&lt;/span> -x &lt;span style="color:#eedd82">$DAEMON&lt;/span> -S -- --config &lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">CONFIG&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span> --fork --quiet
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Couldn&amp;#39;t start Willie for &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb"> (no &lt;/span>&lt;span style="color:#eedd82">$CONFIG&lt;/span>&lt;span style="color:#87ceeb"> found)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>stopd() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Stopping Willie for &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">willie_PID&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>pgrep -fu &lt;span style="color:#eedd82">$willie_USER&lt;/span> &lt;span style="color:#eedd82">$DAEMON&lt;/span>&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$willie_PID&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Willie for USER &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kill -15 &lt;span style="color:#eedd82">$willie_PID&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>status() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#eedd82">willie_PID&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>pgrep -fu &lt;span style="color:#eedd82">$willie_USER&lt;/span> &lt;span style="color:#eedd82">$DAEMON&lt;/span>&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -z &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$willie_PID&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Willie for USER &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">: not running.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#87ceeb">&amp;#34;Willie for USER &lt;/span>&lt;span style="color:#eedd82">$willie_USER&lt;/span>&lt;span style="color:#87ceeb">: running (pid &lt;/span>&lt;span style="color:#eedd82">$willie_PID&lt;/span>&lt;span style="color:#87ceeb">)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">case&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$1&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> in
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> start) startd ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> stop) stopd ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart|reload|force-reload) stopd &amp;amp;&amp;amp; startd ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> status) status ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> *) echo &lt;span style="color:#87ceeb">&amp;#34;Usage: /etc/init.d/willie {start|stop|reload|force-reload|restart|status}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit &lt;span style="color:#f60">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">esac&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>exit &lt;span style="color:#f60">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Set the permissions.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo chmod +x /etc/init.d/willie
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Check that you can start/stop Willie.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/willie start
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/willie status
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo /etc/init.d/willie stop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add &lt;code>willie&lt;/code> to the startup/shutdown sequence.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo update-rc.d willie defaults
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>And that&amp;rsquo;s it. Willie is now running as a daemon inside a virtualenv.&lt;/p></description><summary>How I Installed Willie IRC Bot on Debian Wheezy</summary></item></channel></rss>

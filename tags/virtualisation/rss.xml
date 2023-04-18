@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Virtualisation on Wimpy's World</title><link>https://wimpysworld.com/tags/virtualisation/</link><description>Recent content in Virtualisation on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/virtualisation/rss.xml" rel="self" type="application/rss+xml"/><item><title>Quickemu</title><link>https://wimpysworld.com/projects/quickemu/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://wimpysworld.com/projects/quickemu/</guid><description>Quickly create and run optimised Windows, macOS and Linux virtual machines</description></item><item><title>VMWare to VirtualBox Migration</title><link>https://wimpysworld.com/posts/vmware-to-virtualbox-migration/</link><pubDate>Mon, 19 Jan 2009 17:52:49 +0000</pubDate><guid>https://wimpysworld.com/posts/vmware-to-virtualbox-migration/</guid><description>I switched from VMWare to VirtualBox</description></item><item><title>QEMU How-To Wiki Thingy</title><link>https://wimpysworld.com/posts/qemu-how-to-wiki-thingy/</link><pubDate>Mon, 05 Sep 2005 10:07:34 +0000</pubDate><guid>https://wimpysworld.com/posts/qemu-how-to-wiki-thingy/</guid><description>Sharing knowledge about QEMU via a Wiki</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Virtualisation on Wimpy's World</title><link>https://wimpysworld.com/tags/virtualisation/</link><description>Recent content in Virtualisation on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/virtualisation/rss.xml" rel="self" type="application/rss+xml"/><item><title>Quickemu</title><link>https://wimpysworld.com/projects/quickemu/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/quickemu/</guid><description>&lt;p>Quickly create and run highly optimised desktop virtual machines for Linux,
+macOS and Windows; with just two commands. You decide what operating system you
+want to run and &lt;a href="https://github.com/quickemu-project/quickemu">Quickemu&lt;/a> will figure out the best way to do it for you&lt;/p>
+&lt;ul>
+&lt;li>Organisation: &lt;a href="https://github.com/quickemu-project">Quickemu Project&lt;/a>&lt;/li>
+&lt;li>Date: March 2020 - date&lt;/li>
+&lt;li>Role: Project Lead&lt;/li>
+&lt;/ul></description><summary>Quickly create and run optimised Windows, macOS and Linux virtual machines</summary></item><item><title>VMWare to VirtualBox Migration</title><link>https://wimpysworld.com/posts/vmware-to-virtualbox-migration/</link><pubDate>Mon, 19 Jan 2009 17:52:49 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/vmware-to-virtualbox-migration/</guid><description>&lt;p>Last week I switched from &lt;a href="http://www.vmware.com/">VMware&lt;/a> to
+&lt;a href="http://www.virtualbox.com/">VirtualBox&lt;/a> at home. Why? Well, hack value
+mostly and I also wanted to learn more about VirtualBox having never used it
+before.&lt;/p>
+&lt;p>Bottom line, for home use it suits me very nicely and is far easier to
+get installed and running when compared to VMware Server which almost always
+required patching. The VirtualBox and Guest Additions (think VMWare Tools)
+installers both worked without a hitch. I even migrated my existing VMware
+Linux guests to VirtualBox, again everything went smoothly and my existing
+&lt;code>.vmdk&lt;/code> disks worked just fine.&lt;/p></description><summary>I switched from VMWare to VirtualBox</summary></item><item><title>QEMU How-To Wiki Thingy</title><link>https://wimpysworld.com/posts/qemu-how-to-wiki-thingy/</link><pubDate>Mon, 05 Sep 2005 10:07:34 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/qemu-how-to-wiki-thingy/</guid><description>&lt;p>&lt;a href="http://use.perl.org/~ajt/journal/">Adam Tricket&lt;/a> got a few people interested
+in &lt;a href="http://fabrice.bellard.free.fr/qemu/index.html">QEMU&lt;/a> at the HantsLUG
+meeting on Saturday 3rd September 2005. Having recently discovered the wonders
+of QEMU myself I couldn&amp;rsquo;t help but get involved in the conversation. Me and my
+big mouth! I somehow managed to lumber myself with the job of writing a Wiki
+page about QEMU for the HantsLUG website. The page is more or less useful
+now and you can read it here&amp;hellip;&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.hants.lug.org.uk/cgi-bin/wiki.pl?LinuxHints/QemuEmulation">LinuxHints/QemuEmulation&lt;/a>&lt;/li>
+&lt;/ul></description><summary>Sharing knowledge about QEMU via a Wiki</summary></item></channel></rss>
