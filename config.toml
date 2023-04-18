@@ -102,7 +102,7 @@ enableRobotsTXT = true
   icon      = "fa-podcast"
   icon_pack = "fas"
   label     = "Podcast"
-  url       = "https://linuxdowntime.com"
+  url       = "https://linuxmatters.sh"
 
 [related]
   includeNewer = true
