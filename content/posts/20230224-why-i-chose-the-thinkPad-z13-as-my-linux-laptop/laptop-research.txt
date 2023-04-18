@@ -1,0 +1,182 @@
+My overriding needs are battery endurance and not a chonker. 14" to 16" screen.
+
+- Low watt CPU under 35W. Ideally AMD but 12th Gen Intel if need be
+- 1920x1200 matte display. No UHD to preserve battery. Touch is a nice to have. 1920x1080 if need be.
+- No discrete GPU. Again for battery endurance.
+- USB-C charging.
+- 64GB RAM option.
+- Ideally dual NVME SSD. Or 2TB or more option.
+- Linux pre-install option, to demonstrate Linux is fully supported.
+- Decent keyboard/trackpad.
+- Coreboot or Intel ME/vPro disabled
+
+## Lenovo
+
+### ThinkPad Z16 Gen 1 - £2,250.40
+16" 1.95KG
+Numpad
+
+### ThinkPad Z13 Gen 1
+
+#### Linux
+
+https://mjg59.dreamwidth.org/59931.html
+https://download.lenovo.com/pccbbs/mobiles_pdf/Enable_Secure_Boot_for_Linux_Secured-core_PCs.pdf
+https://www.phoronix.com/news/Lenovo-Pluton-Windows-Default
+https://liliputing.com/lilbits-booting-linux-on-some-lenovo-laptops-requires-an-extra-step-macintosh-pi-and-fanless-jasper-lake-mini-pcs/
+
+
+https://forums.lenovo.com/t5/Fedora/How-to-configure-the-Z13-Z16-trackpad-in-Linux/m-p/5169841
+	- Ubuntu 22.04. WiFi works in live session. Fingerprint reader works.
+
+https://www.reddit.com/r/thinkpad/comments/wdldry/z13_first_impressions_as_a_linux_user/
+ - How to fix Quectel EM05-G wake from resume
+ - Just shout AT+CFUN=1,1 in the modem's serial port and it will restart and work again.
+ - Webcam shutter key works out of the box and seems to be a hardware switch anyway.
+ - WWAN config - https://www.reddit.com/r/thinkpad/comments/wdldry/comment/ilqfgs6/?context=3
+ - fcc-unlock WWAN - https://www.reddit.com/r/thinkpad/comments/wdldry/comment/iv1hsl1/?context=3
+
+http://null.rip/2022/09/linux-on-the-thinkpad-z13-all-amd-almost-there/
+ - Lot of useful power state and suspend information
+ - WiFi wake from suspend performance workaround
+ - Posted to Lenovo Forums outlining issues with feedback from Mark
+
+https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/
+  - Also has wifi suspen/resume perofrmance workaround
+
+https://www.reddit.com/r/thinkpad/comments/whholv/im_giving_the_z16_a_go_with_linux/
+
+
+### ThinkPad P16s Gen1 - £1,817.10
+Full sized ports
+Numpad
+
+### ThinkPad T16 Gen 1 - £1,159.50
+Full sized ports
+Numpad
+Non-touch
+
+### ThinkPad L13 Gen 3 (Intel and AMD)
+Full sized ports
+Older AMD 5875U 
+Touch
+
+### ThinkPad X13 Gen 3 (13" AMD)
+Is good!
+**AMD Ryzen™ 7 PRO 6850U Processor option!**
+
+### ThinkPad X13 Gen 3 (13" Intel) - £2,003.00
+i7-1270P or  i7-1260P required for 32GB
+Touch
+
+### ThinkPad X1 Nano Gen 2
+12th Generation Intel® Core™ i7-1280P vPro® Processor required for 32GB
+13" 2K (2160 x 1350)
+Touch
+https://www.youtube.com/watch?v=34eF4dB4aMY
+https://www.youtube.com/watch?v=g0FchqRc0i4
+
+### ThinkPad T14s Gen 3
+Ticks all the boxes
+
+### ThinkPad E14 Gen 4
+
+
+## Dell XPS
+
+XPS 13 Plus
+New XPS 13
+
+## Dell Precision
+
+https://www.dell.com/en-uk/shop/laptop-computers-2-in-1-pcs/sr/laptops/precision-laptops?~ck=bt
+
+### Precision 3470 - Build Your Own
+1920x1080
+Chunky
+
+### Mobile Precision 3560 - Build Your Own
+11th gen
+1920x1080
+
+### Mobile Precision 3561 - Build Your Own
+11th gen
+1920x1080
+
+### Dell Precision 3570 - Build Your Own 15.6-in
+12th Gen Intel® Core™ i7-1255U 15W with iGP
+15W
+1920x1080
+Full sized ports but chunky.
+
+### Dell Precision 3571- Build Your Own 15.6-in
+45W
+1920x1080
+NVIDIA T600
+
+### Precision 5470 - Build Your Own
+Nope. Requires NVIDIA to get 32GB RAM
+
+### Dell Precision 5570 - Build Your Own 15.6-in
+12th Gen Intel® Core™ i5-12600H, vPro® (18MB cache, 12 core, 16 thread, 2.70 to 4.50 GHz Turbo, 45W) required for iGP
+1920x1200
+
+### Mobile Precision 5760 - Build Your Own
+Nope, NVIDIA required.
+
+### Precision 5770 - Build Your Own
+Nope, too big. 17" display
+12th Gen Intel® Core™ i5-12600H, vPro® (18MB cache, 12 core, 16 thread, 2.70 to 4.50 GHz Turbo, 45W) required for iGP
+
+
+### Mobile Precision 7760 - Build Your Own
+Nope, 11th gen
+
+
+### Dell Precision 7770 - Build Your Own 17.3-in
+Nope, too big.
+
+## Dell Latitude
+
+### Latitude 5330 - Build Your Own - Semi-Customizable
+Nope, 16GB only.
+
+### Latitude 5531 - Build Your Own
+No Linux option.
+64GB RAM
+1920x1080
+
+### Latitude 5430 - Build Your Own - Semi-Customizable
+No Linux option
+32GB
+1920x1080
+
+### Latitude 7330 - Build Your Own - Semi-Customizable
+- Nope. 16GB only.
+
+## Dell Latitude 7430
+Nope. 16GB only.
+
+### Latitude 7530 - Build Your Own - Semi-Customizable
+- No linux option
+- 32GB
+- 1920x1080
+
+### Latitude 9430 - Build Your Own - Semi-Customizable
+Nope, 16GB only.
+
+### Latitude 9330 2-in-1 - Build Your Own - Semi-Customisable
+Core i7-1260U - 9W
+Core i7-1265U - 15W
+No Linux option
+Max 32GB RAM.
+
+### Latitude 9430 - Build Your Own - Semi-Customizable
+- No Linux option
+- 16GB only
+- 1920x1200
+
+
+## Framework
+ - https://community.frame.work/t/linux-battery-life-tuning/6665
+ - https://blog.b-ark.ca/2021/09/06/debian-on-framework.html

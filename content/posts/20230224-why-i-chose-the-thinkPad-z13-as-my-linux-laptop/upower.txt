@@ -1,0 +1,134 @@
+tupower -i /org/freedesktop/UPower/devices/battery_BAT0
+
+23:18 16th Dec
+
+  native-path:          BAT0
+  vendor:               BYD
+  model:                5B10W51883
+  serial:               979
+  power supply:         yes
+  updated:              Fri 16 Dec 2022 23:16:48 GMT (57 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  battery
+    present:             yes
+    rechargeable:        yes
+    state:               discharging
+    warning-level:       none
+    energy:              49.67 Wh
+    energy-empty:        0 Wh
+    energy-full:         51.67 Wh
+    energy-full-design:  51.51 Wh
+    energy-rate:         5.868 W
+    voltage:             13.1 V
+    time to empty:       8.5 hours
+    percentage:          96%
+    capacity:            100%
+    technology:          lithium-polymer
+    icon-name:          'battery-full-symbolic'
+  History (charge):
+    1671249064	100.000	unknown
+    1671248496	99.000	charging
+    1671248256	98.000	charging
+    1671248136	97.000	charging
+    1671248016	96.000	charging
+    1671247776	95.000	charging
+    1671245945	76.769	charging
+  History (rate):
+    1671232608	5.868	unknown
+    1671249245	2.765	fully-charged
+    1671246731	18.508	charging
+    
+13:25 17 Dec
+
+  native-path:          BAT0
+  vendor:               BYD
+  model:                5B10W51883
+  serial:               979
+  power supply:         yes
+  updated:              Sat 17 Dec 2022 13:25:31 GMT (13 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  battery
+    present:             yes
+    rechargeable:        yes
+    state:               discharging
+    warning-level:       none
+    energy:              47.68 Wh
+    energy-empty:        0 Wh
+    energy-full:         51.67 Wh
+    energy-full-design:  51.51 Wh
+    energy-rate:         0.156 W
+    voltage:             13.066 V
+    percentage:          92%
+    capacity:            100%
+    technology:          lithium-polymer
+    icon-name:          'battery-full-symbolic'
+  History (charge):
+    1671283531	92.000	discharging
+  History (rate):
+    1671283531	0.156	discharging
+    
+11:18 18th Dec
+
+  native-path:          BAT0
+  vendor:               BYD
+  model:                5B10W51883
+  serial:               979
+  power supply:         yes
+  updated:              Sun 18 Dec 2022 11:07:59 GMT (75 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  battery
+    present:             yes
+    rechargeable:        yes
+    state:               discharging
+    warning-level:       none
+    energy:              44.58 Wh
+    energy-empty:        0 Wh
+    energy-full:         51.67 Wh
+    energy-full-design:  51.51 Wh
+    energy-rate:         1.259 W
+    voltage:             12.849 V
+    time to empty:       35.4 hours
+    percentage:          86%
+    capacity:            100%
+    technology:          lithium-polymer
+    icon-name:          'battery-full-symbolic'
+  History (charge):
+    1671361679	86.000	discharging
+  History (rate):
+    1671361679	1.259	discharging
+    
+    
+23:12 18th Dec
+
+  native-path:          BAT0
+  vendor:               BYD
+  model:                5B10W51883
+  serial:               979
+  power supply:         yes
+  updated:              Sun 18 Dec 2022 23:11:32 GMT (44 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  battery
+    present:             yes
+    rechargeable:        yes
+    state:               discharging
+    warning-level:       none
+    energy:              42.56 Wh
+    energy-empty:        0 Wh
+    energy-full:         51.67 Wh
+    energy-full-design:  51.51 Wh
+    energy-rate:         0.52 W
+    voltage:             12.701 V
+    time to empty:       3.4 days
+    percentage:          82%
+    capacity:            100%
+    technology:          lithium-polymer
+    icon-name:          'battery-full-symbolic'
+  History (charge):
+    1671405092	82.000	discharging
+  History (rate):
+    1671405092	0.520	discharging
+
