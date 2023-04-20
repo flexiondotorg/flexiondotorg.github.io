@@ -134,11 +134,13 @@ The pre-installed Ubuntu and Fedora images for the Z13 come with kernels that ha
 
 ### Battery endurance 🔋
 
-This is, after all, my most important selection criteria. The conclusion here is simple: **11 hours** ⏱️ This is 11 hours of mixed-use. Coding in Visual Studio Code. Chatting in Slack and Discord. Video calls in Google Meet and Zoom. Compiling software. Some screen capture with OBS Studio and basic video editing with Shotcut. Closing the lid of the laptop and leaving it suspended for 24 hours depletes the battery by ~4% which is about 2 Wh. Very respectable. I haven't felt the need to profile power use or tweak anything, I get plenty of untethered compute time. I'm very happy with the battery life, typically charging the laptop overnight while I sleep and running it all day battery only.
+This is, after all, my most important selection criteria. The conclusion here is simple: **11 hours** ⏱️
+
+This is 11 hours of mixed-use. Coding in Visual Studio Code. Chatting in Slack and Discord. Video calls in Google Meet and Zoom. Compiling software. Some screen capture with OBS Studio and basic video editing with Shotcut. Closing the lid of the laptop and leaving it suspended for 24 hours depletes the battery by ~4% which is about 2 Wh. Very respectable. I haven't felt the need to profile power use or tweak anything, I get plenty of untethered compute time. I'm very happy with the battery life, typically charging the laptop overnight while I sleep and running it all day battery only.
 
 ## What's next? 🔮
 
-As noted, I did compromise on the 1TB M.2 SSD. I come up with an aftermarket solution to upgrade to 2TB which I will post about soon. I chose a laptop pre-installed with Linux for two reasons:
+As noted, I did compromise on the 1TB M.2 SSD. I've come up with an aftermarket solution to upgrade to 2TB which I will post about soon. I chose a laptop pre-installed with Linux for two reasons:
 
 - Support companies shipping Linux operating system pre-installed on their laptops and workstations
 - Hard proof Linux works on their hardware
@@ -147,4 +149,4 @@ After using Ubuntu for a few weeks I switched to NixOS. I will be posting about 
 
 The ThinkPad Z13 Gen 1 is an excellent laptop for my requirements, and I have no regrets. If I were to buy I laptop pre-installed with a Linux distro in the future, I might go for Fedora, just so I can see what the OEM experience is like with Fedora.
 
-Since I purchase the Z13, [Framework has announced AMD 7040-series powered laptops](https://frame.work/gb/en/blog/framework-laptop-13-with-13th-gen-intel-core-and-amd-ryzen-7040-series) are coming later in 2023; and I'm not sure I can resist...
+Since I purchased the Z13, [Framework has announced AMD 7040-series powered laptops](https://frame.work/gb/en/blog/framework-laptop-13-with-13th-gen-intel-core-and-amd-ryzen-7040-series) are coming later in 2023; and I'm not sure I can resist...
