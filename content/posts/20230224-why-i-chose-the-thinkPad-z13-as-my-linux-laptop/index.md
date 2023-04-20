@@ -2,7 +2,7 @@
 title: "Why I chose the ThinkPad Z13 Gen1 as my Linux laptop"
 slug: why-i-chose-the-thinkPad-z13-as-my-linux-laptop
 date: 2023-04-18T14:30:26Z
-#lastmod: 2023-04-18T11:17:26Z
+lastMod: 2023-04-20T13:29:00Z
 categories: [ "Linux", "Computer Hardware", "Travel" ]
 tags: [ "Lenovo", "ThinkPad Z13", "Ubuntu", "NixOS", "GNOME", "AMD", "Ryzen 7 PRO 6850U", "Radeon 680M", "Apple", "M1" ]
 summary: "Picking a thin and light Linux laptop with plenty of battery endurance"
@@ -14,6 +14,10 @@ draft: false
 During the second half of 2022, I dusted off my laptop and travelled to three events for the first time in over two years. During these trips, it became apparent that my laptop is not the right tool for the job.
 
 At [KubeCon EU 2022](https://events.linuxfoundation.org/archive/2022/kubecon-cloudnativecon-europe/) my colleague Lindsay brought her [Apple Macbook Pro M1](https://www.apple.com/uk/macbook-pro-13/). It was lightweight, compact, looked fabulous and had epic battery life. Meanwhile, my ThinkPad P1 Gen 1 looked fabulous but is a bit of a chonker and a massive power pig 🔌🐖 Battery anxiety was constant that week and also on my subsequent trips to [SREday 2022](https://www.sreday.com/) and the [Ubuntu Summit 2022](https://events.canonical.com/event/2/). Sensing that 2022 wasn't an outlier and more travel would be on the cards in 2023 I decided that I wanted some of that thin and light laptop action. So, with all that in mind, in early December 2022, I went hunting for a Linux laptop and this is my journey.
+
+## As featured on Linux Matters! 🎙️
+
+I recently discussed my hunt for a new Linux Loving Laptop on the [Linux Matters](https://linuxmatters.sh/) podcast. **You can hear that discussion with my friends Alan and Mark on [Linux Matters: Mastodon on My Résumé (Episode 1)](https://linuxmatters.sh/1/)**.
 
 ## Past laptop purchasing mistakes 😱
 
