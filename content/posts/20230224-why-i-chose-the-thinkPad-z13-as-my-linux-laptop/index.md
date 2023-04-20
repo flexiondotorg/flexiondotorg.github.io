@@ -21,7 +21,7 @@ I recently discussed my hunt for a new Linux Loving Laptop on the [Linux Matters
 
 ## Past laptop purchasing mistakes 😱
 
-> "Those that fail to learn from history are doomed to repeat it - Winston Churchill."
+> "Those that fail to learn from history are doomed to repeat it" - Winston Churchill.
 
 The requirements for my last two laptop purchases were very different from what I need today; a [Dell XPS 15 5550](https://www.dell.com/en-uk/shop/laptop-computers-2-in-1-pcs/precision-5550-mobile-workstation/spd/precision-15-5550-laptop) and [ThinkPad P1 Gen1](https://www.lenovo.com/gb/en/p/laptops/thinkpad/thinkpadp/thinkpad-p1/22ws2wpp101) Both have significant power requirements with 15.6" UHD displays and discrete NVIDIA GPUs. The ThinkPad P1 Gen also sports a Xeon CPU ⚡️ These made sense when I bought them, I was travelling one week every month and regularly compiling large applications, building container images, VMs and operating system images. These days I have a [Threadripper 3970X](https://www.amd.com/en/products/cpu/amd-ryzen-threadripper-3970x) workstation at home that I can connect to via [Tailscale](https://tailscale.com/) to run compute-intensive tasks. I simply don't need a workhorse 🐴 laptop anymore.
 
