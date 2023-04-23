@@ -2,7 +2,7 @@
 title: "Why I chose the ThinkPad Z13 Gen1 as my Linux laptop"
 slug: why-i-chose-the-thinkPad-z13-as-my-linux-laptop
 date: 2023-04-18T14:30:26Z
-lastMod: 2023-04-20T13:29:00Z
+lastMod: 2023-04-24T00:34:00Z
 categories: [ "Linux", "Computer Hardware", "Travel" ]
 tags: [ "Lenovo", "ThinkPad Z13", "Ubuntu", "NixOS", "GNOME", "AMD", "Ryzen 7 PRO 6850U", "Radeon 680M", "Apple", "M1" ]
 summary: "Picking a thin and light Linux laptop with plenty of battery endurance"
@@ -124,7 +124,7 @@ Having a tier-1 vendor such as Lenovo ship a laptop with Ubuntu pre-installed ha
 
 #### Why not Ubuntu 22.04? 🤔
 
-My Z13 was shipped with Ubuntu 20.04.4 with OEM optimised Linux kernel 5.14.0-1054-oem. Some might be perplexed or annoyed that it didn't come with Ubuntu 22.04, given it was ordered in late 2023. I used to work for Canonical, and during that time worked with Lenovo to enable Ubuntu on ~60 of their laptops and workstations between 2019 and 2021, so I do have some insight into how this process works. It simply boils down to how the factory image certification process works, and once an image is qualified that is what ships on the device for the duration of its availability. Re-certification adds cost and takes time, so it's extremely rare for a device to have a revised factory image qualified once it has gone on sale.
+My Z13 was shipped with Ubuntu 20.04.4 with OEM optimised Linux kernel 5.14.0-1054-oem. Some might be perplexed (or annoyed) that it didn't come with Ubuntu 22.04, given it was ordered in late 2022. I used to work for Canonical, and during that time worked with Lenovo to enable Ubuntu on ~60 of their laptops and workstations between 2019 and 2021, so I do have some insight into how this process works. It simply boils down to how the factory image certification process works, and once an image is qualified that is what ships on the device for the duration of its availability. Re-certification adds cost and takes time, so it's extremely rare for a device to have a revised factory image qualified once it has gone on sale.
 
 Upgrading to Ubuntu 22.04 LTS worked flawlessly, full audio support was restored and no other hardware supported regressed. Brilliant.
 
