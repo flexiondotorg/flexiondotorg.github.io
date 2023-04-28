@@ -1,14 +1,14 @@
 ---
 title: "Flash Stadia Controller Bluetooth Firmware on Linux"
 slug: "flash-stadia-controller-bluetooth-firmware-on-linux"
-date: 2023-04-25T21:45:30+01:00
-#lastmod: 2023-04-23T21:45:30+01:00
+date: 2023-04-28T16:00:00+01:00
+#lastmod: 2023-04-28T15:30:00+01:00
 categories: [ "Linux", "Tutorial", "Computer Hardware" ]
 tags: [ "Ubuntu", "Debian", "Stadia", "Bluetooth", "Firmware", "Gaming", "udev"]
-summary: "How to flash Stadia Controller Bluetooth mode on Linux."
+summary: "How to flash Stadia Controller Bluetooth mode on Linux"
 sidebar: true
 hero: "hero.webp"
-draft: true
+draft: false
 ---
 
 I was a [Google Stadia](https://stadia.google.com/gg/) "founder" and when it was shut down on January 18, 2023 I was left with 3 perfectly usable Stadia Controllers; provided I could connect them using a USB-C cable. I quite like the Stadia Controller, the form factor is similar to the PlayStation DualShock but with an Xbox style button layout.
@@ -19,20 +19,7 @@ I was a [Google Stadia](https://stadia.google.com/gg/) "founder" and when it was
   <em>Stadia Controller</em>
 </p>
 
-While using it via USB-C is great for PC, wireless connectivity would provide more options and thankfully [Google released Bluetooth firmware for the Stadia Controller](https://stadia.google.com/controller) which disables Stadia's proprietary Wi-Fi connectivity and enables Bluetooth® Low Energy (BLE). You can then use it like a standard wireless Bluetooth controller with other hardware and services. You can also still plug your Stadia Controller into a device with a USB-C cable.
-
-## Hurray up! ⏳️
-
-**After the shutdown in January, you have until December 31, 2023 to update the controller so it can use Bluetooth mode.**
-
-That said, the firmware has been archived on GitHub and a 3rd party flashing tool has been developed which might prove useful after December 31, 2023.
-
-- [Utility for flashing Stadia Controllers](https://github.com/luigimannoni/stadia-controller-flasher)
-- [A dump of the Raw Stadia controller BT Firmware](https://github.com/Scyne/stadiaRawBtFw)
-
-A re-implementation of the Stadia Controller flashing utility is also available; your mileage may vary. If you are doing this before December 31st, use the [official tool](https://stadia.google.com/controller/).
-
-- [**Unofficial Stadia Controller Flashing utility**](https://luigimannoni.github.io/stadia-controller-flasher/)
+While using it via USB-C is great for PC, wireless connectivity would provide more options. Thankfully [Google released Bluetooth firmware for the Stadia Controller](https://stadia.google.com/controller) which disables Stadia's proprietary Wi-Fi connectivity and enables Bluetooth® Low Energy (BLE). You can then use it like a standard wireless Bluetooth controller with other hardware and also still plug your Stadia Controller into a device with a USB-C cable.
 
 ## Compatibility 🧩
 
@@ -167,6 +154,16 @@ Hold the Y and Stadia buttons for 2 seconds until the status light flashes orang
   <br>
   <b>Pairing Stadia Controller with Bluetooth</b>
 </p>
+
+## Hurray up! ⏳️
+
+**After the shutdown in January 2023, you have until December 31, 2023, to update the controller so it can use Bluetooth mode.**
+
+Fortunately, the [Stadia Controller firmware has been archived](https://github.com/Scyne/stadiaRawBtFw) and an [Unofficial Stadia Controller Flashing utility](https://luigimannoni.github.io/stadia-controller-flasher/) created which might prove useful after December 31, 2023.
+
+- [**Unofficial Stadia Controller Flashing utility**](https://luigimannoni.github.io/stadia-controller-flasher/)
+
+Your mileage may vary using the re-implementation of the [Utility for flashing Stadia Controllers](https://github.com/luigimannoni/stadia-controller-flasher), so if you're doing this before December 31, 2023, use the [official tool](https://stadia.google.com/controller/).
 
 ## Conclusion
 
