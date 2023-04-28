@@ -17,5 +17,5 @@ for relaxed discussions in their downtime. From working in the industry and
 progressing your career, to managing a project's community, and beyond.
 
   - Organisation: [Linux Downtime](https://linuxdowntime.com)
-  - Date: April 2022 - date
+  - Date: April 2022 - April 2023
   - Role: Co-presenter & Producer
