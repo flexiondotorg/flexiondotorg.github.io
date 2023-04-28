@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ubuntu on Wimpy's World</title><link>https://wimpysworld.com/tags/ubuntu/</link><description>Recent content in Ubuntu on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Tue, 18 Apr 2023 14:30:26 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ubuntu/rss.xml" rel="self" type="application/rss+xml"/><item><title>Why I chose the ThinkPad Z13 Gen1 as my Linux laptop</title><link>https://wimpysworld.com/posts/why-i-chose-the-thinkpad-z13-as-my-linux-laptop/</link><pubDate>Tue, 18 Apr 2023 14:30:26 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/why-i-chose-the-thinkpad-z13-as-my-linux-laptop/</guid><description>&lt;p>During the second half of 2022, I dusted off my laptop and travelled to three events for the first time in over two years. During these trips, it became apparent that my laptop is not the right tool for the job.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ubuntu on Wimpy's World</title><link>https://wimpysworld.com/tags/ubuntu/</link><description>Recent content in Ubuntu on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Fri, 28 Apr 2023 16:00:00 +0100</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ubuntu/rss.xml" rel="self" type="application/rss+xml"/><item><title>Flash Stadia Controller Bluetooth Firmware on Linux</title><link>https://wimpysworld.com/posts/flash-stadia-controller-bluetooth-firmware-on-linux/</link><pubDate>Fri, 28 Apr 2023 16:00:00 +0100</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/flash-stadia-controller-bluetooth-firmware-on-linux/</guid><description>&lt;p>I was a &lt;a href="https://stadia.google.com/gg/">Google Stadia&lt;/a> &amp;ldquo;founder&amp;rdquo; and when it was shut down on January 18, 2023 I was left with 3 perfectly usable Stadia Controllers; provided I could connect them using a USB-C cable. I quite like the Stadia Controller, the form factor is similar to the PlayStation DualShock but with an Xbox style button layout.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./stadia-controller.webp" class="img-fluid" alt="Stadia Controller"/>
+&lt;br />
+&lt;em>Stadia Controller&lt;/em>
+&lt;/p>
+&lt;p>While using it via USB-C is great for PC, wireless connectivity would provide more options. Thankfully &lt;a href="https://stadia.google.com/controller">Google released Bluetooth firmware for the Stadia Controller&lt;/a> which disables Stadia&amp;rsquo;s proprietary Wi-Fi connectivity and enables Bluetooth® Low Energy (BLE). You can then use it like a standard wireless Bluetooth controller with other hardware and also still plug your Stadia Controller into a device with a USB-C cable.&lt;/p>
+&lt;h2 id="compatibility-">Compatibility 🧩&lt;/h2>
+&lt;p>The &lt;a href="https://support.google.com/stadia?p=controllerconnect#devicelist">Stadia Controller Device Compatibility List&lt;/a> says&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Testing of Bluetooth mode was focused on the devices and systems listed below, but may not work with all hardware configurations.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>Windows 10 and 11 + Steam&lt;/li>
+&lt;li>MacOS® 13 + Steam&lt;/li>
+&lt;li>ChromeOS&lt;/li>
+&lt;li>Android&lt;/li>
+&lt;/ul>
+&lt;p>Most importantly, it says &lt;em>&lt;strong>&amp;ldquo;computers must have a Bluetooth Low Energy adapter in order to communicate with the Stadia Controller in Bluetooth mode and that hardware compatibility will vary.&amp;rdquo;&lt;/strong>&lt;/em>&lt;/p>
+&lt;h2 id="flash-stadia-controller-bluetooth-firmware-using-ubuntu-2204-">Flash Stadia Controller Bluetooth Firmware using Ubuntu 22.04 🐧&lt;/h2>
+&lt;p>Here&amp;rsquo;s how I flashed that firmware on all 3 of my controllers using Linux; well Ubuntu 22.04 to be precise. The system requirements for the Bluetooth Firmware tool is stated to be Chrome 108 or newer. No problem! But, I was unable to get the controllers to show up in Chrome until some &lt;code>udev&lt;/code> rules were added. Open a terminal and run the following command from any directory:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>{ cat &lt;span style="color:#87ceeb">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb"># SDP protocol
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">KERNEL==&amp;#34;hidraw*&amp;#34;, ATTRS{idVendor}==&amp;#34;1fc9&amp;#34;, MODE=&amp;#34;0666&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">ACTION==&amp;#34;add&amp;#34;, SUBSYSTEM==&amp;#34;usb&amp;#34;, ATTR{idVendor}==&amp;#34;1fc9&amp;#34;, MODE=&amp;#34;0666&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">ACTION==&amp;#34;add&amp;#34;, SUBSYSTEM==&amp;#34;usb&amp;#34;, ATTR{idVendor}==&amp;#34;0d28&amp;#34;, MODE=&amp;#34;0666&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb"># Flashloader
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">KERNEL==&amp;#34;hidraw*&amp;#34;, ATTRS{idVendor}==&amp;#34;15a2&amp;#34;, MODE=&amp;#34;0666&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb"># Controller
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">KERNEL==&amp;#34;hidraw*&amp;#34;, SUBSYSTEM==&amp;#34;hidraw&amp;#34;, ATTRS{idVendor}==&amp;#34;18d1&amp;#34;, MODE=&amp;#34;0666&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">SUBSYSTEMS==&amp;#34;usb&amp;#34;, ATTRS{idVendor}==&amp;#34;18d1&amp;#34;, ATTRS{idProduct}==&amp;#34;9400&amp;#34;, MODE=&amp;#34;0660&amp;#34;, TAG+=&amp;#34;uaccess&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>} | sudo tee /etc/udev/rules.d/70-stadiacontroller-flash.rules
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now run the following to reload the &lt;code>udev&lt;/code> rules.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sudo udevadm control --reload-rules
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo udevadm trigger
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>With that done, I restarted Google Chrome and followed the instructions on the &lt;a href="https://stadia.google.com/controller/index_en_GB.html">Stadia Controller Firmware Flashing Tool&lt;/a> page. I was able to flash the firmware on all 3 of my controllers. The process is pretty straightforward but I&amp;rsquo;ve included the instructions below for reference.&lt;/p>
+&lt;h3 id="charge-your-controller">Charge your controller&lt;/h3>
+&lt;p>Make sure that your controller has been charged for 30 minutes and that you&amp;rsquo;re using a USB data cable.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./Verify_Plug_in_controller.svg" class="img-fluid" alt="Charge your controller"/>
+&lt;br>
+&lt;b>Charge your controller&lt;/b>
+&lt;/p>
+&lt;h3 id="unplug-your-controller-to-power-it-off">Unplug your controller to power it off&lt;/h3>
+&lt;p>If it turns on again, hold the Stadia button for 4 seconds to power it off&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./Unlock_Unplug.svg" class="img-fluid" alt="Unplug your controller to power it off"/>
+&lt;br>
+&lt;b>Unplug your controller to power it off&lt;/b>
+&lt;/p>
+&lt;h3 id="hold-the-option-button-three-dots-while-plugging-in-your-controller">Hold the option button (three dots) while plugging in your controller&lt;/h3>
+&lt;p>The status light should remain off. If it turns on, unplug the controller and try again&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./Unlock_Option_Plug.svg" class="img-fluid" alt="Hold the option button (three dots) while plugging in your controller"/>
+&lt;br>
+&lt;b>Hold the option button (three dots) while plugging in your controller&lt;/b>
+&lt;/p>
+&lt;h3 id="press-the-option-assistant-a-and-y-buttons-at-the-same-time">Press the Option, Assistant, A, and Y buttons at the same time&lt;/h3>
+&lt;p>There won&amp;rsquo;t be any controller feedback, proceed to the next step to confirm the controller is unlocked&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./Unlock_Four_buttons.svg" class="img-fluid" alt="Press the Option, Assistant, A, and Y buttons at the same time"/>
+&lt;br>
+&lt;b>Press the Option, Assistant, A, and Y buttons at the same time&lt;/b>
+&lt;/p>
+&lt;h3 id="select-your-controller-in-the-chrome-device-list-and-click-connect">Select your controller in the Chrome device list and click &amp;ldquo;Connect&amp;rdquo;.&lt;/h3>
+&lt;p>The text in the flashing utility says the Stadia Controller should be named &lt;strong>&amp;ldquo;SP Blank RT Family&amp;rdquo;&lt;/strong> or &amp;ldquo;Stadia Controller&amp;rdquo; or &amp;ldquo;USB COMPOSITE DEVICE&amp;rdquo;.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./Chrome_dialog_Download_en-GB.svg" class="img-fluid" alt="Select your controller in the Chrome device list again and click Connect"/>
+&lt;br>
+&lt;b>Select your controller in the Chrome device list again and click "Connect".&lt;/b>
+&lt;/p>
+&lt;h3 id="download-complete">Download complete&lt;/h3>
+&lt;p>You&amp;rsquo;ve almost finished. Go to the final step to install the latest version of Bluetooth mode on your controller.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./Download_Download_complete.svg" class="img-fluid" alt="Download complete"/>
+&lt;br>
+&lt;b>Download complete&lt;/b>
+&lt;/p>
+&lt;h3 id="install-bluetooth-mode">Install Bluetooth mode&lt;/h3>
+&lt;p>One more time - select your controller in the Chrome device list, then click &amp;ldquo;Connect&amp;rdquo;. Installation will start automatically and should only take a minute.&lt;/p>
+&lt;p>The text in the flashing utility says the Stadia Controller should be named &lt;strong>&amp;ldquo;USB COMPOSITE DEVICE&amp;rdquo;&lt;/strong> or &amp;ldquo;Stadia Controller&amp;rdquo; or &amp;ldquo;SP Blank RT Family&amp;rdquo;.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./Chrome_dialog_Install_en-GB.svg" class="img-fluid" alt="Install Bluetooth mode"/>
+&lt;br>
+&lt;b>Install Bluetooth mode&lt;/b>
+&lt;/p>
+&lt;h3 id="installation-complete">Installation complete&lt;/h3>
+&lt;p>Wait a minute or so for the firmware installation to complete.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./Finish_Bluetooth_enabled.svg" class="img-fluid" alt="Installation complete"/>
+&lt;br>
+&lt;b>Installation complete&lt;/b>
+&lt;/p>
+&lt;h2 id="pairing-stadia-controller-with-bluetooth">Pairing Stadia Controller with Bluetooth&lt;/h2>
+&lt;p>Hold the Y and Stadia buttons for 2 seconds until the status light flashes orange. It is now in pairing mode and visible to other devices.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./Pairing_mode.svg" class="img-fluid" alt="Pairing Stadia Controller with Bluetooth"/>
+&lt;br>
+&lt;b>Pairing Stadia Controller with Bluetooth&lt;/b>
+&lt;/p>
+&lt;h2 id="hurray-up-">Hurray up! ⏳️&lt;/h2>
+&lt;p>&lt;strong>After the shutdown in January 2023, you have until December 31, 2023, to update the controller so it can use Bluetooth mode.&lt;/strong>&lt;/p>
+&lt;p>Fortunately, the &lt;a href="https://github.com/Scyne/stadiaRawBtFw">Stadia Controller firmware has been archived&lt;/a> and an &lt;a href="https://luigimannoni.github.io/stadia-controller-flasher/">Unofficial Stadia Controller Flashing utility&lt;/a> created which might prove useful after December 31, 2023.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://luigimannoni.github.io/stadia-controller-flasher/">&lt;strong>Unofficial Stadia Controller Flashing utility&lt;/strong>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Your mileage may vary using the re-implementation of the &lt;a href="https://github.com/luigimannoni/stadia-controller-flasher">Utility for flashing Stadia Controllers&lt;/a>, so if you&amp;rsquo;re doing this before December 31, 2023, use the &lt;a href="https://stadia.google.com/controller/">official tool&lt;/a>.&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>After updating my Stadia Controllers with Bluetooth firmware, I&amp;rsquo;ve successfully paired them with my Android tablet, iPhone 13 and &lt;a href="https://chimeraos.org/">ChimeraOS&lt;/a>; an operating system that provides an out-of-the-box couch gaming experience 🎮️ While Stadia might be dead and gone, I&amp;rsquo;m very happy to continue to get utility out of the controllers; which turned out to be free after the reimbursement Google offered when Stadia was shut down.&lt;/p></description><summary>How to flash Stadia Controller Bluetooth mode on Linux</summary></item><item><title>Why I chose the ThinkPad Z13 Gen1 as my Linux laptop</title><link>https://wimpysworld.com/posts/why-i-chose-the-thinkpad-z13-as-my-linux-laptop/</link><pubDate>Tue, 18 Apr 2023 14:30:26 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/why-i-chose-the-thinkpad-z13-as-my-linux-laptop/</guid><description>&lt;p>During the second half of 2022, I dusted off my laptop and travelled to three events for the first time in over two years. During these trips, it became apparent that my laptop is not the right tool for the job.&lt;/p>
 &lt;p>At &lt;a href="https://events.linuxfoundation.org/archive/2022/kubecon-cloudnativecon-europe/">KubeCon EU 2022&lt;/a> my colleague Lindsay brought her &lt;a href="https://www.apple.com/uk/macbook-pro-13/">Apple Macbook Pro M1&lt;/a>. It was lightweight, compact, looked fabulous and had epic battery life. Meanwhile, my ThinkPad P1 Gen 1 looked fabulous but it is a bit of a chonker and a massive power pig 🔌🐖 Battery anxiety was constant that week and also on my subsequent trips to &lt;a href="https://www.sreday.com/">SREday 2022&lt;/a> and the &lt;a href="https://events.canonical.com/event/2/">Ubuntu Summit 2022&lt;/a>. Sensing that 2022 wasn&amp;rsquo;t an outlier and more travel would be on the cards in 2023 I decided that I wanted some of that thin and light laptop action. In early December 2022, I went hunting for a Linux laptop and this is my journey.&lt;/p>
 &lt;h2 id="as-featured-on-linux-matters-">As featured on Linux Matters! 🎙️&lt;/h2>
 &lt;p>I recently discussed my hunt for a new Linux Loving Laptop on the &lt;a href="https://linuxmatters.sh/">Linux Matters&lt;/a> podcast. &lt;strong>You can hear that discussion with my friends Alan and Mark in &lt;a href="https://linuxmatters.sh/1/">Linux Matters: Mastodon on My Résumé (Episode 1)&lt;/a>&lt;/strong>.&lt;/p>
