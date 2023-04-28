@@ -4,7 +4,7 @@ slug: why-i-chose-the-thinkPad-z13-as-my-linux-laptop
 date: 2023-04-18T14:30:26Z
 lastMod: 2023-04-24T00:34:00Z
 categories: [ "Linux", "Computer Hardware", "Travel" ]
-tags: [ "Lenovo", "ThinkPad Z13", "Ubuntu", "NixOS", "GNOME", "AMD", "Ryzen 7 PRO 6850U", "Radeon 680M", "Apple", "M1" ]
+tags: [ "Lenovo", "ThinkPad Z13", "Ubuntu", "NixOS", "AMD", "Ryzen 7 PRO 6850U", "Radeon 680M" ]
 summary: "Picking a thin and light Linux laptop with plenty of battery endurance"
 sidebar: true
 hero: "hero.webp"
