@@ -29,30 +29,30 @@
 					<div class="row justify-content-left">
 						<!-- Old content warning and last update notification -->
 						{{- if eq .Section "posts" -}}
-							{{- $years := 3 -}}
-							{{- $shelfLife := mul 365 $years -}}
-							{{- $published := .Page.Params.Date -}}
 							{{- $daysOld := div (sub now.Unix .Date.Unix) 86400 -}}
+							{{- $monthsOld := div $daysOld 12 -}}
 							{{- $yearsOld := div $daysOld 365 -}}
-							{{- if isset .Params "lastmod" -}}
-								{{- $published = .Page.Params.Lastmod -}}
-								{{- $daysOld = div (sub now.Unix .Lastmod.Unix) 86400 -}}
-							{{- end -}}
 
-							{{- if gt $daysOld $shelfLife -}}
+							{{- if ge $yearsOld 3 -}}
 							<div class="col-12">
 								<div class="alert alert-warning" role="alert">
 									<h4 class="alert-heading">Old post detected! <em class="fa-solid fa-book-skull"></em></h4>
-									<p>This post was last updated on {{$published.Format "January 2, 2006"}}! The information presented here may be out of date and inaccurate.</p>
+									<p>This post is roughly {{ $yearsOld }} years old; originally published on {{.Date.Format "January 2, 2006"}}! The information presented here may be out of date and inaccurate.</p>
 									<hr />
 									<em class="mb-0">Please read this page but do keep its age in mind.</em>
 								</div>
 							</div>
-							{{- else if isset .Params "lastmod" -}}
+							{{- else if ne .Lastmod .Date -}}
 								<div class="col-12">
 									<div class="alert alert-info" role="alert">
 										<h4 class="alert-heading">Update detected! <em class="fa-solid fa-spray-can-sparkles"></em></h4>
-										<p>This post was originally published on {{.Date.Format "January 2, 2006"}} and last updated on {{$published.Format "January 2, 2006"}}.</p>
+										{{- if ge $yearsOld 2 -}}
+										<p>This post is roughly {{ $yearsOld }} years old. Originally published on {{.Date.Format "January 2, 2006"}} and last updated on {{.Lastmod.Format "January 2, 2006"}}.</p>
+										{{- else if gt $monthsOld 12 -}}
+										<p>This post is roughly {{ $monthsOld }} months old. Originally published on {{.Date.Format "January 2, 2006"}} and last updated on {{.Lastmod.Format "January 2, 2006"}}.</p>
+										{{- else -}}
+										<p>This post is {{ $daysOld }} days old. Originally published on {{.Date.Format "January 2, 2006"}} and last updated on {{.Lastmod.Format "January 2, 2006"}}.</p>
+										{{- end -}}
 									</div>
 								</div>
 							{{- end -}}
