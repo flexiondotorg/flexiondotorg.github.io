@@ -2,9 +2,9 @@
 title: "Creating Production-Ready Containers - The Basics"
 slug: "creating-production-ready-containers-the-basics"
 date: 2021-06-03T12:18:15Z
-lastmod: 2021-06-18T12:18:15Z
+lastmod: 2023-04-28T16:34:15Z
 categories: [ "Linux", "Development", "Tutorial", "Cloud Native" ]
-tags: [ "Docker", "Node", "DevOps", "Dockerfile", "docker-slim" ]
+tags: [ "Docker", "Node", "DevOps", "Dockerfile", "docker-slim", "SlimToolKit" ]
 summary: "Beginners guide to container best practices"
 sidebar: true
 hero: "hero.webp"
@@ -12,11 +12,11 @@ hero: "hero.webp"
 
 So you've coded an awesome app and you are ready to deploy it to the cloud. You've heard a lot about [Docker](https://www.docker.com/) and completed a few online tutorials to containerise your app. All set, right? But what do you need to know if you're going to move that app to a production environment on the public Internet? What if you're using it for your job and need to pass security scans and DevOps checks?
 
-In this series, I introduce some basic concepts for making production ready containers. I also introduce the concept of "slimming" a container. **Slimming** refers to both optimising and minifying your Docker containers, reducing them in size by up to 80-percent while also making them more secure by decreasing the attack surface. Slimming your container is also a great way to implement [container best practices](https://www.slim.ai/blog/why-dont-we-practice-container-best-practices) without re-engineering your entire workflow.
+In this series, I introduce some basic concepts for making production-ready containers. I also introduce the concept of "slimming" a container. **Slimming** refers to both optimising and minifying your Docker containers, reducing them in size by up to 80-percent while also making them more secure by decreasing the attack surface. Slimming your container is also a great way to implement [container best practices](https://www.slim.ai/blog/why-dont-we-practice-container-best-practices) without re-engineering your entire workflow.
 
-There are many ways to slim a container, from basic security to fully automated open-source tools like [DockerSlim](https://dockersl.im/). _Full disclosure_: I work for [Slim.AI](https://slim.ai), a company founded on the DockerSlim open source project. Let's look at some of the common ways developers create production-ready container images today.
+There are many ways to slim a container, from basic security to fully automated open-source tools like [SlimToolKit](https://slimtoolkit.org/) (formerly [DockerSlim](https://dockersl.im/)). _Full disclosure_: I used work for [Slim.AI](https://slim.ai), a company founded on the SlimToolKit open source project. Let's look at some of the common ways developers create production-ready container images today.
 
-I'll explore each of these in a separate article using a simple "Hello World" Node.js example that can be found in a number of online tutorials.
+I'll explore each of these in a separate article using a simple "Hello World" Node.js example that can be found in many online tutorials.
 
 ```js
 const express = require('express')
@@ -36,9 +36,9 @@ Let's get started by simply improving your `Dockerfile` to build a better Docker
 
 ## Creating a Better Dockerfile
 
-Most `Dockerfile` examples you'll find are not "production ready" and they aren't meant to be. They are for instructional purposes to help developers successfully build an image. But when one gets into production scenarios, there are a number of "good-to-know" and a few "have-to-know" techniques that will improve build times, security, and reliability.
+Most `Dockerfile` examples you'll find are not "production ready" and they aren't meant to be. They are for instructional purposes to help developers successfully build an image. But when one gets into production scenarios, there are several "good-to-know" and a few "have-to-know" techniques that will improve build times, security, and reliability.
 
-Let's look at a typical example that you might run into if you're a Node.js developer looking to get "Hello World" running with Docker. I won't go through building an actual app - there are a lot of great examples out there to show you how to do this - but rather focus on what to do if you were actually going to ship this to production.
+Let's look at a typical example that you might run into if you're a Node.js developer looking to get "Hello World" running with Docker. I won't go through building an actual app - there are a lot of great examples out there to show you how to do this - but rather focus on what to do if you were going to ship this to production.
 
 The typical `Dockerfile` in a "Hello World" example might look something like this:
 
@@ -102,7 +102,7 @@ Now, pinning a specific major and minor version in your `Dockerfile` is a trade-
 
 Docker works on the concept of *layer caching*. It builds images sequentially. Layering dependencies on top of each other and only rebuilding them when something in the layer has changed.
 
-Layer 0 in a Docker image is often the base operating system, which rarely change significantly; although commercial Linux vendors often publish new base images to incorporate security fixes.
+Layer 0 in a Docker image is often the base operating system, which rarely changes significantly; although commercial Linux vendors often publish new base images to incorporate security fixes.
 
 Application code, however, is highly likely to change during the software development cycle, as you iterate on features, refactor, and fix bugs. Dependencies in our core system, installed here by `npm install`, change more often than the base OS, but less often than the application code.
 
@@ -171,4 +171,4 @@ ENTRYPOINT ["node", "app.js"]
 
 Improving your `Dockerfile` is the first step towards creating a slimmed and optimised container. It closes some major security loopholes that are likely to raise flags with downstream checks and adds baseline optimisations for build time and docker image size.
 
-If this is all you do to improve your containers prior to shipping to production, you won't be in a bad spot, but there's definitely more - *way more* - that you can do to optimise images. We'll explore those techniques in the next article.
+If this is all you do to improve your containers prior to shipping to production, you won't be in a bad spot, but there's more - *way more* - that you can do to optimise images. We'll [explore those techniques in the next article](/posts/creating-production-ready-containers-advanced-techniques/).

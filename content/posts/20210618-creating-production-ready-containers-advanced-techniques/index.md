@@ -2,9 +2,9 @@
 title: "Creating Production-Ready Containers - Advanced Techniques"
 slug: "creating-production-ready-containers-advanced-techniques"
 date: 2021-06-18T12:18:15Z
-lastmod: 2021-06-21T12:18:15Z
+lastmod: 2023-04-28T16:34:15Z
 categories: [ "Linux", "Development", "Tutorial", "Cloud Native" ]
-tags: [ "Docker", "DevOps", "docker-slim", "Alpine", "Docker Compose", "Distroless", "Buildpacks", "Multi-Stage Builds" ]
+tags: [ "Docker", "DevOps", "docker-slim", "SlimToolKit", "Alpine", "Docker Compose", "Distroless", "Buildpacks", "Multi-Stage Builds" ]
 summary: "Advanced techniques for production-ready container best practice"
 sidebar: true
 hero: "hero.webp"
@@ -18,11 +18,9 @@ For production-ready containers, there are three key things you want to optimise
 2. Build Speed 🐢
 3. Security 🔐
 
-Image size and build speed ensure that your containers can move through CI/CD and test pipelines easily and efficiently. Security is obviously critical in today's software supply chain, and containers have their own set of security issues. Thankfully, reducing container image size actually can alleviate some security issues in containers.
+Image size and build speed ensure that your containers can move through CI/CD and test pipelines easily and efficiently. Security is critical in today's software supply chain, and containers have their own set of security issues. Thankfully, reducing container image size actually can alleviate some security issues in containers.
 
 [In my Basics article](/posts/creating-production-ready-containers-the-basics), I showed you some easy techniques to improve your `Dockerfile` using a sample "Hello World" Node.js application.
-
-<!-- {% link https://dev.to/wimpress/creating-production-ready-containers-the-basics-3k6f %} -->
 
 These basics address all three optimisations, though they only scratch the surface.
 
@@ -30,7 +28,7 @@ Let's look at some more advanced techniques for Container Optimisation.
 
 ## Alpine Images
 
-The very first thing you'll encounter when looking for techniques to create smaller containers is [Alpine Linux](https://alpinelinux.org/). Alpine Linux is an open source project whose goal is to create a bare-bones 🦴 version of Linux that lets developers "build from the ground up."
+The very first thing you'll encounter when looking for techniques to create smaller containers is [Alpine Linux](https://alpinelinux.org/). Alpine Linux is an open-source project whose goal is to create a bare-bones 🦴 version of Linux that lets developers "build from the ground up."
 
 ### Pros: Transitioning to Alpine can be an easy way to get a smaller container
 
@@ -60,7 +58,7 @@ Easy, right? Not so fast.
 
 ### Cons: Using Alpine images can lead to build problems, now and in the future
 
-There are some not so obvious gotchas with using Alpine images that don't crop up in our super simple example application, such as:
+There are some not-so-obvious gotchas with using Alpine images that don't crop up in our super simple example application, such as:
 
 #### You have to install everything
 
@@ -68,7 +66,7 @@ Those tiny base images have to sacrifice something, right? Alpine users will be 
 
 #### Different compilers and package managers
 
-You'll also be installing any dependencies with the Alpine Package Keeper tool (`apk`) instead of the more familiar `apt` or `rpm`. The differences are small, but can trip up unsuspecting developers.
+You'll also be installing any dependencies with the Alpine Package Keeper tool (`apk`) instead of the more familiar `apt` or `rpm`. The differences are small but can trip up unsuspecting developers.
 
 #### Fewer examples; less documentation
 
@@ -97,7 +95,7 @@ CMD ["node","app.js"]
 
 ### Pros: Dev and Prod images can be built separately
 
-When combined with [Docker Compose](https://docs.docker.com/compose/), this approach gives developers a flexible development environment while reducing bloat in the production images. You can simply use your initial image for dev/test and the final version for productions. Multi-stage builds work especially well for Go containers, significantly reducing image size, but also work well for static Node.js and React-type applications.
+When combined with [Docker Compose](https://docs.docker.com/compose/), this approach gives developers a flexible development environment while reducing bloat in the production images. You can simply use your initial image for dev/test and the final version for production. Multi-stage builds work especially well for Go containers, significantly reducing image size, but also work well for static Node.js and React-type applications.
 
 ### Cons: Added complexity; use-case specific
 
@@ -114,7 +112,7 @@ cotw-node             latest  873fb9fca53a  7 days ago     856MB
 
 ## Development tools and Distroless
 
-There are several tools - and new ones emerging every day - that look to bypass or automate `Dockerfile` authoring to make image creation easier. [*Buildpacks*](https://buildpacks.io/) are the most mature of these technologies, and can be used through tools like [Pack](https://buildpacks.io/docs/tools/pack/) or [Waypoint](https://www.waypointproject.io/plugins/pack).
+There are several tools - and new ones emerging every day - that look to bypass or automate `Dockerfile` authoring to make image creation easier. [*Buildpacks*](https://buildpacks.io/) are the most mature of these technologies and can be used through tools like [Pack](https://buildpacks.io/docs/tools/pack/) or [Waypoint](https://www.waypointproject.io/plugins/pack).
 
 There are builder options from multiple sources - Heroku, Google, and Paketo are common favourites - and each gives you a slightly different developer experience and final image when used.
 
@@ -133,30 +131,20 @@ In certain instances, Buildpacks can take the pain out of `Dockerfile` authoring
 
 Given the relative newness of this approach for Docker containers, there are a lot of gotchas with Buildpacks. Non-standard applications or operating systems can struggle, and we've had issues running them successfully on the new Silicon Macbook Pros. The resulting images vary a lot - we saw a range of 200MB to 800MB in our examples - and the results tend to be lower than what you'd get with other techniques.
 
-## Automate it with DockerSlim
+## Automate it with SlimToolKit
 
-The [DockerSlim](https://dockersl.im) open source project was created by [Slim.AI](https://slim.ai) CTO [Kyle Quest](https://twitter.com/kcqon) in 2015 as a way to automate container optimisation.
-
-<!-- {% github docker-slim/docker-slim %} -->
-
-Simply download and run `docker-slim build <myimage>` and DockerSlim will examine the image, rebuild it with only the required dependencies, and give you a new image that can be run just like the original.
+The [SlimToolKit](https://slimtoolkit.org/) (<em>formerly DockerSlim</em>) open-source project was created by [Slim.AI](https://slim.ai) CTO [Kyle Quest](https://twitter.com/kcqon) in 2015 as a way to automate container optimisation. Simply download and run `slim build <myimage>` and SlimToolKit will examine the image, rebuild it with only the required dependencies, and give you a new image that can be run just like the original.
 
 ### Pros: It's automatic
 
-DockerSlim means you can work with whatever base image you'd like (say, Ubuntu or Debian) and let DockerSlim worry about removing unnecessary tools and files en route to production. The best part is that DockerSlim can be used alongside any of these other techniques. Once tested, it can be integrated into your CI/CD pipeline for automatic container minification, and the reduction in size leads to faster build times and better security.
+SlimToolKit means you can work with whatever base image you'd like (say, Ubuntu or Debian) and let SlimToolKit worry about removing unnecessary tools and files en route to production. The best part is that SlimToolKit can be used alongside any of these other techniques. Once tested, it can be integrated into your CI/CD pipeline for automatic container minification, and the reduction in size leads to faster build times and better security.
 
 ### Cons: Steep learning curve
 
-As with any open-source software, DockerSlim can take some time to get working, especially for non-trivial applications. It works best for web-style applications, micro-services and APIs that have defined HTTP/HTTPS ports which the sensor can find and use to observe the container internals.
+As with any open-source software, SlimToolKit can take some time to get working, especially for non-trivial applications. It works best for web-style applications, micro-services and APIs that have defined HTTP/HTTPS ports which the sensor can find and use to observe the container internals.
 
-For best results, spend some time getting to know the various command flags available to tune your image, and [take a look at the examples for whatever framework you're using](https://github.com/docker-slim/examples).
+For best results, spend some time getting to know the various command flags available to tune your image, and [take a look at the examples for whatever framework you're using](https://github.com/slimtoolkit/examples).
 
-<!-- {% github docker-slim/examples no-readme %} -->
+## Connecting with SlimToolKit
 
-## Connecting with DockerSlim
-
-There's an [active DockerSlim Discord channel](https://discord.gg/9tDyxYS) full of experts who can help you triage issues as they arise.
-
-<!--
-[Follow me here](https://wimpress.com), the [SlimDevOps Twitch 📡 channel](https://twitch.tv/SlimDevOps) and [SlimDevOps YouTube 📺 channel](https://www.youtube.com/SlimDevOps) where I'll be doing more deep-dives into container optimisation using DockerSlim and the Slim.AI platform in future posts and live-streams.
--->
+There's an [active Slim.AI Discord channel](https://discord.gg/uBttmfyYNB) full of experts who can help you triage issues as they arise.
