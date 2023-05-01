@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Steam Deck on Wimpy's World</title><link>https://wimpysworld.com/tags/steam-deck/</link><description>Recent content in Steam Deck on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 01 May 2023 18:38:19 +0100</lastBuildDate><atom:link href="https://wimpysworld.com/tags/steam-deck/rss.xml" rel="self" type="application/rss+xml"/><item><title>Steam Box vs Steam Deck</title><link>https://wimpysworld.com/posts/steambox-vs-steamdeck/</link><pubDate>Mon, 01 May 2023 18:38:19 +0100</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/steambox-vs-steamdeck/</guid><description>&lt;p>When I received my Steam Deck Purchase Information email I wasn&amp;rsquo;t playing games all that often; mostly online racing games with friends once a week. I didn&amp;rsquo;t think I&amp;rsquo;d get much use out of a handheld console. I also had an inventory of PC parts available that could be used to build a dedicated Steam Box. So I declined spending £569 on the Steam Deck and set about building a Steam Box instead, here&amp;rsquo;s how I got on and what I learned.&lt;/p>
+&lt;!--
+## As featured on Linux Matters! 🎙️
+I recently discussed my why I cancelled my Steam Deck pre-order on the [Linux Matters](https://linuxmatters.sh/) podcast. **You can hear that discussion with my friends Alan and Mark in [Linux Matters: Lawful evil monitor alignment (Episode 2)](https://linuxmatters.sh/2/)**.
+&lt;p class="text-center">
+&lt;a href="https://linuxmatters.sh" target="_blank">&lt;img src="https://linuxmatters.sh/img/episode/linuxmatters-banner-3000x750.webp" class="img-fluid" alt="Linux Matters Podcast"/>&lt;/a>
+&lt;br />
+&lt;em>Linux Matters Podcast&lt;/em>
+&lt;/p>
+-->
+&lt;h2 id="hardware-">Hardware 🖥️&lt;/h2>
+&lt;p>At the time I had an inventory of parts that were not being used and on the second desk in my office I had a Philips 345B1C 3440x1440 WQHD Monitor, keyboard/mouse and more controllers than I know what to do with. From what I had available I selected the following:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.gigabyte.com/Motherboard/B550I-AORUS-PRO-AX-rev-10#kf">Gigabyte B550i Mini-ITX AORUS Pro AX Motherboard&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.amd.com/en/products/apu/amd-ryzen-7-5700g">AMD Ryzen™ 7 5700G&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://noctua.at/en/nh-l9a-am4">Noctua NH-L9a-AM4 Low Profile Cooler&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.corsair.com/uk/en/Categories/Products/Memory/VENGEANCE-LPX/p/CMK32GX4M2D3600C18">VENGEANCE® LPX 32GB (2 x 16GB) DDR4 DRAM 3600MHz C18&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.corsair.com/uk/en/Categories/Products/Storage/M-2-SSDs/MP600-CORE/p/CSSD-F1000GBMP600COR">MP600 CORE 1TB M.2 NVMe PCIe Gen. 4 x4 SSD&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.gigabyte.com/uk/Graphics-Card/GV-R57XTGAMING-OC-8GD-rev-10#kf">Gigabyte Radeon™ RX 5700 XT GAMING OC 8G&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.xbox.com/en-GB/accessories/adapters/wireless-adapter-windows">Microsoft Xbox Wireless Adapter for Windows 10&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>I had all the parts I needed to build a Steam Box, except for the case and power supply, so I bought a &lt;a href="https://www.fractal-design.com/products/cases/node/node-202/black/">Fractal Design Node 202 (without PSU)&lt;/a> for £65 on eBay and a &lt;a href="https://www.corsair.com/uk/en/Categories/Products/Power-Supply-Units/Power-Supply-Units-Advanced/SF-Series/p/CP-9020186-UK">CORSAIR SF750 80 PLUS Platinum SFX Power Supply&lt;/a> for £145 on Amazon.&lt;/p>
+&lt;iframe src="https://kit.co/embed?url=https%3A%2F%2Fkit.co%2Fwimpysworld%2Fsteam-box" style="display: block; border: 0px; margin: 0 auto; width: 100%; height: 100vw; max-width: 700px; max-height: 700px" scrolling="no">&lt;/iframe>
+&lt;h3 id="node-202-considerations-">Node 202 Considerations 💼&lt;/h3>
+&lt;p>The Node 202 is a compact chassis (10.2 litres) that can house a capable gaming build, but has several specific considerations to keep in mind.&lt;/p>
+&lt;h4 id="gpu-considerations">GPU Considerations&lt;/h4>
+&lt;p>The case is designed for 2-slot graphics cards, which means that larger triple-slot cards may not fit. The maximum supported dimensions are:&lt;/p>
+&lt;ul>
+&lt;li>Length: 310mm&lt;/li>
+&lt;li>Width: 145mm&lt;/li>
+&lt;li>Depth: 47mm&lt;/li>
+&lt;/ul>
+&lt;p>The Radeon™ RX 5700 XT GAMING OC 8G I have is too big to fit in the Node 202 case, but I was able to remove the shroud and fans, which allowed me to fit the GPU in the case with 2x 120mm Noctua case fans mounted on the bottom panel of the case to provide cooling.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./deshrouded-gigabyte-radeon-5700xt.webp" class="img-fluid" alt="Deshrouded Gigabyte RX 5700XT Gaming OC"/>
+&lt;br />
+&lt;em>Deshrouded Gigabyte RX 5700XT Gaming OC&lt;/em>
+&lt;/p>
+&lt;h4 id="cpu-considerations">CPU Considerations&lt;/h4>
+&lt;p>The Node 202 riser card interface is PCI Express &lt;strong>3.0&lt;/strong> x16 and there is limited space for a CPU cooler. This is why I went with the 5700G APU I had on hand, instead of the 5900X that I also had in my supplies.&lt;/p>
+&lt;ul>
+&lt;li>The 5700G APU is a 65W TDP part, requiring less cooling than the 5900X
+&lt;ul>
+&lt;li>The Noctua NH-L9a-AM4 I had is a low-profile cooler that is rated for 65W TDP.&lt;/li>
+&lt;li>I replaced the NH-L9a-AM4 fan with a Noctua NF-B9 redux-1600 PWM 4-Pin, 1600 RPM to provide additional cooling&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The 5700G APU is a single CCX, further reducing the cooling requirements&lt;/li>
+&lt;li>The 5700G APU only has PCI Express 3.0, the same as the Riser card interface that comes with the Node 202 case
+&lt;ul>
+&lt;li>A CPU with PCI Express 4.0 support or higher would work too, but would be limited to PCI Express 3.0 speeds&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>The Node 202 also has limited space for cable management. The modular design of the Corsair SF750 power supply along with its easy-to-route cables helped to keep the cables tidy and prevented them from blocking airflow.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./partially-built-steambox.webp" class="img-fluid" alt="Partially Built Steam Box"/>
+&lt;br />
+&lt;em>Partially Built Steam Box&lt;/em>
+&lt;/p>
+&lt;h2 id="operating-system-">Operating System 📀&lt;/h2>
+&lt;p>Initially, I installed &lt;a href="https://github.com/HoloISO">HoloISO&lt;/a>, which gets lots of attention but switched to &lt;a href="https://chimeraos.org/">ChimeraOS&lt;/a> on a recommendation from my friend &lt;a href="https://www.ypsidanger.com/">Jorge Casto&lt;/a>. &lt;strong>ChimeraOS is excellent!&lt;/strong> 🧑‍🍳🤌&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;ChimeraOS is an operating system that provides an out of the box couch gaming experience. After installation, boot directly into Steam Big Picture and start playing your favorite games.&lt;/p>
+&lt;p>If you want Steam in your living room, you want ChimeraOS&amp;rdquo; - ChimeraOS Team&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>If you&amp;rsquo;re building a Steam Box, I highly recommend ChimeraOS&lt;/strong>. One of the key advantages of ChimeraOS is its use of atomic updates. Atomic updates ensure that updates are applied as a single, cohesive unit, which reduces the likelihood of update failures and ensures that the system is always in a consistent state. In contrast, HoloISO uses the regular Arch Linux update mechanism, which applies updates individually and can potentially lead to update failures. In pursuit of a true console-like experience, ChimeraOS gets it right and even supports rolling back updates should anything go wrong.&lt;/p>
+&lt;p class="text-center">
+&lt;a href="https://chimeraos.org/" target="_blank">&lt;img src="./chimeraos.svg" class="img-fluid" alt="ChimeraOS"/>&lt;/a>
+&lt;br />
+&lt;/p>
+&lt;p>ChimeraOS is a more well-thought-out implementation when compared to HoloISO. Here&amp;rsquo;s a summary of how ChimeraOS, SteamOS and HoloISO compare:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>ChimeraOS&lt;/th>
+&lt;th>SteamOS 3.x&lt;/th>
+&lt;th>HoloISO&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Based on&lt;/td>
+&lt;td>Arch Linux&lt;/td>
+&lt;td>Arch Linux&lt;/td>
+&lt;td>SteamOS 3.x/Arch Linux&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Desktop&lt;/td>
+&lt;td>Gnome&lt;/td>
+&lt;td>KDE Plasma&lt;/td>
+&lt;td>KDE Plasma&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Atomic updates&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Read-write root filesystem&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Custom partitioning&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>General hardware support&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Up-to-date base packages&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Remote app installation&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Built-in EGS &amp;amp; GOG support&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Built-in emulation support&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Additional game tweaks&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Additional artwork&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Built-in GE Proton&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Full source publicly hosted&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Forkable infrastructure&lt;/td>
+&lt;td>✔️&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p class="text-center">
+&lt;em>Table taken from the &lt;a href="https://github.com/ChimeraOS/chimeraos/wiki" target="_blank">ChimeraOS Wiki&lt;/a>&lt;/em>
+&lt;/p>
+&lt;p>When I first built the Steam Box, ChimeraOS worked best with Radeon GPUs if you wanted to enable the Steam Deck UI (gamepadui). Support for Intel and NVIDIA GPUs is improving, but I&amp;rsquo;ve stayed with AMD Radeon because that has been proven to be the most compatible option.&lt;/p>
+&lt;h3 id="chimeraos-experience-">ChimeraOS Experience 🦁&lt;/h3>
+&lt;p>Some of the ChimeraOS features that I love are:&lt;/p>
+&lt;ul>
+&lt;li>A true Steam Deck-like experience but for a wide range of hardware
+&lt;ul>
+&lt;li>More so if you have Steam Controllers available, I&amp;rsquo;ve got three connected wirelessly&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Wake up from sleep via the push of a controller button&lt;/li>
+&lt;li>Built-in support for Epic Game Store and GOG&lt;/li>
+&lt;li>Built-in support for emulation
+&lt;ul>
+&lt;li>I enjoy playing retro arcade and console games, and ChimeraOS makes it easy to install and play them&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Built-in support for Xbox Wireless Controllers
+&lt;ul>
+&lt;li>&lt;a href="https://wimpysworld.com/posts/flash-stadia-controller-bluetooth-firmware-on-linux/">My Stadia Controllers with Bluetooth Firmware also work great with ChimeraOS&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Bundles current builds of Proton-GE&lt;/li>
+&lt;li>Web-based UI for managing the system/games&lt;/li>
+&lt;/ul>
+&lt;p>I&amp;rsquo;ve been using ChimeraOS for nearly a year and I&amp;rsquo;m extremely happy with it. I installed ChimeraOS 33 when I built the SteamBox and it has updated itself, without issue, with ChimeraOS 41. New releases are made ever 6 weeks or so. Having a dedicated &amp;ldquo;games console&amp;rdquo; has resulted in me playing more games, but more importantly, playing more games with my family. The three of us sit together to play through games, often with my daughter on controls and my wife and I problem-solving and making suggestions. As a family, we&amp;rsquo;ve revisited &lt;a href="https://store.steampowered.com/app/996580/Spyro_Reignited_Trilogy/">Spyro™ Reignited Trilogy&lt;/a> something my wife and I played through together on the original PlayStation last-century! 😱 My daughter and I are most of the way through the &lt;a href="https://store.steampowered.com/bundle/6588/Monkey_Island_Collection/">Monkey Island Collection&lt;/a> and we are also now into co-op games like &lt;a href="https://store.steampowered.com/app/1225570/Unravel_Two/">Unravel Two&lt;/a> and &lt;a href="https://store.steampowered.com/app/1426210/It_Takes_Two/">It Takes Two&lt;/a>. We&amp;rsquo;ve also purchased some &amp;ldquo;mobile&amp;rdquo; games we play on tablets and NVIDIA SHIELD such as &lt;a href="https://store.steampowered.com/app/257790/Riptide_GP2/">Riptide GP2&lt;/a>, &lt;a href="https://store.steampowered.com/app/443860/Riptide_GP_Renegade/">Riptide GP Renegade&lt;/a> and &lt;a href="https://store.steampowered.com/app/389140/Horizon_Chase_Turbo/">Horizon Chase Turbo&lt;/a>. Yes, we like racing games 🏁&lt;/p>
+&lt;p>My daughter has access to (mostly) the same games her friends play on Xbox and PlayStation. She doesn&amp;rsquo;t feel like our Steam Box is &amp;ldquo;different&amp;rdquo; from her friend&amp;rsquo;s consoles. When they visit each other they broadly play the same selection of titles, except for platform exclusives of course. When &lt;a href="https://store.steampowered.com/app/1332010/Stray/">Stray&lt;/a> and &lt;a href="https://store.steampowered.com/app/319510/Five_Nights_at_Freddys/">Five Nights at Freddys&lt;/a> became the games to play among her circle of friends, they were a click away and worked perfectly. Thanks to the Steam Deck, ChimeraOS is just a games console and not a &amp;ldquo;PC&amp;rdquo; to her. She doesn&amp;rsquo;t have to worry about updates, drivers, or anything else. She just turns it on and plays games.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./completed-steambox.jpg" class="img-fluid" alt="ChimeraOS powered Steam Box in action"/>
+&lt;br />
+&lt;em>ChimeraOS powered Steam Box in action - taken before I figured out how to enable ultrawide resolution&lt;/em>
+&lt;/p>
+&lt;p>I&amp;rsquo;ve found ChimeraOS provides much better game compatibility than I&amp;rsquo;ve been able to achieve by simply installing Steam on Ubuntu. For example, &lt;a href="https://store.steampowered.com/app/1293830/Forza_Horizon_4/">Forza Horizon 4&lt;/a> and &lt;a href="https://store.steampowered.com/app/1551360/Forza_Horizon_5/">Forza Horizon 5&lt;/a> both run beautifully on the ChimeraOS powered Steam Box; something that eluded me on Ubuntu. We have the Steam Box connected to a 3440x1440 Ultrawide monitor and configuring each game to use &amp;ldquo;Native&amp;rdquo; resolution via the game properties unlocks a gorgeous ultra-wide gaming experience.&lt;/p>
+&lt;h2 id="steam-deck-">Steam Deck 🎮&lt;/h2>
+&lt;p>Several of my friends have Steam Decks and love them. They use them as both a handheld console and docked under the TV for family gaming. So, I could be using a Steam Deck to facilitate our family gaming requirements, but I don&amp;rsquo;t think I would have arrived at this use case of the Steam Deck without first having seen the benefits of a Steam Box. I am considering getting a Steam Deck or similar handheld gaming-orientated PC and it would certainly be nice to use something more power efficient than that 270W total system power consumption the Steam Box requires. &lt;strong>You can hear more about how &lt;a href="https://linuxmatters.sh/1/">my friend Mark has switched to Steam Deck as his primary gaming device&lt;/a> in &lt;a href="https://linuxmatters.sh/1/">Linux Matters: Mastodon on My Résumé (Episode 1)&lt;/a>&lt;/strong>.&lt;/p>
+&lt;p class="text-center">
+&lt;a href="https://linuxmatters.sh" target="_blank">&lt;img src="https://linuxmatters.sh/img/episode/linuxmatters-banner-3000x750.webp" class="img-fluid" alt="Linux Matters Podcast"/>&lt;/a>
+&lt;br />
+&lt;em>Linux Matters Podcast&lt;/em>
+&lt;/p>
+&lt;h2 id="upgrades-">Upgrades 📈&lt;/h2>
+&lt;p>Since I first built the Steam Box I have upgraded the GPU to a &lt;a href="https://www.powercolor.com/product?id=1612512944">Fighter AMD Radeon™ RX 6700 XT 12GB GDDR6&lt;/a>. At the time of writing, this is the most powerful Radeon GPU that comfortably fits in the Node 202 case and still leaves room for the additional case fans I installed. This GPU is a great match for the 3440x1440 ultrawide monitor and all the games I&amp;rsquo;ve tried can run at 3440x1440 with high presets (or better) at upwards of 60fps. I&amp;rsquo;ve also added a second SSD; the &lt;a href="https://uk.crucial.com/ssd/p3/ct4000p3ssd8">Crucial P3 4TB M.2 PCIe Gen3&lt;/a>. I used the ChimerOS web UI to prepare the drive and it now automatically shows up in the Steam UI as a Steam Library location.&lt;/p>
+&lt;h2 id="whats-next-">What&amp;rsquo;s next? 🤔&lt;/h2>
+&lt;p>The Steam Box has a permanent home in my office, but originally I&amp;rsquo;d planned to put it in the lounge under the TV. I have an original Steam Link, so now I&amp;rsquo;m thinking that I&amp;rsquo;ll put the Steam Link under the TV to replace the NVIDIA SHIELD. I have some older &lt;a href="https://gpd.hk/">GPD&lt;/a> devices that are designed for gaming, so I think I&amp;rsquo;ll put ChimeraOS on those to see how they perform as dedicated handheld game consoles. Could they be used as Steam Link clients too?&lt;/p>
+&lt;p>ChimeraOS also supports installing software via &lt;a href="https://flathub.org/">Flathub&lt;/a>. I&amp;rsquo;d like to get a browser installed that can be used for streaming services like Netflix and Disney+ so we can use the Steam Box for watching TV too.&lt;/p>
+&lt;p>I&amp;rsquo;ll report back on all of this in a future post. &lt;a href="https://wimpysworld.com/posts/rss.xml">Like and Subscribe&lt;/a> 😉&lt;/p>
+&lt;h2 id="conclusion-">Conclusion 🏁&lt;/h2>
+&lt;p>The tinkerer, maker and developer in me wants to try &lt;a href="https://github.com/Jovian-Experiments/Jovian-NixOS">NixOS as games console solution&lt;/a> but I&amp;rsquo;m starting to think that other than the learning opportunity there is no real value in doing so, considering what an excellent job ChimeraOS does.&lt;/p>
+&lt;p>So here we are at the conclusion with barely a mention of Linux 🐧 ChimeraOS and the Steam Deck are excellent examples of Linux devices done right; all the Linux-y stuff is just implementation detail. Even I don&amp;rsquo;t think of our Steam Box as being a Linux-y thing; I just pick up a controller, wake up the console and start playing contemporary games or my favourite retro classics 🕹️ without any fuss.&lt;/p></description><summary>I declined my Steam Deck pre-order on and I&amp;rsquo;m playing more games on Linux as a result</summary></item></channel></rss>
