@@ -27,7 +27,7 @@ I recently discussed my why I cancelled my Steam Deck pre-order on the [Linux Ma
 
 ## Hardware 🖥️
 
-At the time I had an inventory of parts that were not being used and on the second desk in my office I had a Philips 345B1C 3440x1440 WQHD Monitor, keyboard/mouse and more controllers than I know what to do with. From what I had available I selected the following:
+At the time I had an inventory of parts that weren't being used and on the second desk in my office I had an ultra-wide monitor, keyboard, mouse and more controllers than I know what to do with. From the parts I had available I selected the following:
 
 - [Gigabyte B550i Mini-ITX AORUS Pro AX Motherboard](https://www.gigabyte.com/Motherboard/B550I-AORUS-PRO-AX-rev-10#kf)
 - [AMD Ryzen™ 7 5700G](https://www.amd.com/en/products/apu/amd-ryzen-7-5700g)
@@ -95,7 +95,7 @@ Initially, I installed [HoloISO](https://github.com/HoloISO), which gets lots of
   <br />
 </p>
 
-ChimeraOS is a more well-thought-out implementation when compared to HoloISO. Here's a summary of how ChimeraOS, SteamOS and HoloISO compare:
+ChimeraOS is a very well-thought-out implementation of a console-like operating system when compared to HoloISO. Here's a summary of how ChimeraOS, SteamOS and HoloISO compare:
 
 |                                   | ChimeraOS          | SteamOS 3.x        | HoloISO                |
 | --------------------------------- | ------------------ | ------------------ | ---------------------- |
@@ -119,11 +119,11 @@ ChimeraOS is a more well-thought-out implementation when compared to HoloISO. He
   <em>Table taken from the <a href="https://github.com/ChimeraOS/chimeraos/wiki" target="_blank">ChimeraOS Wiki</a></em>
 </p>
 
-When I first built the Steam Box, ChimeraOS worked best with Radeon GPUs if you wanted to enable the Steam Deck UI (gamepadui). Support for Intel and NVIDIA GPUs is improving, but I've stayed with AMD Radeon because that has been proven to be the most compatible option.
+When I first built the Steam Box, ChimeraOS worked best with Radeon GPUs, if you wanted to enable the Steam Deck UI (gamepadui). Support for Intel and NVIDIA GPUs is improving, but I've stayed with AMD Radeon because that's been proven to be the most compatible option.
 
 ### ChimeraOS Experience 🦁
 
-Some of the ChimeraOS features that I love are:
+I've been using ChimeraOS for nearly a year and I'm extremely happy with it. I installed ChimeraOS 33 when I built the Steam Box and it has updated itself, without issue, to ChimeraOS 41 (at the time of writing). New releases are made ever 6 weeks or so. Some of the ChimeraOS features that I love are:
 
 - A true Steam Deck-like experience but for a wide range of hardware
   - More so if you have Steam Controllers available, I've got three connected wirelessly
@@ -136,21 +136,21 @@ Some of the ChimeraOS features that I love are:
 - Bundles current builds of Proton-GE
 - Web-based UI for managing the system/games
 
-I've been using ChimeraOS for nearly a year and I'm extremely happy with it. I installed ChimeraOS 33 when I built the SteamBox and it has updated itself, without issue, with ChimeraOS 41. New releases are made ever 6 weeks or so. Having a dedicated "games console" has resulted in me playing more games, but more importantly, playing more games with my family. The three of us sit together to play through games, often with my daughter on controls and my wife and I problem-solving and making suggestions. As a family, we've revisited [Spyro™ Reignited Trilogy](https://store.steampowered.com/app/996580/Spyro_Reignited_Trilogy/) something my wife and I played through together on the original PlayStation last-century! 😱 My daughter and I are most of the way through the [Monkey Island Collection](https://store.steampowered.com/bundle/6588/Monkey_Island_Collection/) and we are also now into co-op games like [Unravel Two](https://store.steampowered.com/app/1225570/Unravel_Two/) and [It Takes Two](https://store.steampowered.com/app/1426210/It_Takes_Two/). We've also purchased some "mobile" games we play on tablets and NVIDIA SHIELD such as [Riptide GP2](https://store.steampowered.com/app/257790/Riptide_GP2/), [Riptide GP Renegade](https://store.steampowered.com/app/443860/Riptide_GP_Renegade/) and [Horizon Chase Turbo](https://store.steampowered.com/app/389140/Horizon_Chase_Turbo/). Yes, we like racing games 🏁
+Having a dedicated "games console" has resulted in me playing more games, but more importantly, playing more games with my family. The three of us sit together to play through games, often with my daughter on controls and my wife and I problem-solving and making suggestions. As a family, we've revisited [Spyro™ Reignited Trilogy](https://store.steampowered.com/app/996580/Spyro_Reignited_Trilogy/) something my wife and I played through together on the original PlayStation last-century! 😱 My daughter and I are most of the way through the [Monkey Island Collection](https://store.steampowered.com/bundle/6588/Monkey_Island_Collection/) and we've discovered we love co-op games like [Unravel Two](https://store.steampowered.com/app/1225570/Unravel_Two/) and [It Takes Two](https://store.steampowered.com/app/1426210/It_Takes_Two/). We've also purchased some "mobile" games we play on tablets and NVIDIA SHIELD such as [Riptide GP2](https://store.steampowered.com/app/257790/Riptide_GP2/), [Riptide GP Renegade](https://store.steampowered.com/app/443860/Riptide_GP_Renegade/) and [Horizon Chase Turbo](https://store.steampowered.com/app/389140/Horizon_Chase_Turbo/). Yes, we like racing games 🏁
 
 My daughter has access to (mostly) the same games her friends play on Xbox and PlayStation. She doesn't feel like our Steam Box is "different" from her friend's consoles. When they visit each other they broadly play the same selection of titles, except for platform exclusives of course. When [Stray](https://store.steampowered.com/app/1332010/Stray/) and [Five Nights at Freddys](https://store.steampowered.com/app/319510/Five_Nights_at_Freddys/) became the games to play among her circle of friends, they were a click away and worked perfectly. Thanks to the Steam Deck, ChimeraOS is just a games console and not a "PC" to her. She doesn't have to worry about updates, drivers, or anything else. She just turns it on and plays games.
 
 <p class="text-center">
   <img src="./completed-steambox.jpg" class="img-fluid" alt="ChimeraOS powered Steam Box in action"/>
   <br />
-  <em>ChimeraOS powered Steam Box in action - taken before I figured out how to enable ultrawide resolution</em>
+  <em>ChimeraOS powered Steam Box in action - before I figured out how to enable ultra-wide resolution</em>
 </p>
 
-I've found ChimeraOS provides much better game compatibility than I've been able to achieve by simply installing Steam on Ubuntu. For example, [Forza Horizon 4](https://store.steampowered.com/app/1293830/Forza_Horizon_4/) and [Forza Horizon 5](https://store.steampowered.com/app/1551360/Forza_Horizon_5/) both run beautifully on the ChimeraOS powered Steam Box; something that eluded me on Ubuntu. We have the Steam Box connected to a 3440x1440 Ultrawide monitor and configuring each game to use "Native" resolution via the game properties unlocks a gorgeous ultra-wide gaming experience.
+I've found ChimeraOS offers much better game compatibility than I've been able to achieve by simply installing Steam on Ubuntu. For example, [Forza Horizon 4](https://store.steampowered.com/app/1293830/Forza_Horizon_4/) and [Forza Horizon 5](https://store.steampowered.com/app/1551360/Forza_Horizon_5/) both run beautifully on the ChimeraOS powered Steam Box; something that eluded me on Ubuntu. The Steam Box connected to a 3440x1440 ultra-wide monitor and configuring each game to use "Native" resolution via the game properties unlocks a gorgeous ultra-wide gaming experience. There is no going back from this once you've experienced it, especially for split screen local multiplayer games.
 
 ## Steam Deck 🎮
 
-Several of my friends have Steam Decks and love them. They use them as both a handheld console and docked under the TV for family gaming. So, I could be using a Steam Deck to facilitate our family gaming requirements, but I don't think I would have arrived at this use case of the Steam Deck without first having seen the benefits of a Steam Box. I am considering getting a Steam Deck or similar handheld gaming-orientated PC and it would certainly be nice to use something more power efficient than that 270W total system power consumption the Steam Box requires. **You can hear more about how [my friend Mark has switched to Steam Deck as his primary gaming device](https://linuxmatters.sh/1/) in [Linux Matters: Mastodon on My Résumé (Episode 1)](https://linuxmatters.sh/1/)**.
+Several of my friends have Steam Decks and love them. They use them as both a handheld console and docked under the TV for family gaming. So, I could be using a Steam Deck to facilitate our family gaming requirements, but I don't think I would have arrived at the idea of using a Steam Deck in this way without first experiencing the benefits of the Steam Box. I am considering getting a Steam Deck or similar handheld gaming-orientated PC and it would certainly be nice to use something more power efficient than the 270W total system power consumption the Steam Box requires. **You can hear more about how [my friend Mark has switched to Steam Deck as his primary gaming device](https://linuxmatters.sh/1/) in [Linux Matters: Mastodon on My Résumé (Episode 1)](https://linuxmatters.sh/1/)**.
 
 <p class="text-center">
   <a href="https://linuxmatters.sh" target="_blank"><img src="https://linuxmatters.sh/img/episode/linuxmatters-banner-3000x750.webp" class="img-fluid" alt="Linux Matters Podcast"/></a>
@@ -160,7 +160,7 @@ Several of my friends have Steam Decks and love them. They use them as both a ha
 
 ## Upgrades 📈
 
-Since I first built the Steam Box I have upgraded the GPU to a [Fighter AMD Radeon™ RX 6700 XT 12GB GDDR6](https://www.powercolor.com/product?id=1612512944). At the time of writing, this is the most powerful Radeon GPU that comfortably fits in the Node 202 case and still leaves room for the additional case fans I installed. This GPU is a great match for the 3440x1440 ultrawide monitor and all the games I've tried can run at 3440x1440 with high presets (or better) at upwards of 60fps. I've also added a second SSD; the [Crucial P3 4TB M.2 PCIe Gen3](https://uk.crucial.com/ssd/p3/ct4000p3ssd8). I used the ChimerOS web UI to prepare the drive and it now automatically shows up in the Steam UI as a Steam Library location.
+Since I first built the Steam Box I've upgraded the GPU to a [Fighter AMD Radeon™ RX 6700 XT 12GB GDDR6](https://www.powercolor.com/product?id=1612512944). At the time of writing, this is the most powerful Radeon GPU that comfortably fits in the Node 202 case and still leaves room for the additional case fans I installed. This GPU is a great match for the ultra-wide monitor and all the games I've tried can run at 3440x1440 with high presets (or better) at upwards of 60fps. I've also added a second SSD; the [Crucial P3 4TB M.2 PCIe Gen3](https://uk.crucial.com/ssd/p3/ct4000p3ssd8). I used the ChimerOS web UI to prepare the drive and it now automatically shows up in the Steam UI as a Steam Library location.
 
 ## What's next? 🤔
 
@@ -174,7 +174,4 @@ I'll report back on all of this in a future post. [Like and Subscribe](/posts/rs
 
 The tinkerer, maker and developer in me wants to try [NixOS as games console solution](https://github.com/Jovian-Experiments/Jovian-NixOS) but I'm starting to think that other than the learning opportunity there is no real value in doing so, considering what an excellent job ChimeraOS does.
 
-So here we are at the conclusion with barely a mention of Linux 🐧 ChimeraOS and the Steam Deck are excellent examples of Linux devices done right; all the Linux-y stuff is just implementation detail. Even I don't think of our Steam Box as being a Linux-y thing; I just pick up a controller, wake up the console and start playing contemporary games or my favourite retro classics 🕹️ without any fuss.
-
-
-
+And here we are at the conclusion with barely a mention of Linux 🐧 ChimeraOS and the Steam Deck are excellent examples of Linux devices done right; all the Linux-y stuff is just implementation detail. *Even I don't think of our Steam Box as being a Linux-y thing*; I just pick up a controller, wake up the console and start playing contemporary games or my favourite retro classics 🕹️ without any fuss.
