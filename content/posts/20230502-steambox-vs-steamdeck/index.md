@@ -119,11 +119,9 @@ ChimeraOS is a very well-thought-out implementation of a console-like operating 
   <em>Table taken from the <a href="https://github.com/ChimeraOS/chimeraos/wiki" target="_blank">ChimeraOS Wiki</a></em>
 </p>
 
-When I first built the Steam Box, ChimeraOS worked best with Radeon GPUs, if you wanted to enable the Steam Deck UI (gamepadui). Support for Intel and NVIDIA GPUs is improving, but I've stayed with AMD Radeon because that's been proven to be the most compatible option.
-
 ### ChimeraOS Experience 🦁
 
-I've been using ChimeraOS for nearly a year and I'm extremely happy with it. I installed ChimeraOS 33 when I built the Steam Box and it has updated itself, without issue, to ChimeraOS 41 (at the time of writing). New releases are made ever 6 weeks or so. Some of the ChimeraOS features that I love are:
+I've been using ChimeraOS for nearly a year and I'm extremely happy with it. I installed ChimeraOS 33 when I built the Steam Box and it has updated itself, without issue, to ChimeraOS 41 (at the time of writing). New releases are made every 4 to 6 weeks. Some of the ChimeraOS features that I love are:
 
 - A true Steam Deck-like experience but for a wide range of hardware
   - More so if you have Steam Controllers available, I've got three connected wirelessly
@@ -146,7 +144,7 @@ My daughter has access to (mostly) the same games her friends play on Xbox and P
   <em>ChimeraOS powered Steam Box in action - before I figured out how to enable ultra-wide resolution</em>
 </p>
 
-I've found ChimeraOS offers much better game compatibility than I've been able to achieve by simply installing Steam on Ubuntu. For example, [Forza Horizon 4](https://store.steampowered.com/app/1293830/Forza_Horizon_4/) and [Forza Horizon 5](https://store.steampowered.com/app/1551360/Forza_Horizon_5/) both run beautifully on the ChimeraOS powered Steam Box; something that eluded me on Ubuntu. The Steam Box connected to a 3440x1440 ultra-wide monitor and configuring each game to use "Native" resolution via the game properties unlocks a gorgeous ultra-wide gaming experience. There is no going back from this once you've experienced it, especially for split screen local multiplayer games.
+I've found ChimeraOS offers much better game compatibility than I've been able to achieve by simply installing Steam on Ubuntu. For example, [Forza Horizon 4](https://store.steampowered.com/app/1293830/Forza_Horizon_4/) and [Forza Horizon 5](https://store.steampowered.com/app/1551360/Forza_Horizon_5/) both run beautifully on the ChimeraOS powered Steam Box; something that eluded me on Ubuntu. The Steam Box is connected to a 3440x1440 ultra-wide monitor and configuring each game to use "Native" resolution via the game properties unlocks a gorgeous ultra-wide gaming experience. There is no going back from this once you've experienced it, especially for split screen local multiplayer games.
 
 ## Steam Deck 🎮
 
@@ -160,7 +158,9 @@ Several of my friends have Steam Decks and love them. They use them as both a ha
 
 ## Upgrades 📈
 
-Since I first built the Steam Box I've upgraded the GPU to a [Fighter AMD Radeon™ RX 6700 XT 12GB GDDR6](https://www.powercolor.com/product?id=1612512944). At the time of writing, this is the most powerful Radeon GPU that comfortably fits in the Node 202 case and still leaves room for the additional case fans I installed. This GPU is a great match for the ultra-wide monitor and all the games I've tried can run at 3440x1440 with high presets (or better) at upwards of 60fps. I've also added a second SSD; the [Crucial P3 4TB M.2 PCIe Gen3](https://uk.crucial.com/ssd/p3/ct4000p3ssd8). I used the ChimerOS web UI to prepare the drive and it now automatically shows up in the Steam UI as a Steam Library location.
+Since I first built the Steam Box I've upgraded the GPU to a [Fighter AMD Radeon™ RX 6700 XT 12GB GDDR6](https://www.powercolor.com/product?id=1612512944). At the time of writing, this is the most powerful Radeon GPU that comfortably fits in the Node 202 case and still leaves room for the additional case fans I installed. This GPU is a great match for the ultra-wide monitor and all the games I've tried can run at 3440x1440 with high presets (or better) at upwards of 60fps. When I first built the Steam Box, ChimeraOS worked best with Radeon GPUs, if you wanted to enable the Steam Deck UI (gamepadui). Support for Intel and NVIDIA GPUs is improving, but I've stayed with AMD Radeon because that's been proven to be the most compatible option.
+
+I've also added a second SSD; the [Crucial P3 4TB M.2 PCIe Gen3](https://uk.crucial.com/ssd/p3/ct4000p3ssd8). I used the ChimerOS web UI to prepare the drive and it now automatically shows up in the Steam UI as a Steam Library location.
 
 ## What's next? 🤔
 
