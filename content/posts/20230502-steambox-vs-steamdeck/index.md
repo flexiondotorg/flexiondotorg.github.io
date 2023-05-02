@@ -2,10 +2,10 @@
 title: "Steam Box vs Steam Deck"
 slug: steambox-vs-steamdeck
 date: 2023-05-01T18:38:19+01:00
-#lastmod: 2023-05-01T18:38:19+01:00
+lastmod: 2023-05-02T20:15:42+01:00
 categories: [ "Linux", "Computer Hardware" ]
 tags: [ "ChimeraOS", "HoloISO", "Steam Deck", "Gaming", "Emulation" ]
-summary: "I declined my Steam Deck pre-order on and I'm playing more games on Linux as a result"
+summary: "I declined my Steam Deck pre-order and I'm now playing more games on Linux"
 sidebar: true
 hero: "hero.webp"
 draft: false
@@ -13,7 +13,6 @@ draft: false
 
  When I received my Steam Deck Purchase Information email I wasn't playing games all that often; mostly online racing games with friends once a week. I didn't think I'd get much use out of a handheld console. I also had an inventory of PC parts available that could be used to build a dedicated Steam Box. So on July 18th 2022, I declined spending £569 on a Steam Deck and set about building a Steam Box instead. Here's how I got on and what I learned.
 
-<!--
 ## As featured on Linux Matters! 🎙️
 
 I recently discussed my why I cancelled my Steam Deck pre-order on the [Linux Matters](https://linuxmatters.sh/) podcast. **You can hear that discussion with my friends Alan and Mark in [Linux Matters: Lawful evil monitor alignment (Episode 2)](https://linuxmatters.sh/2/)**.
@@ -23,7 +22,6 @@ I recently discussed my why I cancelled my Steam Deck pre-order on the [Linux Ma
   <br />
   <em>Linux Matters Podcast</em>
 </p>
--->
 
 ## Hardware 🖥️
 
@@ -150,25 +148,19 @@ I've found ChimeraOS offers much better game compatibility than I've been able t
 
 Several of my friends have Steam Decks and love them. They use them as both a handheld console and docked under the TV for family gaming. So, I could be using a Steam Deck to facilitate our family gaming requirements, but I don't think I would have arrived at the idea of using a Steam Deck in this way without first experiencing the benefits of the Steam Box. I am considering getting a Steam Deck or similar handheld gaming-orientated PC and it would certainly be nice to use something more power efficient than the 270W total system power consumption the Steam Box requires. **You can hear more about how [my friend Mark has switched to Steam Deck as his primary gaming device](https://linuxmatters.sh/1/) in [Linux Matters: Mastodon on My Résumé (Episode 1)](https://linuxmatters.sh/1/)**.
 
-<p class="text-center">
-  <a href="https://linuxmatters.sh" target="_blank"><img src="https://linuxmatters.sh/img/episode/linuxmatters-banner-3000x750.webp" class="img-fluid" alt="Linux Matters Podcast"/></a>
-  <br />
-  <em>Linux Matters Podcast</em>
-</p>
-
 ## Upgrades 📈
 
 Since I first built the Steam Box I've upgraded the GPU to a [Fighter AMD Radeon™ RX 6700 XT 12GB GDDR6](https://www.powercolor.com/product?id=1612512944). At the time of writing, this is the most powerful Radeon GPU that comfortably fits in the Node 202 case and still leaves room for the additional case fans I installed. This GPU is a great match for the ultra-wide monitor and all the games I've tried can run at 3440x1440 with high presets (or better) at upwards of 60fps. When I first built the Steam Box, ChimeraOS worked best with Radeon GPUs, if you wanted to enable the Steam Deck UI (gamepadui). Support for Intel and NVIDIA GPUs is improving, but I've stayed with AMD Radeon because that's been proven to be the most compatible option.
 
 I've also added a second SSD; the [Crucial P3 4TB M.2 PCIe Gen3](https://uk.crucial.com/ssd/p3/ct4000p3ssd8). I used the ChimerOS web UI to prepare the drive and it now automatically shows up in the Steam UI as a Steam Library location.
 
-## What's next? 🤔
+## What's next? 🔮
 
 The Steam Box has a permanent home in my office, but originally I'd planned to put it in the lounge under the TV. I have an original Steam Link, so now I'm thinking that I'll put the Steam Link under the TV to replace the NVIDIA SHIELD. I have some older [GPD](https://gpd.hk/) devices that are designed for gaming, so I think I'll put ChimeraOS on those to see how they perform as dedicated handheld game consoles. Could they be used as Steam Link clients too?
 
 ChimeraOS also supports installing software via [Flathub](https://flathub.org/). I'd like to get a browser installed that can be used for streaming services like Netflix and Disney+ so we can use the Steam Box for watching TV too.
 
-I'll report back on all of this in a future post. [Like and Subscribe](/posts/rss.xml) 😉
+I'll report back on all of this in a future post. [Like 👍️ and Subscribe ❤️](/posts/rss.xml)
 
 ## Conclusion 🏁
 
