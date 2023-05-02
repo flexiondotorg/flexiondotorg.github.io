@@ -17,7 +17,7 @@ images:
 
 ## As featured on Linux Matters! 🎙️
 
-I recently discussed my why I cancelled my Steam Deck pre-order on the [Linux Matters](https://linuxmatters.sh/) podcast. **You can hear that discussion with my friends Alan and Mark in [Linux Matters: Lawful evil monitor alignment (Episode 2)](https://linuxmatters.sh/2/)**.
+I recently discussed why I cancelled my Steam Deck pre-order on the [Linux Matters](https://linuxmatters.sh/) podcast. **You can hear that discussion with my friends Alan and Mark in [Linux Matters: Lawful evil monitor alignment (Episode 2)](https://linuxmatters.sh/2/)**.
 
 <p class="text-center">
   <a href="https://linuxmatters.sh" target="_blank"><img src="https://linuxmatters.sh/img/episode/linuxmatters-banner-3000x750.webp" class="img-fluid" alt="Linux Matters Podcast"/></a>
