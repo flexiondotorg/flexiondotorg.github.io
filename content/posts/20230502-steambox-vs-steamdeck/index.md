@@ -9,6 +9,8 @@ summary: "I declined my Steam Deck pre-order and I'm now playing more games on L
 sidebar: true
 hero: "hero.webp"
 draft: false
+images:
+  - "hero.webp"
 ---
 
  When I received my Steam Deck Purchase Information email I wasn't playing games all that often; mostly online racing games with friends once a week. I didn't think I'd get much use out of a handheld console. I also had an inventory of PC parts available that could be used to build a dedicated Steam Box. So on July 18th 2022, I declined spending £569 on a Steam Deck and set about building a Steam Box instead. Here's how I got on and what I learned.
