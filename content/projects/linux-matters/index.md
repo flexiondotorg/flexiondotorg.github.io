@@ -4,7 +4,7 @@ slug: linux-matters
 date: 2023-04-18 00:00:00
 categories: ["Linux", "Broadcasting", "Open Source", "Content Creation"]
 tags: ["Podcast", "Community"]
-summary: Three experienced Open Source professionals discuss the impact Linux has in their daily lives.
+summary: Three experienced Open Source professionals discuss the impact Linux has in their daily lives
 sidebar: false
 images: hero.webp
 hero: hero.webp
