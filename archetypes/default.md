@@ -9,6 +9,8 @@ summary: ""
 sidebar: true
 hero: "hero.webp"
 draft: true
+images:
+  - "hero.webp"
 ---
 
 Words here!
