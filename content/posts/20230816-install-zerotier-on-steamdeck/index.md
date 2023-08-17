@@ -30,7 +30,7 @@ So, give that episode a listen to hear why I love ZeroTier so much 💖
   <em>Linux Matters Podcast</em>
 </p>
 
-What follows is a guide to installing ZeroTier on the Steam Deck, but this technique can be used to install any software on Steam Deck that is available for Arch Linux 👍️
+What follows is a guide to installing ZeroTier on the Steam Deck, **but this technique can be used to install any software on Steam Deck that is available for Arch Linux** 👍️
 
 # Installing ZeroTier on Steam Deck
 
