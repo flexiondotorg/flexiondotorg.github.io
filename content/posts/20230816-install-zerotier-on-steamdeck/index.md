@@ -8,7 +8,7 @@ tags: [ "Steam Deck", "ZeroTier", "Gaming", "Arch Linux", "Nix" ]
 summary: "How to persist software installation across SteamOS updates on the Steam Deck."
 sidebar: true
 hero: "hero.webp"
-draft: true
+draft: false
 images:
   - "hero.webp"
 ---
