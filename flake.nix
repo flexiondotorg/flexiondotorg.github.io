@@ -19,7 +19,8 @@
     {
       devShells.default = pkgs.mkShell {
         packages = with pkgs; [
-          hugo                          # Terminal static site generator
+          hugo
+          imagemagick
         ];
       };
     });
