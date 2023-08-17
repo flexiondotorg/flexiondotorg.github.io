@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nix on Wimpy's World</title><link>https://wimpysworld.com/tags/nix/</link><description>Recent content in Nix on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 17 Aug 2023 12:15:45 +0100</lastBuildDate><atom:link href="https://wimpysworld.com/tags/nix/rss.xml" rel="self" type="application/rss+xml"/><item><title>Install ZeroTier on Steam Deck</title><link>https://wimpysworld.com/posts/install-zerotier-on-steamdeck/</link><pubDate>Thu, 17 Aug 2023 12:15:45 +0100</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/install-zerotier-on-steamdeck/</guid><description>&lt;p>It took 9 episodes of &lt;a href="https://linuxmatters.sh">Linux Matters&lt;/a> for my friends and co-hosts &lt;a href="https://linuxmatters.sh/host/apope/">Alan&lt;/a> and &lt;a href="https://linuxmatters.sh/host/mjohnson/">Mark&lt;/a> to wear down 😅 my resolve to buy a &lt;a href="https://www.steamdeck.com/en/">Steam Deck&lt;/a>, even &lt;a href="https://wimpysworld.com/posts/steambox-vs-steamdeck/">after I passed on my original Steam Deck pre-order&lt;/a>.
+I&amp;rsquo;m glad they did, it&amp;rsquo;s a great little device and a dream come true for Linux 🐧 nerds; excellent hardware and completely hackable 🧑‍💻&lt;/p>
+&lt;p>I ordered the 64GB model via the recently announced &lt;a href="https://store.steampowered.com/sale/steamdeckrefurbished">Steam Deck™ Certified Refurbished&lt;/a> program.
+I&amp;rsquo;m going to resist retrofitting a larger NVMe SSD, and have instead added a 1TB microSDXC card 💾
+The 64GB internal eMMC storage will be used for SteamOS and the microSDXC card will be used exclusively for games 🕹️&lt;/p>
+&lt;p>While I&amp;rsquo;m avoiding hardware modifications, I do want to install some software enhancements on the Steam Deck; specifically &lt;a href="https://www.zerotier.com/">ZeroTier&lt;/a>.
+&lt;strong>I spoke enthusiastically about ZeroTier in &lt;a href="https://linuxmatters.sh/episodes/8/">Linux Matters: Picking Apart the Steam Deck (Episode 8)&lt;/a>&lt;/strong>; it is as essential as WiFi for me.
+So, give that episode a listen to hear why I love ZeroTier so much 💖&lt;/p>
+&lt;p class="text-center">
+&lt;a href="https://linuxmatters.sh" target="_blank">&lt;img src="https://linuxmatters.sh/img/episode/linuxmatters-banner-3000x750.webp" class="img-fluid" alt="Linux Matters Podcast"/>&lt;/a>
+&lt;br />
+&lt;em>Linux Matters Podcast&lt;/em>
+&lt;/p>
+&lt;p>What follows is a guide to installing ZeroTier on the Steam Deck, but this technique can be used to install any software on Steam Deck that is available for Arch Linux 👍️&lt;/p>
+&lt;h1 id="installing-zerotier-on-steam-deck">Installing ZeroTier on Steam Deck&lt;/h1>
+&lt;p>The Steam Deck has a (&lt;em>mostly&lt;/em>) read-only filesystem.
+We&amp;rsquo;ll use &lt;a href="https://github.com/ValShaped/rwfus">Rwfus: Read-Write OverlayFS for your Steam Deck&lt;/a> to install ZeroTier so that it persists across reboots &lt;em>and&lt;/em> SteamOS updates.&lt;/p>
+&lt;p>The author describes &lt;code>rwfus&lt;/code> as:&lt;/p>
+&lt;blockquote>
+&lt;p>a vinyl couch cover for your filesystem, Rwfus covers your Deck&amp;rsquo;s &lt;code>/usr/&lt;/code> directory (and some others) allowing you to initialize and use &lt;code>pacman&lt;/code> (the Arch Linux package manager) on the Steam Deck without losing packages when the next update comes out.&lt;/p>
+&lt;/blockquote>
+&lt;p>Perfect 👌️&lt;/p>
+&lt;h2 id="enter-the-desktop">Enter the Desktop&lt;/h2>
+&lt;p>The process of installing and configuring ZeroTier requires the use of the Steam Deck desktop mode.
+Connecting a mouse 🖱️ and keyboard ⌨️ to the Steam Deck will make this process much easier.
+After the Steam Deck has booted you should Switch to Desktop.&lt;/p>
+&lt;ul>
+&lt;li>Press the &amp;ldquo;Steam&amp;rdquo; button on the Steam Deck and scroll down through the menu and select &amp;ldquo;Power&amp;rdquo;.&lt;/li>
+&lt;li>Then, select the &amp;ldquo;Switch to Desktop&amp;rdquo; option.&lt;/li>
+&lt;li>Once the desktop has loaded, click on the Steam Deck logo in the lower-left corner of the desktop to bring up the menu.&lt;/li>
+&lt;li>Select &amp;ldquo;System&amp;rdquo; in the left column and then &amp;ldquo;Konsole&amp;rdquo; from the right column.
+&lt;ul>
+&lt;li>You can also press the Super key and type in &amp;ldquo;Konsole&amp;rdquo; in the search bar.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Suddenly, as if by magic, the terminal appeared 🪄&lt;/li>
+&lt;/ul>
+&lt;p class="text-center">
+&lt;img src="./magic-terminal.webp" class="img-fluid" alt="Konsole"/>
+&lt;br />
+&lt;em>Konsole on Steam Deck&lt;/em>
+&lt;/p>
+&lt;h2 id="set-a-password">Set a Password&lt;/h2>
+&lt;p>By default, no password 🔓️ is set for the &lt;code>deck&lt;/code> user.
+With no password set, it is not possible to run commands in the root content using &lt;code>sudo&lt;/code>.
+Type &lt;code>passwd&lt;/code> in the terminal to set a password.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>(deck@steamdeck ~) $ passwd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>New Password:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Retype New Password:
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-rwfus">Install Rwfus&lt;/h2>
+&lt;p>With that done we can install &lt;code>rwfus&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>git clone https://github.com/ValShaped/rwfus.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd rwfus
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./rwfus -iI
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="install-zerotier">Install ZeroTier&lt;/h2>
+&lt;p>Run &lt;code>sudo pacman -Sy&lt;/code> to update your repositories 🌿
+Now install ZeroTier.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sudo pacman -S zerotier-one
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="enable-and-start-zerotier-service">Enable and Start ZeroTier service&lt;/h3>
+&lt;p>ZeroTier installs its systemd unit in &lt;code>/usr/lib/systemd/system/&lt;/code>, but as we&amp;rsquo;re installing while Rwfus is active that service file is installed into the Rwfus overlay.
+This is a problem because running &lt;code>systemctl enable zerotier-one&lt;/code> now would create a systemd unit in &lt;code>/etc/systemd/system/multi-user.target.wants/&lt;/code> that references a file in &lt;code>/usr&lt;/code>, and that file will not exist until Rwfus is running.
+The effect is that the ZeroTier service will not start on boot as systemd will not be able to find the service file.&lt;/p>
+&lt;p>But there is a simple workaround, copy the ZeroTier service file to &lt;code>/etc/systemd/system&lt;/code>, which is fine as &lt;code>/etc&lt;/code> is already a writable overlay.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>cp /usr/lib/systemd/system/zerotier-one.service /etc/systemd/system/zerotier-one.service
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, enable and start the ZeroTier service.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sudo systemctl enable zerotier-one --now
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="join-a-zerotier-network">Join a ZeroTier Network&lt;/h2>
+&lt;p>Find your ZeroTier device ID (a 10-digit hexadecimal number) by running:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sudo zerotier-cli info
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The output will look 👀 something like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>200 info deadbeef00 1.10.1 OFFLINE
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Join a ZeroTier network using a network ID (a 16-digit hexadecimal number) which you can get from the &lt;a href="https://my.zerotier.com/">My ZeroTier page&lt;/a>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sudo zerotier-cli join &amp;lt;network id&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Return to the &lt;a href="https://my.zerotier.com/">My ZeroTier page&lt;/a> select the network you joined, scroll down to the Members section and authorize the Steam Deck device ID.&lt;/p>
+&lt;p>Verify that the Steam Deck is correctly allocated an IP address, this may take up to 30 seconds ⏳️&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>ip --brief addr | grep ^zt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You should see 👁️ output similar to this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>zta1b2c3d4 UNKNOWN 192.168.192.59/24 baad::4a4a:faff:fefe:5aa5/64
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="use-your-zerotier-network">Use your ZeroTier network&lt;/h2>
+&lt;p>You can now connect from your Steam Deck to other devices on the same ZeroTier network.
+Or you could enable SSH on the Steam Deck and then log in to it from another device on the ZeroTier network 💪&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sudo systemctl enable sshd --now
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>With ZeroTier installed on the Steam Deck, it is part of my network where ever I may roam; and enables some interesting possibilities such as remote play from anywhere in the world or &lt;a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2632149295">playing LAN multi-player games with remote friends&lt;/a>.
+Share in the comments how you&amp;rsquo;re using ZeroTier on your Steam Deck 💬&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./SteamDeck-ZeroTier.webp" class="img-fluid" alt="Steam Deck with ZeroTier"/>
+&lt;br />
+&lt;em>Steam Deck&lt;/em>
+&lt;/p>
+&lt;p>I&amp;rsquo;ll be keeping my Steam Deck software modifications to a minimum 🤏 but where I do make changes I&amp;rsquo;ll be careful not to disrupt the SteamOS root file systems or potentially break SteamOS updates.
+I&amp;rsquo;m glad solutions like Rwfus exist to allow me to install the software I need. But&amp;hellip;. 🤔&lt;/p>
+&lt;p>&lt;a href="https://nixos.org">Nix&lt;/a> is what I work on as my day job at &lt;a href="https://determinate.systems">Determinate Systems&lt;/a> ❄️
+I&amp;rsquo;m creating a little project that any Steam Deck owner can use to bring the power of Nix to Steam Deck while maintaining isolation from the SteamOS root file system.
+That project depends on the &lt;a href="https://github.com/DeterminateSystems/nix-installer">Determinate Nix Installer&lt;/a>, &lt;strong>which natively supports Steam Deck&lt;/strong>.
+So, if you want to get a head start with Nix on the Steam Deck then you can do that today 🙂&lt;/p></description><summary>How to persist software installation across SteamOS updates on the Steam Deck.</summary></item></channel></rss>
