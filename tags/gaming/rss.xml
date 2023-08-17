@@ -11,7 +11,7 @@ So, give that episode a listen to hear why I love ZeroTier so much 💖&lt;/p>
 &lt;br />
 &lt;em>Linux Matters Podcast&lt;/em>
 &lt;/p>
-&lt;p>What follows is a guide to installing ZeroTier on the Steam Deck, but this technique can be used to install any software on Steam Deck that is available for Arch Linux 👍️&lt;/p>
+&lt;p>What follows is a guide to installing ZeroTier on the Steam Deck, &lt;strong>but this technique can be used to install any software on Steam Deck that is available for Arch Linux&lt;/strong> 👍️&lt;/p>
 &lt;h1 id="installing-zerotier-on-steam-deck">Installing ZeroTier on Steam Deck&lt;/h1>
 &lt;p>The Steam Deck has a (&lt;em>mostly&lt;/em>) read-only filesystem.
 We&amp;rsquo;ll use &lt;a href="https://github.com/ValShaped/rwfus">Rwfus: Read-Write OverlayFS for your Steam Deck&lt;/a> to install ZeroTier so that it persists across reboots &lt;em>and&lt;/em> SteamOS updates.&lt;/p>
@@ -42,7 +42,7 @@ After the Steam Deck has booted you should Switch to Desktop.&lt;/p>
 &lt;/p>
 &lt;h2 id="set-a-password">Set a Password&lt;/h2>
 &lt;p>By default, no password 🔓️ is set for the &lt;code>deck&lt;/code> user.
-With no password set, it is not possible to run commands in the root content using &lt;code>sudo&lt;/code>.
+With no password set, it is not possible to run commands in the root context using &lt;code>sudo&lt;/code>.
 Type &lt;code>passwd&lt;/code> in the terminal to set a password.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>(deck@steamdeck ~) $ passwd
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>New Password:
