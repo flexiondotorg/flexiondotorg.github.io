@@ -65,7 +65,7 @@ After the Steam Deck has booted you should Switch to Desktop.
 ## Set a Password
 
 By default, no password 🔓️ is set for the `deck` user.
-With no password set, it is not possible to run commands in the root content using `sudo`.
+With no password set, it is not possible to run commands in the root context using `sudo`.
 Type `passwd` in the terminal to set a password.
 
 ```shell
