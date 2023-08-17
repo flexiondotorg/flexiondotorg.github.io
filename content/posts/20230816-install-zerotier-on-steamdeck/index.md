@@ -1,7 +1,7 @@
 ---
 title: "Install ZeroTier on Steam Deck"
 slug: install-zerotier-on-steamdeck
-date: 2023-08-17T13:10:45+01:00
+date: 2023-08-17T12:15:45+01:00
 #lastmod: 2023-08-16T15:50:45+01:00
 categories: [ "Linux", "Tutorial", "Computer Hardware" ]
 tags: [ "Steam Deck", "ZeroTier", "Gaming", "Arch Linux", "Nix" ]
