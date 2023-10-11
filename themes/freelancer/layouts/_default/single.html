@@ -30,7 +30,7 @@
 						<!-- Old content warning and last update notification -->
 						{{- if eq .Section "posts" -}}
 							{{- $daysOld := div (sub now.Unix .Date.Unix) 86400 -}}
-							{{- $monthsOld := div $daysOld 12 -}}
+							{{- $monthsOld := div $daysOld 28 -}}
 							{{- $yearsOld := div $daysOld 365 -}}
 
 							{{- if ge $yearsOld 3 -}}
@@ -52,7 +52,7 @@
 										<h4 class="alert-heading">Update detected! <em class="fa-solid fa-spray-can-sparkles"></em></h4>
 										{{- if ge $yearsOld 2 -}}
 										<p>This post is roughly {{ $yearsOld }} years old. Originally published on {{.Date.Format "January 2, 2006"}} and last updated on {{.Lastmod.Format "January 2, 2006"}}.</p>
-										{{- else if gt $monthsOld 12 -}}
+										{{- else if gt $monthsOld 9 -}}
 										<p>This post is roughly {{ $monthsOld }} months old. Originally published on {{.Date.Format "January 2, 2006"}} and last updated on {{.Lastmod.Format "January 2, 2006"}}.</p>
 										{{- else -}}
 										<p>This post is {{ $daysOld }} days old. Originally published on {{.Date.Format "January 2, 2006"}} and last updated on {{.Lastmod.Format "January 2, 2006"}}.</p>
