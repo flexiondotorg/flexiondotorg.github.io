@@ -62,10 +62,10 @@ enableRobotsTXT = true
   label     = "Mastodon"
   url       = "https://fosstodon.org/@wimpy"
 [[params.social]]
-  icon      = "fa-twitter"
+  icon      = "fa-bluesky"
   icon_pack = "fab"
-  label     = "Twitter"
-  url       = "https://twitter.com/m_wimpress"
+  label     = "Bluesky"
+  url       = "https://bsky.app/profile/wimpys.world"
 [[params.social]]
   icon      = "fa-linkedin"
   icon_pack = "fab"
@@ -83,11 +83,6 @@ enableRobotsTXT = true
   label     = "Launchpad"
   url       = "https://launchpad.net/~flexiondotorg"
 
-[[params.content]]
-  icon      = "fa-instagram"
-  icon_pack = "fab"
-  label     = "Instagram"
-  url       = "https://instagram.com/WimpysWorld"
 [[params.content]]
   icon      = "fa-twitch"
   icon_pack = "fab"
