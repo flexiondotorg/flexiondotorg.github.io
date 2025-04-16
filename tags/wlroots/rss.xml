@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wlroots on Wimpy's World</title><link>https://wimpysworld.com/tags/wlroots/</link><description>Recent content in wlroots on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Mon, 15 Apr 2024 13:37:42 +0100</lastBuildDate><atom:link href="https://wimpysworld.com/tags/wlroots/rss.xml" rel="self" type="application/rss+xml"/><item><title>Fuzzel Colour Picker</title><link>https://wimpysworld.com/posts/fuzzel-hyprpicker/</link><pubDate>Mon, 15 Apr 2024 13:37:42 +0100</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/fuzzel-hyprpicker/</guid><description>&lt;p>We&amp;rsquo;ve all been there - you&amp;rsquo;re knee-deep in customizing your desktop, tweaking configs, perfecting that theme, and suddenly you need to grab a specific colour from somewhere on screen.
+If you&amp;rsquo;re like me and recently made the jump to &lt;a href="https://hyprland.org/">Hyprland&lt;/a> (or other contemporary Wayland compositor), you might have found yourself missing some of those handy X11 utilities that &lt;em>&amp;ldquo;just worked&amp;rdquo;&lt;/em> ️™️&lt;/p>
+&lt;h2 id="the-wayland-colour-picker-problem">The Wayland Colour Picker Problem&lt;/h2>
+&lt;p>When I switched my daily driver to Hyprland back in August 2024, I was chuffed with the smooth animations, efficient tiling, and general polish.
+But as with any big change, there were a few splinters in my workflow that needed sorting.&lt;/p>
+&lt;p>One particular rough edge was the lack of a proper GUI colour picker.
+On X11, I&amp;rsquo;d been spoiled by my mate &lt;a href="https://mastodon.social/@sil">Stuart Langridge&lt;/a>&amp;rsquo;s excellent tool &lt;strong>&lt;a href="https://www.kryogenix.org/code/pick/">Pick&lt;/a>&lt;/strong> - a proper colour picker that did exactly what it said on the tin.
+But in Wayland? Well, I was left running &lt;a href="https://github.com/hyprwm/hyprpicker">&lt;code>hyprpicker&lt;/code>&lt;/a> from the terminal like some kind of savage! 😅&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./hyprpicker.png" class="img-fluid" alt="hyprpicker in the terminal "/>
+&lt;br />
+&lt;em>hyprpicker in the terminal&lt;/em>
+&lt;/p>
+&lt;p>Don&amp;rsquo;t get me wrong - &lt;code>hyprpicker&lt;/code> works brilliantly for what it is.
+But after seeing how well my recent integrations of &lt;a href="https://github.com/e-tho/bzmenu">&lt;strong>bzmenu&lt;/strong>&lt;/a> and &lt;a href="https://github.com/e-tho/iwmenu">&lt;strong>iwmenu&lt;/strong>&lt;/a> worked with &lt;a href="https://codeberg.org/dnkl/fuzzel">Fuzzel&lt;/a>, a lightbulb moment hit me: why not create a proper Fuzzel-based front-end for &lt;code>hyprpicker&lt;/code>? 💡&lt;/p>
+&lt;h2 id="birth-of-fuzzel-hyprpicker">Birth of fuzzel-hyprpicker&lt;/h2>
+&lt;p>After my second coffee one morning (the optimal programming fuel ☕💪), I decided to tackle this problem head-on.
+If I was going to spend hours staring at my &lt;a href="https://catppuccin.com/">Catppuccin Mocha&lt;/a> themed desktop, I needed proper tools to maintain it! ‍🐈‍⬛🎨&lt;/p>
+&lt;p>The goal was simple:&lt;/p>
+&lt;ul>
+&lt;li>Create a Fuzzel-based UI for &lt;code>hyprpicker&lt;/code>&lt;/li>
+&lt;li>Maintain persistent colour history&lt;/li>
+&lt;li>Make it keyboard-friendly&lt;/li>
+&lt;li>Automatcially copy selected colours to clipboard&lt;/li>
+&lt;/ul>
+&lt;p>The result is &lt;a href="https://github.com/wimpysworld/nix-config/blob/main/home-manager/_mixins/desktop/hyprland/fuzzel/fuzzel-hyprpicker.sh">&lt;code>fuzzel-hyprpicker.sh&lt;/code>&lt;/a> - a little script that brings together the power of &lt;code>hyprpicker&lt;/code> with the elegant UI of Fuzzel.&lt;/p>
+&lt;p class="text-center">
+&lt;img src="./fuzzel-hyprpicker.png" class="img-fluid" alt="fuzzel-hyprpicker colour selection menu "/>
+&lt;br />
+&lt;em>fuzzel-hyprpicker showing the colour selection menu&lt;/em>
+&lt;/p>
+&lt;h2 id="how-it-works">How It Works&lt;/h2>
+&lt;p>The magic behind &lt;code>fuzzel-hyprpicker.sh&lt;/code> is surprisingly straightforward.
+Let me walk you through the key bits:&lt;/p>
+&lt;h3 id="setting-up-the-basics">Setting Up the Basics&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">#!/usr/bin/env bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5e5e5">&lt;/span>&lt;span style="color:#0f0"># A tool to pick colours from the screen using hyprpicker and fuzzel&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>set +u &lt;span style="color:#0f0"># Disable nounset&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">APP_NAME&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;fuzzel-hyprpicker&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">NOTIFY&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;notify-desktop --app-name=&lt;/span>&lt;span style="color:#eedd82">$APP_NAME&lt;/span>&lt;span style="color:#87ceeb"> --icon=org.gnome.design.Palette&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Set up the storage directory and file&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">CONFIG_DIR&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">XDG_CONFIG_HOME&lt;/span>&lt;span style="color:#f00">:-&lt;/span>&lt;span style="color:#eedd82">$HOME&lt;/span>/.config&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">/&lt;/span>&lt;span style="color:#eedd82">$APP_NAME&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">HISTORY_FILE&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$CONFIG_DIR&lt;/span>&lt;span style="color:#87ceeb">/colours.txt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">ICONS_DIR&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$CONFIG_DIR&lt;/span>&lt;span style="color:#87ceeb">/icons&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nothing fancy here - we&amp;rsquo;re just setting up our environment, defining where we&amp;rsquo;ll store our colour history, and setting up notifications.
+Note that I properly follow the XDG spec here - it&amp;rsquo;s the little things! 😉&lt;/p>
+&lt;h3 id="the-clever-bit-svg-icons">The Clever Bit: SVG Icons&lt;/h3>
+&lt;p>Here&amp;rsquo;s where things get interesting.
+Fuzzel supports icons in its menus, but I needed a way to show colour swatches.
+The solution? Dynamically generated SVG files:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">function&lt;/span> generate_svg_icon() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> local &lt;span style="color:#eedd82">colour&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$1&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> local &lt;span style="color:#eedd82">icon_path&lt;/span>=&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$ICONS_DIR&lt;/span>&lt;span style="color:#87ceeb">/&lt;/span>&lt;span style="color:#eedd82">$colour&lt;/span>&lt;span style="color:#87ceeb">.svg&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># Create an SVG for the colour if it doesn&amp;#39;t exist&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ ! -f &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$icon_path&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> cat &amp;gt; &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$icon_path&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&amp;lt;svg width=&amp;#34;128&amp;#34; height=&amp;#34;128&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb"> &amp;lt;rect width=&amp;#34;128&amp;#34; height=&amp;#34;128&amp;#34; fill=&amp;#34;#$colour&amp;#34; /&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">&amp;lt;/svg&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I&amp;rsquo;m rather pleased with myself for this solution.
+Each time you pick a colour, it generates a tiny SVG file that&amp;rsquo;s just a coloured square.
+Fuzzel then displays this next to the hex code in the menu. Well done brain! 🧠&lt;/p>
+&lt;h3 id="menu-building">Menu Building&lt;/h3>
+&lt;p>The menu itself is built dynamically, showing an eyedropper icon for picking a new colour followed by your colour history:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f00">function&lt;/span> build_menu() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo -e &lt;span style="color:#87ceeb">&amp;#34;Pick a colour\0icon\x1f&lt;/span>&lt;span style="color:#eedd82">$ICONS_DIR&lt;/span>&lt;span style="color:#87ceeb">/eyedropper.svg&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># Add history items if they exist&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ -s &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HISTORY_FILE&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">while&lt;/span> read -r colour; &lt;span style="color:#f00">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># If the preview icon doesn&amp;#39;t exist, generate it&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">if&lt;/span> [ ! -e &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$ICONS_DIR&lt;/span>&lt;span style="color:#87ceeb">/&lt;/span>&lt;span style="color:#eedd82">$colour&lt;/span>&lt;span style="color:#87ceeb">.svg&amp;#34;&lt;/span> ]; &lt;span style="color:#f00">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> generate_svg_icon &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$colour&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># Display the colour with a preview&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo -e &lt;span style="color:#87ceeb">&amp;#34;#&lt;/span>&lt;span style="color:#eedd82">$colour&lt;/span>&lt;span style="color:#87ceeb">\0icon\x1f&lt;/span>&lt;span style="color:#eedd82">$ICONS_DIR&lt;/span>&lt;span style="color:#87ceeb">/&lt;/span>&lt;span style="color:#eedd82">$colour&lt;/span>&lt;span style="color:#87ceeb">.svg&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">done&lt;/span> &amp;lt; &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#eedd82">$HISTORY_FILE&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f00">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This uses the &lt;a href="https://github.com/davatorium/rofi">&lt;code>rofi&lt;/code>&lt;/a> &amp;ldquo;protocol&amp;rdquo; for menu items, something Fuzzel has built-in support for 💖
+The &lt;code>\0icon\x1f&lt;/code> bit is how you tell Fuzzel &lt;em>&amp;ldquo;hey, use this icon for this menu item&amp;rdquo;&lt;/em>.&lt;/p>
+&lt;h3 id="putting-it-all-together">Putting It All Together&lt;/h3>
+&lt;p>The full workflow goes like this:&lt;/p>
+&lt;ol>
+&lt;li>Press &lt;kbd>Ctrl&lt;/kbd> + &lt;kbd>Alt&lt;/kbd> + &lt;kbd>K&lt;/kbd> to open the picker&lt;/li>
+&lt;li>Select &lt;strong>&amp;ldquo;Pick a colour&amp;rdquo;&lt;/strong> or choose one from your history&lt;/li>
+&lt;li>If picking a new colour, &lt;code>hyprpicker&lt;/code> does it&amp;rsquo;s thing and click anywhere on screen&lt;/li>
+&lt;li>The colour gets automatically copied to your clipboard&lt;/li>
+&lt;li>A notification appears showing the selected colour&lt;/li>
+&lt;/ol>
+&lt;p class="text-center">
+&lt;img src="./hyprpicker-select.png" class="img-fluid" alt="hyprpicker colour selection "/>
+&lt;br />
+&lt;em>hyprpicker colour selection&lt;/em>
+&lt;/p>
+&lt;h2 id="integrating-it-with-your-setup">Integrating It With Your Setup&lt;/h2>
+&lt;p>Want to give this a try yourself?
+Here&amp;rsquo;s how to adapt it to your wlroots-compatible desktop:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>First, make sure you have the following installed:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>hyprpicker&lt;/code>&lt;/li>
+&lt;li>&lt;code>fuzzel&lt;/code>&lt;/li>
+&lt;li>&lt;a href="https://github.com/bugaevc/wl-clipboard">&lt;code>wl-clipboard&lt;/code>&lt;/a> (for clipboard management)&lt;/li>
+&lt;li>&lt;a href="https://github.com/nowrep/notify-desktop">&lt;code>notify-desktop&lt;/code>&lt;/a> (for notifications)
+&lt;ul>
+&lt;li>Although I&amp;rsquo;m planning on switching to &lt;a href="https://codeberg.org/dnkl/fyi">&lt;code>fyi&lt;/code>&lt;/a> soon&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Save the script somewhere in your path (I&amp;rsquo;ve got mine as part of &lt;a href="https://github.com/wimpysworld/nix-config">my Nix configuration&lt;/a>) ️❄️&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Make it executable:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>chmod +x fuzzel-hyprpicker.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>Bind it to a keyboard shortcut in your Hyprland config:&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>bind = CTRL ALT, K, exec, fuzzel-hyprpicker.sh
+&lt;/code>&lt;/pre>&lt;ol start="5">
+&lt;li>Give it a whirl!&lt;/li>
+&lt;/ol>
+&lt;p>It should work with any wlroots-compatible compositor, not just Hyprland.&lt;/p>
+&lt;h2 id="possible-enhancements">Possible Enhancements&lt;/h2>
+&lt;p>This is very much a v1 and there&amp;rsquo;s plenty of room for improvement:&lt;/p>
+&lt;ul>
+&lt;li>Add support for different colour formats (RGB, HSL, etc.)&lt;/li>
+&lt;li>Implement colour name lookup&lt;/li>
+&lt;li>Create a proper project rather than just a script wedged in my Nix configuration&lt;/li>
+&lt;/ul>
+&lt;p>But for a morning hack, it&amp;rsquo;s been surprisingly useful!
+Reaching for &lt;kbd>Ctrl&lt;/kbd> + &lt;kbd>Alt&lt;/kbd> + &lt;kbd>K&lt;/kbd> brings a smile to my face 😀&lt;/p>
+&lt;h2 id="the-joy-of-keyboard-driven-workflows">The Joy of Keyboard-Driven Workflows&lt;/h2>
+&lt;p>What I love about tools like this is how they contribute to a cohesive, keyboard-driven workflow.
+Between Hyprland&amp;rsquo;s tiling, Waybar&amp;rsquo;s status info, and Fuzzel-based menus for everything from launching apps to picking colours, my fingers rarely stray from the keyboard these days.&lt;/p>
+&lt;p>There&amp;rsquo;s something deeply satisfying about crafting your own tools to scratch your own itches.
+It&amp;rsquo;s a long held Linux desktop tradition, isn&amp;rsquo;t it?
+Taking what works, improving what doesn&amp;rsquo;t, and sharing the results with others.&lt;/p>
+&lt;p class="text-center">
+&lt;a href="https://linuxmatters.sh" target="_blank">&lt;img src="./hyprland-desktop.png" class="img-fluid" alt="hyprland desktop with fuzzel-hyprpicker "/>&lt;/a>
+&lt;br />
+&lt;em>My hyprland desktop with fuzzel-hyprpicker in action&lt;/em>
+&lt;/p>
+&lt;h2 id="more-fuzzel-based-tools">More Fuzzel-Based Tools?&lt;/h2>
+&lt;p>I&amp;rsquo;ve created several other Fuzzel menus that integrate with my Hyprland desktop.
+I should probably post about those as well - emoji picker and screenshot and screen recording being among my most useful.
+Let me know in the comments if you&amp;rsquo;d be interested in seeing those! 👇&lt;/p>
+&lt;p>In the meantime, give &lt;code>fuzzel-hyprpicker.sh&lt;/code> a try and let me know what you think.
+&lt;strong>And if you improve upon it, &lt;em>please do share your changes!&lt;/em>&lt;/strong>&lt;/p>
+&lt;p>The full script is available in my Nix config repository: &lt;a href="https://github.com/wimpysworld/nix-config/blob/main/home-manager/_mixins/desktop/hyprland/fuzzel/fuzzel-hyprpicker.sh">fuzzel-hyprpicker.sh&lt;/a>&lt;/p>
+&lt;p>Happy colour picking! 🎨🤏&lt;/p>
+&lt;hr>
+&lt;p>&lt;em>Have you created any custom tools for your Wayland desktop? Are there any X11 utilities you miss since switching? Let me know in the comments below!&lt;/em>&lt;/p></description><summary>Creating a Proper Colour Picker for Hyprland with Fuzzel</summary></item></channel></rss>
