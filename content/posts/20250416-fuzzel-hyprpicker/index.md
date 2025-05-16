@@ -1,8 +1,8 @@
 ---
 title: "Fuzzel Colour Picker"
 slug: fuzzel-hyprpicker
-date: 2024-04-15T13:37:42+01:00
-#lastmod: 2024-04-15T13:37:42+01:00
+date: 2025-04-15T13:37:42+01:00
+#lastmod: 2025-04-15T13:37:42+01:00
 categories: [ "Linux", "Development", "Tutorial", "Open Source" ]
 tags: [ "Wayland", "Hyprland", "Nix", "Bash", "Fuzzel", "hyprpicker", "wlroots" ]
 summary: "Creating a Proper Colour Picker for Hyprland with Fuzzel"
