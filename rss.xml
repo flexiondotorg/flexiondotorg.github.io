@@ -103,11 +103,11 @@ I could have stopped here, but did I mention beging stubborn yet? 🫏&lt;/p>
 &lt;p>This has been an absolute game-changer for my workflow. Now when I apply updates to any of my devices, everything is delivered directly from &lt;code>cache.flakehub.com&lt;/code> with zero local compilation time! 🚀 All packages have been pre-built and verified in CI, meaning updates that would have taken ages to compile (&lt;em>looking at you &lt;code>ollama&lt;/code>&lt;/em> 👀) locally now complete in seconds. It&amp;rsquo;s the difference between waiting for a coffee break and a blink-and-you&amp;rsquo;ll-miss-it experience 🤩&lt;/p>
 &lt;p>Here&amp;rsquo;s what the build times look like:&lt;/p>
 &lt;ul>
-&lt;li>💁 2x Servers: ~5 minutes&lt;/li>
-&lt;li>️🖥️ 2x Workstations: ~6 minnutes&lt;/li>
-&lt;li>💻 4x Laptops: ~7 minutes&lt;/li>
-&lt;li>👻 2x Virutal Manachines: ~4 minutes&lt;/li>
-&lt;li>📦 59x Local packages: ~5 minutes&lt;/li>
+&lt;li>💁 2x Servers: ~5-10 minutes&lt;/li>
+&lt;li>️🖥️ 2x Workstations: ~6-13 minutes&lt;/li>
+&lt;li>💻 4x Laptops: ~7-10 minutes&lt;/li>
+&lt;li>👻 2x Virutal Manachines: ~4-10 minutes&lt;/li>
+&lt;li>📦 59x Local packages: ~5-14 minutes&lt;/li>
 &lt;/ul>
 &lt;h2 id="getting-started-with-nothing-but-nix-">Getting Started with &lt;em>Nothing but Nix&lt;/em> ✨&lt;/h2>
 &lt;p>Ready to give it a go? Here&amp;rsquo;s how to use it in your GitHub Actions workflow:&lt;/p>
