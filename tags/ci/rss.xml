@@ -1,4 +1,152 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CI on Wimpy's World</title><link>https://wimpysworld.com/tags/ci/</link><description>Recent content in CI on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ci/rss.xml" rel="self" type="application/rss+xml"/><item><title>machinespawn</title><link>https://wimpysworld.com/projects/machinespawn/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/machinespawn/</guid><description>&lt;p>&lt;a href="https://github.com/wimpysworld/machinespawn">machinespawn&lt;/a> is a wrapper for
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CI on Wimpy's World</title><link>https://wimpysworld.com/tags/ci/</link><description>Recent content in CI on Wimpy's World</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><managingEditor>martin@wimpress.com (Martin Wimpress)</managingEditor><webMaster>martin@wimpress.com (Martin Wimpress)</webMaster><lastBuildDate>Thu, 15 May 2025 13:37:42 +0100</lastBuildDate><atom:link href="https://wimpysworld.com/tags/ci/rss.xml" rel="self" type="application/rss+xml"/><item><title>Nothing but Nix</title><link>https://wimpysworld.com/posts/nothing-but-nix-github-actions/</link><pubDate>Thu, 15 May 2025 13:37:42 +0100</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/posts/nothing-but-nix-github-actions/</guid><description>&lt;p>Have you ever tried to build a complex &lt;a href="https://nixos.org/">NixOS&lt;/a> ️❄️ configuration in GitHub Actions only to be greeted by the dreaded &lt;em>&amp;ldquo;no space left on device&amp;rdquo;&lt;/em> error? I certainly have, and it&amp;rsquo;s been driving me bonkers for quite some time! 😖&lt;/p>
+&lt;p>&lt;a href="https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories">Standard GitHub Actions runners&lt;/a> come with a paltry ~20GB of free disk space, or so it would seem. Which sounds decent until you try to build sophisticated NixOS or &lt;a href="https://nix-community.github.io/home-manager/">Home Manager&lt;/a> configurations. A comprehensive workstation or home lab server setup can consume 10-15GB due to all the included packages and dependencies, leaving precious little headroom for anything else 🤏&lt;/p>
+&lt;p>This space limitation effectively meant I couldn&amp;rsquo;t build my full workstation and server configurations in CI. So annoying! 😠 I wanted my CI to cache complete builds to &lt;a href="https://flakehub.com/">FlakeHub Cache&lt;/a>, but was forever stuck with only partial builds or individual packages that wouldn&amp;rsquo;t properly test the complete configurations. This meant that each configuration change on my workstations and servers required frustrating additional compilation time for things like 3rd party kernel modules, &lt;a href="https://ollama.com/">Ollama&lt;/a>, custom package overrides, and more - all because I couldn&amp;rsquo;t get full builds cached through CI ️🥺&lt;/p>
+&lt;p>Well, I&amp;rsquo;d had enough of that nonsense and decided to solve the problem once and for all 🧠&lt;/p>
+&lt;h2 id="introducing-nothing-but-nix-">Introducing &lt;em>Nothing but Nix&lt;/em> ️❄️&lt;/h2>
+&lt;p>I&amp;rsquo;m chuffed to bits to announce &lt;a href="https://github.com/marketplace/actions/nothing-but-nix">&lt;em>Nothing but Nix&lt;/em>&lt;/a>, a GitHub Action that &lt;strong>brutally reclaims&lt;/strong> disk space 🪓 on runners and transforms them into Nix powerhouses!&lt;/p>
+&lt;p>Here&amp;rsquo;s what it does in a nutshell:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>- uses: actions/checkout@v4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- uses: wimpysworld/nothing-but-nix@main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- uses: DeterminateSystems/determinate-nix-action@main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- run: |&lt;span style="color:#87ceeb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb"> &lt;/span> nix flake check
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The result? Instead of ~20GB for your &lt;a href="https://zero-to-nix.com/concepts/nix-store/">Nix store&lt;/a>, you get &lt;strong>65GB to 130GB&lt;/strong> of sweet, glorious Nix-dedicated space. That&amp;rsquo;s enough to build even the chonkiest of configurations! 🪨&lt;/p>
+&lt;h2 id="space-the-final-frontier-">Space, the Final Frontier 🌌&lt;/h2>
+&lt;p>Working at &lt;a href="https://determinate.systems">Determinate Systems&lt;/a>, I get to see firsthand how powerful Nix can be when properly cached. Our &lt;a href="https://flakehub.com">FlakeHub Cache&lt;/a> makes system updates lightning fast ⚡ but I couldn&amp;rsquo;t fully leverage it in CI because my builds kept running out of space.&lt;/p>
+&lt;p>I wanted to be able to &lt;strong>build and test all my configurations&lt;/strong> in CI:&lt;/p>
+&lt;ul>
+&lt;li>💁 &lt;strong>Servers:&lt;/strong> media services, local LLMs, website, fediverse services, distributed storage, backup&lt;/li>
+&lt;li>️🖥️ &lt;strong>Workstations:&lt;/strong> dual GPU, loaded with dev tools, content creation apps and local LLMs&lt;/li>
+&lt;li>💻 &lt;strong>Laptops:&lt;/strong> optimized for travel, media on the go, presentations and development&lt;/li>
+&lt;li>👻 &lt;strong>VMs:&lt;/strong> for &lt;a href="https://ubuntu-mate.org">Linux desktop development&lt;/a> and testing&lt;/li>
+&lt;/ul>
+&lt;p>But GitHub&amp;rsquo;s ~20GB limitation kept getting in the way 🙅 Sure, I could have paid GitHub for their larger runners with more disk space, but being both cheap and stubborn, I wasn&amp;rsquo;t having any of that! 💸❌ Instead, I started thinking, &lt;em>&amp;ldquo;Hang on a minute, those free runners must have more space somewhere - I just need to find it and claim it!&amp;rdquo;&lt;/em> 🤔💭&lt;/p>
+&lt;p>After digging through the runner specs and file system layout, I discovered that &lt;strong>GitHub Actions runners have a large chunk of free space on the &lt;code>/mnt&lt;/code> filesystem that&amp;rsquo;s barely used&lt;/strong> 🤯 There was also the possibility to reclaim significant space by purging pre-installed software that Nix users don&amp;rsquo;t need anyway 😈&lt;/p>
+&lt;h2 id="the-slightly-mad-science-bit-">The Slightly Mad Science Bit ‍🧑‍🔬&lt;/h2>
+&lt;p>At its core, &lt;em>Nothing but Nix&lt;/em> uses a two-pronged attack:&lt;/p>
+&lt;h3 id="1-the-initial-slash-instant-volume-creation">1. The Initial Slash: Instant Volume Creation&lt;/h3>
+&lt;p>First, the action creates a large loop device from free space on &lt;code>/mnt&lt;/code> and sets up a properly tuned BTRFS filesystem:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Create a large disk image in the free space&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">free_space&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>df -m --output=avail /mnt | tail -n &lt;span style="color:#f60">1&lt;/span> | tr -d &lt;span style="color:#87ceeb">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#eedd82">loop_dev&lt;/span>=&lt;span style="color:#f00">$(&lt;/span>sudo losetup --find&lt;span style="color:#f00">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo fallocate -l &lt;span style="color:#f00">$((&lt;/span>free_space - &lt;span style="color:#f60">1024&lt;/span>&lt;span style="color:#f00">))&lt;/span>M &lt;span style="color:#87ceeb">&amp;#34;/mnt/disk0.img&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo losetup &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">loop_dev&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span> &lt;span style="color:#87ceeb">&amp;#34;/mnt/disk0.img&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0f0"># Set up an optimized BTRFS filesystem&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkfs.btrfs -L nix -d raid0 -m raid0 --nodiscard &lt;span style="color:#87ceeb">&amp;#34;&lt;/span>&lt;span style="color:#87ceeb">${&lt;/span>&lt;span style="color:#eedd82">loop_dev&lt;/span>&lt;span style="color:#87ceeb">}&lt;/span>&lt;span style="color:#87ceeb">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mount &lt;span style="color:#eedd82">LABEL&lt;/span>=nix /nix -o noatime,nobarrier,nodiscard,compress=zstd:1,space_cache=v2,commit=&lt;span style="color:#f60">120&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>This immediately provides around 65GB of Nix-ready space before your workflow even gets going!&lt;/strong> 💪
+I could have stopped here, but did I mention beging stubborn yet? 🫏&lt;/p>
+&lt;h3 id="2-the-background-purge-merciless-space-reclamation">2. The Background Purge: Merciless Space Reclamation&lt;/h3>
+&lt;p>&lt;strong>While your workflow continues&lt;/strong>, &lt;em>Nothing but Nix&lt;/em> starts a background process to ruthlessly eliminate unnecessary software:&lt;/p>
+&lt;ul>
+&lt;li>Docker images? Gone! 🗑️&lt;/li>
+&lt;li>Language runtimes? Obliterated! 💥&lt;/li>
+&lt;li>Package managers? Annihilated! 💣&lt;/li>
+&lt;li>Documentation? Vaporized! 🔥&lt;/li>
+&lt;/ul>
+&lt;p>As space is reclaimed, it creates a second disk image on the root file system and adds it to the BTRFS pool, &lt;strong>dynamically growing your Nix volume up to around 130GB.&lt;/strong> 🚀&lt;/p>
+&lt;p>The file system purge is powered by &lt;code>rmz&lt;/code> (from the &lt;a href="https://github.com/SUPERCILEX/fuc">Fast Unix Commands (FUC)&lt;/a> project) - a high-performance alternative to &lt;code>rm&lt;/code> that makes deletion blazingly fast. &lt;strong>Using traditional &lt;code>rm&lt;/code> a full file system purge took ~11 minutes ⏳😞 &lt;code>rmz&lt;/code> cut that to under 60 seconds!&lt;/strong> ️⏱️😀&lt;/p>
+&lt;h3 id="btrfs-with-nodiscard">BTRFS with &lt;code>nodiscard&lt;/code>?&lt;/h3>
+&lt;p>I&amp;rsquo;m using &lt;a href="https://btrfs.readthedocs.io/en/latest/">BTRFS&lt;/a> for the volume because it:&lt;/p>
+&lt;ol>
+&lt;li>Supports dynamic device addition&lt;/li>
+&lt;li>Has built-in compression to save even more space&lt;/li>
+&lt;li>Allows optimal space utilization with RAID0 layout&lt;/li>
+&lt;/ol>
+&lt;p>The &lt;strong>&lt;code>nodiscard&lt;/code> mount option is absolutely essential&lt;/strong> because we&amp;rsquo;re using loop devices backed by &lt;a href="https://en.wikipedia.org/wiki/Sparse_file">sparse files&lt;/a>.&lt;/p>
+&lt;p>Without it, BTRFS would try to issue &lt;a href="https://btrfs.readthedocs.io/en/latest/Trim.html">TRIM/discard&lt;/a> commands that cause allocation size to be misreported when using loop devices. This misreporting would result in inaccurate space accounting. The &lt;code>nodiscard&lt;/code> option ensures the filesystem maintains an accurate picture of its available storage.&lt;/p>
+&lt;h2 id="choose-your-weapon-the-hatchet-protocol-">Choose Your Weapon: The Hatchet Protocol 🪓&lt;/h2>
+&lt;p>Not everyone needs the same level of space reclamation, so I&amp;rsquo;ve added different &lt;em>&amp;ldquo;Hatchet Protocol&amp;rdquo;&lt;/em> levels to control how aggressive the action is:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>- uses: wimpysworld/nothing-but-nix@main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> with:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> hatchet-protocol: &amp;#39;cleave&amp;#39; # Options: holster, carve, cleave (default), rampage
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Protocol&lt;/th>
+&lt;th>&lt;code>/nix&lt;/code>&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Holster&lt;/td>
+&lt;td>~65GB&lt;/td>
+&lt;td>Keep the hatchet sheathed, use space from &lt;code>/mnt&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Carve&lt;/td>
+&lt;td>~85GB&lt;/td>
+&lt;td>Craft and combine free space from &lt;code>/&lt;/code> and &lt;code>/mnt&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cleave&lt;/td>
+&lt;td>~115GB&lt;/td>
+&lt;td>Make decisive cuts to large packages&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Rampage&lt;/td>
+&lt;td>~130GB&lt;/td>
+&lt;td>Relentless elimination of all bloat&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>I recommend &lt;strong>Cleave&lt;/strong> for most users, which is the default setting. It strikes a good balance between reclaiming space and keeping some useful tools around. But if you&amp;rsquo;re a proper Nix enthusiast who believes that &lt;code>#nix-is-life&lt;/code>, the Rampage protocol will squeeze out every last byte of space for your Nix store ️️❄️&lt;/p>
+&lt;h2 id="from-frustration-to-freedom-">From Frustration to Freedom ️🕊️&lt;/h2>
+&lt;p>Since implementing &lt;em>Nothing but Nix&lt;/em>, I&amp;rsquo;ve been able to build &lt;strong>all&lt;/strong> my NixOS and Home Manager configurations in CI. This means:&lt;/p>
+&lt;ol>
+&lt;li>🔒 Every &lt;code>flake.lock&lt;/code> update is fully tested against my complete configuration set&lt;/li>
+&lt;li>✅ All successful builds are cached to FlakeHub Cache&lt;/li>
+&lt;li>⚡ System updates are lightning-fast&lt;/li>
+&lt;/ol>
+&lt;p>This has been an absolute game-changer for my workflow. Now when I apply updates to any of my devices, everything is delivered directly from &lt;code>cache.flakehub.com&lt;/code> with zero local compilation time! 🚀 All packages have been pre-built and verified in CI, meaning updates that would have taken ages to compile (&lt;em>looking at you &lt;code>ollama&lt;/code>&lt;/em> 👀) locally now complete in seconds. It&amp;rsquo;s the difference between waiting for a coffee break and a blink-and-you&amp;rsquo;ll-miss-it experience 🤩&lt;/p>
+&lt;p>Here&amp;rsquo;s what the build times look like:&lt;/p>
+&lt;ul>
+&lt;li>💁 2x Servers: ~5 minutes&lt;/li>
+&lt;li>️🖥️ 2x Workstations: ~6 minnutes&lt;/li>
+&lt;li>💻 4x Laptops: ~7 minutes&lt;/li>
+&lt;li>👻 2x Virutal Manachines: ~4 minutes&lt;/li>
+&lt;li>📦 59x Local packages: ~5 minutes&lt;/li>
+&lt;/ul>
+&lt;h2 id="getting-started-with-nothing-but-nix-">Getting Started with &lt;em>Nothing but Nix&lt;/em> ✨&lt;/h2>
+&lt;p>Ready to give it a go? Here&amp;rsquo;s how to use it in your GitHub Actions workflow:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>name: &lt;span style="color:#87ceeb">&amp;#34;Test Nix Flake&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>on:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pull_request:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> push:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> branches: [ main ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>jobs:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> tests:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> runs-on: ubuntu-latest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> permissions:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> id-token: write
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> contents: read
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> steps:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - uses: actions/checkout@v4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#0f0"># 👇 Add this before installing Nix&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - uses: wimpysworld/nothing-but-nix@main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - uses: DeterminateSystems/determinate-nix-action@main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - run: |&lt;span style="color:#87ceeb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb"> # Now you have 100+ GB for your Nix builds!
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb"> nix build . -L
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#87ceeb"> nix flake check&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For FlakeHub users, make sure you add the &lt;code>permissions&lt;/code> block as shown above. This allows &lt;a href="https://determinate.systems/nix/">Determinate Nix&lt;/a> to authenticate with FlakeHub and FlakeHub Cache.&lt;/p>
+&lt;h2 id="beyond-storage-to-virtual-machines-">Beyond Storage to Virtual Machines? 🔮&lt;/h2>
+&lt;p>Now that I&amp;rsquo;ve proven large volumes can be dynamically constructed in GitHub runners, I&amp;rsquo;m starting to think about what else might be possible. A GitHub action that implements something like &lt;a href="https://github.com/quickemu-project/quickemu">Quickemu&lt;/a> (&lt;em>another project of mine&lt;/em>), to standup KVM-accelerated VMs inside a GitHub runner is my favourite idea 💡&lt;/p>
+&lt;p>GitHub has &lt;a href="https://github.blog/changelog/2023-02-23-hardware-accelerated-android-virtualization-on-actions-windows-and-linux-larger-host">recently announced&lt;/a> hardware acceleration for Android virtualization on Linux runners, which means the KVM infrastructure is already there and avilable for open source projects and larger runners 😯 All we need to do is leverage it for our own VMs.&lt;/p>
+&lt;p>Imagine being able to run a full VM of your validated build environment inside GitHub Actions! It would be like having a self-hosted runner, but without the self-hosting 😏 And it just so happens that the &lt;a href="https://github.com/DeterminateSystems/determinate-nix-action">Determinate Nix Action&lt;/a> enables KVM in GitHub runners. Coincidence? 😉&lt;/p>
+&lt;h2 id="build-something-massive-">Build Something Massive ️🏗️&lt;/h2>
+&lt;p>&lt;em>Nothing but Nix&lt;/em> removes one of the most frustrating limitations for Nix users in GitHub Actions. No more trimming your configurations to fit into tiny spaces - now you can build and test your full NixOS fleet with confidence 🤓&lt;/p>
+&lt;p>Give it a try, and let me know what you think!&lt;/p>
+&lt;p>The action is available at:&lt;/p>
+&lt;ul>
+&lt;li>GitHub: &lt;a href="https://github.com/wimpysworld/nothing-but-nix">wimpysworld/nothing-but-nix&lt;/a>&lt;/li>
+&lt;li>Marketplace: &lt;a href="https://github.com/marketplace/actions/nothing-but-nix">&lt;em>Nothing but Nix&lt;/em>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>If you run into any issues or have ideas for improvements, please open an issue on GitHub. And if this tool saves your CI builds, consider giving the repo a star! ⭐&lt;/p>
+&lt;p>Happy Nixing! ❄️&lt;/p></description><summary>The Nix Space Heist: Reclaiming 130GB in GitHub Actions</summary></item><item><title>machinespawn</title><link>https://wimpysworld.com/projects/machinespawn/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><author>martin@wimpress.com (Martin Wimpress)</author><guid>https://wimpysworld.com/projects/machinespawn/</guid><description>&lt;p>&lt;a href="https://github.com/wimpysworld/machinespawn">machinespawn&lt;/a> is a wrapper for
 &lt;code>machinectl&lt;/code> and &lt;code>systemd-nspawn&lt;/code> to creating and managing containers; primarily
 focused at local development environment and CI/CD with a heavy emphasis on
 caching.&lt;/p>
