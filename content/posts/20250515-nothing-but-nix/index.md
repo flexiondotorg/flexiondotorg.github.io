@@ -131,11 +131,11 @@ This has been an absolute game-changer for my workflow. Now when I apply updates
 
 Here's what the build times look like:
 
-- 💁 2x Servers: ~5 minutes
-- ️🖥️ 2x Workstations: ~6 minnutes
-- 💻 4x Laptops: ~7 minutes
-- 👻 2x Virutal Manachines: ~4 minutes
-- 📦 59x Local packages: ~5 minutes
+- 💁 2x Servers: ~5-10 minutes
+- ️🖥️ 2x Workstations: ~6-13 minutes
+- 💻 4x Laptops: ~7-10 minutes
+- 👻 2x Virutal Manachines: ~4-10 minutes
+- 📦 59x Local packages: ~5-14 minutes
 
 ## Getting Started with *Nothing but Nix* ✨
 
