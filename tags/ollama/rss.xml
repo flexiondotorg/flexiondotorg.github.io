@@ -21,7 +21,7 @@
 &lt;h2 id="the-plot-twist-that-made-me-question-everything">The plot twist that made me question everything&lt;/h2>
 &lt;p>Here&amp;rsquo;s where this story takes a turn that&amp;rsquo;ll make you laugh at my expense. After building &lt;code>faff&lt;/code>, documenting it, and feeling rather pleased with myself, I discovered something that made me want to bang my head against my desk repeatedly.&lt;/p>
 &lt;p>&lt;strong>You can hook GitKraken&amp;rsquo;s AI up to Ollama.&lt;/strong>&lt;/p>
-&lt;p>And naturally, &lt;a href="https://github.com/wimpysworld/faff/blob/main/faff.sh#L92">my carefully crafted system prompt from &lt;code>faff&lt;/code>&lt;/a>, when used in GitKraken AI via Ollama with the same &lt;a href="https://ollama.com/library/qwen2.5-coder">qwen2.5-coder&lt;/a> models, works exactly like &lt;code>faff&lt;/code> does. 🤦‍♂️&lt;/p>
+&lt;p>And naturally, &lt;a href="https://github.com/wimpysworld/faff/blob/main/faff.sh#L8">my carefully crafted system prompt from &lt;code>faff&lt;/code>&lt;/a>, when used in GitKraken AI via Ollama with the same &lt;a href="https://ollama.com/library/qwen2.5-coder">qwen2.5-coder&lt;/a> models, works exactly like &lt;code>faff&lt;/code> does. 🤦‍♂️&lt;/p>
 &lt;p>So technically, I could have solved my original problem without building an new tool. But where&amp;rsquo;s the fun in that?&lt;/p>
 &lt;h2 id="why-faff-still-matters-and-its-not-just-stubbornness">Why faff still matters (and it&amp;rsquo;s not just stubbornness)&lt;/h2>
 &lt;p>Despite this rather embarrassing revelation, &lt;code>faff&lt;/code> still has its place:&lt;/p>
