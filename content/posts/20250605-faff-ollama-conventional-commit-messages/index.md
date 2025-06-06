@@ -46,7 +46,7 @@ Here's where this story takes a turn that'll make you laugh at my expense. After
 
 **You can hook GitKraken's AI up to Ollama.**
 
-And naturally, [my carefully crafted system prompt from `faff`](https://github.com/wimpysworld/faff/blob/main/faff.sh#L92), when used in GitKraken AI via Ollama with the same [qwen2.5-coder](https://ollama.com/library/qwen2.5-coder) models, works exactly like `faff` does. 🤦‍♂️
+And naturally, [my carefully crafted system prompt from `faff`](https://github.com/wimpysworld/faff/blob/main/faff.sh#L8), when used in GitKraken AI via Ollama with the same [qwen2.5-coder](https://ollama.com/library/qwen2.5-coder) models, works exactly like `faff` does. 🤦‍♂️
 
 So technically, I could have solved my original problem without building an new tool. But where's the fun in that?
 
