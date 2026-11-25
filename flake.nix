@@ -1,27 +1,38 @@
 {
-  description = "Dev tools for flexiondotorg.github.io";
+  description = "Dev tools for blog.wimpys.world";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/release-23.05";
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
 
   outputs =
-    { self
-    , nixpkgs
-    , flake-utils
+    {
+      nixpkgs,
+      ...
     }:
-
-    flake-utils.lib.eachDefaultSystem (system:
     let
-      pkgs = import nixpkgs { inherit system; };
+      supportedSystems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
     in
     {
-      devShells.default = pkgs.mkShell {
-        packages = with pkgs; [
-          hugo
-          imagemagick
-        ];
-      };
-    });
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in
+        {
+          default = pkgs.mkShell {
+            packages = with pkgs; [
+              hugo
+              python3
+            ];
+          };
+        }
+      );
+    };
 }

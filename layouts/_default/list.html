@@ -1,0 +1,30 @@
+{{- define "main" -}}
+{{- $paginator := .Paginate .Pages -}}
+
+<section aria-labelledby="list-heading">
+  <div class="section-head">
+    <h1 id="list-heading" class="section-title">
+      {{- if eq .Kind "term" -}}
+        {{- if eq .Data.Singular "tag" -}}#{{ .Title }}{{- else -}}{{ .Title }}{{- end -}}
+      {{- else -}}
+        {{ .Title }}
+      {{- end -}}
+      <span class="count-badge">{{ len .Pages }}</span>
+    </h1>
+    {{- with .OutputFormats.Get "RSS" }}
+    <a class="tag-pill" href="{{ .RelPermalink }}">RSS feed</a>
+    {{- end }}
+  </div>
+
+  {{- if $paginator.Pages }}
+  <div class="post-grid">
+    {{- range $i, $p := $paginator.Pages }}
+      {{- partial "post-card.html" (dict "page" $p "index" $i) -}}
+    {{- end }}
+  </div>
+  {{- partial "pagination.html" $paginator -}}
+  {{- else }}
+  <p>No posts found.</p>
+  {{- end }}
+</section>
+{{- end -}}

@@ -1,0 +1,85 @@
+baseURL = 'https://blog.wimpys.world/'
+title = "Wimpy's World"
+locale = 'en-gb'
+defaultContentLanguage = 'en'
+summaryLength = 40
+enableEmoji = true
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 12
+
+[permalinks]
+  posts = 'posts/:slug/'
+
+[params]
+  description = 'Writing about Linux and Open Source with a focus on Ubuntu, Debian, NixOS, and desktop engineering.'
+  tagline = 'Linux enthusiast. Nix wrangler. Podcaster. Occasional developer.'
+  legacyBaseURL = 'https://wimpysworld.com'
+  legacyGuidCutoff = '2026-11-25'
+  portfolioURL = 'https://wimpys.world'
+  repoURL = 'https://github.com/flexiondotorg/flexiondotorg.github.io'
+  sponsorURL = 'https://github.com/sponsors/flexiondotorg'
+
+  [params.author]
+    name = "Martin Wimpress"
+    email = "martin@wimpress.com"
+
+  [params.giscus]
+    repo = "flexiondotorg/flexiondotorg.github.io"
+    repoID = "R_kgDOIoJw9g"
+    category = "Blog Comments"
+    categoryID = "DIC_kwDOIoJw9s4CTG_3"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lang = "en"
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = 'github'
+      [markup.goldmark.parser.attribute]
+        block = true
+  [markup.highlight]
+    noClasses = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "rss"
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+  [[related.indices]]
+    name = 'tags'
+    weight = 100
+  [[related.indices]]
+    name = 'date'
+    weight = 10
+
+[sitemap]
+  changefreq = 'weekly'
+  priority = 0.8

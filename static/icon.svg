@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wimpy's World">
+  <defs>
+    <linearGradient id="ww-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cba6f7"/>
+      <stop offset="50%" stop-color="#89b4fa"/>
+      <stop offset="100%" stop-color="#94e2d5"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#1e1e2e" stroke="url(#ww-border)" stroke-width="3"/>
+  <path d="M14 20 L21.5 45 L32 27.5 L42.5 45 L50 20" fill="none" stroke="#cdd6f4" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="17" r="3.2" fill="#cba6f7"/>
+</svg>

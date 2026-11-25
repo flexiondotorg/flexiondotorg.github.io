@@ -1,0 +1,45 @@
+{{- $page := . -}}
+{{- $idx := 0 -}}
+{{- if reflect.IsMap . -}}
+  {{- $page = .page -}}
+  {{- $idx = .index | default 0 -}}
+{{- end -}}
+{{- $meta := partial "post-accent.html" $page -}}
+{{- $delay := mul (mod $idx 12) 0.55 -}}
+
+<article
+  class="post-card"
+  data-card
+  data-accent="{{ $meta.accent }}"
+  data-post-url="{{ $page.RelPermalink }}"
+  style="--float-index: {{ $idx }}; --float-delay: -{{ printf "%.2f" $delay }}s;">
+  <div class="post-card-frame" aria-hidden="true"></div>
+
+  <div class="post-card-head">
+    <div class="post-card-badge">
+      <span class="card-suit" aria-hidden="true">{{ $meta.suit }}</span>
+      <span class="card-label-pill">{{ $meta.label }}</span>
+    </div>
+    <span class="post-card-index">{{ $page.Date.Format "2006" }} · {{ $page.ReadingTime }}m</span>
+  </div>
+
+  <h2 class="post-card-title">
+    <a class="post-card-link" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+  </h2>
+
+  <p class="post-card-summary">{{ $page.Summary | plainify | truncate 165 }}</p>
+
+  <div class="post-card-foot">
+    <div class="post-card-tags">
+      {{- with $page.GetTerms "tags" }}
+        {{- range first 3 (sort . "LinkTitle") }}
+        <a class="tag-pill" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{- end }}
+      {{- end }}
+    </div>
+    <div class="post-card-corner">
+      <time class="post-card-date" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "2006-01-02" }}</time>
+      <span class="card-suit card-suit-mirror" aria-hidden="true">{{ $meta.suit }}</span>
+    </div>
+  </div>
+</article>

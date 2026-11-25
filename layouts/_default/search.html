@@ -1,0 +1,50 @@
+{{- define "main" -}}
+{{- $posts := where .Site.RegularPages "Section" "posts" -}}
+
+<section aria-labelledby="search-heading">
+  <div class="section-head">
+    <h1 id="search-heading" class="section-title">
+      Search
+      <span class="count-badge">{{ len $posts }}</span>
+    </h1>
+  </div>
+
+  <div class="search-panel">
+    <div class="search-box-row">
+      <input
+        id="search-input"
+        class="search-box-input"
+        type="search"
+        placeholder="Search titles, tags, and post content..."
+        autocomplete="off"
+        autofocus
+        data-index-url="{{ "index.json" | relURL }}"
+        aria-label="Search blog posts">
+    </div>
+    <p id="search-status" class="search-status" aria-live="polite">Loading search index...</p>
+  </div>
+
+  <div id="search-results" class="post-grid" aria-live="polite"></div>
+
+  {{- with .Site.Taxonomies.tags.ByCount }}
+  <section id="search-fallback" aria-labelledby="browse-tags-heading">
+    <div class="section-head">
+      <h2 id="browse-tags-heading" class="section-title">Browse by tag</h2>
+    </div>
+    <div class="taxonomy-cloud">
+      {{- range . }}
+      <a class="tag-pill" href="{{ .Page.RelPermalink }}">
+        <span>{{ .Page.LinkTitle }}</span>
+        <span class="tag-pill-count">({{ .Count }})</span>
+      </a>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+</section>
+{{- end -}}
+
+{{- define "scripts" -}}
+<script src="{{ "js/fuse.min.js" | relURL }}" defer></script>
+<script src="{{ "js/search.js" | relURL }}" defer></script>
+{{- end -}}

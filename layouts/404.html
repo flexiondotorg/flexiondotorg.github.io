@@ -1,0 +1,14 @@
+{{- define "main" -}}
+<section class="error-card" aria-labelledby="error-heading">
+  <p class="error-code">404</p>
+  <h1 id="error-heading">Page not found</h1>
+  <p>The page you requested does not exist on blog.wimpys.world. Try searching the archive or browse all posts below.</p>
+
+  <form class="inline-search-form" action="{{ "/search/" | relURL }}" method="get" role="search">
+    <input class="inline-search-input" type="search" name="q" placeholder="Search posts..." aria-label="Search blog posts">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </form>
+
+  <a class="btn btn-secondary" href="{{ "/posts/" | relURL }}">Browse all posts</a>
+</section>
+{{- end -}}

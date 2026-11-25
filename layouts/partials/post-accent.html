@@ -1,0 +1,72 @@
+{{- $cats := .Params.categories | default slice -}}
+{{- $tags := .Params.tags | default slice -}}
+
+{{- /* Pick the most specific label: first non-generic category, else first category, else first tag, else Post. */ -}}
+{{- $label := "Post" -}}
+{{- $foundSpecific := false -}}
+{{- range $cats -}}
+  {{- $lc := lower (strings.TrimSpace .) -}}
+  {{- if and (not $foundSpecific) (ne $lc "linux") (ne $lc "open source") (ne $lc "tutorial") -}}
+    {{- $label = . -}}
+    {{- $foundSpecific = true -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $foundSpecific -}}
+  {{- if gt (len $cats) 0 -}}
+    {{- $label = index $cats 0 -}}
+  {{- else if gt (len $tags) 0 -}}
+    {{- $label = index $tags 0 -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Build normalised lowercase token set from categories and tags. */ -}}
+{{- $tokens := slice -}}
+{{- range $cats -}}
+  {{- $tokens = $tokens | append (lower (strings.TrimSpace .)) -}}
+{{- end -}}
+{{- range $tags -}}
+  {{- $tokens = $tokens | append (lower (strings.TrimSpace .)) -}}
+{{- end -}}
+
+{{- $accent := "" -}}
+{{- $suit := "" -}}
+
+{{- /* Ordered high-signal topic rules so every page has semantic, varied Catppuccin colour across all 9 accents. */ -}}
+{{- $rules := slice
+  (dict "accent" "mauve" "suit" "♦" "keys" (slice "ai" "ollama" "git" "conventional commits" "gitkraken"))
+  (dict "accent" "teal" "suit" "♦" "keys" (slice "wayland" "hyprland" "fuzzel" "hyprpicker" "wlroots"))
+  (dict "accent" "peach" "suit" "♣" "keys" (slice "cloud native" "docker" "dockerfile" "docker compose" "containers" "devops" "distroless" "buildpacks"))
+  (dict "accent" "pink" "suit" "♥" "keys" (slice "retro" "entertainment" "home cinema" "media" "audio" "video" "podcast" "playstation 3" "dvd" "mp3" "pvr" "dvb-t" "freeview" "plex" "dlna" "upnp" "snes" "retropie"))
+  (dict "accent" "yellow" "suit" "♣" "keys" (slice "travel" "health & fitness" "food & drink" "personal" "security" "hacking" "privacy"))
+  (dict "accent" "sapphire" "suit" "♠" "keys" (slice "nextcloud" "open media vault" "virtual hosting" "ravencore" "self hosting"))
+  (dict "accent" "green" "suit" "♥" "keys" (slice "steam deck" "gaming" "emulation" "computer hardware" "hardware" "gadgets" "android" "firmware" "raspberry pi"))
+  (dict "accent" "mauve" "suit" "♦" "keys" (slice "nix" "nixos" "determinate nix" "flakehub"))
+  (dict "accent" "lavender" "suit" "♦" "keys" (slice "content creation" "static site generator" "nikola" "jaws" "wordpress" "content management" "gnome"))
+  (dict "accent" "teal" "suit" "♦" "keys" (slice "development" "software" "python" "bash" "php" "node" "virtualenv"))
+  (dict "accent" "peach" "suit" "♣" "keys" (slice "ubuntu" "ubuntu core" "ubuntu mate" "mate desktop" "ppa"))
+  (dict "accent" "blue" "suit" "♠" "keys" (slice "debian" "arch linux" "systemd" "networking" "zerotier" "irc" "proxy" "bouncer"))
+  (dict "accent" "teal" "suit" "♦" "keys" (slice "open source"))
+  (dict "accent" "blue" "suit" "♠" "keys" (slice "linux" "tutorial"))
+-}}
+
+{{- range $rule := $rules -}}
+  {{- if eq $accent "" -}}
+    {{- range $k := $rule.keys -}}
+      {{- if and (eq $accent "") (in $tokens $k) -}}
+        {{- $accent = $rule.accent -}}
+        {{- $suit = $rule.suit -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Deterministic hash fallback across vibrant Catppuccin accents. */ -}}
+{{- if eq $accent "" -}}
+  {{- $accents := slice "mauve" "blue" "peach" "green" "teal" "pink" "yellow" "lavender" "sapphire" -}}
+  {{- $suits := slice "♦" "♠" "♣" "♥" -}}
+  {{- $hash := hash.FNV32a (printf "%s|%s" .RelPermalink .Title) -}}
+  {{- $accent = index $accents (mod $hash (len $accents)) -}}
+  {{- $suit = index $suits (mod $hash (len $suits)) -}}
+{{- end -}}
+
+{{- return (dict "accent" $accent "suit" $suit "label" $label) -}}

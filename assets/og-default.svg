@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Wimpy's World — blog.wimpys.world">
+  <defs>
+    <linearGradient id="aurora-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cba6f7"/>
+      <stop offset="50%" stop-color="#89b4fa"/>
+      <stop offset="100%" stop-color="#94e2d5"/>
+    </linearGradient>
+    <linearGradient id="aurora-left" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cba6f7" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#cba6f7" stop-opacity="0.7"/>
+      <stop offset="75%" stop-color="#89b4fa" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#94e2d5" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="aurora-right" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94e2d5" stop-opacity="0.9"/>
+      <stop offset="25%" stop-color="#89b4fa" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#cba6f7" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#cba6f7" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="badge-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cba6f7"/>
+      <stop offset="50%" stop-color="#89b4fa"/>
+      <stop offset="100%" stop-color="#94e2d5"/>
+    </linearGradient>
+    <clipPath id="card-clip">
+      <rect x="48" y="48" width="1104" height="534" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <!-- Canvas (#11111b) -->
+  <rect width="1200" height="630" fill="#11111b"/>
+
+  <!-- Inset card (#1e1e2e) with clipped 6px top aurora bar -->
+  <g clip-path="url(#card-clip)">
+    <rect x="48" y="48" width="1104" height="534" fill="#1e1e2e"/>
+    <rect x="48" y="48" width="1104" height="6" fill="url(#aurora-bar)"/>
+  </g>
+  <rect x="48" y="48" width="1104" height="534" rx="24" fill="none" stroke="#45475a" stroke-width="2"/>
+
+  <!-- W Badge on left -->
+  <g transform="translate(120, 178)">
+    <rect x="4" y="4" width="168" height="168" rx="42" fill="#181825" stroke="url(#badge-border)" stroke-width="7"/>
+    <path d="M38 56 L59 126 L88 77 L117 126 L138 56" fill="none" stroke="#cdd6f4" stroke-width="13.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="88" cy="48" r="9" fill="#cba6f7"/>
+  </g>
+
+  <!-- Wordmark and tagline -->
+  <g transform="translate(344, 212)">
+    <text x="0" y="0" fill="#cba6f7" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="600" letter-spacing="0.02em">blog.wimpys.world</text>
+    <text x="0" y="76" fill="#cdd6f4" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-0.02em">Wimpy's World</text>
+    <text x="0" y="132" fill="#bac2de" font-family="'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="400">Linux, Open Source, Ubuntu, Debian, and NixOS</text>
+  </g>
+
+  <!-- Bottom aurora rule with diamond pip -->
+  <g transform="translate(0, 496)">
+    <rect x="120" y="0" width="456" height="2" fill="url(#aurora-left)"/>
+    <text x="600" y="7" text-anchor="middle" fill="#cba6f7" font-family="'Work Sans', sans-serif" font-size="18">◆</text>
+    <rect x="624" y="0" width="456" height="2" fill="url(#aurora-right)"/>
+  </g>
+
+  <!-- Footer meta -->
+  <text x="600" y="544" text-anchor="middle" fill="#a6adc8" font-family="'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">Martin Wimpress · wimpys.world</text>
+</svg>

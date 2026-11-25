@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale | default "en-gb" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  {{- $pageTitle := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) -}}
+  {{- $pageDesc := .Site.Params.description -}}
+  {{- with .Description -}}
+    {{- $pageDesc = . -}}
+  {{- else -}}
+    {{- if and .IsPage .Summary -}}
+      {{- $pageDesc = .Summary | plainify | truncate 180 -}}
+    {{- end -}}
+  {{- end -}}
+  <title>{{ $pageTitle }}</title>
+  <meta name="description" content="{{ $pageDesc }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:type" content="{{ cond (and .IsPage (eq .Section "posts")) "article" "website" }}">
+  <meta property="og:title" content="{{ $pageTitle }}">
+  <meta property="og:description" content="{{ $pageDesc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ "og-default.png" | absURL }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {{- if and .IsPage (eq .Section "posts") }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{- if not .Lastmod.IsZero }}
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{- end }}
+  {{- end }}
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $pageTitle }}">
+  <meta name="twitter:description" content="{{ $pageDesc }}">
+  <meta name="twitter:image" content="{{ "og-default.png" | absURL }}">
+
+  <link rel="icon" type="image/svg+xml" href="{{ "icon.svg" | relURL }}">
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+
+  {{- with .OutputFormats.Get "RSS" }}
+  <link rel="alternate" type="{{ .MediaType.Type }}" title="{{ $pageTitle }} RSS" href="{{ .RelPermalink }}">
+  {{- else }}
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} RSS" href="{{ "posts/rss.xml" | relURL }}">
+  {{- end }}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&display=swap">
+
+  <script>
+    (function () {
+      var mode = 'system';
+      try {
+        var saved = localStorage.getItem('wimpys-world-theme');
+        if (saved === 'system' || saved === 'light' || saved === 'dark') {
+          mode = saved;
+        } else if (saved === 'latte') {
+          mode = 'light';
+        } else if (saved === 'mocha') {
+          mode = 'dark';
+        }
+      } catch (_) {}
+      var prefersLight = Boolean(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
+      var resolved = (mode === 'light' || (mode === 'system' && prefersLight)) ? 'latte' : 'mocha';
+      document.documentElement.dataset.themeMode = mode;
+      document.documentElement.dataset.theme = resolved;
+    })();
+  </script>
+
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/chroma.css" | relURL }}">
+</head>
+<body>
+  <canvas id="bg-swirl" class="bg-swirl" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-block" href="{{ "/" | relURL }}">
+        <img class="brand-mark" src="{{ "icon.svg" | relURL }}" alt="" width="40" height="40">
+        <div class="brand-copy">
+          <span class="site-title">{{ .Site.Title }}</span>
+          <p class="site-subtitle">{{ .Site.Params.tagline }}</p>
+        </div>
+      </a>
+
+      <div class="header-controls">
+        <nav class="site-nav" aria-label="Site sections">
+          <a href="{{ .Site.Params.portfolioURL }}" rel="noopener noreferrer">
+            <svg class="nav-glyph" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"></rect></svg>
+            <span>Portfolio</span>
+          </a>
+          <a href="{{ "/" | relURL }}" aria-current="page">
+            <svg class="nav-glyph" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3.5" width="16" height="17" rx="2"></rect><line x1="8" y1="8.5" x2="16" y2="8.5"></line><line x1="8" y1="12.5" x2="16" y2="12.5"></line><line x1="8" y1="16.5" x2="12.5" y2="16.5"></line></svg>
+            <span>Blog</span>
+          </a>
+        </nav>
+
+        <form class="header-utility header-search" action="{{ "/search/" | relURL }}" method="get" role="search">
+          <svg class="header-search-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" name="q" placeholder="Search posts..." aria-label="Search posts">
+        </form>
+
+        <div class="theme-switch" role="group" aria-label="Colour theme">
+          <button type="button" class="theme-opt" data-theme-mode="system" aria-label="System colour theme" aria-pressed="true" title="System theme">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-opt" data-theme-mode="light" aria-label="Light theme (Catppuccin Latte)" aria-pressed="false" title="Catppuccin Latte (Light)">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="4"></circle>
+              <line x1="12" y1="2" x2="12" y2="4"></line>
+              <line x1="12" y1="20" x2="12" y2="22"></line>
+              <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+              <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+              <line x1="2" y1="12" x2="4" y2="12"></line>
+              <line x1="20" y1="12" x2="22" y2="12"></line>
+              <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+              <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-opt" data-theme-mode="dark" aria-label="Dark theme (Catppuccin Mocha)" aria-pressed="false" title="Catppuccin Mocha (Dark)">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="site-main" tabindex="-1">
+    {{- block "main" . }}{{- end }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-rule" aria-hidden="true">
+      <span class="footer-rule-line"></span>
+      <span class="footer-rule-pip">◆</span>
+      <span class="footer-rule-line"></span>
+    </div>
+    <div class="footer-bar">
+      <div class="footer-group">
+        <span>© {{ now.Year }} {{ .Site.Params.author.name }}</span>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <a href="{{ "/posts/" | relURL }}">Posts</a>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <a href="{{ "/tags/" | relURL }}">Tags</a>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <a href="{{ "/categories/" | relURL }}">Categories</a>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <a href="{{ "/posts/rss.xml" | relURL }}">RSS</a>
+      </div>
+      <div class="footer-group">
+        <span>Built with Hugo and Catppuccin</span>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <a href="{{ .Site.Params.repoURL }}" target="_blank" rel="noopener noreferrer">Source</a>
+      </div>
+      <div class="footer-group">
+        <a href="{{ .Site.Params.portfolioURL }}" rel="noopener noreferrer">Portfolio</a>
+        {{- with .Site.Params.sponsorURL }}
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <a class="footer-sponsor" href="{{ . }}" target="_blank" rel="noopener noreferrer">Sponsor <span class="footer-heart" aria-hidden="true">♥</span></a>
+        {{- end }}
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ "js/theme.js" | relURL }}" defer></script>
+  <script src="{{ "js/swirl.js" | relURL }}" defer></script>
+  <script src="{{ "js/cards.js" | relURL }}" defer></script>
+  <script src="{{ "js/code-copy.js" | relURL }}" defer></script>
+  {{- block "scripts" . }}{{- end }}
+</body>
+</html>

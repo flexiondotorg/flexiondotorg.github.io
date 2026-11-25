@@ -1,0 +1,23 @@
+{{- define "main" -}}
+<section aria-labelledby="taxonomy-heading">
+  <div class="section-head">
+    <h1 id="taxonomy-heading" class="section-title">
+      {{ .Title }}
+      <span class="count-badge">{{ len .Data.Terms }}</span>
+    </h1>
+  </div>
+
+  {{- with .Data.Terms.ByCount }}
+  <div class="taxonomy-cloud">
+    {{- range . }}
+    <a class="tag-pill" href="{{ .Page.RelPermalink }}">
+      <span>{{ .Page.LinkTitle }}</span>
+      <span class="tag-pill-count">({{ .Count }})</span>
+    </a>
+    {{- end }}
+  </div>
+  {{- else }}
+  <p>No terms found.</p>
+  {{- end }}
+</section>
+{{- end -}}

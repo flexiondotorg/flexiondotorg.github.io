@@ -1,0 +1,20 @@
+{{- $index := slice -}}
+{{- range where .Site.RegularPages "Section" "posts" -}}
+  {{- $tags := .Params.tags | default slice -}}
+  {{- $categories := .Params.categories | default slice -}}
+  {{- $meta := partial "post-accent.html" . -}}
+  {{- $index = $index | append (dict
+    "title" .Title
+    "date" (.Date.Format "2006-01-02")
+    "summary" (.Summary | plainify | truncate 200)
+    "readingTime" .ReadingTime
+    "tags" $tags
+    "categories" $categories
+    "accent" $meta.accent
+    "suit" $meta.suit
+    "label" $meta.label
+    "contents" .Plain
+    "permalink" .RelPermalink
+  ) -}}
+{{- end -}}
+{{- $index | jsonify -}}

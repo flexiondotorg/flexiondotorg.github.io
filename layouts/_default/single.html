@@ -1,0 +1,127 @@
+{{- define "main" -}}
+{{- $hasTOC := strings.Contains .TableOfContents "<li" -}}
+{{- $daysOld := div (sub now.Unix .Date.Unix) 86400 -}}
+{{- $yearsOld := div $daysOld 365 -}}
+{{- $isUpdated := and (not .Lastmod.IsZero) (ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) -}}
+{{- $meta := partial "post-accent.html" . -}}
+
+<div class="article-shell{{ if $hasTOC }} has-toc{{ end }}">
+  <div class="article-column">
+    <article class="post-sheet" data-accent="{{ $meta.accent }}">
+      <header class="article-header">
+        <div class="article-eyebrow">
+          <span class="card-suit" aria-hidden="true">{{ $meta.suit }}</span>
+          {{- with .GetTerms "categories" }}
+            {{- range $i, $cat := . -}}
+              {{- if $i }}<span class="meta-sep" aria-hidden="true">/</span>{{- end -}}
+              <a href="{{ $cat.RelPermalink }}">{{ $cat.LinkTitle }}</a>
+            {{- end -}}
+          {{- else }}
+            <span class="article-eyebrow-label">{{ $meta.label }}</span>
+          {{- end }}
+        </div>
+
+        <h1 class="article-title">{{ .Title }}</h1>
+
+        <div class="article-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+          {{- if $isUpdated }}
+          <span class="meta-sep" aria-hidden="true">·</span>
+          <span>Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2 January 2006" }}</time></span>
+          {{- end }}
+          <span class="meta-sep" aria-hidden="true">·</span>
+          <span>{{ .ReadingTime }} min read</span>
+        </div>
+
+        {{- with .GetTerms "tags" }}
+        <div class="article-tags">
+          {{- range sort . "LinkTitle" }}
+          <a class="tag-pill" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          {{- end }}
+        </div>
+        {{- end }}
+      </header>
+
+      {{- if eq .Section "posts" }}
+        {{- if ge $yearsOld 3 }}
+        <aside class="callout callout-warn" role="note" aria-label="Archive notice">
+          <p class="callout-title">Older post ({{ $yearsOld }} years old)</p>
+          {{- if $isUpdated }}
+          <p>Originally published on {{ .Date.Format "2 January 2006" }} and last updated on {{ .Lastmod.Format "2 January 2006" }}. Software versions and commands here may be out of date.</p>
+          {{- else }}
+          <p>Originally published on {{ .Date.Format "2 January 2006" }}. Software versions and commands here may be out of date.</p>
+          {{- end }}
+        </aside>
+        {{- else if $isUpdated }}
+        <aside class="callout callout-info" role="note" aria-label="Update notice">
+          <p class="callout-title">Updated post</p>
+          <p>Originally published on {{ .Date.Format "2 January 2006" }} and last updated on {{ .Lastmod.Format "2 January 2006" }}.</p>
+        </aside>
+        {{- end }}
+      {{- end }}
+
+      {{- if $hasTOC }}
+      <details class="toc-mobile">
+        <summary>On this page</summary>
+        <nav class="toc-nav" aria-label="Table of contents">
+          {{ .TableOfContents }}
+        </nav>
+      </details>
+      {{- end }}
+
+      <div class="prose">
+        {{ .Content }}
+      </div>
+    </article>
+
+    {{- if or .PrevInSection .NextInSection }}
+    <nav class="post-pager" aria-label="Adjacent posts">
+      {{- with .PrevInSection }}
+      {{- $prevMeta := partial "post-accent.html" . -}}
+      <a class="pager-card" data-accent="{{ $prevMeta.accent }}" href="{{ .RelPermalink }}">
+        <span class="pager-label">← Older post</span>
+        <span class="pager-title">{{ .Title }}</span>
+      </a>
+      {{- else }}
+      <div></div>
+      {{- end }}
+
+      {{- with .NextInSection }}
+      {{- $nextMeta := partial "post-accent.html" . -}}
+      <a class="pager-card pager-card-next" data-accent="{{ $nextMeta.accent }}" href="{{ .RelPermalink }}">
+        <span class="pager-label">Newer post →</span>
+        <span class="pager-title">{{ .Title }}</span>
+      </a>
+      {{- end }}
+    </nav>
+    {{- end }}
+
+    {{- $related := .Site.RegularPages.Related . | first 3 -}}
+    {{- with $related }}
+    <section class="related-section" aria-labelledby="related-heading">
+      <div class="section-head">
+        <h2 id="related-heading" class="section-title">Related posts</h2>
+      </div>
+      <div class="related-grid">
+        {{- range $i, $p := . }}
+          {{- partial "post-card.html" (dict "page" $p "index" $i) -}}
+        {{- end }}
+      </div>
+    </section>
+    {{- end }}
+
+    {{- if eq .Section "posts" }}
+      {{- partial "giscus.html" . -}}
+    {{- end }}
+  </div>
+
+  {{- if $hasTOC }}
+  <aside class="toc-sidebar" data-accent="{{ $meta.accent }}" aria-label="Table of contents">
+    <p class="toc-heading">On this page</p>
+    <nav class="toc-nav">
+      {{ .TableOfContents }}
+    </nav>
+  </aside>
+  {{- end }}
+</div>
+{{- end -}}

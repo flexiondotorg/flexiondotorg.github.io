@@ -1,0 +1,32 @@
+{{- if gt .TotalPages 1 -}}
+<nav aria-label="Pagination">
+  <ul class="pagination">
+    {{- if .HasPrev }}
+    <li><a href="{{ .Prev.URL }}" rel="prev" aria-label="Previous page">← Prev</a></li>
+    {{- else }}
+    <li class="is-disabled"><span aria-disabled="true">← Prev</span></li>
+    {{- end }}
+
+    {{- $current := .PageNumber -}}
+    {{- $total := .TotalPages -}}
+    {{- range .Pagers }}
+      {{- $num := .PageNumber -}}
+      {{- if or (eq $num 1) (eq $num $total) (and (ge $num (sub $current 2)) (le $num (add $current 2))) }}
+        {{- if eq $num $current }}
+        <li class="is-active"><span aria-current="page">{{ $num }}</span></li>
+        {{- else }}
+        <li><a href="{{ .URL }}" aria-label="Page {{ $num }}">{{ $num }}</a></li>
+        {{- end }}
+      {{- else if or (eq $num (sub $current 3)) (eq $num (add $current 3)) }}
+        <li class="is-disabled"><span aria-hidden="true">…</span></li>
+      {{- end }}
+    {{- end }}
+
+    {{- if .HasNext }}
+    <li><a href="{{ .Next.URL }}" rel="next" aria-label="Next page">Next →</a></li>
+    {{- else }}
+    <li class="is-disabled"><span aria-disabled="true">Next →</span></li>
+    {{- end }}
+  </ul>
+</nav>
+{{- end -}}
