@@ -1,11 +1,11 @@
 {{- define "main" -}}
 {{- $posts := where .Site.RegularPages "Section" "posts" -}}
+{{- $paginator := .Paginate $posts -}}
 
 <section class="latest-section" aria-labelledby="latest-posts-heading">
   <div class="section-head">
     <h1 id="latest-posts-heading" class="section-title">
-      Latest Posts
-      <span class="count-badge">{{ len $posts }} posts</span>
+      {{- if eq $paginator.PageNumber 1 }}Latest Posts{{ else }}Posts{{ end -}}
     </h1>
     <nav class="section-links" aria-label="Blog index">
       <a class="section-link" href="{{ "/tags/" | relURL }}">Tags</a>
@@ -13,18 +13,15 @@
       <a class="section-link" href="{{ "/categories/" | relURL }}">Categories</a>
       <span class="meta-sep" aria-hidden="true">·</span>
       <a class="section-link" href="{{ "/posts/rss.xml" | relURL }}">RSS</a>
-      <a class="btn btn-secondary btn-compact" href="{{ "/posts/" | relURL }}">All posts →</a>
     </nav>
   </div>
 
   <div class="post-grid">
-    {{- range $i, $p := first 12 $posts }}
+    {{- range $i, $p := $paginator.Pages }}
       {{- partial "post-card.html" (dict "page" $p "index" $i) -}}
     {{- end }}
   </div>
 
-  <div class="section-actions">
-    <a class="btn btn-secondary" href="{{ "/posts/" | relURL }}">Browse all {{ len $posts }} posts →</a>
-  </div>
+  {{- partial "pagination.html" $paginator -}}
 </section>
 {{- end -}}
