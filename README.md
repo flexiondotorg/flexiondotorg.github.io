@@ -47,5 +47,5 @@ Six retired blog domains (`wimpysworld.com`, `wimpress.com`, `flexion.org`, `wim
 
 ## Licence
 
-- **Blog content** (`content/` and post assets): licensed under [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE) (`CC-BY-SA-4.0`).
+- **Blog content** (`content/` and post assets): licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](LICENSE) (`CC-BY-NC-SA-4.0`).
 - **Theme, templates, scripts, and build configuration** (`layouts/`, `static/`, `scripts/`, `flake.nix`, `justfile`, and workflows): licensed under the [Blue Oak Model License 1.0.0](LICENSE-CODE) (`BlueOak-1.0.0`).
