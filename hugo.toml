@@ -18,7 +18,7 @@ enableRobotsTXT = true
   legacyBaseURL = 'https://wimpysworld.com'
   legacyGuidCutoff = '2026-11-25'
   portfolioURL = 'https://wimpys.world'
-  repoURL = 'https://github.com/flexiondotorg/flexiondotorg.github.io'
+  repoURL = 'https://github.com/flexiondotorg/blog'
   sponsorURL = 'https://github.com/sponsors/flexiondotorg'
 
   [params.author]
@@ -27,7 +27,7 @@ enableRobotsTXT = true
     url = "https://github.com/flexiondotorg"
 
   [params.giscus]
-    repo = "flexiondotorg/flexiondotorg.github.io"
+    repo = "flexiondotorg/blog"
     repoID = "R_kgDOIoJw9g"
     category = "Blog Comments"
     categoryID = "DIC_kwDOIoJw9s4CTG_3"
