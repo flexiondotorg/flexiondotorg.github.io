@@ -29,6 +29,7 @@
           default = pkgs.mkShell {
             packages = with pkgs; [
               hugo
+              just
               python3
             ];
           };
