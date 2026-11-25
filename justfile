@@ -34,3 +34,7 @@ publish: check
         exit 1
     fi
     wrangler deploy
+
+# Verify live HTTP 301 redirects across all six legacy domains
+verify-redirects:
+    python3 scripts/cloudflare-redirects.py verify
