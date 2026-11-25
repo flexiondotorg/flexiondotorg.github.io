@@ -57,7 +57,7 @@
   --radius-sheet: 18px;
   --radius-sm: 10px;
   --radius-pill: 999px;
-  --container-max: 1180px;
+  --container-max: 1320px;
 }
 
 :root[data-theme="latte"] {
@@ -1074,14 +1074,15 @@ input {
 
 .article-shell {
   display: grid;
-  grid-template-columns: minmax(0, 76ch);
+  grid-template-columns: minmax(0, 960px);
   justify-content: center;
-  gap: 28px 34px;
+  gap: 28px 32px;
   align-items: start;
 }
 
 .article-shell.has-toc {
-  grid-template-columns: minmax(0, 76ch) minmax(220px, 268px);
+  grid-template-columns: minmax(0, 1fr) 280px;
+  justify-content: stretch;
 }
 
 .article-column {
@@ -1805,8 +1806,9 @@ mark {
 
 /* Responsive breakpoints */
 @media (max-width: 1119px) {
+  .article-shell,
   .article-shell.has-toc {
-    grid-template-columns: minmax(0, 76ch);
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .toc-sidebar {
