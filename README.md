@@ -24,7 +24,11 @@ The blog deploys as Cloudflare Workers Static Assets using `wrangler.jsonc` (`as
 - `just preview`: run `just check` and upload a Cloudflare Workers preview version with `wrangler versions upload`.
 - `just publish`: run `just check` and deploy `blog.wimpys.world` with `wrangler deploy`.
 - `.github/workflows/ci.yml` runs `hugo --minify` and `scripts/check-rss-guids.py` on every push and pull request.
-- Automatic deployments on `main` pushes and pull request previews use Cloudflare Workers Builds connected to Worker `wimpys-world-blog`.
+- Cloudflare Workers Builds deploys `main` pushes automatically and creates preview URLs for non-production branches on Worker `wimpys-world-blog`:
+  - Build command: `hugo --minify && python3 scripts/check-rss-guids.py`
+  - Deploy command: `npx wrangler deploy`
+  - Version command: `npx wrangler versions upload`
+  - Build variable: `HUGO_VERSION=0.170.0`
 
 ## Legacy domain redirects
 
