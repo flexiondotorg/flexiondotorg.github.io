@@ -28,12 +28,20 @@ Run every command from the repository root inside the Nix development shell:
 
 ## Architecture notes
 
-- This repository owns `https://blog.wimpys.world` only. The portfolio site (`https://wimpys.world`) and GitHub profile README live in `flexiondotorg/flexiondotorg`, which reads `https://blog.wimpys.world/posts/rss.xml`.
 - Deploy exclusively through Cloudflare Workers Static Assets (`wrangler.jsonc`). Do not re-add GitHub Pages deployment or SSH deployment to `malak.wimpys.world`.
 - Do not commit generated output under `public/` or `resources/`.
-- Keep the sticky header (`min(1320px, 100%)`), three-column footer, Catppuccin Mocha and Latte tokens, and WebGL swirl visually aligned with `flexiondotorg/flexiondotorg`.
 - Use hero-free post bundles (`archetypes/posts.md`). Preserve real inline post images inside each post directory.
 - Maintain legacy domain 301 Redirect Rules through `scripts/cloudflare-redirects.py`.
+
+## Companion repository
+
+This repository pairs with `flexiondotorg/flexiondotorg`, which builds `https://wimpys.world` (`internal/site/web/`) and the `flexiondotorg` GitHub profile README.
+
+- Keep shared chrome identical across `blog.wimpys.world` and `wimpys.world`: sticky frosted header (`min(1320px, 100%)`, `1.5px` aurora bottom hairline, `40px` `W` badge, `Projects`/`Links`/`Media`/`Blog` nav, `184px x 36px` right utility slot, three-way theme switch), three-column frosted footer (`6px` CSS circle pip, copyright, stack credit, `Sponsor ♥`), `scrollbar-gutter: stable`, and `overflow-x: clip`.
+- Keep Catppuccin Mocha and Latte tokens, `Work Sans` and `Fira Code` fonts, and the `localStorage` theme key (`wimpys-world-theme`) aligned across both sites.
+- Keep the WebGL Balatro swirl clock `(Date.now() / 1000) % (200 * Math.PI)` and static reduced-motion phase `42.0` identical across both sites so cross-site navigation does not reset the background.
+- `flexiondotorg/flexiondotorg` (`vitrine.yaml`) consumes `https://blog.wimpys.world/posts/rss.xml`. Do not move or rename `/posts/rss.xml` without updating `vitrine.yaml` in the companion repository.
+- Whenever you change the shared header, footer, palette tokens, theme key, swirl clock, or `/posts/rss.xml`, update `flexiondotorg/flexiondotorg` or explicitly flag the matching edit.
 
 ## Security and secrets
 
@@ -45,7 +53,6 @@ Run every command from the repository root inside the Nix development shell:
 - Preserve RSS `<guid>` parity: posts dated before `legacyGuidCutoff` (`2026-11-25` in `hugo.toml` and `scripts/check-rss-guids.py`) must emit `https://wimpysworld.com/posts/<slug>/` in `layouts/_default/rss.xml` so RSS readers do not repost archived articles.
 - Keep `body` on `overflow-x: clip`, never `overflow-x: hidden`. `overflow-x: hidden` breaks `position: sticky` on the site header and post table of contents.
 - Keep `.bg-swirl` at `z-index: 0` with foreground layers at `z-index: 1` or higher. Negative `z-index` hides the WebGL canvas behind the opaque `body` background.
-- Keep the shared cross-site swirl clock `(Date.now() / 1000) % (200 * Math.PI)` and static reduced-motion phase `42.0` identical to `flexiondotorg/flexiondotorg`.
 - Push PJAX history state (`history.pushState`) before swapping `<main>` in `static/js/cards.js` so relative `./image.png` paths inside posts resolve against the post URL.
 - Preserve existing Giscus `repoID` and `categoryID` in `hugo.toml`. If the repository is renamed, update `params.repoURL` and `params.giscus.repo` only.
 - Do not replace the apex `A` or `AAAA` DNS records on the six legacy Cloudflare zones (`wimpysworld.com`, `wimpress.com`, `flexion.org`, `wimpress.org`, `wimpress.io`, `wimpress.co.uk`). Their `ip.<domain>` subdomains CNAME to each apex.
