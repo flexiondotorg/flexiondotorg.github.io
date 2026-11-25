@@ -3,6 +3,12 @@
   "compatibility_date": "2026-11-24",
   "workers_dev": true,
   "preview_urls": true,
+  "routes": [
+    {
+      "pattern": "blog.wimpys.world",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": "./public",
     "html_handling": "auto-trailing-slash",
