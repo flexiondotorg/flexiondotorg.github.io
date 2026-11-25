@@ -1,5 +1,6 @@
 (function () {
-  var EPOCH_KEY = 'wimpys-swirl-epoch';
+  var SWIRL_PERIOD_SEC = 200 * Math.PI;
+  var SWIRL_STATIC_PHASE = 42.0;
 
   var SWIRL_PALETTES = {
     mocha: {
@@ -67,21 +68,11 @@
     return [((n >> 16) & 255) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255];
   }
 
-  function getSwirlEpoch() {
-    var now = Date.now();
-    try {
-      var raw = sessionStorage.getItem(EPOCH_KEY);
-      if (raw) {
-        var parsed = Number(raw);
-        if (Number.isFinite(parsed) && parsed > 0 && parsed <= now + 60000) {
-          return parsed;
-        }
-      }
-      sessionStorage.setItem(EPOCH_KEY, String(now));
-    } catch (_) {
-      // Ignore private-mode storage restrictions.
+  function sharedSwirlPhase(reduced) {
+    if (reduced) {
+      return SWIRL_STATIC_PHASE;
     }
-    return now;
+    return (Date.now() / 1000) % SWIRL_PERIOD_SEC;
   }
 
   function compileShader(gl, type, src) {
@@ -142,7 +133,10 @@
       preserveDrawingBuffer: false,
       powerPreference: 'low-power',
     };
-    var gl = canvas.getContext('webgl', opts) || canvas.getContext('experimental-webgl', opts);
+    var gl =
+      canvas.getContext('webgl2', opts) ||
+      canvas.getContext('webgl', opts) ||
+      canvas.getContext('experimental-webgl', opts);
     if (!gl) {
       canvas.hidden = true;
       return;
@@ -175,7 +169,6 @@
     var uColorC = gl.getUniformLocation(program, 'uColorC');
     var uAccent = gl.getUniformLocation(program, 'uAccent');
 
-    var epochMs = getSwirlEpoch();
     var reducedMQ = window.matchMedia
       ? window.matchMedia('(prefers-reduced-motion: reduce)')
       : { matches: false };
@@ -226,7 +219,7 @@
     }
 
     function currentPhase() {
-      return (Date.now() - epochMs) / 1000;
+      return sharedSwirlPhase(Boolean(reducedMQ && reducedMQ.matches));
     }
 
     function stopLoop() {
