@@ -10,7 +10,6 @@
     <article class="post-sheet" data-accent="{{ $meta.accent }}">
       <header class="article-header">
         <div class="article-eyebrow">
-          <span class="card-suit" aria-hidden="true">{{ $meta.suit }}</span>
           {{- with .GetTerms "categories" }}
             {{- range $i, $cat := . -}}
               {{- if $i }}<span class="meta-sep" aria-hidden="true">/</span>{{- end -}}

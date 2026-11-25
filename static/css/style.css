@@ -666,15 +666,15 @@ input {
 
 @keyframes card-foil-flash {
   0% {
-    opacity: 0.2;
+    opacity: 0.14;
     background-position: 0% 0%, 100% 0%;
   }
   50% {
-    opacity: 0.92;
+    opacity: 0.52;
     background-position: 85% 85%, 15% 85%;
   }
   100% {
-    opacity: 0.35;
+    opacity: 0.2;
     background-position: 100% 100%, 0% 100%;
   }
 }
@@ -726,7 +726,7 @@ input {
   z-index: 3;
 }
 
-/* Dual-diagonal satin foil sheen overlay tracked by --mx / --my */
+/* Subtle satin catch-light overlay tracked by --mx / --my */
 .post-card::after {
   content: "";
   position: absolute;
@@ -738,38 +738,26 @@ input {
   background-image:
     linear-gradient(
       125deg,
-      transparent 16%,
-      color-mix(in srgb, var(--card-accent) 26%, transparent) 38%,
-      rgba(255, 255, 255, 0.36) 50%,
-      color-mix(in srgb, var(--teal) 24%, transparent) 62%,
-      transparent 84%
+      transparent 28%,
+      color-mix(in srgb, var(--card-accent) 9%, transparent) 44%,
+      rgba(255, 255, 255, 0.08) 50%,
+      color-mix(in srgb, var(--teal) 7%, transparent) 56%,
+      transparent 72%
     ),
     linear-gradient(
       235deg,
-      transparent 22%,
-      color-mix(in srgb, var(--pink) 20%, transparent) 44%,
-      rgba(255, 255, 255, 0.22) 52%,
-      color-mix(in srgb, var(--blue) 22%, transparent) 64%,
-      transparent 82%
+      transparent 32%,
+      rgba(255, 255, 255, 0.05) 50%,
+      transparent 68%
     );
   background-size: 220% 220%, 220% 220%;
   background-position: var(--mx, 50%) var(--my, 50%), calc(100% - var(--mx, 50%)) var(--my, 50%);
   mix-blend-mode: screen;
-  transition: opacity 200ms ease;
+  transition: opacity 220ms ease;
 }
 
 :root[data-theme="latte"] .post-card::after {
   mix-blend-mode: soft-light;
-}
-
-/* Recessed inner hairline frame */
-.post-card-frame {
-  position: absolute;
-  inset: 6px;
-  border-radius: calc(var(--radius-card) - 5px);
-  border: 1px solid color-mix(in srgb, var(--card-accent) 20%, var(--inner-frame));
-  pointer-events: none;
-  z-index: 0;
 }
 
 .post-card:hover,
@@ -802,7 +790,7 @@ input {
 
 .post-card:hover::after,
 .post-card.is-tilting::after {
-  opacity: 0.72;
+  opacity: 0.42;
 }
 
 /* Card-play launch state & sibling recession */
@@ -838,24 +826,7 @@ input {
 .post-card-badge {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
   min-width: 0;
-}
-
-.card-suit {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.96rem;
-  line-height: 1;
-  color: var(--card-accent-text);
-  flex: none;
-}
-
-.card-suit-mirror {
-  display: inline-flex;
-  transform: rotate(180deg);
-  opacity: 0.85;
 }
 
 .card-label-pill {

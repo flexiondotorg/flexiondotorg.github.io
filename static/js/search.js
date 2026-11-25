@@ -135,12 +135,9 @@
       var titleHTML = highlightMatches(item.title, findMatchIndices(matches, 'title'));
       var summaryHTML = highlightMatches(item.summary, findMatchIndices(matches, 'summary'));
       var accent = safeAccent(item.accent);
-      var suit = item.suit || '♦';
       var label = item.label || ((item.categories && item.categories.length) ? item.categories[0] : 'Post');
       var dateStr = String(item.date || '');
-      var yearStr = dateStr.slice(0, 4);
-      var readStr = item.readingTime ? String(item.readingTime) + 'm' : '';
-      var cornerIndex = yearStr && readStr ? yearStr + ' · ' + readStr : (yearStr || readStr);
+      var readStr = item.readingTime ? String(item.readingTime) + ' min read' : '';
       var href = safeHref(item.permalink);
       var delay = ((i % 12) * 0.55).toFixed(2);
       var tags = (item.tags || []).slice(0, 3);
@@ -153,13 +150,11 @@
 
       html.push(
         '<article class="post-card" data-card data-accent="' + escapeHTML(accent) + '" data-post-url="' + escapeHTML(href) + '" style="--float-index: ' + i + '; --float-delay: -' + delay + 's;">' +
-          '<div class="post-card-frame" aria-hidden="true"></div>' +
           '<div class="post-card-head">' +
             '<div class="post-card-badge">' +
-              '<span class="card-suit" aria-hidden="true">' + escapeHTML(suit) + '</span>' +
               '<span class="card-label-pill">' + escapeHTML(label) + '</span>' +
             '</div>' +
-            '<span class="post-card-index">' + escapeHTML(cornerIndex) + '</span>' +
+            (readStr ? '<span class="post-card-index">' + escapeHTML(readStr) + '</span>' : '') +
           '</div>' +
           '<h2 class="post-card-title"><a class="post-card-link" href="' + escapeHTML(href) + '">' + titleHTML + '</a></h2>' +
           '<p class="post-card-summary">' + summaryHTML + '</p>' +
@@ -167,7 +162,6 @@
             '<div class="post-card-tags">' + pills.join('') + '</div>' +
             '<div class="post-card-corner">' +
               (dateStr ? '<time class="post-card-date" datetime="' + escapeHTML(dateStr) + '">' + escapeHTML(dateStr) + '</time>' : '') +
-              '<span class="card-suit card-suit-mirror" aria-hidden="true">' + escapeHTML(suit) + '</span>' +
             '</div>' +
           '</div>' +
         '</article>'

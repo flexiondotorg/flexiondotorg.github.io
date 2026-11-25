@@ -7,7 +7,7 @@ enableEmoji = true
 enableRobotsTXT = true
 
 [pagination]
-  pagerSize = 12
+  pagerSize = 10
 
 [permalinks]
   posts = 'posts/:slug/'

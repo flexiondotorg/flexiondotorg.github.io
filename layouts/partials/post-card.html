@@ -13,14 +13,11 @@
   data-accent="{{ $meta.accent }}"
   data-post-url="{{ $page.RelPermalink }}"
   style="--float-index: {{ $idx }}; --float-delay: -{{ printf "%.2f" $delay }}s;">
-  <div class="post-card-frame" aria-hidden="true"></div>
-
   <div class="post-card-head">
     <div class="post-card-badge">
-      <span class="card-suit" aria-hidden="true">{{ $meta.suit }}</span>
       <span class="card-label-pill">{{ $meta.label }}</span>
     </div>
-    <span class="post-card-index">{{ $page.Date.Format "2006" }} · {{ $page.ReadingTime }}m</span>
+    <span class="post-card-index">{{ $page.ReadingTime }} min read</span>
   </div>
 
   <h2 class="post-card-title">
@@ -39,7 +36,6 @@
     </div>
     <div class="post-card-corner">
       <time class="post-card-date" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "2006-01-02" }}</time>
-      <span class="card-suit card-suit-mirror" aria-hidden="true">{{ $meta.suit }}</span>
     </div>
   </div>
 </article>
