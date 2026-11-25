@@ -142,33 +142,21 @@
     {{- block "main" . }}{{- end }}
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="site-footer">
     <div class="footer-rule" aria-hidden="true">
       <span class="footer-rule-line"></span>
-      <span class="footer-rule-pip">◆</span>
+      <span class="footer-rule-pip"></span>
       <span class="footer-rule-line"></span>
     </div>
     <div class="footer-bar">
-      <div class="footer-group">
-        <span>© {{ now.Year }} {{ .Site.Params.author.name }}</span>
-        <span class="meta-sep" aria-hidden="true">·</span>
-        <a href="{{ "/posts/" | relURL }}">Posts</a>
-        <span class="meta-sep" aria-hidden="true">·</span>
-        <a href="{{ "/tags/" | relURL }}">Tags</a>
-        <span class="meta-sep" aria-hidden="true">·</span>
-        <a href="{{ "/categories/" | relURL }}">Categories</a>
-        <span class="meta-sep" aria-hidden="true">·</span>
-        <a href="{{ "/posts/rss.xml" | relURL }}">RSS</a>
+      <div class="footer-group footer-left">
+        <span>© {{ now.Year }} <a href="{{ .Site.Params.author.url }}" target="_blank" rel="noopener noreferrer">{{ .Site.Params.author.name }}</a></span>
       </div>
-      <div class="footer-group">
-        <span>Built with Hugo and Catppuccin</span>
-        <span class="meta-sep" aria-hidden="true">·</span>
-        <a href="{{ .Site.Params.repoURL }}" target="_blank" rel="noopener noreferrer">Source</a>
+      <div class="footer-group footer-center">
+        <a href="{{ .Site.Params.repoURL }}" target="_blank" rel="noopener noreferrer">Built with Hugo and Catppuccin</a>
       </div>
-      <div class="footer-group">
-        <a href="{{ .Site.Params.portfolioURL }}" rel="noopener noreferrer">Portfolio</a>
+      <div class="footer-group footer-right">
         {{- with .Site.Params.sponsorURL }}
-        <span class="meta-sep" aria-hidden="true">·</span>
         <a class="footer-sponsor" href="{{ . }}" target="_blank" rel="noopener noreferrer">Sponsor <span class="footer-heart" aria-hidden="true">♥</span></a>
         {{- end }}
       </div>

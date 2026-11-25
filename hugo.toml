@@ -24,6 +24,7 @@ enableRobotsTXT = true
   [params.author]
     name = "Martin Wimpress"
     email = "martin@wimpress.com"
+    url = "https://github.com/flexiondotorg"
 
   [params.giscus]
     repo = "flexiondotorg/flexiondotorg.github.io"

@@ -38,7 +38,7 @@
   --card-accent-text: var(--mauve);
 
   --header-scrim: rgba(17, 17, 27, 0.72);
-  --footer-scrim: rgba(17, 17, 27, 0.62);
+  --footer-scrim: rgba(17, 17, 27, 0.56);
   --switch-bg: rgba(24, 24, 37, 0.88);
   --surface-elevated: rgba(30, 30, 46, 0.94);
   --sheet-surface: rgba(30, 30, 46, 0.96);
@@ -94,7 +94,7 @@
   --btn-active-fg: #eff1f5;
 
   --header-scrim: rgba(220, 224, 232, 0.78);
-  --footer-scrim: rgba(220, 224, 232, 0.7);
+  --footer-scrim: rgba(220, 224, 232, 0.68);
   --switch-bg: rgba(230, 233, 239, 0.92);
   --surface-elevated: rgba(239, 241, 245, 0.94);
   --sheet-surface: rgba(239, 241, 245, 0.96);
@@ -1697,20 +1697,21 @@ mark {
   margin: 0 auto 20px;
 }
 
-/* Frosted footer with aurora hairline and diamond pip */
+/* Frosted footer with aurora hairline and circle pip */
 .site-footer {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   margin-top: auto;
   padding: 12px 0 0;
-  background: linear-gradient(180deg, transparent 0%, var(--footer-scrim) 34%);
+  background: linear-gradient(180deg, transparent 0%, var(--footer-scrim) 32%);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+  pointer-events: auto;
 }
 
 .footer-rule {
-  width: min(var(--container-max), calc(100% - 48px));
+  width: min(1320px, calc(100% - 48px));
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -1730,20 +1731,20 @@ mark {
 
 .footer-rule-pip {
   flex: none;
-  font-size: 0.62rem;
-  line-height: 1;
-  color: var(--accent-text);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-text);
   opacity: 0.78;
 }
 
 .footer-bar {
-  width: min(var(--container-max), 100%);
+  width: min(1320px, 100%);
   margin: 0 auto;
-  padding: 14px 24px 22px;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 14px 24px 20px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 8px 20px;
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
@@ -1759,10 +1760,24 @@ mark {
   gap: 6px 10px;
 }
 
+.footer-left {
+  justify-self: start;
+}
+
+.footer-center {
+  justify-self: center;
+  text-align: center;
+}
+
+.footer-right {
+  justify-self: end;
+}
+
 .footer-bar a {
   color: var(--subtext);
   text-decoration: none;
   border-bottom: 1px solid transparent;
+  transition: color 140ms ease, border-color 140ms ease;
 }
 
 .footer-bar a:hover {
@@ -1804,6 +1819,17 @@ mark {
 }
 
 @media (max-width: 860px) {
+  .footer-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-group {
+    justify-content: center;
+  }
+
   .post-grid,
   .related-grid,
   .post-pager {
@@ -1846,6 +1872,15 @@ mark {
   .post-sheet {
     padding: 22px 18px 26px;
     border-radius: var(--radius-card);
+  }
+
+  .footer-rule {
+    width: calc(100% - 28px);
+  }
+
+  .footer-bar {
+    padding: 10px 14px 16px;
+    font-size: 0.73rem;
   }
 }
 
