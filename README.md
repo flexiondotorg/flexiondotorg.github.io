@@ -7,7 +7,7 @@ This repository holds the Hugo source, bespoke Catppuccin theme, and Cloudflare 
 | Repository | Publishes | Hosting | Integration |
 | --- | --- | --- | --- |
 | This repository | [blog.wimpys.world](https://blog.wimpys.world) (Hugo blog, search index, and RSS feeds) | Cloudflare Workers Static Assets (`wimpys-world-blog`) | Header, footer, Catppuccin theme, and background swirl match `wimpys.world` |
-| [flexiondotorg/flexiondotorg](https://github.com/flexiondotorg/flexiondotorg) | [wimpys.world](https://wimpys.world) portfolio site and [GitHub profile README](https://github.com/flexiondotorg) | GitHub Pages and `main` / `assets` branches | Vitrine fetches `https://blog.wimpys.world/posts/rss.xml` to populate blog cards and profile post links |
+| [flexiondotorg/flexiondotorg](https://github.com/flexiondotorg/flexiondotorg) | [wimpys.world](https://wimpys.world) portfolio site and [GitHub profile README](https://github.com/flexiondotorg) | Cloudflare Workers Static Assets (`wimpys-world`) and `main` / `assets` branches | Vitrine fetches `https://blog.wimpys.world/posts/rss.xml` to populate blog cards and profile post links |
 
 ## Local development
 
