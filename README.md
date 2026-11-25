@@ -44,3 +44,8 @@ Six retired blog domains (`wimpysworld.com`, `wimpress.com`, `flexion.org`, `wim
 - `python3 scripts/cloudflare-redirects.py print`: print the desired Cloudflare ruleset JSON offline.
 - `python3 scripts/cloudflare-redirects.py check`: diff live Cloudflare API rulesets against the script (`CLOUDFLARE_API_TOKEN` required).
 - `python3 scripts/cloudflare-redirects.py apply`: idempotently apply the rulesets via the Cloudflare API (`CLOUDFLARE_API_TOKEN` required).
+
+## Licence
+
+- **Blog content** (`content/` and post assets): licensed under [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE) (`CC-BY-SA-4.0`).
+- **Theme, templates, scripts, and build configuration** (`layouts/`, `static/`, `scripts/`, `flake.nix`, `justfile`, and workflows): licensed under the [Blue Oak Model License 1.0.0](LICENSE-CODE) (`BlueOak-1.0.0`).
