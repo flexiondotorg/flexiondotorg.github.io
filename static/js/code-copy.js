@@ -80,8 +80,9 @@
     container.insertBefore(header, container.firstChild);
   }
 
-  function init() {
-    var highlights = document.querySelectorAll('.prose .highlight');
+  function init(root) {
+    var scope = root && typeof root.querySelectorAll === 'function' ? root : document;
+    var highlights = scope.querySelectorAll('.prose .highlight');
     for (var i = 0; i < highlights.length; i += 1) {
       var block = highlights[i];
       var codeEl = block.querySelector('pre code') || block.querySelector('code');
@@ -89,9 +90,13 @@
     }
   }
 
+  window.initCodeCopy = init;
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', function () {
+      init(document);
+    });
   } else {
-    init();
+    init(document);
   }
 })();

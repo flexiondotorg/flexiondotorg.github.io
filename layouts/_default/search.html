@@ -45,6 +45,6 @@
 {{- end -}}
 
 {{- define "scripts" -}}
-<script src="{{ "js/fuse.min.js" | relURL }}" defer></script>
-<script src="{{ "js/search.js" | relURL }}" defer></script>
+<script src="{{ "js/fuse.min.js" | relURL }}?v={{ substr (readFile "static/js/fuse.min.js" | sha256) 0 10 }}" defer></script>
+<script src="{{ "js/search.js" | relURL }}?v={{ substr (readFile "static/js/search.js" | sha256) 0 10 }}" defer></script>
 {{- end -}}

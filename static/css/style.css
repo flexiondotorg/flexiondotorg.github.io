@@ -40,8 +40,8 @@
   --header-scrim: rgba(17, 17, 27, 0.72);
   --footer-scrim: rgba(17, 17, 27, 0.56);
   --switch-bg: rgba(24, 24, 37, 0.88);
-  --surface-elevated: rgba(30, 30, 46, 0.94);
-  --sheet-surface: rgba(30, 30, 46, 0.96);
+  --surface-elevated: rgba(30, 30, 46, 0.98);
+  --sheet-surface: rgba(30, 30, 46, 0.98);
   --inner-frame: rgba(205, 214, 244, 0.08);
   --card-shadow: 0 14px 32px rgba(0, 0, 0, 0.34);
   --card-hover-shadow: 0 24px 48px rgba(0, 0, 0, 0.48);
@@ -96,8 +96,8 @@
   --header-scrim: rgba(220, 224, 232, 0.78);
   --footer-scrim: rgba(220, 224, 232, 0.68);
   --switch-bg: rgba(230, 233, 239, 0.92);
-  --surface-elevated: rgba(239, 241, 245, 0.94);
-  --sheet-surface: rgba(239, 241, 245, 0.96);
+  --surface-elevated: rgba(239, 241, 245, 0.98);
+  --sheet-surface: rgba(239, 241, 245, 0.98);
   --inner-frame: rgba(76, 79, 105, 0.09);
   --card-shadow: 0 12px 28px rgba(76, 79, 105, 0.14);
   --card-hover-shadow: 0 22px 44px rgba(76, 79, 105, 0.22);
@@ -152,17 +152,6 @@
 :root[data-theme="latte"] [data-accent="yellow"] { --card-accent-text: #8f5900; }
 :root[data-theme="latte"] [data-accent="lavender"] { --card-accent-text: #4658cf; }
 :root[data-theme="latte"] [data-accent="sapphire"] { --card-accent-text: #0e6c7d; }
-
-/* Cross-document View Transitions */
-@view-transition {
-  navigation: auto;
-}
-
-::view-transition-old(active-post-card),
-::view-transition-new(active-post-card) {
-  animation-duration: 360ms;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-}
 
 *,
 *::before,
@@ -457,8 +446,6 @@ input {
   border-radius: 999px;
   border: 1px solid var(--control-border);
   background: var(--switch-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   box-sizing: border-box;
 }
 
@@ -496,7 +483,7 @@ input {
 /* Main container */
 .site-main {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   flex: 1 0 auto;
   width: min(var(--container-max), 100%);
   margin: 0 auto;
@@ -566,8 +553,6 @@ input {
   background: var(--surface-elevated);
   border-color: var(--surface1);
   color: var(--text);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .btn-secondary:hover {
@@ -626,9 +611,7 @@ input {
   padding: 3px 11px;
   border-radius: var(--radius-pill);
   border: 1px solid color-mix(in srgb, var(--accent-text) 32%, var(--surface1));
-  background: color-mix(in srgb, var(--base) 82%, transparent);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: var(--surface-elevated);
   color: var(--subtext);
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
@@ -652,30 +635,25 @@ input {
   }
 }
 
-@keyframes card-launch {
-  0% {
-    transform: perspective(900px) translateY(-6px) scale(1.015);
+@keyframes card-deal-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0) rotate(-1.5deg) scale(0.96);
   }
-  55% {
-    transform: perspective(900px) translateY(-16px) scale(1.045);
-  }
-  100% {
-    transform: perspective(900px) translateY(-10px) scale(1.03);
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
   }
 }
 
-@keyframes card-foil-flash {
-  0% {
-    opacity: 0.14;
-    background-position: 0% 0%, 100% 0%;
+@keyframes card-ripple-out {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
   }
-  50% {
-    opacity: 0.52;
-    background-position: 85% 85%, 15% 85%;
-  }
-  100% {
-    opacity: 0.2;
-    background-position: 100% 100%, 0% 100%;
+  to {
+    opacity: 0;
+    transform: translate3d(0, -28px, 0) scale(0.975);
   }
 }
 
@@ -702,7 +680,6 @@ input {
   isolation: isolate;
   cursor: pointer;
   transform-style: preserve-3d;
-  will-change: transform;
   animation: card-float 6.2s ease-in-out infinite;
   animation-delay: var(--float-delay, 0s);
   transition:
@@ -769,19 +746,20 @@ input {
     0 0 0 1px color-mix(in srgb, var(--card-accent) 24%, transparent);
 }
 
-.post-card:hover:not(.is-tilting):not(.is-launching),
-.post-card:focus-within:not(.is-tilting):not(.is-launching) {
-  transform: perspective(900px) translateY(-6px) scale(1.015);
+.post-card:hover:not(.is-tilting):not(.card-deal-in),
+.post-card:focus-within:not(.is-tilting):not(.card-deal-in) {
+  transform: perspective(1400px) translateY(-5px) scale(1.01);
 }
 
 .post-card.is-tilting {
   animation-play-state: paused;
+  will-change: transform, opacity;
   transform:
-    perspective(900px)
-    translateY(-6px)
+    perspective(1400px)
+    translateY(-5px)
     rotateX(var(--tilt-rx, 0deg))
     rotateY(var(--tilt-ry, 0deg))
-    scale(1.015);
+    scale(1.01);
   transition:
     transform 65ms ease-out,
     border-color 180ms ease,
@@ -793,24 +771,39 @@ input {
   opacity: 0.42;
 }
 
-/* Card-play launch state & sibling recession */
-.post-card.is-launching {
-  animation: card-launch 155ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  border-color: var(--card-accent);
-  box-shadow:
-    0 28px 60px rgba(0, 0, 0, 0.52),
-    0 0 0 2px color-mix(in srgb, var(--card-accent) 52%, transparent);
-  z-index: 6;
+/* Behind-post card exit overlay (flat 1:1 card clones rippling upward and fading out) */
+.card-blast-stage {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.post-card.is-launching::after {
-  animation: card-foil-flash 155ms ease-out forwards;
+.card-blast-clone {
+  position: fixed !important;
+  margin: 0 !important;
+  transition: none !important;
+  pointer-events: none !important;
+  will-change: transform, opacity;
+  animation: card-ripple-out 320ms cubic-bezier(0.32, 0, 0.25, 1) var(--ripple-delay, 0ms) forwards !important;
 }
 
-.has-launching-card .post-card:not(.is-launching) {
-  animation-play-state: paused;
-  opacity: 0.55;
-  transform: scale(0.985);
+.post-card.card-deal-in {
+  will-change: transform, opacity;
+  animation: card-deal-in 360ms cubic-bezier(0.22, 1, 0.36, 1) var(--deal-delay, 0ms) both;
+}
+
+.card-sparkle {
+  position: fixed;
+  z-index: 82;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.card-sparkle.is-diamond {
+  border-radius: 2px;
 }
 
 /* Playing-card header strip */
@@ -972,8 +965,6 @@ input {
   background: var(--sheet-surface);
   border: 1.5px solid var(--surface1);
   box-shadow: var(--card-shadow);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .taxonomy-cloud .tag-pill {
@@ -1004,8 +995,6 @@ input {
   border-radius: var(--radius-pill);
   border: 1.5px solid var(--surface1);
   background: var(--surface-elevated);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   color: var(--text);
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
@@ -1035,11 +1024,11 @@ input {
 @keyframes sheet-deal-in {
   from {
     opacity: 0;
-    transform: translateY(12px) scale(0.99);
+    transform: translate3d(0, 26px, 0) scale(0.985);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }
 
@@ -1060,6 +1049,39 @@ input {
   min-width: 0;
 }
 
+@keyframes sheet-fold-out {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0) scale(0.975);
+  }
+}
+
+@keyframes prose-crisp-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes toc-deal-in {
+  from {
+    opacity: 0;
+    transform: translate3d(28px, 0, 0) rotate(1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
 .post-sheet {
   position: relative;
   padding: 36px 42px 42px;
@@ -1067,11 +1089,19 @@ input {
   background: var(--sheet-surface);
   border: 1.5px solid color-mix(in srgb, var(--card-accent) 40%, var(--surface1));
   box-shadow: var(--sheet-shadow);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   overflow: hidden;
-  view-transition-name: active-post-card;
-  animation: sheet-deal-in 260ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: sheet-deal-in 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.post-sheet.is-sheet-entering {
+  will-change: transform, opacity;
+  animation: sheet-deal-in 380ms cubic-bezier(0.22, 1, 0.36, 1) 70ms both;
+}
+
+.sheet-fold-out {
+  will-change: transform, opacity;
+  animation: sheet-fold-out 170ms cubic-bezier(0.32, 0, 0.67, 0) forwards;
+  pointer-events: none;
 }
 
 .post-sheet::before {
@@ -1212,8 +1242,11 @@ input {
   background: var(--sheet-surface);
   border: 1.5px solid color-mix(in srgb, var(--card-accent) 30%, var(--surface1));
   box-shadow: var(--card-shadow);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+}
+
+.toc-sidebar.toc-deal-in {
+  will-change: transform, opacity;
+  animation: toc-deal-in 360ms cubic-bezier(0.22, 1, 0.36, 1) 150ms both;
 }
 
 .toc-heading {
@@ -1497,8 +1530,6 @@ figure.figure {
   background: var(--surface-elevated);
   border: 1.5px solid color-mix(in srgb, var(--card-accent) 34%, var(--surface1));
   box-shadow: var(--card-shadow);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   text-decoration: none;
   overflow: hidden;
   transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
@@ -1555,8 +1586,6 @@ figure.figure {
   background: var(--sheet-surface);
   border: 1.5px solid var(--surface1);
   box-shadow: var(--card-shadow);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .related-grid {
@@ -1581,8 +1610,6 @@ figure.figure {
   background: var(--sheet-surface);
   border: 1.5px solid var(--surface1);
   box-shadow: var(--card-shadow);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .search-box-row {
@@ -1630,8 +1657,6 @@ mark {
   background: var(--sheet-surface);
   border: 1.5px solid var(--surface1);
   box-shadow: var(--sheet-shadow);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   text-align: center;
   overflow: hidden;
 }
@@ -1672,7 +1697,7 @@ mark {
 /* Frosted footer with aurora hairline and circle pip */
 .site-footer {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   margin-top: auto;
   padding: 12px 0 0;
@@ -1892,15 +1917,24 @@ mark {
   }
 
   .post-card,
-  .post-sheet {
+  .post-sheet,
+  .toc-sidebar,
+  .sheet-fold-out {
     animation: none !important;
   }
 
   .post-card:hover,
   .post-card:focus-within,
   .post-card.is-tilting,
-  .post-card.is-launching {
+  .post-card.card-play-out,
+  .post-card.card-sweep-out,
+  .post-card.card-deal-in {
     transform: none !important;
+  }
+
+  .card-blast-stage,
+  .card-sparkle {
+    display: none !important;
   }
 
   *,

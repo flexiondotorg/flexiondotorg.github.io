@@ -23,17 +23,22 @@
   );
 
   function syncGiscusTheme(theme) {
+    var resolved = theme === 'latte' || theme === 'mocha'
+      ? theme
+      : (document.documentElement.dataset.theme === 'latte' ? 'latte' : 'mocha');
     var iframe = document.querySelector('iframe.giscus-frame');
     if (!iframe || !iframe.contentWindow) {
       return;
     }
-    var targetTheme = giscusThemeFor(theme);
+    var targetTheme = giscusThemeFor(resolved);
     iframe.contentWindow.postMessage(
       { giscus: { setConfig: { theme: targetTheme } } },
       'https://giscus.app'
     );
     syncedGiscusTheme = targetTheme;
   }
+
+  window.syncBlogGiscusTheme = syncGiscusTheme;
 
   function syncButtons(mode) {
     var buttons = document.querySelectorAll('.theme-opt[data-theme-mode]');
@@ -90,6 +95,11 @@
         }
       });
     }
+
+    window.addEventListener('wimpys-giscus-mounted', function () {
+      syncedGiscusTheme = '';
+      syncGiscusTheme();
+    });
 
     window.addEventListener('message', function (event) {
       if (event.origin !== 'https://giscus.app') {

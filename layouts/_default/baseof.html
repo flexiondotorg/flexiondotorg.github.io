@@ -70,8 +70,8 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/chroma.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ substr (readFile "static/css/style.css" | sha256) 0 10 }}">
+  <link rel="stylesheet" href="{{ "css/chroma.css" | relURL }}?v={{ substr (readFile "static/css/chroma.css" | sha256) 0 10 }}">
 </head>
 <body>
   <canvas id="bg-swirl" class="bg-swirl" aria-hidden="true"></canvas>
@@ -171,10 +171,10 @@
     </div>
   </footer>
 
-  <script src="{{ "js/theme.js" | relURL }}" defer></script>
-  <script src="{{ "js/swirl.js" | relURL }}" defer></script>
-  <script src="{{ "js/cards.js" | relURL }}" defer></script>
-  <script src="{{ "js/code-copy.js" | relURL }}" defer></script>
+  <script src="{{ "js/theme.js" | relURL }}?v={{ substr (readFile "static/js/theme.js" | sha256) 0 10 }}" defer></script>
+  <script src="{{ "js/swirl.js" | relURL }}?v={{ substr (readFile "static/js/swirl.js" | sha256) 0 10 }}" defer></script>
+  <script src="{{ "js/cards.js" | relURL }}?v={{ substr (readFile "static/js/cards.js" | sha256) 0 10 }}" defer></script>
+  <script src="{{ "js/code-copy.js" | relURL }}?v={{ substr (readFile "static/js/code-copy.js" | sha256) 0 10 }}" defer></script>
   {{- block "scripts" . }}{{- end }}
 </body>
 </html>

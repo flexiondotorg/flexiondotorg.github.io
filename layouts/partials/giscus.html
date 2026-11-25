@@ -3,11 +3,26 @@
   <div class="section-head">
     <h2 id="comments-heading" class="section-title">Comments</h2>
   </div>
-  <div id="giscus-container"></div>
+  <div
+    id="giscus-container"
+    data-repo="{{ .repo }}"
+    data-repo-id="{{ .repoID }}"
+    data-category="{{ .category }}"
+    data-category-id="{{ .categoryID }}"
+    data-mapping="{{ .mapping }}"
+    data-strict="{{ .strict }}"
+    data-reactions-enabled="{{ .reactionsEnabled }}"
+    data-emit-metadata="{{ .emitMetadata }}"
+    data-input-position="{{ .inputPosition }}"
+    data-lang="{{ .lang }}"></div>
   <script>
     (function () {
+      if (typeof window.mountGiscus === 'function') {
+        window.mountGiscus(document);
+        return;
+      }
       var container = document.getElementById('giscus-container');
-      if (!container) {
+      if (!container || container.dataset.giscusMounted === '1') {
         return;
       }
       var theme = document.documentElement.dataset.theme === 'latte' ? 'catppuccin_latte' : 'catppuccin_mocha';
@@ -15,18 +30,30 @@
       script.src = 'https://giscus.app/client.js';
       script.async = true;
       script.crossOrigin = 'anonymous';
-      script.setAttribute('data-repo', {{ .repo }});
-      script.setAttribute('data-repo-id', {{ .repoID }});
-      script.setAttribute('data-category', {{ .category }});
-      script.setAttribute('data-category-id', {{ .categoryID }});
-      script.setAttribute('data-mapping', {{ .mapping }});
-      script.setAttribute('data-strict', {{ .strict }});
-      script.setAttribute('data-reactions-enabled', {{ .reactionsEnabled }});
-      script.setAttribute('data-emit-metadata', {{ .emitMetadata }});
-      script.setAttribute('data-input-position', {{ .inputPosition }});
+      var attrs = [
+        'data-repo',
+        'data-repo-id',
+        'data-category',
+        'data-category-id',
+        'data-mapping',
+        'data-strict',
+        'data-reactions-enabled',
+        'data-emit-metadata',
+        'data-input-position',
+        'data-lang'
+      ];
+      for (var i = 0; i < attrs.length; i += 1) {
+        var val = container.getAttribute(attrs[i]);
+        if (val !== null) {
+          script.setAttribute(attrs[i], val);
+        }
+      }
       script.setAttribute('data-theme', theme);
-      script.setAttribute('data-lang', {{ .lang }});
+      container.dataset.giscusMounted = '1';
       container.appendChild(script);
+      try {
+        window.dispatchEvent(new CustomEvent('wimpys-giscus-mounted', { detail: { theme: theme } }));
+      } catch (_) {}
     })();
   </script>
 </section>
