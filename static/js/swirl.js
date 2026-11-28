@@ -4,16 +4,16 @@
 
   var SWIRL_PALETTES = {
     mocha: {
-      a: '#11111b',
-      b: '#181828',
-      c: '#231f38',
-      accent: '#302b4d',
+      a: '#101114',
+      b: '#17191e',
+      c: '#20232a',
+      accent: '#2a2e37',
     },
     latte: {
-      a: '#dce0e8',
-      b: '#d2d7e5',
-      c: '#c9d2e8',
-      accent: '#d9ccf0',
+      a: '#e4e6ea',
+      b: '#dadde3',
+      c: '#cfd3db',
+      accent: '#c5cad4',
     },
   };
 
@@ -63,7 +63,7 @@
   ].join('\n');
 
   function hexToRgb01(hex) {
-    var clean = String(hex || '#11111b').replace('#', '');
+    var clean = String(hex || '#101114').replace('#', '');
     var n = parseInt(clean, 16);
     return [((n >> 16) & 255) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255];
   }

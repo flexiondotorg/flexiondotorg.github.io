@@ -175,16 +175,24 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--crust);
-  /* Subtle Catppuccin fallback when WebGL is unavailable */
+  background-color: #101114;
+  /* Subtle neutral mist fallback when WebGL is unavailable or mounting */
   background-image:
-    radial-gradient(920px 520px at 14% -6%, color-mix(in srgb, var(--mauve) 14%, transparent), transparent 68%),
-    radial-gradient(840px 480px at 88% 12%, color-mix(in srgb, var(--blue) 12%, transparent), transparent 66%),
-    radial-gradient(760px 440px at 50% 96%, color-mix(in srgb, var(--teal) 9%, transparent), transparent 70%);
+    radial-gradient(920px 520px at 14% -6%, rgba(42, 46, 55, 0.52), transparent 68%),
+    radial-gradient(840px 480px at 88% 12%, rgba(32, 35, 42, 0.46), transparent 66%),
+    radial-gradient(760px 440px at 50% 96%, rgba(23, 25, 30, 0.42), transparent 70%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--text);
   overflow-x: clip;
+}
+
+:root[data-theme="latte"] body {
+  background-color: #e4e6ea;
+  background-image:
+    radial-gradient(920px 520px at 14% -6%, rgba(197, 202, 212, 0.56), transparent 68%),
+    radial-gradient(840px 480px at 88% 12%, rgba(207, 211, 219, 0.48), transparent 66%),
+    radial-gradient(760px 440px at 50% 96%, rgba(218, 221, 227, 0.44), transparent 70%);
 }
 
 /* Fixed full-viewport Balatro swirling tabletop canvas */
