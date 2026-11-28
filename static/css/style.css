@@ -294,16 +294,12 @@ input {
   align-items: center;
   gap: 12px;
   min-width: 0;
-  color: var(--text);
+  color: inherit;
   text-decoration: none;
 }
 
 .brand-block:hover {
-  color: var(--text);
-}
-
-.brand-block:hover .site-title {
-  color: var(--accent-text);
+  color: inherit;
 }
 
 .brand-mark {
@@ -326,7 +322,6 @@ input {
   letter-spacing: -0.02em;
   line-height: 1.2;
   color: var(--text);
-  transition: color 140ms ease;
 }
 
 .site-subtitle {
@@ -367,18 +362,9 @@ input {
   transition: color 140ms ease, background-color 140ms ease;
 }
 
-.nav-glyph {
-  display: block;
-  width: 15px;
-  height: 15px;
-  flex: none;
-  opacity: 0.85;
-  transition: opacity 140ms ease;
-}
-
 .site-nav a:hover {
   color: var(--text);
-  background: color-mix(in srgb, var(--surface0) 75%, transparent);
+  background: color-mix(in srgb, var(--surface0) 70%, transparent);
 }
 
 .site-nav a[aria-current="page"] {
@@ -386,9 +372,16 @@ input {
   background: color-mix(in srgb, var(--accent-text) 12%, transparent);
 }
 
-.site-nav a:hover .nav-glyph,
-.site-nav a[aria-current="page"] .nav-glyph {
-  opacity: 1;
+.site-nav a[aria-current="page"]:hover {
+  color: var(--accent-text);
+  background: color-mix(in srgb, var(--accent-text) 16%, transparent);
+}
+
+.nav-glyph {
+  flex: none;
+  width: 15px;
+  height: 15px;
+  display: block;
 }
 
 .header-utility {
@@ -484,8 +477,8 @@ input {
 
 .theme-opt svg {
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
 }
 
 /* Main container */
@@ -1906,10 +1899,13 @@ mark {
     font-size: 0.78rem;
   }
 
+  .header-controls {
+    gap: 8px;
+  }
+
   .site-nav a {
     padding: 0 10px;
-    font-size: 0.86rem;
-    gap: 5px;
+    font-size: 0.85rem;
   }
 
   .header-utility {
